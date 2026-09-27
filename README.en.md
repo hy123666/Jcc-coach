@@ -1,4 +1,4 @@
-# JCC Runtime / AI Coach for JCC
+# JCC coach / AI Coach for JCC
 
 [简体中文](README.md) | **English**
 

@@ -1,4 +1,4 @@
-# JCC Runtime / 金铲铲 AI 教练
+# JCC coach / 金铲铲 AI 教练
 
 **简体中文** | [English](README.en.md)
 
