@@ -1,0 +1,150 @@
+{
+  "schema": "jcc-game-knowledge-common-document-v1",
+  "logical_id": "common.formulas",
+  "scope": "common",
+  "kind": "formulas",
+  "season_neutral": true,
+  "entity_references": [],
+  "entries": [
+    {
+      "id": "formula.damage",
+      "expression": "base_damage * (1 + damage_amp_pct) * resist_multiplier * (1 - durability_pct), with critical expectation calculated separately",
+      "inputs": ["damage_type", "base_damage", "damage_amp_pct", "flat_penetration", "percent_penetration", "critical_chance", "critical_damage_multiplier", "armor", "magic_resist", "durability_pct", "health", "shield"],
+      "output": "single_hit_damage_expectation",
+      "exactness": "exact_for_supplied_single_hit_inputs",
+      "constraints": ["Physical damage uses armor; magic damage uses magic resistance; true damage bypasses both.", "Explicit durability applies to all three damage types unless an effect states otherwise.", "This is not a full combat simulation."]
+    },
+    {
+      "id": "formula.pvp_player_damage",
+      "expression": "base_damage_by_stage[stage] + surviving_enemy_units",
+      "inputs": ["stage", "surviving_enemy_units"],
+      "output": "total_player_damage",
+      "exactness": "exact_for_registered_standard_stage_and_survivor_count",
+      "tables": {
+        "base_damage_by_stage": { "1": 0, "2": 2, "3": 6, "4": 7, "5": 10, "6": 12, "7": 17, "8": 150 }
+      },
+      "constraints": ["Only applies after a lost PVP combat.", "An explicit active-season exception overrides the Common table."]
+    },
+    {
+      "id": "formula.hp_lethal_tolerance",
+      "expression": "compare hp against base_damage_by_stage[stage] + surviving_enemy_units",
+      "inputs": ["hp", "stage", "alive_enemy_units"],
+      "output": "losses_and_survivor_tolerance",
+      "exactness": "threshold_exact_for_given_stage_hp_and_survivor_count",
+      "tables": {
+        "base_damage_by_stage": { "1": 0, "2": 2, "3": 6, "4": 7, "5": 10, "6": 12, "7": 17, "8": 150 }
+      },
+      "constraints": ["Future surviving enemy units remain an estimate when they are not observed."]
+    },
+    {
+      "id": "formula.economy",
+      "expression": "gold_after_spend + base_income + interest + streak_bonus + pvp_win_gold",
+      "inputs": ["round", "gold", "planned_spend", "planned_xp_buy", "streak", "pvp_result"],
+      "output": "next_gold",
+      "exactness": "exact_for_supplied_standard_income_inputs",
+      "tables": {
+        "base_income_by_round": { "1-2": 2, "1-3": 2, "1-4": 3, "2-1": 4, "2-2+": 5 },
+        "streak_bonus": [
+          { "min_streak": 2, "max_streak": 4, "gold": 1 },
+          { "min_streak": 5, "max_streak": 5, "gold": 2 },
+          { "min_streak": 6, "max_streak": null, "gold": 3 }
+        ],
+        "pvp_win_gold": 1,
+        "pvp_loss_gold": 0,
+        "normal_interest_cap": 5
+      },
+      "constraints": ["PVE drops and explicit mechanic rewards require current facts.", "Explicit effects may override income, interest, streak, or XP costs."]
+    },
+    {
+      "id": "formula.level_timing",
+      "expression": "ceil(max(target_total_xp - current_total_xp, 0) / 4) * 4",
+      "inputs": ["level", "xp", "gold", "target_level"],
+      "output": "xp_and_gold_required",
+      "exactness": "exact_for_standard_xp_purchase",
+      "tables": {
+        "xp_curve": [
+          { "level": 2, "totalXp": 0 },
+          { "level": 3, "totalXp": 2 },
+          { "level": 4, "totalXp": 8 },
+          { "level": 5, "totalXp": 18 },
+          { "level": 6, "totalXp": 38 },
+          { "level": 7, "totalXp": 74 },
+          { "level": 8, "totalXp": 130 },
+          { "level": 9, "totalXp": 198 },
+          { "level": 10, "totalXp": 266 }
+        ]
+      },
+      "constraints": ["The standard purchase is 4 gold for 4 XP.", "Explicit effects may override purchase size or price."]
+    },
+    {
+      "id": "formula.interest_income",
+      "expression": "min(floor(gold / 10), 5)",
+      "inputs": ["gold"],
+      "output": "interest_gold",
+      "constraints": ["gold >= 0"]
+    },
+    {
+      "id": "formula.loss_buffer",
+      "expression": "floor(max(hp, 0) / max(estimated_loss_damage, 1))",
+      "inputs": ["hp", "estimated_loss_damage"],
+      "output": "estimated_loss_buffer_rounds",
+      "constraints": ["This is a bounded decision prior, not an exact combat forecast."]
+    },
+    {
+      "id": "formula.weighted_fit",
+      "expression": "sum(weight_i * normalized_evidence_i)",
+      "inputs": ["registered_weights", "normalized_evidence"],
+      "output": "candidate_fit_score",
+      "constraints": ["Use only registered dimensions.", "Missing dimensions do not become positive evidence."]
+    },
+    {
+      "id": "formula.xp_purchase_cost",
+      "expression": "ceil(max(target_level_xp - current_xp, 0) / xp_per_purchase) * gold_per_purchase",
+      "inputs": ["target_level_xp", "current_xp", "xp_per_purchase", "gold_per_purchase"],
+      "output": "gold_required",
+      "constraints": ["Read purchase size and price from the active rules; the normal reference is 4 XP for 4 gold.", "Do not purchase an unusable XP remainder unless the immediate timing benefit justifies it."]
+    },
+    {
+      "id": "formula.next_interest_threshold",
+      "expression": "min(ceil(max(gold, 0) / 10) * 10, interest_cap_gold)",
+      "inputs": ["gold", "interest_cap_gold"],
+      "output": "next_threshold",
+      "constraints": ["Threshold math is reference evidence, not an automatic hold or sell command."]
+    },
+    {
+      "id": "formula.roll_budget_above_floor",
+      "expression": "max(gold - recovery_floor_gold, 0)",
+      "inputs": ["gold", "recovery_floor_gold"],
+      "output": "bounded_roll_budget",
+      "constraints": ["The recovery floor depends on HP, expected upgrades, contest, streak, and next timing."]
+    },
+    {
+      "id": "formula.star_upgrade_copy_cost",
+      "expression": "copies_per_merge ^ (target_star - source_star)",
+      "inputs": ["copies_per_merge", "source_star", "target_star"],
+      "output": "base_copy_cost",
+      "constraints": ["The standard copies_per_merge is three.", "Active-season exceptions override the common default."]
+    },
+    {
+      "id": "formula.attacks_to_cast",
+      "expression": "ceil(max(max_mana - initial_mana - immediate_mana, 0) / mana_per_attack)",
+      "inputs": ["initial_mana", "max_mana", "immediate_mana", "mana_per_attack"],
+      "output": "minimum_basic_attacks_to_first_cast",
+      "constraints": ["This is the no-damage baseline.", "Damage-taken mana, mana lock, attack timing, casts, targets, and conditional effects must be reported separately."]
+    },
+    {
+      "id": "formula.composed_unit_stat",
+      "expression": "apply active additive modifiers, then active percentage modifiers, then caps and overrides in registered order",
+      "inputs": ["base_stat", "active_common_modifiers", "active_patch_modifiers", "active_season_mechanic_modifiers"],
+      "output": "composed_stat",
+      "constraints": ["Only satisfied conditions may enter active modifiers.", "Unresolved semantic effects remain explicit instead of becoming zero."]
+    },
+    {
+      "id": "formula.specific_unit_shop_odds",
+      "expression": "cost_odds_at_level * remaining_target_copies / remaining_pool_copies_for_cost",
+      "inputs": ["level", "target_cost", "remaining_target_copies", "remaining_pool_copies_for_cost", "active_patch_shop_table"],
+      "output": "specific_unit_slot_probability",
+      "constraints": ["Use the Common standard table unless the active season explicitly supplies a verified override.", "Unknown opponent ownership must not be invented."]
+    }
+  ]
+}

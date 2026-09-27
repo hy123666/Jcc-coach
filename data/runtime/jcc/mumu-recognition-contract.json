@@ -1,0 +1,112 @@
+{
+  "contract_id": "jcc-mumu-recognition-contract-v1",
+  "purpose": "Pin the MuMu JCC recognition evidence that is safe to reuse in the companion/runtime pipeline.",
+  "evidence_roots": {
+    "apk_jadx": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-gameassist-jadx/sources",
+    "ocr_models": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/ch_pp_ocrv3",
+    "ocr_native_lib": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/app_libs_rapidocr/libRapidOcr.so",
+    "historical_decrypted_config": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages",
+    "catalog_overlay": "active-profile.runtime_catalog_overlay_path"
+  },
+  "catalog_overlay_policy": {
+    "primary_catalog": "active-profile.runtime_catalog_overlay_path",
+    "source": "the exact immutable Runtime Catalog compiled by and referenced from the active Core Profile",
+    "uses": [
+      "current-season Chinese champion names",
+      "champion ids and icon URLs",
+      "current-season augment names and icon URLs",
+      "equipment names and icon URLs",
+      "trait names and icon URLs"
+    ],
+    "hard_data_role": "mechanics, formulas, damage/role/trait logic, and strategy indexes remain project hard-data sources",
+    "big_data_role": "daily Zhangmeng/ranking data remains the strategy strength/rate source",
+    "excluded_sources": [
+      "MuMu lus.json",
+      "MuMu lineup_index",
+      "MuMu user_lineup"
+    ],
+    "excluded_reason": "MuMu lineup/recommendation data is a third-party strategy recommendation/cache; it may be kept as format evidence only and must not contaminate project hard-data or daily big-data strategy signals."
+  },
+  "desktop_mumu_runtime_bridge": {
+    "primary_source": "adb logcat from MuMu gameassist gi_plugin_jkchess / nemuinit",
+    "phase_status_enum": {
+      "1": "planning_or_actionable",
+      "2": "current_view_active; observed on opponent board during prep and on both boards during combat, so it is not a combat-only code",
+      "4": "active_choice_window_attention_signal",
+      "5": "transition_or_unstable"
+    },
+    "board_bench_rule": "Within a fresh match_session_id, promote own board/bench only under the strong self-view anchor: S=1 plus a fresh visible non-empty 4354 shop. Then bench_units = 4352 wl and board_units_candidate = fresh 4353 hl minus 4352 overlap. S=2 means observing/non-self current view and must not be bound to battle_state; it must not update own board/bench/equipped items and must never create opponent board unit facts. 4353 is treated as an own-unit candidate source only, never an opponent unit source.",
+    "shop_rule": "4354 bl is the structured shop list and should be debounced for empty-list flicker. Non-empty 4354 is the strong own actionable view anchor; empty 4354 is transition/observing evidence only.",
+    "augment_rule": "No separate structured augment-id GI payload has been observed; use s=4 only as the visual attention trigger, then run the host CLI multimodal current-frame visual pipeline against the visible choice panel. Emulator helper text logs are ignored by product live_state/advice.",
+    "equipment_rule": "4357 is the primary left item rail / inventory equipment source. 4356 is current-screen visible equipment rectangles; assign 4356 to own equipped_items only by coordinate match to trusted own 4353 units under the S=1 plus fresh non-empty 4354 shop anchor. Under S=2 or without the self-view anchor, keep 4356 as unassigned diagnostics only. Icon matching is fallback/conflict-check evidence, not the primary structured source."
+  },
+  "capture_model": {
+    "mumu_api": "android.window.ScreenCapture.captureDisplay",
+    "evidence": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-gameassist-jadx/sources/v3/j.java",
+    "runtime_boundary": "MuMu uses privileged display capture. Our companion uses MediaProjection for the same no-persist in-memory frame source."
+  },
+  "ocr_engine": {
+    "java_class": "com.benjaminwan.ocrlibrary.OcrEngine",
+    "native_library": "libRapidOcr.so",
+    "model_family": "PaddleOCR PP-OCRv3 Chinese via RapidOCR/NCNN",
+    "init_call": "init2(modelDir, 4, ch_PP-OCRv3_det_infer, ch_ppocr_mobile_v2.0_cls_infer, ch_PP-OCRv3_rec_infer, ppocr_keys_v1.txt)",
+    "evidence": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-gameassist-jadx/sources/D3/AbstractC0543a.java",
+    "bundled_in_companion": false,
+    "companion_engine_name": "jcc_mlkit_chinese_text_recognition",
+    "mumu_native_status": "evidence_only_not_product_dependency",
+    "abi_scope": "Product APK must not depend on MuMu x86_64 libRapidOcr. Multi-ABI OCR uses the product engine until a self-built NCNN/RapidOCR library is added."
+  },
+  "mumu_roi_rules": [
+    {
+      "name": "round_top_bar",
+      "normalized_rect": {
+        "x": 0.3,
+        "y": 0,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "source": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-gameassist-jadx/sources/i3/H.java:257",
+      "parser": "regex \\d+-\\d+"
+    },
+    {
+      "name": "augment_trigger_text",
+      "normalized_rect": {
+        "x": 0.3,
+        "y": 0,
+        "w": 0.4,
+        "h": 0.3
+      },
+      "source": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-gameassist-jadx/sources/i3/H.java:323",
+      "parser": "OCR contains强化符文; detected box expands by width/5 and height/3"
+    },
+    {
+      "name": "augment_choices",
+      "normalized_rect": {
+        "x": 0.15,
+        "y": 0.3,
+        "w": 0.65,
+        "h": 0.3
+      },
+      "source": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-gameassist-jadx/sources/i3/H.java:396",
+      "parser": "OCR text is matched against SeasonConfig hex names"
+    }
+  ],
+  "season_config_dictionary": {
+    "source": "active Core Profile runtime-catalog-overlay.json",
+    "compatibility_mirror": "data/runtime/jcc/mumu-catalog-overlay.json",
+    "policy": "Production recognition resolves only against the Match-pinned active-season catalog. Historical MuMu decrypted configs are archive evidence and never a Runtime fallback."
+  },
+  "companion_runtime_policy": {
+    "frame_persistence": "forbidden",
+    "payload": "structured visual candidates only",
+    "product_native_dependency": "No MuMu private native OCR library is bundled in the default APK.",
+    "match_scope": "every new game must use a fresh match_session_id",
+    "promotion_guard": "Visual candidates may promote only through summarizer policies with freshness, local-player binding, temporal stability, and identity confidence checks"
+  },
+  "product_native_ocr_dependency": {
+    "backend": "ncnn",
+    "source": "https://github.com/Tencent/ncnn/releases/download/20260526/ncnn-20260526-android.zip",
+    "status": "downloaded_for_integration",
+    "scope": "third_party_prebuilt_backend_not_mumu_private_library"
+  }
+}

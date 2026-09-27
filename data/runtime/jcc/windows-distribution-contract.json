@@ -1,0 +1,42 @@
+{
+  "schema": "jcc-runtime-windows-distribution-contract-v1",
+  "product_name": "JCC Runtime",
+  "app_user_model_id": "com.jcc.runtime",
+  "platform": "win32",
+  "developer_shortcut": {
+    "shortcut_name": "JCC Runtime",
+    "installer_script": "tools/install-jcc-runtime-desktop-shortcut.ps1",
+    "launcher": "tools/launch-jcc-runtime-hidden.vbs",
+    "launch_or_focus": true,
+    "hidden_console": true,
+    "visible_window_required_for_success": true,
+    "renderer_freshness": "Before a cold repository launch, compute a deterministic fingerprint over Renderer build inputs and rebuild ui/dist when the recorded build fingerprint is missing or stale. The presence of dist/index.html alone is not freshness evidence.",
+    "hidden_existing_window_activation": "Ask the owning Electron process to reveal its BrowserWindow through a user-scoped local activation pipe; if that channel is unavailable after the bounded first-window fallback, trigger the native second-instance path and wait for visibility. A process without a visible window is not a successful launch."
+  },
+  "release_installer": {
+    "configuration": "ui/electron-builder.yml",
+    "desktop_shortcut": "always",
+    "start_menu_shortcut": true,
+    "shortcut_name": "JCC Runtime",
+    "target": "installed_executable",
+    "development_launcher_forbidden": true,
+    "uninstall_user_data": {
+      "include": "ui/installer/uninstall-user-data.nsh",
+      "checkbox_label": "同时删除用户配置和运行数据（无法恢复）",
+      "default_checked": false,
+      "scope": "current_user_only",
+      "directories": ["Windows current-user AppData/jcc-runtime-ui", "Windows Temp/jcc-runtime-ui"],
+      "silent_default": "preserve",
+      "upgrade_policy": "preserve",
+      "custom_runtime_data_override": "never_follow_for_deletion",
+      "failure_policy": "report_remaining_data_without_reboot_deferred_deletion",
+      "verifier": "tools/verify-jcc-uninstall-user-data.mjs"
+    },
+    "release_gate": "A packaged Windows smoke test must prove install, cold-start window visibility, hidden-window second-launch recovery, single-instance focus, clean exit, uninstall, and shortcut removal before public release."
+  },
+  "icon_assets": {
+    "png": "ui/assets/jcc-runtime.png",
+    "ico": "ui/assets/jcc-runtime.ico",
+    "builder": "tools/build-jcc-runtime-windows-icon.ps1"
+  }
+}

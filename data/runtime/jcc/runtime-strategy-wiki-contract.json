@@ -1,0 +1,91 @@
+{
+  "schema": "jcc-runtime-strategy-wiki-contract-v1",
+  "purpose": "Compile player-specific JCC strategy knowledge from immutable evidence into version-scoped wiki drafts.",
+  "inspiration": {
+    "principle": "Raw events are append-only; the model maintains a compact intermediate wiki under schema and source guards.",
+    "source": "Karpathy-style LLM-managed wiki memory pattern"
+  },
+  "storage": {
+    "canonical_store": ".jcc-runtime-data/app.sqlite",
+    "raw_evidence_table": "wiki_source_events",
+    "wiki_page_table": "wiki_pages",
+    "curation_run_table": "wiki_curation_runs",
+    "legacy_json_role": "debug/export only",
+    "retention": {
+      "wiki_pages": "durable until explicit user/archive policy changes them",
+      "curation_run_identity": "one canonical run_id is created with the request and completed by the matching validated response",
+      "pending_run_ttl_hours": 24,
+      "max_terminal_curation_runs": 50,
+      "max_unreferenced_source_events": 100,
+      "protected_source_events": "every source event referenced by any wiki page or active curation run"
+    }
+  },
+  "namespaces": {
+    "personal_strategy": {
+      "writer": "host CLI main model via validated curation response",
+      "publisher": "runtime approval/user approval",
+      "must_not_pollute": [
+        "current match live_state",
+        "new season facts",
+        "hard data",
+        "daily big data"
+      ]
+    }
+  },
+  "categories": {
+    "patch_meta_strategy": {
+      "meaning": "Small-patch meta and comp-strength notes for the active large season.",
+      "scope": "season_id + patch_id",
+      "stale_when": ["new patch_id supersedes it", "recent reviews contradict it", "user rejects it"],
+      "examples": ["Current patch: which reroll lines are safer after balance changes"]
+    },
+    "season_mechanic_strategy": {
+      "meaning": "Current large-season mechanics and set-specific strategic patterns.",
+      "scope": "season_id",
+      "stale_when": ["new large season", "mechanic removed or reworked"],
+      "examples": ["current-season special choice patterns", "observer-specific planning"]
+    },
+    "universal_gameplay_strategy": {
+      "meaning": "General TFT/JCC gameplay principles not tied to specific units or augments.",
+      "scope": "gameplay_universal",
+      "stale_when": ["core rules change", "user preference changes"],
+      "examples": ["lose-streak economy, HP tolerance, pre-leveling, tempo vs greed"]
+    }
+  },
+  "one_click_curation_flow": [
+    "collect recent structured postgame summaries",
+    "collect approved user strategy rows and conflicts",
+    "collect current patch daily big-data summary",
+    "record all inputs as immutable wiki_source_events",
+    "build host-model curation request",
+    "bind the request and response to the same canonical run_id",
+    "host model returns JSON draft pages with source_event_ids",
+    "runtime validates schema and writes draft wiki_pages",
+    "publish or surface questions only after approval"
+  ],
+  "host_model_rules": {
+    "must_return_json_schema": "jcc-wiki-curation-host-response-v1",
+    "generated_by_required": "current_cli_agent_main_model",
+    "source_event_ids_required": true,
+    "default_status": "draft",
+    "forbidden": [
+      "inventing old-season champions or comps",
+      "copying previous-match board/shop/economy into current live_state",
+      "promoting stale patch strength into active strategy pages",
+      "writing pages without evidence ids"
+    ]
+  },
+  "host_injection_scope": {
+    "universal_gameplay_strategy": "published pages with no season_id and no patch_id",
+    "season_mechanic_strategy": "published pages whose season_id matches the active major season; patch_id does not control eligibility",
+    "patch_meta_strategy": "published pages whose season_id and patch_id both match the active promoted minor patch",
+    "minor_patch_staleness": "mark only superseded patch_meta_strategy pages stale; never stale universal or season-mechanic pages merely because patch_id changed",
+    "authority": "provider session memory caches only the filtered static capsule; SQLite and the active version tuple remain authoritative"
+  },
+  "ui_entry": {
+    "label": "一键整理策略 Wiki",
+    "mode": "daily_chat/postgame_review/strategy_wiki",
+    "action": "buildWikiCurationRequest",
+    "result": "draft pages or questions; not silent publishing"
+  }
+}

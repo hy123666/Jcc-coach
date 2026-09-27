@@ -1,0 +1,53 @@
+{
+  "schema": "jcc-patch-strategy-overrides-v1",
+  "scope": "patch_strategy",
+  "season_id": "s18",
+  "patch_id": "s18_1",
+  "relationship_to_game_rules": "Patch strategy overrides are coaching priors only. They do not define game-rule timing, augment stages, sprite legality, base economy math, or leveling thresholds.",
+  "economy_management_overrides": {
+    "schema": "jcc-economy-management-patch-strategy-v1",
+    "scope": "s18_1_patch_strategy",
+    "patch_scope": "S18.1 economy-heavy four-cost cap and high-order transformation strategy note.",
+    "relationship_to_base": "Apply Common economy, roll, leveling, HP, and interest rules first. This file only describes a conditional S18 line.",
+    "strategy_notes": [
+      {
+        "id": "s18.steal_rank",
+        "label": "盗宗",
+        "aliases": ["盗宗", "八级追三星四费", "两张以上四费不上九"],
+        "kind": "conditional_cap_line",
+        "tags": [
+          "route:high_cost_carry",
+          "route:hold_level_8",
+          "objective:three_star_four_cost",
+          "condition:economy_augments",
+          "condition:two_or_more_four_costs",
+          "risk:delayed_leveling"
+        ],
+        "when": [
+          "The current board has at least two relevant four-cost units or, more importantly, meaningful copy progress toward one target four-cost three-star; arbitrary four-cost count alone is not enough.",
+          "The selected augment direction is economy-heavy or otherwise gives high resources without a proportionally high immediate combat cap.",
+          "The level-8 board can stabilize enough HP and combat strength without spending to level 9 immediately.",
+          "The current shop, copies, contest, gold, and HP support a realistic three-star four-cost search rather than a single-card fantasy."
+        ],
+        "actions": [
+          "Treat level 8 as the deliberate stabilization and search state. Before the target four-cost three-star is completed, do not level 9 as part of the 盗宗 line; if leveling 9 becomes necessary for survival or a clearly better executable plan, the 盗宗 line has been exited.",
+          "Use the saved leveling budget to find the selected four-cost three-star target while preserving the Common-defined survival and economy floor.",
+          "After the target four-cost three-star is completed, reassess the remaining board, HP, gold, replacement slots, and the possible level-9 or transformation cap.",
+          "If the high-order transformation mechanic is available and no nature sprite was selected, evaluate the 0-cost-sprite interaction only after checking the current S18 descriptor and actual sprite availability; do not assume it will appear."
+        ],
+        "exit_conditions": [
+          "The four-cost copies are not arriving or are heavily contested.",
+          "The level-8 board cannot hold HP without immediate quality spending.",
+          "The target copy progress collapses, the line is contested, or the level-8 board cannot survive; exit the 盗宗 line and stabilize or pivot. A pre-three-star level-9 move is an exit, not a normal 盗宗 action.",
+          "The required sprite or transformation condition is unavailable or unconfirmed."
+        ],
+        "evidence_policy": "This is a user-confirmed S18 strategy prior, not a game-rule assertion. Runtime must present it conditionally and let current live facts, confirmed choices, and deterministic math override it."
+      }
+    ],
+    "host_model_policy": [
+      "When the S18 盗宗 conditions are met, hold level 8 for a realistic target four-cost three-star search. Do not level 9 before that three-star within the 盗宗 line; treat any forced level-9 move as an explicit exit or pivot decision, and do not treat two four-cost units alone as sufficient proof.",
+      "The high-order transformation interaction is a conditional tactical note. Verify current sprite ownership, affordability, stage availability, and the active S18 descriptor before recommending it.",
+      "If the line is losing HP or copies are contested, prioritize stabilization or pivoting over preserving the 盗宗 plan."
+    ]
+  }
+}

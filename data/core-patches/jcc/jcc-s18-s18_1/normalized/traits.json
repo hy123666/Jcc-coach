@@ -1,0 +1,2574 @@
+[
+  {
+    "address": "jcc:s18:trait:340",
+    "source": "jcc_official_s18_source_docs",
+    "id": "340",
+    "name": "斗士",
+    "type": "class",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_brawler.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "25%【生命上限】"
+      },
+      {
+        "level": 2,
+        "count": 4,
+        "color": 2,
+        "effect": "40%【生命上限】"
+      },
+      {
+        "level": 3,
+        "count": 6,
+        "color": 3,
+        "effect": "65%【生命上限】"
+      }
+    ],
+    "num_list": [
+      2,
+      4,
+      6
+    ],
+    "text": {
+      "prefix": "你的队伍获得120最大生命值。【斗士】获得更多最大生命值。",
+      "desc2": "(2)25%【生命上限】|(4)40%【生命上限】|(6)65%【生命上限】"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 职业：斗士",
+      "ordinal": 25
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Brawler",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Brawler",
+      "external_numeric_id": 4,
+      "external_kind": "class",
+      "hero_ids": [
+        918954,
+        918421,
+        918012,
+        918993,
+        918875,
+        918150
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "25%【HP】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 4,
+          "levelDesc": "40%【HP】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 6,
+          "levelDesc": "65%【HP】"
+        }
+      ],
+      "description_html": "你的队伍获得120最大生命值。【斗士】获得更多最大生命值。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:341",
+    "source": "jcc_official_s18_source_docs",
+    "id": "341",
+    "name": "护卫",
+    "type": "class",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_defender.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "25【护甲】【魔法抗性】"
+      },
+      {
+        "level": 2,
+        "count": 4,
+        "color": 2,
+        "effect": "55【护甲】【魔法抗性】"
+      },
+      {
+        "level": 3,
+        "count": 6,
+        "color": 3,
+        "effect": "115【护甲】【魔法抗性】"
+      }
+    ],
+    "num_list": [
+      2,
+      4,
+      6
+    ],
+    "text": {
+      "prefix": "你的队伍获得12护甲和魔法抗性。【护卫】获得更多双抗。",
+      "desc2": "(2)25【护甲】【魔法抗性】|(4)55【护甲】【魔法抗性】|(6)115【护甲】【魔法抗性】"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 职业：护卫",
+      "ordinal": 26
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Defender",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Defender",
+      "external_numeric_id": 10,
+      "external_kind": "class",
+      "hero_ids": [
+        918516,
+        918089,
+        918098,
+        918033,
+        918009,
+        918876
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "25 【ARMOR】【MR】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 4,
+          "levelDesc": "60 【ARMOR】【MR】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 6,
+          "levelDesc": "120 【ARMOR】【MR】"
+        }
+      ],
+      "description_html": "你的队伍获得12护甲和魔法抗性。【护卫】获得更多双抗。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:342",
+    "source": "jcc_official_s18_source_docs",
+    "id": "342",
+    "name": "重装战士",
+    "type": "class",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_vanguard.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "18%最大生命值"
+      },
+      {
+        "level": 2,
+        "count": 4,
+        "color": 2,
+        "effect": "32%最大生命值"
+      },
+      {
+        "level": 3,
+        "count": 6,
+        "color": 3,
+        "effect": "42%最大生命值。在拥有护盾时获得5%伤害减免。"
+      }
+    ],
+    "num_list": [
+      2,
+      4,
+      6
+    ],
+    "text": {
+      "prefix": "战斗开始时及降至50%生命值时，【重装战士】们获得持续10秒的最大生命值护盾。",
+      "desc2": "(2)18%最大生命值|(4)32%最大生命值|(6)42%最大生命值。在拥有护盾时获得5%伤害减免。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 职业：重装战士",
+      "ordinal": 27
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Vanguard",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Vanguard",
+      "external_numeric_id": 9,
+      "external_kind": "class",
+      "hero_ids": [
+        918497,
+        918060,
+        918120,
+        918131,
+        918997,
+        918044
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "18%最大生命值"
+        },
+        {
+          "levelStyle": 2,
+          "level": 4,
+          "levelDesc": "32%最大生命值"
+        },
+        {
+          "levelStyle": 3,
+          "level": 6,
+          "levelDesc": "42%最大生命值。当拥有护盾时，获得5%伤害减免。"
+        }
+      ],
+      "description_html": "战斗开始时及降至50%生命值时，【重装战士】们获得持续10秒的最大生命值护盾。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:343",
+    "source": "jcc_official_s18_source_docs",
+    "id": "343",
+    "name": "主宰",
+    "type": "class",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_juggernaut.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "4%或20%【伤害减免】"
+      },
+      {
+        "level": 2,
+        "count": 4,
+        "color": 2,
+        "effect": "6%或30%【伤害减免】"
+      },
+      {
+        "level": 3,
+        "count": 6,
+        "color": 3,
+        "effect": "8%或40%【伤害减免】"
+      }
+    ],
+    "num_list": [
+      2,
+      4,
+      6
+    ],
+    "text": {
+      "prefix": "你的队伍获得伤害减免，【主宰】们会获得更多。",
+      "desc2": "(2)4%或20%【伤害减免】|(4)6%或30%【伤害减免】|(6)8%或40%【伤害减免】"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 职业：主宰",
+      "ordinal": 28
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_Juggernaut18",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_Juggernaut18",
+      "external_numeric_id": 11,
+      "external_kind": "class",
+      "hero_ids": [
+        918497,
+        918083,
+        918113,
+        918994,
+        918254,
+        918032,
+        918057
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "4%【DR】 或 20%【DR】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 4,
+          "levelDesc": "6%【DR】 或 30%【DR】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 6,
+          "levelDesc": "8%【DR】 或 40%【DR】"
+        }
+      ],
+      "description_html": "你的队伍获得伤害减免。【主宰】获得更多伤害减免。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:344",
+    "source": "jcc_official_s18_source_docs",
+    "id": "344",
+    "name": "迅捷射手",
+    "type": "class",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_rapidfire.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "每次攻击+3%【攻击速度】"
+      },
+      {
+        "level": 2,
+        "count": 3,
+        "color": 2,
+        "effect": "每次攻击+5%【攻击速度】"
+      },
+      {
+        "level": 3,
+        "count": 4,
+        "color": 2,
+        "effect": "每次攻击+9%【攻击速度】"
+      },
+      {
+        "level": 4,
+        "count": 5,
+        "color": 3,
+        "effect": "每次攻击+15%【攻击速度】"
+      }
+    ],
+    "num_list": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "text": {
+      "prefix": "你的队伍获得10%攻击速度。【迅捷射手】弈子们在每次攻击时获得更多攻击速度，至多叠加10层。",
+      "desc2": "(2)每次攻击+3%【攻击速度】|(3)每次攻击+5%【攻击速度】|(4)每次攻击+9%【攻击速度】|(5)每次攻击+15%【攻击速度】"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 职业：迅捷射手",
+      "ordinal": 29
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Rapidfire",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Rapidfire",
+      "external_numeric_id": 5,
+      "external_kind": "class",
+      "hero_ids": [
+        918498,
+        918110,
+        918010,
+        918995,
+        918523
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "每次攻击+3%【AS】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 3,
+          "levelDesc": "每次攻击+5%【AS】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 4,
+          "levelDesc": "每次攻击+9%【AS】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 5,
+          "levelDesc": "每次攻击+15%【AS】"
+        }
+      ],
+      "description_html": "你的队伍获得10%攻击速度。【迅捷射手】弈子们在每次攻击时获得更多攻击速度，至多叠加10层。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:345",
+    "source": "jcc_official_s18_source_docs",
+    "id": "345",
+    "name": "猎人",
+    "type": "class",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_hunter.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "20%【物理加成】"
+      },
+      {
+        "level": 2,
+        "count": 3,
+        "color": 2,
+        "effect": "30%【物理加成】"
+      },
+      {
+        "level": 3,
+        "count": 4,
+        "color": 2,
+        "effect": "45%【物理加成】"
+      },
+      {
+        "level": 4,
+        "count": 5,
+        "color": 3,
+        "effect": "65%【物理加成】"
+      }
+    ],
+    "num_list": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "text": {
+      "prefix": "【猎人】获得物理加成。如果一个【猎人】在4秒内没有切换过目标，他们获得10%伤害增幅。",
+      "desc2": "(2)20%【物理加成】|(3)30%【物理加成】|(4)45%【物理加成】|(5)65%【物理加成】"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 职业：猎人",
+      "ordinal": 30
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Hunter",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Hunter",
+      "external_numeric_id": 6,
+      "external_kind": "class",
+      "hero_ids": [
+        918990,
+        918051,
+        918018,
+        918015,
+        918022
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "20%【AD】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 3,
+          "levelDesc": "30%【AD】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 4,
+          "levelDesc": "45%【AD】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 5,
+          "levelDesc": "65%【AD】"
+        }
+      ],
+      "description_html": "【猎人】获得物理加成。如果1个【猎人】在4秒内没有切换过目标，他们获得10%伤害增幅。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:346",
+    "source": "jcc_official_s18_source_docs",
+    "id": "346",
+    "name": "狂战士",
+    "type": "class",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_ravager.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "12%的额外伤害"
+      },
+      {
+        "level": 2,
+        "count": 4,
+        "color": 2,
+        "effect": "25%的额外伤害"
+      },
+      {
+        "level": 3,
+        "count": 6,
+        "color": 3,
+        "effect": "40%的额外伤害"
+      }
+    ],
+    "num_list": [
+      2,
+      4,
+      6
+    ],
+    "text": {
+      "prefix": "【狂战士】获得10%的全能吸血。此外，【狂战士】造成额外伤害，对低于50%生命值的单位们翻倍。",
+      "desc2": "(2)12%的额外伤害|(4)25%的额外伤害|(6)40%的额外伤害"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 职业：狂战士",
+      "ordinal": 31
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Slayer",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Slayer",
+      "external_numeric_id": 3,
+      "external_kind": "class",
+      "hero_ids": [
+        918164,
+        918084,
+        918992,
+        918019,
+        918131,
+        918996
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "12%额外伤害"
+        },
+        {
+          "levelStyle": 2,
+          "level": 4,
+          "levelDesc": "25%额外伤害"
+        },
+        {
+          "levelStyle": 3,
+          "level": 6,
+          "levelDesc": "40%额外伤害"
+        }
+      ],
+      "description_html": "【狂战士】获得10%全能吸血。此外，【狂战士】造成额外伤害，对低于50%生命值的单位们翻倍。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:347",
+    "source": "jcc_official_s18_source_docs",
+    "id": "347",
+    "name": "裁决使",
+    "type": "class",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_executioner.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "【裁决使】获得【技能暴击】和15%暴击几率。"
+      },
+      {
+        "level": 2,
+        "count": 3,
+        "color": 2,
+        "effect": "此外，敌人会受伤，在3秒内受到30%额外真实伤害"
+      },
+      {
+        "level": 3,
+        "count": 4,
+        "color": null,
+        "effect": "额外真实伤害提高至40%"
+      }
+    ],
+    "num_list": [
+      2,
+      3,
+      4
+    ],
+    "text": {
+      "prefix": "(2)【裁决使】获得【技能暴击】和15%暴击几率。 |(3)此外，敌人会受伤，在3秒内受到30%额外真实伤害 |(4)额外真实伤害提高至40%",
+      "desc2": "(2)【裁决使】获得【技能暴击】和15%暴击几率。|(3)此外，敌人会受伤，在3秒内受到30%额外真实伤害|(4)额外真实伤害提高至40%"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 职业：裁决使",
+      "ordinal": 32
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Executioner",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Executioner",
+      "external_numeric_id": 7,
+      "external_kind": "class",
+      "hero_ids": [
+        918804,
+        918268,
+        918016,
+        918081,
+        918085
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "【裁决使】获得<TFTKeyword>【技能暴击】</TFTKeyword>和15%暴击几率。"
+        },
+        {
+          "levelStyle": 2,
+          "level": 3,
+          "levelDesc": "此外，敌人会流血，在3秒内受到30%额外真实伤害。"
+        },
+        {
+          "levelStyle": 3,
+          "level": 4,
+          "levelDesc": "流血伤害提升至40%。"
+        }
+      ],
+      "description_html": "【技能暴击】：技能伤害可暴击。额外的【技能暴击】提供10%暴击伤害。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:348",
+    "source": "jcc_official_s18_source_docs",
+    "id": "348",
+    "name": "魔战士",
+    "type": "class",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_adaptor.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "25%【物理加成】或【法术加成】"
+      },
+      {
+        "level": 2,
+        "count": 3,
+        "color": 2,
+        "effect": "35%【物理加成】或【法术加成】"
+      },
+      {
+        "level": 3,
+        "count": 4,
+        "color": 3,
+        "effect": "55%【物理加成】或【法术加成】"
+      }
+    ],
+    "num_list": [
+      2,
+      3,
+      4
+    ],
+    "text": {
+      "prefix": "固有能力：【魔战士】的技能将根据其物理加成和法术加成中较高的属性转换形态。  【魔战士】们获得法术加成或物理加成，取决于两种加成中哪一者更高。",
+      "desc2": "(2)25%【物理加成】或【法术加成】|(3)35%【物理加成】或【法术加成】|(4)55%【物理加成】或【法术加成】"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 职业：魔战士",
+      "ordinal": 33
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Adaptor",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Adaptor",
+      "external_numeric_id": 2,
+      "external_kind": "class",
+      "hero_ids": [
+        918084,
+        918991,
+        918096,
+        918011,
+        918076
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "25% 【AD】 或 【AP】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 3,
+          "levelDesc": "35% 【AD】 或 【AP】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 4,
+          "levelDesc": "50% 【AD】 或 【AP】"
+        }
+      ],
+      "description_html": "固有能力：【魔战士】的技能将根据其物理加成和法术加成中较高的属性转换形态。<br>【魔战士】们获得法术加成或物理加成，取决于两种加成中哪一者更高。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:349",
+    "source": "jcc_official_s18_source_docs",
+    "id": "349",
+    "name": "法师",
+    "type": "class",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_spellweaver.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "10%【法术加成】，每次施法1%【法术加成】"
+      },
+      {
+        "level": 2,
+        "count": 4,
+        "color": 2,
+        "effect": "30%【法术加成】，每次施法1%【法术加成】"
+      },
+      {
+        "level": 3,
+        "count": 6,
+        "color": 3,
+        "effect": "55%【法术加成】，每次施法2%【法术加成】"
+      }
+    ],
+    "num_list": [
+      2,
+      4,
+      6
+    ],
+    "text": {
+      "prefix": "你的队伍获得10%【法术加成】法术加成。【法师】们获得更多法术加成，并在每个【法师】施法时进一步获得法术加成。",
+      "desc2": "(2)10%【法术加成】，每次施法1%【法术加成】|(4)30%【法术加成】，每次施法1%【法术加成】|(6)55%【法术加成】，每次施法2%【法术加成】"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 职业：法师",
+      "ordinal": 34
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Spellweaver",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Spellweaver",
+      "external_numeric_id": 1,
+      "external_kind": "class",
+      "hero_ids": [
+        918043,
+        918045,
+        918007,
+        918069,
+        918009,
+        918103,
+        918955
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "+10%【AP】，每次施放+1%【AP】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 4,
+          "levelDesc": "+30%【AP】，每次施放+1%【AP】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 6,
+          "levelDesc": "+55%【AP】，每次施放+2%【AP】"
+        }
+      ],
+      "description_html": "你的队伍获得10%法术加成。【法师】获得更多法术加成，每当1个【法师】施放技能时还会额外提升法术加成。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:350",
+    "source": "jcc_official_s18_source_docs",
+    "id": "350",
+    "name": "神谕",
+    "type": "class",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_invoker.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "1【法力回复】"
+      },
+      {
+        "level": 2,
+        "count": 3,
+        "color": 2,
+        "effect": "2【法力回复】"
+      },
+      {
+        "level": 3,
+        "count": 4,
+        "color": 2,
+        "effect": "1【法力回复】"
+      },
+      {
+        "level": 4,
+        "count": 5,
+        "color": 3,
+        "effect": "3【法力回复】"
+      }
+    ],
+    "num_list": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "text": {
+      "prefix": "己方获得法力回复。此效果对【神谕】还会提升。",
+      "desc2": "(2)1【法力回复】|(3)2【法力回复】|(4)1【法力回复】|(5)3【法力回复】"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 职业：神谕",
+      "ordinal": 35
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Invoker",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Invoker",
+      "external_numeric_id": 12,
+      "external_kind": "class",
+      "hero_ids": [
+        918989,
+        918017,
+        918096,
+        918025,
+        918997
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "1【MANAREGEN】 | 3【MANAREGEN】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 3,
+          "levelDesc": "1【MANAREGEN】 | 4【MANAREGEN】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 4,
+          "levelDesc": "2【MANAREGEN】 | 6【MANAREGEN】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 5,
+          "levelDesc": "2【MANAREGEN】 | 9【MANAREGEN】"
+        }
+      ],
+      "description_html": "你的队伍获得法力回复，此效果对【神谕】还会提升。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:351",
+    "source": "jcc_official_s18_source_docs",
+    "id": "351",
+    "name": "召唤师",
+    "type": "class",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_summoner.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "强化召唤物"
+      },
+      {
+        "level": 2,
+        "count": 3,
+        "color": 3,
+        "effect": "每种效果加成提升50%"
+      }
+    ],
+    "num_list": [
+      2,
+      3
+    ],
+    "text": {
+      "prefix": "【召唤师】们会以不同的方式强化其召唤物。  【约里克】：+30%生命值 【阿兹尔】：+45%伤害 【深红锋喙鸟】：+45%伤害 【婕拉】：+4次植物攻击次数",
+      "desc2": "(2)强化召唤物|(3)每种效果加成提升50%"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 职业：召唤师",
+      "ordinal": 36
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Summoner",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Summoner",
+      "external_numeric_id": 8,
+      "external_kind": "class",
+      "hero_ids": [
+        918083,
+        918995,
+        918268,
+        918143
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "强化召唤物"
+        },
+        {
+          "levelStyle": 3,
+          "level": 3,
+          "levelDesc": "每种效果加成提升50%"
+        }
+      ],
+      "description_html": "【召唤师】们会以不同的方式强化其召唤物。<br>【约里克】：+30%生命值<br>【阿兹尔】：+45%伤害<br>【深红锋喙鸟】：+45%伤害<br>【婕拉】：+4植物攻击次数"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:450",
+    "source": "jcc_official_s18_source_docs",
+    "id": "450",
+    "name": "永恒之森",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_elderwood.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 3,
+        "color": 1,
+        "effect": "获得一棵【石皮树】和一株【生命花】"
+      },
+      {
+        "level": 2,
+        "count": 5,
+        "color": 2,
+        "effect": "第二棵【石皮树】，并且【石皮树】获得200生命值"
+      },
+      {
+        "level": 3,
+        "count": 7,
+        "color": 3,
+        "effect": "以及【深林守卫】"
+      },
+      {
+        "level": 4,
+        "count": 9,
+        "color": 3,
+        "effect": "植物升至2星"
+      },
+      {
+        "level": 5,
+        "count": 11,
+        "color": 4,
+        "effect": "自然之力！！！植物升至3星，森林拥有了它自己的生命。  弈子每拥有1星级，植物就会获得25%最大生命值和10%法术加成"
+      }
+    ],
+    "num_list": [
+      3,
+      5,
+      7,
+      9,
+      11
+    ],
+    "text": {
+      "prefix": "获得可放置的【永恒之森】植物。",
+      "desc2": "(3)获得一棵【石皮树】和一株【生命花】|(5)第二棵【石皮树】，并且【石皮树】获得200生命值|(7)以及【深林守卫】|(9)植物升至2星|(11)自然之力！！！植物升至3星，森林拥有了它自己的生命。  弈子每拥有1星级，植物就会获得25%最大生命值和10%法术加成"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：永恒之森",
+      "ordinal": 1
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Elderwood",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Elderwood",
+      "external_numeric_id": 3,
+      "external_kind": "origin",
+      "hero_ids": [
+        918516,
+        918498,
+        918007,
+        918012,
+        918120,
+        918081,
+        918150,
+        918099
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 3,
+          "levelDesc": "获得一棵【石皮树】和一株【生命花】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 5,
+          "levelDesc": "第二棵【石皮树】，并且【石皮树】获得200生命值"
+        },
+        {
+          "levelStyle": 3,
+          "level": 7,
+          "levelDesc": "以及【深林守卫】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 9,
+          "levelDesc": "植物升至2星"
+        },
+        {
+          "levelStyle": 4,
+          "level": 11,
+          "levelDesc": "自然之力！！！植物升至3星，森林拥有了它自己的生命"
+        }
+      ],
+      "description_html": "获得可放置的【永恒之森】植物。<br>【永恒之森】弈子每拥有1星级，植物就会获得25%最大生命值和10%法术加成。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:451",
+    "source": "jcc_official_s18_source_docs",
+    "id": "451",
+    "name": "黑荆棘",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_blackthorn.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "175【生命上限】"
+      },
+      {
+        "level": 2,
+        "count": 4,
+        "color": 2,
+        "effect": "300【生命上限】；属性加成提升25%。"
+      },
+      {
+        "level": 3,
+        "count": 6,
+        "color": 3,
+        "effect": "500【生命上限】；属性加成提升50%。"
+      }
+    ],
+    "num_list": [
+      2,
+      4,
+      6
+    ],
+    "text": {
+      "prefix": "战斗开始前，位于【黑荆棘格】内的友军被献祭，为你的弈子们提供生命值。  【黑荆棘】弈子们基于【祭品】的定位、星级和费用，获得额外属性  选择一把武器。",
+      "desc2": "(2)175【生命上限】|(4)300【生命上限】；属性加成提升25%。|(6)500【生命上限】；属性加成提升50%。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：黑荆棘",
+      "ordinal": 2
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Blackthorn",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Blackthorn",
+      "external_numeric_id": 6,
+      "external_kind": "origin",
+      "hero_ids": [
+        918045,
+        918421,
+        918019,
+        918268,
+        918054,
+        918099
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "175【HP】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 4,
+          "levelDesc": "300【HP】；属性加成提升30%"
+        },
+        {
+          "levelStyle": 3,
+          "level": 6,
+          "levelDesc": "550【HP】；额外加成再提升60%"
+        }
+      ],
+      "description_html": "战斗开始前，位于【黑荆棘格】内的友军被献祭，为你的弈子们提供生命值。<br>【黑荆棘】弈子们基于【祭品】的定位、星级和费用，获得额外属性。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:452",
+    "source": "jcc_official_s18_source_docs",
+    "id": "452",
+    "name": "灵魂莲华",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_blossom.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 3,
+        "color": 1,
+        "effect": "12%【物理加成】【法术加成】，【自然仙灵】得到升级"
+      },
+      {
+        "level": 2,
+        "count": 5,
+        "color": 2,
+        "effect": "30%【物理加成】【法术加成】，商店每次都会刷新出【自然仙灵】"
+      },
+      {
+        "level": 3,
+        "count": 7,
+        "color": 3,
+        "effect": "40%【物理加成】【法术加成】，在购买1个【自然仙灵】后，获得4金币"
+      },
+      {
+        "level": 4,
+        "count": 9,
+        "color": 3,
+        "effect": "45%【物理加成】【法术加成】，每回合你可以购买2个【自然仙灵】"
+      },
+      {
+        "level": 5,
+        "count": 11,
+        "color": 4,
+        "effect": "100%【物理加成】【法术加成】，自然之力！！！【自然仙灵】的力量满溢而出"
+      }
+    ],
+    "num_list": [
+      3,
+      5,
+      7,
+      9,
+      11
+    ],
+    "text": {
+      "prefix": "在对战后，你的【自然仙灵】将得到强化。【灵魂莲华】弈子们获得物理加成、法术加成和10%最大生命值。",
+      "desc2": "(3)12%【物理加成】【法术加成】，【自然仙灵】得到升级|(5)30%【物理加成】【法术加成】，商店每次都会刷新出【自然仙灵】|(7)40%【物理加成】【法术加成】，在购买1个【自然仙灵】后，获得4金币|(9)45%【物理加成】【法术加成】，每回合你可以购买2个【自然仙灵】|(11)100%【物理加成】【法术加成】，自然之力！！！【自然仙灵】的力量满溢而出"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：灵魂莲华",
+      "ordinal": 3
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Blossom",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Blossom",
+      "external_numeric_id": 1,
+      "external_kind": "origin",
+      "hero_ids": [
+        918043,
+        918083,
+        918804,
+        918011,
+        918875,
+        918103,
+        918022,
+        918099
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 3,
+          "levelDesc": "【自然仙灵】得到升级，12%【AD】【AP】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 5,
+          "levelDesc": "商店每次都会刷新出【自然仙灵】，30%【AD】【AP】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 7,
+          "levelDesc": "在购买1个【自然仙灵】后，获得4金币，40%【AD】【AP】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 9,
+          "levelDesc": "每回合你可以购买2个【自然仙灵】，45%【AD】【AP】"
+        },
+        {
+          "levelStyle": 4,
+          "level": 11,
+          "levelDesc": "自然之力！！！【自然仙灵】的力量满溢而出，100%【AD】【AP】"
+        }
+      ],
+      "description_html": "在对战后，你的【自然仙灵】将得到强化。<br>【灵魂莲华】弈子们获得物理加成、法术加成和10%最大生命值。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:453",
+    "source": "jcc_official_s18_source_docs",
+    "id": "453",
+    "name": "魔女",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_coven.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 3,
+        "color": 1,
+        "effect": "每次击败+2【魔女精粹】，每次失败+18【魔女精粹】"
+      },
+      {
+        "level": 2,
+        "count": 4,
+        "color": 2,
+        "effect": "每次击败+2【魔女精粹】，每次失败+25【魔女精粹】"
+      },
+      {
+        "level": 3,
+        "count": 5,
+        "color": 2,
+        "effect": "每次击败+3【魔女精粹】，每次失败+32【魔女精粹】"
+      },
+      {
+        "level": 4,
+        "count": 7,
+        "color": 3,
+        "effect": "每次击败+10【魔女精粹】，每次失败+60【魔女精粹】"
+      }
+    ],
+    "num_list": [
+      3,
+      4,
+      5,
+      7
+    ],
+    "text": {
+      "prefix": "通过击败弈子们收集【魔女精粹】，输掉玩家对战回合时还会增加更多。  初始值为40【魔女精粹】，选择将【魔女精粹】兑换为奖励或是继续收集【魔女精粹】。每阈值奖励所需的【魔女精粹】数量都会进一步增加。",
+      "desc2": "(3)每次击败+2【魔女精粹】，每次失败+18【魔女精粹】|(4)每次击败+2【魔女精粹】，每次失败+25【魔女精粹】|(5)每次击败+3【魔女精粹】，每次失败+32【魔女精粹】|(7)每次击败+10【魔女精粹】，每次失败+60【魔女精粹】"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：魔女",
+      "ordinal": 4
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Coven",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Coven",
+      "external_numeric_id": 7,
+      "external_kind": "origin",
+      "hero_ids": [
+        918164,
+        918060,
+        918051,
+        918069,
+        918025,
+        918099
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 3,
+          "levelDesc": "每次击杀+2【魔女精粹】，每次失败+18【魔女精粹】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 4,
+          "levelDesc": "每次击杀+2【魔女精粹】，每次失败+25【魔女精粹】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 5,
+          "levelDesc": "每次击杀+3【魔女精粹】，每次失败+32【魔女精粹】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 7,
+          "levelDesc": "每次击杀+10【魔女精粹】，每次失败+60【魔女精粹】"
+        }
+      ],
+      "description_html": "通过击杀弈子们收集【魔女精粹】，输掉玩家对战回合时还会增加更多。<br>初始值为40【魔女精粹】，选择将【魔女精粹】兑换为奖励或是继续收集【魔女精粹】。每阈值奖励所需的【魔女精粹】数量都会进一步增加。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:454",
+    "source": "jcc_official_s18_source_docs",
+    "id": "454",
+    "name": "峡谷野怪",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_riftbeast.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 3,
+        "color": 1,
+        "effect": "使用【阿尔法印记】为1个【峡谷野怪】提供它独特的霸符。"
+      },
+      {
+        "level": 2,
+        "count": 5,
+        "color": 2,
+        "effect": "每过3场对战，你的下一次商店会被【峡谷野怪】占领。"
+      },
+      {
+        "level": 3,
+        "count": 7,
+        "color": 3,
+        "effect": "战斗开始时及之后每5秒，【峡谷野怪】成长并获得5%【物理加成】、5%【法术加成】、5%【攻击速度】、5【护甲】、5【魔法抗性】、50【生命上限】、1【法力回复】"
+      },
+      {
+        "level": 4,
+        "count": 10,
+        "color": 3,
+        "effect": "自然之力！！！+2最大队伍规模"
+      }
+    ],
+    "num_list": [
+      3,
+      5,
+      7,
+      10
+    ],
+    "text": {
+      "prefix": "(3)使用【阿尔法印记】为1个【峡谷野怪】提供它独特的霸符。 |(5)每过3场对战，你的下一次商店会被【峡谷野怪】占领。 |(7)战斗开始时及之后每5秒，【峡谷野怪】成长并获得5%【物理加成】、5%【法术加成】、5%【攻击速度】、5【护甲】、5【魔法抗性】、50【生命上限】、1【法力回复】 |(10)自然之力！！！+2最大队伍规模",
+      "desc2": "(3)使用【阿尔法印记】为1个【峡谷野怪】提供它独特的霸符。|(5)每过3场对战，你的下一次商店会被【峡谷野怪】占领。|(7)战斗开始时及之后每5秒，【峡谷野怪】成长并获得5%【物理加成】、5%【法术加成】、5%【攻击速度】、5【护甲】、5【魔法抗性】、50【生命上限】、1【法力回复】|(10)自然之力！！！+2最大队伍规模"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：峡谷野怪",
+      "ordinal": 5
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_Riftbeast18",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_Riftbeast18",
+      "external_numeric_id": 9,
+      "external_kind": "origin",
+      "hero_ids": [
+        918990,
+        918989,
+        918992,
+        918994,
+        918991,
+        918993,
+        918995,
+        918997,
+        918996,
+        918998
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 3,
+          "levelDesc": "使用【阿尔法印记】为1个【峡谷野怪】提供它独特的霸符。"
+        },
+        {
+          "levelStyle": 2,
+          "level": 5,
+          "levelDesc": "每过3场对战，你的下一次商店会被【峡谷野怪】占领。"
+        },
+        {
+          "levelStyle": 3,
+          "level": 7,
+          "levelDesc": "战斗开始时及之后每5秒，【峡谷野怪】成长并获得<br>6%【AD】 6%【AP】 6%【AS】<br>+5【ARMOR】 +5【MR】 +50【HP】 +1【MANAREGEN】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 10,
+          "levelDesc": "自然之力！！！+2最大队伍规模"
+        }
+      ],
+      "description_html": null
+    }
+  },
+  {
+    "address": "jcc:s18:trait:455",
+    "source": "jcc_official_s18_source_docs",
+    "id": "455",
+    "name": "花仙子",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_fae.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "5%【物理加成】【法术加成】和2%的治疗强度。"
+      },
+      {
+        "level": 2,
+        "count": 4,
+        "color": 3,
+        "effect": "8%【物理加成】【法术加成】和4%的治疗强度。吸引7个【皮克斯仙灵】后，转而开始吸引可提供金币的【黄金皮克斯仙灵】。 当前【皮克斯仙灵】：0/0 下一【皮克斯仙灵】：0/0"
+      }
+    ],
+    "num_list": [
+      2,
+      4
+    ],
+    "text": {
+      "prefix": "你队伍造成的伤害、治疗及护盾效果会吸引【皮克斯仙灵】。  每个【皮克斯仙灵】为【花仙子】弈子们提供物理加成和法术加成，在其生命值降至50%时，他们基于[皮克斯仙灵]数量治疗生命值。",
+      "desc2": "(2)5%【物理加成】【法术加成】和2%的治疗强度。|(4)8%【物理加成】【法术加成】和4%的治疗强度。吸引7个【皮克斯仙灵】后，转而开始吸引可提供金币的【黄金皮克斯仙灵】。 当前【皮克斯仙灵】：0/0 下一【皮克斯仙灵】：0/0"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：花仙子",
+      "ordinal": 6
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Fae",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Fae",
+      "external_numeric_id": 13,
+      "external_kind": "origin",
+      "hero_ids": [
+        918498,
+        918497,
+        918018,
+        918876,
+        918099
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "5% 【AD】【AP】和2%治疗强度。"
+        },
+        {
+          "levelStyle": 3,
+          "level": 4,
+          "levelDesc": "8% 【AD】【AP】和4%治疗强度。在吸引了7个【皮克斯仙灵】后，转而开始吸引可提供金币的【黄金皮克斯仙灵】。"
+        }
+      ],
+      "description_html": "你的队伍的伤害、治疗强度和护盾强度会吸引【皮克斯仙灵】。<br>每个【皮克斯仙灵】为【花仙子】弈子们提供物理加成和法术加成，在其生命值降至50%时，他们基于【皮克斯仙灵】数量治疗生命值。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:456",
+    "source": "jcc_official_s18_source_docs",
+    "id": "456",
+    "name": "约德尔人",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_sprykin.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 3,
+        "color": 1,
+        "effect": "【骑乘者】获得15%【生命上限】和15%【攻击速度】"
+      },
+      {
+        "level": 2,
+        "count": 5,
+        "color": 2,
+        "effect": "40%【生命上限】、35%【攻击速度】，且【毛茸茸大朋友】的技能的50%效果会应用于你的【约德尔人】弈子。"
+      },
+      {
+        "level": 3,
+        "count": 7,
+        "color": 3,
+        "effect": "45%【生命上限】、45%【攻击速度】，且【毛茸茸大朋友】的技能的100%效果会应用于你的【约德尔人】弈子。  【毛茸茸大朋友】的攻击和技能会根据【骑乘者】是近战或远程而改变。"
+      }
+    ],
+    "num_list": [
+      3,
+      5,
+      7
+    ],
+    "text": {
+      "prefix": "获得【毛茸茸大朋友】。将1个【约德尔人】放在【毛茸茸大朋友】上，为其选择【骑乘者】。",
+      "desc2": "(3)【骑乘者】获得15%【生命上限】和15%【攻击速度】|(5)40%【生命上限】、35%【攻击速度】，且【毛茸茸大朋友】的技能的50%效果会应用于你的【约德尔人】弈子。|(7)45%【生命上限】、45%【攻击速度】，且【毛茸茸大朋友】的技能的100%效果会应用于你的【约德尔人】弈子。  【毛茸茸大朋友】的攻击和技能会根据【骑乘者】是近战或远程而改变。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：约德尔人",
+      "ordinal": 7
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Sprykin",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Sprykin",
+      "external_numeric_id": 24,
+      "external_kind": "origin",
+      "hero_ids": [
+        918954,
+        918045,
+        918017,
+        918033,
+        918018,
+        918150
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 3,
+          "levelDesc": "【骑乘者】获得<br>15%【HP】和15%【AS】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 5,
+          "levelDesc": "40%【HP】 35%【AS】，和50%【毛茸茸大朋友】的技能加成会作用于你的【约德尔人和朋友】弈子们。"
+        },
+        {
+          "levelStyle": 3,
+          "level": 7,
+          "levelDesc": "45%【HP】 45%【AS】，和100%【毛茸茸大朋友】的技能加成会作用于你的【约德尔人和朋友】弈子们。"
+        }
+      ],
+      "description_html": "获得【毛茸茸大朋友】。将1个【约德尔人和朋友】放置在【毛茸茸大朋友】身上以选择其【骑乘者】。<br>【毛茸茸的大朋友】的攻击和技能会根据【骑乘者】是近战或远程而改变。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:457",
+    "source": "jcc_official_s18_source_docs",
+    "id": "457",
+    "name": "野兽之灵",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_primal.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "灵龟赐福：每4秒，你的队伍治疗其4%最大生命值。蛮熊赐福：【野兽之灵】的伤害会终结生命值低于15%的敌人。猛虎赐福：在6秒后，【野兽之灵】弈子们获得35%攻击速度，你的队伍获得获得15%攻击速度。凤凰赐福：【野兽之灵】每参与14次击败，获得一个散件，最多4次。选择一个【兽灵赐福】"
+      },
+      {
+        "level": 2,
+        "count": 4,
+        "color": 3,
+        "effect": "灵龟赐福：每4秒，你的队伍治疗其4%最大生命值。蛮熊赐福：【野兽之灵】的伤害会终结生命值低于15%的敌人。猛虎赐福：在6秒后，【野兽之灵】弈子们获得35%攻击速度，你的队伍获得获得15%攻击速度。凤凰赐福：【野兽之灵】每参与14次击败，获得一个散件，最多4次。选择第二个【兽灵赐福】  累计击杀:0"
+      }
+    ],
+    "num_list": [
+      2,
+      4
+    ],
+    "text": {
+      "prefix": "在四种【兽灵赐福】中选择一项获取。",
+      "desc2": "(2)灵龟赐福：每4秒，你的队伍治疗其4%最大生命值。蛮熊赐福：【野兽之灵】的伤害会终结生命值低于15%的敌人。猛虎赐福：在6秒后，【野兽之灵】弈子们获得35%攻击速度，你的队伍获得获得15%攻击速度。凤凰赐福：【野兽之灵】每参与14次击败，获得一个散件，最多4次。选择一个【兽灵赐福】|(4)灵龟赐福：每4秒，你的队伍治疗其4%最大生命值。蛮熊赐福：【野兽之灵】的伤害会终结生命值低于15%的敌人。猛虎赐福：在6秒后，【野兽之灵】弈子们获得35%攻击速度，你的队伍获得获得15%攻击速度。凤凰赐福：【野兽之灵】每参与14次击败，获得一个散件，最多4次。选择第二个【兽灵赐福】  累计击杀:0"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：野兽之灵",
+      "ordinal": 8
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_Primal18",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_Primal18",
+      "external_numeric_id": 17,
+      "external_kind": "origin",
+      "hero_ids": [
+        918254,
+        918076,
+        918015,
+        918099
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "选择一个【兽灵赐福】。"
+        },
+        {
+          "levelStyle": 3,
+          "level": 4,
+          "levelDesc": "选择第二个【兽灵赐福】。"
+        }
+      ],
+      "description_html": "在四种【兽灵赐福】中选择一项获取。<br><TFTShadowItemBonus>蛮熊赐福</TFTShadowItemBonus>：【野兽之灵】的伤害会处决生命值低于12%的敌人。<br><TFTShadowItemBonus>凤凰赐福</TFTShadowItemBonus>：【野兽之灵】每参与15次击杀，获得1件基础装备。至多获得4件。<br><TFTShadowItemBonus>猛虎赐福</TFTShadowItemBonus>：在6秒后，【野兽之灵】弈子们获得35%攻击速度，你的队伍获得15%攻击速度。<br><TFTShadowItemBonus>灵龟赐福</TFTShadowItemBonus>：每4秒，你的队伍治疗其4%最大生命值。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:458",
+    "source": "jcc_official_s18_source_docs",
+    "id": "458",
+    "name": "地狱火",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_inferno.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "1%灼烧效果。"
+      },
+      {
+        "level": 2,
+        "count": 3,
+        "color": 2,
+        "effect": "在对战后，你的1个不包含【地狱火】弈子的商店栏位会被引燃，刷新出高一阶的弈子"
+      },
+      {
+        "level": 3,
+        "count": 5,
+        "color": 3,
+        "effect": "引燃2个商店栏位，施加2%灼烧效果。"
+      },
+      {
+        "level": 4,
+        "count": 7,
+        "color": 3,
+        "effect": "引燃4个商店栏位，施加3%灼烧效果。  灼烧：每秒造成目标一部分最大生命值的真实伤害。 重伤：降低受到的治疗效果。"
+      }
+    ],
+    "num_list": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "text": {
+      "prefix": "【地狱火】的伤害会对敌人施加持续4秒的灼烧和33%重伤效果。【地狱火】的灼烧效果可以和其它灼烧效果叠加。",
+      "desc2": "(2)1%灼烧效果。|(3)在对战后，你的1个不包含【地狱火】弈子的商店栏位会被引燃，刷新出高一阶的弈子|(5)引燃2个商店栏位，施加2%灼烧效果。|(7)引燃4个商店栏位，施加3%灼烧效果。  灼烧：每秒造成目标一部分最大生命值的真实伤害。 重伤：降低受到的治疗效果。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：地狱火",
+      "ordinal": 9
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Inferno",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Inferno",
+      "external_numeric_id": 2,
+      "external_kind": "origin",
+      "hero_ids": [
+        918084,
+        918110,
+        918098,
+        918032,
+        918085,
+        918099
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "1%灼烧效果，33%重伤效果"
+        },
+        {
+          "levelStyle": 2,
+          "level": 3,
+          "levelDesc": "在对战后，你的1个不包含【地狱火】弈子的商店栏位会被引燃，刷新出高一阶的弈子。"
+        },
+        {
+          "levelStyle": 3,
+          "level": 5,
+          "levelDesc": "引燃2个商店栏位，施加2%灼烧效果"
+        },
+        {
+          "levelStyle": 3,
+          "level": 7,
+          "levelDesc": "引燃4个商店栏位，施加3%灼烧效果"
+        }
+      ],
+      "description_html": "【地狱火】的伤害会对敌人施加持续4秒的<TFTKeyword>灼烧</TFTKeyword>和<TFTKeyword>重伤</TFTKeyword>效果。【地狱火】的灼烧效果可以和其它灼烧效果叠加。<br>灼烧：每秒造成目标一部分最大生命值的真实伤害。<br>重伤：降低受到的治疗效果。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:459",
+    "source": "jcc_official_s18_source_docs",
+    "id": "459",
+    "name": "日蚀骑士",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_sunbeam.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 3,
+        "color": 3,
+        "effect": "你的所有单位获得5%最大生命值的护盾并造成5%额外魔法伤害。每拥有1名独特的三星【星级】英雄，获得额外加成：  1【星级】：每拥有1名三星英雄，护盾和魔法伤害提升1.5%。 3【星级】：额外获得18%【攻击速度】和15【护甲】【魔法抗性】。 5【星级】：将50%的额外魔法伤害转化为真实伤害。 8【星级】：在战斗期间内每过4秒，1个3星弈子飞升至4星。  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。"
+      }
+    ],
+    "num_list": [
+      3
+    ],
+    "text": {
+      "prefix": "(3)你的所有单位获得5%最大生命值的护盾并造成5%额外魔法伤害。每拥有1名独特的三星【星级】英雄，获得额外加成：  1【星级】：每拥有1名三星英雄，护盾和魔法伤害提升1.5%。 3【星级】：额外获得18%【攻击速度】和15【护甲】【魔法抗性】。 5【星级】：将50%的额外魔法伤害转化为真实伤害。 8【星级】：在战斗期间内每过4秒，1个3星弈子飞升至4星。  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。",
+      "desc2": "(3)你的所有单位获得5%最大生命值的护盾并造成5%额外魔法伤害。每拥有1名独特的三星【星级】英雄，获得额外加成：  1【星级】：每拥有1名三星英雄，护盾和魔法伤害提升1.5%。 3【星级】：额外获得18%【攻击速度】和15【护甲】【魔法抗性】。 5【星级】：将50%的额外魔法伤害转化为真实伤害。 8【星级】：在战斗期间内每过4秒，1个3星弈子飞升至4星。  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：日蚀骑士",
+      "ordinal": 10
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Solar",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Solar",
+      "external_numeric_id": 11,
+      "external_kind": "origin",
+      "hero_ids": [
+        918089,
+        918010,
+        918113,
+        918099
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 3,
+          "levelDesc": "你的弈子们获得5%最大生命值护盾，并造成7%额外魔法伤害。每有1个不同的3星弈子，获得额外加成：<br>1 ：每有1个3星弈子，提升1.5%护盾强度和魔法伤害。<br>3：18%【AS】和15【ARMOR】【MR】<br>5：将50%额外魔法伤害转换为真实伤害。<br>8：在战斗期间内每过4秒，1个3星弈子飞升至4星。"
+        }
+      ],
+      "description_html": "登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:460",
+    "source": "jcc_official_s18_source_docs",
+    "id": "460",
+    "name": "月蚀骑士",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_moonbeam.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 2,
+        "color": 1,
+        "effect": "7%【攻击速度】，7%【法术加成】"
+      },
+      {
+        "level": 2,
+        "count": 3,
+        "color": 2,
+        "effect": "10%【攻击速度】，10%【法术加成】"
+      },
+      {
+        "level": 3,
+        "count": 4,
+        "color": 2,
+        "effect": "14%【攻击速度】，14%【法术加成】"
+      },
+      {
+        "level": 4,
+        "count": 5,
+        "color": 3,
+        "effect": "18%【攻击速度】，18%【法术加成】  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。"
+      }
+    ],
+    "num_list": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "text": {
+      "prefix": "【月蚀骑士】弈子们和邻格友军获得攻击速度和法术加成。【月蚀骑士】弈子还会再额外获得100%。",
+      "desc2": "(2)7%【攻击速度】，7%【法术加成】|(3)10%【攻击速度】，10%【法术加成】|(4)14%【攻击速度】，14%【法术加成】|(5)18%【攻击速度】，18%【法术加成】  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：月蚀骑士",
+      "ordinal": 11
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Lunar",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Lunar",
+      "external_numeric_id": 5,
+      "external_kind": "origin",
+      "hero_ids": [
+        918131,
+        918523,
+        918955,
+        918099
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 2,
+          "levelDesc": "7%【AS】，7%【AP】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 3,
+          "levelDesc": "10%【AS】，10%【AP】"
+        },
+        {
+          "levelStyle": 2,
+          "level": 4,
+          "levelDesc": "14%【AS】，14%【AP】"
+        },
+        {
+          "levelStyle": 3,
+          "level": 5,
+          "levelDesc": "18%【AS】，18%【AP】"
+        }
+      ],
+      "description_html": "【月蚀骑士】弈子们和邻格友军获得攻击速度和法术加成。【月蚀骑士】弈子还会再额外获得100%。<br>登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:461",
+    "source": "jcc_official_s18_source_docs",
+    "id": "461",
+    "name": "日月双蚀",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_eclipse.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 0,
+        "color": 3,
+        "effect": "战斗开始10秒后，【日月双蚀】终结最低生命值的敌人，每3.5秒重复一次。"
+      }
+    ],
+    "num_list": [
+      0
+    ],
+    "text": {
+      "prefix": "战斗开始10秒后，【日月双蚀】终结最低生命值的敌人，每3.5秒重复一次。",
+      "desc2": "(0)战斗开始10秒后，【日月双蚀】终结最低生命值的敌人，每3.5秒重复一次。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：日月双蚀",
+      "ordinal": 12
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Eclipse",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Eclipse",
+      "external_numeric_id": 23,
+      "external_kind": "origin",
+      "hero_ids": [
+        918089,
+        918010,
+        918113,
+        918131,
+        918523,
+        918955,
+        918099
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 1,
+          "levelDesc": "战斗开始10秒后，【日月双蚀】处决最低生命值的敌人，每3.5秒重复一次。"
+        }
+      ],
+      "description_html": null
+    }
+  },
+  {
+    "address": "jcc:s18:trait:462",
+    "source": "jcc_official_s18_source_docs",
+    "id": "462",
+    "name": "绝命花妖",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_florafatalis.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 1,
+        "color": 1,
+        "effect": "10法力值"
+      },
+      {
+        "level": 2,
+        "count": 2,
+        "color": 3,
+        "effect": "并治疗生命值最低的友军8%最大生命值。"
+      }
+    ],
+    "num_list": [
+      1,
+      2
+    ],
+    "text": {
+      "prefix": "【绝命花妖】弈子们在参与击杀时收割敌人，获得：",
+      "desc2": "(1)10法力值|(2)并治疗生命值最低的友军8%最大生命值。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：绝命花妖",
+      "ordinal": 13
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_FloraFatalis18",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_FloraFatalis18",
+      "external_numeric_id": 18,
+      "external_kind": "origin",
+      "hero_ids": [
+        918009,
+        918016
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 1,
+          "level": 1,
+          "levelDesc": "10法力值"
+        },
+        {
+          "levelStyle": 3,
+          "level": 2,
+          "levelDesc": "并治疗生命值最低的友军8%最大生命值。"
+        }
+      ],
+      "description_html": "【绝命花妖】弈子们在参与击杀时收割敌人，获得："
+    }
+  },
+  {
+    "address": "jcc:s18:trait:463",
+    "source": "jcc_official_s18_source_docs",
+    "id": "463",
+    "name": "宿敌",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_rival.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 1,
+        "color": 3,
+        "effect": "仅在登场了1个【宿敌】时激活。(1)仅在登场了1个【宿敌】时激活。(1)(1)【宿敌】们收集参与击杀数，如果参与了对另一名【宿敌】的击杀，获得+3参与击杀数。【宿敌】们收集参与击杀数，如果参与了对另一名【宿敌】的击杀，获得+3参与击杀数。  参与击杀会使【卡兹克】进化，永久为他提供你从【裁决使】、【迅捷射手】、【狂战士】或【法师】中选择的一项羁绊。参与击杀会使【卡兹克】进化，永久为他提供你从【裁决使】、【迅捷射手】、【狂战士】或【法师】中选择的一项羁绊。 每参与5次击杀，【雷恩加尔】提供2/3/5金币。在参与30次击杀后，你的队伍获得5％物理加成，此后每次参与击杀再提升0.2%【物理加成】。每参与5次击杀，【雷恩加尔】提供2/3/5金币。在参与30次击杀后，你的队伍获得5％物理加成，此后每次参与击杀再提升0.2%【物理加成】。  【卡兹克】参与击杀数：0/0 已选择进化： 选择一把武器。 【卡兹克】参与击杀数：0/0 已选择进化： 选择一把武器。 【雷恩加尔】参与击杀数：0 已赚取的金币：0【雷恩加尔】参与击杀数：0 已赚取的金币：0  (2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的100%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的50%。(2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的100%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的50%。(2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的100%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的50%。"
+      },
+      {
+        "level": 2,
+        "count": 2,
+        "color": 3,
+        "effect": null
+      }
+    ],
+    "num_list": [
+      1,
+      2
+    ],
+    "text": {
+      "prefix": "(1)仅在登场了1个【宿敌】时激活。(1)仅在登场了1个【宿敌】时激活。(1)(1)【宿敌】们收集参与击杀数，如果参与了对另一名【宿敌】的击杀，获得+3参与击杀数。【宿敌】们收集参与击杀数，如果参与了对另一名【宿敌】的击杀，获得+3参与击杀数。  参与击杀会使【卡兹克】进化，永久为他提供你从【裁决使】、【迅捷射手】、【狂战士】或【法师】中选择的一项羁绊。参与击杀会使【卡兹克】进化，永久为他提供你从【裁决使】、【迅捷射手】、【狂战士】或【法师】中选择的一项羁绊。 每参与5次击杀，【雷恩加尔】提供2/3/5金币。在参与30次击杀后，你的队伍获得5％物理加成，此后每次参与击杀再提升0.2%【物理加成】。每参与5次击杀，【雷恩加尔】提供2/3/5金币。在参与30次击杀后，你的队伍获得5％物理加成，此后每次参与击杀再提升0.2%【物理加成】。  【卡兹克】参与击杀数：0/0 已选择进化： 选择一把武器。 【卡兹克】参与击杀数：0/0 已选择进化： 选择一把武器。 【雷恩加尔】参与击杀数：0 已赚取的金币：0【雷恩加尔】参与击杀数：0 已赚取的金币：0  (2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的100%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的50%。(2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的100%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的50%。(2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的100%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的50%。",
+      "desc2": "(1)仅在登场了1个【宿敌】时激活。(1)仅在登场了1个【宿敌】时激活。(1)(1)【宿敌】们收集参与击杀数，如果参与了对另一名【宿敌】的击杀，获得+3参与击杀数。【宿敌】们收集参与击杀数，如果参与了对另一名【宿敌】的击杀，获得+3参与击杀数。  参与击杀会使【卡兹克】进化，永久为他提供你从【裁决使】、【迅捷射手】、【狂战士】或【法师】中选择的一项羁绊。参与击杀会使【卡兹克】进化，永久为他提供你从【裁决使】、【迅捷射手】、【狂战士】或【法师】中选择的一项羁绊。 每参与5次击杀，【雷恩加尔】提供2/3/5金币。在参与30次击杀后，你的队伍获得5％物理加成，此后每次参与击杀再提升0.2%【物理加成】。每参与5次击杀，【雷恩加尔】提供2/3/5金币。在参与30次击杀后，你的队伍获得5％物理加成，此后每次参与击杀再提升0.2%【物理加成】。  【卡兹克】参与击杀数：0/0 已选择进化： 选择一把武器。 【卡兹克】参与击杀数：0/0 已选择进化： 选择一把武器。 【雷恩加尔】参与击杀数：0 已赚取的金币：0【雷恩加尔】参与击杀数：0 已赚取的金币：0  (2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的100%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的50%。(2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的100%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的50%。(2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的100%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的50%。|(2)null"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：宿敌",
+      "ordinal": 14
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Rival",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Rival",
+      "external_numeric_id": 12,
+      "external_kind": "origin",
+      "hero_ids": [
+        918107,
+        918121
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 1,
+          "levelDesc": "仅在登场了1个【宿敌】时激活。<br>【宿敌】收集参与击杀数，如果参与了对另一名【宿敌】的击杀，获得+3参与击杀数。"
+        },
+        {
+          "levelStyle": 1,
+          "level": 1,
+          "levelDesc": "【宿敌】收集参与击杀数，如果参与了对另一名【宿敌】的击杀，获得+3参与击杀数。<br>参与击杀会使【卡兹克】进化，永久为他提供你从【裁决使】、【迅捷射手】、【狂战士】或【法师】中选择的一项羁绊。<br>每参与8次击杀，【雷恩加尔】提供2/3/5金币。在参与30次击杀后，你的队伍获得5%物理加成，此后每次参与击杀再提升0.2%【AD】。"
+        },
+        {
+          "levelStyle": 3,
+          "level": 2,
+          "levelDesc": "【宿敌】可以同时登场，并且他们的技能可以为彼此提供加成。"
+        }
+      ],
+      "description_html": "只对你最强的那个【宿敌】生效。"
+    }
+  },
+  {
+    "address": "jcc:s18:trait:464",
+    "source": "jcc_official_s18_source_docs",
+    "id": "464",
+    "name": "远古树精",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_oldgrowth.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 1,
+        "color": 5,
+        "effect": "每当3格内的1名敌人阵亡时，你最强大的那个【远古树精】弈子获得30永久最大生命值。  当前：0"
+      }
+    ],
+    "num_list": [
+      1
+    ],
+    "text": {
+      "prefix": "每当3格内的1名敌人阵亡时，你最强大的那个【远古树精】弈子获得30永久最大生命值。  当前：0",
+      "desc2": "(1)每当3格内的1名敌人阵亡时，你最强大的那个【远古树精】弈子获得30永久最大生命值。  当前：0"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：远古树精",
+      "ordinal": 15
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Maokai_UniqueTrait",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Maokai_UniqueTrait",
+      "external_numeric_id": 15,
+      "external_kind": "origin",
+      "hero_ids": [
+        918057
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 1,
+          "levelDesc": "每当3格内的1名敌人阵亡时，你最强大的那个【远古树精】弈子获得30永久最大生命值。"
+        }
+      ],
+      "description_html": null
+    }
+  },
+  {
+    "address": "jcc:s18:trait:465",
+    "source": "jcc_official_s18_source_docs",
+    "id": "465",
+    "name": "赏金猎人",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_bountyhunter.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 1,
+        "color": 5,
+        "effect": "选择1个【悬赏令】。你最强大的那个【德莱文】可以推进【悬赏令】进度以获得奖励。在完成1个【悬赏令】后，可以选择另一个。  选择一把武器。  【悬赏令】进度：0/0【悬赏令】完成！"
+      }
+    ],
+    "num_list": [
+      1
+    ],
+    "text": {
+      "prefix": "选择1个【悬赏令】。你最强大的那个【德莱文】可以推进【悬赏令】进度以获得奖励。在完成1个【悬赏令】后，可以选择另一个。  选择一把武器。  【悬赏令】进度：0/0【悬赏令】完成！",
+      "desc2": "(1)选择1个【悬赏令】。你最强大的那个【德莱文】可以推进【悬赏令】进度以获得奖励。在完成1个【悬赏令】后，可以选择另一个。  选择一把武器。  【悬赏令】进度：0/0【悬赏令】完成！"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：赏金猎人",
+      "ordinal": 16
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_DravenUniqueTrait18",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_DravenUniqueTrait18",
+      "external_numeric_id": 20,
+      "external_kind": "origin",
+      "hero_ids": [
+        918119
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 1,
+          "levelDesc": "选择1个【悬赏令】。你最强大的那个【德莱文】可以推进【悬赏令】进度以获取其奖励。在完成1个【悬赏令】后，可以选择另一个。"
+        }
+      ],
+      "description_html": null
+    }
+  },
+  {
+    "address": "jcc:s18:trait:466",
+    "source": "jcc_official_s18_source_docs",
+    "id": "466",
+    "name": "翠神",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_greenfather.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 1,
+        "color": 5,
+        "effect": "你最强大的那个【艾翁】在施放技能时获得1颗种子，且每场对战额外获得3颗。【艾翁】可消耗5颗种子在你的棋盘上培育1个格子，为格内的住民提供加成。  种子：0/5  选择一把武器。"
+      }
+    ],
+    "num_list": [
+      1
+    ],
+    "text": {
+      "prefix": "你最强大的那个【艾翁】在施放技能时获得1颗种子，且每场对战额外获得3颗。【艾翁】可消耗5颗种子在你的棋盘上培育1个格子，为格内的住民提供加成。  种子：0/5  选择一把武器。",
+      "desc2": "(1)你最强大的那个【艾翁】在施放技能时获得1颗种子，且每场对战额外获得3颗。【艾翁】可消耗5颗种子在你的棋盘上培育1个格子，为格内的住民提供加成。  种子：0/5  选择一把武器。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：翠神",
+      "ordinal": 17
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Greenfather",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Greenfather",
+      "external_numeric_id": 10,
+      "external_kind": "origin",
+      "hero_ids": [
+        918427
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 1,
+          "levelDesc": "你最强大的那个【艾翁】在施放技能时获得1颗种子，且每场对战额外获得3颗。【艾翁】可消耗5颗种子在你的棋盘上培育1个格子，为格内的住民提供加成。"
+        }
+      ],
+      "description_html": null
+    }
+  },
+  {
+    "address": "jcc:s18:trait:467",
+    "source": "jcc_official_s18_source_docs",
+    "id": "467",
+    "name": "宝石骑士",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_emeraldguardian.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 1,
+        "color": 5,
+        "effect": "将1名友军拖至你最强大的那个【塔里克】身上即可将他们进行配对，通过【塔里克】的技能为友军提供强大的加成。"
+      }
+    ],
+    "num_list": [
+      1
+    ],
+    "text": {
+      "prefix": "将1名友军拖至你最强大的那个【塔里克】身上即可将他们进行配对，通过【塔里克】的技能为友军提供强大的加成。",
+      "desc2": "(1)将1名友军拖至你最强大的那个【塔里克】身上即可将他们进行配对，通过【塔里克】的技能为友军提供强大的加成。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：宝石骑士",
+      "ordinal": 18
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_Emerald18",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_Emerald18",
+      "external_numeric_id": 22,
+      "external_kind": "origin",
+      "hero_ids": [
+        918044
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 1,
+          "levelDesc": "将1名友军拖至你最强大的那个【塔里克】身上即可将他们进行配对，通过【塔里克】的技能为友军提供强大的加成。"
+        }
+      ],
+      "description_html": null
+    }
+  },
+  {
+    "address": "jcc:s18:trait:468",
+    "source": "jcc_official_s18_source_docs",
+    "id": "468",
+    "name": "月华神女",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_alune.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 1,
+        "color": 5,
+        "effect": "你最强大的那个【拉露恩】在每一次施放技能后，推进一次【月相】。当【月相】在弦月或以下时，你的队伍获得7%伤害减免。在弦月之上时，你的队伍获得7%伤害增幅。"
+      }
+    ],
+    "num_list": [
+      1
+    ],
+    "text": {
+      "prefix": "你最强大的那个【拉露恩】在每一次施放技能后，推进一次【月相】。当【月相】在弦月或以下时，你的队伍获得7%伤害减免。在弦月之上时，你的队伍获得7%伤害增幅。",
+      "desc2": "(1)你最强大的那个【拉露恩】在每一次施放技能后，推进一次【月相】。当【月相】在弦月或以下时，你的队伍获得7%伤害减免。在弦月之上时，你的队伍获得7%伤害增幅。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：月华神女",
+      "ordinal": 19
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_AluneUniqueTrait18",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_AluneUniqueTrait18",
+      "external_numeric_id": 4,
+      "external_kind": "origin",
+      "hero_ids": [
+        918955
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 1,
+          "levelDesc": "你最强大的那个【拉露恩】在每一次施放技能后，推进一次【月相】。当【月相】在弦月或以下时，你的队伍获得7%伤害减免。在弦月之上时，你的队伍获得7%伤害增幅。"
+        }
+      ],
+      "description_html": null
+    }
+  },
+  {
+    "address": "jcc:s18:trait:469",
+    "source": "jcc_official_s18_source_docs",
+    "id": "469",
+    "name": "大元素使",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_avatar.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 1,
+        "color": 5,
+        "effect": "在备战席或棋盘上拥有1个【大元素使】时，会将你商店中所有其他【大元素使】转换为和这个【大元素使】相同的特质/职业。  自然之力！！！【大元素使】为选定的特质/职业提供+2计数。"
+      }
+    ],
+    "num_list": [
+      1
+    ],
+    "text": {
+      "prefix": "在备战席或棋盘上拥有1个【大元素使】时，会将你商店中所有其他【大元素使】转换为和这个【大元素使】相同的特质/职业。  自然之力！！！【大元素使】为选定的特质/职业提供+2计数。",
+      "desc2": "(1)在备战席或棋盘上拥有1个【大元素使】时，会将你商店中所有其他【大元素使】转换为和这个【大元素使】相同的特质/职业。  自然之力！！！【大元素使】为选定的特质/职业提供+2计数。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：大元素使",
+      "ordinal": 20
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_LuxUniqueTrait",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_LuxUniqueTrait",
+      "external_numeric_id": 19,
+      "external_kind": "origin",
+      "hero_ids": [
+        918099
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 1,
+          "levelDesc": "在备战席或棋盘上拥有1个【大元素使】时，会将你商店中所有其他【大元素使】转换为和这个【大元素使】相同的羁绊。<br>自然之力！！！【大元素使】为选定的羁绊提供+2计数。"
+        }
+      ],
+      "description_html": null
+    }
+  },
+  {
+    "address": "jcc:s18:trait:471",
+    "source": "jcc_official_s18_source_docs",
+    "id": "471",
+    "name": "顶级掠食者",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_apexpredator.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 1,
+        "color": 5,
+        "effect": "【远古巨龙】占用2个弈子栏位，并提供+2【峡谷野怪】特质/职业"
+      }
+    ],
+    "num_list": [
+      1
+    ],
+    "text": {
+      "prefix": "【远古巨龙】占用2个弈子栏位，并提供+2【峡谷野怪】特质/职业",
+      "desc2": "(1)【远古巨龙】占用2个弈子栏位，并提供+2【峡谷野怪】特质/职业"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：顶级掠食者",
+      "ordinal": 21
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_ApexPredator",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_ApexPredator",
+      "external_numeric_id": 8,
+      "external_kind": "origin",
+      "hero_ids": [
+        918998
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 1,
+          "levelDesc": "【远古巨龙】占用2个弈子栏位，并提供+2【峡谷野怪】羁绊。"
+        }
+      ],
+      "description_html": null
+    }
+  },
+  {
+    "address": "jcc:s18:trait:472",
+    "source": "jcc_official_s18_source_docs",
+    "id": "472",
+    "name": "魔岩巨兽",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_monolith.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 1,
+        "color": 5,
+        "effect": "每成为1名敌人的目标，【魔岩巨兽】获得10护甲和魔法抗性。"
+      }
+    ],
+    "num_list": [
+      1
+    ],
+    "text": {
+      "prefix": "每成为1名敌人的目标，【魔岩巨兽】获得10护甲和魔法抗性。",
+      "desc2": "(1)每成为1名敌人的目标，【魔岩巨兽】获得10护甲和魔法抗性。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：魔岩巨兽",
+      "ordinal": 22
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Battlemage",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Battlemage",
+      "external_numeric_id": 14,
+      "external_kind": "origin",
+      "hero_ids": [
+        918054
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 1,
+          "levelDesc": "每成为1名敌人的目标，【魔岩巨兽】获得10护甲和魔法抗性。"
+        }
+      ],
+      "description_html": null
+    }
+  },
+  {
+    "address": "jcc:s18:trait:473",
+    "source": "jcc_official_s18_source_docs",
+    "id": "473",
+    "name": "帝王斑蝶",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_caustic.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 1,
+        "color": 1,
+        "effect": "【帝王斑蝶】的伤害会对敌人施加持续4秒的30%魔抗击碎与护甲击碎。  魔抗击碎：降低魔抗值 护甲击碎：降低护甲值。"
+      }
+    ],
+    "num_list": [
+      1
+    ],
+    "text": {
+      "prefix": "【帝王斑蝶】的伤害会对敌人施加持续4秒的30%魔抗击碎与护甲击碎。  魔抗击碎：降低魔抗值 护甲击碎：降低护甲值。",
+      "desc2": "(1)【帝王斑蝶】的伤害会对敌人施加持续4秒的30%魔抗击碎与护甲击碎。  魔抗击碎：降低魔抗值 护甲击碎：降低护甲值。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：帝王斑蝶",
+      "ordinal": 23
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_Caustic",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_Caustic",
+      "external_numeric_id": 21,
+      "external_kind": "origin",
+      "hero_ids": [
+        918096
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 1,
+          "levelDesc": "【帝王斑蝶】的伤害会对敌人施加持续4秒的30%魔抗击碎与护甲击碎。<br>魔抗击碎：降低魔抗值<br>护甲击碎：降低护甲值"
+        }
+      ],
+      "description_html": null
+    }
+  },
+  {
+    "address": "jcc:s18:trait:486",
+    "source": "jcc_official_s18_source_docs",
+    "id": "486",
+    "name": "荆棘之兴",
+    "type": "trait",
+    "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/mode18s19/trait/s18_trait_icon_thornmaiden.png",
+    "breakpoints": [
+      {
+        "level": 1,
+        "count": 1,
+        "color": 5,
+        "effect": "你的队伍获得5%伤害减免，在6或以上株【婕拉】的植物存活时，该数值提升至10%。"
+      }
+    ],
+    "num_list": [
+      1
+    ],
+    "text": {
+      "prefix": "你的队伍获得5%伤害减免，在6或以上株【婕拉】的植物存活时，该数值提升至10%。",
+      "desc2": "(1)你的队伍获得5%伤害减免，在6或以上株【婕拉】的植物存活时，该数值提升至10%。"
+    },
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "### 特质：荆棘之兴",
+      "ordinal": 24
+    },
+    "supplemental_source": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "external_id": "DA_18_ZyraUniqueTrait",
+      "trust_role": "supplemental_structured_hard_data",
+      "resource_key": "DA_18_ZyraUniqueTrait",
+      "external_numeric_id": 16,
+      "external_kind": "origin",
+      "hero_ids": [
+        918143
+      ],
+      "breakpoints": [
+        {
+          "levelStyle": 3,
+          "level": 1,
+          "levelDesc": "你的队伍获得5%伤害减免，在6株或更多【婕拉】的植物存活时，该数值提升至10%。"
+        }
+      ],
+      "description_html": null
+    }
+  }
+]

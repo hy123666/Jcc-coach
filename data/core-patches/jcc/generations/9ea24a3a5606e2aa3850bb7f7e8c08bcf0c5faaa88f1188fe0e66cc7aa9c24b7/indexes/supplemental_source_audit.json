@@ -1,0 +1,4133 @@
+{
+  "category_definitions": {
+    "augment": [
+      {
+        "id": "economy",
+        "label": "经济"
+      },
+      {
+        "id": "combat",
+        "label": "战力"
+      },
+      {
+        "id": "equipment",
+        "label": "装备"
+      },
+      {
+        "id": "synergy",
+        "label": "羁绊"
+      },
+      {
+        "id": "exclusive",
+        "label": "专属"
+      },
+      {
+        "id": "other",
+        "label": "其他"
+      }
+    ],
+    "nature_sprite": [
+      {
+        "id": "champion",
+        "label": "弈子"
+      },
+      {
+        "id": "item",
+        "label": "装备"
+      },
+      {
+        "id": "shop",
+        "label": "商店"
+      },
+      {
+        "id": "combat",
+        "label": "战斗"
+      },
+      {
+        "id": "gold_xp",
+        "label": "金币经验"
+      },
+      {
+        "id": "risky",
+        "label": "冒险"
+      },
+      {
+        "id": "misc",
+        "label": "杂项"
+      }
+    ]
+  },
+  "conflicts": {
+    "champion_stats_and_skill_names": [
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              700,
+              1260,
+              2268,
+              3476
+            ],
+            "metric": "生命",
+            "official_values": [
+              700,
+              1260,
+              2268,
+              3276
+            ]
+          },
+          {
+            "datatft_values": [
+              40,
+              60,
+              90,
+              120
+            ],
+            "metric": "物攻",
+            "official_values": [
+              40,
+              60,
+              90,
+              155
+            ]
+          }
+        ],
+        "id": "1500",
+        "name": "奥恩"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              700,
+              1260,
+              2268,
+              3476
+            ],
+            "metric": "生命",
+            "official_values": [
+              700,
+              1260,
+              2268,
+              3276
+            ]
+          },
+          {
+            "datatft_values": [
+              45,
+              68,
+              101,
+              135
+            ],
+            "metric": "物攻",
+            "official_values": [
+              45,
+              68,
+              101,
+              152
+            ]
+          }
+        ],
+        "id": "1501",
+        "name": "洛"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              700,
+              1260,
+              2268,
+              3476
+            ],
+            "metric": "生命",
+            "official_values": [
+              750,
+              1350,
+              2430,
+              3510
+            ]
+          },
+          {
+            "datatft_values": [
+              50,
+              75,
+              113,
+              150
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              113,
+              169
+            ]
+          },
+          {
+            "datatft_values": [
+              40
+            ],
+            "metric": "初始法力值",
+            "official_values": [
+              30,
+              30,
+              30,
+              30
+            ]
+          },
+          {
+            "datatft_values": [
+              100
+            ],
+            "metric": "法力值",
+            "official_values": [
+              90,
+              90,
+              90,
+              90
+            ]
+          }
+        ],
+        "id": "1502",
+        "name": "蕾欧娜"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              700,
+              1260,
+              2268,
+              3476
+            ],
+            "metric": "生命",
+            "official_values": [
+              700,
+              1260,
+              2268,
+              3276
+            ]
+          },
+          {
+            "datatft_values": [
+              55,
+              83,
+              124,
+              165
+            ],
+            "metric": "物攻",
+            "official_values": [
+              55,
+              82,
+              123,
+              186
+            ]
+          }
+        ],
+        "id": "1503",
+        "name": "可酷伯"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              700,
+              1260,
+              2268,
+              3476
+            ],
+            "metric": "生命",
+            "official_values": [
+              700,
+              1260,
+              2268,
+              3276
+            ]
+          },
+          {
+            "datatft_values": [
+              50,
+              75,
+              113,
+              150
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              112,
+              168
+            ]
+          },
+          {
+            "datatft_value": "破土而出",
+            "metric": "skill_name",
+            "official_value": "连根拔起"
+          }
+        ],
+        "id": "1504",
+        "name": "雷克塞"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              700,
+              1260,
+              2268,
+              3476
+            ],
+            "metric": "生命",
+            "official_values": [
+              700,
+              1260,
+              2268,
+              3276
+            ]
+          },
+          {
+            "datatft_values": [
+              40,
+              60,
+              90,
+              120
+            ],
+            "metric": "物攻",
+            "official_values": [
+              40,
+              60,
+              90,
+              135
+            ]
+          }
+        ],
+        "id": "1505",
+        "name": "卡蜜尔"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              650,
+              1170,
+              2106,
+              3242
+            ],
+            "metric": "生命",
+            "official_values": [
+              650,
+              1170,
+              2106,
+              3042
+            ]
+          },
+          {
+            "datatft_values": [
+              30
+            ],
+            "metric": "法力值",
+            "official_values": [
+              25,
+              25,
+              25,
+              25
+            ]
+          }
+        ],
+        "id": "1506",
+        "name": "阿卡丽"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              500,
+              900,
+              1620,
+              2540
+            ],
+            "metric": "生命",
+            "official_values": [
+              500,
+              900,
+              1620,
+              2340
+            ]
+          },
+          {
+            "datatft_values": [
+              40,
+              60,
+              90,
+              120
+            ],
+            "metric": "物攻",
+            "official_values": [
+              40,
+              60,
+              90,
+              135
+            ]
+          }
+        ],
+        "id": "1507",
+        "name": "韦鲁斯"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              500,
+              900,
+              1620,
+              2540
+            ],
+            "metric": "生命",
+            "official_values": [
+              500,
+              900,
+              1620,
+              2340
+            ]
+          }
+        ],
+        "id": "1508",
+        "name": "绯红树怪"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              450,
+              810,
+              1458,
+              2306
+            ],
+            "metric": "生命",
+            "official_values": [
+              450,
+              810,
+              1458,
+              2106
+            ]
+          },
+          {
+            "datatft_values": [
+              45,
+              68,
+              101,
+              135
+            ],
+            "metric": "物攻",
+            "official_values": [
+              45,
+              67,
+              100,
+              135
+            ]
+          },
+          {
+            "datatft_value": "致死羽衣",
+            "metric": "skill_name",
+            "official_value": "羽衣风暴"
+          }
+        ],
+        "id": "1509",
+        "name": "霞"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              500,
+              900,
+              1620,
+              2540
+            ],
+            "metric": "生命",
+            "official_values": [
+              500,
+              900,
+              1620,
+              2340
+            ]
+          },
+          {
+            "datatft_values": [
+              25,
+              38,
+              56,
+              75
+            ],
+            "metric": "物攻",
+            "official_values": [
+              25,
+              38,
+              56,
+              84
+            ]
+          }
+        ],
+        "id": "1510",
+        "name": "卡尔玛"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              500,
+              900,
+              1620,
+              2540
+            ],
+            "metric": "生命",
+            "official_values": [
+              500,
+              900,
+              1620,
+              2340
+            ]
+          },
+          {
+            "datatft_values": [
+              30,
+              45,
+              68,
+              90
+            ],
+            "metric": "物攻",
+            "official_values": [
+              35,
+              52,
+              78,
+              101
+            ]
+          },
+          {
+            "datatft_values": [
+              25
+            ],
+            "metric": "初始法力值",
+            "official_values": [
+              30,
+              30,
+              30,
+              30
+            ]
+          },
+          {
+            "datatft_values": [
+              65
+            ],
+            "metric": "法力值",
+            "official_values": [
+              70,
+              70,
+              70,
+              70
+            ]
+          }
+        ],
+        "id": "1511",
+        "name": "苍蓝哨戒"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              500,
+              900,
+              1620,
+              2540
+            ],
+            "metric": "生命",
+            "official_values": [
+              500,
+              900,
+              1620,
+              2340
+            ]
+          },
+          {
+            "datatft_values": [
+              25,
+              38,
+              56,
+              75
+            ],
+            "metric": "物攻",
+            "official_values": [
+              25,
+              37,
+              55,
+              96
+            ]
+          }
+        ],
+        "id": "1512",
+        "name": "维迦"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              950,
+              1710,
+              3078,
+              4646
+            ],
+            "metric": "生命",
+            "official_values": [
+              950,
+              1710,
+              3078,
+              4446
+            ]
+          },
+          {
+            "datatft_values": [
+              50,
+              75,
+              113,
+              150
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              112,
+              169
+            ]
+          }
+        ],
+        "id": "2500",
+        "name": "峡谷迅捷蟹"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              950,
+              1710,
+              3078,
+              4646
+            ],
+            "metric": "生命",
+            "official_values": [
+              950,
+              1710,
+              3078,
+              4446
+            ]
+          },
+          {
+            "datatft_values": [
+              50,
+              75,
+              113,
+              150
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              113,
+              169
+            ]
+          }
+        ],
+        "id": "2501",
+        "name": "阿利斯塔"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              900,
+              1620,
+              2916,
+              4412
+            ],
+            "metric": "生命",
+            "official_values": [
+              900,
+              1620,
+              2916,
+              4212
+            ]
+          },
+          {
+            "datatft_values": [
+              50,
+              75,
+              113,
+              150
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              112,
+              169
+            ]
+          }
+        ],
+        "id": "2502",
+        "name": "瑟庄妮"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              900,
+              1620,
+              2916,
+              4412
+            ],
+            "metric": "生命",
+            "official_values": [
+              900,
+              1620,
+              2916,
+              4212
+            ]
+          },
+          {
+            "datatft_values": [
+              50,
+              75,
+              113,
+              150
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              113,
+              169
+            ]
+          }
+        ],
+        "id": "2503",
+        "name": "慎"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              900,
+              1620,
+              2916,
+              4412
+            ],
+            "metric": "生命",
+            "official_values": [
+              900,
+              1620,
+              2916,
+              4212
+            ]
+          },
+          {
+            "datatft_values": [
+              20,
+              30,
+              45,
+              60
+            ],
+            "metric": "物攻",
+            "official_values": [
+              20,
+              30,
+              45,
+              68
+            ]
+          }
+        ],
+        "id": "2504",
+        "name": "伊莉丝"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              650,
+              1170,
+              2106,
+              3242
+            ],
+            "metric": "生命",
+            "official_values": [
+              650,
+              1170,
+              2106,
+              3042
+            ]
+          }
+        ],
+        "id": "2505",
+        "name": "约里克"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              700,
+              1260,
+              2268,
+              3476
+            ],
+            "metric": "生命",
+            "official_values": [
+              700,
+              1260,
+              2268,
+              3276
+            ]
+          },
+          {
+            "datatft_values": [
+              50,
+              75,
+              113,
+              150
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              113,
+              169
+            ]
+          }
+        ],
+        "id": "2507",
+        "name": "暗影狼"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              750,
+              1350,
+              2430,
+              3710
+            ],
+            "metric": "生命",
+            "official_values": [
+              750,
+              1350,
+              2430,
+              3510
+            ]
+          },
+          {
+            "datatft_values": [
+              40,
+              60,
+              90,
+              120
+            ],
+            "metric": "物攻",
+            "official_values": [
+              45,
+              67,
+              100,
+              152
+            ]
+          }
+        ],
+        "id": "2508",
+        "name": "沃里克"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              550,
+              990,
+              1782,
+              2774
+            ],
+            "metric": "生命",
+            "official_values": [
+              550,
+              990,
+              1782,
+              2574
+            ]
+          },
+          {
+            "datatft_values": [
+              42,
+              63,
+              95,
+              126
+            ],
+            "metric": "物攻",
+            "official_values": [
+              42,
+              63,
+              95,
+              142
+            ]
+          }
+        ],
+        "id": "2509",
+        "name": "芸阿娜"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              550,
+              990,
+              1782,
+              2774
+            ],
+            "metric": "生命",
+            "official_values": [
+              550,
+              990,
+              1782,
+              2574
+            ]
+          },
+          {
+            "datatft_values": [
+              50,
+              75,
+              113,
+              150
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              112,
+              150
+            ]
+          },
+          {
+            "datatft_values": [
+              3
+            ],
+            "metric": "法力值",
+            "official_values": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "datatft_value": "爆头",
+            "metric": "skill_name",
+            "official_value": "狙击"
+          }
+        ],
+        "id": "2510",
+        "name": "凯特琳"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              550,
+              990,
+              1782,
+              2774
+            ],
+            "metric": "生命",
+            "official_values": [
+              550,
+              990,
+              1782,
+              2574
+            ]
+          },
+          {
+            "datatft_values": [
+              30,
+              45,
+              68,
+              90
+            ],
+            "metric": "物攻",
+            "official_values": [
+              30,
+              45,
+              67,
+              90
+            ]
+          }
+        ],
+        "id": "2511",
+        "name": "乐芙兰"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              550,
+              990,
+              1782,
+              2774
+            ],
+            "metric": "生命",
+            "official_values": [
+              550,
+              990,
+              1782,
+              2574
+            ]
+          },
+          {
+            "datatft_values": [
+              10,
+              15,
+              23,
+              30
+            ],
+            "metric": "物攻",
+            "official_values": [
+              10,
+              15,
+              23,
+              34
+            ]
+          }
+        ],
+        "id": "2512",
+        "name": "凯尔"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              550,
+              990,
+              1782,
+              2774
+            ],
+            "metric": "生命",
+            "official_values": [
+              550,
+              990,
+              1782,
+              2574
+            ]
+          },
+          {
+            "datatft_values": [
+              30,
+              45,
+              68,
+              90
+            ],
+            "metric": "物攻",
+            "official_values": [
+              30,
+              45,
+              68,
+              101
+            ]
+          }
+        ],
+        "id": "2513",
+        "name": "魔沼蛙"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              550,
+              990,
+              1782,
+              2774
+            ],
+            "metric": "生命",
+            "official_values": [
+              550,
+              990,
+              1782,
+              2574
+            ]
+          },
+          {
+            "datatft_values": [
+              35,
+              53,
+              79,
+              105
+            ],
+            "metric": "物攻",
+            "official_values": [
+              35,
+              52,
+              78,
+              118
+            ]
+          }
+        ],
+        "id": "2514",
+        "name": "提莫"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              50,
+              75,
+              113
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              112,
+              150
+            ]
+          }
+        ],
+        "id": "3500",
+        "name": "赫卡里姆"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              45,
+              68,
+              101
+            ],
+            "metric": "物攻",
+            "official_values": [
+              45,
+              67,
+              100,
+              152
+            ]
+          }
+        ],
+        "id": "3501",
+        "name": "蔚"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              50,
+              75,
+              113
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              112,
+              150
+            ]
+          }
+        ],
+        "id": "3502",
+        "name": "费德提克"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              55,
+              83,
+              124
+            ],
+            "metric": "物攻",
+            "official_values": [
+              55,
+              82,
+              123,
+              186
+            ]
+          }
+        ],
+        "id": "3503",
+        "name": "远古石甲虫"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              0.8
+            ],
+            "metric": "攻速",
+            "official_values": [
+              0.75,
+              0.75,
+              0.75,
+              0.75
+            ]
+          },
+          {
+            "datatft_value": "残忍无情",
+            "metric": "skill_name",
+            "official_value": "无情"
+          }
+        ],
+        "id": "3504",
+        "name": "雷恩加尔"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              850,
+              1530,
+              2754
+            ],
+            "metric": "生命",
+            "official_values": [
+              950,
+              1710,
+              3078,
+              4446
+            ]
+          },
+          {
+            "datatft_values": [
+              30,
+              45,
+              68
+            ],
+            "metric": "物攻",
+            "official_values": [
+              40,
+              60,
+              90,
+              101
+            ]
+          }
+        ],
+        "id": "3505",
+        "name": "卡兹克"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              30,
+              45,
+              68
+            ],
+            "metric": "物攻",
+            "official_values": [
+              30,
+              45,
+              67,
+              90
+            ]
+          },
+          {
+            "datatft_values": [
+              40
+            ],
+            "metric": "法力值",
+            "official_values": [
+              30,
+              30,
+              30,
+              30
+            ]
+          }
+        ],
+        "id": "3506",
+        "name": "黛安娜"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              65,
+              98,
+              146
+            ],
+            "metric": "物攻",
+            "official_values": [
+              62,
+              93,
+              139,
+              209
+            ]
+          },
+          {
+            "datatft_values": [
+              3
+            ],
+            "metric": "法力值",
+            "official_values": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "id": "3507",
+        "name": "易"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              55,
+              83,
+              124
+            ],
+            "metric": "物攻",
+            "official_values": [
+              55,
+              82,
+              123,
+              185
+            ]
+          }
+        ],
+        "id": "3508",
+        "name": "崔丝塔娜"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              60,
+              90,
+              135
+            ],
+            "metric": "物攻",
+            "official_values": [
+              55,
+              82,
+              123,
+              186
+            ]
+          }
+        ],
+        "id": "3509",
+        "name": "深红锋喙鸟"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              30,
+              45,
+              68
+            ],
+            "metric": "物攻",
+            "official_values": [
+              30,
+              45,
+              67,
+              101
+            ]
+          }
+        ],
+        "id": "3510",
+        "name": "阿兹尔"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              50,
+              75,
+              113
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              112,
+              150
+            ]
+          }
+        ],
+        "id": "3515",
+        "name": "拉莫斯"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              75,
+              113,
+              169
+            ],
+            "metric": "物攻",
+            "official_values": [
+              75,
+              112,
+              168,
+              225
+            ]
+          }
+        ],
+        "id": "4500",
+        "name": "苍蓝雕纹魔像"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              45,
+              68,
+              101
+            ],
+            "metric": "物攻",
+            "official_values": [
+              45,
+              67,
+              100,
+              135
+            ]
+          },
+          {
+            "datatft_values": [
+              60
+            ],
+            "metric": "法力值",
+            "official_values": [
+              65,
+              65,
+              65,
+              65
+            ]
+          }
+        ],
+        "id": "4501",
+        "name": "莫甘娜"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              70,
+              105,
+              158
+            ],
+            "metric": "物攻",
+            "official_values": [
+              70,
+              105,
+              157,
+              210
+            ]
+          },
+          {
+            "datatft_values": [
+              140
+            ],
+            "metric": "法力值",
+            "official_values": [
+              125,
+              125,
+              125,
+              125
+            ]
+          },
+          {
+            "datatft_value": "勃然大怒",
+            "metric": "skill_name",
+            "official_value": "阿木木的愤怒"
+          }
+        ],
+        "id": "4503",
+        "name": "阿木木"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              70,
+              105,
+              158
+            ],
+            "metric": "物攻",
+            "official_values": [
+              70,
+              105,
+              157,
+              236
+            ]
+          }
+        ],
+        "id": "4504",
+        "name": "墨菲特"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              110,
+              165,
+              248
+            ],
+            "metric": "物攻",
+            "official_values": [
+              115,
+              172,
+              258,
+              387
+            ]
+          }
+        ],
+        "id": "4506",
+        "name": "绯红印记树怪"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              35,
+              53,
+              79
+            ],
+            "metric": "物攻",
+            "official_values": [
+              35,
+              52,
+              78,
+              105
+            ]
+          },
+          {
+            "datatft_values": [
+              40
+            ],
+            "metric": "法力值",
+            "official_values": [
+              45,
+              45,
+              45,
+              45
+            ]
+          },
+          {
+            "datatft_values": [
+              1
+            ],
+            "metric": "攻击距离",
+            "official_values": [
+              5,
+              5,
+              5,
+              5
+            ]
+          }
+        ],
+        "id": "4507",
+        "name": "奈德丽"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              45,
+              68,
+              101
+            ],
+            "metric": "物攻",
+            "official_values": [
+              45,
+              67,
+              100,
+              135
+            ]
+          }
+        ],
+        "id": "4508",
+        "name": "伊泽瑞尔"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              50,
+              75,
+              113
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              112,
+              169
+            ]
+          }
+        ],
+        "id": "4510",
+        "name": "希维尔"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              30,
+              45,
+              68
+            ],
+            "metric": "物攻",
+            "official_values": [
+              30,
+              45,
+              67,
+              90
+            ]
+          },
+          {
+            "datatft_value": "流星坠落",
+            "metric": "skill_name",
+            "official_value": "唤星"
+          }
+        ],
+        "id": "4513",
+        "name": "索拉卡"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              1100,
+              1980,
+              7564
+            ],
+            "metric": "生命",
+            "official_values": [
+              1150,
+              2070,
+              8564,
+              10148
+            ]
+          },
+          {
+            "datatft_values": [
+              40
+            ],
+            "metric": "初始法力值",
+            "official_values": [
+              30,
+              30,
+              30,
+              30
+            ]
+          },
+          {
+            "datatft_values": [
+              100
+            ],
+            "metric": "法力值",
+            "official_values": [
+              90,
+              90,
+              90,
+              90
+            ]
+          }
+        ],
+        "id": "5450",
+        "name": "茂凯"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              1300,
+              2340,
+              8212
+            ],
+            "metric": "生命",
+            "official_values": [
+              1300,
+              2340,
+              9212,
+              11084
+            ]
+          },
+          {
+            "datatft_values": [
+              55,
+              83,
+              124
+            ],
+            "metric": "物攻",
+            "official_values": [
+              55,
+              82,
+              123,
+              165
+            ]
+          }
+        ],
+        "id": "5451",
+        "name": "塔里克"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              900,
+              1620,
+              6916
+            ],
+            "metric": "生命",
+            "official_values": [
+              900,
+              1620,
+              7916,
+              9212
+            ]
+          }
+        ],
+        "id": "5452",
+        "name": "纳尔"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              1200,
+              2160,
+              7888
+            ],
+            "metric": "生命",
+            "official_values": [
+              1200,
+              2160,
+              8888,
+              10616
+            ]
+          },
+          {
+            "datatft_values": [
+              50,
+              75,
+              113
+            ],
+            "metric": "物攻",
+            "official_values": [
+              50,
+              75,
+              112,
+              169
+            ]
+          }
+        ],
+        "id": "5453",
+        "name": "凯南"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              900,
+              1620,
+              6916
+            ],
+            "metric": "生命",
+            "official_values": [
+              900,
+              1620,
+              7916,
+              9212
+            ]
+          },
+          {
+            "datatft_values": [
+              75,
+              113,
+              169
+            ],
+            "metric": "物攻",
+            "official_values": [
+              75,
+              112,
+              168,
+              253
+            ]
+          }
+        ],
+        "id": "5454",
+        "name": "艾希"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              900,
+              1620,
+              6916
+            ],
+            "metric": "生命",
+            "official_values": [
+              900,
+              1620,
+              7916,
+              9212
+            ]
+          },
+          {
+            "datatft_values": [
+              120
+            ],
+            "metric": "法力值",
+            "official_values": [
+              110,
+              110,
+              110,
+              110
+            ]
+          },
+          {
+            "datatft_values": [
+              0.8
+            ],
+            "metric": "攻速",
+            "official_values": [
+              0.85,
+              0.85,
+              0.85,
+              0.85
+            ]
+          }
+        ],
+        "id": "5455",
+        "name": "德莱文"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              900,
+              1620,
+              6916
+            ],
+            "metric": "生命",
+            "official_values": [
+              900,
+              1620,
+              7916,
+              9212
+            ]
+          },
+          {
+            "datatft_value": "月之降临",
+            "metric": "skill_name",
+            "official_value": "月华倾落"
+          }
+        ],
+        "id": "5456",
+        "name": "拉露恩"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              1000,
+              1800,
+              7240
+            ],
+            "metric": "生命",
+            "official_values": [
+              1000,
+              1800,
+              8240,
+              9680
+            ]
+          }
+        ],
+        "id": "5457",
+        "name": "艾翁"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              1800,
+              3240,
+              9832
+            ],
+            "metric": "生命",
+            "official_values": [
+              1800,
+              3240,
+              10832,
+              13424
+            ]
+          },
+          {
+            "datatft_values": [
+              110,
+              165,
+              248
+            ],
+            "metric": "物攻",
+            "official_values": [
+              125,
+              187,
+              280,
+              375
+            ]
+          },
+          {
+            "datatft_values": [
+              70
+            ],
+            "metric": "护甲",
+            "official_values": [
+              75,
+              75,
+              75,
+              75
+            ]
+          },
+          {
+            "datatft_values": [
+              70
+            ],
+            "metric": "魔抗",
+            "official_values": [
+              75,
+              75,
+              75,
+              75
+            ]
+          }
+        ],
+        "id": "5458",
+        "name": "远古巨龙"
+      },
+      {
+        "conflicts": [
+          {
+            "datatft_values": [
+              900,
+              1620,
+              6916
+            ],
+            "metric": "生命",
+            "official_values": [
+              900,
+              1620,
+              7916,
+              9212
+            ]
+          },
+          {
+            "datatft_values": [
+              40
+            ],
+            "metric": "护甲",
+            "official_values": [
+              45,
+              45,
+              45,
+              45
+            ]
+          },
+          {
+            "datatft_values": [
+              40
+            ],
+            "metric": "魔抗",
+            "official_values": [
+              45,
+              45,
+              45,
+              45
+            ]
+          }
+        ],
+        "id": "5459",
+        "name": "拉克丝"
+      }
+    ],
+    "nature_sprite_effects_and_costs": [
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "每击败1个弈子，获得1金币。",
+            "supplemental_value": "每击杀1个弈子，获得1金币。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "每击败1个弈子，获得1金币。获得1金币。",
+            "supplemental_value": "每击杀1个弈子，获得1金币。获得1金币。"
+          }
+        ],
+        "name": "染血之币",
+        "official_variant_ids": [
+          "181002",
+          "181003"
+        ],
+        "supplemental_external_id": "DA_18_BloodMoney"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.effect",
+            "official_value": "失去6玩家生命值。获得1个【英雄复制器】。",
+            "supplemental_value": "失去8玩家生命值。获得1个【英雄复制器】。"
+          }
+        ],
+        "name": "血祭",
+        "official_variant_ids": [
+          "181004",
+          "181005"
+        ],
+        "supplemental_external_id": "DA_18_BloodRitual"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 2
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "获得6经验值。",
+            "supplemental_value": "获得4经验值。"
+          }
+        ],
+        "name": "铜汤匙",
+        "official_variant_ids": [
+          "181006",
+          "181007"
+        ],
+        "supplemental_external_id": "DA_18_BronzeSpoon"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "每有1名倒下的敌人，获得1经验值。",
+            "supplemental_value": "每有1名阵亡的敌人，获得1经验值。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "每有1名倒下的敌人，获得1经验值。获得2经验值。",
+            "supplemental_value": "每有1名阵亡的敌人，获得1经验值。获得2经验值。"
+          }
+        ],
+        "name": "肥料",
+        "official_variant_ids": [
+          "181010",
+          "181011"
+        ],
+        "supplemental_external_id": "DA_18_Fertilize"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          }
+        ],
+        "name": "倾盆大雨",
+        "official_variant_ids": [
+          "181012",
+          "181013",
+          "1181023"
+        ],
+        "supplemental_external_id": "DA_Downpour18"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.cost",
+            "official_value": 1,
+            "supplemental_value": 0
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "获得4经验值。",
+            "supplemental_value": "获得2经验值。"
+          }
+        ],
+        "name": "老练",
+        "official_variant_ids": [
+          "181016",
+          "181017"
+        ],
+        "supplemental_external_id": "DA_18_Experienced"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.effect",
+            "official_value": "获得9玩家生命值。",
+            "supplemental_value": "获得7玩家生命值。"
+          }
+        ],
+        "name": "治疗池",
+        "official_variant_ids": [
+          "181024",
+          "181025"
+        ],
+        "supplemental_external_id": "DA_18_HealingPool"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          }
+        ],
+        "name": "迷路的游客",
+        "official_variant_ids": [
+          "181028",
+          "181029"
+        ],
+        "supplemental_external_id": "DA_18_LostTravelers"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.cost",
+            "official_value": 6,
+            "supplemental_value": 7
+          }
+        ],
+        "name": "大腕",
+        "official_variant_ids": [
+          "181040",
+          "181041"
+        ],
+        "supplemental_external_id": "DA_BigGuns18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "你拥有的1个随机2费弈子会永久变形为1个3费弈子。",
+            "supplemental_value": "你拥有的1个随机2费弈子永久变形为1个3费弈子。"
+          }
+        ],
+        "name": "变形术",
+        "official_variant_ids": [
+          "181042",
+          "181043"
+        ],
+        "supplemental_external_id": "DA_18_Polymorph"
+      },
+      {
+        "fields": [
+          {
+            "field": "prismatic.cost",
+            "official_value": null,
+            "supplemental_value": 0
+          },
+          {
+            "field": "prismatic.effect",
+            "official_value": null,
+            "supplemental_value": "获得777次商店刷新。"
+          }
+        ],
+        "name": "幸运7",
+        "official_variant_ids": [
+          "181046",
+          "181047"
+        ],
+        "supplemental_external_id": "DA_Lucky718"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 6,
+            "supplemental_value": 7
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 5,
+            "supplemental_value": 6
+          }
+        ],
+        "name": "炸鱼行为",
+        "official_variant_ids": [
+          "181050",
+          "181051"
+        ],
+        "supplemental_external_id": "DA_Smurfing18"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.cost",
+            "official_value": 7,
+            "supplemental_value": 8
+          }
+        ],
+        "name": "对影成三",
+        "official_variant_ids": [
+          "181054",
+          "181055"
+        ],
+        "supplemental_external_id": "DA_ThreeMe18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          }
+        ],
+        "name": "地动山摇",
+        "official_variant_ids": [
+          "181056",
+          "181057",
+          "1181017"
+        ],
+        "supplemental_external_id": "DA_18_Tremors"
+      },
+      {
+        "fields": [
+          {
+            "field": "prismatic.cost",
+            "official_value": null,
+            "supplemental_value": 1
+          },
+          {
+            "field": "prismatic.effect",
+            "official_value": null,
+            "supplemental_value": "在12秒后，友军获得300%伤害增幅。"
+          }
+        ],
+        "name": "终极飞升",
+        "official_variant_ids": [
+          "181060",
+          "181061"
+        ],
+        "supplemental_external_id": "DA_18_UltraAscension"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "刷新你的商店，使其充满4费弈子。获得4金币。",
+            "supplemental_value": "刷新你的商店，使其充满4费弈子。获得2金币。"
+          }
+        ],
+        "name": "全4费商店",
+        "official_variant_ids": [
+          "181062",
+          "181063"
+        ],
+        "supplemental_external_id": "DA_18_AllFours"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 8,
+            "supplemental_value": 10
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 8,
+            "supplemental_value": 10
+          }
+        ],
+        "name": "全5费商店",
+        "official_variant_ids": [
+          "181064",
+          "181065"
+        ],
+        "supplemental_external_id": "DA_18_AllFives"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.effect",
+            "official_value": "刷新你的商店，使其充满3费弈子。获得3金币。",
+            "supplemental_value": "刷新你的商店，使其充满3费弈子。获得2金币。"
+          }
+        ],
+        "name": "全3费商店",
+        "official_variant_ids": [
+          "181068",
+          "181069"
+        ],
+        "supplemental_external_id": "DA_18_AllThrees"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.effect",
+            "official_value": "刷新你的商店，使其充满2费弈子。获得2金币。",
+            "supplemental_value": "刷新你的商店，使其充满2费弈子。获得1金币。"
+          }
+        ],
+        "name": "全2费商店",
+        "official_variant_ids": [
+          "181070",
+          "181071"
+        ],
+        "supplemental_external_id": "DA_18_AllTwos"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 1,
+            "supplemental_value": 4
+          },
+          {
+            "field": "base_effect",
+            "official_value": "1个随机后排弈子获得85%攻击速度，持续7秒。",
+            "supplemental_value": "1个随机后排弈子获得75%攻击速度，持续7秒。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 1,
+            "supplemental_value": 4
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "1个随机后排弈子获得115%攻击速度，持续8秒。",
+            "supplemental_value": "1个随机后排弈子获得100%攻击速度，持续8秒。"
+          }
+        ],
+        "name": "后排之星",
+        "official_variant_ids": [
+          "181074",
+          "181075"
+        ],
+        "supplemental_external_id": "DA_18_BackrowStar"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          }
+        ],
+        "name": "屏障",
+        "official_variant_ids": [
+          "181076",
+          "181077",
+          "1181027"
+        ],
+        "supplemental_external_id": "DA_Barrier18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 1,
+            "supplemental_value": 2
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 1,
+            "supplemental_value": 2
+          }
+        ],
+        "name": "腰带批发",
+        "official_variant_ids": [
+          "181082",
+          "181083"
+        ],
+        "supplemental_external_id": "DA_BunchOBelts18"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          }
+        ],
+        "name": "掷骰子",
+        "official_variant_ids": [
+          "181088",
+          "181089"
+        ],
+        "supplemental_external_id": "DA_DieRoll18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 4
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 4
+          }
+        ],
+        "name": "英雄登场",
+        "official_variant_ids": [
+          "181094",
+          "181095"
+        ],
+        "supplemental_external_id": "DA_HerosEntrance18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "第一名倒下的友军会产生爆炸，造成25%最大生命值魔法伤害。",
+            "supplemental_value": "第一名阵亡的友军会产生爆炸，造成25%最大生命值魔法伤害。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "最先倒下的2名友军会产生爆炸，造成25%最大生命值魔法伤害。",
+            "supplemental_value": "最先阵亡的2名友军会产生爆炸，造成25%最大生命值魔法伤害。"
+          }
+        ],
+        "name": "大爆炸",
+        "official_variant_ids": [
+          "181096",
+          "181097"
+        ],
+        "supplemental_external_id": "DA_BigBoom18"
+      },
+      {
+        "fields": [
+          {
+            "field": "prismatic.cost",
+            "official_value": null,
+            "supplemental_value": 0
+          },
+          {
+            "field": "prismatic.effect",
+            "official_value": null,
+            "supplemental_value": "你生命值最高的10个单位成长，获得2500生命值。"
+          }
+        ],
+        "name": "巨大化",
+        "official_variant_ids": [
+          "181098",
+          "181099"
+        ],
+        "supplemental_external_id": "DA_Hugify18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 4,
+            "supplemental_value": 6
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 4,
+            "supplemental_value": 6
+          }
+        ],
+        "name": "折磨",
+        "official_variant_ids": [
+          "181100",
+          "181101"
+        ],
+        "supplemental_external_id": "DA_18_Infliction"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 1,
+            "supplemental_value": 2
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 1,
+            "supplemental_value": 2
+          }
+        ],
+        "name": "闪电打击",
+        "official_variant_ids": [
+          "181102",
+          "181103"
+        ],
+        "supplemental_external_id": "DA_18_LightningStrike"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "base_effect",
+            "official_value": "获得1个你层级最高特质/职业的临时的纹章。",
+            "supplemental_value": "获得1个你层级最高羁绊的临时的纹章。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 1
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "获得1个你层级最高特质/职业的临时的纹章。",
+            "supplemental_value": "获得1个你层级最高羁绊的临时的纹章。"
+          }
+        ],
+        "name": "幻影纹章",
+        "official_variant_ids": [
+          "181112",
+          "181113"
+        ],
+        "supplemental_external_id": "DA_PhantomEmblem18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "如果你赢得下一个玩家对战回合，获得1个【基础装备锻造器】。",
+            "supplemental_value": "如果你赢得下一个玩家对战回合，获得1个随机基础装备。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "如果你赢得下一个玩家对战回合，获得1个【基础装备锻造器】。",
+            "supplemental_value": "如果你赢得下一个玩家对战回合，获得1个随机基础装备。"
+          }
+        ],
+        "name": "散件赏金",
+        "official_variant_ids": [
+          "181118",
+          "181119"
+        ],
+        "supplemental_external_id": "DA_ComponentBounty"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 5
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 5
+          }
+        ],
+        "name": "光明化",
+        "official_variant_ids": [
+          "181120",
+          "181121"
+        ],
+        "supplemental_external_id": "DA_18_Radiantize"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 0,
+            "supplemental_value": 1
+          },
+          {
+            "field": "base_effect",
+            "official_value": "你最强大的2个【战士】或【突袭者】获得持续6秒的不可被选取效果。",
+            "supplemental_value": "你最强大的2个【战士】或【刺客】获得持续6秒的不可被选取效果。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 0,
+            "supplemental_value": 1
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "你最强大的2个【战士】或【突袭者】获得持续10秒的不可被选取效果。",
+            "supplemental_value": "你后排的2个随机弈子获得持续10秒的不可被选取效果。"
+          }
+        ],
+        "name": "鬼鬼祟祟",
+        "official_variant_ids": [
+          "181132",
+          "181133"
+        ],
+        "supplemental_external_id": "DA_Stealthy18"
+      },
+      {
+        "fields": [
+          {
+            "field": "prismatic.cost",
+            "official_value": null,
+            "supplemental_value": 0
+          },
+          {
+            "field": "prismatic.effect",
+            "official_value": null,
+            "supplemental_value": "获得100金币。你的对手获得1金币。"
+          }
+        ],
+        "name": "休战",
+        "official_variant_ids": [
+          "181136",
+          "181137"
+        ],
+        "supplemental_external_id": "DA_Truce18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          }
+        ],
+        "name": "约德尔之灵",
+        "official_variant_ids": [
+          "181138",
+          "181139"
+        ],
+        "supplemental_external_id": "DA_18_YordleSpirit"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "出售你棋盘上和备战席的所有弈子，获得6金币和8次刷新。",
+            "supplemental_value": "出售你棋盘上和备战席的所有弈子，获得6金币和10次刷新。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "出售你棋盘上和备战席的所有弈子，获得10金币和10次刷新。",
+            "supplemental_value": "出售你棋盘上和备战席的所有弈子，获得10金币和12次刷新。"
+          }
+        ],
+        "name": "弃船",
+        "official_variant_ids": [
+          "181142",
+          "181143"
+        ],
+        "supplemental_external_id": "DA_AbandonShip18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          }
+        ],
+        "name": "庆功宴",
+        "official_variant_ids": [
+          "181148",
+          "181149"
+        ],
+        "supplemental_external_id": "DA_18_Payday"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "每有1个已激活的非唯一特质/职业，你的队伍获得30生命值。",
+            "supplemental_value": "每有1个已激活的非唯一羁绊，你的队伍获得30生命值。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "每有1个已激活的非唯一特质/职业，你的队伍获得45生命值。",
+            "supplemental_value": "每有1个已激活的非唯一羁绊，你的队伍获得45生命值。"
+          }
+        ],
+        "name": "多样化",
+        "official_variant_ids": [
+          "181152",
+          "181153"
+        ],
+        "supplemental_external_id": "DA_Diversified18"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.cost",
+            "official_value": 0,
+            "supplemental_value": 3
+          }
+        ],
+        "name": "训练场",
+        "official_variant_ids": [
+          "181156",
+          "181157"
+        ],
+        "supplemental_external_id": "DA_TrainingYard18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "base_effect",
+            "official_value": "每当1名友军倒下时，你的弈子们获得4%可叠加的伤害增幅。",
+            "supplemental_value": "每当1名友军阵亡时，你的弈子们获得4%可叠加的伤害增幅。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "每当1名友军倒下时，你的弈子们获得6%可叠加的伤害增幅。",
+            "supplemental_value": "每当1名友军阵亡时，你的弈子们获得6%可叠加的伤害增幅。"
+          }
+        ],
+        "name": "复仇",
+        "official_variant_ids": [
+          "181168",
+          "181169"
+        ],
+        "supplemental_external_id": "DA_Revenge18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 0
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 0
+          }
+        ],
+        "name": "神器化",
+        "official_variant_ids": [
+          "181170",
+          "181171"
+        ],
+        "supplemental_external_id": "DA_Artifactinate18"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.effect",
+            "official_value": "在本回合内，你下次出售的弈子将以300%金币卖出。",
+            "supplemental_value": "在本回合内，你下次出售的弈子将以250%金币卖出。"
+          }
+        ],
+        "name": "以物易物",
+        "official_variant_ids": [
+          "181172",
+          "181173"
+        ],
+        "supplemental_external_id": "DA_Barter18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 1,
+            "supplemental_value": 0
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 1,
+            "supplemental_value": 0
+          }
+        ],
+        "name": "森林魔法师",
+        "official_variant_ids": [
+          "181178",
+          "181179"
+        ],
+        "supplemental_external_id": "DA_18_ForestMage"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.effect",
+            "official_value": "这回合你前8次刷新商店时，会使费用最低的那个弈子会变为2星。",
+            "supplemental_value": "这回合你前8次刷新商店时，费用最低的那个弈子会变为2星。"
+          }
+        ],
+        "name": "星落",
+        "official_variant_ids": [
+          "181184",
+          "181185"
+        ],
+        "supplemental_external_id": "DA_18_Starfall"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "你的弈子们获得50生命值。",
+            "supplemental_value": "你的弈子们获得100生命值。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "你的弈子们获得75生命值。",
+            "supplemental_value": "你的弈子们获得175生命值。"
+          }
+        ],
+        "name": "绿意盎然",
+        "official_variant_ids": [
+          "181186",
+          "181187"
+        ],
+        "supplemental_external_id": "DA_18_VerdantVitality"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "你的弈子们获得4%物理加成和法术加成。",
+            "supplemental_value": "你的弈子们获得8%物理加成和法术加成。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "你的弈子们获得6%物理加成和法术加成。",
+            "supplemental_value": "你的弈子们获得15%物理加成和法术加成。"
+          }
+        ],
+        "name": "元气满满",
+        "official_variant_ids": [
+          "181188",
+          "181189"
+        ],
+        "supplemental_external_id": "DA_18_ProlificPower"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.cost",
+            "official_value": 0,
+            "supplemental_value": 1
+          }
+        ],
+        "name": "小玩具罐",
+        "official_variant_ids": [
+          "181195",
+          "181196"
+        ],
+        "supplemental_external_id": "DA_DoodadJar18"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.cost",
+            "official_value": 1,
+            "supplemental_value": 2
+          }
+        ],
+        "name": "小饰品包",
+        "official_variant_ids": [
+          "181199",
+          "181200"
+        ],
+        "supplemental_external_id": "DA_KnickKnackBag18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "在10秒后，将所有未携带装备的单位击败。",
+            "supplemental_value": "在10秒后，将所有未携带装备的单位击杀。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "在8秒后，将所有未携带装备的单位击败。",
+            "supplemental_value": "在8秒后，将所有未携带装备的单位击杀。"
+          }
+        ],
+        "name": "自然之怒",
+        "official_variant_ids": [
+          "181210",
+          "181211"
+        ],
+        "supplemental_external_id": "DA_NaturesWrath18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "prismatic.cost",
+            "official_value": null,
+            "supplemental_value": 0
+          },
+          {
+            "field": "prismatic.effect",
+            "official_value": null,
+            "supplemental_value": "独自处于所在排的弈子们获得100%生命值和150%伤害增幅。"
+          }
+        ],
+        "name": "孤身站场",
+        "official_variant_ids": [
+          "181212",
+          "181213"
+        ],
+        "supplemental_external_id": "DA_StandAlone18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          }
+        ],
+        "name": "超级暴击",
+        "official_variant_ids": [
+          "181218",
+          "181219"
+        ],
+        "supplemental_external_id": "DA_18_Supercritical"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          }
+        ],
+        "name": "贴贴",
+        "official_variant_ids": [
+          "181220",
+          "181221"
+        ],
+        "supplemental_external_id": "DA_18_Fellowship"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 5
+          },
+          {
+            "field": "base_effect",
+            "official_value": "你的弈子们在倒下时产生爆炸，造成12%最大生命值魔法伤害。",
+            "supplemental_value": "你的弈子们在阵亡时产生爆炸，造成15%最大生命值魔法伤害。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 5
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "你的弈子们在倒下时产生爆炸，造成22%最大生命值魔法伤害。",
+            "supplemental_value": "你的弈子们在阵亡时产生爆炸，造成22%最大生命值魔法伤害。"
+          },
+          {
+            "field": "prismatic.cost",
+            "official_value": null,
+            "supplemental_value": 0
+          },
+          {
+            "field": "prismatic.effect",
+            "official_value": null,
+            "supplemental_value": "你的弈子们在阵亡时产生爆炸，造成100%最大生命值魔法伤害。"
+          }
+        ],
+        "name": "易燃物",
+        "official_variant_ids": [
+          "181222",
+          "181223"
+        ],
+        "supplemental_external_id": "DA_Combust18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "你生命值最高的那个单位成长，获得750生命值。",
+            "supplemental_value": "你生命值最高的那个单位成长，获得700生命值。"
+          }
+        ],
+        "name": "巨型增长",
+        "official_variant_ids": [
+          "181224",
+          "181225"
+        ],
+        "supplemental_external_id": "DA_18_GiantGrowth"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          }
+        ],
+        "name": "药学博士",
+        "official_variant_ids": [
+          "181226",
+          "181227"
+        ],
+        "supplemental_external_id": "DA_Potioncraft18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          }
+        ],
+        "name": "独行斗篷",
+        "official_variant_ids": [
+          "181228",
+          "181229"
+        ],
+        "supplemental_external_id": "DA_SolitudesCloak18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 4,
+            "supplemental_value": 6
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          }
+        ],
+        "name": "中央大道",
+        "official_variant_ids": [
+          "181230",
+          "181231"
+        ],
+        "supplemental_external_id": "DA_MiddlePath18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 1,
+            "supplemental_value": 2
+          },
+          {
+            "field": "base_effect",
+            "official_value": "每有1个位于前排的单位，你前排中心的那个弈子就会获得6%最大生命值。",
+            "supplemental_value": "每有1个位于前排的单位，你前排中心的那个弈子就会获得4%最大生命值。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 1,
+            "supplemental_value": 2
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "每有1个位于前排的单位，你前排中心的那个弈子就会获得8%最大生命值。",
+            "supplemental_value": "每有1个位于前排的单位，你前排中心的那个弈子就会获得6%最大生命值。"
+          }
+        ],
+        "name": "钢铁核心",
+        "official_variant_ids": [
+          "181232",
+          "181233"
+        ],
+        "supplemental_external_id": "DA_IronCore18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "每获得1次击败，你都有50%几率获得1次免费刷新。",
+            "supplemental_value": "每获得1次击杀，你都有50%几率获得1次免费刷新。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "每获得1次击败，你都有65%几率获得1次刷新，如果获胜额外获得1次。",
+            "supplemental_value": "每获得1次击杀，你都有60%几率获得1次刷新，如果获胜该几率提升1。"
+          }
+        ],
+        "name": "骨头滚滚",
+        "official_variant_ids": [
+          "181240",
+          "181241"
+        ],
+        "supplemental_external_id": "DA_RollingBones18"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.effect",
+            "official_value": "随机施放1个价值在2或以上金币的【自然仙灵】。",
+            "supplemental_value": "随机施放1个价值在1或以上金币的【自然仙灵】。"
+          }
+        ],
+        "name": "拼一把小的!",
+        "official_variant_ids": [
+          "181244",
+          "181245"
+        ],
+        "supplemental_external_id": "DA_LesserChaos18"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.effect",
+            "official_value": "开启1个随机装备商店。装备的费用在0到14金币之间。获得2金币。",
+            "supplemental_value": "开启1个随机装备商店。随机装备的费用在0到14金币之间。获得2金币。"
+          }
+        ],
+        "name": "小贩",
+        "official_variant_ids": [
+          "181248",
+          "181249"
+        ],
+        "supplemental_external_id": "DA_Peddler18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "每有3名友军倒下，召唤1个随机【峡谷野怪】。",
+            "supplemental_value": "每有3名友军阵亡，召唤1个随机【峡谷野怪】。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "每有3名友军倒下，召唤1个随机【峡谷野怪】有时会召唤出2星的版本。",
+            "supplemental_value": "每有3名友军阵亡，召唤1个随机【峡谷野怪】 有时会召唤出2星的版本。"
+          }
+        ],
+        "name": "自然之友",
+        "official_variant_ids": [
+          "181250",
+          "181251"
+        ],
+        "supplemental_external_id": "DA_NaturesAlly18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "战斗开始时，获得7颗种子。",
+            "supplemental_value": "战斗开始时，获得5颗种子。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "战斗开始时，获得10颗种子。",
+            "supplemental_value": "战斗开始时，获得9颗种子。"
+          }
+        ],
+        "name": "生态改造",
+        "official_variant_ids": [
+          "181254",
+          "181255"
+        ],
+        "supplemental_external_id": "DA_Terraforming18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 1,
+            "supplemental_value": 2
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 1,
+            "supplemental_value": 2
+          }
+        ],
+        "name": "爆燃",
+        "official_variant_ids": [
+          "181262",
+          "181263"
+        ],
+        "supplemental_external_id": "DA_FlashFire18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "下一场玩家对战，你的【宿敌】获得双倍参与击败数。",
+            "supplemental_value": "下一场玩家对战，你的【宿敌】获得双倍参与击杀数。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "下一场玩家对战，你的【宿敌】获得双倍参与击败数。",
+            "supplemental_value": "下一场玩家对战，你的【宿敌】获得双倍参与击杀数。"
+          }
+        ],
+        "name": "猎手的黄金之路",
+        "official_variant_ids": [
+          "181272",
+          "181273"
+        ],
+        "supplemental_external_id": "DA_TrophyHunter18"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.cost",
+            "official_value": 1,
+            "supplemental_value": 0
+          }
+        ],
+        "name": "摄魂夺魄",
+        "official_variant_ids": [
+          "181278",
+          "181279"
+        ],
+        "supplemental_external_id": "DA_EssenceTheft18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "获得1个【雷恩加尔】或1个【卡兹克】。其获得+3参与击败数。",
+            "supplemental_value": "获得1个【雷恩加尔】或1个【卡兹克】。其获得+3参与击杀数。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "获得1个【雷恩加尔】或1个【卡兹克】。其获得+7参与击败数。",
+            "supplemental_value": "获得1个【雷恩加尔】或1个【卡兹克】。其获得+7参与击杀数。"
+          }
+        ],
+        "name": "鏖战不休",
+        "official_variant_ids": [
+          "181282",
+          "181283"
+        ],
+        "supplemental_external_id": "DA_18_HeatedRivalry"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.cost",
+            "official_value": 4,
+            "supplemental_value": 5
+          }
+        ],
+        "name": "森林多胞胎",
+        "official_variant_ids": [
+          "181284",
+          "181285"
+        ],
+        "supplemental_external_id": "DA_ForestTwins18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 4
+          },
+          {
+            "field": "base_effect",
+            "official_value": "在15秒时，每有1名存活的友军，获得2经验值。",
+            "supplemental_value": "在15秒后，每有1名存活的友军，获得2经验值。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 4
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "在12秒时，每有1名存活的友军，获得2经验值。",
+            "supplemental_value": "在12秒后，每有1名存活的友军，获得2经验值。"
+          }
+        ],
+        "name": "慢速学习",
+        "official_variant_ids": [
+          "181288",
+          "181289"
+        ],
+        "supplemental_external_id": "DA_SlowStudy18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 1,
+            "supplemental_value": 2
+          },
+          {
+            "field": "base_effect",
+            "official_value": "使敌人缓速10%，并将其护盾值削减20%，持续10秒。",
+            "supplemental_value": "使敌人缓速10%，并将其护盾值削减0.8，持续10秒。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 1,
+            "supplemental_value": 2
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "使敌人缓速10%，并将其护盾值削减30%，持续10秒。",
+            "supplemental_value": "使敌人缓速10%，并将其护盾值削减0.7，持续10秒。"
+          }
+        ],
+        "name": "破盾秘法",
+        "official_variant_ids": [
+          "181296",
+          "181297"
+        ],
+        "supplemental_external_id": "DA_PetrifyShields18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "base_effect",
+            "official_value": "你的【术师】最大法力值减少18%。",
+            "supplemental_value": "你的【术师】最大法力值减少0.82。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "你的【术师】最大法力值减少25%。",
+            "supplemental_value": "你的【术师】最大法力值减少0.75。"
+          }
+        ],
+        "name": "富魔之壤",
+        "official_variant_ids": [
+          "181304",
+          "181305"
+        ],
+        "supplemental_external_id": "DA_ManaRichSoil18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "base_effect",
+            "official_value": "【战士】会终结生命值低于12%的目标。他们在完成击败时获得15%攻击速度。",
+            "supplemental_value": "【战士】会处决生命值低于12%的目标。他们在完成击杀时获得15%攻击速度。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "【战士】会终结生命值低于15%的目标。他们在完成击败时获得20%攻击速度。",
+            "supplemental_value": "【战士】会处决生命值低于15%的目标。他们在完成击杀时获得40%攻击速度。"
+          }
+        ],
+        "name": "屠戮狂暴",
+        "official_variant_ids": [
+          "181306",
+          "181307"
+        ],
+        "supplemental_external_id": "DA_18_KillingFrenzy"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "base_effect",
+            "official_value": "每过5秒，你的弈子们就有20%几率掉落1金币。",
+            "supplemental_value": "每过5秒，你的弈子们就有15%几率掉落1金币。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "每过4秒，你的弈子们就有20%几率掉落1金币。",
+            "supplemental_value": "每过4秒，你的弈子们就有15%几率掉落1金币。"
+          }
+        ],
+        "name": "梁上君子",
+        "official_variant_ids": [
+          "181312",
+          "181313"
+        ],
+        "supplemental_external_id": "DA_Cutpurse18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "在8秒后，提升100%【月蚀骑士】特质/职业效果。",
+            "supplemental_value": "在8秒后，提升100%【月蚀骑士】羁绊效果。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "在8秒后，提升175%【月蚀骑士】特质/职业效果。",
+            "supplemental_value": "在8秒后，提升175%【月蚀骑士】羁绊效果。"
+          }
+        ],
+        "name": "皓月当空",
+        "official_variant_ids": [
+          "181318",
+          "181319"
+        ],
+        "supplemental_external_id": "DA_18_Moonrise"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "你第1个倒下的弈子在倒下时，会转化为1个拥有其防御属性和900生命值的【训练假人】。",
+            "supplemental_value": "你第1个阵亡的弈子在阵亡时，会转化为1个拥有其防御属性和900生命值的【训练假人】。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "你第1个倒下的弈子在倒下时，会转化为1个拥有其防御属性和1350生命值的【训练假人】。",
+            "supplemental_value": "你第1个阵亡的弈子在阵亡时，会转化为1个拥有其防御属性和1350生命值的【训练假人】。"
+          }
+        ],
+        "name": "石化术",
+        "official_variant_ids": [
+          "181320",
+          "181321"
+        ],
+        "supplemental_external_id": "DA_PetrifiedDummy18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 1,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 0,
+            "supplemental_value": 2
+          }
+        ],
+        "name": "搜查队",
+        "official_variant_ids": [
+          "181322",
+          "181323"
+        ],
+        "supplemental_external_id": "DA_SearchParty18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "战斗开始时:至多有2个未激活的特质/职业会以最低层级激活。",
+            "supplemental_value": "战斗开始时：至多有2个未激活的羁绊会以最低层级激活。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "战斗开始时:至多有4个未激活的特质/职业会以最低层级激活。",
+            "supplemental_value": "战斗开始时：至多有4个未激活的羁绊会以最低层级激活。"
+          }
+        ],
+        "name": "幻影浪花",
+        "official_variant_ids": [
+          "181324",
+          "181325"
+        ],
+        "supplemental_external_id": "DA_PhantomSplash18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          },
+          {
+            "field": "base_effect",
+            "official_value": "在18秒时，每有1名存活的友军，获得1次刷新。",
+            "supplemental_value": "在18秒后，每有1名存活的友军，获得1次刷新。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 4
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "在15秒时，每有1名存活的友军，获得1次刷新。",
+            "supplemental_value": "在16秒后，每有1名存活的友军，获得1次刷新。"
+          }
+        ],
+        "name": "不倒翁",
+        "official_variant_ids": [
+          "181326",
+          "181327"
+        ],
+        "supplemental_external_id": "DA_RolyPolys18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "你的1星弈子们在倒下时掉落1金币。",
+            "supplemental_value": "你的1星弈子们在阵亡时掉落1金币。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "你的1星弈子们在倒下时掉落1金币。获得1金币。",
+            "supplemental_value": "你的1星弈子们在阵亡时掉落1金币。获得1金币。"
+          }
+        ],
+        "name": "零花钱",
+        "official_variant_ids": [
+          "181328",
+          "181329"
+        ],
+        "supplemental_external_id": "DA_18_PocketChange"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 6
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 4
+          }
+        ],
+        "name": "边境村庄",
+        "official_variant_ids": [
+          "181330",
+          "181331"
+        ],
+        "supplemental_external_id": "DA_BorderVillage18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 1,
+            "supplemental_value": 2
+          }
+        ],
+        "name": "新手村",
+        "official_variant_ids": [
+          "181332",
+          "181333"
+        ],
+        "supplemental_external_id": "DA_StartingTown18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "base_effect",
+            "official_value": "敌人攻击你生命值最高的那个弈子时，造成的伤害降低14%。",
+            "supplemental_value": "敌人攻击你生命值最高的那个弈子时，造成的伤害降低12%。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 3
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "敌人攻击你生命值最高的那个弈子时，造成的伤害降低20%。",
+            "supplemental_value": "敌人攻击你生命值最高的那个弈子时，造成的伤害降低18%。"
+          }
+        ],
+        "name": "坚硬木材",
+        "official_variant_ids": [
+          "181336",
+          "181337"
+        ],
+        "supplemental_external_id": "DA_Ironwood18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 5
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 5
+          }
+        ],
+        "name": "巨人光环",
+        "official_variant_ids": [
+          "181338",
+          "181339",
+          "1181020"
+        ],
+        "supplemental_external_id": "DA_GiantsAura18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 4,
+            "supplemental_value": 6
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 4,
+            "supplemental_value": 6
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "以一名携带着1件推荐装备的临时3星1费弈子加入己方队伍。",
+            "supplemental_value": "一名携带着 1件推荐装备的临时3星1费弈子加入己方队伍。"
+          }
+        ],
+        "name": "大器晚成",
+        "official_variant_ids": [
+          "181340",
+          "181341",
+          "1181014"
+        ],
+        "supplemental_external_id": "DA_LateBloomer18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "如果你失败但至少击败了1名敌人，获得4经验值。",
+            "supplemental_value": "如果你失败但至少击杀了1名敌人，获得4经验值。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "如果你失败但至少击败了1名敌人，获得6经验值。",
+            "supplemental_value": "如果你失败但至少击杀了1名敌人，获得6经验值。"
+          }
+        ],
+        "name": "带一个走",
+        "official_variant_ids": [
+          "181344",
+          "181345"
+        ],
+        "supplemental_external_id": "DA_TakeOneWithYa18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "在3场玩家对战回合后，获得2x期间胜场数的金币。",
+            "supplemental_value": "在3场玩家对战回合后，每次胜利获得2金币。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "在3场玩家对战回合后，获得2x期间胜场数的金币，外加1金币。",
+            "supplemental_value": "在3场玩家对战回合后，每次胜利获得2金币，外加1金币。"
+          }
+        ],
+        "name": "黄金之路",
+        "official_variant_ids": [
+          "181346",
+          "181347"
+        ],
+        "supplemental_external_id": "DA_GoldenRoad18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 4,
+            "supplemental_value": 5
+          },
+          {
+            "field": "base_effect",
+            "official_value": "在接下来的3场玩家对战回合，你每输掉一场就会获得4经验值。",
+            "supplemental_value": "如果你输掉接下来3场玩家对战回合，则获得4经验值。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 4,
+            "supplemental_value": 5
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "在接下来的3场玩家对战回合，你每输掉一场就会获得6经验值。",
+            "supplemental_value": "如果你输掉接下来3场玩家对战回合，则获得6经验值。"
+          }
+        ],
+        "name": "输得漂亮",
+        "official_variant_ids": [
+          "181348",
+          "181349"
+        ],
+        "supplemental_external_id": "DA_GoodLoss18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "在20个弈子倒下后，获得1个【基础装备锻造器】。",
+            "supplemental_value": "在20个弈子阵亡后，获得1个【基础装备锻造器】。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "在14次英雄倒下后获得1个【基础装备锻造器】。",
+            "supplemental_value": "在16个弈子阵亡后，获得1个【基础装备锻造器】。"
+          }
+        ],
+        "name": "鲜血与铁",
+        "official_variant_ids": [
+          "181350",
+          "181351"
+        ],
+        "supplemental_external_id": "DA_BloodAndIron18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 5
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 5
+          },
+          {
+            "field": "prismatic.cost",
+            "official_value": null,
+            "supplemental_value": 0
+          },
+          {
+            "field": "prismatic.effect",
+            "official_value": null,
+            "supplemental_value": "每过0.15秒，对1名敌人造成5%最大生命值真实伤害。"
+          }
+        ],
+        "name": "闪电风暴",
+        "official_variant_ids": [
+          "181352",
+          "181353"
+        ],
+        "supplemental_external_id": "DA_18_LightningStorm"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 5
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 5
+          },
+          {
+            "field": "prismatic.cost",
+            "official_value": null,
+            "supplemental_value": 0
+          },
+          {
+            "field": "prismatic.effect",
+            "official_value": null,
+            "supplemental_value": "猛烈的火焰席卷整个棋盘！"
+          }
+        ],
+        "name": "炽焰",
+        "official_variant_ids": [
+          "181356",
+          "181357"
+        ],
+        "supplemental_external_id": "DA_Blaze18"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 3,
+            "supplemental_value": 5
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 3,
+            "supplemental_value": 5
+          }
+        ],
+        "name": "树顶弓箭手",
+        "official_variant_ids": [
+          "181358",
+          "181359",
+          "1181018"
+        ],
+        "supplemental_external_id": "DA_TreetopArchers"
+      },
+      {
+        "fields": [
+          {
+            "field": "cost",
+            "official_value": 2,
+            "supplemental_value": 5
+          },
+          {
+            "field": "base_effect",
+            "official_value": "1个携带着1件推荐装备的临时1星5费弈子加入你的队伍。",
+            "supplemental_value": "1个携带着1件推荐装备的临时5星1费弈子加入你的队伍。"
+          },
+          {
+            "field": "upgrade.cost",
+            "official_value": 2,
+            "supplemental_value": 5
+          }
+        ],
+        "name": "雇佣兵",
+        "official_variant_ids": [
+          "181360",
+          "181361",
+          "1181031"
+        ],
+        "supplemental_external_id": "DA_Hireling18"
+      },
+      {
+        "fields": [
+          {
+            "field": "base_effect",
+            "official_value": "获得第1名倒下的友军的1个复制体。",
+            "supplemental_value": "获得第1名阵亡的友军的1个复制体。"
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": "获得第1个倒下的友军的1个复制体。",
+            "supplemental_value": "获得第1个阵亡的友军的1个复制体。"
+          }
+        ],
+        "name": "繁殖",
+        "official_variant_ids": [
+          "181362",
+          "181363"
+        ],
+        "supplemental_external_id": "DA_18_Propagate"
+      },
+      {
+        "fields": [
+          {
+            "field": "upgrade.cost",
+            "official_value": null,
+            "supplemental_value": 0
+          },
+          {
+            "field": "upgrade.effect",
+            "official_value": null,
+            "supplemental_value": "开启1个装备商店。装备的费用在0到15金币之间。获得2金币。"
+          }
+        ],
+        "name": "珍品摆摊车",
+        "official_variant_ids": [
+          "181364"
+        ],
+        "supplemental_external_id": "DA_CurioCart18"
+      }
+    ]
+  },
+  "coverage": {
+    "augments": {
+      "discarded_unofficial": [
+        {
+          "id": "DA_18_InfernoTraitAugment",
+          "name": "烧起来",
+          "nearest_official": null,
+          "reason": "no_current_official_name_effect_or_resource_equivalent",
+          "review_status": "reviewed_not_equivalent",
+          "supplemental_numeric_effect_signature": "55%|1|1"
+        },
+        {
+          "id": "DA_FlowingTears",
+          "name": "战时补给：女神之泪",
+          "nearest_official": {
+            "id": "10583",
+            "name": "战时补给：反曲之弓",
+            "similarity": 0.4545,
+            "tier": "1"
+          },
+          "reason": "no_current_official_name_effect_or_resource_equivalent",
+          "review_status": "reviewed_not_equivalent",
+          "supplemental_numeric_effect_signature": "1|6500|2"
+        },
+        {
+          "id": "DA_CelestialBlessingI",
+          "name": "星界恩典I",
+          "nearest_official": {
+            "id": "3022",
+            "name": "星界赐福 III",
+            "similarity": 0.8529,
+            "tier": "3"
+          },
+          "reason": "no_current_official_name_effect_or_resource_equivalent",
+          "review_status": "reviewed_not_equivalent",
+          "supplemental_numeric_effect_signature": "12%|200"
+        },
+        {
+          "id": "DA_SilverDestiny",
+          "name": "白银命运",
+          "nearest_official": {
+            "id": "20494",
+            "name": "白银命运+",
+            "similarity": 0.8889,
+            "tier": "1"
+          },
+          "reason": "no_current_official_name_effect_or_resource_equivalent",
+          "review_status": "reviewed_not_equivalent",
+          "supplemental_numeric_effect_signature": "1|2"
+        },
+        {
+          "id": "DA_FocusedFire",
+          "name": "集中火力",
+          "nearest_official": null,
+          "reason": "no_current_official_name_effect_or_resource_equivalent",
+          "review_status": "reviewed_not_equivalent",
+          "supplemental_numeric_effect_signature": "10%|5|5%"
+        },
+        {
+          "id": "DA_ConstructACompanion",
+          "name": "挑个好伙计！",
+          "nearest_official": {
+            "id": "10571",
+            "name": "锻造挚友",
+            "similarity": 0.9,
+            "tier": "1"
+          },
+          "reason": "no_current_official_name_effect_or_resource_equivalent",
+          "review_status": "reviewed_not_equivalent",
+          "supplemental_numeric_effect_signature": "1|3|2"
+        },
+        {
+          "id": "DA_BonusGift",
+          "name": "意外之礼",
+          "nearest_official": null,
+          "reason": "no_current_official_name_effect_or_resource_equivalent",
+          "review_status": "reviewed_not_equivalent",
+          "supplemental_numeric_effect_signature": "1|25%|1|2"
+        },
+        {
+          "id": "DA_BonusGiftPlus",
+          "name": "意外之礼+",
+          "nearest_official": null,
+          "reason": "no_current_official_name_effect_or_resource_equivalent",
+          "review_status": "reviewed_not_equivalent",
+          "supplemental_numeric_effect_signature": "1|25%|1|3"
+        },
+        {
+          "id": "DA_Epoch",
+          "name": "新纪元",
+          "nearest_official": {
+            "id": "3896",
+            "name": "新纪元+",
+            "numeric_effect_signature": "8|2",
+            "tier": "2"
+          },
+          "reason": "same_resource_identity_but_effect_numbers_differ",
+          "review_status": "reviewed_not_equivalent",
+          "supplemental_numeric_effect_signature": "4|2"
+        },
+        {
+          "id": "DA_ComebackStory",
+          "name": "绝境反击",
+          "nearest_official": null,
+          "reason": "no_current_official_name_effect_or_resource_equivalent",
+          "review_status": "reviewed_not_equivalent",
+          "supplemental_numeric_effect_signature": "1|4|0.4%"
+        }
+      ],
+      "final_catalog": 258,
+      "matched": 246,
+      "matched_entities": 245,
+      "official": 258,
+      "official_only": [
+        {
+          "id": "2640",
+          "name": "了解你的敌人"
+        },
+        {
+          "id": "3066",
+          "name": "新人入队"
+        },
+        {
+          "id": "3695",
+          "name": "成吨的伤害"
+        },
+        {
+          "id": "4066",
+          "name": "新人入队+"
+        },
+        {
+          "id": "4695",
+          "name": "成吨的伤害+"
+        },
+        {
+          "id": "10580",
+          "name": "战时补给：无用大棒"
+        },
+        {
+          "id": "10784",
+          "name": "别再错过"
+        },
+        {
+          "id": "20745",
+          "name": "亡眼射手"
+        },
+        {
+          "id": "20779",
+          "name": "野兽出没"
+        },
+        {
+          "id": "30205",
+          "name": "意料之中的意外"
+        },
+        {
+          "id": "30767",
+          "name": "欧米茄之怪"
+        },
+        {
+          "id": "30770",
+          "name": "毛茸茸小朋友"
+        },
+        {
+          "id": "30774",
+          "name": "弈子套娃"
+        }
+      ],
+      "official_only_search_only": 13,
+      "stage_bound": 245,
+      "supplemental": 256
+    },
+    "champions": {
+      "matched": 65,
+      "official": 65,
+      "supplemental": 65
+    },
+    "items": {
+      "matched": 144,
+      "official": 157,
+      "supplemental": 149
+    },
+    "nature_sprites": {
+      "canonical_entries": 176,
+      "official_variants": 350,
+      "supplemental": 170
+    },
+    "traits": {
+      "matched": 36,
+      "official": 36,
+      "supplemental": 36
+    }
+  },
+  "identity": {
+    "mode_id": "mode18",
+    "patch_id": "s18_2",
+    "season_id": "s18"
+  },
+  "policy": "The current official source is the complete augment entity authority. Patch manifests may explicitly add a bounded developer-confirmed extension after frozen-supplement identity and content checks; all other unmatched supplemental rows remain audit-only.",
+  "schema": "jcc-supplemental-hard-data-audit-v1",
+  "source": {
+    "data_asset_url": "https://jcc.datatft.com/assets/data-cn-qZlKWKlV.js",
+    "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+    "index_asset_sha256": "fa0a4c3dcbecb5669b46c4ed6f7e49dff6809814df5bb89e438bfd34c5961470",
+    "index_asset_url": "https://jcc.datatft.com/assets/index-CA7uwJTO.js",
+    "key_fingerprint": "4f8d40f235526907",
+    "page_url": "https://jcc.datatft.com/database",
+    "policy": "Official JCC source documents remain the augment entity authority. DataTFT enriches matched official augments with exact availability, categories, and aliases, and supplies audited nature-sprite lifecycle fields; unmatched DataTFT augments are excluded from Runtime catalogs.",
+    "provider_id": "datatft",
+    "trust_role": "supplemental_structured_hard_data"
+  },
+  "status": "compared_and_merged"
+}

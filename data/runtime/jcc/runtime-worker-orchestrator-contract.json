@@ -1,0 +1,412 @@
+{
+  "schema": "jcc-runtime-worker-orchestrator-contract-v1",
+  "purpose": "Define how the JCC runtime uses parallel deterministic workers without creating multiple visible coaching voices.",
+  "product_shape": {
+    "pattern": "runtime_orchestrator_plus_workers_plus_one_visible_host_coach",
+    "visible_voice": "host_cli_agent",
+    "final_user_text_source": "host_cli_agent_main_model",
+    "backend_workers_may_not_speak_to_user": true
+  },
+  "non_negotiables": [
+    "Do not spawn multiple visible coaches for hot-path match advice.",
+    "Use deterministic or bounded workers for sensing, normalization, lookup, scoring, and aggregation.",
+    "Only the runtime orchestrator may merge worker outputs into a host-agent response_request.",
+    "Only the host CLI model writes final AI-native advice_response text.",
+    "Optional specialist LLM agents are reserved for complex cruise/background reasoning, lobby/postgame analysis, strategy wiki conflict work, and explicit user-requested deep work; they are not the default per-frame hot path."
+  ],
+  "worker_lanes": {
+    "mumu_bridge_ingest": {
+      "kind": "deterministic",
+      "hot_path": true,
+      "latency_budget_ms": 50,
+      "inputs": [
+        "mumu_4352",
+        "mumu_4353",
+        "mumu_4354",
+        "mumu_4358"
+      ],
+      "outputs": [
+        "raw_bridge_events",
+        "current_view_units",
+        "shop_units",
+        "phase_status"
+      ],
+      "must_not_write": [
+        "final_advice",
+        "user_visible_text"
+      ]
+    },
+    "host_visual_sensing": {
+      "kind": "host_multimodal_request",
+      "hot_path": "event_only",
+      "latency_budget_ms": 2500,
+      "inputs": [
+        "current_frame",
+        "mode",
+        "mumu_unit_anchors",
+        "candidate_catalogs"
+      ],
+      "outputs": [
+        "structured_visual_observation"
+      ],
+      "must_not_write": [
+        "confirmed_selected_augments_without_user_confirmation",
+        "own_board_from_opponent_view"
+      ]
+    },
+    "live_state_normalizer": {
+      "kind": "deterministic",
+      "hot_path": true,
+      "latency_budget_ms": 25,
+      "inputs": [
+        "mumu_bridge_ingest",
+        "host_visual_sensing",
+        "manual_match_variables",
+        "confirmed_history"
+      ],
+      "outputs": [
+        "standardized_live_state"
+      ],
+      "must_not_write": [
+        "previous_match_facts_into_current_live_state"
+      ]
+    },
+    "hard_data_lookup": {
+      "kind": "deterministic_lookup",
+      "hot_path": true,
+      "latency_budget_ms": 35,
+      "inputs": [
+        "standardized_live_state",
+        "active_season_module"
+      ],
+      "outputs": [
+        "entity_cards",
+        "mechanism_refs",
+        "strategy_terms"
+      ],
+      "must_not_write": [
+        "official_patch_truth"
+      ]
+    },
+    "live_rankings_lookup": {
+      "kind": "deterministic_lookup",
+      "hot_path": true,
+      "latency_budget_ms": 35,
+      "inputs": [
+        "target_plan",
+        "shop_units",
+        "current_board",
+        "rank_signal"
+      ],
+      "outputs": [
+        "composition_priors",
+        "unit_value_priors",
+        "rank_signal_context"
+      ],
+      "must_not_write": [
+        "hard_data"
+      ]
+    },
+    "economy_resource_scorer": {
+      "kind": "deterministic_scorer",
+      "hot_path": true,
+      "latency_budget_ms": 25,
+      "inputs": [
+        "economy",
+        "xp_policy",
+        "shop_units",
+        "target_context",
+        "resource_modifiers"
+      ],
+      "outputs": [
+        "economy_action_candidates",
+        "resource_risk_context"
+      ],
+      "must_not_write": [
+        "final_advice"
+      ]
+    },
+    "combat_cap_estimator": {
+      "kind": "deterministic_estimator",
+      "hot_path": true,
+      "latency_budget_ms": 60,
+      "inputs": [
+        "board_units",
+        "items",
+        "traits",
+        "target_plan"
+      ],
+      "outputs": [
+        "board_power_score",
+        "item_power_score",
+        "cap_power_score",
+        "expected_damage_risk"
+      ],
+      "must_not_write": [
+        "final_advice"
+      ]
+    },
+    "memory_review_worker": {
+      "kind": "deterministic_or_optional_specialist",
+      "hot_path": false,
+      "latency_budget_ms": 5000,
+      "inputs": [
+        "recent_20_match_summaries",
+        "user_strategy_rows",
+        "new_strategy_candidate"
+      ],
+      "outputs": [
+        "memory_conflict_notice",
+        "postgame_review_context"
+      ],
+      "must_not_write": [
+        "current_match_live_state"
+      ]
+    },
+    "hud_text_sensing": {
+      "kind": "deterministic_ocr_worker",
+      "hot_path": "mode_or_cruise_refresh_only",
+      "latency_budget_ms": 1200,
+      "inputs": [
+        "current_frame",
+        "hud_rois"
+      ],
+      "outputs": [
+        "phase.stage_round",
+        "economy.hp",
+        "economy.gold",
+        "economy.level",
+        "economy.xp"
+      ],
+      "must_not_write": [
+        "board_units",
+        "bench_units",
+        "shop_units",
+        "augment_choices",
+        "selected_augments",
+        "equipped_items",
+        "final_advice"
+      ]
+    }
+  },
+  "specialist_agent_lanes": {
+    "cruise_strategy_specialist": {
+      "kind": "host_cli_native_subagent",
+      "default_agent_type": "analyst",
+      "model_policy": "inherit_host_cli_default_unless_user_overrides",
+      "latency_class": "background_optional",
+      "allowed_modes": [
+        "cruise"
+      ],
+      "trigger_event_ids": [
+        "direction_commit_or_exit",
+        "tempo_pivot",
+        "cap_gap_check"
+      ],
+      "join_policy": "merge_if_ready_before_deadline",
+      "deadline_ms": 1200,
+      "fallback_behavior": "main_host_model_answers_without_packet_and_merges_packet_next_turn",
+      "inputs": [
+        "compact_live_state",
+        "target_plan",
+        "hard_data_refs",
+        "live_rankings_refs",
+        "user_preferences"
+      ],
+      "outputs": [
+        "strategy_analysis_packet"
+      ],
+      "must_not_write": [
+        "final_user_visible_text",
+        "current_match_live_state",
+        "confirmed_choices"
+      ]
+    },
+    "postgame_review_specialist": {
+      "kind": "host_cli_native_subagent",
+      "default_agent_type": "analyst",
+      "model_policy": "inherit_host_cli_default_unless_user_overrides",
+      "latency_class": "offline_or_daily",
+      "allowed_modes": [
+        "postgame_review",
+        "daily_chat"
+      ],
+      "trigger_event_ids": [
+        "postgame_review_requested",
+        "recent_match_pattern_review"
+      ],
+      "join_policy": "await_for_explicit_deep_response",
+      "deadline_ms": 10000,
+      "fallback_behavior": "ask_host_model_to_summarize_available_packets_and_continue_async_if_needed",
+      "inputs": [
+        "recent_20_match_summaries",
+        "user_preferences",
+        "hard_data_refs",
+        "live_rankings_refs"
+      ],
+      "outputs": [
+        "postgame_analysis_packet"
+      ],
+      "must_not_write": [
+        "final_user_visible_text",
+        "current_match_live_state"
+      ]
+    },
+    "strategy_memory_specialist": {
+      "kind": "host_cli_native_subagent",
+      "default_agent_type": "critic",
+      "model_policy": "inherit_host_cli_default_unless_user_overrides",
+      "latency_class": "offline_or_daily",
+      "allowed_modes": [
+        "strategy_wiki",
+        "user_preferences",
+        "daily_chat"
+      ],
+      "trigger_event_ids": [
+        "strategy_row_write_requested",
+        "strategy_conflict_scan_requested"
+      ],
+      "join_policy": "await_for_explicit_deep_response",
+      "deadline_ms": 10000,
+      "fallback_behavior": "do_not_write_memory_until_conflict_packet_or_user_override",
+      "inputs": [
+        "user_strategy_rows",
+        "new_strategy_candidate",
+        "user_settings"
+      ],
+      "outputs": [
+        "strategy_conflict_packet",
+        "memory_write_recommendation_packet"
+      ],
+      "must_not_write": [
+        "final_user_visible_text",
+        "current_match_live_state",
+        "memory_without_user_confirmation"
+      ]
+    }
+  },
+  "mode_worker_sets": {
+    "cruise": [
+      "mumu_bridge_ingest",
+      "live_state_normalizer",
+      "hard_data_lookup",
+      "live_rankings_lookup",
+      "economy_resource_scorer",
+      "combat_cap_estimator"
+    ],
+    "augment_choice": [
+      "mumu_bridge_ingest",
+      "live_state_normalizer",
+      "hard_data_lookup",
+      "live_rankings_lookup",
+      "economy_resource_scorer",
+      "combat_cap_estimator"
+    ],
+    "item_choice": [
+      "live_state_normalizer",
+      "hard_data_lookup",
+      "live_rankings_lookup",
+      "economy_resource_scorer",
+      "combat_cap_estimator"
+    ],
+    "refresh_self_state": [
+      "mumu_bridge_ingest",
+      "hud_text_sensing",
+      "host_visual_sensing",
+      "live_state_normalizer"
+    ],
+    "manual_match_variables": [
+      "live_state_normalizer",
+      "hard_data_lookup"
+    ],
+    "daily_chat": [
+      "memory_review_worker",
+      "hard_data_lookup",
+      "live_rankings_lookup"
+    ],
+    "postgame_review": [
+      "memory_review_worker",
+      "hard_data_lookup",
+      "live_rankings_lookup"
+    ],
+    "user_preferences": [
+      "memory_review_worker"
+    ],
+    "strategy_wiki": [
+      "memory_review_worker",
+      "hard_data_lookup"
+    ],
+    "lineup_card": [
+      "live_state_normalizer",
+      "hard_data_lookup",
+      "live_rankings_lookup",
+      "combat_cap_estimator"
+    ]
+  },
+  "active_season_choice_mode_worker_set": [
+    "live_state_normalizer",
+    "hard_data_lookup",
+    "live_rankings_lookup",
+    "economy_resource_scorer",
+    "combat_cap_estimator"
+  ],
+  "active_season_choice_mode_policy": {
+    "source": "compiled_active_rules_choice_mode_contract",
+    "candidate_intake": "obey_candidate_input_policy",
+    "current_product_requirement": "current_match_user_report_without_ocr_or_host_visual_fallback",
+    "major_season_migration": "declare the new choice mechanic in the active major-season rules; do not add a common mode_worker_sets branch",
+    "visible_answer_owner": "one_host_cli_agent_response"
+  },
+  "hot_path_llm_policy": {
+    "per_small_event_llm_subagents": "forbidden",
+    "host_model_final_response": "required_when_user_visible_advice_is_needed",
+    "backend_draft_visibility": "forbidden_as_final",
+    "optional_specialist_agents": {
+      "allowed_for": [
+        "complex_cruise_strategy_analysis",
+        "postgame_review_deep_analysis",
+        "strategy_wiki_conflict_audit",
+        "offline_acceptance_review"
+      ],
+      "forbidden_for": [
+        "augment_reroll_first_response",
+        "shop_hold_sell_tip",
+        "item_choice_short_answer",
+        "user_interjection_recompute"
+      ],
+      "event_allowlist": [
+        "direction_commit_or_exit",
+        "tempo_pivot",
+        "cap_gap_check",
+        "postgame_review_requested",
+        "recent_match_pattern_review",
+        "strategy_row_write_requested",
+        "strategy_conflict_scan_requested"
+      ],
+      "event_denylist": [
+        "augment_reroll_first_response",
+        "shop_hold_sell_tip",
+        "item_choice_short_answer",
+        "user_interjection_recompute"
+      ],
+      "dispatch_policy": "optional_background_parallel_subagents_return_structured_packets_only",
+      "max_parallel_specialists": 3,
+      "must_default_to_inherit_host_cli_model": true
+    }
+  },
+  "merge_policy": {
+    "merge_worker_outputs_into": "orchestrator_context",
+    "merge_specialist_packets_into": "orchestrator_context.specialist_packets",
+    "then_build": "host_agent_response_request",
+    "ui_displays": "final advice_response only",
+    "evidence_budget": {
+      "max_worker_summaries_per_response": 8,
+      "prefer_compact_scores_over_raw_state": true,
+      "include_missing_fields_when_decision_quality_depends_on_them": true
+    }
+  },
+  "product_decisions": {
+    "no_opponent_board_workers": "Opponent-board sensing workers are intentionally absent. Runtime uses own-state workers plus user-confirmed notes only.",
+    "no_lobby_scout_specialist": "The previous lobby scout specialist is retired because MuMu does not provide reliable opponent board unit facts."
+  }
+}

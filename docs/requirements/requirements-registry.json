@@ -1,0 +1,1229 @@
+{
+  "schema": "jcc-requirements-authority-registry-v2",
+  "contract_version": "jcc-requirements-authority-registry-v2",
+  "last_reviewed": "2026-09-23",
+  "owner": "jcc-runtime",
+  "notes": [
+    "2026-09-27: Card navigation and fact-only confirmation do not reserve automatic Cruise admission or delivery. Actual response-task ownership, fixed-checkpoint authorization, freshness and render-before-ACK remain authoritative; no forced card exit or fabricated delivery is allowed.",
+    "Final Host projection preserves complete current-Match confirmed equipment, multiplicity and empty/unknown semantics. The shared read-only calculate tool exposes explicit Core roster construction in all coaching modes, with captured snapshot guards and no natural-language intent gate; theoretical coverage is not Ranking strength or verified emblem-holder legality.",
+    "A genuinely empty successful Codex coach completion can continue once on the same owned task/session with remaining budget. This transport recovery is not a format correction and cannot replay bootstrap, commentary, tool actions, cancelled owners or failed provider requests; host-context-lifecycle-contract owns the policy.",
+    "The 2026-09-16 review remediation preserves native-session initialization and cancellation ownership, process-instance cleanup, per-window equipment choices, source-bound relation retrieval, pre-truncation fit scoring, active augment effects, and explicit equipment multiplicity/unknown/empty semantics across Runtime and Renderer.",
+    "Registry entries are the authority classification for requirement-like docs.",
+    "Legacy JSON is mirror/debug evidence only; daemon SQLite app.sqlite is the canonical runtime state store.",
+    "Historical, paused, and generated docs may support navigation but cannot override current requirement contracts.",
+    "AGENTS.md and repo-local skills are discovery and authoring entrypoints, not fallback product authorities.",
+    "Approved 2026-07-29 UI and runtime-mode decisions are current only when represented in the registered machine contracts, not in entrypoint prose alone.",
+    "Structured choice discovery now uses exact-stage default browsing plus explicitly labelled full-catalog typed search; visual icon manifests are not gameplay-stage authority.",
+    "Augment category filters are catalog-driven patch metadata: Common UI renders the active catalog's categories, combines them with stage and tier, and never embeds one season's labels.",
+    "Season companion lineup tools declare product-supported source variables and branches, discard unsupported branches, preserve retained candidate rows atomically, and publish a small descriptor plus bounded hash-addressed shards; source candidate and repeated slot counts are diagnostics, not distinct final recommendation or entity counts.",
+    "Windows desktop entry and installer shortcut behavior is governed by the distribution contract; a development shortcut must never be shipped as the player shortcut.",
+    "Hard-data content manifests are deterministic and path-relative; flat lookup indexes and bounded live acceptance replace retired hot-shard and permanent machine-local evidence gates.",
+    "Lightweight semantic features remain a closed supporting layer distributed across Common, Core, Ranking, and Runtime ownership; they are not a fifth pipeline or a substitute for typed facts and the registered five-component score.",
+    "Augment choice is a separate three-candidate decision evaluator, not another lineup score: Core owns static semantic profiles, Runtime derives current realization and top-four/first-place objective fit, Ranking contributes deduplicated association evidence from a baseline that excludes augment_fit, and the Host remains the final explanation owner.",
+    "The Strategy Evidence Kernel is the shared Common/Runtime retrieval contract for direct questions, structured cards, and proactive Cruise. Runtime binds one immutable evidence snapshot, multi-route plan, source policy, keyed prefetch evidence, coverage receipt, and bounded typed tools; the Host Agent plans and answers inside the same logical turn without a separate planning-model call. Satisfied evidence must be present on the wire or available through a verified thread/turn/Match/Core/task-bound read-only tool.",
+    "AI-native Host execution loads one complete deduplicated Agent-readable Common view per provider session, then supplies a full Mode contract and checkpoint Action Brief per real turn. Runtime performs authority, permission, lifecycle, typed retrieval, scoring evidence, and deterministic materialization; the Host owns semantic judgment. Format and quality diagnostics never trigger a second Provider turn or suppress independently readable strategy text."
+  ],
+  "authority_domains": [
+    {
+      "id": "requirements_governance",
+      "authoritative_paths": [
+        "docs/requirements/requirements-registry.json"
+      ],
+      "guidance_paths": [
+        "docs/requirements/README.md",
+        "docs/requirements/CHANGELOG.md"
+      ],
+      "entrypoint_paths": [
+        "AGENTS.md",
+        ".codex/skills/jcc-runtime-agent/SKILL.md"
+      ],
+      "implementation_paths": [
+        "ui/electron/product-gate-classification.js",
+        "tools/jcc-product-gate-no-provider.mjs"
+      ],
+      "verifier_paths": [
+        "tools/verify-jcc-requirements-authority.mjs",
+        "tools/verify-jcc-product-gate-classification.mjs",
+        "tools/verify-jcc-product-gate-outcome-protocol.mjs",
+        "tools/verify-jcc-runtime-product-gate.mjs"
+      ],
+      "change_policy": "Classify requirement-like surfaces before using them as acceptance criteria. Update the owning authority, registry metadata, decision log, and verifier coverage in the same change."
+    },
+    {
+      "id": "host_coach_instructions",
+      "authoritative_paths": [
+        "data/runtime/jcc/host-coach-instruction-contract.json"
+      ],
+      "guidance_paths": [
+        "docs/requirements/jcc-season-version-governance-runbook.md"
+      ],
+      "entrypoint_paths": [
+        "AGENTS.md",
+        ".codex/skills/jcc-runtime-agent/SKILL.md"
+      ],
+      "implementation_paths": [
+        "tools/jcc_host_coach_instruction_contract.mjs",
+        "ui/electron/runtime-service.js",
+        "tools/run-jcc-cruise-runtime-pipeline.mjs"
+      ],
+      "verifier_paths": [
+        "tools/verify-jcc-host-coach-instruction-contract.mjs",
+        "tools/verify-jcc-host-request-stage-snapshots.mjs",
+        "tools/verify-jcc-lineup-decision-quality.mjs",
+        "tools/verify-jcc-runtime-product-gate.mjs"
+      ],
+      "change_policy": "Keep the canonical coach protocol provider-, season-, patch-, and stage-neutral. Supply current version mechanics through selected compiled context instead of copying them into common instructions. Missing augment or descriptor-owned season choices block only an explicit question about that exact active choice; other user-owned actions answer first and mention missing inputs as conditional uncertainty or card reminders. Preserve target-role semantics and the separation between national strength, winning-lineup recipe, and hero item/market evidence. Treat one selected canonical lineup variant as an atomic roster baseline, keep cross-variant unions non-composable, and require exact current-patch recipe evidence for every craftability claim. For augment preselection, rank the exact three current candidates once each, treat Runtime objective outputs as decision-fit rather than placement probabilities, preserve target-context authority, and require a typed current-fact override reason when Host ordering differs from evaluator evidence.",
+      "last_reviewed": "2026-09-12"
+    },
+    {
+      "id": "season_versioning_and_active_rules",
+      "ranking_retention_policy": "Active/pending Core identity, not Core disk retention, determines Ranking/Recipe candidate and previous-generation eligibility. Preserve active closures and live Match leases independently.",
+      "authoritative_paths": [
+        "data/runtime/jcc/runtime-season-module-contract.json",
+        "data/runtime/jcc/knowledge-profile-contract.json",
+        "data/runtime/jcc/harness-entrypoint-contract.json",
+        "data/game-knowledge/jcc/common/cruise-decision-framework.json",
+        "data/game-knowledge/jcc/common/strategy-evidence-framework.json",
+        "data/live-rankings/jcc/runtime-agent-refresh-contract.json",
+        "data/live-rankings/jcc/runtime-strategy-signal-contract.json"
+      ],
+      "guidance_paths": [
+        "docs/requirements/jcc-season-version-governance-runbook.md"
+      ],
+      "entrypoint_paths": [
+        "AGENTS.md",
+        ".codex/skills/jcc-runtime-agent/SKILL.md"
+      ],
+      "implementation_paths": [
+        "tools/jcc_active_rules_contract.mjs",
+        "tools/run-jcc-version-pipeline.mjs",
+        "tools/jcc_game_knowledge_compiler.mjs",
+        "tools/jcc_game_knowledge_profile_store.mjs",
+        "tools/jcc_hard_data_package_store.mjs",
+        "tools/jcc_ranking_target.mjs",
+        "tools/jcc_live_rankings_recipe_sources.mjs",
+        "tools/jcc_live_rankings_recipe_store.mjs",
+        "tools/jcc_live_rankings_coverage_policy.mjs",
+        "tools/jcc_live_rankings_catalog_compatibility.mjs",
+        "tools/update-jcc-live-rankings.mjs",
+        "tools/archive-jcc-season.mjs",
+        "tools/import-jcc-s18-source-docs.mjs",
+        "tools/stage-jcc-s18-hard-data.mjs",
+        "tools/sync-jcc-official-augment-source.mjs",
+        "tools/jcc_hard_data_target.mjs",
+        "tools/start-jcc-new-match-session.mjs",
+        "ui/electron/knowledge-snapshot.js",
+        "ui/electron/semantic-evidence-router.js",
+        "ui/electron/strategy-evidence-kernel.js",
+        "ui/electron/decision-math-service.js",
+        "tools/jcc-formula-evaluator.mjs"
+      ],
+      "verifier_paths": [
+        "tools/verify-jcc-active-rules-context.mjs",
+        "tools/verify-jcc-game-knowledge-compiler.mjs",
+        "tools/verify-jcc-game-knowledge-profile-store.mjs",
+        "tools/verify-jcc-season-archive.mjs",
+        "tools/verify-jcc-s18-source-import.mjs",
+        "tools/verify-jcc-s18-hard-data-staging.mjs",
+        "tools/verify-jcc-s18-18.2a-hard-data.mjs",
+        "tools/verify-jcc-official-augment-source.mjs",
+        "tools/verify-jcc-core-profile-runtime-identity.mjs",
+        "tools/verify-jcc-new-match-session-isolation.mjs",
+        "tools/verify-jcc-live-ranking-recipe-sources.mjs",
+        "tools/verify-jcc-cruise-popular-recipe-query.mjs",
+        "tools/verify-jcc-version-pipeline-architecture.mjs",
+        "tools/verify-jcc-hard-data-package-store.mjs",
+        "tools/verify-jcc-semantic-feature-layer.mjs",
+        "tools/verify-jcc-player-entity-aliases.mjs",
+        "tools/verify-jcc-cruise-decision-orchestrator.mjs",
+        "tools/verify-jcc-semantic-evidence-router.mjs",
+        "tools/verify-jcc-strategy-evidence-runtime-contract.mjs",
+        "tools/verify-jcc-strategy-evidence-kernel.mjs",
+        "tools/verify-jcc-strategy-evidence-old-authority-absence.mjs",
+        "tools/verify-jcc-decision-math-service.mjs",
+        "tools/verify-jcc-formula-evaluator.mjs",
+        "tools/verify-jcc-common-game-baseline.mjs",
+        "tools/verify-jcc-knowledge-snapshot.mjs",
+        "tools/verify-jcc-profile-only-rule-authority.mjs",
+        "tools/verify-jcc-season-version-isolation.mjs",
+        "tools/verify-jcc-season-aware-renderer-modes.mjs",
+        "tools/verify-jcc-season-variable-panel-runtime.mjs",
+        "tools/verify-jcc-season-variable-canonical-roundtrip.mjs",
+        "tools/verify-jcc-common-season-neutrality.mjs",
+        "tools/verify-jcc-hard-data.mjs",
+        "tools/verify-jcc-runtime-product-gate.mjs"
+      ],
+       "change_policy": "Author common concepts, glossary, formulas, deterministic calculation kernels, doctrine, routes, choice lifecycle, standard round schedule, player damage, economy, progression, star-up, shop odds, shared-pool sizes, schemas, retrieval policy, stable equipment player aliases, and the closed season-neutral semantic-feature vocabulary under the season-neutral game-knowledge layer. Common user-confirmed standard values remain authoritative unless an active major season explicitly declares a verified exception. Patch packages provide entity values, balance data, caps, season-mechanic modifiers, version-owned champion aliases, deterministic Core semantic features, and only explicit verified exceptions; they must not own or fork Common rules or calculation algorithms. Patch-specific upstream formats enter through a registered Source Adapter; each source refresh publishes a new immutable content-addressed hard-data generation and atomically updates only the patch candidate reference, while shared compilation, ranking-target resolution, verification, promotion, archive, pruning, and Runtime consumption remain season-neutral. Each catalog declares one entity authority; supplemental sources may enrich matched canonical entities, but unmatched supplemental rows cannot enter production catalogs or indexes without an explicit patch-manifest authority grant and a registered verifier for that scope. Player aliases bind only to unique entities in the selected Core: unbound Common aliases remain inactive, unbound patch aliases fail compilation, and aliases never establish entity membership or replace canonical persisted ids and names. Differently named rows require a declared alias, identical normalized effect, or unique same-tier resource identity with the same effect-number signature; accepted match kinds remain auditable, changed-number rows stay separate, and multi-item probability outcomes remain atomic. Version reward tables and mechanic probabilities compile into a Runtime-only typed index and are selected per question rather than copied into the static Host capsule. DecisionMathService resolves exact entities from the captured Core Profile, applies only supplied or proven modifiers, keeps unresolved conditions explicit, and attaches a bounded result for numeric/stat/probability requests or typed current-Core entity, lineup, transition, item, and augment strategy requests. The standard augment template owns 2-1, 3-2, and 4-2; the standard carousel template owns advisory checkpoints at 2-4 through 7-4 without creating a structured Mode. Each major season explicitly inherits, replaces, or disables standard mechanics and owns only season mechanics, variables, aliases, exclusions, and mode extensions. Ordinary minor patches update source catalogs, rankings, stage-authority inputs, and audited overrides without rewriting Common or major-season timing. Compile the rules bundle, decision-input catalog, augment-stage authority, Runtime catalog overlay, and every indirectly consumed normalized payload into one immutable content-addressed Core Profile candidate. The optional ranking phase derives its exact identity from that compiled candidate, binds the latest available Tencent stat_date to the internal patch, and publishes only an immutable candidate overlay; it never infers version identity from ranking rows or the prior active season. Promotion freezes one candidate snapshot, requires the same exact expected id before and after the registered verifier profile, rejects candidate drift and all true activation blockers, and changes only atomic active pointers; a compatible ranking candidate activates when present, otherwise ranking capability is explicitly unavailable without foreign-season fallback. Pruning is a separate lifecycle phase that protects active, candidate, archived, leased, and bounded previous Core generations before deleting only unreferenced hard-data generations. Start Match captures that profile reference and its immutable artifact paths exactly once and leases its generation until clean retirement. Never combine core assets from different profiles inside a live match or Host turn. Production active rules and structured choice/OCR validation resolve only from the promoted Core Profile plus the common product choice contract; shared mutable decision catalogs and legacy normal/special rule files are forbidden production fallbacks. Hard-data content manifests must be reproducible, omit build timestamps and absolute paths, and expose only deterministic relative package directories. Keep runtime-local season/package identity separate from immutable upstream source identity so an upstream naming artifact can never select product rules or appear as the local season. Freeze retired major-season assets in place with a deterministic registered archive manifest. Archived seasons retain read-only inspect and verify support, while source updates, compile --write, ranking refresh, and promotion fail before changing candidate or generation trees. Reject promotion of any candidate with unresolved true activation blockers. Missing compatible Master+ rankings alone is a degraded capability, not a Core Profile blocker. Production big-data authority is the Zhangmeng/Tencent Master+ Ranking Overlay. The intelligence phase name is only a compatibility alias for rankings. The pinned S18 DataTFT snapshot is an immutable production Core supplement for declared hard-data enrichment roles (including reward-rate tables, trait tracking, and champion/item/sprite expansions); it is inherited as the current Core baseline before explicit minor-patch deltas, and is not a Daily Ranking authority, Runtime retrieval source, or network-refresh target. Bind every rankings update to the explicit current Core Profile, season, patch, and catalog fingerprint; missing compatible rankings is unavailable/degraded and does not block valid Core release. Keep semantic features inside Common vocabulary, Core compilation, Ranking compilation, and temporary current-Match Runtime mapping; this supporting layer is not a fifth pipeline, GraphRAG/vector/LoRA authority, typed-fact replacement, or sixth scoring component.",
+      "last_reviewed": "2026-08-24"
+    },
+    {
+      "id": "runtime_sensing_and_source_priority",
+      "authoritative_paths": [
+        "data/runtime/jcc/runtime-mode-sensing-map.json",
+        "data/runtime/jcc/itemization-decision-contract.json",
+        "data/runtime/jcc/match-fact-capture-contract.json"
+      ],
+      "guidance_paths": [
+        "docs/runtime-ocr-inventory.md",
+        "docs/jcc-runtime-live-state-source-decision.md",
+        "data/runtime/jcc/runtime-agent-wiki/official/mumu-desktop-runtime.md"
+      ],
+      "entrypoint_paths": [
+        "AGENTS.md",
+        ".codex/skills/jcc-runtime-agent/SKILL.md"
+      ],
+      "implementation_paths": [
+        "tools/capture-jcc-visual-frame.mjs",
+        "tools/discover-jcc-mumu-adb-target.mjs",
+        "tools/jcc_ocr_field_aggregator.py",
+        "tools/jcc-rapidocr-resident-worker.mjs",
+        "tools/run-jcc-self-state-roi-ocr.mjs",
+        "tools/watch-jcc-mumu-runtime-logcat.mjs",
+        "ui/electron/augment-choice-draft-ocr.js",
+        "ui/electron/match-fact-capture.js",
+        "ui/electron/runtime-equipment-context.js",
+        "ui/electron/runtime-service.js",
+        "tools/build-jcc-itemization-context.mjs"
+      ],
+      "verifier_paths": [
+        "tools/verify-jcc-self-state-roi-capture-source-contract.mjs",
+        "tools/verify-jcc-mumu-runtime-autodiscovery.mjs",
+        "tools/verify-jcc-mumu-source-degraded-contract.mjs",
+        "tools/verify-jcc-mumu-watch-item-source-diagnostics.mjs",
+        "tools/verify-jcc-mumu-item-source-health-context.mjs",
+        "tools/verify-jcc-rapidocr-resident-worker-lifecycle.mjs",
+        "tools/verify-jcc-runtime-sensing-artifact-retention.mjs",
+        "tools/verify-jcc-self-state-roi-ocr.mjs",
+        "tools/verify-jcc-ocr-field-aggregator.mjs",
+        "tools/verify-jcc-live-test-symptom-regression.mjs",
+        "tools/verify-jcc-user-confirmed-equipment-context.mjs",
+        "tools/verify-jcc-itemization-decision-context.mjs",
+        "tools/verify-jcc-cruise-hard-data-query.mjs",
+        "tools/verify-jcc-choice-composer-prefill-ui.mjs",
+        "tools/verify-jcc-explicit-augment-ocr-draft.mjs",
+        "tools/verify-jcc-choice-confirmation-behavior.mjs",
+        "tools/verify-jcc-match-fact-capture.mjs",
+        "tools/verify-jcc-runtime-product-gate.mjs"
+      ],
+      "change_policy": "Keep field-level equipment precedence explicit: trusted current MuMu structured facts first, exact-current-match user confirmation second, visual/icon candidates last and conditional only. Active augment, descriptor-owned season-choice, and item/anvil candidate and final-choice truth come only from the current-match structured card, never ordinary chat, automatic OCR, or host multimodal fallback. Augment mode may expose one explicit user-triggered Quick OCR convenience after stage and tier are selected, and each uniquely resolved row legal for the selected stage and tier may fill only its physical renderer slot; unresolved rows stay unchanged or empty and partial completion is visible; it writes no canonical facts, opens no Host answer, never auto-sends, and is unavailable to season-choice and item-choice cards. Start Match prewarms the single daemon-owned OCR worker once so its one model is loaded before the choice window; a bounded readiness wait may finish while that same background load continues. The foreground hot Augment click has a bounded end-to-end choice-window budget measured from queue admission, runs ahead of queued background HUD work after the current in-flight job, removes an expired queued request before Python execution, and sends the full frame and normalized panel ROI to that resident process so crop and recognition happen in memory without a separate cold Python/Pillow cropper, emits 1-based card slots, and retains bounded per-step timing diagnostics. The generated decision-input catalog must match the active season, patch, and one deterministic source fingerprint over the exact manifest, normalized catalog inputs, alias gateway, stage authority, and common/major-season choice rules. Any same-version source drift fails closed before dropdown, search, save, confirmation, or OCR consumes the catalog. A privacy-redacted real frame must remain in the product gate, and old-match OCR completion must never populate a new match. Owned-augment text-panel OCR is diagnostic only and cannot write choice confirmations. Choice refresh waits for the user to submit. Historical command presence is diagnostics, not current field authority; authoritative empty requires explicit current payload observation. Keep scoped ROI OCR mechanical only for HUD self-state, diagnostic owned-augment inspection, and the non-authoritative augment renderer draft, ADB capture first, one daemon-owned OCR worker, and repeated sensing artifacts bounded by count and age. Retired season-specific OCR tools remain absent; future descriptor choices use the common structured-card path. Missing, blank, unrecognized, or failed HUD fields remain missing before numeric coercion; every requested field without an accepted result carries bounded diagnostics, and only accepted fields receive source authority. A full-HUD capture must recognize phase.stage_round in the same frame before any economy field receives self_state_roi_ocr authority; isolated loading, roster, reward, or transition-screen numbers remain diagnostic-only and cannot be combined with later stage-only evidence. After that frame anchor succeeds, valid sibling fields still promote independently. Active-match HUD HP less than or equal to zero is invalid unless separate elimination evidence exists; hydration and failed-refresh paths remove historical false-zero authority while preserving valid sibling facts. User confirmation updates selected context without a sibling Host answer, ignores stale surrounding choice-card bindings for fact-only equipment writes, refreshes current match/stage scope even when the reported contents are unchanged, and must be used without waiting for structured recovery or visual fallback. Item icon matching may run only for an explicit user refresh/equipment request or explicit conflict check while the needed field is still unconfirmed; periodic HUD/background sensing must never start it.",
+      "current_decision_addendum": "Entering augment mode reserves the one shared OCR lane before asynchronous context setup. Until mode exit, periodic and stage-only HUD paths must not admit new work; an already in-flight job may finish, then foreground Quick OCR runs next. Every foreground attempt uses a unique transport request identity so a timed-out response cannot settle a retry. The explicit Cruise match_fact_capture request kind is the only natural-language exception to card-only canonical intake; ordinary chat text cannot activate it, and Runtime validation remains authoritative. The common in-match target/variable panel may expose a fact-only holder editor backed by the same canonical equipped_items revision as Quick Record; equipping one proven copy removes it from inventory when present without deleting additional owned copies. The explicit Cruise hard_data_query is a direct strategy answer, not fact intake: it uses a dedicated Runtime action that stamps active_core_profile_only internally, forbids ranking/Wiki-derived retrieval and scoring, defaults item enumeration to normal completed items unless special categories are explicit, and may invoke item, augment, or lineup Core-Profile-only evaluators. Match attachment is independent from HUD field readiness: a fresh same-match MuMu stream with a positive revision, explicit 4354 self-shop anchor, and non-empty shop may mark the match connected without promoting any HUD, board, equipment, or choice field.",
+      "last_reviewed": "2026-08-21"
+    },
+    {
+      "id": "response_task_and_host_delivery",
+      "authoritative_paths": [
+        "data/runtime/jcc/host-coach-signature-contract.json",
+        "data/runtime/jcc/match-fact-capture-contract.json",
+        "data/runtime/jcc/host-readonly-tool-contract.json"
+      ],
+      "guidance_paths": [
+        "ui/PRODUCT.md",
+        "docs/jcc-runtime-product-readiness.md"
+      ],
+      "entrypoint_paths": [
+        "AGENTS.md",
+        ".codex/skills/jcc-runtime-agent/SKILL.md"
+      ],
+      "implementation_paths": [
+        "ui/electron/host-adapters.js",
+        "ui/electron/kimi-readonly-mcp-transport.js",
+        "ui/electron/host-readonly-tool-broker.js",
+        "ui/electron/runtime-daemon.js",
+        "ui/electron/runtime-daemon-server.js",
+        "ui/electron/host-request-projection.js",
+        "ui/electron/host-task-contract-registry.js",
+        "ui/electron/host-evidence-materialization.js",
+        "tools/jcc-player-journey-acceptance.mjs",
+        "ui/electron/host-turn-trace.js",
+        "ui/electron/runtime-writer-lease.js",
+        "ui/electron/runtime-state-store.js",
+        "ui/electron/runtime-service.js",
+        "ui/electron/match-fact-capture.js",
+        "ui/src/runtimeBridge.ts",
+        "ui/src/App.tsx",
+        "ui/src/components/DecisionInputCard.tsx",
+        "tools/maintain-jcc-runtime-db.mjs",
+        "tools/prune-jcc-runtime-local-artifacts.mjs"
+      ],
+      "verifier_paths": [
+        "tools/verify-jcc-single-writer-canonical-state-contract.mjs",
+        "tools/verify-jcc-runtime-state-store.mjs",
+        "tools/verify-jcc-runtime-db-budget.mjs",
+        "tools/verify-jcc-runtime-local-artifact-prune.mjs",
+        "tools/verify-jcc-runtime-writer-lease-identity.mjs",
+        "tools/verify-jcc-runtime-event-stream-contract.mjs",
+        "tools/verify-jcc-runtime-retired-version-cleanup.mjs",
+        "tools/verify-jcc-response-task-delivery-contract.mjs",
+        "tools/verify-jcc-daemon-control-lane-contract.mjs",
+        "tools/verify-jcc-renderer-event-delivery.mjs",
+        "tools/verify-jcc-pinned-card-browser.mjs",
+        "tools/verify-jcc-coach-response-delivery-dedup.mjs",
+        "tools/verify-jcc-host-request-task-identity.mjs",
+        "tools/verify-jcc-host-task-projection-contract.mjs",
+        "tools/verify-jcc-host-turn-trace.mjs",
+        "tools/verify-jcc-host-schema-transport-matrix.mjs",
+        "tools/verify-jcc-host-native-schema-live.mjs",
+        "tools/verify-jcc-provider-wire-visibility.mjs",
+        "tools/verify-jcc-provider-evidence-visibility.mjs",
+        "tools/verify-jcc-host-evidence-materialization.mjs",
+        "tools/verify-jcc-augment-response-semantic-boundary.mjs",
+        "tools/verify-jcc-player-journey-acceptance.mjs",
+        "tools/verify-jcc-host-adapter-first-token.mjs",
+        "tools/verify-jcc-host-response-json-decoder.mjs",
+        "tools/verify-jcc-host-adapter-final-text-before-exit.mjs",
+        "tools/verify-jcc-host-readonly-tools.mjs",
+        "tools/verify-jcc-knowledge-delivery-semantics.mjs",
+        "tools/verify-jcc-kimi-mcp-bridge.mjs",
+        "tools/verify-jcc-kimi-mcp-session.mjs",
+        "tools/verify-jcc-kimi-mcp-installed.mjs",
+        "tools/verify-jcc-readonly-evidence-sharing.mjs",
+        "tools/verify-jcc-native-ranking-pull.mjs",
+        "tools/verify-jcc-watcher-bootstrap-lightweight.mjs",
+        "tools/verify-jcc-renderer-start-match.mjs",
+        "tools/verify-jcc-adb-connection-health.mjs",
+        "tools/verify-jcc-ui-host-failure-diagnostics.mjs",
+        "tools/verify-jcc-structured-card-backend-actions-blackbox.mjs",
+        "tools/verify-jcc-match-fact-capture.mjs",
+        "tools/verify-jcc-decision-input-ui.mjs",
+        "tools/verify-jcc-lineup-decision-quality.mjs",
+        "tools/verify-jcc-runtime-product-gate.mjs"
+      ],
+      "change_policy": "Every user interaction has at most one strategy-answer owner. Ordinary chat may update intent and provisional target context but never writes choice candidates or final selections; those are canonical only through the active structured card. Derived intent, target-plan facts, explicit equipment reports, manual match-variable confirmations, and final choice confirmations update selected context without opening sibling response tasks. The next user-owned advice or fixed strategic checkpoint absorbs still-material opening-variable and confirmed-choice context. Every augment preselection answer at every registered augment checkpoint must provide both candidate ranking and one explicit machine-valid keep/refresh action. An equipment reply may still use its one direct answer to decide slam/wait/holder from the newly recorded facts. Choice cards expose one unified advice action that reads all reliable canonical context while keeping output focused on the current choice; missing equipment cannot block it. Explicit structured-card advice retains one card-mode response owner until terminal delivery ACK; choice-window reservation, proactive expiry, punctuation-only status checks, and semantic observation cannot replace or duplicate that owner. Final confirmation is state-only, returns response_task null, and is idempotent. Candidate-bearing card submissions require the current canonical report revision and cannot overwrite a newer choice set. Only final confirmation may rebase a stale binding inside the same active match, stage, and choice kind, and only when exact slot plus candidate ref/name still matches the canonical set. Fact-only equipment writes ignore missing or stale surrounding card bindings. Renderer confirmation success follows canonical persistence; explicit advice success additionally requires its concrete response-task id. Persistent provider turns must be cancellable from queue admission through native execution without closing the owning session or sending a cancelled queued turn later. Host response timeout starts from actual provider-awaiting time, not earlier task preparation. Artifact filenames derived from response identities must be Windows-safe and collision-resistant. Provisional target intent may inform later decisions without silently becoming a durable plan. Valid provider output is delivered once, transport diagnostics never become a second answer, cancellation targets the active task, and internal validator text is not player-visible.",
+      "last_reviewed": "2026-09-11"
+    },
+    {
+      "id": "host_context_session_lifecycle",
+      "app_restart_policy": "New app launch or daemon replacement retires old Match state and work and bootstraps a fresh lobby session regardless of prior clean shutdown. Same-app renderer reload reuses ownership; provider-only recovery is limited to the same live app and daemon.",
+      "authoritative_paths": [
+        "data/runtime/jcc/host-context-lifecycle-contract.json",
+        "data/runtime/jcc/strategy-evidence-runtime-contract.json",
+        "data/runtime/jcc/host-readonly-tool-contract.json"
+      ],
+      "guidance_paths": [
+        "docs/jcc-runtime-agent-skill-and-session-design.md"
+      ],
+      "entrypoint_paths": [
+        "AGENTS.md",
+        ".codex/skills/jcc-runtime-agent/SKILL.md"
+      ],
+      "implementation_paths": [
+        "ui/electron/host-adapters.js",
+        "ui/electron/host-readonly-tool-broker.js",
+        "ui/electron/runtime-daemon.js",
+        "ui/electron/runtime-daemon-client.js",
+        "ui/electron/runtime-daemon-server.js",
+        "ui/electron/runtime-service.js",
+        "ui/electron/strategy-evidence-kernel.js",
+        "ui/electron/runtime-state-store.js"
+      ],
+      "verifier_paths": [
+        "tools/verify-jcc-host-session-lifecycle-contract.mjs",
+        "tools/verify-jcc-wiki-match-recovery.mjs",
+        "tools/verify-jcc-wiki-scope.mjs",
+        "tools/verify-jcc-knowledge-relation-index.mjs",
+        "tools/verify-jcc-knowledge-broker-integration.mjs",
+        "tools/verify-jcc-native-ranking-pull.mjs",
+        "tools/verify-jcc-host-provider-timeout-boundary.mjs",
+        "tools/verify-jcc-runtime-daemon.mjs",
+        "tools/verify-jcc-runtime-daemon-client.mjs",
+        "tools/verify-jcc-canonical-host-request-persistence.mjs",
+        "tools/verify-jcc-public-action-message-persistence.mjs",
+        "tools/verify-jcc-host-session-live-smoke.mjs",
+        "tools/verify-jcc-app-session-boundary.mjs",
+        "tools/verify-jcc-host-context-storage-budget.mjs",
+        "tools/verify-jcc-common-host-knowledge.mjs",
+        "tools/verify-jcc-strategy-evidence-runtime-contract.mjs",
+        "tools/verify-jcc-strategy-evidence-kernel.mjs",
+        "tools/verify-jcc-host-readonly-tools.mjs",
+        "tools/verify-jcc-runtime-mode-host-request-benchmark.mjs",
+        "tools/verify-jcc-match-core-profile-binding.mjs",
+        "tools/verify-jcc-runtime-product-gate.mjs"
+      ],
+      "change_policy": "Use provider-native conversations, not a JCC transcript/session replacement. Keep one live lobby provider process/session until app exit or explicit New Conversation and one live match provider process/session per Start Match. Ordinary turns reuse the owning live session and never resume it; resume/load is crash-recovery only. Provider, command, launch arguments, version, and provider-home isolation own transport identity; changing only model or reasoning applies to subsequent turns inside the same native conversation. The provider owns chat history and native context compaction. A Runtime Daemon cold start or replacement restart gets a 300000ms final abnormal-start guard because ready is published only after module loading, writer-lease acquisition, SQLite restoration, and Active Ranking reconciliation; actual readiness returns immediately, while deterministic startup errors still fail immediately. Separate Runtime-only request metadata, one complete deduplicated Agent-readable Common static capsule capped at 256 KiB, and a current-turn delta with a 1 MiB ordinary target and 2 MiB ordinary ceiling; strategic turns use a 4 MiB target and 8 MiB ceiling, while context-only manual-variable turns use a 16 KiB persistent optimization target. Reserve native-tool evidence adaptively from the evidence plan and protected candidate count. Every Host turn receives its complete Mode contract and checkpoint Action Brief and is projected from current Runtime-owned facts; prior materialized Host requests are never used as evidence input. Provider transport accepts parseable aliases and optional fields. Runtime locally normalizes equivalent fields, records soft quality diagnostics without another Provider turn, and delivers independently readable text immediately; only authority, permission, transport recovery, and cross-candidate authoritative composition are hard boundaries. Production selects pending advice requests in process, recursively sanitizes nested Host payloads before every canonical transition, persists metadata-only request references, and sends only the current resolved decision snapshot plus typed current-day evidence; it never copies full hard data, raw rankings, or complete request events through child-process stdout. Diagnostics are default-off, bounded, asynchronous, and unable to delay answer delivery. Mode selection is a bounded control-plane mutation: it does not build context, start visual sensing, or cancel an owned Host turn, and late renderer responses cannot overwrite the newest selected mode. Start Match creates a fresh canonical match identity, retires all prior match-scoped state, and must confirm the old provider and watcher process trees have stopped before publishing the replacement watcher workspace or starting replacement children; an unconfirmed stop produces a degraded retryable boundary rather than a second owner. Stop Answer interrupts only the active turn and preserves mode/transport; an accepted but unsettled cancellation keeps the same canonical task id and targetable native handle until settlement. Legacy JSON mirrors never hydrate SQLite. Stop Match preempts an unfinished match-provider bootstrap before serialized cleanup, closes only the match route, retires queued OCR and match work, and confirms both provider and watcher termination before clean completion. Match retirement preserves preferences, strategy memory, Wiki, lobby conversation, device connection, data packages, and at most 20 compact postgame summaries. A developer-only retired-version cleanup may explicitly remove every prior match summary, transient task/event/log row, stale Wiki curation run/source event, generated diagnostic, calibration capture, and compatibility match mirror only when an explicit season id resolves to a valid registered archive manifest and is neither the active nor candidate season. The DB reset writes an archive-bound receipt, and local-artifact pruning requires the matching same-season receipt. Cleanup must preserve published Wiki pages, user preferences and memory, the daily session, provider-native history, Core Profiles, rankings, source archives, plans, and dependencies. Clean Exit attempts all owned-resource cleanup even when one child fails, invalidates the active match route, and must never resume that match on the next launch.",
+      "last_reviewed": "2026-09-13"
+    },
+    {
+      "id": "runtime_user_settings_and_context_selection",
+      "authoritative_paths": [
+        "data/runtime/jcc/runtime-user-settings-and-review-contract.json",
+        "data/runtime/jcc/host-request-context-policy-contract.json",
+        "data/runtime/jcc/strategy-evidence-runtime-contract.json",
+        "data/runtime/jcc/strategy-evidence-kernel-migration-matrix.json"
+      ],
+      "guidance_paths": [
+        "docs/jcc-runtime-agent-skill-and-session-design.md",
+        "docs/jcc-runtime-product-readiness.md"
+      ],
+      "entrypoint_paths": [
+        "AGENTS.md",
+        ".codex/skills/jcc-runtime-agent/SKILL.md"
+      ],
+      "implementation_paths": [
+        "ui/electron/runtime-service.js",
+        "ui/electron/strategy-evidence-kernel.js",
+        "ui/electron/host-readonly-tool-broker.js",
+        "ui/src/App.tsx"
+      ],
+      "verifier_paths": [
+        "tools/verify-jcc-host-selected-context-contract.mjs",
+        "tools/verify-jcc-strategy-evidence-runtime-contract.mjs",
+        "tools/verify-jcc-strategy-evidence-kernel.mjs",
+        "tools/verify-jcc-host-readonly-tools.mjs",
+        "tools/verify-jcc-strategy-evidence-old-authority-absence.mjs",
+        "tools/verify-jcc-cruise-hard-data-query.mjs",
+        "tools/verify-jcc-cruise-popular-recipe-query.mjs",
+        "tools/verify-jcc-user-settings-review-runtime.mjs",
+        "tools/verify-jcc-runtime-product-gate.mjs"
+      ],
+      "change_policy": "Expose only user settings backed by real product behavior or source partitions. Default rank preference to Master and above, normalize historical aliases before Host context selection, and never invent a Challenger-only data partition. Keep the default-off fault-diagnostic switch separate from strategy semantics; when enabled it retains only bounded seven-day evidence and cannot block Runtime actions or Host answer delivery. Request-scoped evidence capabilities are typed UI metadata, never natural-language inference. The Cruise active_core_profile_only action bypasses direct and derived ranking/Wiki retrieval, scoring, cached strategy packets, and rank-derived proactive obligations while preserving Common, the captured Core Profile, reliable current facts, explicit user input, and deterministic calculation results. The separate popular_recipe_catalog_only action reads only the exact recipe generation captured at Start Match and strips live state, national strength, winning recipes, hero-ranking evidence, Wiki, Core theorycraft, and Cruise scoring; it must disclose that returned templates have no strength authority.",
+      "last_reviewed": "2026-08-23"
+    },
+    {
+      "id": "proactive_cruise_decisioning",
+      "authoritative_paths": [
+        "data/runtime/jcc/runtime-ui-mode-contract.json",
+        "data/runtime/jcc/cruise-strategy-semantics-contract.json",
+        "data/runtime/jcc/cruise-strategy-scorer-contract.json",
+        "data/runtime/jcc/common-choice-runtime-contract.json",
+        "data/runtime/jcc/knowledge-profile-contract.json",
+        "data/game-knowledge/jcc/common/complete-game-doctrine.json",
+        "data/game-knowledge/jcc/common/cruise-decision-framework.json",
+        "data/game-knowledge/jcc/common/strategy-evidence-framework.json",
+        "data/runtime/jcc/strategy-evidence-runtime-contract.json"
+      ],
+      "guidance_paths": [
+        "ui/PRODUCT.md",
+        "docs/jcc-runtime-product-readiness.md"
+      ],
+      "entrypoint_paths": [
+        "AGENTS.md",
+        ".codex/skills/jcc-runtime-agent/SKILL.md"
+      ],
+      "implementation_paths": [
+        "tools/score-jcc-cruise-strategy.mjs",
+        "tools/build-jcc-lineup-lifecycle-context.mjs",
+        "tools/build-jcc-leveling-economy-context.mjs",
+        "tools/build-jcc-combat-cap-estimator-context.mjs",
+        "tools/run-jcc-cruise-runtime-pipeline.mjs",
+        "ui/electron/cruise-decision-orchestrator.js",
+        "ui/electron/cruise-strategic-obligation-queue.js",
+        "ui/electron/strategy-evidence-kernel.js",
+        "ui/electron/runtime-service.js",
+        "ui/src/App.tsx",
+        "ui/src/runtimeBridge.ts",
+        "ui/src/styles.css"
+      ],
+      "verifier_paths": [
+        "tools/verify-jcc-cruise-trigger-coverage.mjs",
+        "tools/verify-jcc-cruise-decision-orchestrator.mjs",
+        "tools/verify-jcc-augment-profile-resolution.mjs",
+        "tools/verify-jcc-strategy-evidence-kernel.mjs",
+        "tools/verify-jcc-runtime-event-driven-observe.mjs",
+        "tools/verify-jcc-runtime-event-request-ownership.mjs",
+        "tools/verify-jcc-proactive-coach-decision-delta.mjs",
+        "tools/verify-jcc-proactive-coach-multiround.mjs",
+        "tools/verify-jcc-proactive-lineup-convergence.mjs",
+        "tools/verify-jcc-lineup-decision-quality.mjs",
+        "tools/verify-jcc-lineup-lifecycle-harness.mjs",
+        "tools/verify-jcc-combat-cap-estimator-context.mjs",
+        "tools/verify-jcc-economy-management-context.mjs",
+        "tools/verify-jcc-runtime-event-pipeline-preemption.mjs",
+        "tools/verify-jcc-cruise-profile-binding.mjs",
+        "tools/verify-jcc-decision-input-ui.mjs",
+        "tools/verify-jcc-choice-composer-prefill-ui.mjs",
+        "tools/verify-jcc-final-lineup-confirmation-ui.mjs",
+        "tools/verify-jcc-cruise-popular-recipe-query.mjs",
+        "tools/verify-jcc-runtime-product-gate.mjs"
+      ],
+      "change_policy": "Continuously commit trusted facts into canonical state and immutable latest decision snapshots without giving raw changes speaking rights. Only the registered fixed strategic checkpoints or an explicit user/card action may open the Host answer lane; ordinary economy, shop, board, bench, HP, equipment, emergency, pivot, and delivery-recovery events are fact-only evidence and cannot create competing automatic answers. The fixed strategy blocks are lineup direction and commitment, formation readiness and execution, and cap/floor endgame. The 2-2 checkpoint owns the one complete stage-two exploration contract; 2-5 is recovery-only and remains silent after a complete 2-2 delivery; 2-7 prepares the 3-2 choice. Later checkpoints absorb unresolved earlier obligations from the same block, recompute from the newest facts, and preserve every required field rather than replaying old wording. Direct user intent and structured choice confirmations may temporarily own the visible lane but cannot close an undelivered strategic obligation. Missing stage blocks new obligations but does not erase an existing one. Complete Master+ candidate identities and rosters survive scoring, compaction, retry, and delivery; the Host compares complete candidates and never builds a direction by joining a Ranking trait label to unrelated board units. The Cruise UI action `确认最终阵容：` explicitly requests one complete final target and preserves the user's following natural-language identity. That target may resolve to an existing Ranking candidate, a lineup established through chat, or a user-custom lineup; non-candidate targets require an explicit target source and identity, and no path may substitute the current partial board or silently merge candidates. At 4-3 one complete standard, winning, popular, or user-custom target identity is locked, and later formation or cap advice cannot silently merge another lineup's members, equipment, or cap path. Board and bench remain low-weight realization evidence in stage two; current Core, Ranking strength, confirmed augments, and equipment retain their registered precedence. Every successful HUD run emits compact per-field observed/missing audit evidence so unreliable HP or board capture becomes conditional evidence rather than fabricated certainty.",
+      "current_decision_addendum": "A direct user or explicit structured-card answer remains the one visible owner and absorbs any pending fixed-checkpoint obligation by recomputing it from the latest verifiable stage. Successful delivery closes only the exact absorbed obligation; failure, cancellation, timeout, invalid delivery, or Renderer ACK loss keeps it retryable. The 2-2 complete-candidate contract must be delivered once even when first completed at 2-5 or absorbed by a later same-block checkpoint. At 3-3 candidates narrow but retain complete identity; at 3-5 and 3-7 execution advice references those identities; at 3-7 it also reviews four-stage equipment continuity and transition replacement order; at 4-3 final confirmation repeats the complete chosen roster; at 4-5 formation readiness is rechecked; stages 5 and 6 discuss floor, cap, levels, quality, replacements, positioning, and equipment continuity only inside the locked target. Lineup fit uses the registered exact stage profiles and treats explicit target role as a constraint rather than a hidden sixth weight. Typed indexes annotate the eligible Master+ pool without replacing the five-component score. Cruise and direct strategy questions share one Runtime-owned integrated decision snapshot expressed through the Common vocabulary; supporting evaluators cannot own sibling answers.",
+      "last_reviewed": "2026-09-02"
+    },
+    {
+      "id": "live_rankings_resilience",
+      "authoritative_paths": [
+        "data/runtime/jcc/runtime-season-module-contract.json",
+        "data/runtime/jcc/knowledge-profile-contract.json",
+        "data/live-rankings/jcc/runtime-agent-refresh-contract.json",
+        "data/live-rankings/jcc/runtime-strategy-signal-contract.json"
+      ],
+      "guidance_paths": [
+        "docs/requirements/jcc-season-version-governance-runbook.md",
+        "docs/jcc-runtime-product-readiness.md"
+      ],
+      "entrypoint_paths": [
+        "AGENTS.md",
+        ".codex/skills/jcc-runtime-agent/SKILL.md"
+      ],
+      "implementation_paths": [
+        "tools/sync-jcc-live-rankings.mjs",
+        "tools/update-jcc-live-rankings.mjs",
+        "tools/ensure-jcc-live-rankings.mjs",
+        "tools/jcc_ranking_target.mjs",
+        "tools/jcc_live_rankings_coverage_policy.mjs",
+        "tools/jcc_live_rankings_catalog_compatibility.mjs",
+        "tools/jcc_live_rankings_promotion.mjs",
+        "tools/jcc_live_rankings_generation_store.mjs",
+        "tools/jcc_live_rankings_recipe_sources.mjs",
+        "tools/jcc_live_rankings_recipe_store.mjs",
+        "tools/jcc_live_rankings_strategy_index.mjs",
+        "tools/jcc_ranking_recipe_storage.mjs",
+        "tools/jcc_official_source_dictionary.mjs",
+        "tools/jcc_canonical_lineup_identity.mjs",
+        "tools/jcc_atomic_variant_comparator.mjs",
+        "tools/jcc_mature_recipe_variant_packet.mjs",
+        "tools/jcc_ranking_recipe_freshness.mjs",
+        "tools/jcc_live_rankings_history.mjs",
+        "tools/jcc_ranking_strength_evaluator.mjs",
+        "tools/jcc_ranking_maintenance.mjs",
+        "tools/jcc_ranking_maintenance_preparation.mjs",
+        "tools/finalize-jcc-ranking-maintenance.mjs",
+        "tools/prune-jcc-live-ranking-history.mjs",
+        "ui/electron/ranking-query-retrieval.js",
+        "ui/electron/ranking-direction-family.js",
+        "ui/electron/ranking-status-view-model.js",
+        "ui/electron/ranking-status-view-model.d.ts",
+        "ui/electron/runtime-service.js"
+      ],
+      "verifier_paths": [
+        "tools/verify-jcc-tencent-primary-ranking-source.mjs",
+        "tools/verify-jcc-live-rankings-sync-contract.mjs",
+        "tools/verify-jcc-live-rankings-promotion.mjs",
+        "tools/verify-jcc-live-ranking-generation-store.mjs",
+        "tools/verify-jcc-rankings-status-runtime-contract.mjs",
+        "tools/verify-jcc-ranking-status-view-model.mjs",
+        "tools/verify-jcc-target-aware-ranking-retrieval.mjs",
+        "tools/verify-jcc-lineup-decision-quality.mjs",
+        "tools/verify-jcc-live-rankings-history.mjs",
+        "tools/verify-jcc-ranking-strength-evaluator.mjs",
+        "tools/verify-jcc-ranking-maintenance.mjs",
+        "tools/verify-jcc-ranking-maintenance-runtime-session.mjs",
+        "tools/verify-jcc-ranking-maintenance-publication.mjs",
+        "tools/verify-jcc-live-ranking-strategy-index.mjs",
+        "tools/verify-jcc-ranking-recipe-storage-normalization.mjs",
+        "tools/verify-jcc-official-source-dictionary.mjs",
+        "tools/verify-jcc-canonical-lineup-identity.mjs",
+        "tools/verify-jcc-mature-recipe-variant-packet.mjs",
+        "tools/verify-jcc-ranking-recipe-freshness.mjs",
+        "tools/verify-jcc-ranking-maintenance-preparation.mjs",
+        "tools/verify-jcc-strategic-ranking-candidate-integrity.mjs",
+        "tools/verify-jcc-live-ranking-recipe-sources.mjs",
+        "tools/verify-jcc-live-ranking-active-closure.mjs",
+        "tools/verify-jcc-cruise-popular-recipe-query.mjs",
+        "tools/verify-jcc-live-ranking-strategy-runtime.mjs",
+        "tools/verify-jcc-ranking-query-intent.mjs",
+        "tools/verify-jcc-ranking-query-retrieval.mjs",
+        "tools/verify-jcc-ranking-query-pagination.mjs",
+        "tools/verify-jcc-ranking-query-runtime-integration.mjs",
+        "tools/verify-jcc-ranking-direction-family.mjs",
+        "tools/verify-jcc-runtime-product-gate.mjs"
+      ],
+      "change_policy": "Build and fully verify the Master+ national ranking partition plus the season-neutral typed lineup strategy index in an isolated candidate. Resolve season, patch, mode, hard-data catalogs, fingerprints, Core Profile id, and ranking source adapters from one explicit compiled profile. Master+ main_trait_strength is the only current strength-statistics authority and matching trait_group atomic rosters are the ranked lineup authority. Tencent raw family ids are opaque source-row identities for fetch association, history, deduplication, and audit only; remove every production raw-id-to-trait binding authority. Player-visible and Agent trait semantics come from source text when available plus current-Core roster calculation and explicit emblem or special contribution state. Each row keeps one standard atomic roster and deterministic variants; compare population, added, removed and replaced units, trait state, samples, top-four, top-one, and deltas, but expose them as descriptive lineup-internal evidence rather than universal unit rules. Winning recipes are primary structural enrichment and allowlisted official popular recipes are secondary; neither may create, replace, merge, or statistically rescore the Master+ standard roster. Store immutable recipe facts once per tier and content-address relation-specific evidence; Runtime materializes only requested candidates. Every publication must prove that all references resolve and that full materialization matches the pre-normalized semantic hash. Record Ranking, winning-recipe, and popular-recipe dates independently. Same-day sources are fresh; 1-2-day lag remains normal structural evidence; 3-7-day lag requires exact or high-confidence compatible matching; older sources are diagnostic only; incompatible Core, season, or patch is forbidden. Strength metrics always retain the Ranking date. History is partitioned by complete immutable identity and supplies bounded 1-day, 3-day, and 7-day discovery trends. Trend cannot rewrite official current-day score, order, membership, or metrics, but a confidence-bounded rising-discovery signal may adjust recommendation priority after current strength, sample reliability, heat, and formation burden. Daily update prepares deterministic data, runs semantic maintenance for changed or missing annotations with a one-hour end-to-end default and bounded three-minute Host calls, validates all batch hashes, closes Ranking and recipe pointers atomically, and publishes only when Runtime mirrors resolve the same identities. After a successful publication, automatically prune generated stores while retaining two finalized Previous versions by default; a prepared generation without completed semantic maintenance does not consume a Previous slot, and cleanup failure is diagnostic rather than a rollback of the committed Active closure. An incomplete run preserves the previous Active closure and exact-input checkpoints; Host failure cannot silently mark maintenance ready. Start Match and Lobby resolve only the active closure at a turn boundary. Typed intent, full-pool evaluation, role constraints, five-component stage scoring, pagination, complete candidate identities, atomic variants, and target relevance remain authoritative; budget compaction removes diagnostics before complete roster, identity, variant, recipe-freshness, or lifecycle evidence.",
+      "current_decision_addendum": "Runtime presentation groups close atomic Master+ variants by current-Core primary trait, canonical roster overlap, and main carry without merging independent strength or identities. Generic lobby directions prefer five distinct S/A representatives with at most two per family; explicit S/A/B/C/D, candidate, or variant requests retain exact retrieval. Match working-set diversity remains downstream of full-pool eligibility and the unchanged registered five-component stage score. At 3-3 an ordinary confirmed augment, item, or owned core unit may justify a new exact direction, subject to durable target authority.",
+      "last_reviewed": "2026-09-23"
+    },
+    {
+      "id": "windows_distribution_and_shortcuts",
+      "authoritative_paths": [
+        "data/runtime/jcc/windows-distribution-contract.json"
+      ],
+      "guidance_paths": [
+        "docs/requirements/jcc-runtime-windows-distribution.md",
+        "docs/jcc-runtime-product-readiness.md",
+        "ui/PRODUCT.md"
+      ],
+      "entrypoint_paths": [
+        "AGENTS.md",
+        ".codex/skills/jcc-runtime-agent/SKILL.md"
+      ],
+      "implementation_paths": [
+        "ui/electron/main.js",
+        "ui/electron-builder.yml",
+        "tools/launch-jcc-runtime-electron.mjs",
+        "tools/launch-jcc-runtime-hidden.vbs",
+        "tools/install-jcc-runtime-desktop-shortcut.ps1",
+        "tools/build-jcc-runtime-windows-icon.ps1"
+      ],
+      "verifier_paths": [
+        "tools/verify-jcc-windows-desktop-shortcut.mjs",
+        "tools/verify-jcc-product-readiness.mjs",
+        "tools/verify-jcc-runtime-product-gate.mjs"
+      ],
+      "change_policy": "Keep the developer shortcut and player installer shortcut distinct. Repository testing may use the hidden Node launcher; public installers must create desktop and Start Menu shortcuts that target only the installed executable, require a visible window before declaring launch success, recover a hidden owning BrowserWindow through a user-scoped local activation channel with native single-instance activation as the bounded fallback, preserve single-instance focus, and pass a clean-machine install/uninstall smoke test.",
+      "last_reviewed": "2026-08-11"
+    }
+  ],
+  "documents": [
+    {
+      "path": "docs/superpowers/plans/2026-09-16-runtime-review-remediation.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-16",
+      "last_reviewed": "2026-09-16",
+      "owner": "jcc-runtime",
+      "notes": "Approved implementation and verification plan for thirteen confirmed lifecycle, evidence, and equipment/UI review findings. The registered machine contracts remain production authority."
+    },
+    {
+      "path": "docs/compatibility-authority-audit.md",
+      "doc_type": "generated_snapshot",
+      "status": "generated",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-06",
+      "last_reviewed": "2026-09-12",
+      "owner": "jcc-runtime",
+      "notes": "Supporting compatibility and migration audit evidence only; not a current behavior contract or an independent production authority."
+    },
+    {
+      "path": "data/runtime/jcc/windows-distribution-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-runtime-windows-distribution-contract-v1",
+      "last_reviewed": "2026-08-11",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for the Windows developer shortcut, visible-window launch success, hidden-window local activation and native fallback, installed player shortcut, icon assets, and packaged smoke-test boundary."
+    },
+    {
+      "path": "docs/release/WINDOWS-RELEASE.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-27",
+      "last_reviewed": "2026-09-27",
+      "owner": "jcc-runtime",
+      "notes": "Development-owned source and dependency synchronization, fresh renderer build and installed parity runbook."
+    },
+    {
+      "path": "docs/release/2026-09-27-installation-parity-review.md",
+      "doc_type": "generated_snapshot",
+      "status": "generated",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-27",
+      "last_reviewed": "2026-09-27",
+      "owner": "jcc-runtime",
+      "notes": "Installed-state evidence, fixes and adversarial review; not a separate behavior authority."
+    },
+    {
+      "path": "docs/requirements/requirements-registry.json",
+      "doc_type": "registry",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-requirements-authority-registry-v2",
+      "last_reviewed": "2026-07-31",
+      "owner": "jcc-runtime",
+      "notes": "Machine source of truth for requirement authority classification, including the Windows distribution and shortcut authority domain."
+    },
+    {
+      "path": "docs/requirements/README.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "authoritative",
+      "contract_version": "2026-07-21",
+      "last_reviewed": "2026-07-21",
+      "owner": "jcc-runtime",
+      "notes": "Defines the same-change workflow for product decisions, registry updates, supersession, and verification."
+    },
+    {
+      "path": "docs/requirements/CHANGELOG.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-07-21",
+      "last_reviewed": "2026-07-31",
+      "owner": "jcc-runtime",
+      "notes": "Append-only decision ledger including the Windows desktop-entry and installer-shortcut decision."
+    },
+    {
+      "path": "docs/requirements/jcc-season-version-governance-runbook.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "authoritative",
+      "contract_version": "2026-07-28",
+      "last_reviewed": "2026-08-21",
+      "owner": "jcc-runtime",
+      "notes": "Operator runbook for major-season versus minor-patch promotion, descriptor-owned mechanics, immutable source publication, and primary-versus-supplemental catalog authority."
+    },
+    {
+      "path": "docs/requirements/jcc-runtime-windows-distribution.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "authoritative",
+      "contract_version": "2026-07-31",
+      "last_reviewed": "2026-07-31",
+      "owner": "jcc-runtime",
+      "notes": "Windows desktop-entry and installer acceptance requirements; machine authority is windows-distribution-contract.json."
+    },
+    {
+      "path": "AGENTS.md",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "authoritative",
+      "entrypoint_only": true,
+      "contract_version": "2026-08-24",
+      "last_reviewed": "2026-09-12",
+      "owner": "jcc-runtime",
+      "notes": "Production Host isolation boundary. It accepts only Runtime-selected INPUT_JSON context and must not receive repository requirement-governance instructions; engineering authoring authority is discovered through the repo-local JCC Runtime skill and registry."
+    },
+    {
+      "path": ".codex/skills/jcc-runtime-agent/SKILL.md",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "authoritative",
+      "entrypoint_only": true,
+      "contract_version": "2026-07-21",
+      "last_reviewed": "2026-09-12",
+      "owner": "jcc-runtime",
+      "notes": "Engineering authoring contract distilled into production selected context; documents current-match user-report choice intake, fact-only equipment confirmation, decision-scoped proactive delivery, deterministic lineup renderer output, and is not a host-installed runtime dependency."
+    },
+    {
+      "path": "ui/PRODUCT.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "authoritative",
+      "contract_version": "2026-07-28",
+      "last_reviewed": "2026-08-10",
+      "owner": "jcc-runtime",
+      "notes": "Current player-facing product scope reflecting structured choice cards, hydration-gated fact-only equipment confirmation versus whole-equipment advice, adaptive lineup-direction coaching without a false target, failed-card retry in place, decision-scoped proactive delivery, lineup strict pinned cards, and version-layered season modes."
+    },
+    {
+      "path": "ui/IA.md",
+      "doc_type": "design",
+      "status": "current",
+      "authority_tier": "authoritative",
+      "contract_version": "2026-07-28",
+      "last_reviewed": "2026-08-10",
+      "owner": "jcc-runtime",
+      "notes": "Current information architecture reflecting source-kind-isolated choice cards, hydration-gated equipment confirmation separate from advice, adaptive lineup-direction entry, in-place failed-card retry, decision-scoped proactive delivery, lineup pinned-result shape, and descriptor-owned season modes."
+    },
+    {
+      "path": "ui/OPEN_DESIGN.md",
+      "doc_type": "design",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-07-20",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "notes": "Supporting design-system and implementation guidance."
+    },
+    {
+      "path": "ui/README.md",
+      "doc_type": "design",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-07-20",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "notes": "UI operator and development entrypoint."
+    },
+    {
+      "path": "docs/runtime-ocr-inventory.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "authoritative",
+      "contract_version": "2026-07-21",
+      "last_reviewed": "2026-08-12",
+      "owner": "jcc-runtime",
+      "notes": "Current OCR, ROI, MuMu source, worker, and fallback inventory. Canonical choice truth is current-match user confirmation; augment mode alone may use explicit Quick OCR to fill a complete exact-stage/tier renderer draft without canonical writes, Host work, or auto-send. Item and descriptor-declared season choices remain user-report only."
+    },
+    {
+      "path": "docs/runtime-ocr-redesign.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-08-24",
+      "last_reviewed": "2026-08-24",
+      "owner": "jcc-runtime",
+      "notes": "Supporting layered ROI crop-task, resident OCR, parser, and aggregator design for HUD, owned-augment recovery, and the augment-only non-authoritative renderer-draft OCR convenience; canonical choice candidate intake remains user-confirmed."
+    },
+    {
+      "path": "docs/repo-file-classification.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-07-20",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "notes": "Classifies product, generated, research, paused, and removable repository surfaces."
+    },
+    {
+      "path": "data/runtime/jcc/runtime-agent-wiki/README.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-07-20",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "notes": "Runtime strategy wiki authority and precedence overview."
+    },
+    {
+      "path": "data/runtime/jcc/runtime-agent-wiki/official/quickstart.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-07-20",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "notes": "Current MuMu desktop operator quickstart."
+    },
+    {
+      "path": "data/runtime/jcc/runtime-agent-wiki/user-memory/README.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-07-20",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "notes": "Supporting runtime user-memory storage and curation guidance."
+    },
+    {
+      "path": "data/runtime/jcc/calibration-samples/README.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-07-20",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "notes": "Supporting calibration evidence guidance; it does not override runtime sensing contracts."
+    },
+    {
+      "path": "data/core-patches/jcc/jcc-mode17-s18-17.17.8/README.md",
+      "doc_type": "runbook",
+      "status": "historical",
+      "authority_tier": "historical",
+      "contract_version": "2026-08-02",
+      "last_reviewed": "2026-08-02",
+      "owner": "jcc-runtime",
+      "notes": "Archived S17.8 hard-data package documentation; it is historical evidence only and cannot define current production behavior."
+    },
+    {
+      "path": "data/game-knowledge/jcc/seasons/s17/archive-sources/legacy-runtime-rules/common/base-game-rules.json",
+      "doc_type": "historical_spec",
+      "status": "historical",
+      "authority_tier": "historical",
+      "contract_version": "jcc-base-game-rules-v1",
+      "last_reviewed": "2026-08-21",
+      "owner": "jcc-runtime",
+      "superseded_by": "data/runtime/jcc/knowledge-profile-contract.json",
+      "notes": "Frozen S17 migration lineage only. Common doctrine now lives under data/game-knowledge/jcc/common, product choice behavior lives in common-choice-runtime-contract.json, and production consumes only the promoted immutable Core Profile."
+    },
+    {
+      "path": "data/runtime/jcc/runtime-ui-mode-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-runtime-ui-mode-contract-v1",
+      "last_reviewed": "2026-09-16",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for current UI modes, including editable explicit-send text presets across modes, structured user card reports, explicit non-authoritative augment OCR drafts, separate no-model equipment confirmation and whole-equipment advice, the final Cruise-only 查热门阵容 template query, adaptive lineup/augment-fit coaching, decision-scoped proactive freshness, exact-stage choice discovery, catalog-driven multi-select augment category filtering with OR semantics, minimal lineup_handoff ownership with Runtime card materialization, and descriptor-owned season modes."
+    },
+    {
+      "path": "data/runtime/jcc/cruise-strategy-semantics-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-cruise-strategy-semantics-v1",
+      "last_reviewed": "2026-08-24",
+      "owner": "jcc-runtime",
+      "notes": "Season-neutral tactical vocabulary and integrated Cruise/direct-question decision semantics. It binds one current-Match snapshot, existing domain-evaluator evidence, canonical action normalization, deterministic conflict suppression, and one bounded Host evidence packet without becoming a patch-strength source or global scorer."
+    },
+    {
+      "path": "data/runtime/jcc/cruise-strategy-scorer-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-cruise-strategy-scorer-contract-v1",
+      "last_reviewed": "2026-09-13",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for deterministic proactive decision candidates, exact stage-adaptive lineup-fit weights, season-neutral candidate readiness, and scorer evidence loaded from the active Core Profile's flat typed and route lookup indexes; Host output remains the visible coach voice."
+    },
+    {
+      "path": "data/runtime/jcc/runtime-mode-sensing-map.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-runtime-mode-sensing-map-v1",
+      "last_reviewed": "2026-08-12",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for mode-specific sensing, field-level equipment source priority, current-match user reports as candidate truth, the augment-only explicit renderer draft OCR exception, HUD/owned-augment ROI OCR, current-match user confirmation, narrowed item mode, and fallback-only visual/icon evidence."
+    },
+    {
+      "path": "data/runtime/jcc/itemization-decision-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-itemization-decision-contract-v1",
+      "last_reviewed": "2026-08-17",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for equipment decision context, source precedence, slam-or-wait evidence, exact current-patch craft recipe authority, and user-confirmed equipment fallback."
+    },
+    {
+      "path": "data/runtime/jcc/match-fact-capture-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-match-fact-capture-contract-v1",
+      "last_reviewed": "2026-08-17",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for the explicit Cruise Quick Record request kind, Host proposal versus Runtime validation, sparse current-match fact writes, ordinary-chat non-authority, and season-neutral alias review."
+    },
+    {
+      "path": "data/runtime/jcc/host-coach-signature-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-host-coach-signature-contract-v1",
+      "last_reviewed": "2026-08-17",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for one-answer interaction ownership, state-only card final confirmation, explicit card advice ownership, no-model equipment confirmation without choice binding, Windows-safe collision-resistant response artifacts, decision-scoped proactive response validity, opening-economy canonical delivery, atomic canonical lineup variants, exact craftability evidence, minimal mechanical handoffs with text-first delivery, signed host request ownership, and final Host response identity."
+    },
+    {
+      "path": "data/runtime/jcc/host-context-lifecycle-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-host-context-lifecycle-contract-v2",
+      "last_reviewed": "2026-09-16",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for provider-native persistent lobby/match conversations, explicit lobby New Conversation, provider-owned history/context compaction, crash-only resume, per-turn dynamic facts without transcript replay, an approximately 50K-token one-time static knowledge map with a 256KB serialized ceiling per provider-session fingerprint, Master+-only current-day Meta Map and typed per-turn evidence retrieval regardless of user rank preference, ordinary and no-big-data current-Core exact-detail retrieval, bounded open-lineup theorycraft and transitions, bounded daily-route ranking query cursors cleared by New Conversation, complete-pool match reranking on material state changes, same-session model/reasoning updates, SQLite-owned preferences/strategy memory/Wiki injection, strict Start/Stop match-scoped state retirement with confirmed provider/watcher termination, startup/Start/Stop/shutdown SQLite retention, canonical Wiki curation run identity and transient-work rotation, queued OCR and renderer-draft fencing, preservation of the lobby and at most 20 compact postgame summaries, default-off bounded asynchronous fault diagnostics retained for at most seven days, retirement of permanent telemetry intake and proxy evidence acceptance, bounded all-resource shutdown cleanup, and common/season/patch layer separation."
+    },
+    {
+      "path": "data/runtime/jcc/runtime-user-settings-and-review-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-runtime-user-settings-and-review-contract-v1",
+      "last_reviewed": "2026-08-16",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for durable user preferences and review settings. User rank changes coaching style and risk assumptions, while every ranking query uses the Master+ national partition; historical challenger values migrate to master."
+    },
+    {
+      "path": "data/runtime/jcc/host-request-context-policy-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-runtime-host-context-policy-contract-v1",
+      "last_reviewed": "2026-08-24",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for selecting user preferences, the Master+-only current-day ranking partition, season catalog, Wiki, deterministic results, and other bounded evidence before provider-session bootstrap and per-turn Host requests. Ordinary strategy and explicit no-big-data requests share current-Core typed entity, lineup, transition, item, and augment retrieval; multi-domain requests compose their evidence and delegated open targets use bounded deterministic selection. Optional season-mechanic inputs, defaults, and missing-value disclosures come from the captured season descriptor; Common Host policy never names a season-specific mechanic. Every user rank preference maps to Master+ ranking evidence; rank changes coaching style and risk assumptions only."
+    },
+    {
+      "path": "data/runtime/jcc/host-coach-instruction-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-host-coach-instruction-contract-v1",
+      "last_reviewed": "2026-09-17",
+      "owner": "jcc-runtime",
+      "notes": "Provider-neutral runtime-invariant host instruction authority, including validated typed lineup intent, executable current-Core entity and multi-domain decision evidence, delegated open-core selection, complete Master+ search-pool and non-whitelist Meta Map semantics, explicit partial-match downgrade, display-only pagination, national-strength visibility limits, target-authority handling, atomic canonical lineup variants, exact hard-data craftability, actionable conditional planning, confirmed-choice follow-up coverage, and target-aware HP-pressure coaching. It must not contain season mechanics, patch ids, or hardcoded choice stages."
+    },
+    {
+      "path": "data/runtime/jcc/runtime-season-module-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-runtime-season-module-contract-v1",
+      "last_reviewed": "2026-08-21",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for runtime/source identity mapping lineage. Production identity comes only from the valid promoted Core Profile runtime_identity; the embedded active_season tuple is compatibility metadata and is not a Runtime selector."
+    },
+    {
+      "path": "data/runtime/jcc/knowledge-profile-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-knowledge-profile-contract-v1",
+      "last_reviewed": "2026-08-24",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for season-neutral authored knowledge, patch Source Adapters, explicit primary-versus-supplemental catalog authority, the four-owner controlled semantic feature layer, shared immutable season-companion decision assets with reference-only Core metadata and on-demand Runtime retrieval, bounded typed current-Core entity and multi-domain strategy evidence, standard-mechanic inheritance, immutable Core Profiles, separately refreshable immutable Master+ Ranking Overlays, request-captured Knowledge Snapshots, typed-first retrieval, bounded MiniSearch semantic fallback, verified atomic publication, and retirement gates."
+    },
+    {
+      "path": "data/runtime/jcc/harness-entrypoint-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-harness-entrypoint-contract-v1",
+      "last_reviewed": "2026-08-24",
+      "owner": "jcc-runtime",
+      "notes": "Machine-readable cross-Harness module map, explicit major-season replacement checklist, version-pipeline discovery surface, verifier profiles, semantic rebuild inventory, descriptor-driven UI boundary, and retired-surface inventory. It routes maintainers to owning contracts and never overrides their product behavior."
+    },
+    {
+      "path": "data/runtime/jcc/common-choice-runtime-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-runtime-common-choice-contract-v1",
+      "last_reviewed": "2026-08-19",
+      "owner": "jcc-runtime",
+      "notes": "Season-neutral product choice lifecycle and structured-card authority. Game doctrine and season mechanics are intentionally excluded and are supplied through the promoted Core Profile."
+    },
+    {
+      "path": "data/game-knowledge/jcc/common/complete-game-doctrine.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-game-knowledge-common-document-v1",
+      "last_reviewed": "2026-08-19",
+      "owner": "jcc-runtime",
+      "notes": "Season-neutral complete coaching doctrine for economy, itemization, lineup lifecycle, convergence, board readiness, and conditional reasoning. It is compiled into the immutable Core Profile and remains a soft prior that current verified match evidence may override."
+    },
+    {
+      "path": "data/game-knowledge/jcc/common/cruise-decision-framework.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-game-knowledge-common-document-v1",
+      "last_reviewed": "2026-08-24",
+      "owner": "jcc-runtime",
+      "notes": "Season-neutral integrated decision protocol for one Match snapshot, active-effect resolution, existing domain evaluators, canonical actions, deterministic conflicts, bounded evidence, preserved Common doctrine, and one Host-owned answer. It is compiled into the immutable Core Profile and never creates a global or sixth lineup score."
+    },
+    {
+      "path": "data/live-rankings/jcc/runtime-agent-refresh-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-live-rankings-runtime-refresh",
+      "last_reviewed": "2026-08-16",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for deterministic Master+-only ranking refresh, audited current-day promotion, compact diagnostic history, and the prohibition on lower-tier, all-tier, or historical trend evidence in active-match retrieval, ordering, Host context, or Coach decisions."
+    },
+    {
+      "path": "data/live-rankings/jcc/runtime-strategy-signal-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-live-rankings-runtime-strategy-signal-v1",
+      "last_reviewed": "2026-08-23",
+      "owner": "jcc-runtime",
+      "notes": "Machine authority for audited Master+-only ranking promotion, offline lineup strategy and closed semantic-feature compilation, published-transition priority with bounded current-Match adaptation, compact history retention, validated natural-language-to-typed query intent, complete-index atomic variant retrieval, explicit partial downgrade, strict-budget idempotent pagination cursors, runtime evidence boundaries, exact stage-adaptive fit profiles, universal candidate indexing, and route-specific ranking prior use."
+    },
+    {
+      "path": "docs/jcc-runtime-live-state-source-decision.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "authoritative",
+      "contract_version": "2026-07-23",
+      "last_reviewed": "2026-07-27",
+      "owner": "jcc-runtime",
+      "notes": "Current source priority for daemon/SQLite state, MuMu GI, current-match user-confirmed equipment, current-match user-reported choice candidates, HUD/owned-augment RapidOCR ROI, host multimodal fallback outside active choice intake, and opponent-boundary rules."
+    },
+    {
+      "path": "docs/jcc-runtime-product-readiness.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "authoritative",
+      "contract_version": "2026-07-20",
+      "last_reviewed": "2026-08-21",
+      "owner": "jcc-runtime",
+      "notes": "Operator-facing release gate and product readiness contract."
+    },
+    {
+      "path": "data/game-knowledge/jcc/common/strategy-evidence-framework.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-common-strategy-evidence-framework-v1",
+      "last_reviewed": "2026-08-24",
+      "owner": "jcc-runtime",
+      "notes": "Season-neutral evidence routes, facets, source classes, coverage states, and controlled extension policy shared by direct questions, structured cards, and proactive Cruise."
+    },
+    {
+      "path": "data/runtime/jcc/strategy-evidence-runtime-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-strategy-evidence-runtime-contract-v1",
+      "last_reviewed": "2026-09-16",
+      "owner": "jcc-runtime",
+      "notes": "Runtime authority for immutable per-turn evidence plans, coverage receipts, source-policy enforcement, payload budgets, and one-answer ownership."
+    },
+    {
+      "path": "data/runtime/jcc/host-readonly-tool-contract.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-host-readonly-tools-v7",
+      "last_reviewed": "2026-09-17",
+      "owner": "jcc-runtime",
+      "notes": "Provider-neutral read-only strategy tool contract with Codex dynamic tools and verified Kimi MCP sessions; unverified sessions explicitly fall back to prefetch. Immutable snapshot binding, bounded transport budgets, recoverable query pages and honest current-turn delivery state remain shared."
+    },
+    {
+      "path": "data/runtime/jcc/strategy-evidence-kernel-migration-matrix.json",
+      "doc_type": "current_contract",
+      "status": "current",
+      "authority_tier": "source_of_truth",
+      "contract_version": "jcc-strategy-evidence-kernel-migration-matrix-v1",
+      "last_reviewed": "2026-08-24",
+      "owner": "jcc-runtime",
+      "notes": "Final migration coverage for direct chat, no-big-data, choice cards, lineup cards, and proactive Cruise, plus retained component roles and retired-authority guards."
+    },
+    {
+      "path": "docs/jcc-runtime-agent-skill-and-session-design.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-07-20",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "notes": "Supporting host skill/session design; production host calls still receive selected context rather than relying on installed skills."
+    },
+    {
+      "path": "ui/DESIGN.md",
+      "doc_type": "design",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-07-20",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "notes": "UI design guidance; mode semantics defer to data/runtime/jcc/runtime-ui-mode-contract.json."
+    },
+    {
+      "path": "data/runtime/jcc/runtime-agent-wiki/official/mumu-desktop-runtime.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "authoritative",
+      "contract_version": "2026-07-20",
+      "last_reviewed": "2026-07-27",
+      "owner": "jcc-runtime",
+      "notes": "Current MuMu desktop runtime runbook and source-boundary guidance, including user-report choice intake, proactive decision agenda, and deterministic lineup renderer output."
+    },
+    {
+      "path": "data/runtime/jcc/runtime-agent-wiki/official/host-multimodal-visual-sensing-runbook.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "authoritative",
+      "contract_version": "2026-07-20",
+      "last_reviewed": "2026-07-27",
+      "owner": "jcc-runtime",
+      "notes": "Fallback visual sensing runbook; host vision must not populate active descriptor-owned augment, season-choice, or item/anvil candidates."
+    },
+    {
+      "path": "docs/jcc-runtime-companion-mvp.md",
+      "doc_type": "paused_track",
+      "status": "paused",
+      "authority_tier": "historical",
+      "contract_version": "2026-06-08",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "notes": "Android companion is paused and must not be used as a MuMu desktop release gate."
+    },
+    {
+      "path": "android-companion/README.md",
+      "doc_type": "paused_track",
+      "status": "paused",
+      "authority_tier": "historical",
+      "contract_version": "2026-06-08",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "notes": "Android companion source remains an isolated future track and must not gate MuMu desktop release."
+    },
+    {
+      "path": "docs/superpowers/specs/2026-06-07-jcc-mumu-runtime-model.md",
+      "doc_type": "historical_spec",
+      "status": "historical",
+      "authority_tier": "historical",
+      "contract_version": "2026-06-07",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "superseded_by": "docs/jcc-runtime-live-state-source-decision.md",
+      "notes": "Historical MuMu model spec retained for evidence trail; current source priority is superseded by the live-state decision and registry."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-06-09-jcc-runtime-ui-modes-and-lineup-code.md",
+      "doc_type": "historical_spec",
+      "status": "historical",
+      "authority_tier": "historical",
+      "contract_version": "2026-06-09",
+      "last_reviewed": "2026-07-20",
+      "owner": "jcc-runtime",
+      "superseded_by": "data/runtime/jcc/runtime-ui-mode-contract.json",
+      "notes": "Historical plan retained for UI lineage; current machine mode authority is runtime-ui-mode-contract.json."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-07-jcc-knowledge-aggregation-upgrade.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-07",
+      "last_reviewed": "2026-09-08",
+      "owner": "jcc-runtime",
+      "notes": "Approved implementation and acceptance tracking plan; registered machine contracts remain production authority. Unchecked live acceptance is not a release claim."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-08-strategic-response-validation-review.md",
+      "doc_type": "generated_snapshot",
+      "status": "generated",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-08",
+      "last_reviewed": "2026-09-08",
+      "owner": "jcc-runtime",
+      "notes": "Review and verification evidence only. Records incomplete real Provider acceptance; does not redefine product contracts."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-09-native-ranking-delivery-review.md",
+      "doc_type": "generated_snapshot", "status": "generated", "authority_tier": "supporting",
+      "contract_version": "2026-09-09", "last_reviewed": "2026-09-09", "owner": "jcc-runtime",
+      "notes": "Implementation and local/live verification evidence, not product authority."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-09-ranking-query-payload-audit.md",
+      "doc_type": "generated_snapshot", "status": "generated", "authority_tier": "supporting",
+      "contract_version": "2026-09-09", "last_reviewed": "2026-09-09", "owner": "jcc-runtime",
+      "notes": "Payload and historical timing measurements, not product authority."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-09-shared-knowledge-delivery.md",
+      "doc_type": "generated_snapshot", "status": "generated", "authority_tier": "supporting",
+      "contract_version": "2026-09-09", "last_reviewed": "2026-09-09", "owner": "jcc-runtime",
+      "notes": "Shared delivery local verification evidence, not release acceptance."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-09-knowledge-architecture-performance-review.md",
+      "doc_type": "generated_snapshot", "status": "generated", "authority_tier": "supporting",
+      "contract_version": "2026-09-09", "last_reviewed": "2026-09-09", "owner": "jcc-runtime",
+      "notes": "Architecture findings and reproducible live probe samples, including timeout and unresolved implementation gaps. Not release acceptance."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-12-jcc-start-match-ai-native-delivery-upgrade.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-13",
+      "last_reviewed": "2026-09-13",
+      "owner": "jcc-runtime",
+      "notes": "Approved implementation and acceptance plan for minimal Provider handoffs, text-first delivery, Start Match readiness, reward semantics, and checkpoint briefs. Canonical runtime JSON contracts and code remain production authority."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-16-ai-native-runtime-tool-cruise-card-upgrade.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-16",
+      "last_reviewed": "2026-09-16",
+      "owner": "jcc-runtime",
+      "notes": "Approved implementation and acceptance plan for native knowledge-tool boundaries, candidate/weight projection, fixed-checkpoint lifecycle, and lineup-handoff delivery. Existing machine contracts remain production authority; this plan explicitly preserves the registered no-4-7 cadence and internal pinned_result materialization boundary."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-17-native-evidence-recovery-results.md",
+      "doc_type": "generated_snapshot", "status": "generated", "authority_tier": "supporting",
+      "contract_version": "2026-09-17", "last_reviewed": "2026-09-17", "owner": "jcc-runtime",
+      "notes": "Diagnostic experiments, model-bound truncation root cause and shared recovery verification. Not production authority."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-16-match-native-live-test-results.md",
+      "doc_type": "generated_snapshot", "status": "generated", "authority_tier": "supporting",
+      "contract_version": "2026-09-16", "last_reviewed": "2026-09-16", "owner": "jcc-runtime",
+      "notes": "Isolated real Provider measurements and follow-up evidence, not product requirements or complete Electron/OCR release acceptance."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-16-ai-native-semantic-routing-and-tool-capability.md",
+      "doc_type": "current_requirement",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-16",
+      "last_reviewed": "2026-09-16",
+      "owner": "jcc-runtime",
+      "notes": "Approved implementation plan for entity-first evidence, AI-native natural-language routing, session-bound native tool capability receipts, and explicit bounded prefetch fallback. Machine contracts remain production authority."
+    }
+  ]
+}

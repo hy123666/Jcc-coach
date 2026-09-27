@@ -1,0 +1,175 @@
+{
+  "schema": "jcc-runtime-common-choice-contract-v1",
+  "scope": "runtime_product",
+  "selection_fact_policy": "Visible choices are candidates. A selected choice is known only after user confirmation or a future proven final-selection event.",
+  "runtime_choice_modes": {
+    "augment_choice": {
+      "ui_mode_key": "augment",
+      "kind": "augment",
+      "phase": "augment_choice",
+      "label": "augment choice",
+      "intent_tag": "augment_choice_intent",
+      "intent_terms": [
+        "海克斯",
+        "强化",
+        "选哪个",
+        "刷新",
+        "要不要刷"
+      ],
+      "candidate_input_policy": "current_match_user_report",
+      "catalog_entity_kind": "augment",
+      "decision_input_kind_aliases": [
+        "augment",
+        "augment_choice"
+      ],
+      "user_report_contract": {
+        "report_required_before_advice": true,
+        "report_prompt": "请先报出当前三个强化选项；2-1 首次报告请带当前散件和成装，3-2/4-2 默认沿用已确认装备，有变化时只报增量。",
+        "refresh_report_prefix": "刷新后是：",
+        "refresh_creates_new_choice_set_revision": true,
+        "current_match_only": true,
+        "no_ocr_or_vision_fallback": true,
+        "explicit_ocr_draft": {
+          "enabled": true,
+          "authority": "renderer_draft_only",
+          "complete_set_required": true,
+          "current_stage_and_tier_catalog_match_required": true,
+          "writes_canonical_choice_facts": false,
+          "opens_host_answer": false,
+          "auto_sends": false
+        },
+        "first_checkpoint_equipment_policy": "report_full_current_equipment",
+        "later_checkpoint_equipment_policy": "reuse_confirmed_and_report_changes_only"
+      },
+      "candidate_paths": [
+        "match_context.reported_choice_sets_by_mode.augment_choice.candidates"
+      ],
+      "fast_hint_label": "augment choice",
+      "trigger_terms": [
+        "augment_choice_advice"
+      ],
+      "advice_task_trigger_terms": [
+        "augment_choice_advice"
+      ],
+      "requires_visual_choice_set": false,
+      "report_required_before_advice": true,
+      "host_context_choice_field": "augment_choices",
+      "task_candidate_evidence_types": [
+        "augments.choice_candidates"
+      ],
+      "ranked_recommendation_evidence_type": "augments.ranked_recommendation",
+      "visible_window_required_answer": "Rank the visible augment candidates and answer keep or reroll now. Do not give generic cruise advice.",
+      "host_mode_context": {
+        "purpose": "Current augment choice and reroll advice.",
+        "allowed_sources": [
+          "current_match_user_report",
+          "selected_augment_history",
+          "live_state",
+          "hard_data",
+          "daily_big_data",
+          "cruise_context"
+        ],
+        "allowed_writes": [
+          "pending_choice",
+          "advice_task"
+        ],
+        "must_not_write": [
+          "selected_augments_without_user_confirmation"
+        ],
+        "response_expectation": "Return the exact three reported candidates in a unique best-to-worst candidate_ranking and provide one explicit structured keep/refresh action: keep and pick, refresh specific physical slots, refresh all, refresh if available, or no refresh available. Say what to keep as backup, why, and how to react after reroll."
+      },
+      "default_user_prompt": "选哪个？要不要刷新？",
+      "missing_selection_prompt_template": "{stage_round} 强化最终选择尚未确认；请在强化卡片的最终选择区确认。后续阵容、装备和节奏建议会以卡片中的结构化结果为准。"
+    },
+    "item_choice": {
+      "ui_mode_key": "item",
+      "kind": "item",
+      "phase": "item_choice",
+      "label": "item choice",
+      "intent_tag": "itemization_intent",
+      "intent_terms": [
+        "装备",
+        "散件",
+        "合成",
+        "神器",
+        "光明",
+        "奥恩",
+        "重塑器",
+        "重铸"
+      ],
+      "candidate_input_policy": "current_match_user_report",
+      "catalog_entity_kind": "item",
+      "decision_input_kind_aliases": [
+        "item",
+        "anvil",
+        "item_anvil",
+        "item_choice",
+        "item_choice_panel"
+      ],
+      "user_report_contract": {
+        "report_required_before_advice": true,
+        "report_prompt": "请先报出当前装备或锻造选项。",
+        "refresh_report_prefix": "刷新后是：",
+        "refresh_creates_new_choice_set_revision": true,
+        "current_match_only": true,
+        "no_ocr_or_vision_fallback": true,
+        "default_item_choice_kind": "basic_component_forge",
+        "window_identity_field": "choice_window_instance_id",
+        "same_stage_window_policy": "Each independent forge or equipment choice has its own report and revision identity. Explicitly start the next equipment selection to create a new window; ordinary reopen restores the current one. Same-window confirmation remains idempotent and immutable.",
+        "supported_item_choice_kinds": [
+          "basic_component_forge",
+          "completed_item_forge",
+          "artifact_forge",
+          "radiant_item_choice"
+        ],
+        "expected_count_by_kind": {
+          "basic_component_forge": 4,
+          "completed_item_forge": 5,
+          "artifact_forge": 4,
+          "radiant_item_choice": 4
+        }
+      },
+      "candidate_paths": [
+        "match_context.reported_choice_sets_by_mode.item_choice.candidates"
+      ],
+      "fast_hint_label": "item choice",
+      "trigger_terms": [
+        "item",
+        "equipment"
+      ],
+      "advice_task_trigger_terms": [
+        "item_choice",
+        "equipment_choice"
+      ],
+      "requires_visual_choice_set": false,
+      "report_required_before_advice": true,
+      "host_context_choice_field": "item_choices",
+      "task_candidate_evidence_types": [
+        "items.choice_options"
+      ],
+      "visible_window_required_answer": "Rank the visible item candidates and answer which one to take now from current board, holders, plan, and tempo.",
+      "host_mode_context": {
+        "purpose": "Equipment, forge, reward, completed item, artifact, and special item choice.",
+        "allowed_sources": [
+          "current_match_user_report",
+          "own_item_bench",
+          "trusted_equipped_items",
+          "trusted_own_board",
+          "economy",
+          "target_plan",
+          "selected_augments"
+        ],
+        "allowed_writes": [
+          "pending_choice",
+          "advice_task"
+        ],
+        "must_not_write": [
+          "item_choice_as_confirmed_inventory_without_user_confirmation",
+          "untrusted_visible_items_as_own_equipped_items"
+        ],
+        "response_expectation": "Choose based on current board, item holders, plan, and tempo."
+      },
+      "missing_selection_prompt_template": "{stage_round} 装备选择尚未确认；请在装备选择卡片中确认。后续装备分配和阵容节奏会以卡片中的结构化结果为准。"
+    }
+  }
+}

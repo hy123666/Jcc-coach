@@ -1,0 +1,4690 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-07T11:11:23.400Z",
+  "dex_path": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+  "parser": "lightweight_dex_table_and_code_scan",
+  "counts": {
+    "strings": 23204,
+    "types": 6565,
+    "methods": 30709,
+    "class_defs": 5377,
+    "encoded_methods": 26674,
+    "inspected_target_methods": 913
+  },
+  "evidence_summary": {
+    "method_level_screen_capture_usage_observed": true,
+    "method_level_ocr_usage_observed": true,
+    "method_level_jcc_candidate_model_usage_observed": true,
+    "method_level_position_model_usage_observed": true,
+    "config_or_asset_loading_usage_observed": true,
+    "direct_live_board_or_bench_snapshot_method_observed": false,
+    "note": "This is a DEX bytecode table scan, not full Java decompilation. It is suitable for locating candidate call sites and strings, not proving high-level semantics alone."
+  },
+  "target_methods_by_tag": {
+    "jcc_live_candidate_model": [
+      {
+        "method": "LA4/f;->w(Ljava/lang/Object;)Ljava/lang/Object;",
+        "owner_class": "LA4/f;",
+        "code_off": 806512,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LB0/l;->toString()Ljava/lang/String;",
+        "owner_class": "LB0/l;",
+        "code_off": 840268,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LB3/a;->toString()Ljava/lang/String;",
+        "owner_class": "LB3/a;",
+        "code_off": 906876,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LB3/b;->toString()Ljava/lang/String;",
+        "owner_class": "LB3/b;",
+        "code_off": 907296,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LC/I;->a()Ljava/lang/Object;",
+        "owner_class": "LC/I;",
+        "code_off": 970696,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LC/u0;->h(Lc0/p;LM0/g;Lc4/k;ZLjava/util/Map;LM0/O;IZIILQ0/d;Lj0/v;Lc4/k;LQ/s;II)V",
+        "owner_class": "LC/u0;",
+        "code_off": 1001764,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LC/y0;->b(Ljava/lang/Object;LS3/c;)Ljava/lang/Object;",
+        "owner_class": "LC/y0;",
+        "code_off": 1008260,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/HeroLocation;->b()Li3/s;",
+          "Li3/N;->d(I)Lcom/mumu/gameassist/games/jcc/data/Equipment;",
+          "Li3/N;->c(I)Lcom/mumu/gameassist/games/jcc/data/Hero;",
+          "Lcom/mumu/gameassist/games/jcc/data/Lineup;->b()Ljava/util/HashSet;",
+          "Lp3/a;-><init>(Lcom/mumu/gameassist/games/jcc/data/Hero;Lcom/mumu/gameassist/games/jcc/data/Equipment;Ljava/lang/String;I)V",
+          "Ll3/o;->e(Lcom/mumu/gameassist/games/jcc/data/Lineup;LU3/c;)Ljava/lang/Object;",
+          "LC0/B;->requestFocus(ILandroid/graphics/Rect;)Z"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;",
+          "Ljava/util/HashMap;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LC0/B;->dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z",
+        "owner_class": "LC0/B;",
+        "code_off": 1085832,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LC0/E;->onViewDetachedFromWindow(Landroid/view/View;)V",
+        "owner_class": "LC0/E;",
+        "code_off": 1051580,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LC0/S;->j(LJ0/m;Landroid/content/res/Resources;)Ljava/lang/String;",
+        "owner_class": "LC0/S;",
+        "code_off": 1082348,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LD2/a;-><clinit>()V",
+        "owner_class": "LD2/a;",
+        "code_off": 1152084,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/ShareHeroReplaceJsonAdapter;-><init>(LF3/A;)V",
+          "Lcom/mumu/gameassist/api/JccSeasonDataJsonAdapter;-><init>(LF3/A;)V",
+          "Landroidx/appcompat/widget/FitWindowsLinearLayout;->fitSystemWindows(Landroid/graphics/Rect;)Z",
+          "Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V",
+          "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+          "Lcom/mumu/gameassist/games/jcc/data/UserSetting;->hashCode()I",
+          "Lcom/mumu/gameassist/api/EquipInfoApiJsonAdapter;->toString()Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/LineupDetailRequestJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+          "Lcom/mumu/gameassist/api/ClipboardParseDataJsonAdapter;->a(LF3/o;)Ljava/lang/Object;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model",
+          "position_model"
+        ]
+      },
+      {
+        "method": "LD4/B;->g(LO4/f;Ly4/b;)Ljava/util/Collection;",
+        "owner_class": "LD4/B;",
+        "code_off": 1214096,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LD4/h;->b()Ljava/util/Collection;",
+        "owner_class": "LD4/h;",
+        "code_off": 1192944,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LD4/p;->N(Lt4/J;)Z",
+        "owner_class": "LD4/p;",
+        "code_off": 1201264,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LD5/b;->a(LG5/f;)LB5/G;",
+        "owner_class": "LD5/b;",
+        "code_off": 1217576,
+        "invoked_methods": [],
+        "string_refs": [
+          " but position is "
+        ],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LG4/d;->b(LG4/q;Lf5/w;Ljava/util/List;LG4/r;Z)Lf5/w;",
+        "owner_class": "LG4/d;",
+        "code_off": 1303012,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LG4/l;-><clinit>()V",
+        "owner_class": "LG4/l;",
+        "code_off": 1310012,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LG5/g;->toString()Ljava/lang/String;",
+        "owner_class": "LG5/g;",
+        "code_off": 1320724,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LH1/g;->d(LH1/f;I)V",
+        "owner_class": "LH1/g;",
+        "code_off": 1350804,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LI5/p;->b(LB5/B;)V",
+        "owner_class": "LI5/p;",
+        "code_off": 1396368,
+        "invoked_methods": [
+          "LC0/B;->requestFocus(ILandroid/graphics/Rect;)Z"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LL/s;->a()V",
+        "owner_class": "LL/s;",
+        "code_off": 1549384,
+        "invoked_methods": [
+          "Lj0/o;->C(Li0/c;)Landroid/graphics/RectF;",
+          "LL/g;->i(Landroid/view/inputmethod/EditorBoundsInfo$Builder;Landroid/graphics/RectF;)Landroid/view/inputmethod/EditorBoundsInfo$Builder;",
+          "LL/g;->p(Landroid/view/inputmethod/EditorBoundsInfo$Builder;Landroid/graphics/RectF;)Landroid/view/inputmethod/EditorBoundsInfo$Builder;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LM0/K;->j(I)J",
+        "owner_class": "LM0/K;",
+        "code_off": 1599136,
+        "invoked_methods": [
+          "LC0/B;->requestFocus(ILandroid/graphics/Rect;)Z"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LM0/s;->toString()Ljava/lang/String;",
+        "owner_class": "LM0/s;",
+        "code_off": 1583796,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LN0/g;->a(Ljava/lang/CharSequence;LU0/f;IIILandroid/text/TextDirectionHeuristic;Landroid/text/Layout$Alignment;ILandroid/text/TextUtils$TruncateAt;IFFIZZIIII[I[I)Landroid/text/StaticLayout;",
+        "owner_class": "LN0/g;",
+        "code_off": 1641784,
+        "invoked_methods": [
+          "Landroid/text/StaticLayout$Builder;->setTextDirection(Landroid/text/TextDirectionHeuristic;)Landroid/text/StaticLayout$Builder;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LO/o;->c(Lc0/p;Lj0/M;JJLp/C;FLY/d;LQ/s;II)V",
+        "owner_class": "LO/o;",
+        "code_off": 1675236,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LP4/f;->s(I)Z",
+        "owner_class": "LP4/f;",
+        "code_off": 1792432,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LR0/c;->a()V",
+        "owner_class": "LR0/c;",
+        "code_off": 1955052,
+        "invoked_methods": [
+          "Lj0/o;->C(Li0/c;)Landroid/graphics/RectF;",
+          "LL/g;->i(Landroid/view/inputmethod/EditorBoundsInfo$Builder;Landroid/graphics/RectF;)Landroid/view/inputmethod/EditorBoundsInfo$Builder;",
+          "LL/g;->p(Landroid/view/inputmethod/EditorBoundsInfo$Builder;Landroid/graphics/RectF;)Landroid/view/inputmethod/EditorBoundsInfo$Builder;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LR1/j;->b(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V",
+        "owner_class": "LR1/j;",
+        "code_off": 1970368,
+        "invoked_methods": [
+          "Landroid/view/View;->getLayoutDirection()I",
+          "LA3/d;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V",
+          "LA3/d;->onCreate(Landroid/database/sqlite/SQLiteDatabase;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LV/k;->d(IILjava/lang/Object;)Z",
+        "owner_class": "LV/k;",
+        "code_off": 2097048,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "LZ2/s;-><init>(Lcom/google/android/material/textfield/TextInputLayout;LB0/k;)V",
+        "owner_class": "LZ2/s;",
+        "code_off": 2167212,
+        "invoked_methods": [
+          "LC0/B;->requestFocus(ILandroid/graphics/Rect;)Z"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "La0/b;->z(JLk/H;Ljava/util/HashMap;La0/k;)La0/s;",
+        "owner_class": "La0/b;",
+        "code_off": 2182424,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "La0/r;->h(La0/y;)V",
+        "owner_class": "La0/r;",
+        "code_off": 2197408,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Landroidx/compose/ui/input/pointer/StylusHoverIconModifierElement;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Landroidx/compose/ui/input/pointer/StylusHoverIconModifierElement;",
+        "code_off": 2272296,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Landroidx/compose/ui/input/pointer/StylusHoverIconModifierElement;->toString()Ljava/lang/String;",
+        "owner_class": "Landroidx/compose/ui/input/pointer/StylusHoverIconModifierElement;",
+        "code_off": 2272484,
+        "invoked_methods": [],
+        "string_refs": [
+          "StylusHoverIconModifierElement(icon="
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Landroidx/compose/ui/input/rotary/RotaryInputElement;->f(Lc0/o;)V",
+        "owner_class": "Landroidx/compose/ui/input/rotary/RotaryInputElement;",
+        "code_off": 2273308,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Landroidx/core/widget/NestedScrollView;->onGenericMotionEvent(Landroid/view/MotionEvent;)Z",
+        "owner_class": "Landroidx/core/widget/NestedScrollView;",
+        "code_off": 2306076,
+        "invoked_methods": [
+          "LC0/B;->requestFocus(ILandroid/graphics/Rect;)Z"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Landroidx/recyclerview/widget/RecyclerView;->onGenericMotionEvent(Landroid/view/MotionEvent;)Z",
+        "owner_class": "Landroidx/recyclerview/widget/RecyclerView;",
+        "code_off": 2335688,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lb1/m;->b(Lc0/d;JLc4/a;Lb1/w;LY/d;LQ/s;II)V",
+        "owner_class": "Lb1/m;",
+        "code_off": 2357096,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/CdnLineupJsonResponseJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/CdnLineupJsonResponseJsonAdapter;",
+        "code_off": 2464440,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/FruitItemApiDataJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/api/FruitItemApiDataJsonAdapter;",
+        "code_off": 2479760,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ShareHeroLocation;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/api/ShareHeroLocation;",
+        "code_off": 2521908,
+        "invoked_methods": [],
+        "string_refs": [
+          ", heroId="
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;-><init>(II)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;",
+        "code_off": 2537432,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;->copy(II)Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;",
+        "code_off": 2537288,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;-><init>(II)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;",
+        "code_off": 2537216,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;->hashCode()I",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;",
+        "code_off": 2537316,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;",
+        "code_off": 2537364,
+        "invoked_methods": [],
+        "string_refs": [
+          "BuyHeroInfo(heroEntityId=",
+          ", heroId="
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfoJsonAdapter;-><init>(LF3/A;)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfoJsonAdapter;",
+        "code_off": 2537004,
+        "invoked_methods": [],
+        "string_refs": [
+          "heroEntityId"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfoJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfoJsonAdapter;",
+        "code_off": 2536736,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;-><init>(II)V"
+        ],
+        "string_refs": [
+          "heroEntityId",
+          "heroId"
+        ],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfoJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfoJsonAdapter;",
+        "code_off": 2537092,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfoJsonAdapter;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfoJsonAdapter;",
+        "code_off": 2536968,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroListJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/BuyHeroListJsonAdapter;",
+        "code_off": 2537464,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/BuyHeroList;-><init>(Ljava/util/List;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/mumu/gameassist/games/jcc/data/BuyHeroList;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroChosenInfo;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroChosenInfo;",
+        "code_off": 2550212,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;-><init>(IIIIILjava/util/List;)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;",
+        "code_off": 2551960,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;-><init>(IIIIILjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;",
+        "code_off": 2552008,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;-><init>(IIIIILjava/util/List;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;->copy(IIIIILjava/util/List;)Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;",
+        "code_off": 2551660,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;-><init>(IIIIILjava/util/List;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;",
+        "code_off": 2551524,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;->hashCode()I",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;",
+        "code_off": 2551704,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;",
+        "code_off": 2551812,
+        "invoked_methods": [],
+        "string_refs": [
+          "GiBuyHeroInfo(heroId="
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfoJsonAdapter;-><init>(LF3/A;)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfoJsonAdapter;",
+        "code_off": 2551200,
+        "invoked_methods": [],
+        "string_refs": [
+          "heroId"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfoJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfoJsonAdapter;",
+        "code_off": 2550360,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;-><init>(IIIIILjava/util/List;)V"
+        ],
+        "string_refs": [
+          "heroId"
+        ],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfoJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfoJsonAdapter;",
+        "code_off": 2551348,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfoJsonAdapter;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfoJsonAdapter;",
+        "code_off": 2551164,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiEquipInfo;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiEquipInfo;",
+        "code_off": 2553708,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;-><init>(I)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;",
+        "code_off": 2555120,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;",
+        "code_off": 2555148,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;-><init>(I)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;->copy(I)Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;",
+        "code_off": 2555012,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;-><init>(I)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;",
+        "code_off": 2554956,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;->hashCode()I",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;",
+        "code_off": 2555040,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;",
+        "code_off": 2555072,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatusJsonAdapter;-><init>(LF3/A;)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatusJsonAdapter;",
+        "code_off": 2554776,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatusJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatusJsonAdapter;",
+        "code_off": 2554492,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;-><init>(I)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatusJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatusJsonAdapter;",
+        "code_off": 2554860,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatusJsonAdapter;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiGameStatusJsonAdapter;",
+        "code_off": 2554740,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;-><init>(III)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;",
+        "code_off": 2556004,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;->copy(III)Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;",
+        "code_off": 2555824,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;-><init>(III)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;",
+        "code_off": 2555740,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;->hashCode()I",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;",
+        "code_off": 2555852,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;",
+        "code_off": 2555916,
+        "invoked_methods": [],
+        "string_refs": [
+          "GiHeroInfo(heroId="
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfoJsonAdapter;-><init>(LF3/A;)V",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfoJsonAdapter;",
+        "code_off": 2555508,
+        "invoked_methods": [],
+        "string_refs": [
+          "heroId"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfoJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfoJsonAdapter;",
+        "code_off": 2555184,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;-><init>(III)V"
+        ],
+        "string_refs": [
+          "heroId"
+        ],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model"
+        ]
+      }
+    ],
+    "position_model": [
+      {
+        "method": "LB0/S;->o0(LB0/I;Lz0/n;)V",
+        "owner_class": "LB0/S;",
+        "code_off": 866296,
+        "invoked_methods": [],
+        "string_refs": [
+          ", positionData="
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "LB0/Z;->l()V",
+        "owner_class": "LB0/Z;",
+        "code_off": 876732,
+        "invoked_methods": [],
+        "string_refs": [
+          "(Ljava/lang/String;Lcom/mumu/gameassist/api/XYPosition;)V"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "LD2/a;-><clinit>()V",
+        "owner_class": "LD2/a;",
+        "code_off": 1152084,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/ShareHeroReplaceJsonAdapter;-><init>(LF3/A;)V",
+          "Lcom/mumu/gameassist/api/JccSeasonDataJsonAdapter;-><init>(LF3/A;)V",
+          "Landroidx/appcompat/widget/FitWindowsLinearLayout;->fitSystemWindows(Landroid/graphics/Rect;)Z",
+          "Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V",
+          "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+          "Lcom/mumu/gameassist/games/jcc/data/UserSetting;->hashCode()I",
+          "Lcom/mumu/gameassist/api/EquipInfoApiJsonAdapter;->toString()Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/LineupDetailRequestJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+          "Lcom/mumu/gameassist/api/ClipboardParseDataJsonAdapter;->a(LF3/o;)Ljava/lang/Object;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "jcc_live_candidate_model",
+          "position_model"
+        ]
+      },
+      {
+        "method": "LI5/d;->d(Ljava/util/ArrayList;)V",
+        "owner_class": "LI5/d;",
+        "code_off": 1389412,
+        "invoked_methods": [
+          "Landroid/view/ViewGroup;->offsetDescendantRectToMyCoords(Landroid/view/View;Landroid/graphics/Rect;)V",
+          "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;->a(LF3/o;)Ljava/lang/Object;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "LL2/c;->b(Z)LW2/g;",
+        "owner_class": "LL2/c;",
+        "code_off": 1557960,
+        "invoked_methods": [],
+        "string_refs": [
+          "Lcom/mumu/gameassist/api/XYPosition;"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "LM0/a;-><init>(LU0/d;IIJ)V",
+        "owner_class": "LM0/a;",
+        "code_off": 1571220,
+        "invoked_methods": [],
+        "string_refs": [
+          "(Ljava/lang/String;Lcom/mumu/gameassist/api/XYPosition;)V"
+        ],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;"
+        ],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lh/a0;->onMeasure(II)V",
+        "owner_class": "Lh/a0;",
+        "code_off": 2814152,
+        "invoked_methods": [
+          "Ljava/io/File;->canWrite()Z",
+          "Landroid/view/View;->getContentCaptureSession()Landroid/view/contentcapture/ContentCaptureSession;"
+        ],
+        "string_refs": [
+          " (plus "
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/PositionApiData;->a:Ljava/util/List;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Landroidx/appcompat/widget/ButtonBarLayout;->onMeasure(II)V",
+        "owner_class": "Landroidx/appcompat/widget/ButtonBarLayout;",
+        "code_off": 2226012,
+        "invoked_methods": [],
+        "string_refs": [
+          "(Ljava/lang/String;Lcom/mumu/gameassist/api/XYPosition;)V"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Landroidx/coordinatorlayout/widget/CoordinatorLayout;->w()V",
+        "owner_class": "Landroidx/coordinatorlayout/widget/CoordinatorLayout;",
+        "code_off": 2302328,
+        "invoked_methods": [],
+        "string_refs": [
+          "Lcom/mumu/gameassist/api/XYPosition;"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lb5/i;-><init>(Le5/n;Lq4/y;Lb5/e;Lb5/a;Lq4/H;Lb5/l;Lb5/m;Ljava/lang/Iterable;LB5/l;Ls4/b;Ls4/d;LP4/h;Lg5/l;LW2/e;Ljava/util/List;I)V",
+        "owner_class": "Lb5/i;",
+        "code_off": 2368672,
+        "invoked_methods": [],
+        "string_refs": [
+          ", positionData="
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ChessPositionApi;-><init>(Ljava/lang/String;Lcom/mumu/gameassist/api/XYPosition;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/ChessPositionApi;",
+        "code_off": 2465932,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->b:Lcom/mumu/gameassist/api/XYPosition;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ChessPositionApi;-><init>(Ljava/lang/String;Lcom/mumu/gameassist/api/XYPosition;ILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/ChessPositionApi;",
+        "code_off": 2465976,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/ChessPositionApi;-><init>(Ljava/lang/String;Lcom/mumu/gameassist/api/XYPosition;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ChessPositionApi;->copy(Ljava/lang/String;Lcom/mumu/gameassist/api/XYPosition;)Lcom/mumu/gameassist/api/ChessPositionApi;",
+        "owner_class": "Lcom/mumu/gameassist/api/ChessPositionApi;",
+        "code_off": 2465756,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/ChessPositionApi;-><init>(Ljava/lang/String;Lcom/mumu/gameassist/api/XYPosition;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/mumu/gameassist/api/ChessPositionApi;"
+        ],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ChessPositionApi;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/mumu/gameassist/api/ChessPositionApi;",
+        "code_off": 2465668,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->b:Lcom/mumu/gameassist/api/XYPosition;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ChessPositionApi;->hashCode()I",
+        "owner_class": "Lcom/mumu/gameassist/api/ChessPositionApi;",
+        "code_off": 2465796,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/XYPosition;->hashCode()I"
+        ],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->b:Lcom/mumu/gameassist/api/XYPosition;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ChessPositionApi;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/api/ChessPositionApi;",
+        "code_off": 2465852,
+        "invoked_methods": [],
+        "string_refs": [
+          "ChessPositionApi(chessId=",
+          ", position="
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->b:Lcom/mumu/gameassist/api/XYPosition;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;-><init>(LF3/A;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;",
+        "code_off": 2465452,
+        "invoked_methods": [],
+        "string_refs": [
+          "position"
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;->a:LL/p;",
+          "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;->b:LF3/k;",
+          "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;->c:LF3/k;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;",
+        "code_off": 2465120,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/ChessPositionApi;-><init>(Ljava/lang/String;Lcom/mumu/gameassist/api/XYPosition;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;->a:LL/p;",
+          "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;->c:LF3/k;",
+          "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;->b:LF3/k;",
+          "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;->d:Ljava/lang/reflect/Constructor;"
+        ],
+        "new_instances": [
+          "Lcom/mumu/gameassist/api/ChessPositionApi;"
+        ],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;",
+        "code_off": 2465556,
+        "invoked_methods": [],
+        "string_refs": [
+          "position"
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;->b:LF3/k;",
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;->c:LF3/k;",
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->b:Lcom/mumu/gameassist/api/XYPosition;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/api/ChessPositionApiJsonAdapter;",
+        "code_off": 2465416,
+        "invoked_methods": [],
+        "string_refs": [
+          "GeneratedJsonAdapter(ChessPositionApi)"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ExcessiveContentApiData;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/PositionApiData;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/ExcessiveContentApiData;",
+        "code_off": 2478720,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ExcessiveContentApiData;->g:Lcom/mumu/gameassist/api/PositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ExcessiveContentApiData;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/PositionApiData;ILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/ExcessiveContentApiData;",
+        "code_off": 2478792,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/ExcessiveContentApiData;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/PositionApiData;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ExcessiveContentApiData;->copy(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/PositionApiData;)Lcom/mumu/gameassist/api/ExcessiveContentApiData;",
+        "owner_class": "Lcom/mumu/gameassist/api/ExcessiveContentApiData;",
+        "code_off": 2478304,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/ExcessiveContentApiData;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/PositionApiData;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ExcessiveContentApiData;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/mumu/gameassist/api/ExcessiveContentApiData;",
+        "code_off": 2478108,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ExcessiveContentApiData;->g:Lcom/mumu/gameassist/api/PositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ExcessiveContentApiData;->hashCode()I",
+        "owner_class": "Lcom/mumu/gameassist/api/ExcessiveContentApiData;",
+        "code_off": 2478372,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/PositionApiData;->hashCode()I"
+        ],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ExcessiveContentApiData;->g:Lcom/mumu/gameassist/api/PositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ExcessiveContentApiData;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/api/ExcessiveContentApiData;",
+        "code_off": 2478540,
+        "invoked_methods": [],
+        "string_refs": [
+          ", positionData="
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ExcessiveContentApiData;->g:Lcom/mumu/gameassist/api/PositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ExcessiveContentApiDataJsonAdapter;-><init>(LF3/A;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/ExcessiveContentApiDataJsonAdapter;",
+        "code_off": 2477724,
+        "invoked_methods": [],
+        "string_refs": [
+          "position_data",
+          "positionData"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ExcessiveContentApiDataJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/api/ExcessiveContentApiDataJsonAdapter;",
+        "code_off": 2477156,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/ExcessiveContentApiData;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/PositionApiData;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/ExcessiveContentApiDataJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/ExcessiveContentApiDataJsonAdapter;",
+        "code_off": 2477892,
+        "invoked_methods": [],
+        "string_refs": [
+          "position_data"
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ExcessiveContentApiData;->g:Lcom/mumu/gameassist/api/PositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupApiData;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/ChosenApiData;Lcom/mumu/gameassist/api/PositionApiData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupApiData;",
+        "code_off": 2504744,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/LineupApiData;->g:Lcom/mumu/gameassist/api/PositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupApiData;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/ChosenApiData;Lcom/mumu/gameassist/api/PositionApiData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupApiData;",
+        "code_off": 2504856,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/LineupApiData;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/ChosenApiData;Lcom/mumu/gameassist/api/PositionApiData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupApiData;->copy(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/ChosenApiData;Lcom/mumu/gameassist/api/PositionApiData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Lcom/mumu/gameassist/api/LineupApiData;",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupApiData;",
+        "code_off": 2504100,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/LineupApiData;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/ChosenApiData;Lcom/mumu/gameassist/api/PositionApiData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupApiData;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupApiData;",
+        "code_off": 2503792,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/LineupApiData;->g:Lcom/mumu/gameassist/api/PositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupApiData;->hashCode()I",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupApiData;",
+        "code_off": 2504216,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/PositionApiData;->hashCode()I"
+        ],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/LineupApiData;->g:Lcom/mumu/gameassist/api/PositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupApiData;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupApiData;",
+        "code_off": 2504476,
+        "invoked_methods": [],
+        "string_refs": [
+          ", positionData="
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/LineupApiData;->g:Lcom/mumu/gameassist/api/PositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupApiDataJsonAdapter;-><init>(LF3/A;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupApiDataJsonAdapter;",
+        "code_off": 2503216,
+        "invoked_methods": [],
+        "string_refs": [
+          "position_data",
+          "positionData"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupApiDataJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupApiDataJsonAdapter;",
+        "code_off": 2502384,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/LineupApiData;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/ChosenApiData;Lcom/mumu/gameassist/api/PositionApiData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupApiDataJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupApiDataJsonAdapter;",
+        "code_off": 2503468,
+        "invoked_methods": [],
+        "string_refs": [
+          "position_data"
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/LineupApiData;->g:Lcom/mumu/gameassist/api/PositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupDetailData;-><init>(Lcom/mumu/gameassist/api/LineupApiData;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/OuterPositionApiData;Ljava/util/List;Lcom/mumu/gameassist/api/SecretskillApiData;Ljava/util/List;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupDetailData;",
+        "code_off": 2509208,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/LineupDetailData;->h:Lcom/mumu/gameassist/api/OuterPositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupDetailData;-><init>(Lcom/mumu/gameassist/api/LineupApiData;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/OuterPositionApiData;Ljava/util/List;Lcom/mumu/gameassist/api/SecretskillApiData;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupDetailData;",
+        "code_off": 2509276,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupDetailData;->copy(Lcom/mumu/gameassist/api/LineupApiData;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/OuterPositionApiData;Ljava/util/List;Lcom/mumu/gameassist/api/SecretskillApiData;Ljava/util/List;)Lcom/mumu/gameassist/api/LineupDetailData;",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupDetailData;",
+        "code_off": 2508588,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupDetailData;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupDetailData;",
+        "code_off": 2508304,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/LineupDetailData;->h:Lcom/mumu/gameassist/api/OuterPositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupDetailData;->hashCode()I",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupDetailData;",
+        "code_off": 2508660,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/LineupDetailData;->h:Lcom/mumu/gameassist/api/OuterPositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupDetailData;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupDetailData;",
+        "code_off": 2508960,
+        "invoked_methods": [],
+        "string_refs": [
+          ", outerPositionData="
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/LineupDetailData;->h:Lcom/mumu/gameassist/api/OuterPositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupDetailDataJsonAdapter;-><init>(LF3/A;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupDetailDataJsonAdapter;",
+        "code_off": 2506660,
+        "invoked_methods": [],
+        "string_refs": [
+          "position_data",
+          "outerPositionData"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupDetailDataJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupDetailDataJsonAdapter;",
+        "code_off": 2505996,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/LineupDetailDataJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/LineupDetailDataJsonAdapter;",
+        "code_off": 2507120,
+        "invoked_methods": [],
+        "string_refs": [
+          "position_data"
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/LineupDetailData;->h:Lcom/mumu/gameassist/api/OuterPositionApiData;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/OuterPositionApiData;-><init>(Lcom/mumu/gameassist/api/ContentPosApiData;Ljava/util/List;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/OuterPositionApiData;",
+        "code_off": 2516228,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/OuterPositionApiData;->a:Lcom/mumu/gameassist/api/ContentPosApiData;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiData;->b:Ljava/util/List;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/OuterPositionApiData;-><init>(Lcom/mumu/gameassist/api/ContentPosApiData;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/OuterPositionApiData;",
+        "code_off": 2516260,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/OuterPositionApiData;->copy(Lcom/mumu/gameassist/api/ContentPosApiData;Ljava/util/List;)Lcom/mumu/gameassist/api/OuterPositionApiData;",
+        "owner_class": "Lcom/mumu/gameassist/api/OuterPositionApiData;",
+        "code_off": 2516068,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/OuterPositionApiData;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/mumu/gameassist/api/OuterPositionApiData;",
+        "code_off": 2515980,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/OuterPositionApiData;->a:Lcom/mumu/gameassist/api/ContentPosApiData;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiData;->b:Ljava/util/List;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/OuterPositionApiData;->hashCode()I",
+        "owner_class": "Lcom/mumu/gameassist/api/OuterPositionApiData;",
+        "code_off": 2516096,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/OuterPositionApiData;->a:Lcom/mumu/gameassist/api/ContentPosApiData;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiData;->b:Ljava/util/List;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/OuterPositionApiData;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/api/OuterPositionApiData;",
+        "code_off": 2516160,
+        "invoked_methods": [],
+        "string_refs": [
+          "OuterPositionApiData(contentPosData="
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/OuterPositionApiData;->a:Lcom/mumu/gameassist/api/ContentPosApiData;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiData;->b:Ljava/util/List;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;-><init>(LF3/A;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;",
+        "code_off": 2515736,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;->a:LL/p;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;->b:LF3/k;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;->c:LF3/k;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;",
+        "code_off": 2515436,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;->a:LL/p;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;->c:LF3/k;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;->b:LF3/k;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;->d:Ljava/lang/reflect/Constructor;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;",
+        "code_off": 2515868,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;->b:LF3/k;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiData;->a:Lcom/mumu/gameassist/api/ContentPosApiData;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;->c:LF3/k;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiData;->b:Ljava/util/List;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/api/OuterPositionApiDataJsonAdapter;",
+        "code_off": 2515700,
+        "invoked_methods": [],
+        "string_refs": [
+          "GeneratedJsonAdapter(OuterPositionApiData)"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/PositionApiData;-><init>(Ljava/util/List;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/PositionApiData;",
+        "code_off": 2516948,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/PositionApiData;->a:Ljava/util/List;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/PositionApiData;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/PositionApiData;",
+        "code_off": 2516976,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/PositionApiData;-><init>(Ljava/util/List;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/PositionApiData;->copy(Ljava/util/List;)Lcom/mumu/gameassist/api/PositionApiData;",
+        "owner_class": "Lcom/mumu/gameassist/api/PositionApiData;",
+        "code_off": 2516832,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/PositionApiData;-><init>(Ljava/util/List;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/mumu/gameassist/api/PositionApiData;"
+        ],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/PositionApiData;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/mumu/gameassist/api/PositionApiData;",
+        "code_off": 2516768,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/PositionApiData;->a:Ljava/util/List;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/PositionApiData;->hashCode()I",
+        "owner_class": "Lcom/mumu/gameassist/api/PositionApiData;",
+        "code_off": 2516860,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/PositionApiData;->a:Ljava/util/List;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/PositionApiData;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/api/PositionApiData;",
+        "code_off": 2516900,
+        "invoked_methods": [],
+        "string_refs": [
+          "PositionApiData(chessPosition="
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/PositionApiData;->a:Ljava/util/List;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;-><init>(LF3/A;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;",
+        "code_off": 2516572,
+        "invoked_methods": [],
+        "string_refs": [
+          "chess_position",
+          "chessPosition"
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;->a:LL/p;",
+          "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;->b:LF3/k;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;",
+        "code_off": 2516308,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/PositionApiData;-><init>(Ljava/util/List;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;->a:LL/p;",
+          "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;->b:LF3/k;",
+          "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;->c:Ljava/lang/reflect/Constructor;"
+        ],
+        "new_instances": [
+          "Lcom/mumu/gameassist/api/PositionApiData;"
+        ],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;",
+        "code_off": 2516680,
+        "invoked_methods": [],
+        "string_refs": [
+          "chess_position"
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;->b:LF3/k;",
+          "Lcom/mumu/gameassist/api/PositionApiData;->a:Ljava/util/List;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/api/PositionApiDataJsonAdapter;",
+        "code_off": 2516536,
+        "invoked_methods": [],
+        "string_refs": [
+          "GeneratedJsonAdapter(PositionApiData)"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/XYPosition;-><init>(Ljava/lang/String;Ljava/lang/String;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/XYPosition;",
+        "code_off": 2534660,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/XYPosition;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/XYPosition;->b:Ljava/lang/String;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/XYPosition;-><init>(Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/XYPosition;",
+        "code_off": 2534712,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/XYPosition;-><init>(Ljava/lang/String;Ljava/lang/String;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/XYPosition;->copy(Ljava/lang/String;Ljava/lang/String;)Lcom/mumu/gameassist/api/XYPosition;",
+        "owner_class": "Lcom/mumu/gameassist/api/XYPosition;",
+        "code_off": 2534496,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/XYPosition;-><init>(Ljava/lang/String;Ljava/lang/String;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/mumu/gameassist/api/XYPosition;"
+        ],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/XYPosition;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/mumu/gameassist/api/XYPosition;",
+        "code_off": 2534408,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/XYPosition;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/XYPosition;->b:Ljava/lang/String;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/XYPosition;->hashCode()I",
+        "owner_class": "Lcom/mumu/gameassist/api/XYPosition;",
+        "code_off": 2534544,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/XYPosition;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/XYPosition;->b:Ljava/lang/String;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/XYPosition;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/api/XYPosition;",
+        "code_off": 2534592,
+        "invoked_methods": [],
+        "string_refs": [
+          "XYPosition(x="
+        ],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/XYPosition;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/XYPosition;->b:Ljava/lang/String;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;-><init>(LF3/A;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;",
+        "code_off": 2534216,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;->a:LL/p;",
+          "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;->b:LF3/k;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;->a(LF3/o;)Ljava/lang/Object;",
+        "owner_class": "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;",
+        "code_off": 2533868,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/api/XYPosition;-><init>(Ljava/lang/String;Ljava/lang/String;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;->a:LL/p;",
+          "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;->b:LF3/k;",
+          "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;->c:Ljava/lang/reflect/Constructor;"
+        ],
+        "new_instances": [
+          "Lcom/mumu/gameassist/api/XYPosition;"
+        ],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;->d(LF3/r;Ljava/lang/Object;)V",
+        "owner_class": "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;",
+        "code_off": 2534300,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;->b:LF3/k;",
+          "Lcom/mumu/gameassist/api/XYPosition;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/XYPosition;->b:Ljava/lang/String;"
+        ],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/mumu/gameassist/api/XYPositionJsonAdapter;",
+        "code_off": 2534180,
+        "invoked_methods": [],
+        "string_refs": [
+          "GeneratedJsonAdapter(XYPosition)"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Li3/L;->b(Lc4/a;Lc4/a;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLQ/s;I)V",
+        "owner_class": "Li3/L;",
+        "code_off": 2949068,
+        "invoked_methods": [],
+        "string_refs": [
+          ", positionData="
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Li3/n0;->b(Lcom/mumu/gameassist/api/ExcessiveContentApiData;Ljava/util/HashMap;Ljava/lang/String;)Ljava/util/ArrayList;",
+        "owner_class": "Li3/n0;",
+        "code_off": 2973712,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/HeroLocation;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;Li3/s;ILkotlin/jvm/internal/DefaultConstructorMarker;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/ExcessiveContentApiData;->g:Lcom/mumu/gameassist/api/PositionApiData;",
+          "Lcom/mumu/gameassist/api/PositionApiData;->a:Ljava/util/List;",
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->b:Lcom/mumu/gameassist/api/XYPosition;",
+          "Lcom/mumu/gameassist/api/XYPosition;->b:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/XYPosition;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->a:Ljava/lang/String;"
+        ],
+        "new_instances": [
+          "Ljava/util/HashMap;",
+          "Ljava/util/ArrayList;",
+          "Lcom/mumu/gameassist/games/jcc/data/HeroLocation;"
+        ],
+        "tags": [
+          "position_model"
+        ]
+      },
+      {
+        "method": "Li3/n0;->n(Lcom/mumu/gameassist/api/LineupDetailData;Li3/X;)Lcom/mumu/gameassist/games/jcc/data/Lineup;",
+        "owner_class": "Li3/n0;",
+        "code_off": 2962644,
+        "invoked_methods": [
+          "Lcom/mumu/gameassist/games/jcc/data/HeroLocation;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;Li3/s;ILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+          "Lcom/mumu/gameassist/games/jcc/data/HeroEquipReplace;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+          "Lcom/mumu/gameassist/games/jcc/data/HeroReplace;-><init>(Ljava/lang/String;Ljava/lang/String;)V",
+          "Lcom/mumu/gameassist/games/jcc/data/GoopCommand;-><init>(IILcom/mumu/gameassist/games/jcc/data/Goop;Lcom/mumu/gameassist/games/jcc/data/Hero;ILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+          "Li3/N;->c(I)Lcom/mumu/gameassist/games/jcc/data/Hero;",
+          "Lcom/mumu/gameassist/games/jcc/data/HexBuff;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+          "Lcom/mumu/gameassist/games/jcc/data/Lineup;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/mumu/gameassist/games/jcc/data/HexBuff;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/games/jcc/data/HeroEquipReplace;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/HashSet;Ljava/util/HashSet;Ljava/util/HashSet;Ljava/util/HashSet;Ljava/util/HashSet;Ljava/util/ArrayList;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [
+          "Lcom/mumu/gameassist/api/LineupApiData;->g:Lcom/mumu/gameassist/api/PositionApiData;",
+          "Lcom/mumu/gameassist/api/PositionApiData;->a:Ljava/util/List;",
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->b:Lcom/mumu/gameassist/api/XYPosition;",
+          "Lcom/mumu/gameassist/api/XYPosition;->b:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/XYPosition;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/ChessPositionApi;->a:Ljava/lang/String;",
+          "Lcom/mumu/gameassist/api/LineupDetailData;->h:Lcom/mumu/gameassist/api/OuterPositionApiData;",
+          "Lcom/mumu/gameassist/api/OuterPositionApiData;->b:Ljava/util/List;"
+        ],
+        "new_instances": [
+          "Ljava/util/HashMap;",
+          "Ljava/util/ArrayList;",
+          "Lcom/mumu/gameassist/games/jcc/data/HeroLocation;",
+          "Lcom/mumu/gameassist/games/jcc/data/HeroEquipReplace;",
+          "Lcom/mumu/gameassist/games/jcc/data/HeroReplace;",
+          "Lcom/mumu/gameassist/games/jcc/data/GoopCommand;",
+          "Lcom/mumu/gameassist/games/jcc/data/HexBuff;",
+          "Lcom/mumu/gameassist/games/jcc/data/Lineup;"
+        ],
+        "tags": [
+          "jcc_live_candidate_model",
+          "position_model"
+        ]
+      }
+    ],
+    "screen_capture": [
+      {
+        "method": "LC/N0;->w(Ljava/lang/Object;)Ljava/lang/Object;",
+        "owner_class": "LC/N0;",
+        "code_off": 1017720,
+        "invoked_methods": [
+          "Landroid/graphics/Paint;->isFilterBitmap()Z"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LC/a;->w(Ljava/lang/Object;)Ljava/lang/Object;",
+        "owner_class": "LC/a;",
+        "code_off": 944144,
+        "invoked_methods": [
+          "Lg0/b;->getLayoutDirection()LY0/m;",
+          "Landroid/graphics/Bitmap;->getWidth()I",
+          "Landroid/graphics/Bitmap;->getHeight()I",
+          "Landroid/graphics/Bitmap;->prepareToDraw()V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lp0/B;->s(Lz2/h;Lu2/a;LA2/h;LA2/g;)Lu2/b;",
+        "owner_class": "Lp0/B;",
+        "code_off": 3487032,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lp0/B;->u(Lz2/h;Ljava/lang/Object;Lz2/o;Ll2/f;)Lu2/a;",
+        "owner_class": "Lp0/B;",
+        "code_off": 3486448,
+        "invoked_methods": [
+          "LA3/d;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LC0/o0;->b(Landroid/graphics/ImageDecoder$Source;Landroid/graphics/ImageDecoder$OnHeaderDecodedListener;)Landroid/graphics/Bitmap;",
+        "owner_class": "LC0/o0;",
+        "code_off": 1114752,
+        "invoked_methods": [
+          "Landroid/graphics/ImageDecoder;->decodeBitmap(Landroid/graphics/ImageDecoder$Source;Landroid/graphics/ImageDecoder$OnHeaderDecodedListener;)Landroid/graphics/Bitmap;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LC2/j;-><clinit>()V",
+        "owner_class": "LC2/j;",
+        "code_off": 1134856,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LC2/m;-><clinit>()V",
+        "owner_class": "LC2/m;",
+        "code_off": 1136908,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LC2/m;->a(Landroid/graphics/drawable/Drawable;)I",
+        "owner_class": "LC2/m;",
+        "code_off": 1136764,
+        "invoked_methods": [
+          "Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;",
+          "Landroid/graphics/Bitmap;->getHeight()I"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LC2/m;->b(Landroid/graphics/drawable/Drawable;)I",
+        "owner_class": "LC2/m;",
+        "code_off": 1136836,
+        "invoked_methods": [
+          "Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;",
+          "Landroid/graphics/Bitmap;->getWidth()I"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LC4/e;->n(I)V",
+        "owner_class": "LC4/e;",
+        "code_off": 1140584,
+        "invoked_methods": [
+          "Landroid/graphics/Paint;->setFilterBitmap(Z)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LH/i;->v(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "owner_class": "LH/i;",
+        "code_off": 1325420,
+        "invoked_methods": [
+          "Lj0/f;-><init>(Landroid/graphics/Bitmap;)V",
+          "Li3/N;->d(I)Lcom/mumu/gameassist/games/jcc/data/Equipment;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;"
+        ],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LH4/d;->r(Lh/p0;Landroid/content/Context;I)Landroid/graphics/drawable/LayerDrawable;",
+        "owner_class": "LH4/d;",
+        "code_off": 1365980,
+        "invoked_methods": [
+          "Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;",
+          "Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V",
+          "Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;",
+          "Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V",
+          "Landroid/graphics/drawable/BitmapDrawable;->setTileModeX(Landroid/graphics/Shader$TileMode;)V",
+          "Landroid/view/ViewGroup;->onRequestFocusInDescendants(ILandroid/graphics/Rect;)Z"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Landroid/graphics/drawable/BitmapDrawable;"
+        ],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LK1/a;-><clinit>()V",
+        "owner_class": "LK1/a;",
+        "code_off": 1525396,
+        "invoked_methods": [
+          "Landroidx/coordinatorlayout/widget/CoordinatorLayout;->h(Lj1/d;Landroid/graphics/Rect;II)V",
+          "Landroid/graphics/BitmapFactory$Options;-><init>()V",
+          "Li3/r;->e(Ljava/lang/String;Ljava/lang/String;)Lcom/mumu/gameassist/games/jcc/data/LineupConfig;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lh4/D;->Q(ILQ/s;)Lo0/b;",
+        "owner_class": "Lh4/D;",
+        "code_off": 2888472,
+        "invoked_methods": [
+          "Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;",
+          "Lj0/f;-><init>(Landroid/graphics/Bitmap;)V",
+          "Landroid/graphics/Bitmap;->getWidth()I",
+          "Landroid/graphics/Bitmap;->getHeight()I"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;"
+        ],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LN0/i;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V",
+        "owner_class": "LN0/i;",
+        "code_off": 1646304,
+        "invoked_methods": [
+          "Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LN0/i;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V",
+        "owner_class": "LN0/i;",
+        "code_off": 1646160,
+        "invoked_methods": [
+          "Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LN0/i;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V",
+        "owner_class": "LN0/i;",
+        "code_off": 1646208,
+        "invoked_methods": [
+          "Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LN0/i;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V",
+        "owner_class": "LN0/i;",
+        "code_off": 1646256,
+        "invoked_methods": [
+          "Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LN0/i;->drawBitmap([IIIFFIIZLandroid/graphics/Paint;)V",
+        "owner_class": "LN0/i;",
+        "code_off": 1646352,
+        "invoked_methods": [
+          "Landroid/graphics/Canvas;->drawBitmap([IIIFFIIZLandroid/graphics/Paint;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LN0/i;->drawBitmap([IIIIIIIZLandroid/graphics/Paint;)V",
+        "owner_class": "LN0/i;",
+        "code_off": 1646428,
+        "invoked_methods": [
+          "Landroid/graphics/Canvas;->drawBitmap([IIIIIIIZLandroid/graphics/Paint;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LN0/i;->drawBitmapMesh(Landroid/graphics/Bitmap;II[FI[IILandroid/graphics/Paint;)V",
+        "owner_class": "LN0/i;",
+        "code_off": 1646504,
+        "invoked_methods": [
+          "Landroid/graphics/Canvas;->drawBitmapMesh(Landroid/graphics/Bitmap;II[FI[IILandroid/graphics/Paint;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LN0/i;->getMaximumBitmapHeight()I",
+        "owner_class": "LN0/i;",
+        "code_off": 1645216,
+        "invoked_methods": [
+          "Landroid/graphics/Canvas;->getMaximumBitmapHeight()I"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LN0/i;->getMaximumBitmapWidth()I",
+        "owner_class": "LN0/i;",
+        "code_off": 1645264,
+        "invoked_methods": [
+          "Landroid/graphics/Canvas;->getMaximumBitmapWidth()I"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LN0/i;->setBitmap(Landroid/graphics/Bitmap;)V",
+        "owner_class": "LN0/i;",
+        "code_off": 1649192,
+        "invoked_methods": [
+          "Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LW2/g;->draw(Landroid/graphics/Canvas;)V",
+        "owner_class": "LW2/g;",
+        "code_off": 2109256,
+        "invoked_methods": [
+          "LW2/g;->f()Landroid/graphics/RectF;",
+          "Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V",
+          "Landroid/graphics/RectF;->inset(FF)V",
+          "LW2/m;->a(LW2/k;FLandroid/graphics/RectF;LU0/i;Landroid/graphics/Path;)V",
+          "LW2/g;->a(Landroid/graphics/RectF;Landroid/graphics/Path;)V",
+          "LW2/k;->c(Landroid/graphics/RectF;)Z",
+          "Landroid/graphics/RectF;->width()F",
+          "Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;",
+          "Landroid/graphics/Rect;->width()I",
+          "Landroid/graphics/RectF;->height()F",
+          "Landroid/graphics/Rect;->height()I",
+          "Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;",
+          "Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V",
+          "Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V",
+          "Landroid/graphics/Bitmap;->recycle()V",
+          "LW2/g;->d(Landroid/graphics/Canvas;Landroid/graphics/Paint;Landroid/graphics/Path;LW2/k;Landroid/graphics/RectF;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "LR2/b;->h(Z)V",
+        "owner_class": "LR2/b;",
+        "code_off": 1983720,
+        "invoked_methods": [
+          "Landroid/graphics/Rect;->centerY()I",
+          "Landroid/graphics/Rect;->centerX()I",
+          "Landroid/graphics/Bitmap;->recycle()V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "La/a;->t(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap$Config;LA2/h;LA2/g;Z)Landroid/graphics/Bitmap;",
+        "owner_class": "La/a;",
+        "code_off": 2171924,
+        "invoked_methods": [
+          "Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;",
+          "Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;",
+          "Landroid/graphics/Bitmap;->getWidth()I",
+          "Landroid/graphics/Bitmap;->getHeight()I",
+          "Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;",
+          "Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;",
+          "Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "La/a;->w(Lg0/d;F)Lj0/f;",
+        "owner_class": "La/a;",
+        "code_off": 2174244,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->getWidth()I",
+          "Landroid/graphics/Bitmap;->getHeight()I",
+          "Lg0/b;->getLayoutDirection()LY0/m;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Landroidx/compose/animation/a;->a(Ln/i0;Lc4/k;Lc0/p;Lm/A;Lm/B;Lc4/n;LY/d;LQ/s;I)V",
+        "owner_class": "Landroidx/compose/animation/a;",
+        "code_off": 2240568,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Landroidx/core/graphics/drawable/IconCompat;->toString()Ljava/lang/String;",
+        "owner_class": "Landroidx/core/graphics/drawable/IconCompat;",
+        "code_off": 2304000,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->getWidth()I",
+          "Landroid/graphics/Bitmap;->getHeight()I"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->detect(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;I)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389252,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine;->detect(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;IIFFFZZ)Lcom/benjaminwan/ocrlibrary/OcrResult;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;->createFromParcel(Landroid/os/Parcel;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;",
+        "code_off": 2389768,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;-><init>(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;",
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;"
+        ],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;-><init>(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390880,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrOutput;-><init>()V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->copy$default(Lcom/benjaminwan/ocrlibrary/OcrResult;DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;ILjava/lang/Object;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390212,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;->copy(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)Lcom/benjaminwan/ocrlibrary/OcrResult;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->component3()Landroid/graphics/Bitmap;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390012,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->copy(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390332,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;-><init>(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;"
+        ],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390060,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->getBoxImg()Landroid/graphics/Bitmap;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390036,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->hashCode()I",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390520,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->setBoxImg(Landroid/graphics/Bitmap;)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390956,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390672,
+        "invoked_methods": [],
+        "string_refs": [
+          "OcrResult(dbNetTime="
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->writeToParcel(Landroid/os/Parcel;I)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2391044,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;->writeToParcel(Landroid/os/Parcel;I)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lh/t;->setImageBitmap(Landroid/graphics/Bitmap;)V",
+        "owner_class": "Lh/t;",
+        "code_off": 2794380,
+        "invoked_methods": [
+          "Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lcom/google/android/material/textfield/TextInputLayout;->setHintInternal(Ljava/lang/CharSequence;)V",
+        "owner_class": "Lcom/google/android/material/textfield/TextInputLayout;",
+        "code_off": 2449404,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->recycle()V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ld3/a;->a(Landroid/graphics/Bitmap;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "owner_class": "Ld3/a;",
+        "code_off": 2619612,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;",
+          "Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;",
+          "Landroid/graphics/Bitmap;->getWidth()I",
+          "Landroid/graphics/Bitmap;->getHeight()I",
+          "Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;",
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine;->getPadding()I",
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine;->getDoAngle()Z",
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine;->getMostAngle()Z",
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine;->setPadding(I)V",
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine;->setDoAngle(Z)V",
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine;->setMostAngle(Z)V",
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine;->detect(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;I)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;->getTextBlocks()Ljava/util/ArrayList;",
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;->getText()Ljava/lang/String;",
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;->getBoxScore()F",
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;->getAngleIndex()I"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Ld3/a;->b(Landroid/graphics/Bitmap;Ljava/lang/Integer;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "owner_class": "Ld3/a;",
+        "code_off": 2619992,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;",
+          "Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;",
+          "Landroid/graphics/Bitmap;->getWidth()I",
+          "Landroid/graphics/Bitmap;->getHeight()I",
+          "Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;",
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine;->detect(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;I)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;->getTextBlocks()Ljava/util/ArrayList;",
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;->getText()Ljava/lang/String;",
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;->getBoxPoint()Ljava/util/ArrayList;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lh/U;->setFilterBitmap(Z)V",
+        "owner_class": "Lh/U;",
+        "code_off": 2808588,
+        "invoked_methods": [
+          "Landroid/graphics/drawable/Drawable;->setFilterBitmap(Z)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lh/u;->setImageBitmap(Landroid/graphics/Bitmap;)V",
+        "owner_class": "Lh/u;",
+        "code_off": 2795368,
+        "invoked_methods": [
+          "Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lh3/n;->k(Lh3/p;Ljava/lang/Boolean;)V",
+        "owner_class": "Lh3/n;",
+        "code_off": 2876424,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Li2/h;->k(Landroid/widget/FrameLayout;Li2/v;Li2/v;)Landroid/animation/Animator;",
+        "owner_class": "Li2/h;",
+        "code_off": 2913228,
+        "invoked_methods": [
+          "Landroid/graphics/RectF;-><init>(FFFF)V",
+          "Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z",
+          "Landroid/graphics/RectF;->width()F",
+          "Landroid/graphics/RectF;->height()F",
+          "Li2/t;->a(Landroid/graphics/Picture;)Landroid/graphics/Bitmap;",
+          "Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;",
+          "Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V",
+          "Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V",
+          "Landroid/view/View;->getLocationOnScreen([I)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Landroid/graphics/RectF;"
+        ],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Li2/t;->a(Landroid/graphics/Picture;)Landroid/graphics/Bitmap;",
+        "owner_class": "Li2/t;",
+        "code_off": 2918432,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Picture;)Landroid/graphics/Bitmap;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Li3/H;->c(LU3/c;)Ljava/lang/Object;",
+        "owner_class": "Li3/H;",
+        "code_off": 2940260,
+        "invoked_methods": [
+          "Landroid/graphics/Rect;-><init>(IIII)V",
+          "Lv3/j;->i(Landroid/graphics/Rect;LU3/c;)Ljava/lang/Object;",
+          "Ld3/a;->a(Landroid/graphics/Bitmap;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;->getTextBlocks()Ljava/util/ArrayList;",
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;->getText()Ljava/lang/String;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Landroid/graphics/Rect;"
+        ],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Li3/H;->d(LU3/c;)Ljava/lang/Object;",
+        "owner_class": "Li3/H;",
+        "code_off": 2940736,
+        "invoked_methods": [
+          "LI0/f;->onScrollCaptureStart(Landroid/view/ScrollCaptureSession;Landroid/os/CancellationSignal;Ljava/lang/Runnable;)V",
+          "Landroid/graphics/Rect;-><init>(IIII)V",
+          "Lv3/j;->i(Landroid/graphics/Rect;LU3/c;)Ljava/lang/Object;",
+          "Ld3/a;->b(Landroid/graphics/Bitmap;Ljava/lang/Integer;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;->getTextBlocks()Ljava/util/ArrayList;",
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;->getText()Ljava/lang/String;",
+          "Lcom/benjaminwan/ocrlibrary/Point;-><init>(II)V",
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;->getBoxRect(Lcom/benjaminwan/ocrlibrary/Point;)Landroid/graphics/Rect;",
+          "Landroid/graphics/Rect;->width()I",
+          "Landroid/graphics/Rect;->height()I"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Landroid/graphics/Rect;",
+          "Lcom/benjaminwan/ocrlibrary/Point;"
+        ],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Li3/H;->e(LU3/c;)Ljava/lang/Object;",
+        "owner_class": "Li3/H;",
+        "code_off": 2941268,
+        "invoked_methods": [
+          "Landroid/graphics/Rect;-><init>(IIII)V",
+          "Lv3/j;->i(Landroid/graphics/Rect;LU3/c;)Ljava/lang/Object;",
+          "Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;",
+          "Lv3/I;->g(Landroid/graphics/Bitmap;)Z",
+          "Ld3/a;->b(Landroid/graphics/Bitmap;Ljava/lang/Integer;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+          "Li3/H;->b(Landroid/graphics/Rect;Lcom/benjaminwan/ocrlibrary/OcrResult;)Ljava/lang/String;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Landroid/graphics/Rect;"
+        ],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Li3/L;->a(Ln2/a;Lc0/p;Lc4/k;Lc4/k;Lc0/d;Lz0/j;FLj0/t;IZLQ/s;II)V",
+        "owner_class": "Li3/L;",
+        "code_off": 2947736,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;"
+        ],
+        "tags": [
+          "screen_capture",
+          "jcc_live_candidate_model"
+        ]
+      },
+      {
+        "method": "Li3/L;->v(Lr2/a;Lz2/h;Lz2/o;Ll2/f;LU3/c;)Lr2/a;",
+        "owner_class": "Li3/L;",
+        "code_off": 2947208,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;",
+          "La/a;->t(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap$Config;LA2/h;LA2/g;Z)Landroid/graphics/Bitmap;",
+          "Ll2/a;-><init>(Landroid/graphics/Bitmap;Z)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Li5/g;->b(Lj0/f;I)Lo0/a;",
+        "owner_class": "Li5/g;",
+        "code_off": 2976720,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->getWidth()I",
+          "Landroid/graphics/Bitmap;->getHeight()I"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Li5/g;->c(Lc4/k;Lc4/a;Lr3/k;LQ/s;I)V",
+        "owner_class": "Li5/g;",
+        "code_off": 2979436,
+        "invoked_methods": [],
+        "string_refs": [
+          "takeScreenShot",
+          "takeScreenShot()V",
+          "screenshot"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Li5/g;->k(Ll2/j;Landroid/content/Context;I)Lo0/b;",
+        "owner_class": "Li5/g;",
+        "code_off": 2976808,
+        "invoked_methods": [
+          "Lj0/f;-><init>(Landroid/graphics/Bitmap;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lj0/o;->F(I)Landroid/graphics/Bitmap$Config;",
+        "owner_class": "Lj0/o;",
+        "code_off": 2999200,
+        "invoked_methods": [
+          "LG1/j;->onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lj0/o;->a(Lj0/f;)Lj0/b;",
+        "owner_class": "Lj0/o;",
+        "code_off": 3001744,
+        "invoked_methods": [
+          "Lj0/o;->i(Lj0/f;)Landroid/graphics/Bitmap;",
+          "Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lj0/o;->e(III)Lj0/f;",
+        "owner_class": "Lj0/o;",
+        "code_off": 3001800,
+        "invoked_methods": [
+          "Lj0/o;->F(I)Landroid/graphics/Bitmap$Config;",
+          "Landroid/graphics/Bitmap;->createBitmap(Landroid/util/DisplayMetrics;IILandroid/graphics/Bitmap$Config;ZLandroid/graphics/ColorSpace;)Landroid/graphics/Bitmap;",
+          "Lj0/f;-><init>(Landroid/graphics/Bitmap;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lj0/o;->i(Lj0/f;)Landroid/graphics/Bitmap;",
+        "owner_class": "Lj0/o;",
+        "code_off": 2999152,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lj0/b;->e(Lj0/f;JLC4/e;)V",
+        "owner_class": "Lj0/b;",
+        "code_off": 2995236,
+        "invoked_methods": [
+          "Lj0/o;->i(Lj0/f;)Landroid/graphics/Bitmap;",
+          "Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lj0/b;->h(Lj0/f;JJJJLC4/e;)V",
+        "owner_class": "Lj0/b;",
+        "code_off": 2995320,
+        "invoked_methods": [
+          "Landroid/graphics/Rect;-><init>()V",
+          "Lj0/o;->i(Lj0/f;)Landroid/graphics/Bitmap;",
+          "Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Landroid/graphics/Rect;"
+        ],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lj0/f;-><init>(Landroid/graphics/Bitmap;)V",
+        "owner_class": "Lj0/f;",
+        "code_off": 2996752,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Lj0/f;->a()I",
+        "owner_class": "Lj0/f;",
+        "code_off": 2996656,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll0/b;->a(Ll0/b;JLl0/c;FLj0/t;I)LC4/e;",
+        "owner_class": "Ll0/b;",
+        "code_off": 3202272,
+        "invoked_methods": [
+          "Landroid/graphics/Paint;->isFilterBitmap()Z"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll0/b;->b(Lj0/o;Ll0/c;FLj0/t;II)LC4/e;",
+        "owner_class": "Ll0/b;",
+        "code_off": 3202476,
+        "invoked_methods": [
+          "Landroid/graphics/Paint;->isFilterBitmap()Z"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll0/b;->x(JJJFILj0/i;FLj0/t;I)V",
+        "owner_class": "Ll0/b;",
+        "code_off": 3203520,
+        "invoked_methods": [
+          "Landroid/graphics/Paint;->isFilterBitmap()Z"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll2/a;-><init>(Landroid/graphics/Bitmap;Z)V",
+        "owner_class": "Ll2/a;",
+        "code_off": 3206948,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll2/a;->a()I",
+        "owner_class": "Ll2/a;",
+        "code_off": 3206536,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->getWidth()I"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll2/a;->b()I",
+        "owner_class": "Ll2/a;",
+        "code_off": 3206504,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->getHeight()I"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll2/a;->c()J",
+        "owner_class": "Ll2/a;",
+        "code_off": 3206684,
+        "invoked_methods": [
+          "Landroid/graphics/Bitmap;->isRecycled()Z",
+          "Landroid/graphics/Bitmap;->getAllocationByteCount()I",
+          "Landroid/graphics/Bitmap;->getWidth()I",
+          "Landroid/graphics/Bitmap;->getHeight()I",
+          "Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll2/a;->d(Landroid/graphics/Canvas;)V",
+        "owner_class": "Ll2/a;",
+        "code_off": 3206980,
+        "invoked_methods": [
+          "Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll2/a;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Ll2/a;",
+        "code_off": 3206400,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll2/a;->hashCode()I",
+        "owner_class": "Ll2/a;",
+        "code_off": 3206568,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll2/a;->toString()Ljava/lang/String;",
+        "owner_class": "Ll2/a;",
+        "code_off": 3206616,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll2/m;->b(Ll2/j;Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;",
+        "owner_class": "Ll2/m;",
+        "code_off": 3208532,
+        "invoked_methods": [
+          "Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Landroid/graphics/drawable/BitmapDrawable;"
+        ],
+        "tags": [
+          "screen_capture"
+        ]
+      },
+      {
+        "method": "Ll2/m;->c(Landroid/graphics/drawable/Drawable;)Ll2/j;",
+        "owner_class": "Ll2/m;",
+        "code_off": 3209152,
+        "invoked_methods": [
+          "Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;",
+          "Ll2/a;-><init>(Landroid/graphics/Bitmap;Z)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture"
+        ]
+      }
+    ],
+    "ocr_loop": [
+      {
+        "method": "LC0/O0;-><init>(Lm0/b;Lj0/y;LC0/B;Lc4/n;LB0/j0;)V",
+        "owner_class": "LC0/O0;",
+        "code_off": 1123624,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "LI0/j;->b(FLU3/c;)Ljava/lang/Object;",
+        "owner_class": "LI0/j;",
+        "code_off": 1382624,
+        "invoked_methods": [],
+        "string_refs": [
+          ", roundOcrText="
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "LQ3/a;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;",
+        "owner_class": "LQ3/a;",
+        "code_off": 1898620,
+        "invoked_methods": [
+          "Li3/H;->b(Landroid/graphics/Rect;Lcom/benjaminwan/ocrlibrary/OcrResult;)Ljava/lang/String;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "LZ0/c;-><init>([F[F)V",
+        "owner_class": "LZ0/c;",
+        "code_off": 2156384,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine$Companion;-><init>()V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine$Companion;",
+        "code_off": 2389156,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine$Companion;",
+        "code_off": 2389180,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine$Companion;-><init>()V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;-><clinit>()V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389428,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine$Companion;"
+        ],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;-><init>(Landroid/content/Context;)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389464,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->detect(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;I)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389252,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrEngine;->detect(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;IIFFFZZ)Lcom/benjaminwan/ocrlibrary/OcrResult;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->getBoxScoreThresh()F",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389332,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->getBoxThresh()F",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389356,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->getDoAngle()Z",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389204,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->getMostAngle()Z",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389228,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->getPadding()I",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389404,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->getUnClipRatio()F",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389380,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->setBoxScoreThresh(F)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389544,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->setBoxThresh(F)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389568,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->setDoAngle(Z)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389592,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->setMostAngle(Z)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389616,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->setPadding(I)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389640,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrEngine;->setUnClipRatio(F)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+        "code_off": 2389664,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;-><init>()V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;",
+        "code_off": 2389988,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;->createFromParcel(Landroid/os/Parcel;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;",
+        "code_off": 2389768,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;-><init>(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;",
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;"
+        ],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;",
+        "code_off": 2389932,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;->createFromParcel(Landroid/os/Parcel;)Lcom/benjaminwan/ocrlibrary/OcrResult;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;->newArray(I)[Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;",
+        "code_off": 2389908,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;->newArray(I)[Ljava/lang/Object;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;",
+        "code_off": 2389960,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;->newArray(I)[Lcom/benjaminwan/ocrlibrary/OcrResult;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;-><clinit>()V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390848,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;-><init>()V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;"
+        ],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;-><init>(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390880,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrOutput;-><init>()V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->copy$default(Lcom/benjaminwan/ocrlibrary/OcrResult;DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;ILjava/lang/Object;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390212,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;->copy(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)Lcom/benjaminwan/ocrlibrary/OcrResult;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->component1()D",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390404,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->component2()Ljava/util/ArrayList;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390800,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->component3()Landroid/graphics/Bitmap;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390012,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->component4()D",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390428,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->component5()Ljava/lang/String;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390624,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->copy(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390332,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;-><init>(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/benjaminwan/ocrlibrary/OcrResult;"
+        ],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->describeContents()I",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390500,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390060,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->getBoxImg()Landroid/graphics/Bitmap;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390036,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->getDbNetTime()D",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390452,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->getDetectTime()D",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390476,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->getStrRes()Ljava/lang/String;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390648,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->getTextBlocks()Ljava/util/ArrayList;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390824,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->hashCode()I",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390520,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->setBoxImg(Landroid/graphics/Bitmap;)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390956,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->setDetectTime(D)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390988,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->setStrRes(Ljava/lang/String;)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2391012,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->toString()Ljava/lang/String;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2390672,
+        "invoked_methods": [],
+        "string_refs": [
+          "OcrResult(dbNetTime="
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/OcrResult;->writeToParcel(Landroid/os/Parcel;I)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "code_off": 2391044,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;->writeToParcel(Landroid/os/Parcel;I)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "screen_capture",
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;-><init>()V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;",
+        "code_off": 2392188,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;->createFromParcel(Landroid/os/Parcel;)Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;",
+        "code_off": 2391956,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;-><init>(Ljava/util/ArrayList;FIFDLjava/lang/String;[FDD)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Ljava/util/ArrayList;",
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;"
+        ],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;",
+        "code_off": 2392132,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;->createFromParcel(Landroid/os/Parcel;)Lcom/benjaminwan/ocrlibrary/TextBlock;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;->newArray(I)[Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;",
+        "code_off": 2392108,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;->newArray(I)[Ljava/lang/Object;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;",
+        "code_off": 2392160,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;->newArray(I)[Lcom/benjaminwan/ocrlibrary/TextBlock;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;-><clinit>()V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393916,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;-><init>()V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;"
+        ],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;-><init>(Ljava/util/ArrayList;FIFDLjava/lang/String;[FDD)V",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393948,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->copy$default(Lcom/benjaminwan/ocrlibrary/TextBlock;Ljava/util/ArrayList;FIFDLjava/lang/String;[FDDILjava/lang/Object;)Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2392768,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;->copy(Ljava/util/ArrayList;FIFDLjava/lang/String;[FDD)Lcom/benjaminwan/ocrlibrary/TextBlock;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->getBoxRect$default(Lcom/benjaminwan/ocrlibrary/TextBlock;Lcom/benjaminwan/ocrlibrary/Point;ILjava/lang/Object;)Landroid/graphics/Rect;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2392212,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/Point;-><init>(II)V",
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;->getBoxRect(Lcom/benjaminwan/ocrlibrary/Point;)Landroid/graphics/Rect;"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/benjaminwan/ocrlibrary/Point;"
+        ],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->component1()Ljava/util/ArrayList;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393868,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->component2()F",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393236,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->component3()I",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393380,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->component4()F",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393260,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->component5()D",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393092,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->component6()Ljava/lang/String;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393592,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->component7()[F",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393332,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->component8()D",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393116,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->component9()D",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393140,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->copy(Ljava/util/ArrayList;FIFDLjava/lang/String;[FDD)Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2392996,
+        "invoked_methods": [
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;-><init>(Ljava/util/ArrayList;FIFDLjava/lang/String;[FDD)V"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Lcom/benjaminwan/ocrlibrary/TextBlock;"
+        ],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->describeContents()I",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393404,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->equals(Ljava/lang/Object;)Z",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2392528,
+        "invoked_methods": [],
+        "string_refs": [
+          "null cannot be cast to non-null type com.benjaminwan.ocrlibrary.TextBlock"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->getAngleIndex()I",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393424,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->getAngleScore()F",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393284,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->getAngleTime()D",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393164,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->getBlockTime()D",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393188,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->getBoxPoint()Ljava/util/ArrayList;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393892,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->getBoxRect(Lcom/benjaminwan/ocrlibrary/Point;)Landroid/graphics/Rect;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2392260,
+        "invoked_methods": [
+          "Landroid/graphics/Rect;-><init>(IIII)V",
+          "Lcom/benjaminwan/ocrlibrary/Point;->getX()I",
+          "Lcom/benjaminwan/ocrlibrary/Point;->getY()I"
+        ],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [
+          "Landroid/graphics/Rect;"
+        ],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->getBoxScore()F",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393308,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->getCharScores()[F",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393356,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->getCrnnTime()D",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393212,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->getText()Ljava/lang/String;",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393616,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      },
+      {
+        "method": "Lcom/benjaminwan/ocrlibrary/TextBlock;->hashCode()I",
+        "owner_class": "Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        "code_off": 2393448,
+        "invoked_methods": [],
+        "string_refs": [],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop"
+        ]
+      }
+    ],
+    "config_or_asset_loading": [
+      {
+        "method": "Lv3/h;-><init>(Ls5/u;Landroid/content/Context;)V",
+        "owner_class": "Lv3/h;",
+        "code_off": 3757252,
+        "invoked_methods": [],
+        "string_refs": [
+          "https://mumu.nie.netease.com/api/toolbox/item/config/ch_pp_ocrv3",
+          "ocr",
+          "https://mumu.nie.netease.com/api/toolbox/item/config/app_libs_rapidocr",
+          "libs/ocr",
+          "https://mumu.nie.netease.com/api/toolbox/item/config/tool_apk_jkchess_assist"
+        ],
+        "field_refs": [],
+        "new_instances": [],
+        "tags": [
+          "ocr_loop",
+          "config_or_asset_loading"
+        ]
+      }
+    ]
+  },
+  "current_claims": {
+    "can_claim": [
+      "JCC candidate data models are constructed or referenced inside DEX methods.",
+      "Screen capture/OCR related calls are method-level observable.",
+      "Config/asset loading candidate methods can be located for later full decompilation or instrumentation."
+    ],
+    "cannot_claim": [
+      "Method tags alone prove the exact ROI/state-machine format.",
+      "A direct board_units/bench_units snapshot API exists.",
+      "The X23B payload is decoded."
+    ]
+  }
+}

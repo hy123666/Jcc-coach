@@ -1,0 +1,276 @@
+{
+  "schema": "jcc-knowledge-profile-contract-v1",
+  "contract_version": "jcc-knowledge-profile-contract-v1",
+  "owner": "jcc-runtime",
+  "purpose": "Compile common doctrine, one active season, one patch source, and the optional Zhangmeng/Tencent Master+ Ranking Overlay into immutable, request-captured knowledge identities without copying full source data into Runtime tasks.",
+  "identity_model": {
+    "core_profile": {
+      "owns": [
+        "common concepts, formulas, doctrine, routes, choice framework, and retrieval policy",
+        "season-neutral deterministic calculation kernels and their closed input/output contracts",
+        "explicitly enabled major-season mechanics, schedules, aliases, manual variables, and mode extensions",
+        "minor-patch hard-data catalogs, deterministic typed indexes, recipes, and source provenance"
+      ],
+      "activation": "new_match_only for Start Match; lobby may adopt a promoted core profile at a turn boundary",
+      "active_match_policy": "A live match retains the exact core_profile_id captured at Start Match. Promotion cannot make that match combine old and new core assets."
+    },
+    "ranking_overlay": {
+      "owns": [
+        "Zhangmeng/Tencent Master+ trait strength, winning-lineup recipes, hero heat, and item evidence",
+        "one immutable current-version Ranking Overlay bound to an exact Core Profile",
+        "season-neutral typed indexes for bounded Runtime retrieval"
+      ],
+      "source_authority": "Zhangmeng/Tencent Master+ live rankings are the only production big-data authority. Platinum-Diamond and all-tier datasets are not downloaded or used.",
+      "activation": "A verified Ranking Overlay may become active through one atomic pointer replacement. Lobby sessions may adopt a compatible replacement at a static-capsule boundary; an active match never does.",
+      "in_flight_policy": "One Host turn retains the exact ranking_overlay_id captured before request construction. A completed response cannot mix artifacts from another overlay.",
+      "intelligence_compatibility": "intelligence is a command compatibility alias for rankings only. It does not name a production module, publication authority, or separate data lifecycle."
+    },
+    "recipe_catalog": {
+      "owns": [
+        "content-addressed winning and official Tencent curated popular recipe records bound to one exact Core Profile",
+        "typed champion rosters plus non-champion auxiliary rows and explicitly source-typed unresolved roster slots",
+        "recipe-only roles, items, positions, transitions, augments, lineup codes, and playbook text"
+      ],
+      "authority_boundary": "A recipe catalog has no lineup-strength, confidence, ordering, national-roster, or Cruise-scoring authority. Popular-only generations may be activated and queried while the compatible Master+ Ranking Overlay remains unavailable.",
+      "activation": "Ranking refresh atomically publishes active-ranking-closure.json with one compatible Ranking generation and recipe generation. active-generation.json and active-recipe-generation.json are compatibility mirrors only. Start Match captures the closure identity or an explicit unavailable identity.",
+      "auxiliary_unit_policy": "Rows explicitly typed as pet, summon, or another non-champion unit remain auxiliary_units inside their source recipe. They do not require champion-catalog membership, do not consume champion population unless the source explicitly says so, and do not invalidate otherwise legal champion rosters. A source row explicitly typed as a hero but absent from the current Core Catalog remains an external_roster_unit, occupies its declared roster slot, and carries unresolved Core identity; it cannot participate in typed champion matching or strength until mapped. Unresolved supplementary augment or item references are retained as auditable recipe-local references and do not discard an otherwise valid atomic roster."
+    },
+    "knowledge_snapshot": {
+      "required_fields": [
+        "core_profile_id",
+        "ranking_overlay_id",
+        "generation_id",
+        "captured_at",
+        "compatibility"
+      ],
+      "generation_id": "sha256 over core_profile_id and ranking_overlay_id",
+      "scope": "one request/decision turn",
+      "persistence": "Persist identity metadata only; complete payloads and full strategy packages exist only in bounded process memory while the owning turn is active."
+    }
+  },
+  "authored_layers": {
+    "common": {
+      "path": "data/game-knowledge/jcc/common/",
+      "must_be_season_neutral": true,
+      "controlled_semantic_vocabulary": "Common owns the closed, season-neutral names, value domains, and interpretation rules for lightweight semantic features. It defines vocabulary only and does not publish patch values, daily lineup observations, or current-match feature values.",
+      "standard_augment_schedule": {
+        "template_id": "standard_augment_v1",
+        "stages": ["2-1", "3-2", "4-2"],
+        "policy": "This is the common JCC default template. A season explicitly references it, replaces it with a declared schedule, or disables the mechanic; Runtime never infers a different schedule from entity data."
+      },
+      "standard_game_baseline": {
+        "source": "data/game-knowledge/jcc/common/standard-game-baseline.json",
+        "authority": "user_confirmed_common_standard",
+        "owns": ["core game concepts", "round schedule", "player damage", "economy", "progression", "star-up", "shop odds", "shared-pool sizes", "augment-tier probabilities", "single-hit damage rules"],
+        "policy": "The active season may replace a standard value only through an explicit verified exception; absence of an override means use Common."
+      }
+    },
+    "season": {
+      "path_pattern": "data/game-knowledge/jcc/seasons/<season_id>/season-descriptor.json",
+      "owns": "mechanic enablement, schedule references or replacements, season-only variables, special choices, aliases, exclusions, and mode extensions"
+    },
+    "patch": {
+      "path_pattern": "data/game-knowledge/jcc/seasons/<season_id>/patches/<patch_id>/",
+      "owns": "source manifest, catalogs, aliases, balance data, versioned entity values, explicit verified exceptions to Common shop/pool tables, mechanic parameters, shared season-specific companion decision assets, and exceptional audited strategy overrides",
+      "must_not_silently_change": "common doctrine or major-season mechanic timing",
+      "minor_patch_carry_forward": "A new minor patch declares its upstream catalog identity and expected counts in the patch source manifest. Current official catalogs rebuild version-owned entities. Patch-owned standard-mechanic overrides and entity-bound reward tables may inherit only explicitly listed roles from the prior promoted same-season immutable hard-data generation, then apply the current audited delta. Omitted roles fall back to their declared current source or Common authority; no shared verifier contains a per-version count map."
+    }
+  },
+  "controlled_semantic_feature_layer": {
+    "status": "lightweight_bounded_supporting_evidence",
+    "architecture_boundary": "This layer is distributed across the existing Common, Core compile, Ranking refresh, and Runtime Match mapping ownership boundaries. It is not a fifth data pipeline, lifecycle, publication authority, or persistence system.",
+    "ownership": {
+      "common": "Define the closed season-neutral feature vocabulary, value domains, and interpretation rules.",
+      "core": "Compile deterministic patch hard-data features from the selected immutable source generation into the Core Profile. Core features remain bound to exact typed entities and the Core identity.",
+      "ranking": "Compile current-day lineup-recipe features during the existing audited Ranking refresh and bind them to the exact Ranking Overlay and Core Profile.",
+      "runtime": "Map only the active Match's verified typed facts and captured Core/Ranking evidence into temporary current-match feature values. Runtime does not train, backfill, or publish a feature corpus, and the mapping expires with the Match."
+    },
+    "authority_order": "Typed entity identity, legality, source provenance, hard facts, current-match facts, national Master+ strength, and the registered five-component stage score remain authoritative. Semantic features may annotate or explain those inputs but cannot replace, contradict, synthesize, or silently reinterpret them.",
+    "forbidden_architectures": [
+      "a fifth data or update pipeline",
+      "GraphRAG or a generated knowledge graph",
+      "a vector database or embedding retrieval authority",
+      "LoRA, fine-tuning, or another learned model artifact"
+    ],
+    "weight_boundary": "Semantic features have no independent score weight and cannot add a sixth channel, change the existing meta/augment/item/tempo/board weights, or modify candidate order except through an already registered typed input inside its owning component.",
+    "fail_closed": "Unknown vocabulary, missing typed bindings, identity mismatch, ambiguous entity resolution, or unsupported feature values remain absent rather than being inferred by lexical retrieval or a Host model."
+  },
+  "rule_composition": {
+    "common_product_choice_contract": "data/runtime/jcc/common-choice-runtime-contract.json",
+    "season_runtime_contract": "data/game-knowledge/jcc/seasons/<season_id>/season-descriptor.json#runtime_contract",
+    "production_authority": "The active immutable Core Profile composes common product choice behavior with the selected major-season runtime contract. There is no legacy normal-rules.json or special-rules.json Runtime fallback.",
+    "default_augment_schedule": ["2-1", "3-2", "4-2"],
+    "season_policy": "A major season must explicitly inherit, replace, or disable the common augment schedule. Season-only mechanics never enter Common."
+  },
+  "identity_boundary": {
+    "runtime_identity": "season_id, patch_id, and runtime-local package_id are the only product rule keys and UI identities",
+    "source_identity": "source_package_id and upstream mode/season/version/framework remain provenance only",
+    "naming_policy": "Upstream identifiers that contain a different season number must never become local runtime package names, directories, rule selectors, or player-visible labels."
+  },
+  "compiler": {
+    "model": "one orchestrated build pipeline with patch-owned Source Adapters and independently testable deterministic phases, not one unbounded monolithic script",
+    "orchestrator": "tools/run-jcc-version-pipeline.mjs",
+    "architecture_pattern": "DataHub-style source adapters plus DVC-style explicit phases plus Nix/TUF-style immutable generations and atomic activation pointers, implemented locally without heavyweight framework dependencies",
+    "output_pattern": "data/game-knowledge/jcc/generated/<core_profile_id>/",
+    "pipeline_phases": ["source", "inspect", "compile", "rankings", "verify", "promote", "archive", "prune"],
+    "compatibility_phase_aliases": {
+      "intelligence": "rankings"
+    },
+    "requirements": [
+      "write candidates off the active path",
+      "publish normalized patch hard data under data/core-patches/jcc/generations/<hard_data_generation_id>/ and update only the patch candidate reference",
+      "separate read targets from write staging targets; registered source adapters must fail before deleting or writing when pointed at active or immutable generations, and retired direct builders must stay absent",
+      "serialize hard-data publication, patch-candidate pointer updates, and pruning under one lifecycle lock",
+      "validate the package manifest, content manifest, and every declared artifact hash before Runtime accepts an immutable generation",
+      "use relative paths in content identity",
+      "hash every retained artifact",
+      "compile the decision-input catalog, augment-stage authority, and Runtime catalog overlay into the same immutable Core Profile directory before promotion",
+      "exclude timestamps and absolute workspace paths from content identity",
+      "validate schemas, source tuple, path containment, common neutrality, schedule inheritance, collisions, and budgets before publication",
+    "derive upstream identity and expected catalog counts from the selected patch source manifest rather than per-version code branches",
+    "inherit only manifest-declared hard-data roles from the exact prior promoted same-season generation before applying a minor-patch delta, and reject missing, foreign-season, or mismatched parent generations",
+    "treat each catalog's declared primary source as its entity authority; a supplemental source may enrich matched canonical entities, but unmatched supplemental rows cannot enter production catalogs or indexes unless the patch manifest explicitly grants that source entity authority and a registered verifier proves the scope",
+    "when two sources use different names, accept an enrichment match only through declared aliases, identical normalized effect content, or a unique same-tier resource identity with matching effect-number signature; preserve every accepted match kind in the source audit",
+    "compile version reward tables and mechanic probabilities into a typed Runtime-only hard-data query index; preserve multi-item outcomes atomically and retrieve only tables relevant to the current question",
+    "cache supplemental trait-diversity candidates only during the patch source phase; the patch declares supported variables and branches, unsupported branches are discarded before publication, and each retained candidate remains one atomic roster in a small immutable descriptor plus bounded hash-addressed shards over the declared dimensions; bind relevant augments by objective id and support reference, and never duplicate complete candidate lists into augment rows or the static Host capsule",
+    "treat source candidate-row and repeated unit-slot-occurrence counts as cache diagnostics rather than distinct final-recommendation or champion counts; compile only the descriptor identity and hash, objective definitions, augment bindings, populations, shard manifest, and retrieval policy into the Core Profile; Runtime validates and loads at most the relevant shard on demand without making an online source request",
+    "never mutate source packages or the active generation on failure"
+    ],
+    "verification_model": {
+      "shared_profile": "data/runtime/jcc/harness-entrypoint-contract.json#verification_profiles.version_update",
+      "patch_profile": "The selected patch source_adapter.verifiers list owns source-format-specific commands and complete arguments.",
+      "boundary": "Shared Harness and compiler code must not register season-named source verification profiles. Promotion runs both the shared profile and the selected patch profile."
+    }
+  },
+  "candidate_activation_gate": {
+    "field": "activation_blockers",
+    "policy": "A candidate may be compiled and audited while release inputs are incomplete, but any non-empty activation_blockers list makes Core Profile promotion fail closed.",
+    "archived_season_policy": "A season registered in the root manifest season_archives map is frozen. Read-only inspect and shared verification remain available for audit; retained source-adapter verifiers also run when declared by the frozen patch manifest. Missing historical adapter verifiers are reported, not reconstructed. Source updates, compile --write candidate publication, and promotion must fail before changing candidate bytes or any immutable generation path.",
+    "major_season_requirement": "A new major season may promote without compatible Master+ rankings when its hard-data and Runtime blockers are clear. Missing rankings is an explicit unavailable capability, not an activation blocker; Runtime must not fall back to another season, patch, or Core Profile.",
+    "clearing_policy": "Only the deterministic data-update and release pipeline may remove a true activation blocker after its owning verifier passes; Runtime and the Host model cannot waive it. Ranking availability is published and audited separately."
+  },
+  "generation_retention": {
+    "lease_file": ".jcc-runtime-data/state/jcc-game-knowledge-generation-leases.json",
+    "start_match_capture": "Start Match resolves and serializes one validated Core Profile plus one compatible Master+ Ranking Overlay identity, or an explicit unavailable marker, before starting child work. Every watcher, card, OCR, Host, and decision consumer for that match receives that exact Knowledge Snapshot rather than resolving active pointers independently.",
+    "active_match_lease": "An active match retains its captured core_profile_id and ranking_overlay_id until clean Stop Match or clean shutdown. Supersession temporarily protects both old and replacement identities until the prior watcher and Host route are retired.",
+    "season_archive_registry": "data/game-knowledge/jcc/manifest.json#season_archives",
+    "archive_registration_policy": "Archive --write publishes only to seasons/<season_id>/archive-manifest.json and atomically registers that controlled relative path in the root game-knowledge manifest. A custom write output cannot bypass registration.",
+    "promotion_policy": "Core promotion freezes one candidate snapshot, binds registered verification and fresh compilation to its exact expected Core Profile id, and rejects candidate drift. Ranking Overlay publication is a separate optional lifecycle with its own immutable generation and atomic active pointer. A Core Profile may promote while rankings are unavailable; a new match must use only an exactly compatible overlay or the explicit unavailable marker. Promotion does not prune generations.",
+    "hard_data_generation_pattern": "data/core-patches/jcc/generations/<hard_data_generation_id>/",
+    "hard_data_reference_policy": "Every retained Core Profile bundle and every registered patch source manifest protects the exact immutable hard-data generation it references. Same-patch source refreshes publish a new generation and never mutate the generation used by the active Core Profile. The patch hard_data_candidate and all generation-owned source_artifacts must identify the same generation or compilation fails closed.",
+    "hard_data_lifecycle_lock": "Publication, patch-candidate pointer replacement, final existence validation, and hard-data pruning share one repository-local lifecycle lock so pruning cannot observe a published-but-unreferenced intermediate state. A lock whose recorded owner process is no longer alive may be reclaimed; a live-owner lock must never be preempted.",
+    "pruning_policy": "The separate pruning phase preserves active, candidate, archived, Match-bound, and bounded previous Core and Ranking Overlay generations before deleting only unreferenced generations. The pinned S18 DataTFT Core supplement remains retained as an immutable declared-role production input and is never treated as refreshable network data.",
+    "failure_policy": "A failed watcher/provider shutdown keeps the affected generation lease because an old owner may still read it. Cleanup must never infer safety from the active pointer alone."
+  },
+  "offline_s18_datatft_core_supplement": {
+    "status": "immutable_core_supplement",
+    "scope": "S18 offline-frozen static Core supplement snapshot",
+    "allowed_use": "Reproducible Core compilation for declared hard-data enrichment roles, plus audit and provenance for the materialized S18 supplement.",
+    "forbidden_use": ["Runtime retrieval", "daily or live Ranking publication", "network refresh", "ranking authority", "unbounded entity override"],
+    "retained_roles": ["database_hard_data_enrichment", "reward_rate_tables", "trait_tracking", "champion_item_sprite_expansions"],
+    "network_policy": "Runtime and production update networking must never access DataTFT; the vendored immutable snapshot may be read by the guarded Core Source Adapter."
+  },
+  "ranking_publication": {
+    "status": "production_big_data_authority",
+    "architecture_authority": true,
+    "generation_pattern": "data/live-rankings/jcc/generations/<ranking_overlay_id>/",
+    "pointer": "data/live-rankings/jcc/active-ranking-closure.json",
+    "candidate_pointer_pattern": "data/live-rankings/jcc/candidates/<core_profile_id>.json",
+    "target_resolution": "Developer refresh defaults to the latest compiled Core Profile candidate and otherwise the active Core Profile. Runtime bootstrap explicitly maintains the active profile. Explicit season, patch, and expected Core Profile id must agree with that profile; identity is never completed from a different active season.",
+    "minor_patch_binding": "The target patch identity comes from the internally compiled Core Profile. Tencent ranking APIs supply the latest available stat_date and do not need to declare the local patch label.",
+    "unavailable_policy": "When no compatible overlay exists, expose rankings unavailable with no stale date or foreign-season data. Core hard data, Common rules, deterministic math, structured choices, and non-ranking Runtime functions remain usable.",
+    "requirements": [
+      "build and fully verify the complete candidate before publishing",
+      "derive coverage thresholds from the selected Core Profile catalogs rather than a prior season's entity counts",
+      "reject ranking payloads whose hero-strength, lineup-unit, or main-carry identities do not positively match the selected Core Profile catalog",
+      "publish candidate-profile rankings as an immutable generation plus a candidate pointer without changing the active ranking pointer",
+      "activate a candidate ranking generation only when its exact Core Profile is promoted or already active",
+      "publish an atomic small pointer to an immutable directory",
+      "keep the active generation addressable during publication",
+      "use one exclusive refresh lease with bounded stale-owner recovery",
+      "preserve last-known-good pointer and generation on every failure",
+      "retain history under complete immutable bindings; Runtime must not read history files, while a promoted strategy index may carry a bounded same-binding trend summary with zero score and ordering authority",
+      "compute the Master+ strength gradient from current-day metrics only; appearance rate remains heat evidence and winning-lineup metrics remain recipe evidence",
+      "run optional semantic maintenance only through bounded isolated Host calls whose closed annotations cannot alter score, order, membership, source metrics, or publication authority; if a changed-lineup packet is split for transport, merge and validate all batches against the original full packet before publication"
+    ]
+  },
+  "retrieval": {
+    "typed_first": true,
+    "typed_authority": [
+      "formal ids and aliases",
+      "choice stage, tier, and category legality",
+      "two through six trait constraints and exact breakpoints",
+      "current-version mechanic parameters and entity-bound reward tables",
+      "atomic reward outcomes in which every reward inside one outcome is granted together",
+      "season-specific trait-diversity objectives and atomic roster candidates selected only by the patch-declared supported input dimensions",
+      "AND, OR, NOT, independent comparison groups, and role semantics",
+      "complete Master+ candidate-pool evaluation",
+      "national strength metrics and stage-adaptive five-component scoring",
+      "atomic canonical variants and main-carry/main-tank/member identity"
+    ],
+    "lexical_semantic_fallback": {
+      "engine": "MiniSearch",
+      "may_supply": [
+        "fuzzy entity candidates for explicit validation",
+        "playbook explanations",
+        "entry, exit, transition, and action conditions",
+        "function descriptions and scoped user Wiki evidence"
+      ],
+      "must_not": [
+        "invent or auto-confirm an ambiguous entity",
+        "drop a typed condition",
+        "alter a trait breakpoint or role",
+        "rank lineup strength",
+        "override current-patch hard facts or national Master+ evidence"
+      ]
+    }
+  },
+  "evidence_authority": {
+    "current_official_catalog": "entity membership, canonical ids, official names, tiers, and current effect text",
+    "supplemental_patch_sources": "stage availability, category labels, aliases, reward tables, mechanic parameters, and precomputed atomic companion rosters only after deterministic identity matching to the current official catalog; unmatched rows remain audit-only, companion roster metrics are objective-fit evidence rather than lineup-strength authority, and Runtime never fetches the source page online",
+    "national_master_plus_trait_rankings": "only lineup-strength authority and only user-visible top-four, top-one, and appearance statistics; trait_group.minor_traits_datas[].hero_list owns exact atomic roster membership",
+    "winning_lineups": "primary recipe enrichment only: carries, equipment priorities, transitions, augments, positions, and playbook fields for an existing national atomic roster; all recipe metrics are discarded",
+    "popular_lineups": "secondary recipe enrichment from one patch-manifest allowlisted official curated Tencent JSON source; used only when no winning exact/compatible recipe exists, never as strength or roster authority, and never from player/smart endpoints. A separate explicit Cruise query may inspect the captured popular-template catalog without live state, ranking matching, or scoring.",
+    "hero_rankings": "popularity, likely contest pressure, core/high-top-one/most-popular item packages",
+    "common_doctrine": "conditional reasoning method and soft priors that can be overridden by current verifiable match evidence",
+    "current_match": "stage, HP, economy, level, XP, choices, equipment, owned board/bench, user target, and commitment"
+  },
+  "decision_math": {
+    "service": "ui/electron/decision-math-service.js",
+    "kernel_authority": "data/game-knowledge/jcc/common/formulas.json and common/formula-runtime-specs.json",
+    "parameter_authority": "Common provides the authoritative standard shop odds, shared-pool sizes, progression, economy, player-damage, star-up, and single-hit damage rules. The captured Core Profile hard-data package provides champion values, item/augment/trait effects, caps, season-mechanic modifiers, and only explicit verified exceptions to Common.",
+    "composition_order": [
+      "resolve exact active-profile entities",
+      "read champion base values",
+      "fail closed when any explicitly supplied entity is missing or ambiguous",
+      "apply only modifiers whose compiled activation is explicitly unconditional",
+      "keep conditional effects explicit unless their trigger inputs are supplied",
+      "execute the registered Common formula",
+      "return value, assumptions, missing inputs, provenance, and confidence"
+    ],
+    "host_delivery": "Attach one bounded decision_math_context when the current user request has numeric/stat/probability intent or needs typed current-Core entity, lineup, transition, item, or augment strategy evidence. Bind it to the captured Core Profile id plus hard-data and catalog fingerprints. Compose every requested strategy domain, keep theorycraft distinct from ranking strength, and do not copy catalogs or persist full calculation inputs in queues or SQLite.",
+    "shop_probability_policy": "A depleted target-copy estimate requires the corresponding remaining total pool for that cost. Use the Common user-confirmed standard odds and pool sizes unless the active season supplies an explicit verified override; compiled copies are resolved Core Profile parameters, not independent authored authority.",
+    "season_extension_policy": "Every season mechanic enters through the selected descriptor, season catalog, and version parameter set; it never becomes a Common formula or a season-named Runtime code branch.",
+    "simulation_boundary": "This service composes deterministic values and bounded baselines. It is not an exact full-combat simulator and must expose excluded combat variables."
+  },
+  "budgets": {
+    "static_capsule_max_bytes": 262144,
+    "current_turn_delta_target_bytes": 1048576,
+    "current_turn_delta_max_bytes": 2097152,
+    "strategic_current_turn_delta_target_bytes": 4194304,
+    "strategic_current_turn_delta_max_bytes": 8388608,
+    "successful_diagnostic_max_bytes": 65536,
+    "absolute_budget_policy": "Ordinary turns target 1 MiB and fail closed above 2 MiB. Fixed strategic turns target 4 MiB and fail closed above 8 MiB. Environment or user configuration may lower these ceilings for testing or constrained devices but may never raise them.",
+    "full_sources_in_queue_or_sqlite": false
+  },
+  "retired_acceptance_paths": {
+    "hot_shard_packages": "Retired. Hard-data packages publish deterministic flat indexes and runtime_lookup_budgets; indexes/hot, runtime_hot_path_budgets, and route-shard format audits are not Runtime acceptance surfaces.",
+    "permanent_telemetry_artifacts": "Retired. Product acceptance uses bounded live-state, event, storage-budget, retention, and soak verifiers; it must not require permanent telemetry bundles, proxy fixtures, or an install/intake workflow.",
+    "diagnostic_replacement": "Fault diagnostics remain default-off, asynchronous, bounded, and retained for at most seven days. They cannot gate answer delivery or become review memory.",
+    "review_replacement": "Postgame review retains at most 20 compact structured summaries and never persists raw screenshots, complete live state, Host payloads, or permanent telemetry streams."
+  },
+  "migration": {
+    "status": "cutover_complete",
+    "deletion_gate": "No legacy authority, graph, or generated asset may be deleted until production, compiler, verifier, bootstrap, and product-gate references are all replaced and a clean build passes. After that gate passes, one-time migration scripts and shadow-parity verifiers are deleted rather than retained as active architecture."
+  }
+}

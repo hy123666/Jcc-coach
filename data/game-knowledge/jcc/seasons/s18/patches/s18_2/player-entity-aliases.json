@@ -1,0 +1,61 @@
+{
+  "schema": "jcc-patch-player-entity-aliases-v1",
+  "identity": {
+    "season_id": "s18",
+    "patch_id": "s18_2"
+  },
+  "binding_policy": "all_entries_must_bind_unique_current_core_entity",
+  "entries": [
+    { "id": "champion.1502", "entity_kind": "champion", "canonical_id": "1502", "canonical_name": "蕾欧娜", "aliases": ["日女"] },
+    { "id": "champion.1503", "entity_kind": "champion", "canonical_id": "1503", "canonical_name": "可酷伯", "aliases": ["老爷爷"] },
+    { "id": "champion.1504", "entity_kind": "champion", "canonical_id": "1504", "canonical_name": "雷克塞", "aliases": ["挖掘机"] },
+    { "id": "champion.1505", "entity_kind": "champion", "canonical_id": "1505", "canonical_name": "卡蜜尔", "aliases": ["剪刀腿"] },
+    { "id": "champion.1508", "entity_kind": "champion", "canonical_id": "1508", "canonical_name": "绯红树怪", "aliases": ["小红", "小红 buff"] },
+    { "id": "champion.1511", "entity_kind": "champion", "canonical_id": "1511", "canonical_name": "苍蓝哨戒", "aliases": ["小石头", "小蓝", "小蓝 buff"] },
+    { "id": "champion.1512", "entity_kind": "champion", "canonical_id": "1512", "canonical_name": "维迦", "aliases": ["小法师"] },
+    { "id": "champion.2505", "entity_kind": "champion", "canonical_id": "2505", "canonical_name": "约里克", "aliases": ["掘墓"] },
+
+    { "id": "champion.2500", "entity_kind": "champion", "canonical_id": "2500", "canonical_name": "峡谷迅捷蟹", "aliases": ["迅捷蟹"] },
+    { "id": "champion.2501", "entity_kind": "champion", "canonical_id": "2501", "canonical_name": "阿利斯塔", "aliases": ["牛头"] },
+    { "id": "champion.2502", "entity_kind": "champion", "canonical_id": "2502", "canonical_name": "瑟庄妮", "aliases": ["猪妹"] },
+    { "id": "champion.2504", "entity_kind": "champion", "canonical_id": "2504", "canonical_name": "伊莉丝", "aliases": ["蜘蛛"] },
+    { "id": "champion.2507", "entity_kind": "champion", "canonical_id": "2507", "canonical_name": "暗影狼", "aliases": ["三狼"] },
+    { "id": "champion.2508", "entity_kind": "champion", "canonical_id": "2508", "canonical_name": "沃里克", "aliases": ["狼人"] },
+    { "id": "champion.2510", "entity_kind": "champion", "canonical_id": "2510", "canonical_name": "凯特琳", "aliases": ["女警"] },
+    { "id": "champion.2511", "entity_kind": "champion", "canonical_id": "2511", "canonical_name": "乐芙兰", "aliases": ["妖姬"] },
+    { "id": "champion.2512", "entity_kind": "champion", "canonical_id": "2512", "canonical_name": "凯尔", "aliases": ["天使"] },
+    { "id": "champion.2513", "entity_kind": "champion", "canonical_id": "2513", "canonical_name": "魔沼蛙", "aliases": ["青蛙", "癞疙宝"] },
+
+    { "id": "champion.3500", "entity_kind": "champion", "canonical_id": "3500", "canonical_name": "赫卡里姆", "aliases": ["人马"] },
+    { "id": "champion.3502", "entity_kind": "champion", "canonical_id": "3502", "canonical_name": "费德提克", "aliases": ["稻草人"] },
+    { "id": "champion.3503", "entity_kind": "champion", "canonical_id": "3503", "canonical_name": "远古石甲虫", "aliases": ["石甲虫", "甲壳虫"] },
+    { "id": "champion.3504", "entity_kind": "champion", "canonical_id": "3504", "canonical_name": "雷恩加尔", "aliases": ["狮子狗"] },
+    { "id": "champion.3505", "entity_kind": "champion", "canonical_id": "3505", "canonical_name": "卡兹克", "aliases": ["螳螂"] },
+    { "id": "champion.3506", "entity_kind": "champion", "canonical_id": "3506", "canonical_name": "黛安娜", "aliases": ["皎月"] },
+    { "id": "champion.3507", "entity_kind": "champion", "canonical_id": "3507", "canonical_name": "易", "aliases": ["剑圣", "js"] },
+    { "id": "champion.3508", "entity_kind": "champion", "canonical_id": "3508", "canonical_name": "崔丝塔娜", "aliases": ["小炮"] },
+    { "id": "champion.3509", "entity_kind": "champion", "canonical_id": "3509", "canonical_name": "深红锋喙鸟", "aliases": ["鸡哥", "鸡爷", "小鸡"] },
+    { "id": "champion.3511", "entity_kind": "champion", "canonical_id": "3511", "canonical_name": "卡西奥佩娅", "aliases": ["蛇女"] },
+    { "id": "champion.3512", "entity_kind": "champion", "canonical_id": "3512", "canonical_name": "克格莫", "aliases": ["大嘴"] },
+    { "id": "champion.3515", "entity_kind": "champion", "canonical_id": "3515", "canonical_name": "拉莫斯", "aliases": ["龙龟"] },
+
+    { "id": "champion.4500", "entity_kind": "champion", "canonical_id": "4500", "canonical_name": "苍蓝雕纹魔像", "aliases": ["蓝 buff"] },
+    { "id": "champion.4504", "entity_kind": "champion", "canonical_id": "4504", "canonical_name": "墨菲特", "aliases": ["石头人"] },
+    { "id": "champion.4505", "entity_kind": "champion", "canonical_id": "4505", "canonical_name": "瑟提", "aliases": ["劲夫", "一拳超人"] },
+    { "id": "champion.4506", "entity_kind": "champion", "canonical_id": "4506", "canonical_name": "绯红印记树怪", "aliases": ["红 buff"] },
+    { "id": "champion.4507", "entity_kind": "champion", "canonical_id": "4507", "canonical_name": "奈德丽", "aliases": ["豹女", "奶大力"] },
+    { "id": "champion.4508", "entity_kind": "champion", "canonical_id": "4508", "canonical_name": "伊泽瑞尔", "aliases": ["EZ"] },
+    { "id": "champion.4509", "entity_kind": "champion", "canonical_id": "4509", "canonical_name": "厄斐琉斯", "aliases": ["月男", "厄斐", "琉斯"] },
+    { "id": "champion.4510", "entity_kind": "champion", "canonical_id": "4510", "canonical_name": "希维尔", "aliases": ["轮子妈"] },
+    { "id": "champion.4511", "entity_kind": "champion", "canonical_id": "4511", "canonical_name": "阿狸", "aliases": ["狐狸"] },
+    { "id": "champion.4513", "entity_kind": "champion", "canonical_id": "4513", "canonical_name": "索拉卡", "aliases": ["奶妈"] },
+
+    { "id": "champion.5450", "entity_kind": "champion", "canonical_id": "5450", "canonical_name": "茂凯", "aliases": ["大树"] },
+    { "id": "champion.5451", "entity_kind": "champion", "canonical_id": "5451", "canonical_name": "塔里克", "aliases": ["宝石", "宝石骑士"] },
+    { "id": "champion.5453", "entity_kind": "champion", "canonical_id": "5453", "canonical_name": "凯南", "aliases": ["电老鼠"] },
+    { "id": "champion.5454", "entity_kind": "champion", "canonical_id": "5454", "canonical_name": "艾希", "aliases": ["寒冰"] },
+    { "id": "champion.5456", "entity_kind": "champion", "canonical_id": "5456", "canonical_name": "拉露恩", "aliases": ["厄斐琉斯他哥"] },
+    { "id": "champion.5458", "entity_kind": "champion", "canonical_id": "5458", "canonical_name": "远古巨龙", "aliases": ["龙", "大龙"] },
+    { "id": "champion.5459", "entity_kind": "champion", "canonical_id": "5459", "canonical_name": "拉克丝", "aliases": ["光辉"] }
+  ]
+}

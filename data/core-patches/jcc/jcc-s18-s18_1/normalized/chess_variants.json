@@ -1,0 +1,4422 @@
+[
+  {
+    "address": "jcc:s18:chess_variant:11500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11500",
+    "champion_id": "1500",
+    "name": "奥恩",
+    "cost": 1,
+    "star": 1,
+    "map_id": "1",
+    "resource_key": "s18_ornn",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/奥恩",
+      "ordinal": 1
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21500",
+    "champion_id": "1500",
+    "name": "奥恩",
+    "cost": 1,
+    "star": 2,
+    "map_id": "2",
+    "resource_key": "s18_ornn",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/奥恩",
+      "ordinal": 1
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31500",
+    "champion_id": "1500",
+    "name": "奥恩",
+    "cost": 1,
+    "star": 3,
+    "map_id": "3",
+    "resource_key": "s18_ornn",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/奥恩",
+      "ordinal": 1
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41500",
+    "champion_id": "1500",
+    "name": "奥恩",
+    "cost": 1,
+    "star": 4,
+    "map_id": "4",
+    "resource_key": "s18_ornn",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/奥恩",
+      "ordinal": 1
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:11501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11501",
+    "champion_id": "1501",
+    "name": "洛",
+    "cost": 1,
+    "star": 1,
+    "map_id": "5",
+    "resource_key": "s18_rakan",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/洛",
+      "ordinal": 2
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21501",
+    "champion_id": "1501",
+    "name": "洛",
+    "cost": 1,
+    "star": 2,
+    "map_id": "6",
+    "resource_key": "s18_rakan",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/洛",
+      "ordinal": 2
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31501",
+    "champion_id": "1501",
+    "name": "洛",
+    "cost": 1,
+    "star": 3,
+    "map_id": "7",
+    "resource_key": "s18_rakan",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/洛",
+      "ordinal": 2
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41501",
+    "champion_id": "1501",
+    "name": "洛",
+    "cost": 1,
+    "star": 4,
+    "map_id": "8",
+    "resource_key": "s18_rakan",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/洛",
+      "ordinal": 2
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:11502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11502",
+    "champion_id": "1502",
+    "name": "蕾欧娜",
+    "cost": 1,
+    "star": 1,
+    "map_id": "9",
+    "resource_key": "s18_leona",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/蕾欧娜",
+      "ordinal": 3
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21502",
+    "champion_id": "1502",
+    "name": "蕾欧娜",
+    "cost": 1,
+    "star": 2,
+    "map_id": "10",
+    "resource_key": "s18_leona",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/蕾欧娜",
+      "ordinal": 3
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31502",
+    "champion_id": "1502",
+    "name": "蕾欧娜",
+    "cost": 1,
+    "star": 3,
+    "map_id": "11",
+    "resource_key": "s18_leona",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/蕾欧娜",
+      "ordinal": 3
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41502",
+    "champion_id": "1502",
+    "name": "蕾欧娜",
+    "cost": 1,
+    "star": 4,
+    "map_id": "12",
+    "resource_key": "s18_leona",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/蕾欧娜",
+      "ordinal": 3
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:11503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11503",
+    "champion_id": "1503",
+    "name": "可酷伯",
+    "cost": 1,
+    "star": 1,
+    "map_id": "13",
+    "resource_key": "s18_kobuko",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/可酷伯",
+      "ordinal": 4
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21503",
+    "champion_id": "1503",
+    "name": "可酷伯",
+    "cost": 1,
+    "star": 2,
+    "map_id": "14",
+    "resource_key": "s18_kobuko",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/可酷伯",
+      "ordinal": 4
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31503",
+    "champion_id": "1503",
+    "name": "可酷伯",
+    "cost": 1,
+    "star": 3,
+    "map_id": "15",
+    "resource_key": "s18_kobuko",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/可酷伯",
+      "ordinal": 4
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41503",
+    "champion_id": "1503",
+    "name": "可酷伯",
+    "cost": 1,
+    "star": 4,
+    "map_id": "16",
+    "resource_key": "s18_kobuko",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/可酷伯",
+      "ordinal": 4
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:11504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11504",
+    "champion_id": "1504",
+    "name": "雷克塞",
+    "cost": 1,
+    "star": 1,
+    "map_id": "17",
+    "resource_key": "s18_reksai",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/雷克塞",
+      "ordinal": 5
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21504",
+    "champion_id": "1504",
+    "name": "雷克塞",
+    "cost": 1,
+    "star": 2,
+    "map_id": "18",
+    "resource_key": "s18_reksai",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/雷克塞",
+      "ordinal": 5
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31504",
+    "champion_id": "1504",
+    "name": "雷克塞",
+    "cost": 1,
+    "star": 3,
+    "map_id": "19",
+    "resource_key": "s18_reksai",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/雷克塞",
+      "ordinal": 5
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41504",
+    "champion_id": "1504",
+    "name": "雷克塞",
+    "cost": 1,
+    "star": 4,
+    "map_id": "20",
+    "resource_key": "s18_reksai",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/雷克塞",
+      "ordinal": 5
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:11505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11505",
+    "champion_id": "1505",
+    "name": "卡蜜尔",
+    "cost": 1,
+    "star": 1,
+    "map_id": "21",
+    "resource_key": "s18_camille",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡蜜尔",
+      "ordinal": 6
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21505",
+    "champion_id": "1505",
+    "name": "卡蜜尔",
+    "cost": 1,
+    "star": 2,
+    "map_id": "22",
+    "resource_key": "s18_camille",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡蜜尔",
+      "ordinal": 6
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31505",
+    "champion_id": "1505",
+    "name": "卡蜜尔",
+    "cost": 1,
+    "star": 3,
+    "map_id": "23",
+    "resource_key": "s18_camille",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡蜜尔",
+      "ordinal": 6
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41505",
+    "champion_id": "1505",
+    "name": "卡蜜尔",
+    "cost": 1,
+    "star": 4,
+    "map_id": "24",
+    "resource_key": "s18_camille",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡蜜尔",
+      "ordinal": 6
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:11506",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11506",
+    "champion_id": "1506",
+    "name": "阿卡丽",
+    "cost": 1,
+    "star": 1,
+    "map_id": "25",
+    "resource_key": "s18_akali",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿卡丽",
+      "ordinal": 7
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21506",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21506",
+    "champion_id": "1506",
+    "name": "阿卡丽",
+    "cost": 1,
+    "star": 2,
+    "map_id": "26",
+    "resource_key": "s18_akali",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿卡丽",
+      "ordinal": 7
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31506",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31506",
+    "champion_id": "1506",
+    "name": "阿卡丽",
+    "cost": 1,
+    "star": 3,
+    "map_id": "27",
+    "resource_key": "s18_akali",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿卡丽",
+      "ordinal": 7
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41506",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41506",
+    "champion_id": "1506",
+    "name": "阿卡丽",
+    "cost": 1,
+    "star": 4,
+    "map_id": "28",
+    "resource_key": "s18_akali",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿卡丽",
+      "ordinal": 7
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:11507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11507",
+    "champion_id": "1507",
+    "name": "韦鲁斯",
+    "cost": 1,
+    "star": 1,
+    "map_id": "33",
+    "resource_key": "s18_varus",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/韦鲁斯",
+      "ordinal": 8
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21507",
+    "champion_id": "1507",
+    "name": "韦鲁斯",
+    "cost": 1,
+    "star": 2,
+    "map_id": "34",
+    "resource_key": "s18_varus",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/韦鲁斯",
+      "ordinal": 8
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31507",
+    "champion_id": "1507",
+    "name": "韦鲁斯",
+    "cost": 1,
+    "star": 3,
+    "map_id": "35",
+    "resource_key": "s18_varus",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/韦鲁斯",
+      "ordinal": 8
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41507",
+    "champion_id": "1507",
+    "name": "韦鲁斯",
+    "cost": 1,
+    "star": 4,
+    "map_id": "36",
+    "resource_key": "s18_varus",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/韦鲁斯",
+      "ordinal": 8
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:11508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11508",
+    "champion_id": "1508",
+    "name": "绯红树怪",
+    "cost": 1,
+    "star": 1,
+    "map_id": "37",
+    "resource_key": "s18_cinderling",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/绯红树怪",
+      "ordinal": 9
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21508",
+    "champion_id": "1508",
+    "name": "绯红树怪",
+    "cost": 1,
+    "star": 2,
+    "map_id": "38",
+    "resource_key": "s18_cinderling",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/绯红树怪",
+      "ordinal": 9
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31508",
+    "champion_id": "1508",
+    "name": "绯红树怪",
+    "cost": 1,
+    "star": 3,
+    "map_id": "39",
+    "resource_key": "s18_cinderling",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/绯红树怪",
+      "ordinal": 9
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41508",
+    "champion_id": "1508",
+    "name": "绯红树怪",
+    "cost": 1,
+    "star": 4,
+    "map_id": "40",
+    "resource_key": "s18_cinderling",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/绯红树怪",
+      "ordinal": 9
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:11509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11509",
+    "champion_id": "1509",
+    "name": "霞",
+    "cost": 1,
+    "star": 1,
+    "map_id": "41",
+    "resource_key": "s18_xayah",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/霞",
+      "ordinal": 10
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21509",
+    "champion_id": "1509",
+    "name": "霞",
+    "cost": 1,
+    "star": 2,
+    "map_id": "42",
+    "resource_key": "s18_xayah",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/霞",
+      "ordinal": 10
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31509",
+    "champion_id": "1509",
+    "name": "霞",
+    "cost": 1,
+    "star": 3,
+    "map_id": "43",
+    "resource_key": "s18_xayah",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/霞",
+      "ordinal": 10
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41509",
+    "champion_id": "1509",
+    "name": "霞",
+    "cost": 1,
+    "star": 4,
+    "map_id": "44",
+    "resource_key": "s18_xayah",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/霞",
+      "ordinal": 10
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:11510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11510",
+    "champion_id": "1510",
+    "name": "卡尔玛",
+    "cost": 1,
+    "star": 1,
+    "map_id": "45",
+    "resource_key": "s18_karma",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡尔玛",
+      "ordinal": 11
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21510",
+    "champion_id": "1510",
+    "name": "卡尔玛",
+    "cost": 1,
+    "star": 2,
+    "map_id": "46",
+    "resource_key": "s18_karma",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡尔玛",
+      "ordinal": 11
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31510",
+    "champion_id": "1510",
+    "name": "卡尔玛",
+    "cost": 1,
+    "star": 3,
+    "map_id": "47",
+    "resource_key": "s18_karma",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡尔玛",
+      "ordinal": 11
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41510",
+    "champion_id": "1510",
+    "name": "卡尔玛",
+    "cost": 1,
+    "star": 4,
+    "map_id": "48",
+    "resource_key": "s18_karma",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡尔玛",
+      "ordinal": 11
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:11511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11511",
+    "champion_id": "1511",
+    "name": "苍蓝哨戒",
+    "cost": 1,
+    "star": 1,
+    "map_id": "49",
+    "resource_key": "s18_sentry",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/苍蓝哨戒",
+      "ordinal": 12
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21511",
+    "champion_id": "1511",
+    "name": "苍蓝哨戒",
+    "cost": 1,
+    "star": 2,
+    "map_id": "50",
+    "resource_key": "s18_sentry",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/苍蓝哨戒",
+      "ordinal": 12
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31511",
+    "champion_id": "1511",
+    "name": "苍蓝哨戒",
+    "cost": 1,
+    "star": 3,
+    "map_id": "51",
+    "resource_key": "s18_sentry",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/苍蓝哨戒",
+      "ordinal": 12
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41511",
+    "champion_id": "1511",
+    "name": "苍蓝哨戒",
+    "cost": 1,
+    "star": 4,
+    "map_id": "52",
+    "resource_key": "s18_sentry",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/苍蓝哨戒",
+      "ordinal": 12
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:11512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "11512",
+    "champion_id": "1512",
+    "name": "维迦",
+    "cost": 1,
+    "star": 1,
+    "map_id": "53",
+    "resource_key": "s18_veigar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/维迦",
+      "ordinal": 13
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:21512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "21512",
+    "champion_id": "1512",
+    "name": "维迦",
+    "cost": 1,
+    "star": 2,
+    "map_id": "54",
+    "resource_key": "s18_veigar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/维迦",
+      "ordinal": 13
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:31512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "31512",
+    "champion_id": "1512",
+    "name": "维迦",
+    "cost": 1,
+    "star": 3,
+    "map_id": "55",
+    "resource_key": "s18_veigar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/维迦",
+      "ordinal": 13
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:41512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "41512",
+    "champion_id": "1512",
+    "name": "维迦",
+    "cost": 1,
+    "star": 4,
+    "map_id": "56",
+    "resource_key": "s18_veigar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/维迦",
+      "ordinal": 13
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12500",
+    "champion_id": "2500",
+    "name": "峡谷迅捷蟹",
+    "cost": 2,
+    "star": 1,
+    "map_id": "57",
+    "resource_key": "s18_scuttlecrab",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/峡谷迅捷蟹",
+      "ordinal": 15
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22500",
+    "champion_id": "2500",
+    "name": "峡谷迅捷蟹",
+    "cost": 2,
+    "star": 2,
+    "map_id": "58",
+    "resource_key": "s18_scuttlecrab",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/峡谷迅捷蟹",
+      "ordinal": 15
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32500",
+    "champion_id": "2500",
+    "name": "峡谷迅捷蟹",
+    "cost": 2,
+    "star": 3,
+    "map_id": "59",
+    "resource_key": "s18_scuttlecrab",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/峡谷迅捷蟹",
+      "ordinal": 15
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42500",
+    "champion_id": "2500",
+    "name": "峡谷迅捷蟹",
+    "cost": 2,
+    "star": 4,
+    "map_id": "60",
+    "resource_key": "s18_scuttlecrab",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/峡谷迅捷蟹",
+      "ordinal": 15
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12501",
+    "champion_id": "2501",
+    "name": "阿利斯塔",
+    "cost": 2,
+    "star": 1,
+    "map_id": "61",
+    "resource_key": "s18_alistar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿利斯塔",
+      "ordinal": 16
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22501",
+    "champion_id": "2501",
+    "name": "阿利斯塔",
+    "cost": 2,
+    "star": 2,
+    "map_id": "62",
+    "resource_key": "s18_alistar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿利斯塔",
+      "ordinal": 16
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32501",
+    "champion_id": "2501",
+    "name": "阿利斯塔",
+    "cost": 2,
+    "star": 3,
+    "map_id": "63",
+    "resource_key": "s18_alistar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿利斯塔",
+      "ordinal": 16
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42501",
+    "champion_id": "2501",
+    "name": "阿利斯塔",
+    "cost": 2,
+    "star": 4,
+    "map_id": "64",
+    "resource_key": "s18_alistar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿利斯塔",
+      "ordinal": 16
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12502",
+    "champion_id": "2502",
+    "name": "瑟庄妮",
+    "cost": 2,
+    "star": 1,
+    "map_id": "65",
+    "resource_key": "s18_sejuani",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/瑟庄妮",
+      "ordinal": 17
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22502",
+    "champion_id": "2502",
+    "name": "瑟庄妮",
+    "cost": 2,
+    "star": 2,
+    "map_id": "66",
+    "resource_key": "s18_sejuani",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/瑟庄妮",
+      "ordinal": 17
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32502",
+    "champion_id": "2502",
+    "name": "瑟庄妮",
+    "cost": 2,
+    "star": 3,
+    "map_id": "67",
+    "resource_key": "s18_sejuani",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/瑟庄妮",
+      "ordinal": 17
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42502",
+    "champion_id": "2502",
+    "name": "瑟庄妮",
+    "cost": 2,
+    "star": 4,
+    "map_id": "68",
+    "resource_key": "s18_sejuani",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/瑟庄妮",
+      "ordinal": 17
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12503",
+    "champion_id": "2503",
+    "name": "慎",
+    "cost": 2,
+    "star": 1,
+    "map_id": "69",
+    "resource_key": "s18_shen",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/慎",
+      "ordinal": 18
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22503",
+    "champion_id": "2503",
+    "name": "慎",
+    "cost": 2,
+    "star": 2,
+    "map_id": "70",
+    "resource_key": "s18_shen",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/慎",
+      "ordinal": 18
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32503",
+    "champion_id": "2503",
+    "name": "慎",
+    "cost": 2,
+    "star": 3,
+    "map_id": "71",
+    "resource_key": "s18_shen",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/慎",
+      "ordinal": 18
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42503",
+    "champion_id": "2503",
+    "name": "慎",
+    "cost": 2,
+    "star": 4,
+    "map_id": "72",
+    "resource_key": "s18_shen",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/慎",
+      "ordinal": 18
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12504",
+    "champion_id": "2504",
+    "name": "伊莉丝",
+    "cost": 2,
+    "star": 1,
+    "map_id": "73",
+    "resource_key": "s18_elise",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/伊莉丝",
+      "ordinal": 19
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22504",
+    "champion_id": "2504",
+    "name": "伊莉丝",
+    "cost": 2,
+    "star": 2,
+    "map_id": "74",
+    "resource_key": "s18_elise",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/伊莉丝",
+      "ordinal": 19
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32504",
+    "champion_id": "2504",
+    "name": "伊莉丝",
+    "cost": 2,
+    "star": 3,
+    "map_id": "75",
+    "resource_key": "s18_elise",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/伊莉丝",
+      "ordinal": 19
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42504",
+    "champion_id": "2504",
+    "name": "伊莉丝",
+    "cost": 2,
+    "star": 4,
+    "map_id": "76",
+    "resource_key": "s18_elise",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/伊莉丝",
+      "ordinal": 19
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12505",
+    "champion_id": "2505",
+    "name": "约里克",
+    "cost": 1,
+    "star": 1,
+    "map_id": "81",
+    "resource_key": "s18_yorick",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/约里克",
+      "ordinal": 14
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22505",
+    "champion_id": "2505",
+    "name": "约里克",
+    "cost": 1,
+    "star": 2,
+    "map_id": "82",
+    "resource_key": "s18_yorick",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/约里克",
+      "ordinal": 14
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32505",
+    "champion_id": "2505",
+    "name": "约里克",
+    "cost": 1,
+    "star": 3,
+    "map_id": "83",
+    "resource_key": "s18_yorick",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/约里克",
+      "ordinal": 14
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42505",
+    "champion_id": "2505",
+    "name": "约里克",
+    "cost": 1,
+    "star": 4,
+    "map_id": "84",
+    "resource_key": "s18_yorick",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/约里克",
+      "ordinal": 14
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12507",
+    "champion_id": "2507",
+    "name": "暗影狼",
+    "cost": 2,
+    "star": 1,
+    "map_id": "85",
+    "resource_key": "s18_murkwolf",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/暗影狼",
+      "ordinal": 20
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22507",
+    "champion_id": "2507",
+    "name": "暗影狼",
+    "cost": 2,
+    "star": 2,
+    "map_id": "86",
+    "resource_key": "s18_murkwolf",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/暗影狼",
+      "ordinal": 20
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32507",
+    "champion_id": "2507",
+    "name": "暗影狼",
+    "cost": 2,
+    "star": 3,
+    "map_id": "87",
+    "resource_key": "s18_murkwolf",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/暗影狼",
+      "ordinal": 20
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42507",
+    "champion_id": "2507",
+    "name": "暗影狼",
+    "cost": 2,
+    "star": 4,
+    "map_id": "88",
+    "resource_key": "s18_murkwolf",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/暗影狼",
+      "ordinal": 20
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12508",
+    "champion_id": "2508",
+    "name": "沃里克",
+    "cost": 2,
+    "star": 1,
+    "map_id": "89",
+    "resource_key": "s18_warwick",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/沃里克",
+      "ordinal": 21
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22508",
+    "champion_id": "2508",
+    "name": "沃里克",
+    "cost": 2,
+    "star": 2,
+    "map_id": "90",
+    "resource_key": "s18_warwick",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/沃里克",
+      "ordinal": 21
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32508",
+    "champion_id": "2508",
+    "name": "沃里克",
+    "cost": 2,
+    "star": 3,
+    "map_id": "91",
+    "resource_key": "s18_warwick",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/沃里克",
+      "ordinal": 21
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42508",
+    "champion_id": "2508",
+    "name": "沃里克",
+    "cost": 2,
+    "star": 4,
+    "map_id": "92",
+    "resource_key": "s18_warwick",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/沃里克",
+      "ordinal": 21
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12509",
+    "champion_id": "2509",
+    "name": "芸阿娜",
+    "cost": 2,
+    "star": 1,
+    "map_id": "93",
+    "resource_key": "s18_yunara",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/芸阿娜",
+      "ordinal": 22
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22509",
+    "champion_id": "2509",
+    "name": "芸阿娜",
+    "cost": 2,
+    "star": 2,
+    "map_id": "94",
+    "resource_key": "s18_yunara",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/芸阿娜",
+      "ordinal": 22
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32509",
+    "champion_id": "2509",
+    "name": "芸阿娜",
+    "cost": 2,
+    "star": 3,
+    "map_id": "95",
+    "resource_key": "s18_yunara",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/芸阿娜",
+      "ordinal": 22
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42509",
+    "champion_id": "2509",
+    "name": "芸阿娜",
+    "cost": 2,
+    "star": 4,
+    "map_id": "96",
+    "resource_key": "s18_yunara",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/芸阿娜",
+      "ordinal": 22
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12510",
+    "champion_id": "2510",
+    "name": "凯特琳",
+    "cost": 2,
+    "star": 1,
+    "map_id": "97",
+    "resource_key": "s18_caitlyn",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/凯特琳",
+      "ordinal": 23
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22510",
+    "champion_id": "2510",
+    "name": "凯特琳",
+    "cost": 2,
+    "star": 2,
+    "map_id": "98",
+    "resource_key": "s18_caitlyn",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/凯特琳",
+      "ordinal": 23
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32510",
+    "champion_id": "2510",
+    "name": "凯特琳",
+    "cost": 2,
+    "star": 3,
+    "map_id": "99",
+    "resource_key": "s18_caitlyn",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/凯特琳",
+      "ordinal": 23
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42510",
+    "champion_id": "2510",
+    "name": "凯特琳",
+    "cost": 2,
+    "star": 4,
+    "map_id": "100",
+    "resource_key": "s18_caitlyn",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/凯特琳",
+      "ordinal": 23
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12511",
+    "champion_id": "2511",
+    "name": "乐芙兰",
+    "cost": 2,
+    "star": 1,
+    "map_id": "101",
+    "resource_key": "s18_leblanc",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/乐芙兰",
+      "ordinal": 24
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22511",
+    "champion_id": "2511",
+    "name": "乐芙兰",
+    "cost": 2,
+    "star": 2,
+    "map_id": "102",
+    "resource_key": "s18_leblanc",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/乐芙兰",
+      "ordinal": 24
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32511",
+    "champion_id": "2511",
+    "name": "乐芙兰",
+    "cost": 2,
+    "star": 3,
+    "map_id": "103",
+    "resource_key": "s18_leblanc",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/乐芙兰",
+      "ordinal": 24
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42511",
+    "champion_id": "2511",
+    "name": "乐芙兰",
+    "cost": 2,
+    "star": 4,
+    "map_id": "104",
+    "resource_key": "s18_leblanc",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/乐芙兰",
+      "ordinal": 24
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12512",
+    "champion_id": "2512",
+    "name": "凯尔",
+    "cost": 2,
+    "star": 1,
+    "map_id": "105",
+    "resource_key": "s18_kayle",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/凯尔",
+      "ordinal": 25
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22512",
+    "champion_id": "2512",
+    "name": "凯尔",
+    "cost": 2,
+    "star": 2,
+    "map_id": "106",
+    "resource_key": "s18_kayle",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/凯尔",
+      "ordinal": 25
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32512",
+    "champion_id": "2512",
+    "name": "凯尔",
+    "cost": 2,
+    "star": 3,
+    "map_id": "107",
+    "resource_key": "s18_kayle",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/凯尔",
+      "ordinal": 25
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42512",
+    "champion_id": "2512",
+    "name": "凯尔",
+    "cost": 2,
+    "star": 4,
+    "map_id": "108",
+    "resource_key": "s18_kayle",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/凯尔",
+      "ordinal": 25
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12513",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12513",
+    "champion_id": "2513",
+    "name": "魔沼蛙",
+    "cost": 2,
+    "star": 1,
+    "map_id": "109",
+    "resource_key": "s18_gromp",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/魔沼蛙",
+      "ordinal": 26
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22513",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22513",
+    "champion_id": "2513",
+    "name": "魔沼蛙",
+    "cost": 2,
+    "star": 2,
+    "map_id": "110",
+    "resource_key": "s18_gromp",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/魔沼蛙",
+      "ordinal": 26
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32513",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32513",
+    "champion_id": "2513",
+    "name": "魔沼蛙",
+    "cost": 2,
+    "star": 3,
+    "map_id": "111",
+    "resource_key": "s18_gromp",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/魔沼蛙",
+      "ordinal": 26
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42513",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42513",
+    "champion_id": "2513",
+    "name": "魔沼蛙",
+    "cost": 2,
+    "star": 4,
+    "map_id": "112",
+    "resource_key": "s18_gromp",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/魔沼蛙",
+      "ordinal": 26
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:12514",
+    "source": "jcc_official_s18_source_docs",
+    "id": "12514",
+    "champion_id": "2514",
+    "name": "提莫",
+    "cost": 2,
+    "star": 1,
+    "map_id": "117",
+    "resource_key": "s18_teemo",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/提莫",
+      "ordinal": 27
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:22514",
+    "source": "jcc_official_s18_source_docs",
+    "id": "22514",
+    "champion_id": "2514",
+    "name": "提莫",
+    "cost": 2,
+    "star": 2,
+    "map_id": "118",
+    "resource_key": "s18_teemo",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/提莫",
+      "ordinal": 27
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:32514",
+    "source": "jcc_official_s18_source_docs",
+    "id": "32514",
+    "champion_id": "2514",
+    "name": "提莫",
+    "cost": 2,
+    "star": 3,
+    "map_id": "119",
+    "resource_key": "s18_teemo",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/提莫",
+      "ordinal": 27
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:42514",
+    "source": "jcc_official_s18_source_docs",
+    "id": "42514",
+    "champion_id": "2514",
+    "name": "提莫",
+    "cost": 2,
+    "star": 4,
+    "map_id": "120",
+    "resource_key": "s18_teemo",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/提莫",
+      "ordinal": 27
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13500",
+    "champion_id": "3500",
+    "name": "赫卡里姆",
+    "cost": 3,
+    "star": 1,
+    "map_id": "121",
+    "resource_key": "s18_hecarim",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/赫卡里姆",
+      "ordinal": 28
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23500",
+    "champion_id": "3500",
+    "name": "赫卡里姆",
+    "cost": 3,
+    "star": 2,
+    "map_id": "122",
+    "resource_key": "s18_hecarim",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/赫卡里姆",
+      "ordinal": 28
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33500",
+    "champion_id": "3500",
+    "name": "赫卡里姆",
+    "cost": 3,
+    "star": 3,
+    "map_id": "123",
+    "resource_key": "s18_hecarim",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/赫卡里姆",
+      "ordinal": 28
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43500",
+    "champion_id": "3500",
+    "name": "赫卡里姆",
+    "cost": 3,
+    "star": 4,
+    "map_id": "124",
+    "resource_key": "s18_hecarim",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/赫卡里姆",
+      "ordinal": 28
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13501",
+    "champion_id": "3501",
+    "name": "蔚",
+    "cost": 3,
+    "star": 1,
+    "map_id": "125",
+    "resource_key": "s18_vi",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/蔚",
+      "ordinal": 29
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23501",
+    "champion_id": "3501",
+    "name": "蔚",
+    "cost": 3,
+    "star": 2,
+    "map_id": "126",
+    "resource_key": "s18_vi",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/蔚",
+      "ordinal": 29
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33501",
+    "champion_id": "3501",
+    "name": "蔚",
+    "cost": 3,
+    "star": 3,
+    "map_id": "127",
+    "resource_key": "s18_vi",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/蔚",
+      "ordinal": 29
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43501",
+    "champion_id": "3501",
+    "name": "蔚",
+    "cost": 3,
+    "star": 4,
+    "map_id": "128",
+    "resource_key": "s18_vi",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/蔚",
+      "ordinal": 29
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13502",
+    "champion_id": "3502",
+    "name": "费德提克",
+    "cost": 3,
+    "star": 1,
+    "map_id": "129",
+    "resource_key": "s18_fiddlesticks",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/费德提克",
+      "ordinal": 30
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23502",
+    "champion_id": "3502",
+    "name": "费德提克",
+    "cost": 3,
+    "star": 2,
+    "map_id": "130",
+    "resource_key": "s18_fiddlesticks",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/费德提克",
+      "ordinal": 30
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33502",
+    "champion_id": "3502",
+    "name": "费德提克",
+    "cost": 3,
+    "star": 3,
+    "map_id": "131",
+    "resource_key": "s18_fiddlesticks",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/费德提克",
+      "ordinal": 30
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43502",
+    "champion_id": "3502",
+    "name": "费德提克",
+    "cost": 3,
+    "star": 4,
+    "map_id": "132",
+    "resource_key": "s18_fiddlesticks",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/费德提克",
+      "ordinal": 30
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13503",
+    "champion_id": "3503",
+    "name": "远古石甲虫",
+    "cost": 3,
+    "star": 1,
+    "map_id": "133",
+    "resource_key": "s18_krug",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/远古石甲虫",
+      "ordinal": 31
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23503",
+    "champion_id": "3503",
+    "name": "远古石甲虫",
+    "cost": 3,
+    "star": 2,
+    "map_id": "134",
+    "resource_key": "s18_krug",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/远古石甲虫",
+      "ordinal": 31
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33503",
+    "champion_id": "3503",
+    "name": "远古石甲虫",
+    "cost": 3,
+    "star": 3,
+    "map_id": "135",
+    "resource_key": "s18_krug",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/远古石甲虫",
+      "ordinal": 31
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43503",
+    "champion_id": "3503",
+    "name": "远古石甲虫",
+    "cost": 3,
+    "star": 4,
+    "map_id": "136",
+    "resource_key": "s18_krug",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/远古石甲虫",
+      "ordinal": 31
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13504",
+    "champion_id": "3504",
+    "name": "雷恩加尔",
+    "cost": 3,
+    "star": 1,
+    "map_id": "137",
+    "resource_key": "s18_rengar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/雷恩加尔",
+      "ordinal": 32
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23504",
+    "champion_id": "3504",
+    "name": "雷恩加尔",
+    "cost": 3,
+    "star": 2,
+    "map_id": "138",
+    "resource_key": "s18_rengar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/雷恩加尔",
+      "ordinal": 32
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33504",
+    "champion_id": "3504",
+    "name": "雷恩加尔",
+    "cost": 3,
+    "star": 3,
+    "map_id": "139",
+    "resource_key": "s18_rengar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/雷恩加尔",
+      "ordinal": 32
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43504",
+    "champion_id": "3504",
+    "name": "雷恩加尔",
+    "cost": 3,
+    "star": 4,
+    "map_id": "140",
+    "resource_key": "s18_rengar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/雷恩加尔",
+      "ordinal": 32
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13505",
+    "champion_id": "3505",
+    "name": "卡兹克",
+    "cost": 3,
+    "star": 1,
+    "map_id": "141",
+    "resource_key": "s18_khazix",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡兹克",
+      "ordinal": 33
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23505",
+    "champion_id": "3505",
+    "name": "卡兹克",
+    "cost": 3,
+    "star": 2,
+    "map_id": "142",
+    "resource_key": "s18_khazix",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡兹克",
+      "ordinal": 33
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33505",
+    "champion_id": "3505",
+    "name": "卡兹克",
+    "cost": 3,
+    "star": 3,
+    "map_id": "143",
+    "resource_key": "s18_khazix",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡兹克",
+      "ordinal": 33
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43505",
+    "champion_id": "3505",
+    "name": "卡兹克",
+    "cost": 3,
+    "star": 4,
+    "map_id": "144",
+    "resource_key": "s18_khazix",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡兹克",
+      "ordinal": 33
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13506",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13506",
+    "champion_id": "3506",
+    "name": "黛安娜",
+    "cost": 3,
+    "star": 1,
+    "map_id": "145",
+    "resource_key": "s18_diana",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/黛安娜",
+      "ordinal": 34
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23506",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23506",
+    "champion_id": "3506",
+    "name": "黛安娜",
+    "cost": 3,
+    "star": 2,
+    "map_id": "146",
+    "resource_key": "s18_diana",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/黛安娜",
+      "ordinal": 34
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33506",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33506",
+    "champion_id": "3506",
+    "name": "黛安娜",
+    "cost": 3,
+    "star": 3,
+    "map_id": "147",
+    "resource_key": "s18_diana",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/黛安娜",
+      "ordinal": 34
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43506",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43506",
+    "champion_id": "3506",
+    "name": "黛安娜",
+    "cost": 3,
+    "star": 4,
+    "map_id": "148",
+    "resource_key": "s18_diana",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/黛安娜",
+      "ordinal": 34
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13507",
+    "champion_id": "3507",
+    "name": "易",
+    "cost": 3,
+    "star": 1,
+    "map_id": "149",
+    "resource_key": "s18_masteryi",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/易",
+      "ordinal": 35
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23507",
+    "champion_id": "3507",
+    "name": "易",
+    "cost": 3,
+    "star": 2,
+    "map_id": "150",
+    "resource_key": "s18_masteryi",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/易",
+      "ordinal": 35
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33507",
+    "champion_id": "3507",
+    "name": "易",
+    "cost": 3,
+    "star": 3,
+    "map_id": "151",
+    "resource_key": "s18_masteryi",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/易",
+      "ordinal": 35
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43507",
+    "champion_id": "3507",
+    "name": "易",
+    "cost": 3,
+    "star": 4,
+    "map_id": "152",
+    "resource_key": "s18_masteryi",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/易",
+      "ordinal": 35
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13508",
+    "champion_id": "3508",
+    "name": "崔丝塔娜",
+    "cost": 3,
+    "star": 1,
+    "map_id": "157",
+    "resource_key": "s18_tristana",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/崔丝塔娜",
+      "ordinal": 36
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23508",
+    "champion_id": "3508",
+    "name": "崔丝塔娜",
+    "cost": 3,
+    "star": 2,
+    "map_id": "158",
+    "resource_key": "s18_tristana",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/崔丝塔娜",
+      "ordinal": 36
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33508",
+    "champion_id": "3508",
+    "name": "崔丝塔娜",
+    "cost": 3,
+    "star": 3,
+    "map_id": "159",
+    "resource_key": "s18_tristana",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/崔丝塔娜",
+      "ordinal": 36
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43508",
+    "champion_id": "3508",
+    "name": "崔丝塔娜",
+    "cost": 3,
+    "star": 4,
+    "map_id": "160",
+    "resource_key": "s18_tristana",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/崔丝塔娜",
+      "ordinal": 36
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13509",
+    "champion_id": "3509",
+    "name": "深红锋喙鸟",
+    "cost": 3,
+    "star": 1,
+    "map_id": "161",
+    "resource_key": "s18_raptor",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/深红锋喙鸟",
+      "ordinal": 37
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23509",
+    "champion_id": "3509",
+    "name": "深红锋喙鸟",
+    "cost": 3,
+    "star": 2,
+    "map_id": "162",
+    "resource_key": "s18_raptor",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/深红锋喙鸟",
+      "ordinal": 37
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33509",
+    "champion_id": "3509",
+    "name": "深红锋喙鸟",
+    "cost": 3,
+    "star": 3,
+    "map_id": "163",
+    "resource_key": "s18_raptor",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/深红锋喙鸟",
+      "ordinal": 37
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43509",
+    "champion_id": "3509",
+    "name": "深红锋喙鸟",
+    "cost": 3,
+    "star": 4,
+    "map_id": "164",
+    "resource_key": "s18_raptor",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/深红锋喙鸟",
+      "ordinal": 37
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13510",
+    "champion_id": "3510",
+    "name": "阿兹尔",
+    "cost": 3,
+    "star": 1,
+    "map_id": "165",
+    "resource_key": "s18_azir",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿兹尔",
+      "ordinal": 38
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23510",
+    "champion_id": "3510",
+    "name": "阿兹尔",
+    "cost": 3,
+    "star": 2,
+    "map_id": "166",
+    "resource_key": "s18_azir",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿兹尔",
+      "ordinal": 38
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33510",
+    "champion_id": "3510",
+    "name": "阿兹尔",
+    "cost": 3,
+    "star": 3,
+    "map_id": "167",
+    "resource_key": "s18_azir",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿兹尔",
+      "ordinal": 38
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43510",
+    "champion_id": "3510",
+    "name": "阿兹尔",
+    "cost": 3,
+    "star": 4,
+    "map_id": "168",
+    "resource_key": "s18_azir",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿兹尔",
+      "ordinal": 38
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13511",
+    "champion_id": "3511",
+    "name": "卡西奥佩娅",
+    "cost": 3,
+    "star": 1,
+    "map_id": "169",
+    "resource_key": "s18_cassiopeia",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡西奥佩娅",
+      "ordinal": 39
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23511",
+    "champion_id": "3511",
+    "name": "卡西奥佩娅",
+    "cost": 3,
+    "star": 2,
+    "map_id": "170",
+    "resource_key": "s18_cassiopeia",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡西奥佩娅",
+      "ordinal": 39
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33511",
+    "champion_id": "3511",
+    "name": "卡西奥佩娅",
+    "cost": 3,
+    "star": 3,
+    "map_id": "171",
+    "resource_key": "s18_cassiopeia",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡西奥佩娅",
+      "ordinal": 39
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43511",
+    "champion_id": "3511",
+    "name": "卡西奥佩娅",
+    "cost": 3,
+    "star": 4,
+    "map_id": "172",
+    "resource_key": "s18_cassiopeia",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/卡西奥佩娅",
+      "ordinal": 39
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13512",
+    "champion_id": "3512",
+    "name": "克格莫",
+    "cost": 3,
+    "star": 1,
+    "map_id": "173",
+    "resource_key": "s18_kogmaw",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/克格莫",
+      "ordinal": 40
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23512",
+    "champion_id": "3512",
+    "name": "克格莫",
+    "cost": 3,
+    "star": 2,
+    "map_id": "174",
+    "resource_key": "s18_kogmaw",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/克格莫",
+      "ordinal": 40
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33512",
+    "champion_id": "3512",
+    "name": "克格莫",
+    "cost": 3,
+    "star": 3,
+    "map_id": "175",
+    "resource_key": "s18_kogmaw",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/克格莫",
+      "ordinal": 40
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43512",
+    "champion_id": "3512",
+    "name": "克格莫",
+    "cost": 3,
+    "star": 4,
+    "map_id": "176",
+    "resource_key": "s18_kogmaw",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/克格莫",
+      "ordinal": 40
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:13515",
+    "source": "jcc_official_s18_source_docs",
+    "id": "13515",
+    "champion_id": "3515",
+    "name": "拉莫斯",
+    "cost": 3,
+    "star": 1,
+    "map_id": "181",
+    "resource_key": "s18_rammus",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/拉莫斯",
+      "ordinal": 41
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:23515",
+    "source": "jcc_official_s18_source_docs",
+    "id": "23515",
+    "champion_id": "3515",
+    "name": "拉莫斯",
+    "cost": 3,
+    "star": 2,
+    "map_id": "182",
+    "resource_key": "s18_rammus",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/拉莫斯",
+      "ordinal": 41
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:33515",
+    "source": "jcc_official_s18_source_docs",
+    "id": "33515",
+    "champion_id": "3515",
+    "name": "拉莫斯",
+    "cost": 3,
+    "star": 3,
+    "map_id": "183",
+    "resource_key": "s18_rammus",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/拉莫斯",
+      "ordinal": 41
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:43515",
+    "source": "jcc_official_s18_source_docs",
+    "id": "43515",
+    "champion_id": "3515",
+    "name": "拉莫斯",
+    "cost": 3,
+    "star": 4,
+    "map_id": "184",
+    "resource_key": "s18_rammus",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/拉莫斯",
+      "ordinal": 41
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14500",
+    "champion_id": "4500",
+    "name": "苍蓝雕纹魔像",
+    "cost": 4,
+    "star": 1,
+    "map_id": "185",
+    "resource_key": "s18_sentinel",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/苍蓝雕纹魔像",
+      "ordinal": 42
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24500",
+    "champion_id": "4500",
+    "name": "苍蓝雕纹魔像",
+    "cost": 4,
+    "star": 2,
+    "map_id": "186",
+    "resource_key": "s18_sentinel",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/苍蓝雕纹魔像",
+      "ordinal": 42
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34500",
+    "champion_id": "4500",
+    "name": "苍蓝雕纹魔像",
+    "cost": 4,
+    "star": 3,
+    "map_id": "187",
+    "resource_key": "s18_sentinel",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/苍蓝雕纹魔像",
+      "ordinal": 42
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44500",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44500",
+    "champion_id": "4500",
+    "name": "苍蓝雕纹魔像",
+    "cost": 4,
+    "star": 4,
+    "map_id": "188",
+    "resource_key": "s18_sentinel",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/苍蓝雕纹魔像",
+      "ordinal": 42
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14501",
+    "champion_id": "4501",
+    "name": "莫甘娜",
+    "cost": 4,
+    "star": 1,
+    "map_id": "189",
+    "resource_key": "s18_morgana",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/莫甘娜",
+      "ordinal": 43
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24501",
+    "champion_id": "4501",
+    "name": "莫甘娜",
+    "cost": 4,
+    "star": 2,
+    "map_id": "190",
+    "resource_key": "s18_morgana",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/莫甘娜",
+      "ordinal": 43
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34501",
+    "champion_id": "4501",
+    "name": "莫甘娜",
+    "cost": 4,
+    "star": 3,
+    "map_id": "191",
+    "resource_key": "s18_morgana",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/莫甘娜",
+      "ordinal": 43
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44501",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44501",
+    "champion_id": "4501",
+    "name": "莫甘娜",
+    "cost": 4,
+    "star": 4,
+    "map_id": "192",
+    "resource_key": "s18_morgana",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/莫甘娜",
+      "ordinal": 43
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14502",
+    "champion_id": "4502",
+    "name": "莉莉娅",
+    "cost": 4,
+    "star": 1,
+    "map_id": "197",
+    "resource_key": "s18_lillia",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/莉莉娅",
+      "ordinal": 44
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24502",
+    "champion_id": "4502",
+    "name": "莉莉娅",
+    "cost": 4,
+    "star": 2,
+    "map_id": "198",
+    "resource_key": "s18_lillia",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/莉莉娅",
+      "ordinal": 44
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34502",
+    "champion_id": "4502",
+    "name": "莉莉娅",
+    "cost": 4,
+    "star": 3,
+    "map_id": "199",
+    "resource_key": "s18_lillia",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/莉莉娅",
+      "ordinal": 44
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44502",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44502",
+    "champion_id": "4502",
+    "name": "莉莉娅",
+    "cost": 4,
+    "star": 4,
+    "map_id": "200",
+    "resource_key": "s18_lillia",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/莉莉娅",
+      "ordinal": 44
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14503",
+    "champion_id": "4503",
+    "name": "阿木木",
+    "cost": 4,
+    "star": 1,
+    "map_id": "201",
+    "resource_key": "s18_amumu",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿木木",
+      "ordinal": 45
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24503",
+    "champion_id": "4503",
+    "name": "阿木木",
+    "cost": 4,
+    "star": 2,
+    "map_id": "202",
+    "resource_key": "s18_amumu",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿木木",
+      "ordinal": 45
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34503",
+    "champion_id": "4503",
+    "name": "阿木木",
+    "cost": 4,
+    "star": 3,
+    "map_id": "203",
+    "resource_key": "s18_amumu",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿木木",
+      "ordinal": 45
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44503",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44503",
+    "champion_id": "4503",
+    "name": "阿木木",
+    "cost": 4,
+    "star": 4,
+    "map_id": "204",
+    "resource_key": "s18_amumu",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿木木",
+      "ordinal": 45
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14504",
+    "champion_id": "4504",
+    "name": "墨菲特",
+    "cost": 4,
+    "star": 1,
+    "map_id": "205",
+    "resource_key": "s18_malphite",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/墨菲特",
+      "ordinal": 46
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24504",
+    "champion_id": "4504",
+    "name": "墨菲特",
+    "cost": 4,
+    "star": 2,
+    "map_id": "206",
+    "resource_key": "s18_malphite",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/墨菲特",
+      "ordinal": 46
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34504",
+    "champion_id": "4504",
+    "name": "墨菲特",
+    "cost": 4,
+    "star": 3,
+    "map_id": "207",
+    "resource_key": "s18_malphite",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/墨菲特",
+      "ordinal": 46
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44504",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44504",
+    "champion_id": "4504",
+    "name": "墨菲特",
+    "cost": 4,
+    "star": 4,
+    "map_id": "208",
+    "resource_key": "s18_malphite",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/墨菲特",
+      "ordinal": 46
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14505",
+    "champion_id": "4505",
+    "name": "瑟提",
+    "cost": 4,
+    "star": 1,
+    "map_id": "209",
+    "resource_key": "s18_sett",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/瑟提",
+      "ordinal": 47
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24505",
+    "champion_id": "4505",
+    "name": "瑟提",
+    "cost": 4,
+    "star": 2,
+    "map_id": "210",
+    "resource_key": "s18_sett",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/瑟提",
+      "ordinal": 47
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34505",
+    "champion_id": "4505",
+    "name": "瑟提",
+    "cost": 4,
+    "star": 3,
+    "map_id": "211",
+    "resource_key": "s18_sett",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/瑟提",
+      "ordinal": 47
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44505",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44505",
+    "champion_id": "4505",
+    "name": "瑟提",
+    "cost": 4,
+    "star": 4,
+    "map_id": "212",
+    "resource_key": "s18_sett",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/瑟提",
+      "ordinal": 47
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14506",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14506",
+    "champion_id": "4506",
+    "name": "绯红印记树怪",
+    "cost": 4,
+    "star": 1,
+    "map_id": "213",
+    "resource_key": "s18_brambleback",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/绯红印记树怪",
+      "ordinal": 48
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24506",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24506",
+    "champion_id": "4506",
+    "name": "绯红印记树怪",
+    "cost": 4,
+    "star": 2,
+    "map_id": "214",
+    "resource_key": "s18_brambleback",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/绯红印记树怪",
+      "ordinal": 48
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34506",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34506",
+    "champion_id": "4506",
+    "name": "绯红印记树怪",
+    "cost": 4,
+    "star": 3,
+    "map_id": "215",
+    "resource_key": "s18_brambleback",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/绯红印记树怪",
+      "ordinal": 48
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44506",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44506",
+    "champion_id": "4506",
+    "name": "绯红印记树怪",
+    "cost": 4,
+    "star": 4,
+    "map_id": "216",
+    "resource_key": "s18_brambleback",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/绯红印记树怪",
+      "ordinal": 48
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14507",
+    "champion_id": "4507",
+    "name": "奈德丽",
+    "cost": 4,
+    "star": 1,
+    "map_id": "217",
+    "resource_key": "s18_nidalee",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/奈德丽",
+      "ordinal": 49
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24507",
+    "champion_id": "4507",
+    "name": "奈德丽",
+    "cost": 4,
+    "star": 2,
+    "map_id": "218",
+    "resource_key": "s18_nidalee",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/奈德丽",
+      "ordinal": 49
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34507",
+    "champion_id": "4507",
+    "name": "奈德丽",
+    "cost": 4,
+    "star": 3,
+    "map_id": "219",
+    "resource_key": "s18_nidalee",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/奈德丽",
+      "ordinal": 49
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44507",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44507",
+    "champion_id": "4507",
+    "name": "奈德丽",
+    "cost": 4,
+    "star": 4,
+    "map_id": "220",
+    "resource_key": "s18_nidalee",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/奈德丽",
+      "ordinal": 49
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14508",
+    "champion_id": "4508",
+    "name": "伊泽瑞尔",
+    "cost": 4,
+    "star": 1,
+    "map_id": "225",
+    "resource_key": "s18_ezreal",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/伊泽瑞尔",
+      "ordinal": 50
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24508",
+    "champion_id": "4508",
+    "name": "伊泽瑞尔",
+    "cost": 4,
+    "star": 2,
+    "map_id": "226",
+    "resource_key": "s18_ezreal",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/伊泽瑞尔",
+      "ordinal": 50
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34508",
+    "champion_id": "4508",
+    "name": "伊泽瑞尔",
+    "cost": 4,
+    "star": 3,
+    "map_id": "227",
+    "resource_key": "s18_ezreal",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/伊泽瑞尔",
+      "ordinal": 50
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44508",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44508",
+    "champion_id": "4508",
+    "name": "伊泽瑞尔",
+    "cost": 4,
+    "star": 4,
+    "map_id": "228",
+    "resource_key": "s18_ezreal",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/伊泽瑞尔",
+      "ordinal": 50
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14509",
+    "champion_id": "4509",
+    "name": "厄斐琉斯",
+    "cost": 4,
+    "star": 1,
+    "map_id": "229",
+    "resource_key": "s18_aphelios",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/厄斐琉斯",
+      "ordinal": 51
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24509",
+    "champion_id": "4509",
+    "name": "厄斐琉斯",
+    "cost": 4,
+    "star": 2,
+    "map_id": "230",
+    "resource_key": "s18_aphelios",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/厄斐琉斯",
+      "ordinal": 51
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34509",
+    "champion_id": "4509",
+    "name": "厄斐琉斯",
+    "cost": 4,
+    "star": 3,
+    "map_id": "231",
+    "resource_key": "s18_aphelios",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/厄斐琉斯",
+      "ordinal": 51
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44509",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44509",
+    "champion_id": "4509",
+    "name": "厄斐琉斯",
+    "cost": 4,
+    "star": 4,
+    "map_id": "232",
+    "resource_key": "s18_aphelios",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/厄斐琉斯",
+      "ordinal": 51
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14510",
+    "champion_id": "4510",
+    "name": "希维尔",
+    "cost": 4,
+    "star": 1,
+    "map_id": "233",
+    "resource_key": "s18_sivir",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/希维尔",
+      "ordinal": 52
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24510",
+    "champion_id": "4510",
+    "name": "希维尔",
+    "cost": 4,
+    "star": 2,
+    "map_id": "234",
+    "resource_key": "s18_sivir",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/希维尔",
+      "ordinal": 52
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34510",
+    "champion_id": "4510",
+    "name": "希维尔",
+    "cost": 4,
+    "star": 3,
+    "map_id": "235",
+    "resource_key": "s18_sivir",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/希维尔",
+      "ordinal": 52
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44510",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44510",
+    "champion_id": "4510",
+    "name": "希维尔",
+    "cost": 4,
+    "star": 4,
+    "map_id": "236",
+    "resource_key": "s18_sivir",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/希维尔",
+      "ordinal": 52
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14511",
+    "champion_id": "4511",
+    "name": "阿狸",
+    "cost": 4,
+    "star": 1,
+    "map_id": "237",
+    "resource_key": "s18_ahri",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿狸",
+      "ordinal": 53
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24511",
+    "champion_id": "4511",
+    "name": "阿狸",
+    "cost": 4,
+    "star": 2,
+    "map_id": "238",
+    "resource_key": "s18_ahri",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿狸",
+      "ordinal": 53
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34511",
+    "champion_id": "4511",
+    "name": "阿狸",
+    "cost": 4,
+    "star": 3,
+    "map_id": "239",
+    "resource_key": "s18_ahri",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿狸",
+      "ordinal": 53
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44511",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44511",
+    "champion_id": "4511",
+    "name": "阿狸",
+    "cost": 4,
+    "star": 4,
+    "map_id": "240",
+    "resource_key": "s18_ahri",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/阿狸",
+      "ordinal": 53
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14512",
+    "champion_id": "4512",
+    "name": "婕拉",
+    "cost": 4,
+    "star": 1,
+    "map_id": "241",
+    "resource_key": "s18_zyra",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/婕拉",
+      "ordinal": 54
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24512",
+    "champion_id": "4512",
+    "name": "婕拉",
+    "cost": 4,
+    "star": 2,
+    "map_id": "242",
+    "resource_key": "s18_zyra",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/婕拉",
+      "ordinal": 54
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34512",
+    "champion_id": "4512",
+    "name": "婕拉",
+    "cost": 4,
+    "star": 3,
+    "map_id": "243",
+    "resource_key": "s18_zyra",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/婕拉",
+      "ordinal": 54
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44512",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44512",
+    "champion_id": "4512",
+    "name": "婕拉",
+    "cost": 4,
+    "star": 4,
+    "map_id": "244",
+    "resource_key": "s18_zyra",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/婕拉",
+      "ordinal": 54
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:14513",
+    "source": "jcc_official_s18_source_docs",
+    "id": "14513",
+    "champion_id": "4513",
+    "name": "索拉卡",
+    "cost": 4,
+    "star": 1,
+    "map_id": "245",
+    "resource_key": "s18_soraka",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/索拉卡",
+      "ordinal": 55
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:24513",
+    "source": "jcc_official_s18_source_docs",
+    "id": "24513",
+    "champion_id": "4513",
+    "name": "索拉卡",
+    "cost": 4,
+    "star": 2,
+    "map_id": "246",
+    "resource_key": "s18_soraka",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/索拉卡",
+      "ordinal": 55
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:34513",
+    "source": "jcc_official_s18_source_docs",
+    "id": "34513",
+    "champion_id": "4513",
+    "name": "索拉卡",
+    "cost": 4,
+    "star": 3,
+    "map_id": "247",
+    "resource_key": "s18_soraka",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/索拉卡",
+      "ordinal": 55
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:44513",
+    "source": "jcc_official_s18_source_docs",
+    "id": "44513",
+    "champion_id": "4513",
+    "name": "索拉卡",
+    "cost": 4,
+    "star": 4,
+    "map_id": "248",
+    "resource_key": "s18_soraka",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/索拉卡",
+      "ordinal": 55
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:15450",
+    "source": "jcc_official_s18_source_docs",
+    "id": "15450",
+    "champion_id": "5450",
+    "name": "茂凯",
+    "cost": 5,
+    "star": 1,
+    "map_id": "249",
+    "resource_key": "s18_maokai",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/茂凯",
+      "ordinal": 56
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:25450",
+    "source": "jcc_official_s18_source_docs",
+    "id": "25450",
+    "champion_id": "5450",
+    "name": "茂凯",
+    "cost": 5,
+    "star": 2,
+    "map_id": "250",
+    "resource_key": "s18_maokai",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/茂凯",
+      "ordinal": 56
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:35450",
+    "source": "jcc_official_s18_source_docs",
+    "id": "35450",
+    "champion_id": "5450",
+    "name": "茂凯",
+    "cost": 5,
+    "star": 3,
+    "map_id": "251",
+    "resource_key": "s18_maokai",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/茂凯",
+      "ordinal": 56
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:45450",
+    "source": "jcc_official_s18_source_docs",
+    "id": "45450",
+    "champion_id": "5450",
+    "name": "茂凯",
+    "cost": 5,
+    "star": 4,
+    "map_id": "252",
+    "resource_key": "s18_maokai",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/茂凯",
+      "ordinal": 56
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:15451",
+    "source": "jcc_official_s18_source_docs",
+    "id": "15451",
+    "champion_id": "5451",
+    "name": "塔里克",
+    "cost": 5,
+    "star": 1,
+    "map_id": "253",
+    "resource_key": "s18_taric",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/塔里克",
+      "ordinal": 57
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:25451",
+    "source": "jcc_official_s18_source_docs",
+    "id": "25451",
+    "champion_id": "5451",
+    "name": "塔里克",
+    "cost": 5,
+    "star": 2,
+    "map_id": "254",
+    "resource_key": "s18_taric",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/塔里克",
+      "ordinal": 57
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:35451",
+    "source": "jcc_official_s18_source_docs",
+    "id": "35451",
+    "champion_id": "5451",
+    "name": "塔里克",
+    "cost": 5,
+    "star": 3,
+    "map_id": "255",
+    "resource_key": "s18_taric",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/塔里克",
+      "ordinal": 57
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:45451",
+    "source": "jcc_official_s18_source_docs",
+    "id": "45451",
+    "champion_id": "5451",
+    "name": "塔里克",
+    "cost": 5,
+    "star": 4,
+    "map_id": "256",
+    "resource_key": "s18_taric",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/塔里克",
+      "ordinal": 57
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:15452",
+    "source": "jcc_official_s18_source_docs",
+    "id": "15452",
+    "champion_id": "5452",
+    "name": "纳尔",
+    "cost": 5,
+    "star": 1,
+    "map_id": "257",
+    "resource_key": "s18_gnar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/纳尔",
+      "ordinal": 58
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:25452",
+    "source": "jcc_official_s18_source_docs",
+    "id": "25452",
+    "champion_id": "5452",
+    "name": "纳尔",
+    "cost": 5,
+    "star": 2,
+    "map_id": "258",
+    "resource_key": "s18_gnar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/纳尔",
+      "ordinal": 58
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:35452",
+    "source": "jcc_official_s18_source_docs",
+    "id": "35452",
+    "champion_id": "5452",
+    "name": "纳尔",
+    "cost": 5,
+    "star": 3,
+    "map_id": "259",
+    "resource_key": "s18_gnar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/纳尔",
+      "ordinal": 58
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:45452",
+    "source": "jcc_official_s18_source_docs",
+    "id": "45452",
+    "champion_id": "5452",
+    "name": "纳尔",
+    "cost": 5,
+    "star": 4,
+    "map_id": "260",
+    "resource_key": "s18_gnar",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/纳尔",
+      "ordinal": 58
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:15453",
+    "source": "jcc_official_s18_source_docs",
+    "id": "15453",
+    "champion_id": "5453",
+    "name": "凯南",
+    "cost": 5,
+    "star": 1,
+    "map_id": "261",
+    "resource_key": "s18_kennen",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/凯南",
+      "ordinal": 59
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:25453",
+    "source": "jcc_official_s18_source_docs",
+    "id": "25453",
+    "champion_id": "5453",
+    "name": "凯南",
+    "cost": 5,
+    "star": 2,
+    "map_id": "262",
+    "resource_key": "s18_kennen",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/凯南",
+      "ordinal": 59
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:35453",
+    "source": "jcc_official_s18_source_docs",
+    "id": "35453",
+    "champion_id": "5453",
+    "name": "凯南",
+    "cost": 5,
+    "star": 3,
+    "map_id": "263",
+    "resource_key": "s18_kennen",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/凯南",
+      "ordinal": 59
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:45453",
+    "source": "jcc_official_s18_source_docs",
+    "id": "45453",
+    "champion_id": "5453",
+    "name": "凯南",
+    "cost": 5,
+    "star": 4,
+    "map_id": "264",
+    "resource_key": "s18_kennen",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/凯南",
+      "ordinal": 59
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:15454",
+    "source": "jcc_official_s18_source_docs",
+    "id": "15454",
+    "champion_id": "5454",
+    "name": "艾希",
+    "cost": 5,
+    "star": 1,
+    "map_id": "265",
+    "resource_key": "s18_ashe",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/艾希",
+      "ordinal": 60
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:25454",
+    "source": "jcc_official_s18_source_docs",
+    "id": "25454",
+    "champion_id": "5454",
+    "name": "艾希",
+    "cost": 5,
+    "star": 2,
+    "map_id": "266",
+    "resource_key": "s18_ashe",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/艾希",
+      "ordinal": 60
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:35454",
+    "source": "jcc_official_s18_source_docs",
+    "id": "35454",
+    "champion_id": "5454",
+    "name": "艾希",
+    "cost": 5,
+    "star": 3,
+    "map_id": "267",
+    "resource_key": "s18_ashe",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/艾希",
+      "ordinal": 60
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:45454",
+    "source": "jcc_official_s18_source_docs",
+    "id": "45454",
+    "champion_id": "5454",
+    "name": "艾希",
+    "cost": 5,
+    "star": 4,
+    "map_id": "268",
+    "resource_key": "s18_ashe",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/艾希",
+      "ordinal": 60
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:15455",
+    "source": "jcc_official_s18_source_docs",
+    "id": "15455",
+    "champion_id": "5455",
+    "name": "德莱文",
+    "cost": 5,
+    "star": 1,
+    "map_id": "269",
+    "resource_key": "s18_draven",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/德莱文",
+      "ordinal": 61
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:25455",
+    "source": "jcc_official_s18_source_docs",
+    "id": "25455",
+    "champion_id": "5455",
+    "name": "德莱文",
+    "cost": 5,
+    "star": 2,
+    "map_id": "270",
+    "resource_key": "s18_draven",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/德莱文",
+      "ordinal": 61
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:35455",
+    "source": "jcc_official_s18_source_docs",
+    "id": "35455",
+    "champion_id": "5455",
+    "name": "德莱文",
+    "cost": 5,
+    "star": 3,
+    "map_id": "271",
+    "resource_key": "s18_draven",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/德莱文",
+      "ordinal": 61
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:45455",
+    "source": "jcc_official_s18_source_docs",
+    "id": "45455",
+    "champion_id": "5455",
+    "name": "德莱文",
+    "cost": 5,
+    "star": 4,
+    "map_id": "272",
+    "resource_key": "s18_draven",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/德莱文",
+      "ordinal": 61
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:15456",
+    "source": "jcc_official_s18_source_docs",
+    "id": "15456",
+    "champion_id": "5456",
+    "name": "拉露恩",
+    "cost": 5,
+    "star": 1,
+    "map_id": "273",
+    "resource_key": "s18_alune",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/拉露恩",
+      "ordinal": 62
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:25456",
+    "source": "jcc_official_s18_source_docs",
+    "id": "25456",
+    "champion_id": "5456",
+    "name": "拉露恩",
+    "cost": 5,
+    "star": 2,
+    "map_id": "274",
+    "resource_key": "s18_alune",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/拉露恩",
+      "ordinal": 62
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:35456",
+    "source": "jcc_official_s18_source_docs",
+    "id": "35456",
+    "champion_id": "5456",
+    "name": "拉露恩",
+    "cost": 5,
+    "star": 3,
+    "map_id": "275",
+    "resource_key": "s18_alune",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/拉露恩",
+      "ordinal": 62
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:45456",
+    "source": "jcc_official_s18_source_docs",
+    "id": "45456",
+    "champion_id": "5456",
+    "name": "拉露恩",
+    "cost": 5,
+    "star": 4,
+    "map_id": "276",
+    "resource_key": "s18_alune",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/拉露恩",
+      "ordinal": 62
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:15457",
+    "source": "jcc_official_s18_source_docs",
+    "id": "15457",
+    "champion_id": "5457",
+    "name": "艾翁",
+    "cost": 5,
+    "star": 1,
+    "map_id": "277",
+    "resource_key": "s18_ivern",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/艾翁",
+      "ordinal": 63
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:25457",
+    "source": "jcc_official_s18_source_docs",
+    "id": "25457",
+    "champion_id": "5457",
+    "name": "艾翁",
+    "cost": 5,
+    "star": 2,
+    "map_id": "278",
+    "resource_key": "s18_ivern",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/艾翁",
+      "ordinal": 63
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:35457",
+    "source": "jcc_official_s18_source_docs",
+    "id": "35457",
+    "champion_id": "5457",
+    "name": "艾翁",
+    "cost": 5,
+    "star": 3,
+    "map_id": "279",
+    "resource_key": "s18_ivern",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/艾翁",
+      "ordinal": 63
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:45457",
+    "source": "jcc_official_s18_source_docs",
+    "id": "45457",
+    "champion_id": "5457",
+    "name": "艾翁",
+    "cost": 5,
+    "star": 4,
+    "map_id": "280",
+    "resource_key": "s18_ivern",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/艾翁",
+      "ordinal": 63
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:15458",
+    "source": "jcc_official_s18_source_docs",
+    "id": "15458",
+    "champion_id": "5458",
+    "name": "远古巨龙",
+    "cost": 5,
+    "star": 1,
+    "map_id": "281",
+    "resource_key": "s18_elderdragon",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/远古巨龙",
+      "ordinal": 64
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:25458",
+    "source": "jcc_official_s18_source_docs",
+    "id": "25458",
+    "champion_id": "5458",
+    "name": "远古巨龙",
+    "cost": 5,
+    "star": 2,
+    "map_id": "282",
+    "resource_key": "s18_elderdragon",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/远古巨龙",
+      "ordinal": 64
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:35458",
+    "source": "jcc_official_s18_source_docs",
+    "id": "35458",
+    "champion_id": "5458",
+    "name": "远古巨龙",
+    "cost": 5,
+    "star": 3,
+    "map_id": "283",
+    "resource_key": "s18_elderdragon",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/远古巨龙",
+      "ordinal": 64
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:45458",
+    "source": "jcc_official_s18_source_docs",
+    "id": "45458",
+    "champion_id": "5458",
+    "name": "远古巨龙",
+    "cost": 5,
+    "star": 4,
+    "map_id": "284",
+    "resource_key": "s18_elderdragon",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/远古巨龙",
+      "ordinal": 64
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:15459",
+    "source": "jcc_official_s18_source_docs",
+    "id": "15459",
+    "champion_id": "5459",
+    "name": "拉克丝",
+    "cost": 5,
+    "star": 1,
+    "map_id": "289",
+    "resource_key": "s18_lux_base_pc",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/拉克丝",
+      "ordinal": 65
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:25459",
+    "source": "jcc_official_s18_source_docs",
+    "id": "25459",
+    "champion_id": "5459",
+    "name": "拉克丝",
+    "cost": 5,
+    "star": 2,
+    "map_id": "290",
+    "resource_key": "s18_lux_base_pc",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/拉克丝",
+      "ordinal": 65
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:35459",
+    "source": "jcc_official_s18_source_docs",
+    "id": "35459",
+    "champion_id": "5459",
+    "name": "拉克丝",
+    "cost": 5,
+    "star": 3,
+    "map_id": "291",
+    "resource_key": "s18_lux_base_pc",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/拉克丝",
+      "ordinal": 65
+    }
+  },
+  {
+    "address": "jcc:s18:chess_variant:45459",
+    "source": "jcc_official_s18_source_docs",
+    "id": "45459",
+    "champion_id": "5459",
+    "name": "拉克丝",
+    "cost": 5,
+    "star": 4,
+    "map_id": "292",
+    "resource_key": "s18_lux_base_pc",
+    "source_proof": {
+      "document": "champions-and-traits.md",
+      "document_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849",
+      "section": "英雄详情/拉克丝",
+      "ordinal": 65
+    }
+  }
+]

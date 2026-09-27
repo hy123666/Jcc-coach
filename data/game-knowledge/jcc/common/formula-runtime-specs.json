@@ -1,0 +1,50 @@
+{
+  "schema": "jcc-game-knowledge-common-document-v1",
+  "logical_id": "common.formula_runtime_specs",
+  "scope": "common",
+  "kind": "formula_runtime_specs",
+  "season_neutral": true,
+  "entity_references": [],
+  "entries": [
+    {
+      "id": "formula_runtime.default",
+      "policy": "Registered deterministic evaluators are common code. Season and patch packages provide only versioned entity values, tables, caps, and mechanic modifiers.",
+      "default_missing_policy": "use_default_and_lower_confidence",
+      "required_inputs": {
+        "damage": ["base_damage"],
+        "pvp_player_damage": ["stage", "surviving_enemy_units"],
+        "action_feasibility": ["gold", "time_left"],
+        "ehp": ["hp"],
+        "hp_lethal_tolerance": ["hp", "stage"],
+        "interest_break": ["gold_before_action", "gold_after_action"],
+        "level_timing": ["level", "xp", "gold", "target_level"],
+        "roll_down_budget": ["gold", "stop_gold"],
+        "roll_probability": ["level", "gold_to_roll"],
+        "shop_odds": ["level"],
+        "shop_specific_unit_odds": ["level"],
+        "attacks_to_cast": ["initial_mana", "max_mana", "mana_per_attack"],
+        "streak_value": ["round_result"],
+        "defensive_marginal_value": ["current_hp"],
+        "economy": ["round", "gold"],
+        "operation_time_budget": ["time_left"],
+        "resource_exchange": ["gold", "hp", "xp", "round", "risk_level"],
+        "review_attribution_score": ["timeline_events"],
+        "scouting_priority_score": ["time_left"],
+        "cast_frequency": ["cast_time"],
+        "healing_effective_hp": ["missing_hp_cap"],
+        "summon_scaling": ["stage"]
+      },
+      "live_field_refs": {
+        "gold": ["gold"],
+        "time_left": ["time_left"],
+        "hp": ["hp"],
+        "stage": ["stage", "round"],
+        "round": ["round", "stage"],
+        "level": ["level", "xp"],
+        "xp": ["xp", "level"],
+        "round_result": ["round", "streak", "stage"],
+        "timeline_events": ["timeline_events"]
+      }
+    }
+  ]
+}

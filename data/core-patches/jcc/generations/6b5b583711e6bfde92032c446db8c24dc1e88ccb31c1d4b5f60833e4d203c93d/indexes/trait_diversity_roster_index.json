@@ -1,0 +1,169 @@
+{
+  "augment_bindings": [
+    {
+      "aliases": [
+        "羁绊天梯",
+        "拼盘天梯"
+      ],
+      "augment_address": "jcc:s18:augment:30749",
+      "augment_id": "30749",
+      "augment_name": "拼盘天梯",
+      "external_id": "DA_TraitLadder",
+      "objective_id": "trait_ladder_reward_progress",
+      "roster_support_id": "s18_2:trait_diversity_rosters"
+    },
+    {
+      "aliases": [
+        "终身黄铜 I"
+      ],
+      "augment_address": "jcc:s18:augment:10242",
+      "augment_id": "10242",
+      "augment_name": "终身黄铜 I",
+      "external_id": "DA_BronzeForLifeI",
+      "objective_id": "bronze_trait_scaling",
+      "roster_support_id": "s18_2:trait_diversity_rosters"
+    },
+    {
+      "aliases": [
+        "终身黄铜 II"
+      ],
+      "augment_address": "jcc:s18:augment:20242",
+      "augment_id": "20242",
+      "augment_name": "终身黄铜 II",
+      "external_id": "DA_BronzeForLifeII",
+      "objective_id": "bronze_trait_scaling",
+      "roster_support_id": "s18_2:trait_diversity_rosters"
+    }
+  ],
+  "available": true,
+  "counts": {
+    "augment_bindings": 3,
+    "catalog_champion_entities": 65,
+    "population_buckets": 7,
+    "source_candidate_rows": 43,
+    "support_keys": 1,
+    "unique_champion_entities_used": 32,
+    "unit_slot_occurrences": 347
+  },
+  "groups": {
+    "none:10": {
+      "byte_size": 64205,
+      "metric_maxima": {
+        "bronze_trait_count": 12,
+        "non_unique_active_trait_count": 12
+      },
+      "relative_path": "normalized/trait-diversity-rosters/none/10.json",
+      "sha256": "b4a6214a3500828a1feae13081063bc7634529fd8cfe44e037b1f8baacd178f7",
+      "source_candidate_rows": 14
+    },
+    "none:4": {
+      "byte_size": 8856,
+      "metric_maxima": {
+        "bronze_trait_count": 4,
+        "non_unique_active_trait_count": 4
+      },
+      "relative_path": "normalized/trait-diversity-rosters/none/4.json",
+      "sha256": "e32b39be24e6a3286e0ce555efb615ec43b301d30ab6a3e33a672e3723decc1c",
+      "source_candidate_rows": 2
+    },
+    "none:5": {
+      "byte_size": 15141,
+      "metric_maxima": {
+        "bronze_trait_count": 6,
+        "non_unique_active_trait_count": 6
+      },
+      "relative_path": "normalized/trait-diversity-rosters/none/5.json",
+      "sha256": "5e58437336117a54ad0b35d8dfabc207f9d6ff3b403946322f1f801328a62670",
+      "source_candidate_rows": 2
+    },
+    "none:6": {
+      "byte_size": 41397,
+      "metric_maxima": {
+        "bronze_trait_count": 7,
+        "non_unique_active_trait_count": 7
+      },
+      "relative_path": "normalized/trait-diversity-rosters/none/6.json",
+      "sha256": "c07e5c8431545698227897d70eb72ce028c8b4e40c6d21f571dcd9c95e7dcc44",
+      "source_candidate_rows": 9
+    },
+    "none:7": {
+      "byte_size": 15380,
+      "metric_maxima": {
+        "bronze_trait_count": 9,
+        "non_unique_active_trait_count": 9
+      },
+      "relative_path": "normalized/trait-diversity-rosters/none/7.json",
+      "sha256": "c53d6209b3a7d1490f4cddb244a0f156b90cdf603da9ffce41e4b63d53107cd1",
+      "source_candidate_rows": 2
+    },
+    "none:8": {
+      "byte_size": 36088,
+      "metric_maxima": {
+        "bronze_trait_count": 10,
+        "non_unique_active_trait_count": 10
+      },
+      "relative_path": "normalized/trait-diversity-rosters/none/8.json",
+      "sha256": "fde7c3f2c9cf17d1b4b8b9c83cd56742600ad05d0d2e45a187bb028a9810c64c",
+      "source_candidate_rows": 5
+    },
+    "none:9": {
+      "byte_size": 53095,
+      "metric_maxima": {
+        "bronze_trait_count": 11,
+        "non_unique_active_trait_count": 11
+      },
+      "relative_path": "normalized/trait-diversity-rosters/none/9.json",
+      "sha256": "e65af9798100b7d95aeaba52fe26efda2c235bde18f11548dbe86e38072b3f76",
+      "source_candidate_rows": 9
+    }
+  },
+  "identity": {
+    "mode_id": "mode18",
+    "patch_id": "s18_2",
+    "season_id": "s18"
+  },
+  "objective_definitions": [
+    {
+      "objective_id": "trait_ladder_reward_progress",
+      "primary_metric": "non_unique_active_trait_count",
+      "reward_table_ref": "augment:30749:rewards",
+      "runtime_policy": "Prefer the next reachable reward threshold, then use current-match strength and Master+ evidence only as post-selection evidence.",
+      "tie_breakers": [
+        "high_cost_unit_count"
+      ]
+    },
+    {
+      "objective_id": "bronze_trait_scaling",
+      "primary_metric": "bronze_trait_count",
+      "reward_table_ref": null,
+      "runtime_policy": "Maximize currently active bronze-tier traits without treating tracker quality as lineup-strength evidence.",
+      "tie_breakers": [
+        "high_cost_unit_count"
+      ]
+    }
+  ],
+  "policy": {
+    "master_plus_rankings_may_rerank_only_after_trait_objective_eligibility": true,
+    "official_catalog_identity_only": true,
+    "rosters_are_atomic_and_must_not_be_spliced": true,
+    "runtime_online_fetch_forbidden": true,
+    "tracker_metrics_are_not_master_plus_strength": true
+  },
+  "populations": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "roster_support_id": "s18_2:trait_diversity_rosters",
+  "schema": "jcc-trait-diversity-roster-index-v2",
+  "support_keys": [
+    {
+      "provider_traits": [],
+      "support_key": "none"
+    }
+  ]
+}

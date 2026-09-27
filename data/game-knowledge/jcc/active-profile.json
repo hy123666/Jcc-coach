@@ -1,0 +1,38 @@
+{
+  "schema": "jcc-game-knowledge-active-profile-v1",
+  "core_profile_id": "a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151",
+  "season_id": "s18",
+  "patch_id": "s18_2",
+  "runtime_identity": {
+    "schema": "jcc-game-knowledge-runtime-identity-v1",
+    "season_id": "s18",
+    "patch_id": "s18_2",
+    "game_mode_id": "jcc-mode18",
+    "package_id": "jcc-s18-s18_2",
+    "source_package_id": "jcc-mode18-s19-18.18.2",
+    "hard_data_manifest": "data/core-patches/jcc/generations/9ea24a3a5606e2aa3850bb7f7e8c08bcf0c5faaa88f1188fe0e66cc7aa9c24b7/manifest.json",
+    "upstream_identity": {
+      "mode": "18",
+      "season": "S19",
+      "version": "18.18.2",
+      "framework_name": "Mode18NatureForce"
+    }
+  },
+  "bundle_path": "generated/a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151/bundle.json",
+  "bundle_sha256": "b3d0dbe31437fe2a8a320f5677afba994238e3f74387c12aca47f659a1396d02",
+  "bundle_byte_size": 2845374,
+  "decision_input_catalog_path": "generated/a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151/decision-input-catalog.json",
+  "decision_input_catalog_sha256": "cc465f007b13aa99bc656cf9ca96ee8317178ce25fc47a66801d21af901c5f0f",
+  "decision_input_catalog_byte_size": 1349797,
+  "augment_stage_authority_path": "generated/a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151/augment-stage-authority.json",
+  "augment_stage_authority_sha256": "dc2a46345c6bbb126575513324c801be54c90378f73d75a2d6a206a353799125",
+  "augment_stage_authority_byte_size": 245900,
+  "runtime_catalog_overlay_path": "generated/a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151/runtime-catalog-overlay.json",
+  "runtime_catalog_overlay_sha256": "545311a7f2a59200354ac8a1c92cea1c413f75c5d1b4fd500fcc5f2079bfc80d",
+  "runtime_catalog_overlay_byte_size": 290514,
+  "semantic_feature_index_path": "generated/a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151/semantic-feature-index.json",
+  "semantic_feature_index_sha256": "0ba4254cb633534f26cd0ac6d51e4c6158a73a779ffa61086766c4ede97459b4",
+  "semantic_feature_index_byte_size": 1753048,
+  "activation_policy": "new_match_only",
+  "promoted_at": "2026-09-17T15:28:11.362Z"
+}

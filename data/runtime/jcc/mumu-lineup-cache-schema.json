@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-10T10:30:52.343Z",
+  "product_boundary": "mumu_gameassist_jkchess_apk_private_cache",
+  "private_cache": {
+    "status": "observed",
+    "sqlite_engine_status": "python_sqlite3_read_only",
+    "tables": [
+      "user_lineup",
+      "lineup_index",
+      "config"
+    ],
+    "schema_samples": [
+      "CREATE TABLE android_metadata (locale TEXT)",
+      "CREATE TABLE room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "Kindexindex_user_lineup_hash_seasonModeuser_lineup",
+      "CREATE UNIQUE INDEX `index_user_lineup_hash_seasonMode` ON `user_lineup` (`hash`, `seasonMode`)",
+      "gtableuser_lineupuser_lineup",
+      "CREATE TABLE `user_lineup` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `seasonMode` TEXT NOT NULL, `lineupJson` TEXT NOT NULL, `hash` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `syncStatus` INTEGER NOT NULL)z",
+      "indexindex_lineup_index_keywordlineup_index",
+      "CREATE INDEX `index_lineup_index_keyword` ON `lineup_index` (`keyword`)P",
+      "CREATE TABLE sqlite_sequence(name,seq)",
+      "tablelineup_indexlineup_index",
+      "CREATE TABLE `lineup_index` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `keyword` TEXT NOT NULL, `indexType` INTEGER NOT NULL, `lineupConfigId` INTEGER NOT NULL, `lineupIds` TEXT NOT NULL)m",
+      "CREATE TABLE `config` (`id` TEXT NOT NULL, `value` TEXT NOT NULL, PRIMARY KEY(`id`))+",
+      "lineup_index",
+      "CREATE TABLE events (",
+      "            `id` INTEGER PRIMARY KEY AUTOINCREMENT,",
+      "CREATE TABLE config ("
+    ],
+    "has_live_board_table": false,
+    "file_summaries": [
+      {
+        "path": "data/databases/app-db",
+        "size_bytes": 4096,
+        "signature": {
+          "gzip": false,
+          "zip": false,
+          "sqlite": true,
+          "x23b": false
+        },
+        "schema_samples": []
+      },
+      {
+        "path": "data/databases/app-db-shm",
+        "size_bytes": 32768,
+        "signature": {
+          "gzip": false,
+          "zip": false,
+          "sqlite": false,
+          "x23b": false
+        },
+        "schema_samples": []
+      },
+      {
+        "path": "data/databases/app-db-wal",
+        "size_bytes": 243112,
+        "signature": {
+          "gzip": false,
+          "zip": false,
+          "sqlite": false,
+          "x23b": false
+        },
+        "schema_samples": [
+          "CREATE TABLE android_metadata (locale TEXT)",
+          "CREATE TABLE room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+          "Kindexindex_user_lineup_hash_seasonModeuser_lineup",
+          "CREATE UNIQUE INDEX `index_user_lineup_hash_seasonMode` ON `user_lineup` (`hash`, `seasonMode`)",
+          "gtableuser_lineupuser_lineup",
+          "CREATE TABLE `user_lineup` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `seasonMode` TEXT NOT NULL, `lineupJson` TEXT NOT NULL, `hash` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `syncStatus` INTEGER NOT NULL)z",
+          "indexindex_lineup_index_keywordlineup_index",
+          "CREATE INDEX `index_lineup_index_keyword` ON `lineup_index` (`keyword`)P",
+          "CREATE TABLE sqlite_sequence(name,seq)",
+          "tablelineup_indexlineup_index",
+          "CREATE TABLE `lineup_index` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `keyword` TEXT NOT NULL, `indexType` INTEGER NOT NULL, `lineupConfigId` INTEGER NOT NULL, `lineupIds` TEXT NOT NULL)m",
+          "CREATE TABLE `config` (`id` TEXT NOT NULL, `value` TEXT NOT NULL, PRIMARY KEY(`id`))+",
+          "lineup_index"
+        ]
+      },
+      {
+        "path": "data/databases/com.netease.gpdd.fcount",
+        "size_bytes": 32768,
+        "signature": {
+          "gzip": false,
+          "zip": false,
+          "sqlite": true,
+          "x23b": false
+        },
+        "schema_samples": [
+          "CREATE TABLE events (",
+          "            `id` INTEGER PRIMARY KEY AUTOINCREMENT,",
+          "CREATE TABLE sqlite_sequence(name,seq)",
+          "CREATE TABLE config (",
+          "CREATE TABLE android_metadata (locale TEXT)"
+        ]
+      },
+      {
+        "path": "data/databases/com.netease.gpdd.fcount-journal",
+        "size_bytes": 0,
+        "signature": {
+          "gzip": false,
+          "zip": false,
+          "sqlite": false,
+          "x23b": false
+        },
+        "schema_samples": []
+      }
+    ],
+    "sqlite_summaries": [
+      {
+        "path": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+        "ok": true,
+        "tables": [
+          {
+            "name": "android_metadata",
+            "sql": "CREATE TABLE android_metadata (locale TEXT)"
+          },
+          {
+            "name": "config",
+            "sql": "CREATE TABLE `config` (`id` TEXT NOT NULL, `value` TEXT NOT NULL, PRIMARY KEY(`id`))"
+          },
+          {
+            "name": "lineup_index",
+            "sql": "CREATE TABLE `lineup_index` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `keyword` TEXT NOT NULL, `indexType` INTEGER NOT NULL, `lineupConfigId` INTEGER NOT NULL, `lineupIds` TEXT NOT NULL)"
+          },
+          {
+            "name": "room_master_table",
+            "sql": "CREATE TABLE room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)"
+          },
+          {
+            "name": "sqlite_sequence",
+            "sql": "CREATE TABLE sqlite_sequence(name,seq)"
+          },
+          {
+            "name": "user_lineup",
+            "sql": "CREATE TABLE `user_lineup` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `seasonMode` TEXT NOT NULL, `lineupJson` TEXT NOT NULL, `hash` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `syncStatus` INTEGER NOT NULL)"
+          }
+        ],
+        "table_samples": {
+          "config": {
+            "columns": [
+              "id",
+              "value"
+            ],
+            "row_count": 1,
+            "rows": [
+              {
+                "id": "utGx8zpq",
+                "value": "5l3EWHFAxWZ72qofDrhGQ7JpiwYBOjiQBU53znGZpHWhew32RpHe2deLKNsVFqZZ"
+              }
+            ]
+          },
+          "lineup_index": {
+            "columns": [
+              "id",
+              "keyword",
+              "indexType",
+              "lineupConfigId",
+              "lineupIds"
+            ],
+            "row_count": 1844,
+            "rows": [
+              {
+                "id": 1,
+                "keyword": "新版神将枪 7神将2骑士",
+                "indexType": 0,
+                "lineupConfigId": 0,
+                "lineupIds": "[0]"
+              },
+              {
+                "id": 2,
+                "keyword": "XINBANSHENJIANGQIANG 7SHENJIANG2QISHI",
+                "indexType": 0,
+                "lineupConfigId": 0,
+                "lineupIds": "[0]"
+              },
+              {
+                "id": 3,
+                "keyword": "XIN BAN SHEN JIANG QIANG 7 SHEN JIANG 2 QI SHI",
+                "indexType": 0,
+                "lineupConfigId": 0,
+                "lineupIds": "[0]"
+              }
+            ]
+          },
+          "user_lineup": {
+            "columns": [
+              "id",
+              "name",
+              "seasonMode",
+              "lineupJson",
+              "hash",
+              "createdAt",
+              "syncStatus"
+            ],
+            "row_count": 0,
+            "rows": []
+          }
+        },
+        "error": null
+      },
+      {
+        "path": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+        "ok": true,
+        "tables": [
+          {
+            "name": "android_metadata",
+            "sql": "CREATE TABLE android_metadata (locale TEXT)"
+          },
+          {
+            "name": "config",
+            "sql": "CREATE TABLE config (\n            `id` INTEGER PRIMARY KEY AUTOINCREMENT,\n            `key` TEXT NOT NULL,\n            `value` TEXT NOT NULL\n        )"
+          },
+          {
+            "name": "events",
+            "sql": "CREATE TABLE events (\n            `id` INTEGER PRIMARY KEY AUTOINCREMENT,\n            `uuid` TEXT NOT NULL,\n            `app_key` TEXT NOT NULL,\n            `name` TEXT NOT NULL,\n            `params` TEXT NOT NULL\n        )"
+          },
+          {
+            "name": "sqlite_sequence",
+            "sql": "CREATE TABLE sqlite_sequence(name,seq)"
+          }
+        ],
+        "table_samples": {
+          "config": {
+            "columns": [
+              "id",
+              "key",
+              "value"
+            ],
+            "row_count": 2,
+            "rows": [
+              {
+                "id": 1,
+                "key": "init_time",
+                "value": "1780669411054"
+              },
+              {
+                "id": 2,
+                "key": "install_id",
+                "value": "f1c2ad6d-1949-4737-92d1-0dacd6e68cdc"
+              }
+            ]
+          }
+        },
+        "error": null
+      }
+    ],
+    "row_sample_status": "read_only_samples_observed"
+  },
+  "binary_configs": {
+    "apk_assets_cfg": {
+      "size_bytes": 623920,
+      "first_bytes_hex": "3c5832334228da6732c6f9b9bbddb9763fe1ff93b94a4c5cb68f1709e5e0445b",
+      "signature": {
+        "gzip": false,
+        "zip": false,
+        "sqlite": false,
+        "x23b": true
+      },
+      "decode_status": "x23b_container_observed_not_decoded"
+    },
+    "apk_assets_lus": {
+      "size_bytes": 692640,
+      "first_bytes_hex": "3c5832334228da6732c6f9b9bbddb9763fe1ff93b94a4c5cb68f1709e5e0445b",
+      "signature": {
+        "gzip": false,
+        "zip": false,
+        "sqlite": false,
+        "x23b": true
+      },
+      "decode_status": "x23b_container_observed_not_decoded"
+    },
+    "pulled_data_cfg": {
+      "size_bytes": 623920,
+      "first_bytes_hex": "3c5832334228da6732c6f9b9bbddb9763fe1ff93b94a4c5cb68f1709e5e0445b",
+      "signature": {
+        "gzip": false,
+        "zip": false,
+        "sqlite": false,
+        "x23b": true
+      },
+      "decode_status": "x23b_container_observed_not_decoded"
+    }
+  },
+  "runtime_use": {
+    "lineup_cache": "schema_evidence_only; do not use MuMu lineup_index/user_lineup as project strategy source",
+    "strategy_source": "do_not_use; runtime strategy must use project hard-data, live rankings, formulas, and AI-native route evaluators",
+    "x23b_configs": "observed but not decoded; do not block visual runtime on this",
+    "live_state": "not_present_in_observed_cache"
+  }
+}

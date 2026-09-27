@@ -1,0 +1,115 @@
+{
+  "schema": "jcc-vision-model-sensing-contract-v1",
+  "purpose": "Use the runtime agent's multimodal main model only as a bounded visual-candidate fallback outside active choice intake when trusted structured facts, current-match user confirmation, and scoped HUD or owned-augment OCR are insufficient.",
+  "product_boundary": "observable_screen_visual_source",
+  "model_policy": {
+    "preferred_runtime_shape": "main_runtime_agent_is_multimodal",
+    "do_not_require_separate_vlm_option": true,
+    "do_not_require_api_key_or_detached_model_service": true,
+    "reason": "The host CLI agent that understands strategy should inspect the frame with live_state and catalog context, then return structured facts. This keeps visual interpretation aligned with the current match plan instead of splitting perception into a detached OCR/VLM/API service.",
+    "source_label": "vision_model remains the technical source label for visual observations, but product/runtime UI should treat it as multimodal_agent_sensing."
+  },
+  "fallback_use_cases": [
+    "left inventory/item bench understanding after an explicit equipment refresh or conflict check",
+    "unit-attached equipment on trusted self-board anchors after an explicit equipment refresh or conflict check",
+    "non-choice special trait or effect text explicitly requested by the user"
+  ],
+  "not_responsible_for": [
+    "augment, active-season, or item/anvil choice candidate intake",
+    "own board and bench unit identity when MuMu 4352/4353 is available",
+    "shop identity when MuMu 4354 is available",
+    "phase status when MuMu 4358 is available",
+    "final user selections without user confirmation or match history",
+    "opponent board unit identity, opponent positioning, and lobby power scanning"
+  ],
+  "allowed_frame_sources": [
+    "MuMu NemuShell screencap",
+    "adb screencap",
+    "future authorized MediaProjection",
+    "curated fixture images"
+  ],
+  "forbidden_sources": [
+    "game process memory reads",
+    "game process memory writes",
+    "Frida hooks",
+    "SSL pinning bypass",
+    "credential or private account scraping"
+  ],
+  "storage_policy": {
+    "default_persist_raw_frames": false,
+    "production_frame_lifecycle": "capture frame -> host CLI agent native multimodal inspection -> structured JSON -> delete frame",
+    "debug_fixture_exception": "Only explicit calibration fixtures may keep image files.",
+    "structured_output_only": true,
+    "must_not_embed_image_bytes_in_output": true
+  },
+  "runtime_policy": {
+    "default_frequency": "event_or_mode_triggered_only",
+    "not_per_frame": true,
+    "cruise_policy": "Cruise must not start vision automatically. A bounded visual candidate request is allowed only after an explicit equipment refresh/conflict request or an explicit non-choice special-text request.",
+    "mode_policy": {
+      "augment_choice": "Current-match user report only. Do not start OCR or host multimodal sensing for candidate names.",
+      "descriptor_owned_season_choice": "Any active-season choice declared by the compiled descriptor uses current-match user reports only. Do not start OCR or host multimodal sensing for candidate names.",
+      "item_choice": "Current-match user report only. Do not start OCR or host multimodal sensing for candidate names.",
+      "refresh_self_state": "MuMu structured sources own board, bench, shop, inventory, and trusted equipped-item facts. Resident HUD ROI OCR owns phase.stage_round, hp, gold, level, and XP. Multimodal sensing may only supply unresolved diagnostic candidates."
+    }
+  },
+  "input_context": {
+    "required": [
+      "mode",
+      "frame_id",
+      "image_reference",
+      "catalog_entity_names_or_ids"
+    ],
+    "recommended": [
+      "match_session_id",
+      "mumu_4358_status",
+      "mumu_4353_current_view_units",
+      "own_board_units",
+      "own_bench_units",
+      "shop_units",
+      "confirmed_augments",
+      "match_variables",
+      "target_plan"
+    ],
+    "candidate_database_context": {
+      "catalog_overlay": "data/runtime/jcc/mumu-catalog-overlay.json",
+      "icon_asset_manifest": "data/runtime/jcc/visual-icons/manifest.json",
+      "icon_asset_role": "reference/candidate database for the multimodal main agent, not a live template-matching product path",
+      "vision_reference_pack_tool": "tools/build-jcc-vision-reference-pack.mjs",
+      "vision_reference_pack_role": "mode-scoped icon/name candidate pack passed alongside the current frame so the multimodal agent can visually pair visible equipment, augments, and champion icons without relying on OCR ROI or local matcher scores",
+      "vision_reference_pack_policy": "The pack is not an observation and not a matcher result. It may include all current-season items/augments for hard visual modes plus live-state champion anchors. The model returns structured candidates with possible_ids when icons are shared or ambiguous.",
+      "hard_data": "data/core-patches/jcc/... current season indexes",
+      "live_rankings": "data/live-rankings/jcc/... latest daily meta data",
+      "matching_policy": "The model should pair visible UI with candidate names/IDs from these databases. It should prefer exact visual/text matches, keep possible_ids for ambiguity, and use live_state/strategy context only as tie-break evidence."
+    },
+    "prompt_rule": "The model should identify only visible facts. It may use MuMu unit anchors and catalog names as constraints, but must not invent unobserved equipment, augments, or selections."
+  },
+  "output_contract": {
+    "runtime_tool": "tools/run-jcc-multimodal-runtime-observation.mjs",
+    "request_builder_and_response_normalizer": "tools/run-jcc-vision-model-observation.mjs",
+    "host_cli_agent_response": "Codex CLI or Kimi Code CLI writes JSON matching expected_response_shape; no separate model API service is required.",
+    "host_cli_agent_response_writer": "tools/write-jcc-host-agent-json.mjs",
+    "host_cli_agent_response_writer_policy": "Host visual response backfill must be written through Node UTF-8 no-BOM atomic JSON writer, not PowerShell Set-Content.",
+    "shape": "visual_observations compatible with data/runtime/jcc/visual-live-state-contract.json",
+    "source": "vision_model",
+    "status": "visual_candidate",
+    "fields": [
+      "items.item_bench",
+      "items.equipped_items"
+    ],
+    "pollution_guards": [
+      "Never write own board_units or bench_units from vision model output.",
+      "Self modes write under visual candidates only and do not override verified MuMu bridge fields.",
+      "Unknown or catalog-unmatched names stay unresolved candidates.",
+      "Same-icon/same-name ambiguities keep possible_ids instead of forced unique IDs.",
+      "Do not create opponent board/unit/positioning live_state facts from visual output."
+    ]
+  },
+  "fallback_policy": {
+    "rapidocr_worker": "resident product fast path for owned-augment text and HUD phase/economy fields; active choice candidate OCR is compatibility/calibration only",
+    "icon_matcher": "scene-scoped fallback or conflict validation only. It never overrides MuMu structured facts or confirmed selections."
+  },
+  "product_decisions": {
+    "no_opponent_board_vision_path": "Host multimodal vision is not a product path for opponent board/unit/positioning advice. It may inspect user-provided screenshots only as ordinary chat context, not as live_state mutation."
+  }
+}

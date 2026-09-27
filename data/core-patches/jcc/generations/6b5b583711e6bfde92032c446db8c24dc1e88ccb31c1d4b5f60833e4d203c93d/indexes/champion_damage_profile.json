@@ -1,0 +1,923 @@
+[
+  {
+    "address": "jcc:s18:champion_damage_profile:1500",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1500",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "奥恩",
+    "output_type": "magic",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "shield"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:1501",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1501",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "洛",
+    "output_type": "magic",
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "shield"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:1502",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1502",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "蕾欧娜",
+    "output_type": "magic",
+    "tags": [
+      "control",
+      "magic_damage",
+      "shield",
+      "trigger_combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:1503",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1503",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "可酷伯",
+    "output_type": "magic",
+    "tags": [
+      "healing",
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:1504",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1504",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "雷克塞",
+    "output_type": "magic",
+    "tags": [
+      "aoe",
+      "healing",
+      "magic_damage",
+      "trigger_cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:1505",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1505",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "卡蜜尔",
+    "output_type": "mixed",
+    "tags": [
+      "magic_damage",
+      "physical_damage",
+      "shield"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:1506",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1506",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "阿卡丽",
+    "output_type": "mixed",
+    "tags": [
+      "magic_damage",
+      "physical_damage",
+      "trigger_cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:1507",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1507",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "韦鲁斯",
+    "output_type": "mixed",
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:1508",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1508",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "绯红树怪",
+    "output_type": "mixed",
+    "tags": [
+      "magic_damage",
+      "physical_damage",
+      "trigger_cast",
+      "wound"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:1509",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1509",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "霞",
+    "output_type": "mixed",
+    "tags": [
+      "armor_shred",
+      "attack_speed",
+      "magic_damage",
+      "physical_damage",
+      "sunder"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:1510",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1510",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "卡尔玛",
+    "output_type": "magic",
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:1511",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1511",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "苍蓝哨戒",
+    "output_type": "magic",
+    "tags": [
+      "magic_damage",
+      "mana"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:1512",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:1512",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "维迦",
+    "output_type": "magic",
+    "tags": [
+      "condition_low_health",
+      "magic_damage",
+      "trigger_kill"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2500",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:2500",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "峡谷迅捷蟹",
+    "output_type": "mixed",
+    "tags": [
+      "aoe",
+      "healing",
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2501",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:2501",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "阿利斯塔",
+    "output_type": "magic",
+    "tags": [
+      "control",
+      "healing",
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2502",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:2502",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "瑟庄妮",
+    "output_type": "magic",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "shield"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2503",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:2503",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "慎",
+    "output_type": "magic",
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "shield"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2504",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:2504",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "伊莉丝",
+    "output_type": "magic",
+    "tags": [
+      "attack_speed",
+      "healing",
+      "magic_damage",
+      "trigger_basic_attack",
+      "trigger_cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2505",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:2505",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 1,
+    "name": "约里克",
+    "output_type": "mixed",
+    "tags": [
+      "control",
+      "healing",
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2507",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:2507",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "暗影狼",
+    "output_type": "mixed",
+    "tags": [
+      "attack_speed",
+      "critical_strike",
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2508",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:2508",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "沃里克",
+    "output_type": "mixed",
+    "tags": [
+      "attack_speed",
+      "healing",
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2509",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:2509",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "芸阿娜",
+    "output_type": "mixed",
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2510",
+    "cadence": "basic_attacker",
+    "champion_address": "jcc:s18:champion:2510",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "凯特琳",
+    "output_type": "mixed",
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2511",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:2511",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "乐芙兰",
+    "output_type": "magic",
+    "tags": [
+      "magic_damage",
+      "trigger_kill"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2512",
+    "cadence": "basic_attacker",
+    "champion_address": "jcc:s18:champion:2512",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "凯尔",
+    "output_type": "magic",
+    "tags": [
+      "magic_damage",
+      "magic_resist_shred",
+      "trigger_basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2513",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:2513",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "魔沼蛙",
+    "output_type": "mixed",
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:2514",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:2514",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 2,
+    "name": "提莫",
+    "output_type": "magic",
+    "tags": [
+      "magic_damage",
+      "trigger_cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3500",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3500",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "赫卡里姆",
+    "output_type": "magic",
+    "tags": [
+      "healing",
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3501",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3501",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "蔚",
+    "output_type": "magic",
+    "tags": [
+      "attack_speed",
+      "control",
+      "healing",
+      "magic_damage",
+      "trigger_basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3502",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3502",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "费德提克",
+    "output_type": "magic",
+    "tags": [
+      "healing",
+      "magic_damage",
+      "magic_resist_shred"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3503",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3503",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "远古石甲虫",
+    "output_type": "mixed",
+    "tags": [
+      "control",
+      "magic_damage",
+      "physical_damage",
+      "shield"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3504",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3504",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "雷恩加尔",
+    "output_type": "mixed",
+    "tags": [
+      "healing",
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3505",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3505",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "卡兹克",
+    "output_type": "magic",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "mana"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3506",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3506",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "黛安娜",
+    "output_type": "magic",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "shield"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3507",
+    "cadence": "basic_attacker",
+    "champion_address": "jcc:s18:champion:3507",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "易",
+    "output_type": "mixed",
+    "tags": [
+      "attack_speed",
+      "healing",
+      "magic_damage",
+      "physical_damage",
+      "trigger_kill"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3508",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3508",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "崔丝塔娜",
+    "output_type": "mixed",
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "magic_damage",
+      "physical_damage",
+      "trigger_basic_attack",
+      "trigger_cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3509",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3509",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "深红锋喙鸟",
+    "output_type": "mixed",
+    "tags": [
+      "armor_shred",
+      "magic_damage",
+      "physical_damage",
+      "trigger_basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3510",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3510",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "阿兹尔",
+    "output_type": "magic",
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "trigger_basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3511",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3511",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "卡西奥佩娅",
+    "output_type": "magic",
+    "tags": [
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3512",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3512",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "克格莫",
+    "output_type": "mixed",
+    "tags": [
+      "condition_low_health",
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:3515",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:3515",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 3,
+    "name": "拉莫斯",
+    "output_type": "mixed",
+    "tags": [
+      "control",
+      "magic_damage",
+      "physical_damage",
+      "shield"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4500",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4500",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "苍蓝雕纹魔像",
+    "output_type": "magic",
+    "tags": [
+      "control",
+      "magic_damage",
+      "mana",
+      "shield",
+      "trigger_cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4501",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4501",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "莫甘娜",
+    "output_type": "magic",
+    "tags": [
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4502",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4502",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "莉莉娅",
+    "output_type": "magic",
+    "tags": [
+      "healing",
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4503",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4503",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "阿木木",
+    "output_type": "true_or_mixed",
+    "tags": [
+      "healing",
+      "magic_damage",
+      "true_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4504",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4504",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "墨菲特",
+    "output_type": "magic",
+    "tags": [
+      "magic_damage",
+      "shield"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4505",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4505",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "瑟提",
+    "output_type": "mixed",
+    "tags": [
+      "aoe",
+      "healing",
+      "magic_damage",
+      "mana",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4506",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4506",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "绯红印记树怪",
+    "output_type": "mixed",
+    "tags": [
+      "healing",
+      "magic_damage",
+      "physical_damage",
+      "trigger_kill"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4507",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4507",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "奈德丽",
+    "output_type": "mixed",
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4508",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4508",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "伊泽瑞尔",
+    "output_type": "mixed",
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "physical_damage",
+      "trigger_cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4509",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4509",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "厄斐琉斯",
+    "output_type": "mixed",
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4510",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4510",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "希维尔",
+    "output_type": "mixed",
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4511",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4511",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "阿狸",
+    "output_type": "magic",
+    "tags": [
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4512",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4512",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "婕拉",
+    "output_type": "magic",
+    "tags": [
+      "magic_damage",
+      "trigger_basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:4513",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:4513",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 4,
+    "name": "索拉卡",
+    "output_type": "magic",
+    "tags": [
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:5450",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:5450",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 5,
+    "name": "茂凯",
+    "output_type": "magic",
+    "tags": [
+      "healing",
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:5451",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:5451",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 5,
+    "name": "塔里克",
+    "output_type": "magic",
+    "tags": [
+      "healing",
+      "magic_damage",
+      "shield",
+      "trigger_basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:5452",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:5452",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 5,
+    "name": "纳尔",
+    "output_type": "mixed",
+    "tags": [
+      "armor_shred",
+      "magic_damage",
+      "magic_resist_shred",
+      "physical_damage",
+      "trigger_basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:5453",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:5453",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 5,
+    "name": "凯南",
+    "output_type": "magic",
+    "tags": [
+      "magic_damage",
+      "shield"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:5454",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:5454",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 5,
+    "name": "艾希",
+    "output_type": "mixed",
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:5455",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:5455",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 5,
+    "name": "德莱文",
+    "output_type": "mixed",
+    "tags": [
+      "magic_damage",
+      "physical_damage",
+      "trigger_basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:5456",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:5456",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 5,
+    "name": "拉露恩",
+    "output_type": "magic",
+    "tags": [
+      "aoe",
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:5457",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:5457",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 5,
+    "name": "艾翁",
+    "output_type": "magic",
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "critical_strike",
+      "magic_damage",
+      "shield",
+      "trigger_cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:5458",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:5458",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 5,
+    "name": "远古巨龙",
+    "output_type": "physical",
+    "tags": [
+      "aoe",
+      "condition_low_health",
+      "physical_damage",
+      "trigger_basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:champion_damage_profile:5459",
+    "cadence": "caster",
+    "champion_address": "jcc:s18:champion:5459",
+    "confidence": "deterministic_semantic_heuristic",
+    "cost": 5,
+    "name": "拉克丝",
+    "output_type": "magic",
+    "tags": [
+      "magic_damage",
+      "mana",
+      "trigger_cast"
+    ]
+  }
+]

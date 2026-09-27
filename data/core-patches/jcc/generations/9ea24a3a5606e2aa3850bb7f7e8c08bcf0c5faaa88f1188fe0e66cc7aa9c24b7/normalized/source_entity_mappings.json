@@ -1,0 +1,119 @@
+{
+  "champion_mappings": [
+    {
+      "authority": "developer_confirmed_from_s18_official_recipe",
+      "canonical_champion_id": "4501",
+      "canonical_name": "莫甘娜",
+      "mapping_kind": "tencent_recipe_alias",
+      "source_id": "14514"
+    },
+    {
+      "authority": "developer_confirmed_from_s18_official_recipe",
+      "canonical_champion_id": "5452",
+      "canonical_name": "纳尔",
+      "mapping_kind": "tencent_recipe_alias",
+      "source_id": "15460"
+    },
+    {
+      "authority": "developer_confirmed_s18_variant_sequence",
+      "canonical_champion_id": "5459",
+      "canonical_name": "拉克丝",
+      "mapping_kind": "grand_elementalist_variant",
+      "source_id": "15461",
+      "variant_order": 1,
+      "variant_trait_id": "451",
+      "variant_trait_name": "黑荆棘"
+    },
+    {
+      "authority": "developer_confirmed_s18_variant_sequence",
+      "canonical_champion_id": "5459",
+      "canonical_name": "拉克丝",
+      "mapping_kind": "grand_elementalist_variant",
+      "source_id": "15462",
+      "variant_order": 2,
+      "variant_trait_id": "452",
+      "variant_trait_name": "灵魂莲华"
+    },
+    {
+      "authority": "developer_confirmed_s18_variant_sequence",
+      "canonical_champion_id": "5459",
+      "canonical_name": "拉克丝",
+      "mapping_kind": "grand_elementalist_variant",
+      "source_id": "15463",
+      "variant_order": 3,
+      "variant_trait_id": "453",
+      "variant_trait_name": "魔女"
+    },
+    {
+      "authority": "developer_confirmed_s18_variant_sequence",
+      "canonical_champion_id": "5459",
+      "canonical_name": "拉克丝",
+      "mapping_kind": "grand_elementalist_variant",
+      "source_id": "15464",
+      "variant_order": 4,
+      "variant_trait_id": "450",
+      "variant_trait_name": "永恒之森"
+    },
+    {
+      "authority": "developer_confirmed_s18_variant_sequence",
+      "canonical_champion_id": "5459",
+      "canonical_name": "拉克丝",
+      "mapping_kind": "grand_elementalist_variant",
+      "source_id": "15465",
+      "variant_order": 5,
+      "variant_trait_id": "455",
+      "variant_trait_name": "花仙子"
+    },
+    {
+      "authority": "developer_confirmed_s18_variant_sequence",
+      "canonical_champion_id": "5459",
+      "canonical_name": "拉克丝",
+      "mapping_kind": "grand_elementalist_variant",
+      "source_id": "15466",
+      "variant_order": 6,
+      "variant_trait_id": "458",
+      "variant_trait_name": "地狱火"
+    },
+    {
+      "authority": "developer_confirmed_s18_variant_sequence",
+      "canonical_champion_id": "5459",
+      "canonical_name": "拉克丝",
+      "mapping_kind": "grand_elementalist_variant",
+      "source_id": "15467",
+      "variant_order": 7,
+      "variant_trait_id": "460",
+      "variant_trait_name": "月蚀骑士"
+    },
+    {
+      "authority": "developer_confirmed_s18_variant_sequence",
+      "canonical_champion_id": "5459",
+      "canonical_name": "拉克丝",
+      "mapping_kind": "grand_elementalist_variant",
+      "source_id": "15468",
+      "variant_order": 8,
+      "variant_trait_id": "457",
+      "variant_trait_name": "野兽之灵"
+    },
+    {
+      "authority": "developer_confirmed_s18_variant_sequence",
+      "canonical_champion_id": "5459",
+      "canonical_name": "拉克丝",
+      "mapping_kind": "grand_elementalist_variant",
+      "source_id": "15469",
+      "variant_order": 9,
+      "variant_trait_id": "459",
+      "variant_trait_name": "日蚀骑士"
+    }
+  ],
+  "counts": {
+    "champion_aliases": 2,
+    "champion_mappings": 11,
+    "champion_variants": 9
+  },
+  "identity": {
+    "mode_id": "mode18",
+    "patch_id": "s18_2",
+    "season_id": "s18"
+  },
+  "schema": "jcc-patch-source-entity-mappings-v1"
+}

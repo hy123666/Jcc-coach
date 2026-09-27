@@ -1,0 +1,12 @@
+{
+  "schema": "jcc-live-ranking-active-generation-v1",
+  "generation_id": "20260926-182e365774f065a7e8bac4e0",
+  "stat_date": "20260926",
+  "content_sha256": "182e365774f065a7e8bac4e0c652551e6de25af3c50c1d4bb92ad003d6da1282",
+  "core_profile_id": "a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151",
+  "season_id": "s18",
+  "patch_id": "s18_2",
+  "catalog_fingerprint": "bd6921b1397a47e07e0728cf7c87df8eca84c2299e4952676cc4b897fbd56a92",
+  "hard_data_manifest_fingerprint": "86a9fcbf0d0f5bf6766c6e68718aa68e5f5c2c2a0662bf84cd49853a1b2bc549",
+  "published_at": "2026-09-26T23:13:42.546Z"
+}

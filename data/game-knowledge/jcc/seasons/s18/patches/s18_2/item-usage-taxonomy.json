@@ -1,0 +1,951 @@
+{
+  "schema": "jcc-patch-item-usage-taxonomy-v1",
+  "identity": {
+    "season_id": "s18",
+    "patch_id": "s18_2"
+  },
+  "authority": "developer_curated_current_patch_item_usage",
+  "policy": "Explicit item identity taxonomy for browsing and Host retrieval. Incidental stats or effect text never assign holder-role facets.",
+  "entries": [
+    {
+      "item_id": "2001",
+      "name": "无尽之刃",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical"
+      ]
+    },
+    {
+      "item_id": "2003",
+      "name": "海克斯科技枪刃",
+      "primary_role": "hybrid_sustain",
+      "browse_facets": [
+        "sustain",
+        "physical",
+        "magic"
+      ]
+    },
+    {
+      "item_id": "2004",
+      "name": "朔极之矛",
+      "primary_role": "caster_startup",
+      "browse_facets": [
+        "mana"
+      ]
+    },
+    {
+      "item_id": "2005",
+      "name": "夜之锋刃",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2006",
+      "name": "汲取剑",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "2007",
+      "name": "斯特拉克的挑战护手",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "2009",
+      "name": "红霸符",
+      "primary_role": "attack_speed_carry",
+      "browse_facets": [
+        "speed",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2010",
+      "name": "鬼索的狂暴之刃",
+      "primary_role": "attack_speed_carry",
+      "browse_facets": [
+        "speed"
+      ]
+    },
+    {
+      "item_id": "2011",
+      "name": "虚空之杖",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2012",
+      "name": "泰坦的坚决",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "2013",
+      "name": "海妖之怒",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "2014",
+      "name": "纳什之牙",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "2016",
+      "name": "班克斯的魔法帽",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic"
+      ]
+    },
+    {
+      "item_id": "2017",
+      "name": "大天使之杖",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "mana"
+      ]
+    },
+    {
+      "item_id": "2018",
+      "name": "冕卫",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "magic"
+      ]
+    },
+    {
+      "item_id": "2019",
+      "name": "离子火花",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2020",
+      "name": "莫雷洛秘典",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2022",
+      "name": "蓝霸符",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "mana"
+      ]
+    },
+    {
+      "item_id": "2023",
+      "name": "圣盾使的誓约",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "mana"
+      ]
+    },
+    {
+      "item_id": "2024",
+      "name": "适应性头盔",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank"
+      ]
+    },
+    {
+      "item_id": "2025",
+      "name": "振奋盔甲",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "2027",
+      "name": "棘刺背心",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank"
+      ]
+    },
+    {
+      "item_id": "2028",
+      "name": "石像鬼石板甲",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank"
+      ]
+    },
+    {
+      "item_id": "2029",
+      "name": "日炎斗篷",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2031",
+      "name": "巨龙之爪",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "2032",
+      "name": "薄暮法袍",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2034",
+      "name": "狂徒铠甲",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank"
+      ]
+    },
+    {
+      "item_id": "2036",
+      "name": "金铲铲冠冕",
+      "primary_role": "economy_or_special",
+      "browse_facets": [
+        "special"
+      ]
+    },
+    {
+      "item_id": "6091",
+      "name": "黎明核心",
+      "primary_role": "artifact_or_special",
+      "browse_facets": [
+        "artifact"
+      ]
+    },
+    {
+      "item_id": "2037",
+      "name": "最后的轻语",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2038",
+      "name": "珠光护手",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic"
+      ]
+    },
+    {
+      "item_id": "2039",
+      "name": "正义之手",
+      "primary_role": "hybrid_sustain",
+      "browse_facets": [
+        "sustain",
+        "physical",
+        "magic",
+        "mana"
+      ]
+    },
+    {
+      "item_id": "2040",
+      "name": "坚定之心",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank"
+      ]
+    },
+    {
+      "item_id": "2041",
+      "name": "水银",
+      "primary_role": "utility_support",
+      "browse_facets": [
+        "utility",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "2042",
+      "name": "强袭者的链枷",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "2044",
+      "name": "秘法手套",
+      "primary_role": "economy_or_special",
+      "browse_facets": [
+        "special"
+      ]
+    },
+    {
+      "item_id": "2045",
+      "name": "锐利之刃",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical"
+      ]
+    },
+    {
+      "item_id": "2046",
+      "name": "巨人捕手",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "magic"
+      ]
+    },
+    {
+      "item_id": "2047",
+      "name": "金锅锅冠冕",
+      "primary_role": "economy_or_special",
+      "browse_facets": [
+        "special"
+      ]
+    },
+    {
+      "item_id": "2048",
+      "name": "金锅铲冠冕",
+      "primary_role": "economy_or_special",
+      "browse_facets": [
+        "special"
+      ]
+    },
+    {
+      "item_id": "2059",
+      "name": "光明版无尽之刃",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical"
+      ]
+    },
+    {
+      "item_id": "2060",
+      "name": "光明版海克斯科技枪刃",
+      "primary_role": "hybrid_sustain",
+      "browse_facets": [
+        "sustain",
+        "physical",
+        "magic"
+      ]
+    },
+    {
+      "item_id": "2061",
+      "name": "光明版朔极之矛",
+      "primary_role": "caster_startup",
+      "browse_facets": [
+        "mana"
+      ]
+    },
+    {
+      "item_id": "2062",
+      "name": "光明版夜之锋刃",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2063",
+      "name": "光明版汲取剑",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "2064",
+      "name": "光明版斯特拉克的挑战护手",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "2065",
+      "name": "光明版红霸符",
+      "primary_role": "attack_speed_carry",
+      "browse_facets": [
+        "speed",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2066",
+      "name": "光明版鬼索的狂暴之刃",
+      "primary_role": "attack_speed_carry",
+      "browse_facets": [
+        "speed"
+      ]
+    },
+    {
+      "item_id": "2067",
+      "name": "光明版虚空之杖",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2068",
+      "name": "光明版泰坦的坚决",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "2069",
+      "name": "光明版海妖之怒",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "2070",
+      "name": "光明版纳什之牙",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "2071",
+      "name": "光明版班克斯的魔法帽",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic"
+      ]
+    },
+    {
+      "item_id": "2072",
+      "name": "光明版大天使之杖",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "mana"
+      ]
+    },
+    {
+      "item_id": "2073",
+      "name": "光明版冕卫",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "magic"
+      ]
+    },
+    {
+      "item_id": "2074",
+      "name": "光明版离子火花",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2075",
+      "name": "光明版莫雷洛秘典",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2076",
+      "name": "光明版蓝霸符",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "mana"
+      ]
+    },
+    {
+      "item_id": "2077",
+      "name": "光明版圣盾使的誓约",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "mana"
+      ]
+    },
+    {
+      "item_id": "2078",
+      "name": "光明版适应性头盔",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank"
+      ]
+    },
+    {
+      "item_id": "2079",
+      "name": "光明版振奋盔甲",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "2080",
+      "name": "光明版棘刺背心",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank"
+      ]
+    },
+    {
+      "item_id": "2081",
+      "name": "光明版石像鬼石板甲",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank"
+      ]
+    },
+    {
+      "item_id": "2082",
+      "name": "光明版日炎斗篷",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2083",
+      "name": "光明版巨龙之爪",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "2084",
+      "name": "光明版薄暮法袍",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2085",
+      "name": "光明版狂徒铠甲",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank"
+      ]
+    },
+    {
+      "item_id": "2086",
+      "name": "光明版最后的轻语",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "2087",
+      "name": "光明版珠光护手",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic"
+      ]
+    },
+    {
+      "item_id": "2088",
+      "name": "光明版正义之手",
+      "primary_role": "hybrid_sustain",
+      "browse_facets": [
+        "sustain",
+        "physical",
+        "magic",
+        "mana"
+      ]
+    },
+    {
+      "item_id": "2089",
+      "name": "光明版坚定之心",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank"
+      ]
+    },
+    {
+      "item_id": "2090",
+      "name": "光明版水银",
+      "primary_role": "utility_support",
+      "browse_facets": [
+        "utility",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "2091",
+      "name": "光明版强袭者的链枷",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "2092",
+      "name": "光明版秘法手套",
+      "primary_role": "economy_or_special",
+      "browse_facets": [
+        "special"
+      ]
+    },
+    {
+      "item_id": "2093",
+      "name": "光明版锐利之刃",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical"
+      ]
+    },
+    {
+      "item_id": "2094",
+      "name": "光明版巨人捕手",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "magic"
+      ]
+    },
+    {
+      "item_id": "6052",
+      "name": "大亨之铠",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "special"
+      ]
+    },
+    {
+      "item_id": "6054",
+      "name": "死亡之蔑",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "6057",
+      "name": "三相之力",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "magic",
+        "speed",
+        "special"
+      ]
+    },
+    {
+      "item_id": "6058",
+      "name": "魔蕴",
+      "primary_role": "caster_startup",
+      "browse_facets": [
+        "mana"
+      ]
+    },
+    {
+      "item_id": "6059",
+      "name": "金币收集者",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "special"
+      ]
+    },
+    {
+      "item_id": "6060",
+      "name": "中娅悖论",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "6061",
+      "name": "碎舰者",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "physical",
+        "magic"
+      ]
+    },
+    {
+      "item_id": "6065",
+      "name": "投机者之刃",
+      "primary_role": "attack_speed_carry",
+      "browse_facets": [
+        "speed",
+        "special"
+      ]
+    },
+    {
+      "item_id": "6067",
+      "name": "飞升护符",
+      "primary_role": "economy_or_special",
+      "browse_facets": [
+        "special",
+        "physical",
+        "magic"
+      ]
+    },
+    {
+      "item_id": "6069",
+      "name": "鱼骨头",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "speed",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "6070",
+      "name": "连指手套",
+      "primary_role": "attack_speed_carry",
+      "browse_facets": [
+        "speed",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "6071",
+      "name": "卢登的激荡",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "magic"
+      ]
+    },
+    {
+      "item_id": "6072",
+      "name": "密银黎明",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "tank",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "6073",
+      "name": "暗行者之爪",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "6075",
+      "name": "智慧末刃",
+      "primary_role": "attack_speed_carry",
+      "browse_facets": [
+        "speed",
+        "magic",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "6076",
+      "name": "禁忌雕像",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "6080",
+      "name": "疾射火炮",
+      "primary_role": "attack_speed_carry",
+      "browse_facets": [
+        "speed",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "6083",
+      "name": "枯萎珠宝",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "mana",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "6084",
+      "name": "探索者的护臂",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "6085",
+      "name": "光盾徽章",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "6086",
+      "name": "巫妖之祸",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "6087",
+      "name": "纳沃利烁刃",
+      "primary_role": "attack_speed_carry",
+      "browse_facets": [
+        "speed"
+      ]
+    },
+    {
+      "item_id": "6088",
+      "name": "斯塔缇克电刃",
+      "primary_role": "attack_speed_carry",
+      "browse_facets": [
+        "speed",
+        "magic"
+      ]
+    },
+    {
+      "item_id": "6089",
+      "name": "顽强不屈",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "utility"
+      ]
+    },
+    {
+      "item_id": "6090",
+      "name": "巨型九头蛇",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "6092",
+      "name": "黎明圣盾",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "sustain"
+      ]
+    },
+    {
+      "item_id": "6093",
+      "name": "黄昏圣盾",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "magic"
+      ]
+    },
+    {
+      "item_id": "6094",
+      "name": "虚空护手",
+      "primary_role": "frontline_tank",
+      "browse_facets": [
+        "tank",
+        "magic"
+      ]
+    },
+    {
+      "item_id": "6096",
+      "name": "恶火小斧",
+      "primary_role": "physical_carry",
+      "browse_facets": [
+        "physical",
+        "sustain",
+        "speed"
+      ]
+    },
+    {
+      "item_id": "6098",
+      "name": "永恒契约",
+      "primary_role": "magic_carry",
+      "browse_facets": [
+        "magic",
+        "mana",
+        "utility"
+      ]
+    }
+  ]
+}

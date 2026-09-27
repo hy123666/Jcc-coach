@@ -1,0 +1,513 @@
+{
+  "applied_operations": 81,
+  "baseline": {
+    "hard_data_generation_id": "ecfb536b6aacecb34ff92b0d2e52042e69a42e8ece3392ee1ca7f24b703abb19",
+    "mode_id": "mode18",
+    "patch_id": "s18_1",
+    "season_id": "s18"
+  },
+  "operations": [
+    {
+      "catalog": "champions",
+      "index": 0,
+      "kind": "replace_text",
+      "name": "凯特琳"
+    },
+    {
+      "catalog": "champions",
+      "index": 1,
+      "kind": "replace_text",
+      "name": "阿卡丽"
+    },
+    {
+      "catalog": "champions",
+      "index": 2,
+      "kind": "replace_text",
+      "name": "卡蜜尔"
+    },
+    {
+      "catalog": "champions",
+      "index": 3,
+      "kind": "replace_text",
+      "name": "可酷伯"
+    },
+    {
+      "catalog": "champions",
+      "index": 4,
+      "kind": "replace_text",
+      "name": "洛"
+    },
+    {
+      "catalog": "champions",
+      "index": 5,
+      "kind": "replace_text",
+      "name": "苍蓝哨戒"
+    },
+    {
+      "catalog": "champions",
+      "index": 6,
+      "kind": "replace_field",
+      "name": "苍蓝哨戒"
+    },
+    {
+      "catalog": "champions",
+      "index": 7,
+      "kind": "replace_field",
+      "name": "苍蓝哨戒"
+    },
+    {
+      "catalog": "champions",
+      "index": 8,
+      "kind": "replace_text",
+      "name": "韦鲁斯"
+    },
+    {
+      "catalog": "champions",
+      "index": 9,
+      "kind": "replace_text",
+      "name": "霞"
+    },
+    {
+      "catalog": "champions",
+      "index": 10,
+      "kind": "replace_text",
+      "name": "魔沼蛙"
+    },
+    {
+      "catalog": "champions",
+      "index": 11,
+      "kind": "replace_text",
+      "name": "芸阿娜"
+    },
+    {
+      "catalog": "champions",
+      "index": 12,
+      "kind": "replace_text",
+      "name": "提莫"
+    },
+    {
+      "catalog": "champions",
+      "index": 13,
+      "kind": "replace_text",
+      "name": "深红锋喙鸟"
+    },
+    {
+      "catalog": "champions",
+      "index": 14,
+      "kind": "replace_field",
+      "name": "深红锋喙鸟"
+    },
+    {
+      "catalog": "champions",
+      "index": 15,
+      "kind": "replace_field",
+      "name": "深红锋喙鸟"
+    },
+    {
+      "catalog": "champions",
+      "index": 16,
+      "kind": "replace_text",
+      "name": "卡西奥佩娅"
+    },
+    {
+      "catalog": "champions",
+      "index": 17,
+      "kind": "replace_text",
+      "name": "费德提克"
+    },
+    {
+      "catalog": "champions",
+      "index": 18,
+      "kind": "replace_text",
+      "name": "卡兹克"
+    },
+    {
+      "catalog": "champions",
+      "index": 19,
+      "kind": "replace_field",
+      "name": "卡兹克"
+    },
+    {
+      "catalog": "champions",
+      "index": 20,
+      "kind": "replace_field",
+      "name": "卡兹克"
+    },
+    {
+      "catalog": "champions",
+      "index": 21,
+      "kind": "replace_text",
+      "name": "崔丝塔娜"
+    },
+    {
+      "catalog": "champions",
+      "index": 22,
+      "kind": "replace_text",
+      "name": "阿狸"
+    },
+    {
+      "catalog": "champions",
+      "index": 23,
+      "kind": "replace_text",
+      "name": "伊泽瑞尔"
+    },
+    {
+      "catalog": "champions",
+      "index": 24,
+      "kind": "replace_text",
+      "name": "奈德丽"
+    },
+    {
+      "catalog": "champions",
+      "index": 25,
+      "kind": "replace_text",
+      "name": "希维尔"
+    },
+    {
+      "catalog": "champions",
+      "index": 26,
+      "kind": "replace_text",
+      "name": "婕拉"
+    },
+    {
+      "catalog": "champions",
+      "index": 27,
+      "kind": "replace_text",
+      "name": "拉露恩"
+    },
+    {
+      "catalog": "champions",
+      "index": 28,
+      "kind": "replace_text",
+      "name": "远古巨龙"
+    },
+    {
+      "catalog": "champions",
+      "index": 29,
+      "kind": "replace_field",
+      "name": "远古巨龙"
+    },
+    {
+      "catalog": "champions",
+      "index": 30,
+      "kind": "replace_text",
+      "name": "凯南"
+    },
+    {
+      "catalog": "champions",
+      "index": 31,
+      "kind": "replace_field",
+      "name": "茂凯"
+    },
+    {
+      "catalog": "champions",
+      "index": 32,
+      "kind": "replace_field",
+      "name": "绯红树怪"
+    },
+    {
+      "catalog": "champions",
+      "index": 33,
+      "kind": "replace_field",
+      "name": "绯红印记树怪"
+    },
+    {
+      "catalog": "traits",
+      "id": "341",
+      "index": 34,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "traits",
+      "id": "341",
+      "index": 35,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "traits",
+      "index": 36,
+      "kind": "replace_text",
+      "name": "重装战士"
+    },
+    {
+      "catalog": "traits",
+      "index": 37,
+      "kind": "replace_text",
+      "name": "灵魂莲华"
+    },
+    {
+      "catalog": "traits",
+      "index": 38,
+      "kind": "replace_text",
+      "name": "地狱火"
+    },
+    {
+      "catalog": "traits",
+      "index": 39,
+      "kind": "replace_text",
+      "name": "主宰"
+    },
+    {
+      "catalog": "traits",
+      "index": 40,
+      "kind": "replace_text",
+      "name": "黑荆棘"
+    },
+    {
+      "catalog": "traits",
+      "index": 41,
+      "kind": "replace_text",
+      "name": "峡谷野怪"
+    },
+    {
+      "catalog": "items",
+      "id": "2081",
+      "index": 42,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "items",
+      "id": "2088",
+      "index": 43,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "items",
+      "id": "2089",
+      "index": 44,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "items",
+      "id": "6058",
+      "index": 45,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "items",
+      "id": "6080",
+      "index": 46,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "items",
+      "id": "6072",
+      "index": 47,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "items",
+      "id": "6075",
+      "index": 48,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "items",
+      "index": 49,
+      "kind": "replace_text",
+      "name": "黄昏圣盾"
+    },
+    {
+      "catalog": "items",
+      "id": "6096",
+      "index": 50,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "items",
+      "index": 51,
+      "kind": "replace_text",
+      "name": "斗士纹章"
+    },
+    {
+      "catalog": "items",
+      "index": 52,
+      "kind": "replace_text",
+      "name": "重装战士纹章"
+    },
+    {
+      "catalog": "items",
+      "id": "41814",
+      "index": 53,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "items",
+      "id": "41818",
+      "index": 54,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "augments",
+      "id": "30701",
+      "index": 55,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "augments",
+      "id": "3270",
+      "index": 56,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "augments",
+      "id": "30217",
+      "index": 57,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "augments",
+      "id": "20755",
+      "index": 58,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181074",
+      "index": 59,
+      "kind": "replace_field",
+      "sync_base_variant": true
+    },
+    {
+      "catalog": "sprites",
+      "id": "181074",
+      "index": 60,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181074",
+      "index": 61,
+      "kind": "replace_field",
+      "variant_id": "181075"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181074",
+      "index": 62,
+      "kind": "replace_text",
+      "variant_id": "181075"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181232",
+      "index": 63,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181232",
+      "index": 64,
+      "kind": "replace_text",
+      "variant_id": "181233"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181336",
+      "index": 65,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181336",
+      "index": 66,
+      "kind": "replace_text",
+      "variant_id": "181337"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181290",
+      "index": 67,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181290",
+      "index": 68,
+      "kind": "replace_text",
+      "variant_id": "181291"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181120",
+      "index": 69,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181120",
+      "index": 70,
+      "kind": "replace_text",
+      "variant_id": "181121"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181120",
+      "index": 71,
+      "kind": "replace_field",
+      "sync_base_variant": true
+    },
+    {
+      "catalog": "sprites",
+      "id": "181120",
+      "index": 72,
+      "kind": "replace_field",
+      "variant_id": "181121"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181252",
+      "index": 73,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181252",
+      "index": 74,
+      "kind": "replace_field",
+      "sync_base_variant": true
+    },
+    {
+      "catalog": "sprites",
+      "id": "181252",
+      "index": 75,
+      "kind": "replace_text",
+      "variant_id": "181253"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181252",
+      "index": 76,
+      "kind": "replace_field",
+      "variant_id": "181253"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181254",
+      "index": 77,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181254",
+      "index": 78,
+      "kind": "replace_text",
+      "variant_id": "181255"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181208",
+      "index": 79,
+      "kind": "disable"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181208",
+      "index": 80,
+      "kind": "disable",
+      "variant_id": "181209"
+    }
+  ],
+  "release_version": "18.1b",
+  "schema": "jcc-core-balance-patch-audit-v1"
+}

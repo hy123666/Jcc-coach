@@ -1,0 +1,403 @@
+{
+  "schema": "jcc-runtime-mode-sensing-map-v1",
+  "purpose": "Map runtime UI modes and cruise triggers to the fastest safe sensing path. This is an execution map, not a strategy source.",
+  "default_backend": {
+    "multimodal_agent_sensing": "tools/run-jcc-multimodal-runtime-observation.mjs",
+    "vision_request_builder": "tools/run-jcc-vision-model-observation.mjs",
+    "host_cli_agent_response": "provided_by_codex_cli_or_compatible_multimodal_cli_agent",
+    "text_ocr_worker": "resident-rapidocr-worker",
+    "roi_crop_task_contract": "docs/runtime-ocr-redesign.md",
+    "icon_asset_reference": "data/runtime/jcc/visual-icons/manifest.json",
+    "frame_policy": "transient_only_delete_after_structured_extraction"
+  },
+  "global_policies": {
+    "vision_model_primary_for_hard_visual_tasks": false,
+    "product_hot_path_primary": "mumu_structured_sources_plus_hud_roi_ocr_plus_current_match_user_reported_choice_candidates",
+    "vision_model_contract": "data/runtime/jcc/vision-model-sensing-contract.json",
+    "vision_model_invocation_policy": "fallback_for_missing_or_ambiguous_current_frame_evidence_explicit_mode_or_high_value_event_only_not_per_frame",
+    "vision_model_must_output_structured_json_only": true,
+    "detached_model_service_policy": "not_used_in_product_runtime; host CLI agent supplies native multimodal response",
+    "hard_visual_ocr_policy": "scoped_roi_only_for_phase_economy, the explicit augment renderer-draft Quick OCR action, and diagnostic owned-augment panel inspection; no_fullscreen_ocr; active choice candidate and final-selection intake is structured-card user report only",
+    "augment_quick_ocr_execution_policy": "entering augment mode reserves the shared OCR lane before asynchronous mode setup and blocks admission of new periodic or stage-only HUD OCR jobs until mode exit; an already in-flight job may finish, then the foreground resident-worker request runs next with a bounded end-to-end choice-window budget measured from queue admission and a unique transport request identity per attempt; expired queued work is removed before Python execution; each uniquely matched exact-stage/tier row updates only its physical renderer-local slot; partial results remain reviewable and never auto-send or write canonical choice facts",
+    "hud_fact_sampling_trigger_policy": "runtime_watchdog_or_explicit_refresh_updates_context_only; only_registered_semantic_event_gates_may_open_host_response_lane",
+    "match_connection_attachment_policy": "Match attachment and HUD field readiness are separate. A same-match fresh MuMu watcher payload with a positive source revision, explicit 4354 self-shop anchor, and non-empty shop proves that Runtime has entered the live match even when HUD OCR has not yet produced stage/economy. This attachment evidence never bypasses field-level HUD authority or S=1 own-board promotion gates.",
+    "owned_equipment_fact_precedence": [
+      "trusted_mumu_4357_item_bench_and_4356_to_4353_assignment",
+      "current_match_explicit_user_confirmation",
+      "explicit_visual_or_icon_candidate_fallback"
+    ],
+    "user_equipment_confirmation_policy": "When a real item-dependent decision lacks trusted structured equipment, answer the user's strategy action first and mention the missing field when material. Canonical natural-language equipment updates are accepted only through the explicit Cruise match_fact_capture entry, whose hidden request kind authorizes Runtime-validated current-match writes; ordinary chat remains conversational context only. Store accepted facts as current-match user_confirmed_equipment with explicit provenance and an exact inner match_session_id, use them immediately, and do not relabel them as MuMu live_state or start visual matching after the required field is confirmed.",
+    "structured_item_freshness_policy": "Historical 4356/4357 command presence is source-health evidence only. A structured empty value may override current-match user confirmation only when that field has an explicit current_payload_observed marker; seen-ever must not masquerade as current authority.",
+    "icon_matcher_policy": "never run icon matching from periodic HUD/background sensing; 4357 remains the opportunistic primary structured left item rail source, and left_item_rail_roi_icon may run once only for an explicit user refresh/equipment request when 4357 is absent, or as an explicit conflict check; all matcher output remains fallback/validation candidates only",
+    "icon_assets_reference_manifest": "data/runtime/jcc/visual-icons/manifest.json",
+    "no_fullscreen_ocr_by_default": true,
+    "auto_mode_must_not_infer_choice_panels_from_text_alone": true,
+    "confirmation_required_for_final_selected_augments": true,
+    "opponent_board_policy": "Opponent board unit sensing is not a product path. MuMu 4353 is own-unit candidate evidence only; S=2 must not create opponent unit facts.",
+    "icon_candidates_promotion_policy": "Live icon matcher outputs are validation/fallback candidates only. 4357 is the only structured source that may populate items.item_bench. left_item_rail_roi_icon must stay in items.item_bench_candidates as validation, fallback, or conflict evidence and must never populate items.item_bench, equipped_items, selected augments, opponent side rails, board/bench identity, or opponent board facts.",
+    "unit_attached_equipment_phase_gate": {
+      "stable_status_codes": [
+        1
+      ],
+      "observing_status_codes": [
+        2
+      ],
+      "unstable_status_codes": [
+        5
+      ],
+      "promotion_rule": "Only assign 4356 visible equipment to own equipped_items when S=1 and a fresh non-empty 4354 shop anchors the view, then match coordinates to trusted own 4353 units. S=2 must never update own equipped items, never promotes own board/equipment, and never creates opponent unit facts.",
+      "applies_to": [
+        "refresh_self_state.items.equipped_items.dynamic_hp_bar_self",
+        "item_choice.pre_advice_context_refresh.items.equipped_items.dynamic_hp_bar_self"
+      ]
+    },
+    "same_icon_disambiguation_policy": {
+      "first_class_output": "possible_ids",
+      "do_not_force_unique_id": true,
+      "preferred_order": [
+        "confirmed_choice_history_for_self",
+        "ocr_choice_text_when_available",
+        "augment_pick_index_or_stage_round",
+        "augment_tier_color",
+        "user_manual_label"
+      ],
+      "notes": "Some augments share the same icon across non-plus/plus/plus-plus or stage variants. Opponent side-rail icons may only identify the visual group; keep all possible IDs unless context makes one unique."
+    },
+    "view_scope_policy": {
+      "s1": "S=1 is own actionable view evidence. Product own-board promotion requires S=1 plus a fresh non-empty 4354 shop anchor.",
+      "s2": "S=2 means observing or non-self current view. It must not be bound to battle_state and must not update own board, own bench, or opponent board facts.",
+      "mumu_4353": "4353 is treated only as an own-unit candidate source. It becomes own board only under the S=1 plus fresh 4354 shop anchor gate.",
+      "mumu_4354": "Non-empty 4354 shop is the strong own actionable view anchor. Empty 4354 is transition/observing evidence only.",
+      "mumu_4357": "4357 is the primary structured left item rail / item bench source.",
+      "mumu_4356": "4356 visible equipment rectangles may populate own equipped_items only when assigned by coordinates to trusted own 4353 units under the S=1 plus 4354 gate; otherwise keep as unassigned diagnostics."
+    },
+    "mumu_structured_source_diagnostics": {
+      "schema": "jcc-mumu-watch-source-diagnostics-v1",
+      "purpose": "Classify missing structured item facts without retaining full raw logcat or promoting fallback icon candidates.",
+      "required_failure_classes": [
+        "source_not_emitted",
+        "capture_loss_possible",
+        "changed_command_id_suspected",
+        "parse_rejection",
+        "promotion_gate_rejected"
+      ],
+      "retention_policy": "Keep counters, payload-shape summaries, timestamps, process health, and at most a bounded set of equipment-like unparsed lines. Do not retain full raw logcat by default.",
+      "item_source_policy": "4357 remains the only structured source that may populate items.item_bench. 4356 may populate equipped_items only through S=1 plus a fresh non-empty 4354 shop anchor and trusted 4353 coordinate assignment. Icon matches remain fallback evidence and may not be started by periodic HUD/background sensing."
+    },
+    "structured_user_card_report_policy": {
+      "schema": "jcc-structured-user-card-report-policy-v1",
+      "applies_to": [
+        "augment_choice",
+        "item_choice",
+        "compiled_active_rules_choice_mode_contract"
+      ],
+      "source": "current_match_user_report",
+      "storage": "structured_json_only_current_match_scoped",
+      "no_ocr_or_vision_fallback": true,
+      "input_surface": "structured searchable decision card, not chat-composer prefill",
+      "refresh_policy": "preserve every slot and let the user edit only candidates that actually changed; submit from the card",
+      "equipment_policy": "shared token categories inherit across supported cards; omitted category preserves, explicit empty category clears, Backspace removes one whole token",
+      "final_confirm_required_before_selected_state": true
+    },
+    "shared_equipment_context_policy": {
+      "effective_context_field": "effective_equipment",
+      "fields_resolve_independently": [
+        "item_bench",
+        "equipped_items"
+      ],
+      "source_precedence": [
+        "trusted_mumu_4357_item_bench_and_4356_to_4353_assignment",
+        "current_match_explicit_user_confirmation",
+        "explicit_visual_or_icon_candidate_fallback"
+      ],
+      "use_confirmed_field_without_waiting_for_structured_recovery": true,
+      "prohibit_visual_after_sufficient_user_confirmation": true
+    },
+    "round_tier_selector_sensing_policy": {
+      "round_selector": "manual UI selector writes current match phase fields as user-confirmed context; it does not run OCR and does not open a Host answer lane",
+      "rank_tier_selector": "manual UI selector writes runtime_user_settings.rank_tier; it does not mutate current match live_state or start sensing"
+    }
+  },
+  "modes": {
+    "cruise": {
+      "trigger": "default_match_runtime",
+      "primary_sources": [
+        "mumu_4352",
+        "mumu_4353",
+        "mumu_4354",
+        "mumu_4358"
+      ],
+      "vision_model_policy": "only_on_high_value_uncertainty_or_user_visible_choice_context",
+      "ocr_policy": "hud_phase_economy_small_roi_fast_path_only; scoped ROI only, no fullscreen OCR",
+      "icon_policy": "4357 primary for item_bench; left_item_rail_roi_icon is explicit-request fallback/validation only and never runs from periodic cruise HUD sampling; other icon assets are reference data for hard visual fields",
+      "self_state_dependency": "Cruise may use own_board, own equipped items, and active traits only after the upstream self-state gate: visible 4354 shop self-view anchor plus fresh 4353 current-view evidence. Current_view units remain candidate evidence and must not be summarized as own_board.",
+      "writes": [
+        "live_state.visual_candidates",
+        "advice_task"
+      ],
+      "must_not_write": [
+        "final_selected_augments_from_visual_only"
+      ]
+    },
+    "augment_choice": {
+      "trigger": "mumu_4358_s4_or_user_mode_button",
+      "choice_set_policy": {
+        "current_visible_set_source": "latest_current_match_user_report_set",
+        "auxiliary_choice_sources": [],
+        "source_conflict_policy": "Choice windows seed the current visible set from current-match user reports. Previous or stale choice observations must not overwrite the latest current choice set.",
+        "previous_choice_sets_source": "earlier_user_reported_sets_in_same_choice_window",
+        "normal_visible_option_budget": 6,
+        "special_double_reroll_visible_option_budget": 9,
+        "latest_visible_set_replaces_pending_current_choices": true,
+        "previous_sets_are_strategy_evidence_not_current_options": true,
+        "refresh_advice_actions": [
+          "choose",
+          "reroll_slot",
+          "reroll_multiple",
+          "hold_backup_then_reroll_weak_slot"
+        ],
+        "post_reroll_followup_hook": {
+          "when_advice_action_matches": [
+            "reroll_or_hold_backup:*",
+            "reroll_slot:*",
+            "reroll_multiple:*"
+          ],
+          "trigger_after": [
+            "user_reports_refreshed_choice_set"
+          ],
+          "input_surface": "existing structured choice card",
+          "send_policy": "user_edits_only_the_rerolled_slots_then_submits_from_card",
+          "state_policy": "replace current_choice_set; retain previous_choice_sets as history evidence only",
+          "storage_policy": "structured current-match report only"
+        }
+      },
+      "user_report_contract": {
+        "enabled": true,
+        "source": "current_match_user_report",
+        "target": "augments.current_choice_set",
+        "role": "current_match_user_report_only",
+        "storage_policy": "structured_json_only_no_choice_frame_capture",
+        "no_ocr_or_vision_fallback": true,
+        "explicit_ocr_draft": {
+          "enabled": true,
+          "trigger": "user_clicks_quick_ocr_in_augment_card",
+          "output": "renderer_local_draft_only",
+          "promotion_policy": "never_promote_without_explicit_card_submission",
+          "required_validation": "all_three_candidates_match_current_stage_and_tier",
+          "must_not_write": [
+            "augments.current_choice_set",
+            "augments.selected_augments",
+            "match_context.reported_choice_sets_by_mode"
+          ],
+          "must_not_open_host_answer": true,
+          "must_not_enable_for": [
+            "active_season_choice",
+            "item_choice"
+          ]
+        },
+        "must_not_write": [
+          "augments.selected_augments_without_confirmation"
+        ]
+      },
+      "owned_augment_text_panel_roi": {
+        "enabled": true,
+        "trigger": "manual_augment_mode_owned_augment_panel_preset_only",
+        "roi_script": "tools/roi_owned_augment_text_panel.py",
+        "ocr_worker": "resident-rapidocr-worker",
+        "aggregator": "tools/jcc_owned_augment_text_panel_aggregator.py",
+        "target": "runtime_triggers.owned_augment_text_panel_ocr",
+        "role": "diagnostic_only_never_choice_confirmation",
+        "source": "user_triggered_owned_augment_text_panel_ocr",
+        "storage_policy": "structured_json_only_delete_frames",
+        "stage_binding_policy": "fixed_augment_row_stage_binding: slot0=2-1 augment, slot1=3-2 augment, slot2=4-2 augment; ignore every non-augment row",
+        "must_not_write": [
+          "match_context.choice_confirmations",
+          "runtime_triggers.choice_confirmations",
+          "augments.selected_augments_without_stage_or_user_trigger",
+          "opponent_selected_augments",
+          "current_choice_set",
+          "non_augment_rows"
+        ],
+        "cruise_policy": "cruise must not consume this diagnostic as confirmed choice truth and must not trigger this ROI capture"
+      },
+      "icon_match": {
+        "enabled": false,
+        "role": "disabled_product_path",
+        "reason": "Active augment candidates are reported by the user. Icon data remains catalog/reference context and is not a live choice matcher."
+      },
+      "confirmation": "user_confirms_choice_or_reroll_result",
+      "writes": [
+        "choices.pending_confirmation",
+        "advice_task"
+      ],
+      "must_not_write": [
+        "augments.selected_augments_without_confirmation"
+      ],
+      "user_card_report_schema": {
+        "schema": "jcc-choice-card-report-v1",
+        "card_type": "augment_card",
+        "candidate_count": 3,
+        "source": "current_match_user_report",
+        "refresh_send_policy": "preserve_unchanged_slots_edit_changed_slots_then_submit_from_card",
+        "final_confirm_required": true
+      }
+    },
+    "item_choice": {
+      "trigger": "user_mode_button",
+      "own_state_dependency": "own_board, own_item_bench, equipped_items, and active_traits consumed by item_choice must come from the self-state gate. Visible item options do not require self-view anchor, but holder/tempo evaluation must treat ungated current_view as candidate-only evidence.",
+      "user_report_contract": {
+        "enabled": true,
+        "source": "current_match_user_report",
+        "default_item_choice_kind": "basic_component_forge",
+        "supported_item_choice_kinds": [
+          "basic_component_forge",
+          "completed_item_forge",
+          "artifact_forge",
+          "radiant_item_choice"
+        ],
+        "target": "items.choice_options",
+        "expected_count_by_kind": {
+          "basic_component_forge": 4,
+          "completed_item_forge": 5,
+          "artifact_forge": 4,
+          "radiant_item_choice": 4
+        },
+        "role": "current_match_user_report_only",
+        "no_ocr_or_vision_fallback": true,
+        "fallback": "none"
+      },
+      "writes": [
+        "choices.pending_confirmation",
+        "advice_task"
+      ],
+      "manual_trigger_policy": "Manual only: user enters item_choice mode, reports the visible candidates, then sends. Cruise must not capture item/anvil/forge choice frames.",
+      "user_card_report_schema": {
+        "schema": "jcc-choice-card-report-v1",
+        "card_type": "item_card",
+        "supported_choice_kinds": [
+          "basic_component_forge",
+          "completed_item_forge",
+          "artifact_forge",
+          "radiant_item_choice"
+        ],
+        "unsupported_choice_kinds": [
+          "hero_item_reward_three_choice",
+          "opponent_item_scan",
+          "general_inventory_scan"
+        ],
+        "source": "current_match_user_report",
+        "refresh_send_policy": "preserve_unchanged_slots_edit_changed_slots_then_submit_from_card",
+        "final_confirm_required": true
+      },
+      "scope_policy": "Narrow product item mode to explicit user-reported item/anvil/forge candidate cards plus current effective equipment context; it is not an inventory scanner or hero/item reward three-choice intake."
+    },
+    "refresh_self_state": {
+      "trigger": "user_mode_button_or_cruise_need",
+      "numeric_authority_policy": {
+        "missing_before_numeric_coercion": "A null, undefined, blank, missing, unrecognized, or failed ROI field remains missing. It must never be passed through JavaScript numeric coercion where null could become zero.",
+        "requested_field_without_result": "Every requested HUD field without an OCR result carries an explicit missing field_status plus bounded ROI diagnostics such as crop-task count and local-row/layout status.",
+        "same_frame_hud_anchor": "A full HUD refresh must recognize phase.stage_round in the same captured frame before any economy ROI value receives self_state_roi_ocr authority. An isolated number from a loading, roster, reward, or transition screen remains diagnostic evidence and cannot be combined with a later stage-only observation.",
+        "field_level_promotion": "After the same-frame HUD anchor succeeds, only fields with an accepted normalized value receive self_state_roi_ocr authority; valid sibling fields from that anchored frame still promote when one field is missing.",
+        "active_match_hp_zero": "HUD HP less than or equal to zero is invalid/missing during an active match. Elimination requires separate explicit match-ended or elimination evidence.",
+        "persisted_invalid_cleanup": "Hydration and failed-refresh paths remove previously persisted invalid HUD numeric fields and their source authority while preserving valid sibling economy facts."
+      },
+      "text_ocr": [
+        {
+          "role": "hud_stage_round_fast_path",
+          "target": "phase.stage_round",
+          "roi_script": "tools/roi_stage.py",
+          "ocr_worker": "resident-rapidocr-worker",
+          "aggregator": "tools/jcc_ocr_field_aggregator.py",
+          "roi_reference": "regions.phase.top_bar",
+          "scope_limit": "phase_and_economy_only"
+        },
+        {
+          "role": "hud_economy_fast_path",
+          "target": "economy.gold",
+          "roi_script": "tools/roi_gold.py",
+          "ocr_worker": "resident-rapidocr-worker",
+          "aggregator": "tools/jcc_ocr_field_aggregator.py",
+          "roi_reference": "regions.economy.gold",
+          "scope_limit": "phase_and_economy_only"
+        },
+        {
+          "role": "hud_economy_fast_path",
+          "target": "economy.level",
+          "roi_script": "tools/roi_level_xp.py",
+          "ocr_worker": "resident-rapidocr-worker",
+          "aggregator": "tools/jcc_ocr_field_aggregator.py",
+          "roi_reference": "regions.economy.level",
+          "scope_limit": "phase_and_economy_only"
+        },
+        {
+          "role": "hud_economy_fast_path",
+          "target": "economy.xp",
+          "roi_script": "tools/roi_level_xp.py",
+          "ocr_worker": "resident-rapidocr-worker",
+          "aggregator": "tools/jcc_ocr_field_aggregator.py",
+          "roi_reference": "regions.economy.xp_progress",
+          "scope_limit": "phase_and_economy_only"
+        },
+        {
+          "role": "hud_economy_fast_path",
+          "target": "economy.hp",
+          "roi_script": "tools/roi_hp_local.py",
+          "ocr_worker": "resident-rapidocr-worker",
+          "aggregator": "tools/jcc_ocr_field_aggregator.py",
+          "roi_reference": "dynamic.economy.hp_local_scoreboard_detected_row",
+          "scope_limit": "phase_and_economy_only"
+        }
+      ],
+      "icon_match": [
+        {
+          "enabled": true,
+          "role": "fallback_and_validation_left_item_rail_roi_icon_only",
+          "target": "items.item_bench_candidates",
+          "source": "left_item_rail_roi_icon",
+          "roi_script": "tools/roi_left_item_rail.py",
+          "icon_matcher": "tools/match-jcc-left-item-rail-icons.mjs",
+          "aggregator": "tools/jcc_left_item_rail_field_aggregator.mjs",
+          "runner": "tools/run-jcc-left-item-rail-roi-icon.mjs",
+          "roi_reference": "regions.item_bench_slots",
+          "scope_limit": "items.item_bench_only",
+          "must_not_enable_for": [
+            "items.item_bench",
+            "items.equipped_items",
+            "augments.selected_augments"
+          ],
+          "must_not_write": [
+            "items.item_bench"
+          ],
+          "primary_source": "mumu_4357_item_bench",
+          "promotion_policy": "never_fill_items_item_bench; emit_validation_or_fallback_candidates_only"
+        }
+      ],
+      "writes": [
+        "phase.stage_round",
+        "economy.hp",
+        "economy.gold",
+        "economy.level",
+        "economy.xp",
+        "field_status"
+      ],
+      "production_policy": "HUD refresh uses the daemon-owned RapidOCR worker only. Structured item facts are read from canonical live_state without starting visual work. One bounded item icon candidate refresh is allowed only for an explicit user refresh/equipment request or conflict check; it never promotes confirmed ownership."
+    }
+  },
+  "icon_matcher_status": {
+    "product_tools": [
+      "tools/run-jcc-left-item-rail-roi-icon.mjs",
+      "tools/roi_left_item_rail.py",
+      "tools/match-jcc-left-item-rail-icons.mjs",
+      "tools/jcc_left_item_rail_field_aggregator.mjs"
+    ],
+    "asset_tools": [
+      "tools/ensure-jcc-visual-icon-assets.mjs"
+    ],
+    "current_status": "4357 is the opportunistic primary product source for left item rail inventory, with trusted 4356-to-4353 assignment for equipped items. Current-match explicit user confirmation is the preferred fallback. left_item_rail_roi_icon is the last layer, runs only for an explicit user refresh/equipment request when 4357 is absent, and emits fallback/validation candidates only; it must not populate items.item_bench.",
+    "next_verification_needed": [
+      "4357 inventory payload real-frame coverage across normal/anvil/special item states",
+      "explicit-request left item rail icon matcher fallback when 4357 is absent or stale",
+      "4356 coordinate assignment against trusted S=1+4354+4353 own units"
+    ]
+  }
+}

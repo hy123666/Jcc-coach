@@ -1,0 +1,57 @@
+.omx/state/
+.omx/logs/
+.omx/runtime-evidence/
+.omx/downloads/
+.omx/tools/
+.omx/gradle-home/
+.omx/bin/
+.omx/tmp/
+.omx/cache/
+.omx/work/
+.omx/notepad.md
+.omx/tmux-hook.json
+.jcc-runtime-data/
+# Public snapshots include the recipes referenced by the Active closure.
+node_modules/
+ui/node_modules/
+dist/
+ui/dist/
+ui/release/
+ui/release-*/
+.venv-ocr/
+resources/ocr/python/
+resources/ocr/models/
+tools/bin/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.tools/
+*.lnk
+edit-*/
+.codex-thread-repair-*
+
+# Local scratch files
+tmp-*.js
+*.log
+tools/__pycache__/
+*.pyc
+
+# Calibration verifier outputs are generated into temp dirs. Keep reviewed
+# fixtures only; do not commit exploratory matcher/observation dumps.
+data/runtime/jcc/calibration-samples/**/verify-*.json
+data/runtime/jcc/calibration-samples/**/replay-calibration-*.json
+data/runtime/jcc/calibration-samples/**/icon-matches*.json
+data/runtime/jcc/calibration-samples/**/visual-observations*.json
+data/runtime/jcc/calibration-samples/**/observation-*/
+data/runtime/jcc/calibration-samples/**/capture/frame.png
+data/runtime/jcc/calibration-samples/**/capture/visual-frame.json
+
+# Android companion is a paused side track; keep source, ignore local/build state.
+android-companion/local.properties
+android-companion/.gradle/
+android-companion/build/
+android-companion/app/build/
+android-companion/app/.cxx/

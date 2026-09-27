@@ -1,0 +1,2664 @@
+[
+  {
+    "address": "jcc:s18:item_conflict:1001",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:1001",
+    "name": "暴风之剑",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:1002",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:1002",
+    "name": "反曲之弓",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:1003",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:1003",
+    "name": "无用大棒",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:1004",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:1004",
+    "name": "女神之泪",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:1005",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:1005",
+    "name": "锁子甲",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:1006",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:1006",
+    "name": "负极斗篷",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:1007",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:1007",
+    "name": "巨人腰带",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:1008",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:1008",
+    "name": "金铲铲",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:1009",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:1009",
+    "name": "拳套",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:1010",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:1010",
+    "name": "金锅锅",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2001",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2001",
+    "name": "无尽之刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2003",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2003",
+    "name": "海克斯科技枪刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2004",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2004",
+    "name": "朔极之矛",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2005",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:2005",
+    "name": "夜之锋刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2006",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2006",
+    "name": "汲取剑",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2007",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2007",
+    "name": "斯特拉克的挑战护手",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2009",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "duplicate_wound_low_value"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.wound"
+    ],
+    "item_address": "jcc:s18:item:2009",
+    "name": "红霸符",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2010",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:2010",
+    "name": "鬼索的狂暴之刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2011",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.magic_resist_shred",
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2011",
+    "name": "虚空之杖",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2012",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:2012",
+    "name": "泰坦的坚决",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2013",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:2013",
+    "name": "海妖之怒",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2014",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.crit_chance",
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2014",
+    "name": "纳什之牙",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2016",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2016",
+    "name": "班克斯的魔法帽",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2017",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2017",
+    "name": "大天使之杖",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2018",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2018",
+    "name": "冕卫",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2019",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.magic_resist_shred",
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2019",
+    "name": "离子火花",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2020",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "duplicate_wound_low_value",
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain",
+      "effect.wound"
+    ],
+    "item_address": "jcc:s18:item:2020",
+    "name": "莫雷洛秘典",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2022",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2022",
+    "name": "蓝霸符",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2023",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2023",
+    "name": "圣盾使的誓约",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2024",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2024",
+    "name": "适应性头盔",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2025",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2025",
+    "name": "振奋盔甲",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2027",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2027",
+    "name": "棘刺背心",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2028",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2028",
+    "name": "石像鬼石板甲",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2029",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "duplicate_wound_low_value"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.wound"
+    ],
+    "item_address": "jcc:s18:item:2029",
+    "name": "日炎斗篷",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2031",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2031",
+    "name": "巨龙之爪",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2032",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.armor_shred",
+      "effect.magic_resist_shred"
+    ],
+    "item_address": "jcc:s18:item:2032",
+    "name": "薄暮法袍",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2034",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2034",
+    "name": "狂徒铠甲",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2036",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2036",
+    "name": "金铲铲冠冕",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2037",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.armor_shred",
+      "effect.attack_speed",
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2037",
+    "name": "最后的轻语",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2038",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2038",
+    "name": "珠光护手",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2039",
+    "blocked_effects": [],
+    "condition_tags": [
+      "condition.requires_low_health"
+    ],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance",
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2039",
+    "name": "正义之手",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2040",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2040",
+    "name": "坚定之心",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2041",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2041",
+    "name": "水银",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2042",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2042",
+    "name": "强袭者的链枷",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2044",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2044",
+    "name": "秘法手套",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2045",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2045",
+    "name": "锐利之刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2046",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:2046",
+    "name": "巨人捕手",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2047",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2047",
+    "name": "金锅锅冠冕",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2048",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2048",
+    "name": "金锅铲冠冕",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2059",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2059",
+    "name": "光明版无尽之刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2060",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2060",
+    "name": "光明版海克斯科技枪刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2061",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2061",
+    "name": "光明版朔极之矛",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2062",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:2062",
+    "name": "光明版夜之锋刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2063",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2063",
+    "name": "光明版汲取剑",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2064",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2064",
+    "name": "光明版斯特拉克的挑战护手",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2065",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "duplicate_wound_low_value"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.wound"
+    ],
+    "item_address": "jcc:s18:item:2065",
+    "name": "光明版红霸符",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2066",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:2066",
+    "name": "光明版鬼索的狂暴之刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2067",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.magic_resist_shred",
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2067",
+    "name": "光明版虚空之杖",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2068",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:2068",
+    "name": "光明版泰坦的坚决",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2069",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:2069",
+    "name": "光明版海妖之怒",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2070",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.crit_chance",
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2070",
+    "name": "光明版纳什之牙",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2071",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2071",
+    "name": "光明版班克斯的魔法帽",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2072",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2072",
+    "name": "光明版大天使之杖",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2073",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2073",
+    "name": "光明版冕卫",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2074",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.magic_resist_shred",
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2074",
+    "name": "光明版离子火花",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2075",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "duplicate_wound_low_value",
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain",
+      "effect.wound"
+    ],
+    "item_address": "jcc:s18:item:2075",
+    "name": "光明版莫雷洛秘典",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2076",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2076",
+    "name": "光明版蓝霸符",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2077",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2077",
+    "name": "光明版圣盾使的誓约",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2078",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2078",
+    "name": "光明版适应性头盔",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2079",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2079",
+    "name": "光明版振奋盔甲",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2080",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2080",
+    "name": "光明版棘刺背心",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2081",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2081",
+    "name": "光明版石像鬼石板甲",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2082",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "duplicate_wound_low_value"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.wound"
+    ],
+    "item_address": "jcc:s18:item:2082",
+    "name": "光明版日炎斗篷",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2083",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2083",
+    "name": "光明版巨龙之爪",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2084",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.armor_shred",
+      "effect.magic_resist_shred"
+    ],
+    "item_address": "jcc:s18:item:2084",
+    "name": "光明版薄暮法袍",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2085",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2085",
+    "name": "光明版狂徒铠甲",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2086",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.armor_shred",
+      "effect.attack_speed",
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2086",
+    "name": "光明版最后的轻语",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2087",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2087",
+    "name": "光明版珠光护手",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2088",
+    "blocked_effects": [],
+    "condition_tags": [
+      "condition.requires_low_health"
+    ],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance",
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:2088",
+    "name": "光明版正义之手",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2089",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2089",
+    "name": "光明版坚定之心",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2090",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2090",
+    "name": "光明版水银",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:2091",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2091",
+    "name": "光明版强袭者的链枷",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2092",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:2092",
+    "name": "光明版秘法手套",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2093",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:2093",
+    "name": "光明版锐利之刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:2094",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:2094",
+    "name": "光明版巨人捕手",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6052",
+    "blocked_effects": [],
+    "condition_tags": [
+      "condition.requires_item_slot"
+    ],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "unique_or_limited_effect"
+    ],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:6052",
+    "name": "大亨之铠",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6054",
+    "blocked_effects": [],
+    "condition_tags": [
+      "condition.requires_item_slot"
+    ],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "unique_or_limited_effect"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:6054",
+    "name": "死亡之蔑",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6057",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:6057",
+    "name": "三相之力",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6058",
+    "blocked_effects": [],
+    "condition_tags": [
+      "condition.requires_item_slot"
+    ],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots",
+      "unique_or_limited_effect"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:6058",
+    "name": "魔蕴",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:6059",
+    "blocked_effects": [],
+    "condition_tags": [
+      "condition.requires_item_slot",
+      "condition.requires_low_health"
+    ],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "unique_or_limited_effect"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:6059",
+    "name": "金币收集者",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6060",
+    "blocked_effects": [],
+    "condition_tags": [
+      "condition.requires_item_slot"
+    ],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "unique_or_limited_effect"
+    ],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:6060",
+    "name": "中娅悖论",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6061",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:6061",
+    "name": "碎舰者",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:6065",
+    "blocked_effects": [],
+    "condition_tags": [
+      "condition.requires_item_slot"
+    ],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "unique_or_limited_effect"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:6065",
+    "name": "投机者之刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:6067",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:6067",
+    "name": "飞升护符",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6069",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:6069",
+    "name": "鱼骨头",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6070",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "duplicate_wound_low_value"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.wound"
+    ],
+    "item_address": "jcc:s18:item:6070",
+    "name": "连指手套",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6071",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:6071",
+    "name": "卢登的激荡",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6072",
+    "blocked_effects": [
+      "attack_speed"
+    ],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "attack_speed_override"
+    ],
+    "constraints": [
+      {
+        "metric": "attack_speed",
+        "mode": "locked",
+        "source_text": "  携带者的攻击速度锁定为0.5",
+        "unit": "absolute",
+        "value": 0.5
+      }
+    ],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:6072",
+    "name": "密银黎明",
+    "preserved_effects": [
+      "armor",
+      "attack_damage",
+      "control",
+      "magic_resist",
+      "omnivamp",
+      "status_immunity"
+    ],
+    "semantic_relations": [
+      {
+        "relation": "relation.overrides",
+        "target": "effect.attack_speed",
+        "value": 0.5
+      }
+    ],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6073",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:6073",
+    "name": "暗行者之爪",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:6075",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:6075",
+    "name": "智慧末刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:6076",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:6076",
+    "name": "禁忌雕像",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6080",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:6080",
+    "name": "疾射火炮",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6083",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.magic_resist_shred",
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:6083",
+    "name": "枯萎珠宝",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6084",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:6084",
+    "name": "探索者的护臂",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.kill"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:6085",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:6085",
+    "name": "光盾徽章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6086",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:6086",
+    "name": "巫妖之祸",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack",
+      "trigger.cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:6087",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:6087",
+    "name": "纳沃利烁刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6088",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:6088",
+    "name": "斯塔缇克电刃",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6089",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:6089",
+    "name": "顽强不屈",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6090",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:6090",
+    "name": "巨型九头蛇",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6091",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:6091",
+    "name": "黎明核心",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:6092",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:6092",
+    "name": "黎明圣盾",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6093",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:6093",
+    "name": "黄昏圣盾",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6094",
+    "blocked_effects": [],
+    "condition_tags": [
+      "condition.requires_item_slot"
+    ],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "unique_or_limited_effect"
+    ],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:6094",
+    "name": "虚空护手",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:6096",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:6096",
+    "name": "恶火小斧",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:6098",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:6098",
+    "name": "永恒契约",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:9436",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9436",
+    "name": "生命值补剂",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9437",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9437",
+    "name": "护甲和魔抗补剂",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9438",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9438",
+    "name": "法术加成补剂",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9439",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:9439",
+    "name": "法力回复补剂",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9450",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9450",
+    "name": "物理加成补剂",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9451",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:9451",
+    "name": "攻击速度补剂",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9452",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9452",
+    "name": "灵龟赐福",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9453",
+    "blocked_effects": [],
+    "condition_tags": [
+      "condition.requires_low_health"
+    ],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9453",
+    "name": "蛮熊赐福",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9454",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:9454",
+    "name": "猛虎赐福",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9455",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9455",
+    "name": "凤凰赐福",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9456",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9456",
+    "name": "阿尔法印记",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9464",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9464",
+    "name": "生命药水",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9465",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9465",
+    "name": "光明版生命药水",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9466",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9466",
+    "name": "爆破药水",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:9467",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9467",
+    "name": "光明版爆破药水",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:9468",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:9468",
+    "name": "法力药水",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:9469",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:9469",
+    "name": "光明版法力药水",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:9470",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9470",
+    "name": "随机基础装备",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9471",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9471",
+    "name": "随机成装",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:9472",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:9472",
+    "name": "随机纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41801",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:41801",
+    "name": "永恒之森纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41802",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:41802",
+    "name": "黑荆棘纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41803",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:41803",
+    "name": "魔女纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41804",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:41804",
+    "name": "花仙子纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41805",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:41805",
+    "name": "约德尔人和朋友纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41806",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:41806",
+    "name": "地狱火纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41807",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:41807",
+    "name": "野兽之灵纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41808",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed",
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:41808",
+    "name": "月蚀骑士纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41809",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:41809",
+    "name": "灵魂莲华纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41810",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:41810",
+    "name": "绝命花妖纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41811",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:41811",
+    "name": "斗士纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:41812",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:41812",
+    "name": "护卫纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:41813",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:41813",
+    "name": "重装战士纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.combat_start"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:41814",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:41814",
+    "name": "主宰纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41815",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.attack_speed"
+    ],
+    "item_address": "jcc:s18:item:41815",
+    "name": "迅捷射手纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.basic_attack"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:41816",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:41816",
+    "name": "猎人纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.kill"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:41817",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:41817",
+    "name": "狂战士纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41818",
+    "blocked_effects": [],
+    "condition_tags": [
+      "condition.requires_low_health"
+    ],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [
+      "effect.crit_chance"
+    ],
+    "item_address": "jcc:s18:item:41818",
+    "name": "裁决使纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:41819",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:41819",
+    "name": "法师纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:41820",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:41820",
+    "name": "神谕纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": [
+      "trigger.cast"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_conflict:41821",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [
+      "too_many_startup_items_can_reduce_damage_slots"
+    ],
+    "constraints": [],
+    "effect_tags": [
+      "effect.mana_gain"
+    ],
+    "item_address": "jcc:s18:item:41821",
+    "name": "绝命花妖纹章",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  },
+  {
+    "address": "jcc:s18:item_conflict:6079",
+    "blocked_effects": [],
+    "condition_tags": [],
+    "confidence": "deterministic_semantic_heuristic",
+    "conflicts": [],
+    "constraints": [],
+    "effect_tags": [],
+    "item_address": "jcc:s18:item:6079",
+    "name": "视界专注",
+    "preserved_effects": [],
+    "semantic_relations": [],
+    "trigger_tags": []
+  }
+]

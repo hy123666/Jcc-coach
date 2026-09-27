@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "source": "mumu_gameassist_jkchess_apk",
+  "status": "board_grid_calibrated_for_mumu_gi_xy",
+  "observed_structures": [
+    "XYPosition",
+    "ChessPositionApi",
+    "PositionApiData",
+    "OuterPositionApiData"
+  ],
+  "coordinate_semantics": {
+    "xy_position": "MuMu 4353 current-view unit coordinates are calibrated into the JCC 4x7 board grid by tools/jcc-mumu-board-grid.mjs.",
+    "chess_position_api": "Likely wraps logical chess position and XYPosition. Field names remain obfuscated in retained DEX evidence.",
+    "bench_axis": "Do not infer left-to-right bench slot from raw x alone without visual calibration; previous y=-1/x=4 samples are action-log coordinates, not proven UI slot numbers.",
+    "board_axis": "Board grid is emitted only for units whose MuMu XY falls inside the calibrated board band and only promoted to own board after shop self-view anchoring."
+  },
+  "board_grid_calibration": {
+    "schema": "jcc-mumu-board-grid-calibration-v1",
+    "source": "6-1_replay_user_ground_truth_plus_mumu_4353_xy",
+    "calibrated_at": "2026-07-01",
+    "rows": 4,
+    "columns": 7,
+    "row_order": "top_to_bottom",
+    "column_order": "left_to_right",
+    "evidence": {
+      "frame": ".omx/runtime-evidence/xy-grid-calibration-current/frame.png",
+      "state": ".omx/runtime-evidence/xy-grid-calibration-current/watch-live/state.json"
+    },
+    "board_y_centers": {
+      "1": 580,
+      "2": 518,
+      "3": 456,
+      "4": 394
+    },
+    "board_x_centers_by_row": {
+      "1": [566, 646, 726, 806, 886, 967, 1047],
+      "2": [573, 657, 742, 826, 910, 994, 1079],
+      "3": [580, 669, 757, 845, 934, 1022, 1111],
+      "4": [588, 680, 773, 865, 958, 1050, 1143]
+    },
+    "tolerances_px": {
+      "row": 38,
+      "column": 52
+    },
+    "bench_exclusion_evidence": {
+      "bench_y": 279,
+      "policy": "Bench-band units must not snap to board row 4 even when 4352 bench evidence is absent."
+    }
+  },
+  "expected_runtime_adapter_shape": {
+    "board_units": "array of {unit_id, name?, star?, items?, position:{source:'visual_roi'|'mumu_candidate', row?, col?, x?, y?, confidence}}",
+    "bench_units": "array of {unit_id, name?, slot?, position:{source:'visual_roi'|'mumu_candidate', x?, y?, confidence}}",
+    "candidate_actions": "array of {kind:'buy'|'sell'|'move', from?, to?, observed_at, evidence_source}"
+  },
+  "ocr_capture_evidence_count": 33,
+  "promotion_guard": "MuMu position candidates can seed ROI and parser names, but final board_units/bench_units require current-frame visual evidence or a verified action reducer scoped to the current match."
+}

@@ -1,0 +1,8335 @@
+{
+  "schema": "jcc-datatft-trait-tracker-snapshot-v2",
+  "target": {
+    "season_id": "s18",
+    "patch_id": "s18_1",
+    "external_season_number": 18
+  },
+  "source": {
+    "provider_id": "datatft",
+    "page_url": "https://jcc.datatft.com/tracker/s18",
+    "index_asset_url": "https://jcc.datatft.com/assets/index-CMLRnJp7.js",
+    "tracker_asset_url": "https://jcc.datatft.com/assets/TraitTrackerS18View-0Pfy1-Ri.js",
+    "index_asset_sha256": "80bf4ce433adf7b2dedc8fea263926f11863856fb80e73df10116b7fe1f55297",
+    "tracker_asset_sha256": "d112d5fd825be63dda05790a29ed32a96505820b8d4970361c642463782ebc9d",
+    "trust_role": "supplemental_trait_diversity_roster_support",
+    "policy": "Official S18 catalogs own augment, champion, and trait identity. This snapshot supplies bounded precomputed atomic roster candidates for trait-diversity objectives and never establishes entity membership or lineup strength."
+  },
+  "augment_targets": [
+    {
+      "external_id": "DA_TraitLadder",
+      "canonical_name": "拼盘天梯",
+      "objective_id": "trait_ladder_reward_progress"
+    },
+    {
+      "external_id": "DA_BronzeForLifeI",
+      "canonical_name": "终身黄铜 I",
+      "objective_id": "bronze_trait_scaling"
+    },
+    {
+      "external_id": "DA_BronzeForLifeII",
+      "canonical_name": "终身黄铜 II",
+      "objective_id": "bronze_trait_scaling"
+    }
+  ],
+  "tracker_contract": {
+    "populations": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "default_support_key": "none",
+    "support_key_semantics": "only the no-emblem branch is retained; emblem combinations are intentionally outside this product support asset",
+    "high_cost_role_filter": {
+      "enabled": true,
+      "required_high_cost_tank_count": 1,
+      "required_high_cost_carry_count": 1,
+      "source_role_codes": {
+        "1": "tank",
+        "2": "carry"
+      },
+      "source_champion_roles": {
+        "918015": "carry",
+        "918016": "carry",
+        "918022": "carry",
+        "918025": "carry",
+        "918032": "tank",
+        "918044": "tank",
+        "918054": "tank",
+        "918057": "tank",
+        "918076": "carry",
+        "918081": "carry",
+        "918085": "carry",
+        "918099": "carry",
+        "918103": "carry",
+        "918119": "carry",
+        "918143": "carry",
+        "918150": "carry",
+        "918427": "carry",
+        "918523": "carry",
+        "918875": "tank",
+        "918876": "tank",
+        "918955": "carry",
+        "918996": "carry",
+        "918997": "tank",
+        "918998": "carry"
+      },
+      "unavailable_policy": "retain the population cache for downstream deterministic cost-based fallback selection, but mark the role constraint unsatisfied"
+    },
+    "roster_semantics": "each roster is one atomic unit set and must never be unioned with another roster",
+    "ranking_semantics": "active trait count is primary; current-patch 4/5-cost counts are the first tie-breakers after catalog resolution; tracker quality is not Master+ lineup strength"
+  },
+  "support_keys": [
+    "none"
+  ],
+  "roster_groups": [
+    {
+      "support_key": "none",
+      "population": 4,
+      "upstream_row_count": 40,
+      "row_count": 40,
+      "role_eligible_row_count": 0,
+      "role_constraint_status": "unavailable_at_population",
+      "maximum_active_trait_count": 4,
+      "maximum_row_count": 40,
+      "identity_evidence_rosters": [
+        {
+          "source_champion_ids": [
+            "918083",
+            "918497",
+            "918498",
+            "918995"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2召唤使",
+            "2主宰",
+            "2仙灵"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918421",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918516",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918498",
+            "918516",
+            "918007",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "3永恒之森",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918110",
+            "918497",
+            "918498",
+            "918032"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2主宰",
+            "2炼狱",
+            "2仙灵"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918012",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918164",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918516",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918084",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918110",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918164",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918110",
+            "918498",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918089",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918089",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918516",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918516",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918516",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918516",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918516",
+            "918007",
+            "918012",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "3永恒之森",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918954",
+            "918009",
+            "918033"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "3迅灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918110",
+            "918498",
+            "918098",
+            "918876"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "2仙灵"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918007",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918110",
+            "918007",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918110",
+            "918010",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918019",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918019",
+            "918992",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918019",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918009",
+            "918033"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918009",
+            "918268"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2召唤使",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918009",
+            "918268"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        }
+      ],
+      "rosters": [
+        {
+          "roster_id": "2f3aa343abd060b71aa7eb0cc0322fb9eae08b087e93d6af2a280ecc31ae8a40",
+          "ordinal": 1,
+          "team_key": "918083,918497,918498,918995",
+          "source_champion_ids": [
+            "918083",
+            "918497",
+            "918498",
+            "918995"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2召唤使",
+            "2主宰",
+            "2仙灵"
+          ],
+          "active_trait_count": 4,
+          "quality": 408,
+          "total_cost": 6,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "b5fca57fd81ed00c81a061843ce708a433212338b81ec5a7e10bb4faacdd861d",
+          "ordinal": 2,
+          "team_key": "918009,918045,918089,918421",
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918421",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 6,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "ba5c2cba6becbabbc8614b7b7bd123b65610fb87a1a8f893b95a57c1e5ac1ce9",
+          "ordinal": 3,
+          "team_key": "918009,918045,918421,918516",
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918516",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 6,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "1bd45b0b7f0c470707b75b29263be7df59965b8a1869a9b91d7bc4483215ad6c",
+          "ordinal": 4,
+          "team_key": "918009,918045,918421,918954",
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 6,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "3bd004c151b9900b1e52f0554b807b1747815c71ad1b388bc1cec1a87144b650",
+          "ordinal": 5,
+          "team_key": "918007,918009,918498,918516",
+          "source_champion_ids": [
+            "918498",
+            "918516",
+            "918007",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "3永恒之森",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 408,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "733dd679e8475b88873f2bb01241ef17cd3790dad6d6da6de6ff1c3e8cbc63ff",
+          "ordinal": 6,
+          "team_key": "918032,918110,918497,918498",
+          "source_champion_ids": [
+            "918110",
+            "918497",
+            "918498",
+            "918032"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2主宰",
+            "2炼狱",
+            "2仙灵"
+          ],
+          "active_trait_count": 4,
+          "quality": 408,
+          "total_cost": 7,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "77bb377a549052f75872ecc0add457496b09f4caf96df45933d0294bf2acea49",
+          "ordinal": 7,
+          "team_key": "918009,918012,918045,918421",
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918012",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "4f070cf02253e97416bf3fbc490b556a6c30b0f7c1bee531d28a766741ba3e39",
+          "ordinal": 8,
+          "team_key": "918009,918019,918045,918084",
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "8b14fd9c53adb860c53203a066cfdb29323e4365e1e16e8740cb30822a685077",
+          "ordinal": 9,
+          "team_key": "918009,918019,918045,918089",
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "b95fa6c22b2ef26cb25b76c41acb349b51d6c837b9bfa068ece795e5836e35e6",
+          "ordinal": 10,
+          "team_key": "918009,918019,918045,918164",
+          "source_champion_ids": [
+            "918045",
+            "918164",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "a7b5d628c34cae593730479817082be0f0835430f20d4c9342f925c81a37c71f",
+          "ordinal": 11,
+          "team_key": "918009,918019,918045,918516",
+          "source_champion_ids": [
+            "918045",
+            "918516",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "ccd1aabbf44ebbc1b471a0c7b801d857a8af1895fa9637334007f5bcf5cde672",
+          "ordinal": 12,
+          "team_key": "918009,918043,918084,918098",
+          "source_champion_ids": [
+            "918043",
+            "918084",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "de7025ef2e367a79ebd988004fa88cde7c6f9e496e46fd3a9ab1a6f1af065f61",
+          "ordinal": 13,
+          "team_key": "918009,918043,918098,918110",
+          "source_champion_ids": [
+            "918043",
+            "918110",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "522c0f6a86497cce842d0f45fdb80107fa67948f45e3cf1985d56a760aca847a",
+          "ordinal": 14,
+          "team_key": "918009,918045,918084,918098",
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "bc31605fcd40d97e17856631fe24bc8977c332998577392257140d5635123aac",
+          "ordinal": 15,
+          "team_key": "918009,918045,918098,918110",
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "037eafbb67919b852d615c5ba8e19090408f0310644f518c270872f207f5be86",
+          "ordinal": 16,
+          "team_key": "918009,918045,918098,918421",
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "6c0b98b65a759e8cd989b4c62f36545a2723a3a900d2f153285f9ae4d56af30d",
+          "ordinal": 17,
+          "team_key": "918009,918084,918098,918164",
+          "source_champion_ids": [
+            "918084",
+            "918164",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "ca47643d34cee56cbf28e8f44b83546bbb984a14a25ffa5a841e7976e9d17c0e",
+          "ordinal": 18,
+          "team_key": "918009,918098,918110,918498",
+          "source_champion_ids": [
+            "918110",
+            "918498",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 7,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "303c6f23e86f1911aa1504cf05532ba788006ef754a91ea273af2c4b6d2b80be",
+          "ordinal": 19,
+          "team_key": "918009,918043,918089,918107",
+          "source_champion_ids": [
+            "918043",
+            "918089",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 606,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "491d57f292df9658e1bc39a46f557038eb7cfbdd484e4cd84b920cc4a6e245cb",
+          "ordinal": 20,
+          "team_key": "918009,918043,918089,918121",
+          "source_champion_ids": [
+            "918043",
+            "918089",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 606,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "b3ad74d4a425bba7ae656871d5a88a8181ca7ea4439191eadfef6337419cc6da",
+          "ordinal": 21,
+          "team_key": "918009,918043,918107,918516",
+          "source_champion_ids": [
+            "918043",
+            "918516",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 606,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "8f85d2a7a965c1e23eb5abf9bc2553402b514237a8c9c045e5d24498734c3cf2",
+          "ordinal": 22,
+          "team_key": "918009,918043,918121,918516",
+          "source_champion_ids": [
+            "918043",
+            "918516",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 606,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "dcfc70a81648f83f485f482323fae3209f45eeb5a9e71d16ffab8005c404cc51",
+          "ordinal": 23,
+          "team_key": "918009,918045,918089,918107",
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 606,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "6b6e692d9b6c048d9d7ecad5b8de8c5360d8ca081f49860662efcc5974b25443",
+          "ordinal": 24,
+          "team_key": "918009,918045,918089,918121",
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 606,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "e886bfd75b00613a4aa03f5f67495e89ae706cdab82fa70ac153127a547c073b",
+          "ordinal": 25,
+          "team_key": "918009,918045,918107,918421",
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 606,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "0e54f388decd8804dd99dbeba7a66c0a96264815234358aea6863027437ec172",
+          "ordinal": 26,
+          "team_key": "918009,918045,918107,918516",
+          "source_champion_ids": [
+            "918045",
+            "918516",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 606,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "e70feabc9482f0b5758f0d49188e9b61bdf9f27c9f8cf794219d987b7774cc35",
+          "ordinal": 27,
+          "team_key": "918009,918045,918121,918421",
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 606,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "11517b9aafd5115e413b18203b9257c85f471ef1444314ec85734631c0f16625",
+          "ordinal": 28,
+          "team_key": "918009,918045,918121,918516",
+          "source_champion_ids": [
+            "918045",
+            "918516",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "1宿敌",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 606,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "74a9343e41906287e8336f4fdeac3539ae3dcb53637dcae7445aafa1bd3fc75b",
+          "ordinal": 29,
+          "team_key": "918007,918009,918012,918516",
+          "source_champion_ids": [
+            "918516",
+            "918007",
+            "918012",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "3永恒之森",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 408,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "35868ef028e24090960299e09e8fc19ca39f480f9e2cb016b2c57673b4372068",
+          "ordinal": 30,
+          "team_key": "918009,918033,918045,918954",
+          "source_champion_ids": [
+            "918045",
+            "918954",
+            "918009",
+            "918033"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "3迅灵",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 408,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "81c05c301b00ba60ee6c56cba76feeb571a109d5e74ba44b21bcc0b7a5ed8eaf",
+          "ordinal": 31,
+          "team_key": "918098,918110,918498,918876",
+          "source_champion_ids": [
+            "918110",
+            "918498",
+            "918098",
+            "918876"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "2仙灵"
+          ],
+          "active_trait_count": 4,
+          "quality": 408,
+          "total_cost": 8,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "d9c2ddc2614891f8666a6845f2023d4c783f100b464bd313f7738b76d44cbc67",
+          "ordinal": 32,
+          "team_key": "918007,918009,918084,918098",
+          "source_champion_ids": [
+            "918084",
+            "918007",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "4693cea8bf275a96ce59b44d65d5d34610f8ea3706769adb06e4f39bcc4cc233",
+          "ordinal": 33,
+          "team_key": "918007,918009,918098,918110",
+          "source_champion_ids": [
+            "918110",
+            "918007",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "ad1fe6cf7d19fd93c008cdc075637c8b81350848c7b4a93a5b6c6f17149ab2b0",
+          "ordinal": 34,
+          "team_key": "918009,918010,918098,918110",
+          "source_champion_ids": [
+            "918110",
+            "918010",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "6c10587c8f264157c2704f382f885b0517d11aed9e04ba6ef9a0202e81db928e",
+          "ordinal": 35,
+          "team_key": "918009,918019,918045,918098",
+          "source_champion_ids": [
+            "918045",
+            "918019",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "4eadb9f7de8f1a6c0b5ae50d0dc7fcc211c8d72d0fb0224591ef1ab3656ec7e0",
+          "ordinal": 36,
+          "team_key": "918009,918019,918045,918992",
+          "source_champion_ids": [
+            "918045",
+            "918019",
+            "918992",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "b200e253fd7101ef152dfdb0630d2e849e34cd831eb0a9db821a4b34a8f2a33b",
+          "ordinal": 37,
+          "team_key": "918009,918019,918084,918098",
+          "source_champion_ids": [
+            "918084",
+            "918019",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "a9017bb2bb2774b7dac484a9a2b3b7ad880edf632b6300e57a72d4488649e041",
+          "ordinal": 38,
+          "team_key": "918009,918033,918045,918421",
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918009",
+            "918033"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "7eeeb7470b527396d64a399b36d6b10bb82912b551b7fce15efd73b341efc589",
+          "ordinal": 39,
+          "team_key": "918009,918045,918083,918268",
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918009",
+            "918268"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2召唤使",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        },
+        {
+          "roster_id": "8492f0fcbda96b8171ef38e713bfd5606eac67091e4339eae13974a759b50b72",
+          "ordinal": 40,
+          "team_key": "918009,918045,918089,918268",
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918009",
+            "918268"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 4,
+          "quality": 407,
+          "total_cost": 8,
+          "high_cost_tank_count": 0,
+          "high_cost_carry_count": 0,
+          "satisfies_default_high_cost_role_filter": false
+        }
+      ]
+    },
+    {
+      "support_key": "none",
+      "population": 5,
+      "upstream_row_count": 40,
+      "row_count": 2,
+      "role_eligible_row_count": 2,
+      "role_constraint_status": "satisfied",
+      "maximum_active_trait_count": 6,
+      "maximum_row_count": 2,
+      "identity_evidence_rosters": [
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918009",
+            "918033"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918009",
+            "918033",
+            "918150"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918098",
+            "918009",
+            "918268",
+            "918085"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2裁决使",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918110",
+            "918098",
+            "918009",
+            "918523",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918497",
+            "918009",
+            "918131",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2重装战士",
+            "2护卫",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918498",
+            "918009",
+            "918523",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2护卫",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918110",
+            "918497",
+            "918498",
+            "918131"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2炼狱",
+            "2仙灵"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918421",
+            "918954",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918516",
+            "918954",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918497",
+            "918498",
+            "918516",
+            "918007",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "3永恒之森",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918516",
+            "918012",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918089",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918110",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918516",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918164",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918164",
+            "918516",
+            "918019",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918084",
+            "918164",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918110",
+            "918498",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918164",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918421",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918421",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918498",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918110",
+            "918497",
+            "918498",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918421",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918421",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918516",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918516",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2护卫",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918516",
+            "918954",
+            "918007",
+            "918012",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3永恒之森",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918009",
+            "918018"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "3迅灵",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918497",
+            "918498",
+            "918516",
+            "918009",
+            "918120"
+          ],
+          "trait_texts": [
+            "2重装战士",
+            "2护卫",
+            "3永恒之森",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918083",
+            "918497",
+            "918498",
+            "918131",
+            "918995"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2主宰",
+            "2仙灵"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918164",
+            "918007",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918110",
+            "918498",
+            "918007",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918084",
+            "918019",
+            "918098",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918991",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        }
+      ],
+      "rosters": [
+        {
+          "roster_id": "6f431e4b76026eda75c147e9dc6f0f1e5d7b5cf75a60e6b0879a86ebf164fbd7",
+          "ordinal": 7,
+          "team_key": "918009,918131,918497,918876,918955",
+          "source_champion_ids": [
+            "918497",
+            "918009",
+            "918131",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2重装战士",
+            "2护卫",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 6,
+          "quality": 611,
+          "total_cost": 16,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "b360c1af545880e7253f858784576b15fb45a89f923282bfeb4825383bb8cfeb",
+          "ordinal": 8,
+          "team_key": "918009,918498,918523,918876,918955",
+          "source_champion_ids": [
+            "918498",
+            "918009",
+            "918523",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2护卫",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 6,
+          "quality": 611,
+          "total_cost": 17,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        }
+      ]
+    },
+    {
+      "support_key": "none",
+      "population": 6,
+      "upstream_row_count": 40,
+      "row_count": 9,
+      "role_eligible_row_count": 9,
+      "role_constraint_status": "satisfied",
+      "maximum_active_trait_count": 7,
+      "maximum_row_count": 9,
+      "identity_evidence_rosters": [
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918991",
+            "918009"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918009",
+            "918033",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918009",
+            "918033",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918009",
+            "918096"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918009",
+            "918018",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918009",
+            "918076"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918009",
+            "918268",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918098",
+            "918009",
+            "918268",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2召唤使",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918131",
+            "918032",
+            "918523"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918497",
+            "918019",
+            "918009",
+            "918131",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918098",
+            "918009",
+            "918268",
+            "918032"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918498",
+            "918009",
+            "918268",
+            "918995",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2召唤使",
+            "2护卫",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918098",
+            "918009",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918009",
+            "918033",
+            "918107",
+            "918150"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918009",
+            "918033",
+            "918121",
+            "918150"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918009",
+            "918131",
+            "918032",
+            "918876"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918009",
+            "918268",
+            "918995",
+            "918085"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2裁决使",
+            "2召唤使",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918131",
+            "918997"
+          ],
+          "trait_texts": [
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918991",
+            "918009",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918098",
+            "918009",
+            "918107",
+            "918268",
+            "918085"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2裁决使",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918098",
+            "918009",
+            "918121",
+            "918268",
+            "918085"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2裁决使",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918107",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1宿敌",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918121",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1宿敌",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918009",
+            "918018",
+            "918876",
+            "918150"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918011",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918009",
+            "918131",
+            "918032",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2主宰",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918098",
+            "918009",
+            "918268",
+            "918995",
+            "918085"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2裁决使",
+            "2召唤使",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918120",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918009",
+            "918131",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918164",
+            "918497",
+            "918009",
+            "918131",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918110",
+            "918098",
+            "918009",
+            "918107",
+            "918523",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "1宿敌",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918110",
+            "918098",
+            "918009",
+            "918121",
+            "918523",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "1宿敌",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918497",
+            "918019",
+            "918009",
+            "918131",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918497",
+            "918098",
+            "918009",
+            "918131",
+            "918032",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918131",
+            "918076",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918131",
+            "918997",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918497",
+            "918992",
+            "918009",
+            "918131",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        }
+      ],
+      "rosters": [
+        {
+          "roster_id": "7c377e9a158953da8ad1570a7cb554233eb48e9f5188aada2667f3b42aa0a3b4",
+          "ordinal": 11,
+          "team_key": "918032,918084,918131,918497,918498,918523",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918131",
+            "918032",
+            "918523"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "2月光射线"
+          ],
+          "active_trait_count": 7,
+          "quality": 714,
+          "total_cost": 14,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "b9e5ffaf689b3524f7e02935b68f3b7d436e8986c967a6a3669439b4e82433a1",
+          "ordinal": 26,
+          "team_key": "918009,918018,918045,918150,918421,918876",
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918009",
+            "918018",
+            "918876",
+            "918150"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 7,
+          "quality": 714,
+          "total_cost": 17,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "ad756b056467e7c237be9e012ade81d9829959126fcc8dad155761bbaba5058a",
+          "ordinal": 28,
+          "team_key": "918009,918032,918084,918131,918497,918955",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918009",
+            "918131",
+            "918032",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2主宰",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 7,
+          "quality": 713,
+          "total_cost": 17,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "25229decc945975e00d4d1ac72d052e916fb727a8bf406cd48fb4951c9e16618",
+          "ordinal": 32,
+          "team_key": "918009,918084,918131,918497,918876,918955",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918009",
+            "918131",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 7,
+          "quality": 713,
+          "total_cost": 17,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "ff3ba749de98d9b936be3744a92af705d6f13fcc626c746e3e6eda9200bb23cb",
+          "ordinal": 33,
+          "team_key": "918009,918131,918164,918497,918876,918955",
+          "source_champion_ids": [
+            "918164",
+            "918497",
+            "918009",
+            "918131",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 7,
+          "quality": 713,
+          "total_cost": 17,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "0ea117128e2277e162fd9c03224781faeec8d162eae70952de42d58de4845f3d",
+          "ordinal": 36,
+          "team_key": "918009,918019,918131,918497,918876,918955",
+          "source_champion_ids": [
+            "918497",
+            "918019",
+            "918009",
+            "918131",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 7,
+          "quality": 713,
+          "total_cost": 18,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "743ad36f57df4e528fb323664d19ccaad958b5b97e85e2c866bc273b9a395a9a",
+          "ordinal": 37,
+          "team_key": "918009,918032,918098,918131,918497,918955",
+          "source_champion_ids": [
+            "918497",
+            "918098",
+            "918009",
+            "918131",
+            "918032",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 7,
+          "quality": 713,
+          "total_cost": 18,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "59a48bfd0b8c55914bc7062b94d923b90661ccd91dd1c3b0e1a14cab51bee1cd",
+          "ordinal": 39,
+          "team_key": "918009,918084,918098,918131,918955,918997",
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918131",
+            "918997",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 7,
+          "quality": 713,
+          "total_cost": 18,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "60ca6b7862823768cee03cc86c7ca8a1e307b8ce6b0a524c041b011e5708306f",
+          "ordinal": 40,
+          "team_key": "918009,918131,918497,918876,918955,918992",
+          "source_champion_ids": [
+            "918497",
+            "918992",
+            "918009",
+            "918131",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 7,
+          "quality": 713,
+          "total_cost": 18,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        }
+      ]
+    },
+    {
+      "support_key": "none",
+      "population": 7,
+      "upstream_row_count": 40,
+      "row_count": 2,
+      "role_eligible_row_count": 2,
+      "role_constraint_status": "satisfied",
+      "maximum_active_trait_count": 9,
+      "maximum_row_count": 2,
+      "identity_evidence_rosters": [
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918009",
+            "918131",
+            "918032",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918131",
+            "918997",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918083",
+            "918497",
+            "918498",
+            "918516",
+            "918007",
+            "918009",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "3永恒之森",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918083",
+            "918497",
+            "918498",
+            "918516",
+            "918009",
+            "918120",
+            "918995"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "3永恒之森",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918989",
+            "918019",
+            "918098",
+            "918009",
+            "918096"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918110",
+            "918498",
+            "918019",
+            "918009",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918991",
+            "918009",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918991",
+            "918009",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918990",
+            "918009",
+            "918018",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2猎手",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918083",
+            "918497",
+            "918498",
+            "918989",
+            "918009",
+            "918995",
+            "918997"
+          ],
+          "trait_texts": [
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2主宰",
+            "2神谕者",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918110",
+            "918497",
+            "918498",
+            "918131",
+            "918254",
+            "918076"
+          ],
+          "trait_texts": [
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "2远古"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918009",
+            "918011",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918009",
+            "918011",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918009",
+            "918096",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918009",
+            "918096",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918498",
+            "918516",
+            "918009",
+            "918018",
+            "918150"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3迅灵",
+            "3永恒之森",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918083",
+            "918497",
+            "918498",
+            "918991",
+            "918096",
+            "918995",
+            "918997"
+          ],
+          "trait_texts": [
+            "2适应者",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2主宰",
+            "2神谕者",
+            "3峡谷怪物",
+            "2仙灵"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918497",
+            "918498",
+            "918516",
+            "918007",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "3永恒之森",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918009",
+            "918018",
+            "918033",
+            "918268"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "3迅灵",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918051",
+            "918009",
+            "918018",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2猎手",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918954",
+            "918019",
+            "918098",
+            "918009",
+            "918150"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2斗士",
+            "2护卫",
+            "2炼狱",
+            "3迅灵",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918083",
+            "918497",
+            "918804",
+            "918009",
+            "918268",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2裁决使",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "3莲华",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918083",
+            "918497",
+            "918498",
+            "918019",
+            "918131",
+            "918268",
+            "918523"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918019",
+            "918009",
+            "918131",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918497",
+            "918498",
+            "918019",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918060",
+            "918009",
+            "918268",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918804",
+            "918009",
+            "918268",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2裁决使",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918098",
+            "918804",
+            "918009",
+            "918268",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2裁决使",
+            "2召唤使",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918110",
+            "918497",
+            "918498",
+            "918009",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918083",
+            "918497",
+            "918498",
+            "918019",
+            "918131",
+            "918268",
+            "918016"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2裁决使",
+            "2召唤使",
+            "2重装战士",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918009",
+            "918018",
+            "918107",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918954",
+            "918009",
+            "918018",
+            "918121",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2护卫",
+            "3迅灵",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918009",
+            "918107",
+            "918076"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918009",
+            "918121",
+            "918076"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918009",
+            "918107",
+            "918268",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918009",
+            "918121",
+            "918268",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918098",
+            "918009",
+            "918107",
+            "918268",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2召唤使",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918098",
+            "918009",
+            "918121",
+            "918268",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2召唤使",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918019",
+            "918098",
+            "918991",
+            "918009",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "1绝命花妖"
+          ]
+        }
+      ],
+      "rosters": [
+        {
+          "roster_id": "4ebe21e540db04024630786b6e258db3cffa0bd6ded661e35850154771553138",
+          "ordinal": 1,
+          "team_key": "918009,918032,918084,918131,918497,918876,918955",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918009",
+            "918131",
+            "918032",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 9,
+          "quality": 917,
+          "total_cost": 21,
+          "high_cost_tank_count": 2,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "0009e1a17a336daf877c9210aa804adb9169c9174d46600b4b2be28fe63c97b9",
+          "ordinal": 2,
+          "team_key": "918009,918084,918096,918098,918131,918955,918997",
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918131",
+            "918997",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 9,
+          "quality": 917,
+          "total_cost": 21,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        }
+      ]
+    },
+    {
+      "support_key": "none",
+      "population": 8,
+      "upstream_row_count": 40,
+      "row_count": 5,
+      "role_eligible_row_count": 5,
+      "role_constraint_status": "satisfied",
+      "maximum_active_trait_count": 10,
+      "maximum_row_count": 4,
+      "identity_evidence_rosters": [
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918098",
+            "918009",
+            "918131",
+            "918254",
+            "918076",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918991",
+            "918009",
+            "918131",
+            "918032",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918107",
+            "918131",
+            "918997",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "1宿敌",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918121",
+            "918131",
+            "918997",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "1宿敌",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918131",
+            "918997",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "3峡谷怪物",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918009",
+            "918131"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918498",
+            "918019",
+            "918009",
+            "918131",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918110",
+            "918498",
+            "918019",
+            "918991",
+            "918009",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918989",
+            "918019",
+            "918098",
+            "918009",
+            "918096",
+            "918107"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918989",
+            "918019",
+            "918098",
+            "918009",
+            "918096",
+            "918121"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918110",
+            "918498",
+            "918019",
+            "918009",
+            "918107",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918110",
+            "918498",
+            "918019",
+            "918009",
+            "918121",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918421",
+            "918498",
+            "918516",
+            "918990",
+            "918009",
+            "918018",
+            "918150"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2斗士",
+            "2猎手",
+            "2护卫",
+            "3迅灵",
+            "3永恒之森",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918498",
+            "918019",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918110",
+            "918498",
+            "918019",
+            "918009",
+            "918096",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918497",
+            "918498",
+            "918019",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918497",
+            "918498",
+            "918516",
+            "918019",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918110",
+            "918497",
+            "918498",
+            "918516",
+            "918009",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918497",
+            "918498",
+            "918516",
+            "918007",
+            "918992",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "3永恒之森",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918497",
+            "918498",
+            "918516",
+            "918007",
+            "918994",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "3永恒之森",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918954",
+            "918019",
+            "918098",
+            "918991",
+            "918009",
+            "918150"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2斗士",
+            "2护卫",
+            "2炼狱",
+            "3迅灵",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918098",
+            "918991",
+            "918992",
+            "918009",
+            "918268",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2召唤使",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918007",
+            "918098",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918019",
+            "918098",
+            "918009",
+            "918254",
+            "918076"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "2远古",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918110",
+            "918498",
+            "918019",
+            "918009",
+            "918076",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918019",
+            "918098",
+            "918009",
+            "918096",
+            "918997"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918497",
+            "918019",
+            "918098",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918497",
+            "918498",
+            "918019",
+            "918994",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918991",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918994",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918110",
+            "918497",
+            "918498",
+            "918991",
+            "918009",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918110",
+            "918497",
+            "918498",
+            "918994",
+            "918009",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918497",
+            "918498",
+            "918019",
+            "918009",
+            "918107",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918497",
+            "918498",
+            "918019",
+            "918009",
+            "918121",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918804",
+            "918009",
+            "918107",
+            "918268",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2裁决使",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918804",
+            "918009",
+            "918121",
+            "918268",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2裁决使",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918107",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        }
+      ],
+      "rosters": [
+        {
+          "roster_id": "0d0f7f79ff8047f9ce0949ad21edba71e4d1498b2fed4843bcc13aef6d322a8a",
+          "ordinal": 2,
+          "team_key": "918009,918032,918084,918131,918497,918876,918955,918991",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918991",
+            "918009",
+            "918131",
+            "918032",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 10,
+          "quality": 1019,
+          "total_cost": 23,
+          "high_cost_tank_count": 2,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "e2f83ae924b2384f8e423dee61b006fbb2d6d08bd2fac4763169a86515e142a8",
+          "ordinal": 3,
+          "team_key": "918009,918084,918096,918098,918107,918131,918955,918997",
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918107",
+            "918131",
+            "918997",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "1宿敌",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 10,
+          "quality": 1218,
+          "total_cost": 24,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "e6adc92c6cf8c24f7b4698a4be0514f4c41c58921662dfc12b745c6623b34620",
+          "ordinal": 4,
+          "team_key": "918009,918084,918096,918098,918121,918131,918955,918997",
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918121",
+            "918131",
+            "918997",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "1宿敌",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 10,
+          "quality": 1218,
+          "total_cost": 24,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "d2a31c4719210d2ebec6327d40b45ef2d047d04f3bdd9fee90eae3e09a7c1a8c",
+          "ordinal": 5,
+          "team_key": "918009,918084,918096,918098,918131,918955,918997,918998",
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918131",
+            "918997",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "3峡谷怪物",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 10,
+          "quality": 1020,
+          "total_cost": 26,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "4db3c6197dc57e704c62ea528dc57303b57dcf620ec0de0d8cfac4140ecb4797",
+          "ordinal": 27,
+          "team_key": "918009,918019,918045,918076,918084,918110,918498,918876",
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918110",
+            "918498",
+            "918019",
+            "918009",
+            "918076",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 9,
+          "quality": 917,
+          "total_cost": 17,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        }
+      ]
+    },
+    {
+      "support_key": "none",
+      "population": 9,
+      "upstream_row_count": 40,
+      "row_count": 9,
+      "role_eligible_row_count": 9,
+      "role_constraint_status": "satisfied",
+      "maximum_active_trait_count": 11,
+      "maximum_row_count": 9,
+      "identity_evidence_rosters": [
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918019",
+            "918009",
+            "918131",
+            "918995",
+            "918523",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918131",
+            "918254",
+            "918076",
+            "918523"
+          ],
+          "trait_texts": [
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918131",
+            "918254",
+            "918076",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918098",
+            "918009",
+            "918107",
+            "918131",
+            "918254",
+            "918076",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918098",
+            "918009",
+            "918121",
+            "918131",
+            "918254",
+            "918076",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918989",
+            "918009",
+            "918096",
+            "918131",
+            "918032",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2神谕者",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918991",
+            "918009",
+            "918107",
+            "918131",
+            "918032",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918991",
+            "918009",
+            "918121",
+            "918131",
+            "918032",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918098",
+            "918009",
+            "918131",
+            "918254",
+            "918076",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918131",
+            "918254",
+            "918016",
+            "918076",
+            "918523",
+            "918085"
+          ],
+          "trait_texts": [
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2裁决使",
+            "2重装战士",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918009",
+            "918096",
+            "918131",
+            "918032",
+            "918876",
+            "918997",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2神谕者",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918991",
+            "918009",
+            "918131",
+            "918032",
+            "918876",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918107",
+            "918131",
+            "918997",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "3峡谷怪物",
+            "1宿敌",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918121",
+            "918131",
+            "918997",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "3峡谷怪物",
+            "1宿敌",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918084",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918009",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918498",
+            "918516",
+            "918019",
+            "918009",
+            "918131",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918994",
+            "918009",
+            "918131"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918498",
+            "918516",
+            "918019",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918110",
+            "918498",
+            "918989",
+            "918019",
+            "918009",
+            "918096",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918421",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918110",
+            "918498",
+            "918019",
+            "918991",
+            "918009",
+            "918107",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918110",
+            "918498",
+            "918019",
+            "918991",
+            "918009",
+            "918121",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "3迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918991",
+            "918994",
+            "918009",
+            "918131",
+            "918995"
+          ],
+          "trait_texts": [
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918009",
+            "918254",
+            "918076"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918009",
+            "918096",
+            "918997"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918089",
+            "918497",
+            "918498",
+            "918019",
+            "918994",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918497",
+            "918498",
+            "918516",
+            "918019",
+            "918994",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918991",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918994",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918131",
+            "918268",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918991",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918994",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918110",
+            "918497",
+            "918498",
+            "918516",
+            "918991",
+            "918009",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918110",
+            "918497",
+            "918498",
+            "918516",
+            "918994",
+            "918009",
+            "918131",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918497",
+            "918498",
+            "918516",
+            "918019",
+            "918009",
+            "918107",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918497",
+            "918498",
+            "918516",
+            "918019",
+            "918009",
+            "918121",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918107",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918121",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        }
+      ],
+      "rosters": [
+        {
+          "roster_id": "3269b57173ca61069a776e4637690ca7945f0c2bacaa800efd6e6c4c8fe9cc44",
+          "ordinal": 1,
+          "team_key": "918009,918019,918045,918083,918131,918497,918523,918876,918995",
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918019",
+            "918009",
+            "918131",
+            "918995",
+            "918523",
+            "918876"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 11,
+          "quality": 1121,
+          "total_cost": 22,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "9b0c5133c1d2a0116622560d1bd18a13f225fa2f10644b04404233a7945848d3",
+          "ordinal": 6,
+          "team_key": "918009,918032,918084,918096,918131,918497,918876,918955,918989",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918989",
+            "918009",
+            "918096",
+            "918131",
+            "918032",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2神谕者",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 11,
+          "quality": 1121,
+          "total_cost": 25,
+          "high_cost_tank_count": 2,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "0ad6a79ff63ea4db82cbaaecd46e4d3ef08811e3dace7abf1436e0ebd22b1e0f",
+          "ordinal": 7,
+          "team_key": "918009,918032,918084,918107,918131,918497,918876,918955,918991",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918991",
+            "918009",
+            "918107",
+            "918131",
+            "918032",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 11,
+          "quality": 1320,
+          "total_cost": 26,
+          "high_cost_tank_count": 2,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "5da69ea70056b53b07f9575cbfbf3ea955a6e76f3582b78e48fb4f48c999b4d5",
+          "ordinal": 8,
+          "team_key": "918009,918032,918084,918121,918131,918497,918876,918955,918991",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918991",
+            "918009",
+            "918121",
+            "918131",
+            "918032",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 11,
+          "quality": 1320,
+          "total_cost": 26,
+          "high_cost_tank_count": 2,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "4783506ec54ccfd542d8e5243faf8e660ef0089a5250673356d2b4ff69dd768b",
+          "ordinal": 9,
+          "team_key": "918009,918076,918084,918098,918131,918254,918497,918876,918955",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918098",
+            "918009",
+            "918131",
+            "918254",
+            "918076",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 11,
+          "quality": 1122,
+          "total_cost": 26,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+          "ordinal": 11,
+          "team_key": "918009,918032,918084,918096,918131,918497,918876,918955,918997",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918009",
+            "918096",
+            "918131",
+            "918032",
+            "918876",
+            "918997",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2神谕者",
+            "2炼狱",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 11,
+          "quality": 1122,
+          "total_cost": 28,
+          "high_cost_tank_count": 3,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+          "ordinal": 12,
+          "team_key": "918009,918032,918084,918131,918497,918876,918955,918991,918998",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918991",
+            "918009",
+            "918131",
+            "918032",
+            "918876",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 11,
+          "quality": 1122,
+          "total_cost": 28,
+          "high_cost_tank_count": 2,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "41ffa377dca670d36f4aa63d300ec1a9dd362669f3053258c0291aff1f32cf1c",
+          "ordinal": 13,
+          "team_key": "918009,918084,918096,918098,918107,918131,918955,918997,918998",
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918107",
+            "918131",
+            "918997",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "3峡谷怪物",
+            "1宿敌",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 11,
+          "quality": 1321,
+          "total_cost": 29,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "d1dbf323bf05152d8934def8111837e4488b390e78802390ee3381386d44705a",
+          "ordinal": 14,
+          "team_key": "918009,918084,918096,918098,918121,918131,918955,918997,918998",
+          "source_champion_ids": [
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918121",
+            "918131",
+            "918997",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "3峡谷怪物",
+            "1宿敌",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 11,
+          "quality": 1321,
+          "total_cost": 29,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        }
+      ]
+    },
+    {
+      "support_key": "none",
+      "population": 10,
+      "upstream_row_count": 40,
+      "row_count": 14,
+      "role_eligible_row_count": 14,
+      "role_constraint_status": "satisfied",
+      "maximum_active_trait_count": 12,
+      "maximum_row_count": 14,
+      "identity_evidence_rosters": [
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918991",
+            "918994",
+            "918009",
+            "918131",
+            "918995",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918043",
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918131",
+            "918254",
+            "918076",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918131",
+            "918254",
+            "918076",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918107",
+            "918131",
+            "918254",
+            "918076",
+            "918523"
+          ],
+          "trait_texts": [
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918121",
+            "918131",
+            "918254",
+            "918076",
+            "918523"
+          ],
+          "trait_texts": [
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918497",
+            "918498",
+            "918098",
+            "918994",
+            "918009",
+            "918268",
+            "918995",
+            "918997",
+            "918085"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2裁决使",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918110",
+            "918497",
+            "918991",
+            "918994",
+            "918009",
+            "918131",
+            "918995",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918107",
+            "918131",
+            "918254",
+            "918076",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918121",
+            "918131",
+            "918254",
+            "918076",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918098",
+            "918991",
+            "918009",
+            "918131",
+            "918268",
+            "918995",
+            "918523",
+            "918997"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918131",
+            "918254",
+            "918995",
+            "918076",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918131",
+            "918254",
+            "918076",
+            "918523",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "3月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918019",
+            "918009",
+            "918131",
+            "918995",
+            "918523",
+            "918876",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918131",
+            "918268",
+            "918995",
+            "918523",
+            "918997"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918989",
+            "918991",
+            "918009",
+            "918131",
+            "918032",
+            "918876",
+            "918997",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2神谕者",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918009",
+            "918131",
+            "918268",
+            "918995",
+            "918523",
+            "918876",
+            "918085"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2裁决使",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918098",
+            "918009",
+            "918107",
+            "918131",
+            "918254",
+            "918076",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918098",
+            "918009",
+            "918121",
+            "918131",
+            "918254",
+            "918076",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918991",
+            "918009",
+            "918131",
+            "918268",
+            "918995",
+            "918523",
+            "918997",
+            "918085"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2裁决使",
+            "2召唤使",
+            "2重装战士",
+            "2炼狱",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918989",
+            "918009",
+            "918096",
+            "918131",
+            "918032",
+            "918876",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2神谕者",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918991",
+            "918009",
+            "918107",
+            "918131",
+            "918032",
+            "918876",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "3峡谷怪物",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918991",
+            "918009",
+            "918121",
+            "918131",
+            "918032",
+            "918876",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "3峡谷怪物",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918009",
+            "918096",
+            "918131",
+            "918032",
+            "918876",
+            "918997",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2神谕者",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918084",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918991",
+            "918009",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918084",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918009",
+            "918107",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918084",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918009",
+            "918121",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918421",
+            "918497",
+            "918498",
+            "918954",
+            "918098",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2斗士",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918098",
+            "918991",
+            "918994",
+            "918009",
+            "918131",
+            "918995"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918084",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918009",
+            "918995",
+            "918997"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918421",
+            "918497",
+            "918498",
+            "918098",
+            "918991",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918421",
+            "918497",
+            "918498",
+            "918098",
+            "918994",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918421",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918107",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918421",
+            "918497",
+            "918498",
+            "918098",
+            "918009",
+            "918121",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918498",
+            "918516",
+            "918019",
+            "918009",
+            "918131",
+            "918995",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "3迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918110",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918994",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "3迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918084",
+            "918497",
+            "918019",
+            "918098",
+            "918991",
+            "918009",
+            "918995",
+            "918997"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918991",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918994",
+            "918009",
+            "918131",
+            "918523"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918991",
+            "918009",
+            "918995",
+            "918997"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        },
+        {
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918498",
+            "918019",
+            "918098",
+            "918994",
+            "918009",
+            "918995",
+            "918997"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖"
+          ]
+        }
+      ],
+      "rosters": [
+        {
+          "roster_id": "f4293ee40b91cf6230363b5437ced89969adb718a40aef901013e3c25e441fc2",
+          "ordinal": 6,
+          "team_key": "918009,918045,918085,918098,918268,918497,918498,918994,918995,918997",
+          "source_champion_ids": [
+            "918045",
+            "918497",
+            "918498",
+            "918098",
+            "918994",
+            "918009",
+            "918268",
+            "918995",
+            "918997",
+            "918085"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2迅捷射手",
+            "2裁决使",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖"
+          ],
+          "active_trait_count": 12,
+          "quality": 1224,
+          "total_cost": 25,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "e1320b2d20f4c93881f1260c460f8435d44c506fdc5453eff4c1b9bcbf9223e6",
+          "ordinal": 7,
+          "team_key": "918009,918084,918110,918131,918497,918876,918955,918991,918994,918995",
+          "source_champion_ids": [
+            "918084",
+            "918110",
+            "918497",
+            "918991",
+            "918994",
+            "918009",
+            "918131",
+            "918995",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1224,
+          "total_cost": 25,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "0c96ec330473381adfd31150fed4e641105c3b065d64f62351a5633878488b5b",
+          "ordinal": 10,
+          "team_key": "918009,918045,918084,918098,918131,918268,918523,918991,918995,918997",
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918098",
+            "918991",
+            "918009",
+            "918131",
+            "918268",
+            "918995",
+            "918523",
+            "918997"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1224,
+          "total_cost": 26,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "fb79c1f8faa07452ace1ed4920a1b957d97e4898c999f13c5e65c901da55ae36",
+          "ordinal": 13,
+          "team_key": "918009,918019,918045,918083,918131,918497,918523,918876,918995,918998",
+          "source_champion_ids": [
+            "918045",
+            "918083",
+            "918497",
+            "918019",
+            "918009",
+            "918131",
+            "918995",
+            "918523",
+            "918876",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1224,
+          "total_cost": 27,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "1ed326a0dcebbef48dafafc01ac42020b03f309ce76465f68f2e21715433ab39",
+          "ordinal": 14,
+          "team_key": "918009,918045,918084,918096,918098,918131,918268,918523,918995,918997",
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918098",
+            "918009",
+            "918096",
+            "918131",
+            "918268",
+            "918995",
+            "918523",
+            "918997"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2神谕者",
+            "2炼狱",
+            "2黑色荆棘",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1223,
+          "total_cost": 27,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "3e273588e677b185e2b9680bc3a5a5bed99e44e6725ae5a84263d5ef4176765e",
+          "ordinal": 15,
+          "team_key": "918009,918032,918084,918131,918497,918876,918955,918989,918991,918997",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918989",
+            "918991",
+            "918009",
+            "918131",
+            "918032",
+            "918876",
+            "918997",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2神谕者",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1225,
+          "total_cost": 28,
+          "high_cost_tank_count": 3,
+          "high_cost_carry_count": 1,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "cb785a3c68e012f67e82443e25fba9723785dfd00148347910545de48b836df0",
+          "ordinal": 16,
+          "team_key": "918009,918045,918084,918085,918131,918268,918497,918523,918876,918995",
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918497",
+            "918009",
+            "918131",
+            "918268",
+            "918995",
+            "918523",
+            "918876",
+            "918085"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2裁决使",
+            "2召唤使",
+            "2重装战士",
+            "2护卫",
+            "2炼狱",
+            "2黑色荆棘",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1223,
+          "total_cost": 28,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "d424b14c8023258ed0096c8460c9b45ce4f006c216fe1c8c0d918af6a3fcdb01",
+          "ordinal": 17,
+          "team_key": "918009,918076,918084,918098,918107,918131,918254,918497,918876,918955",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918098",
+            "918009",
+            "918107",
+            "918131",
+            "918254",
+            "918076",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1423,
+          "total_cost": 29,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "e86cd4c691756346f7eb7cf9ff2ec4a56c0c5333a2a74fc6162d5aa293618bc9",
+          "ordinal": 18,
+          "team_key": "918009,918076,918084,918098,918121,918131,918254,918497,918876,918955",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918098",
+            "918009",
+            "918121",
+            "918131",
+            "918254",
+            "918076",
+            "918876",
+            "918955"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "1宿敌",
+            "2仙灵",
+            "2远古",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1423,
+          "total_cost": 29,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "215b65492d13b9a4720721550d45137c5474cd558dfc6132d9d80aa9ac711680",
+          "ordinal": 19,
+          "team_key": "918009,918045,918084,918085,918131,918268,918523,918991,918995,918997",
+          "source_champion_ids": [
+            "918045",
+            "918084",
+            "918991",
+            "918009",
+            "918131",
+            "918268",
+            "918995",
+            "918523",
+            "918997",
+            "918085"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2迅捷射手",
+            "2裁决使",
+            "2召唤使",
+            "2重装战士",
+            "2炼狱",
+            "2黑色荆棘",
+            "3峡谷怪物",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1224,
+          "total_cost": 29,
+          "high_cost_tank_count": 1,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "c02a89a5a16de28c18d05693536224f8d2c87ecd49fedb37cedd54a6c3a52db2",
+          "ordinal": 20,
+          "team_key": "918009,918032,918084,918096,918131,918497,918876,918955,918989,918998",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918989",
+            "918009",
+            "918096",
+            "918131",
+            "918032",
+            "918876",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2神谕者",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1224,
+          "total_cost": 30,
+          "high_cost_tank_count": 2,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "2c8d2612ee00964283dc2fb0cb5ef0e689f1e7dfac4feec4096bc7cc3e19c938",
+          "ordinal": 21,
+          "team_key": "918009,918032,918084,918107,918131,918497,918876,918955,918991,918998",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918991",
+            "918009",
+            "918107",
+            "918131",
+            "918032",
+            "918876",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "3峡谷怪物",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1423,
+          "total_cost": 31,
+          "high_cost_tank_count": 2,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "85b118c5d722add375b14fa9288af463dbd75e0a68c162bb651d77b5e17b6c90",
+          "ordinal": 22,
+          "team_key": "918009,918032,918084,918121,918131,918497,918876,918955,918991,918998",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918991",
+            "918009",
+            "918121",
+            "918131",
+            "918032",
+            "918876",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2炼狱",
+            "3峡谷怪物",
+            "1宿敌",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1423,
+          "total_cost": 31,
+          "high_cost_tank_count": 2,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        },
+        {
+          "roster_id": "49df0a1bbfa736dc60b6955dfb007743c834383dc69cc1c1535a8f92ea6e8baa",
+          "ordinal": 23,
+          "team_key": "918009,918032,918084,918096,918131,918497,918876,918955,918997,918998",
+          "source_champion_ids": [
+            "918084",
+            "918497",
+            "918009",
+            "918096",
+            "918131",
+            "918032",
+            "918876",
+            "918997",
+            "918955",
+            "918998"
+          ],
+          "trait_texts": [
+            "2法师",
+            "2适应者",
+            "2劫掠梦魇",
+            "2重装战士",
+            "2护卫",
+            "2主宰",
+            "2神谕者",
+            "2炼狱",
+            "3峡谷怪物",
+            "2仙灵",
+            "1绝命花妖",
+            "2月光射线"
+          ],
+          "active_trait_count": 12,
+          "quality": 1225,
+          "total_cost": 33,
+          "high_cost_tank_count": 3,
+          "high_cost_carry_count": 2,
+          "satisfies_default_high_cost_role_filter": true
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "augment_targets": 3,
+    "support_keys": 1,
+    "population_buckets": 7,
+    "upstream_no_emblem_candidate_rows": 280,
+    "role_eligible_candidate_rows": 41,
+    "constraint_unavailable_fallback_rows": 40,
+    "staging_input_candidate_rows": 81,
+    "unit_slot_occurrences": 499,
+    "unique_champion_entities_used": 40
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "jcc-runtime-user-memory-v1",
+  "updated_at": null,
+  "preferences": [],
+  "habits": [],
+  "review_notes": [],
+  "do_not_assume": [
+    "Do not carry current-match board, bench, item, HP, gold, or shop facts across match_session_id boundaries."
+  ],
+  "source": "explicit_user_confirmation"
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "jcc-game-knowledge-common-document-v1",
+  "logical_id": "common.choice_framework",
+  "scope": "common",
+  "kind": "choice_framework",
+  "season_neutral": true,
+  "entity_references": [],
+  "entries": [
+    {
+      "id": "choice.rank_reported_candidates",
+      "candidate_authority": "current_match_user_report",
+      "required_steps": [
+        "validate exact candidate count and identity",
+        "rank each reported candidate exactly once",
+        "state one explicit keep or refresh action when refresh is available",
+        "name the current evidence that changes the ranking"
+      ],
+      "fail_closed_when": ["candidate identity is ambiguous", "candidate set is stale", "active checkpoint is unknown"]
+    },
+    {
+      "id": "choice.confirmation_boundary",
+      "required_steps": [
+        "keep advice separate from canonical confirmation",
+        "persist only explicit structured confirmation",
+        "retain one response owner for the interaction"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,939 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-07T10:53:02.644Z",
+  "root": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+  "purpose": "Classify MuMu JCC gameassist rule/config/runtime evidence without persisting gameplay frames.",
+  "evidence_summary": {
+    "dex_jcc_strings_observed": true,
+    "direct_live_board_or_bench_snapshot_observed": false,
+    "x23b_files_observed": [
+      "apk_assets_cfg",
+      "apk_assets_lus",
+      "pulled_data_cfg"
+    ],
+    "x23b_decode_status": "opaque_x23b_no_standard_zlib_decode",
+    "sqlite_live_board_table_observed": false,
+    "ocr_packages_jcc_specific_rules_observed": false
+  },
+  "file_summaries": [
+    {
+      "id": "base_apk",
+      "path": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+      "exists": true,
+      "size_bytes": 7178908,
+      "sha256_prefix": "8642a80ec750d5af",
+      "first_bytes_hex": "504b030400000000080021082102a37399b83400000038000000390000004d4554412d494e462f636f6d2f616e64726f69642f6275696c642f677261646c652f",
+      "first_bytes_ascii": "PK........!.!..s..4...8...9...ME",
+      "signature": {
+        "zip": true,
+        "gzip": false,
+        "sqlite": false,
+        "dex": false,
+        "elf": false,
+        "png": false,
+        "x23b": false
+      },
+      "entropy_first_64k": 7.977,
+      "matched_strings": [],
+      "string_counts": {
+        "ascii": 0,
+        "utf16le": 0
+      },
+      "x23b_probe": null
+    },
+    {
+      "id": "classes_dex",
+      "path": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+      "exists": true,
+      "size_bytes": 4814920,
+      "sha256_prefix": "9b37fbd30987bb67",
+      "first_bytes_hex": "6465780a303338009908882a9c9a398052c98cde8fdce5a98856d21e206bd6df48784900700000007856341200000000000000006c774900a45a000070000000",
+      "first_bytes_ascii": "dex.038....*..9.R........V.. k..",
+      "signature": {
+        "zip": false,
+        "gzip": false,
+        "sqlite": false,
+        "dex": true,
+        "elf": false,
+        "png": false,
+        "x23b": false
+      },
+      "entropy_first_64k": 6.0254,
+      "matched_strings": [
+        "oCr@_=b",
+        "            |Exception while applying pausable composition. Last 10 operations:",
+        "ocr: ",
+        " but position is ",
+        "; can only be used with android:layout_height=\"wrap_content\"",
+        "K can only be used with android:layout_width=\"match_parent\" (or fill_parent)",
+        "C does not exist. Is Room annotation processor correctly configured?",
+        "[ is not supported. On Android you can only use types which can be stored inside the Bundle.",
+        "  is out of bounds. The list has ",
+        " scrollPosition=",
+        " | Bounds:",
+        "            |   primaryKeyPosition = '",
+        "', newCursorPosition=",
+        "()Landroid/graphics/Bitmap;",
+        "j(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+        "E(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)V",
+        "4(I)Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;",
+        "4(I)Lcom/mumu/gameassist/games/jcc/data/SellHeroInfo;",
+        "&(II)Lcom/benjaminwan/ocrlibrary/Point;",
+        "4(II)Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;",
+        "4(III)Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;",
+        "6(III)Lcom/mumu/gameassist/games/jcc/data/WaitHeroInfo;",
+        "I(IIIIILjava/util/List;)Lcom/mumu/gameassist/games/jcc/data/GiBuyHeroInfo;",
+        "(IILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/HashMap;)Lcom/mumu/gameassist/games/jcc/data/PlayerBattleInfo;",
+        "^(ILcom/mumu/gameassist/api/LineupDetailData;)Lcom/mumu/gameassist/api/LineupDetailDataWrapper;",
+        ".(ILcom/mumu/gameassist/api/LineupDetailData;)V",
+        "'(Landroid/animation/LayoutTransition;)V",
+        "(Landroid/content/Context;)V",
+        "(Landroid/graphics/Bitmap;)V",
+        "(Landroid/graphics/Path;IF)J",
+        "(Landroid/os/Parcel;I)V",
+        "2(Landroid/view/View$OnApplyWindowInsetsListener;)V",
+        ";(Lcom/benjaminwan/ocrlibrary/Point;)Landroid/graphics/Rect;",
+        "k(Lcom/mumu/gameassist/api/ContentPosApiData;Ljava/util/List;)Lcom/mumu/gameassist/api/OuterPositionApiData;",
+        "(Lcom/mumu/gameassist/api/LineupApiData;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/OuterPositionApiData;Ljava/util/List;Lcom/mumu/gameassist/api/SecretskillApiData;Ljava/util/List;)Lcom/mumu/gameassist/api/LineupDetailData;",
+        "(Lcom/mumu/gameassist/api/LineupApiData;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/OuterPositionApiData;Ljava/util/List;Lcom/mumu/gameassist/api/SecretskillApiData;Ljava/util/List;)V",
+        "b(Ljava/lang/String;Lcom/mumu/gameassist/api/XYPosition;)Lcom/mumu/gameassist/api/ChessPositionApi;",
+        "9(Ljava/lang/String;Lcom/mumu/gameassist/api/XYPosition;)V",
+        "J(Ljava/lang/String;Ljava/lang/String;)Lcom/mumu/gameassist/api/XYPosition;",
+        "}(Ljava/lang/String;Ljava/lang/String;Lcom/mumu/gameassist/api/ShareLineupAuthor;)Lcom/mumu/gameassist/api/ZmLineupDetailData;",
+        "(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/PositionApiData;)Lcom/mumu/gameassist/api/ExcessiveContentApiData;",
+        "(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/PositionApiData;)V",
+        "W(Ljava/util/ArrayList;FIFDLjava/lang/String;[FDD)Lcom/benjaminwan/ocrlibrary/TextBlock;",
+        ";(Ljava/util/List;)Lcom/mumu/gameassist/api/PositionApiData;",
+        "A(Ljava/util/List;)Lcom/mumu/gameassist/games/jcc/data/GiHeroList;",
+        "E(Ljava/util/List;)Lcom/mumu/gameassist/games/jcc/data/GiWaitHeroList;",
+        "K(Ljava/util/List;)Lcom/mumu/gameassist/games/jcc/data/PlayerBattleInfoList;",
+        "(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/ChosenApiData;Lcom/mumu/gameassist/api/PositionApiData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Lcom/mumu/gameassist/api/LineupApiData;",
+        "(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/ChosenApiData;Lcom/mumu/gameassist/api/PositionApiData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V",
+        ") is out of bounds [0,",
+        ") is out of bounds [0, ",
+        ", autoCorrect=",
+        ", autoCorrectEnabled=",
+        ", basicHeroInfo=null)",
+        ", basicHeroInfo=null, star=",
+        ", clipToBounds=",
+        ", composition=",
+        ", coreHeroId=",
+        ", heroId=",
+        ", heroIds=",
+        ", isLayoutDirectionAware=true)",
+        ", it is out of bounds [0, ",
+        ", layoutDirection=",
+        ", mCurrentPosition=",
+        ", mItemDirection=",
+        ", mLayoutDirection=",
+        ", newCursorPosition=",
+        ", originalEventPosition=",
+        ", outerPositionData=",
+        "2, overrideDescendants=false, touchBoundsExpansion=",
+        ", placeholderRects=",
+        ", position=",
+        ", positionData=",
+        ", positionOnScreen=",
+        ", previousPosition=",
+        ", rect=",
+        ", replaceHeroId=",
+        ", roundOcrText=",
+        ", textDirection=",
+        ", the correct name pattern is ",
+        ", threeStarHeroIds=",
+        ", transitionHeroIds=",
+        "(, use androidx.compose.foundation.Image.",
+        ", viewportBoundsInWindow=",
+        "/libs/ocr/libRapidOcr.so",
+        "; boundsInParent: ",
+        "; boundsInScreen: ",
+        "; boundsInWindow: ",
+        "<get-upperBounds>(...)",
+        "<init>(Landroid/view/View;)V",
+        "L@Url must be okhttp3.HttpUrl, String, java.net.URI, or android.net.Uri type.",
+        "%A pausable composition is in progress",
+        "fA previous pausable composition for this composition was cancelled. This composition must be disposed.",
+        "ACTION_SCROLL_IN_DIRECTION",
+        "ACTION_SCROLL_TO_POSITION",
+        "AnchorInfo(direction=",
+        "AnchorInfo{mPosition=",
+        "Android",
+        "Android internal error",
+        "-AndroidContentDataType(androidAutofillType=1)",
+        "!AndroidEdgeEffectOverscrollEffect",
+        "3AndroidFontResolveInterceptor(fontWeightAdjustment=",
+        "AndroidOwner:measureAndLayout",
+        "AndroidOwner:onMeasure",
+        "AndroidOwner:onTouch",
+        "AndroidOwner:outOfFrameExecutor",
+        "AndroidPointerIcon(type=",
+        "AndroidVectorParser(xmlParser=",
+        "ApproximationBounds(lower=",
+        "Bounds{lower=",
+        "!Buy hex ocr failed, quit ocr loop",
+        "BuyHeroInfo(heroEntityId=",
+        "CYCLIC_UPPER_BOUNDS",
+        "BCallbacks must set parent bounds in populateNodeForVirtualViewId()",
+        "NCannot apply the global snapshot directly. Call Snapshot.advanceGlobalSnapshot",
+        "/Cannot find span size for pre layout position. ",
+        "QCannot read CompositionLocal because the Modifier node is not currently attached.",
+        "*Cannot reposition while in an empty region",
+        "ChessPositionApi(chessId=",
+        "aCompose Runtime internal error. Unexpected or incorrect use of the Compose internal runtime API ("
+      ],
+      "string_counts": {
+        "ascii": 67801,
+        "utf16le": 42
+      },
+      "x23b_probe": null
+    },
+    {
+      "id": "apk_assets_cfg",
+      "path": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+      "exists": true,
+      "size_bytes": 623920,
+      "sha256_prefix": "36f92dc63e01b623",
+      "first_bytes_hex": "3c5832334228da6732c6f9b9bbddb9763fe1ff93b94a4c5cb68f1709e5e0445be00823aa8495aba9d8f8ac608472f45875763c4b28680721f9d6521d9c286a70",
+      "first_bytes_ascii": "<X23B(.g2......v?....JL\\......D[",
+      "signature": {
+        "zip": false,
+        "gzip": false,
+        "sqlite": false,
+        "dex": false,
+        "elf": false,
+        "png": false,
+        "x23b": true
+      },
+      "entropy_first_64k": 7.9974,
+      "matched_strings": [
+        "jDOcr"
+      ],
+      "string_counts": {
+        "ascii": 7457,
+        "utf16le": 0
+      },
+      "x23b_probe": {
+        "header_ascii": "<X23B(",
+        "likely_container": "custom_or_encrypted_container",
+        "zlib_probe": {
+          "candidate_offsets": [],
+          "successful": [],
+          "failed_sample": []
+        }
+      }
+    },
+    {
+      "id": "apk_assets_lus",
+      "path": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+      "exists": true,
+      "size_bytes": 692640,
+      "sha256_prefix": "c123c514da00e916",
+      "first_bytes_hex": "3c5832334228da6732c6f9b9bbddb9763fe1ff93b94a4c5cb68f1709e5e0445b895621d20a8c752955a27feba52ba9777fee24f65868aec09807330e94714f8d",
+      "first_bytes_ascii": "<X23B(.g2......v?....JL\\......D[",
+      "signature": {
+        "zip": false,
+        "gzip": false,
+        "sqlite": false,
+        "dex": false,
+        "elf": false,
+        "png": false,
+        "x23b": true
+      },
+      "entropy_first_64k": 7.9975,
+      "matched_strings": [
+        "RoIOJI",
+        "ocRZ'",
+        "rOIT"
+      ],
+      "string_counts": {
+        "ascii": 8192,
+        "utf16le": 0
+      },
+      "x23b_probe": {
+        "header_ascii": "<X23B(",
+        "likely_container": "custom_or_encrypted_container",
+        "zlib_probe": {
+          "candidate_offsets": [],
+          "successful": [],
+          "failed_sample": []
+        }
+      }
+    },
+    {
+      "id": "pulled_data_cfg",
+      "path": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+      "exists": true,
+      "size_bytes": 623920,
+      "sha256_prefix": "36f92dc63e01b623",
+      "first_bytes_hex": "3c5832334228da6732c6f9b9bbddb9763fe1ff93b94a4c5cb68f1709e5e0445be00823aa8495aba9d8f8ac608472f45875763c4b28680721f9d6521d9c286a70",
+      "first_bytes_ascii": "<X23B(.g2......v?....JL\\......D[",
+      "signature": {
+        "zip": false,
+        "gzip": false,
+        "sqlite": false,
+        "dex": false,
+        "elf": false,
+        "png": false,
+        "x23b": true
+      },
+      "entropy_first_64k": 7.9974,
+      "matched_strings": [
+        "jDOcr"
+      ],
+      "string_counts": {
+        "ascii": 7457,
+        "utf16le": 0
+      },
+      "x23b_probe": {
+        "header_ascii": "<X23B(",
+        "likely_container": "custom_or_encrypted_container",
+        "zlib_probe": {
+          "candidate_offsets": [],
+          "successful": [],
+          "failed_sample": []
+        }
+      }
+    },
+    {
+      "id": "native_crypto",
+      "path": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+      "exists": true,
+      "size_bytes": 8744,
+      "sha256_prefix": "a4b3d4676f1d41de",
+      "first_bytes_hex": "7f454c4602010100000000000000000003003e000100000000000000000000004000000000000000e81c00000000000000000000400038000900400015001400",
+      "first_bytes_ascii": ".ELF..............>.............",
+      "signature": {
+        "zip": false,
+        "gzip": false,
+        "sqlite": false,
+        "dex": false,
+        "elf": true,
+        "png": false,
+        "x23b": false
+      },
+      "entropy_first_64k": 5.0879,
+      "matched_strings": [
+        "Android",
+        "__android_log_print",
+        "Android (10552028, based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)",
+        "Android (10552028, +pgo, +bolt, +lto, -mlgo, based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)",
+        ".note.android.ident"
+      ],
+      "string_counts": {
+        "ascii": 79,
+        "utf16le": 0
+      },
+      "x23b_probe": null
+    },
+    {
+      "id": "native_lt_obfuscated",
+      "path": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+      "exists": true,
+      "size_bytes": 1343276,
+      "sha256_prefix": "1d04635ad100470f",
+      "first_bytes_hex": "7f454c4602010100000000000000000003003e00010000001bc21000000000004000000000000000e8771400000000000000000040003800080040001d001c00",
+      "first_bytes_ascii": ".ELF..............>.............",
+      "signature": {
+        "zip": false,
+        "gzip": false,
+        "sqlite": false,
+        "dex": false,
+        "elf": true,
+        "png": false,
+        "x23b": false
+      },
+      "entropy_first_64k": 3.9516,
+      "matched_strings": [
+        "Android",
+        "vrOI",
+        "Android clang version 5.0.300080  (based on LLVM 5.0.300080)"
+      ],
+      "string_counts": {
+        "ascii": 4556,
+        "utf16le": 0
+      },
+      "x23b_probe": null
+    }
+  ],
+  "sqlite_private_cache": {
+    "ok": true,
+    "path": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+    "tables": [
+      {
+        "name": "android_metadata",
+        "sql": "CREATE TABLE android_metadata (locale TEXT)"
+      },
+      {
+        "name": "config",
+        "sql": "CREATE TABLE `config` (`id` TEXT NOT NULL, `value` TEXT NOT NULL, PRIMARY KEY(`id`))"
+      },
+      {
+        "name": "lineup_index",
+        "sql": "CREATE TABLE `lineup_index` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `keyword` TEXT NOT NULL, `indexType` INTEGER NOT NULL, `lineupConfigId` INTEGER NOT NULL, `lineupIds` TEXT NOT NULL)"
+      },
+      {
+        "name": "room_master_table",
+        "sql": "CREATE TABLE room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)"
+      },
+      {
+        "name": "sqlite_sequence",
+        "sql": "CREATE TABLE sqlite_sequence(name,seq)"
+      },
+      {
+        "name": "user_lineup",
+        "sql": "CREATE TABLE `user_lineup` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `seasonMode` TEXT NOT NULL, `lineupJson` TEXT NOT NULL, `hash` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `syncStatus` INTEGER NOT NULL)"
+      }
+    ],
+    "samples": {
+      "android_metadata": {
+        "columns": [
+          "locale"
+        ],
+        "row_count": 1,
+        "rows": [
+          {
+            "locale": "zh_CN"
+          }
+        ]
+      },
+      "config": {
+        "columns": [
+          "id",
+          "value"
+        ],
+        "row_count": 1,
+        "rows": [
+          {
+            "id": "utGx8zpq",
+            "value": "5l3EWHFAxWZ72qofDrhGQ7JpiwYBOjiQBU53znGZpHWhew32RpHe2deLKNsVFqZZ"
+          }
+        ]
+      },
+      "lineup_index": {
+        "columns": [
+          "id",
+          "keyword",
+          "indexType",
+          "lineupConfigId",
+          "lineupIds"
+        ],
+        "row_count": 1844,
+        "rows": [
+          {
+            "id": 1,
+            "keyword": "新版神将枪 7神将2骑士",
+            "indexType": 0,
+            "lineupConfigId": 0,
+            "lineupIds": "[0]"
+          },
+          {
+            "id": 2,
+            "keyword": "XINBANSHENJIANGQIANG 7SHENJIANG2QISHI",
+            "indexType": 0,
+            "lineupConfigId": 0,
+            "lineupIds": "[0]"
+          }
+        ]
+      },
+      "room_master_table": {
+        "columns": [
+          "id",
+          "identity_hash"
+        ],
+        "row_count": 1,
+        "rows": [
+          {
+            "id": 42,
+            "identity_hash": "011488cccb46822d34483b88487eff92"
+          }
+        ]
+      },
+      "sqlite_sequence": {
+        "columns": [
+          "name",
+          "seq"
+        ],
+        "row_count": 1,
+        "rows": [
+          {
+            "name": "lineup_index",
+            "seq": 1844
+          }
+        ]
+      },
+      "user_lineup": {
+        "columns": [
+          "id",
+          "name",
+          "seasonMode",
+          "lineupJson",
+          "hash",
+          "createdAt",
+          "syncStatus"
+        ],
+        "row_count": 0,
+        "rows": []
+      }
+    },
+    "error": null
+  },
+  "ocr_packages": {
+    "root": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages",
+    "file_count": 19,
+    "summaries": [
+      {
+        "id": "app_libs_rapidocr/libRapidOcr.so",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/app_libs_rapidocr/libRapidOcr.so",
+        "exists": true,
+        "size_bytes": 13344104,
+        "sha256_prefix": "44a7c5cfce02e200",
+        "first_bytes_hex": "7f454c4602010100000000000000000003003e000100000000000000000000004000000000000000e896cb000000000000000000400038000a0040001a001900",
+        "first_bytes_ascii": ".ELF..............>.............",
+        "signature": {
+          "zip": false,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": true,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 3.2829,
+        "matched_strings": [
+          "Android",
+          "__android_log_print",
+          "AndroidBitmap_getInfo",
+          "AndroidBitmap_lockPixels",
+          "AndroidBitmap_unlockPixels",
+          "_Z11getMinBoxesRKN2cv11RotatedRectERf",
+          "_ZN7OcrLiteC2Ev",
+          "_ZN7OcrLite4initEP7_JNIEnvNSt6__ndk112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEiS8_S8_S8_S8_",
+          "_ZN7OcrLite4initEP7_JNIEnvP8_jobjectiNSt6__ndk112basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEESA_SA_SA_",
+          "_ZN7OcrLite6detectERN2cv3MatERNS0_5Rect_IiEER10ScaleParamfffbb",
+          "_ZN7OcrLiteC1Ev",
+          "_ZN14OcrResultUtilsC2EP7_JNIEnvR9OcrResultP8_jobject",
+          "_ZN14OcrResultUtils13getTextBlocksERNSt6__ndk16vectorI9TextBlockNS0_9allocatorIS2_EEEE",
+          "_ZN14OcrResultUtils12getTextBlockER9TextBlock",
+          "_ZN14OcrResultUtilsD2Ev",
+          "_ZN14OcrResultUtils10getJObjectEv",
+          "_ZN14OcrResultUtils13newJListClassEv",
+          "_ZN14OcrResultUtils18getListConstructorEP7_jclass",
+          "_ZN14OcrResultUtils9newJPointERN2cv6Point_IiEE",
+          "_ZN14OcrResultUtils12newJBoxPointERNSt6__ndk16vectorIN2cv6Point_IiEENS0_9allocatorIS4_EEEE",
+          "_ZN14OcrResultUtils14newJScoreArrayERNSt6__ndk16vectorIfNS0_9allocatorIfEEEE",
+          "_ZN14OcrResultUtilsC1EP7_JNIEnvR9OcrResultP8_jobject",
+          "_ZN14OcrResultUtilsD1Ev",
+          "_Z6getBoxRKN2cv11RotatedRectE",
+          "_Z11drawTextBoxRN2cv3MatERNS_11RotatedRectEi",
+          "_ZN10ClipperLib11ClipperBase9GetBoundsEv",
+          "_ZN10ClipperLib11ClipperBase18SwapPositionsInAELEPNS_5TEdgeES2_",
+          "_ZN10ClipperLib7Clipper18SwapPositionsInSELEPNS_5TEdgeES2_",
+          "_ZN10ClipperLib12GetNextInAELEPNS_5TEdgeENS_9DirectionE",
+          "_ZN10ClipperLib16GetHorzDirectionERNS_5TEdgeERNS_9DirectionERxS4_",
+          "Java_com_benjaminwan_ocrlibrary_OcrEngine_init",
+          "Java_com_benjaminwan_ocrlibrary_OcrEngine_init2",
+          "Java_com_benjaminwan_ocrlibrary_OcrEngine_detect",
+          "_ZN9OcrResultD2Ev",
+          "Java_com_benjaminwan_ocrlibrary_OcrEngine_benchmark",
+          "android_set_abort_message",
+          "__kmp_allocate_indirect_lock",
+          "__kmp_indirect_init",
+          "__kmp_indirect_set_location",
+          "__kmp_indirect_set_flags"
+        ],
+        "string_counts": {
+          "ascii": 169453,
+          "utf16le": 4
+        },
+        "x23b_probe": null
+      },
+      {
+        "id": "app_libs_rapidocr.preview.txt",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/app_libs_rapidocr.preview.txt",
+        "exists": true,
+        "size_bytes": 197,
+        "sha256_prefix": "26dbab1b8f0f0af3",
+        "first_bytes_hex": "7b22657272636f6465223a203130302c20226572726d7367223a20226f6b222c202264617461223a207b2276657273696f6e223a2022312e30222c202266696c",
+        "first_bytes_ascii": "{\"errcode\": 100, \"errmsg\": \"ok\",",
+        "signature": {
+          "zip": false,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": false,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 4.9267,
+        "matched_strings": [
+          "{\"errcode\": 100, \"errmsg\": \"ok\", \"data\": {\"version\": \"1.0\", \"filename\": \"app_libs_rapidocr.zip\", \"link\": \"http://nemu.fp.ps.netease.com/file/68e8d006560e6288c6743b1ajMbJrK2w06\", \"description\": \"\"}}"
+        ],
+        "string_counts": {
+          "ascii": 1,
+          "utf16le": 0
+        },
+        "x23b_probe": null
+      },
+      {
+        "id": "app_libs_rapidocr.zip",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/app_libs_rapidocr.zip",
+        "exists": true,
+        "size_bytes": 4523311,
+        "sha256_prefix": "ed79e714f77e3711",
+        "first_bytes_hex": "504b030414000000080021082102079a408a8d044500689dcb000e0000006c696252617069644f63722e736fa45d07585547167e1411fbd3882d160454eca0a2",
+        "first_bytes_ascii": "PK........!.!...@...E.h.......li",
+        "signature": {
+          "zip": true,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": false,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 7.9696,
+        "matched_strings": [],
+        "string_counts": {
+          "ascii": 0,
+          "utf16le": 0
+        },
+        "x23b_probe": null
+      },
+      {
+        "id": "ch_pp_ocrv3/ch_PP-OCRv3_det_infer.param",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/ch_pp_ocrv3/ch_PP-OCRv3_det_infer.param",
+        "exists": true,
+        "size_bytes": 24254,
+        "sha256_prefix": "2e4701d9c9fa6aa1",
+        "first_bytes_hex": "373736373531370a313939203233310a496e7075742020202020202020202020207820202020202020202020202020202020202020202020202030203120696e",
+        "first_bytes_ascii": "7767517.199 231.Input           ",
+        "signature": {
+          "zip": false,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": false,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 4.3082,
+        "matched_strings": [],
+        "string_counts": {
+          "ascii": 201,
+          "utf16le": 0
+        },
+        "x23b_probe": null
+      },
+      {
+        "id": "ch_pp_ocrv3/ch_PP-OCRv3_rec_infer.param",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/ch_pp_ocrv3/ch_PP-OCRv3_rec_infer.param",
+        "exists": true,
+        "size_bytes": 13793,
+        "sha256_prefix": "4158faa4fa1a5c60",
+        "first_bytes_hex": "373736373531370a313136203132370a496e7075742020202020202020202020202020202020202020696e707574202020202020202020202020202020202020",
+        "first_bytes_ascii": "7767517.116 127.Input           ",
+        "signature": {
+          "zip": false,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": false,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 4.252,
+        "matched_strings": [],
+        "string_counts": {
+          "ascii": 118,
+          "utf16le": 0
+        },
+        "x23b_probe": null
+      },
+      {
+        "id": "ch_pp_ocrv3/ch_ppocr_mobile_v2.0_cls_infer.param",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/ch_pp_ocrv3/ch_ppocr_mobile_v2.0_cls_infer.param",
+        "exists": true,
+        "size_bytes": 17072,
+        "sha256_prefix": "207a50228e6ecba8",
+        "first_bytes_hex": "373736373531370a313434203136300a496e7075742020202020202020202020207820202020202020202020202020202020202020202020202030203120696e",
+        "first_bytes_ascii": "7767517.144 160.Input           ",
+        "signature": {
+          "zip": false,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": false,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 4.3502,
+        "matched_strings": [],
+        "string_counts": {
+          "ascii": 146,
+          "utf16le": 0
+        },
+        "x23b_probe": null
+      },
+      {
+        "id": "ch_pp_ocrv3/ppocr_keys_v1.txt",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/ch_pp_ocrv3/ppocr_keys_v1.txt",
+        "exists": true,
+        "size_bytes": 26249,
+        "sha256_prefix": "28b2362ad4ab2dc3",
+        "first_bytes_hex": "270ae796970ae7bb9a0ae8af9a0ae5a8870ae6ba9c0ae9a2980ae8b4bf0ae880850ae5bb960ae69bb40ae7bab30ae58aa00ae5a5890ae585ac0ae4b8800ae5b0",
+        "first_bytes_ascii": "'...............................",
+        "signature": {
+          "zip": false,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": false,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 5.1946,
+        "matched_strings": [],
+        "string_counts": {
+          "ascii": 0,
+          "utf16le": 0
+        },
+        "x23b_probe": null
+      },
+      {
+        "id": "ch_pp_ocrv3.preview.txt",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/ch_pp_ocrv3.preview.txt",
+        "exists": true,
+        "size_bytes": 191,
+        "sha256_prefix": "466328bd8c8ac326",
+        "first_bytes_hex": "7b22657272636f6465223a203130302c20226572726d7367223a20226f6b222c202264617461223a207b2276657273696f6e223a2022312e30222c202266696c",
+        "first_bytes_ascii": "{\"errcode\": 100, \"errmsg\": \"ok\",",
+        "signature": {
+          "zip": false,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": false,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 4.9642,
+        "matched_strings": [
+          "{\"errcode\": 100, \"errmsg\": \"ok\", \"data\": {\"version\": \"1.0\", \"filename\": \"ch_pp_ocrv3.zip\", \"link\": \"http://nemu.fp.ps.netease.com/file/68e88311bad10cb0e478d9276pGCEFRu06\", \"description\": \"\"}}"
+        ],
+        "string_counts": {
+          "ascii": 1,
+          "utf16le": 0
+        },
+        "x23b_probe": null
+      },
+      {
+        "id": "ch_pp_ocrv3.zip",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/ch_pp_ocrv3.zip",
+        "exists": true,
+        "size_bytes": 10175350,
+        "sha256_prefix": "1b9e07fd8fb02f01",
+        "first_bytes_hex": "504b0304140008000800210821020000000000000000000000001900200063685f50502d4f435276335f6465745f696e6665722e62696e75780b000104000000",
+        "first_bytes_ascii": "PK........!.!............... .ch",
+        "signature": {
+          "zip": true,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": false,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 7.9926,
+        "matched_strings": [],
+        "string_counts": {
+          "ascii": 0,
+          "utf16le": 0
+        },
+        "x23b_probe": null
+      },
+      {
+        "id": "download-head.json",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/download-head.json",
+        "exists": true,
+        "size_bytes": 1035,
+        "sha256_prefix": "a19a19f8d4237b93",
+        "first_bytes_hex": "7b0a20202267656e6572617465645f6174223a2022323032362d30362d30375430383a32393a33302e3739385a222c0a202022726573756c7473223a205b0a20",
+        "first_bytes_ascii": "{.  \"generated_at\": \"2026-06-07T",
+        "signature": {
+          "zip": false,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": false,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 4.9084,
+        "matched_strings": [
+          "      \"id\": \"app_libs_rapidocr\",",
+          "      \"filename\": \"app_libs_rapidocr.zip\",",
+          "      \"id\": \"ch_pp_ocrv3\",",
+          "      \"filename\": \"ch_pp_ocrv3.zip\",",
+          "      \"id\": \"tool_apk_jkchess_assist\",",
+          "      \"content_type\": \"application/vnd.android.package-archive; charset=binary\","
+        ],
+        "string_counts": {
+          "ascii": 29,
+          "utf16le": 0
+        },
+        "x23b_probe": null
+      },
+      {
+        "id": "downloaded.json",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/downloaded.json",
+        "exists": true,
+        "size_bytes": 1018,
+        "sha256_prefix": "6fdef2a6565737d4",
+        "first_bytes_hex": "7b0a20202267656e6572617465645f6174223a2022323032362d30362d30375430383a32393a35372e3039365a222c0a202022646f776e6c6f61646564223a20",
+        "first_bytes_ascii": "{.  \"generated_at\": \"2026-06-07T",
+        "signature": {
+          "zip": false,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": false,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 4.9994,
+        "matched_strings": [
+          "      \"id\": \"app_libs_rapidocr\",",
+          "      \"filename\": \"app_libs_rapidocr.zip\",",
+          "      \"path\": \".omx\\\\runtime-evidence\\\\mumu-config-packages\\\\app_libs_rapidocr.zip\",",
+          "      \"id\": \"ch_pp_ocrv3\",",
+          "      \"filename\": \"ch_pp_ocrv3.zip\",",
+          "      \"path\": \".omx\\\\runtime-evidence\\\\mumu-config-packages\\\\ch_pp_ocrv3.zip\","
+        ],
+        "string_counts": {
+          "ascii": 26,
+          "utf16le": 0
+        },
+        "x23b_probe": null
+      },
+      {
+        "id": "endpoint-probe.json",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/endpoint-probe.json",
+        "exists": true,
+        "size_bytes": 1952,
+        "sha256_prefix": "f17f122a7b1e2a3e",
+        "first_bytes_hex": "7b0a20202267656e6572617465645f6174223a2022323032362d30362d30375430383a32383a35362e3437385a222c0a202022726573756c7473223a205b0a20",
+        "first_bytes_ascii": "{.  \"generated_at\": \"2026-06-07T",
+        "signature": {
+          "zip": false,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": false,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 4.9631,
+        "matched_strings": [
+          "      \"id\": \"app_libs_rapidocr\",",
+          "      \"url\": \"https://mumu.nie.netease.com/api/toolbox/item/config/app_libs_rapidocr\",",
+          "      \"raw_path\": \".omx\\\\runtime-evidence\\\\mumu-config-packages\\\\app_libs_rapidocr.response.bin\",",
+          "      \"preview\": \"{\\\"errcode\\\": 100, \\\"errmsg\\\": \\\"ok\\\", \\\"data\\\": {\\\"version\\\": \\\"1.0\\\", \\\"filename\\\": \\\"app_libs_rapidocr.zip\\\", \\\"link\\\": \\\"http://nemu.fp.ps.netease.com/file/68e8d006560e6288c6743b1ajMbJrK2w06\\\", \\\"description\\\": \\\"\\\"}}\"",
+          "      \"id\": \"ch_pp_ocrv3\",",
+          "      \"url\": \"https://mumu.nie.netease.com/api/toolbox/item/config/ch_pp_ocrv3\",",
+          "      \"raw_path\": \".omx\\\\runtime-evidence\\\\mumu-config-packages\\\\ch_pp_ocrv3.response.bin\",",
+          "      \"preview\": \"{\\\"errcode\\\": 100, \\\"errmsg\\\": \\\"ok\\\", \\\"data\\\": {\\\"version\\\": \\\"1.0\\\", \\\"filename\\\": \\\"ch_pp_ocrv3.zip\\\", \\\"link\\\": \\\"http://nemu.fp.ps.netease.com/file/68e88311bad10cb0e478d9276pGCEFRu06\\\", \\\"description\\\": \\\"\\\"}}\"",
+          "      \"id\": \"tool_apk_jkchess_assist\",",
+          "      \"url\": \"https://mumu.nie.netease.com/api/toolbox/item/config/tool_apk_jkchess_assist\",",
+          "      \"raw_path\": \".omx\\\\runtime-evidence\\\\mumu-config-packages\\\\tool_apk_jkchess_assist.response.bin\","
+        ],
+        "string_counts": {
+          "ascii": 35,
+          "utf16le": 0
+        },
+        "x23b_probe": null
+      },
+      {
+        "id": "tool_apk_jkchess_assist.preview.txt",
+        "path": ".omx/archive/mumu-reverse-evidence-20260610.tar.gz!/mumu-config-packages/tool_apk_jkchess_assist.preview.txt",
+        "exists": true,
+        "size_bytes": 210,
+        "sha256_prefix": "9686d2c01d401250",
+        "first_bytes_hex": "7b22657272636f6465223a203130302c20226572726d7367223a20226f6b222c202264617461223a207b2276657273696f6e223a2022312e302e3731222c2022",
+        "first_bytes_ascii": "{\"errcode\": 100, \"errmsg\": \"ok\",",
+        "signature": {
+          "zip": false,
+          "gzip": false,
+          "sqlite": false,
+          "dex": false,
+          "elf": false,
+          "png": false,
+          "x23b": false
+        },
+        "entropy_first_64k": 4.9048,
+        "matched_strings": [],
+        "string_counts": {
+          "ascii": 1,
+          "utf16le": 0
+        },
+        "x23b_probe": null
+      }
+    ],
+    "conclusion": "Observed packages are generic OCR runtime/model assets unless JCC-specific matched_strings appear."
+  },
+  "companion_runtime_intake_contract": {
+    "contract_id": "jcc-android-companion-runtime-intake-v1",
+    "default_storage_policy": "no_frame_or_screenshot_persistence",
+    "capture_transport": {
+      "preferred_mvp": "MediaProjection -> ImageReader or MediaCodec -> local socket/WebSocket -> Node runtime",
+      "frame_policy": "frames are memory-only ring-buffer samples; persist only with explicit debug flag",
+      "binary_transport_options": [
+        "H264 Annex-B NAL stream for lowest bandwidth",
+        "JPEG/WEBP ROI crops for simpler MVP",
+        "raw RGBA only inside device process before crop/encode"
+      ]
+    },
+    "semantic_transport": {
+      "runtime_ready_message_types": [
+        "frame_meta",
+        "roi_observations",
+        "ocr_text_blocks",
+        "semantic_observations",
+        "heartbeat"
+      ],
+      "preferred_agent_input": "JSONL semantic observations plus optional binary frame/ROI side-channel",
+      "reason": "The runtime agent should reason over structured text/ids/confidence/evidence pointers, not retained screenshots."
+    },
+    "match_session": {
+      "required_fields": [
+        "match_session_id",
+        "capture_session_id",
+        "frame_seq",
+        "monotonic_ms",
+        "game_package",
+        "orientation",
+        "resolution"
+      ],
+      "pollution_guard": "drop or quarantine any observation whose match_session_id differs from current runtime session"
+    },
+    "promotion_policy": {
+      "board_units": "semantic_observation candidate until current-frame slot evidence plus champion identity confidence passes threshold",
+      "bench_units": "semantic_observation candidate until current-frame slot evidence plus champion identity confidence passes threshold",
+      "augments": "OCR/text candidate until matched to local augment catalog with confidence and current augment-screen detection",
+      "economy": "OCR candidate until numeric sanity checks pass"
+    }
+  },
+  "current_claims": {
+    "can_claim": [
+      "MuMu JCC APK contains JCC-specific data model names and OCR/capture strings.",
+      "Online OCR packages are generic OCR runtime/model assets, not observed JCC rule packs.",
+      "X23B config containers exist but are not decoded by standard zip/gzip/sqlite/zlib probes.",
+      "Private SQLite cache contains lineup/config tables, not an observed live board/bench table.",
+      "A future Android companion APK should default to no screenshot persistence and stream transient frame/ROI/semantic messages."
+    ],
+    "cannot_claim": [
+      "MuMu exposes a stable external SDK/API returning current local board_units or bench_units.",
+      "X23B files contain ROI/state-machine rules until decoded or method-level DEX use is mapped.",
+      "OCR candidates equal verified current local board/bench state."
+    ]
+  }
+}

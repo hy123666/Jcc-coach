@@ -1,0 +1,37 @@
+{
+  "schema": "jcc-live-ranking-generation-v1",
+  "generation_id": "20260925-7c10ad8f4da09675094f95b1",
+  "stat_date": "20260925",
+  "content_sha256": "7c10ad8f4da09675094f95b1caef89cd7916f2068dc9fa9141ee2fb6c035c680",
+  "core_profile_id": "a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151",
+  "season_id": "s18",
+  "patch_id": "s18_2",
+  "catalog_fingerprint": "bd6921b1397a47e07e0728cf7c87df8eca84c2299e4952676cc4b897fbd56a92",
+  "hard_data_manifest_fingerprint": "86a9fcbf0d0f5bf6766c6e68718aa68e5f5c2c2a0662bf84cd49853a1b2bc549",
+  "artifacts": [
+    {
+      "path": "audit.json",
+      "sha256": "0a51ecc2bd39b34d80ef18068d5a906d015b9d84cba2469149726d8349fa046a"
+    },
+    {
+      "path": "latest-diff.json",
+      "sha256": "66ff7e90bd28ff5b5a0722b7ba18d4c4d407f7fc08f7863c0908156115f5abf1"
+    },
+    {
+      "path": "lineup-strategy-index.json",
+      "sha256": "7659966972bdbe819fb0526885fbb704f3ef56921c5f6d9d5277c6bc83cb36e6"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "5be18dd449a360858d9f0a1843f1af0b737db67b47660e685a6f7d2a4d12b762"
+    },
+    {
+      "path": "rank-signal.json",
+      "sha256": "60f6c9589559d7e9a2c46c0154a5425e672da2aaec268457c48283d8030527a1"
+    },
+    {
+      "path": "snapshot.json",
+      "sha256": "42f2fc30fdae649f2bd3a736a81932d2c139578f0621a937f154de6a27a48d3a"
+    }
+  ]
+}

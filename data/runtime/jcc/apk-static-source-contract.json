@@ -1,0 +1,39 @@
+{
+  "contract_id": "jcc-apk-static-source-contract",
+  "purpose": "Define read-only static APK discovery for JCC protocol/runtime hints without promoting candidates into live_state.",
+  "product_boundary": "jcc_installed_apk_static_source",
+  "package_id": "com.tencent.jkchess",
+  "allowed_sources": [
+    "adb devices",
+    "adb shell pm path",
+    "adb shell dumpsys package",
+    "adb pull installed APK files reported by pm path",
+    "local APK zip entry listing",
+    "local static string scanning of copied APK files"
+  ],
+  "forbidden_sources": [
+    "SSL pinning bypass",
+    "Frida hooks",
+    "anti-cheat bypass",
+    "memory injection",
+    "game process modification",
+    "credential extraction",
+    "private account data scraping",
+    "live network MITM"
+  ],
+  "target_artifacts": [
+    "global-metadata.dat",
+    "libil2cpp.so",
+    "libGameCore.so",
+    ".proto",
+    "FileDescriptorProto",
+    "protobuf descriptors",
+    "InGameRoundFlow",
+    "AITreeNode_SellChess",
+    "Board",
+    "Bench",
+    "Shop"
+  ],
+  "promotion_policy": "Static APK hits are source_insights only. They may guide parser work, but never prove board_units, bench_units, local_chair_id, or current live_state without same-match runtime evidence and local binding verification.",
+  "pollution_guard": "Never merge APK static candidates into live_state board_units or bench_units. Static terms can only explain schemas, message names, asset locations, or parser hypotheses."
+}

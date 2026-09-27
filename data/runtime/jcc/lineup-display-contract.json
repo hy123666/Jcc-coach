@@ -1,0 +1,77 @@
+{
+  "schema": "jcc-lineup-display-contract-v1",
+  "purpose": "Define the runtime's internal, fast, human-readable lineup plan display for target lineups, live-ranking lineups, transition plans, next-pivot plans, and self-board placement. The product emits text boards and tactical move lists only.",
+  "external_code_paths": {
+    "enabled": false,
+    "policy": "Do not generate, reverse engineer, upload, publish, or automate external lineup codes from the runtime hot path."
+  },
+  "output_slots": {
+    "target": {
+      "label": "目标阵容",
+      "copyable": true
+    },
+    "transition": {
+      "label": "当前过渡阵容",
+      "copyable": true
+    },
+    "next_pivot": {
+      "label": "下一阶段变阵",
+      "copyable": true
+    },
+    "positioning": {
+      "label": "己方站位调整",
+      "copyable": true
+    }
+  },
+  "lineup_plan_contract": {
+    "schema": "jcc-internal-lineup-plan-v1",
+    "rows": 4,
+    "columns": 7,
+    "unit_fields": [
+      "name",
+      "row",
+      "col",
+      "items",
+      "star",
+      "notes"
+    ],
+    "position_words": {
+      "row_format": "第{row}行",
+      "left_format": "左{n}",
+      "right_format": "右{n}",
+      "center": "中间"
+    }
+  },
+  "cli_display_policy": {
+    "primary_format": "compact_staggered_hex_text_board",
+    "use_icons": false,
+    "cell_inner_width": 8,
+    "ansi_color": "optional_cli_only",
+    "include_items_inline": false,
+    "include_position_words": true,
+    "row_offset_policy": "Rows 1 and 3 start at the left edge; rows 2 and 4 are indented by half a cell to match the in-game staggered board.",
+    "cell_policy": "Every board cell uses the same compact hex frame. Unit names are centered inside the cell. Items, star level, and move reasons are rendered below the board.",
+    "positioning_advice_first": true,
+    "positioning_advice_policy": "For self-board placement, first list only units that need to move, then give a short tactical reason. Do not claim opponent-specific counter-positioning unless the user supplied the opponent facts manually."
+  },
+  "mechanical_rendering_policy": {
+    "applies_to": [
+      "lineup_display_slots.target",
+      "lineup_display_slots.transition",
+      "lineup_display_slots.next_pivot",
+      "lineup_display_slots.positioning",
+      "live_rankings.lineup_plan",
+      "agent_generated.lineup_plan"
+    ],
+    "structured_input_field": "lineup_plan",
+    "rendered_output_field": "context.lineup_display.lineup_board_text",
+    "hard_rule": "Runtime/strategy/AI layers should emit structured lineup_plan only. The CLI board must be produced by tools/render-jcc-lineup-text-board.mjs and embedded verbatim by the host model.",
+    "do_not_hand_draw_board_in_model": true
+  },
+  "state_policy": {
+    "lineup_outputs_are_runtime_guidance": true,
+    "not_strategy_source": true,
+    "do_not_import_mumu_lus_recommendations_as_strategy": true,
+    "do_not_claim_external_code_ready": true
+  }
+}

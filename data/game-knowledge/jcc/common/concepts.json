@@ -1,0 +1,145 @@
+{
+  "schema": "jcc-game-knowledge-common-document-v1",
+  "logical_id": "common.concepts",
+  "scope": "common",
+  "kind": "concepts",
+  "season_neutral": true,
+  "entity_references": [],
+  "entries": [
+    {
+      "id": "concept.evidence_priority",
+      "title": "Evidence priority",
+      "definition": "Prefer current verified match facts, then current patch evidence, then reusable doctrine. Missing evidence remains explicit."
+    },
+    {
+      "id": "concept.action_materiality",
+      "title": "Action materiality",
+      "definition": "Advice is material only when it can change the player's next bounded action."
+    },
+    {
+      "id": "concept.atomic_strategy",
+      "title": "Atomic strategy",
+      "definition": "A published strategy variant is evaluated as one roster and transition package rather than a union of unrelated variants."
+    },
+    {
+      "id": "concept.conditional_uncertainty",
+      "title": "Conditional uncertainty",
+      "definition": "When a required fact is absent, state the condition that changes the action instead of inventing the fact."
+    },
+    {
+      "id": "concept.gold",
+      "title": "Gold",
+      "definition": "The spendable match currency used to buy units, refresh the shop, and purchase XP. Unspent gold can generate bounded interest at registered thresholds."
+    },
+    {
+      "id": "concept.xp",
+      "title": "Experience",
+      "definition": "Progress toward the next player level. Natural round XP and purchased XP are separate sources, and current season variables may modify either source."
+    },
+    {
+      "id": "concept.player_level",
+      "title": "Player level",
+      "definition": "Controls board capacity and shop cost odds. Increasing level is valuable only when the added slot, trait, unit access, or timing improves the executable plan."
+    },
+    {
+      "id": "concept.board",
+      "title": "Board",
+      "definition": "Owned units currently deployed for combat. Board evidence is commitment-sensitive: temporary one-star transition units are weak identity evidence, while upgraded carries, tanks, and a formed core are strong evidence."
+    },
+    {
+      "id": "concept.bench",
+      "title": "Bench",
+      "definition": "Owned undeployed units. Pairs, copies, cost, role, and stage determine their strategic commitment; an isolated spare unit does not define the lineup."
+    },
+    {
+      "id": "concept.shop",
+      "title": "Shop",
+      "definition": "The current purchasable offer. Shop units are opportunities, not owned board fit, until purchased."
+    },
+    {
+      "id": "concept.interest",
+      "title": "Interest",
+      "definition": "Additional round income from holding threshold amounts of gold, normally capped at the registered maximum. Breaking interest is justified by the value and urgency of the resulting action, not by the threshold alone."
+    },
+    {
+      "id": "concept.reroll",
+      "title": "Shop refresh",
+      "definition": "Spending gold to replace the current shop. Its value depends on target cost odds, remaining copies, contest pressure, current pairs, HP, economy, and the expected upgrade."
+    },
+    {
+      "id": "concept.hp",
+      "title": "Health",
+      "definition": "The match survival resource. Advice converts HP into an estimated number of failure rounds with uncertainty rather than pretending to predict exact combat outcomes."
+    },
+    {
+      "id": "concept.lineup_direction",
+      "title": "Lineup direction",
+      "definition": "A provisional or durable plan formed from current-day Master+ strength, choices, equipment, tempo, owned commitment, and explicit user intent. A direction is not automatically a locked target."
+    },
+    {
+      "id": "concept.match_objective",
+      "title": "Match objective",
+      "definition": "Build and improve a team that defeats opposing teams in repeated combats. Survive longer than the other players; first place is the win, and ranked play normally treats a top-four finish as a positive placement while exact rating changes remain mode and rank dependent."
+    },
+    {
+      "id": "concept.round",
+      "title": "Round",
+      "definition": "One preparation-and-resolution cycle inside a match. Preparation is used to buy, sell, position, equip, level, or refresh; combat then resolves against players or neutral enemies. Stage-round identifiers such as 3-2 locate that cycle in the match timeline."
+    },
+    {
+      "id": "concept.unit",
+      "title": "Unit",
+      "definition": "A purchasable combat piece with a cost, star level, attributes, ability, and one or more traits. Units on the board fight; units on the bench are owned reserves."
+    },
+    {
+      "id": "concept.star_upgrade",
+      "title": "Star upgrade",
+      "definition": "Under the standard merge rule, three copies of the same unit at the same star level combine into one unit at the next star level. A normal two-star therefore consumes three base copies and a normal three-star consumes nine; explicit season or effect exceptions override this default."
+    },
+    {
+      "id": "concept.trait",
+      "title": "Trait",
+      "definition": "A team synergy counted from eligible deployed units and other explicit providers such as emblems. Reaching a registered breakpoint activates that breakpoint's effect; exact names, counts, effects, and exceptional counting rules come from the active season and patch."
+    },
+    {
+      "id": "concept.lineup",
+      "title": "Lineup",
+      "definition": "A coherent team plan that combines units, roles, traits, equipment, economy timing, transitions, and an end-state roster. A lineup is more than a trait name or a union of units from different published variants."
+    },
+    {
+      "id": "concept.combat",
+      "title": "Combat",
+      "definition": "The automatic battle that resolves after preparation. Unit attributes, abilities, items, traits, positioning, targeting, and active effects determine the result; the Coach may calculate bounded components but does not pretend to run an exact full combat simulation."
+    },
+    {
+      "id": "concept.shared_unit_pool",
+      "title": "Shared unit pool",
+      "definition": "Shop copies are drawn from a shared finite pool by cost and champion. One one-star unit consumes one copy, a two-star consumes three, and a three-star consumes nine. Common owns the standard shop odds and copies per champion; an active season must explicitly declare any verified exception."
+    },
+    {
+      "id": "concept.victory_and_placement",
+      "title": "Victory and placement",
+      "definition": "Players repeatedly improve teams and fight until only one player remains. First place is the win; top four is normally a positive ranked placement, while exact rating changes depend on the rank system."
+    },
+    {
+      "id": "concept.pvp",
+      "title": "Player combat",
+      "definition": "A combat against another player's board. Winning grants the standard combat reward; losing removes player HP according to the registered stage base plus surviving enemy units."
+    },
+    {
+      "id": "concept.pve",
+      "title": "Neutral combat",
+      "definition": "A combat against neutral enemies. Standard neutral rounds do not deal PVP player damage and award round-specific loot separately from normal round income."
+    },
+    {
+      "id": "concept.player_damage",
+      "title": "Player damage",
+      "definition": "HP lost after a failed PVP combat. Under the standard baseline it equals the current stage base damage plus the number of surviving enemy units; active-season exceptions must be explicit."
+    },
+    {
+      "id": "concept.carousel",
+      "title": "Carousel",
+      "definition": "A shared selection checkpoint where the player normally prioritizes the most valuable needed item, unless a scarce core unit or immediate upgrade is materially more valuable."
+    }
+  ]
+}

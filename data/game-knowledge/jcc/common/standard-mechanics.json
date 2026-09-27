@@ -1,0 +1,38 @@
+{
+  "schema": "jcc-game-knowledge-common-document-v1",
+  "logical_id": "common.standard_mechanics",
+  "scope": "common",
+  "kind": "standard_mechanics",
+  "season_neutral": true,
+  "entity_references": [],
+  "entries": [
+    {
+      "id": "mechanic.augment_choice",
+      "mechanic_kind": "augment",
+      "inheritance": "default",
+      "override_policy": "forbid_season_override",
+      "candidate_count": 3,
+      "candidate_authority": "current_match_user_report",
+      "checkpoints": ["2-1", "3-2", "4-2"],
+      "answer_contract": {
+        "rank_each_candidate_once": true,
+        "explicit_keep_or_refresh": true,
+        "confirmation_is_separate": true
+      }
+    },
+    {
+      "id": "mechanic.carousel_checkpoint",
+      "mechanic_kind": "carousel",
+      "inheritance": "default",
+      "override_policy": "active_season_may_explicitly_replace_or_disable",
+      "choice_window": false,
+      "runtime_ui_mode": null,
+      "checkpoints": ["2-4", "3-4", "4-4", "5-4", "6-4", "7-4"],
+      "coach_policy": {
+        "default_priority": "Take the most needed, hardest-to-obtain, or immediate key-item component.",
+        "unit_exception": "Prefer the unit only when it is a scarce main carry, primary tank, core trait unit, or immediate upgrade whose value clearly exceeds the item.",
+        "interaction": "No separate card, manual variable, or mandatory confirmation."
+      }
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "schema": "jcc-cruise-strategy-scorer-contract-v1",
+  "purpose": "Turn current match live_state plus optional hard-data, captured Master+ Ranking Overlay evidence, user-context, and previous-advice context into interrupt-gated cruise advice tasks.",
+  "non_goals": [
+    "Do not encode fixed TFT/JCC strategy as mandatory rules.",
+    "Do not treat glossary terms as the strategy source.",
+    "Do not output model chain-of-thought."
+  ],
+  "input_contract": {
+    "hp_authority_policy": "An active-match HP value less than or equal to zero is missing/invalid unless explicit elimination or match-ended evidence is present. HP zero alone must not suppress coaching as match_eliminated or trigger emergency advice.",
+    "required": [
+      "live_state"
+    ],
+    "optional": [
+      "hard_data_context",
+      "ranking_overlay_context",
+      "user_context",
+      "previous_advice_state",
+      "target_plan",
+      "lineup_lifecycle",
+      "economic_decision_context",
+      "runtime_user_settings"
+    ],
+    "decision_source_order": [
+      "current match live_state",
+      "JCC hard-data",
+      "current-Match captured Zhangmeng/Tencent Master+ Ranking Overlay evidence",
+      "user preferences and current-match confirmed variables",
+      "tactical vocabulary labels"
+    ]
+  },
+  "output_contract": {
+    "schema": "jcc-cruise-strategy-score-v1",
+    "root_fields": [
+      "schema",
+      "match_session_id",
+      "generated_at",
+      "minimum_value_score_to_speak",
+      "advice_tasks",
+      "suppressed_tasks"
+    ],
+    "advice_task_fields": [
+      "task_id",
+      "trigger_id",
+      "priority",
+      "value_score",
+      "confidence",
+      "title",
+      "short_advice",
+      "reason_summary",
+      "evidence",
+      "actions",
+      "semantic_labels",
+      "conditional_decision"
+    ],
+    "short_advice_policy": {
+      "max_visible_lines": 4,
+      "shape": "conclusion_reason_action",
+      "must_reference_current_evidence": true
+    },
+    "conditional_decision_policy": {
+      "purpose": "Expose a compact default line, material overrides, exit conditions, and the immediate action without adding another model call.",
+      "fields": [
+        "default_line",
+        "why_now",
+        "if_signals",
+        "exit_signals",
+        "immediate_action",
+        "output_budget"
+      ],
+      "maximum_material_branches": 2,
+      "priors_are_mandates": false,
+      "season_specific_logic_source": "compiled_active_season_descriptor_only"
+    }
+  },
+  "first_pass_triggers": [
+    "interest_breakpoint_decision",
+    "shop_hold_sell_interest",
+    "key_unit_progression",
+    "bench_space_pressure",
+    "level_or_roll_timing",
+    "tempo_pivot",
+    "streak_guard",
+    "shop_lock_decision",
+    "item_slam_or_greed",
+    "direction_commit_or_exit",
+    "cap_gap_check",
+    "early_direction_conversation",
+    "lineup_convergence_checkpoint"
+  ],
+  "lineup_convergence_agenda": {
+    "ownership": "proactive_cruise_runtime_event_followup",
+    "requires_user_shortcut": false,
+    "without_durable_target": {
+      "stage_2": "rank two or three candidate directions from augments, equipment, own cards, economy, HP, and rankings; state entry conditions and remain flexible when evidence is weak",
+      "after_3_2": "narrow to one primary and one backup; state carry, tank, roll level, and what the next major choice can still change",
+      "stage_3_5_to_3_7": "recommend relative convergence or explicitly justify waiting for the next major choice; one nonblocking preference question is allowed",
+      "after_4_2": "commit to execution or pivot from HP, economy, target cost curve, current cap, and final major-choice fit"
+    },
+    "with_durable_target": "do not reopen generic candidate discovery; before 4-2 use ordinary target-fit decisions, and from 4-2 onward proactively validate continue versus exit conditions plus the immediate roll, level, economy, item, or transition action",
+    "season_policy": "active-season choice implications come only from the compiled major-season descriptor"
+  },
+  "non_proactive_tasks": {
+    "special_context_visual_probe": {
+      "purpose": "Acquire a missing season-mechanic fact when the user-visible effect panel is available.",
+      "answer_ownership": "context_evidence_only",
+      "may_open_proactive_host_answer": false,
+      "may_replace_confirmed_match_variables": false,
+      "rule": "This task may request scoped fact acquisition, but it must not create a visible cruise answer or bypass the normal manual and sensing boundaries."
+    },
+    "choice_advice_tasks": {
+      "base_trigger_ids": [
+        "augment_choice_advice",
+        "item_choice_advice"
+      ],
+      "active_season_trigger_source": "compiled active choice descriptors: advice_task_trigger_terms",
+      "answer_ownership": "explicit_choice_mode_only",
+      "may_open_proactive_host_answer": false,
+      "major_season_migration": "A new major-season choice becomes scoreable by declaring its descriptor; common scorer and contract files must not add a season-specific trigger id."
+    }
+  },
+  "context_weighting": {
+    "stage_adaptive_lineup_fit": {
+      "stage_2_baseline": {
+        "meta_strength": 0.56,
+        "augment_fit": 0.2,
+        "item_fit": 0.14,
+        "tempo_fit": 0.07,
+        "current_board_fit": 0.03
+      },
+      "stage_3": {
+        "meta_strength": 0.47,
+        "augment_fit": 0.23,
+        "item_fit": 0.14,
+        "tempo_fit": 0.1,
+        "current_board_fit": 0.06
+      },
+      "stage_4_and_later": {
+        "meta_strength": 0.4,
+        "augment_fit": 0.22,
+        "item_fit": 0.13,
+        "tempo_fit": 0.13,
+        "current_board_fit": 0.12
+      },
+      "later_stage_policy": "Use the registered stage profiles exactly. Keep confirmed augment fit material while increasing executable board and tempo evidence after stage 2.",
+      "candidate_pool_policy": "Score the complete lightweight eligible Master+ candidate pool before truncation. Typed target, augment, board, equipment, intent, shop, and meta indexes annotate evidence coverage only and must not introduce a second numerical business ranking.",
+      "single_score_policy": "The five registered components form the only business score. After hard target-role and formed-durable-core constraints, deterministic ties resolve by stable lineup id rather than an extra meta, readiness, lane-count, or shop vote.",
+      "board_commitment_policy": "current_board_fit uses owned board and bench only. Main carry, main tank, multiple core matches, copies, and upgrades raise commitment confidence; an ordinary one-star transition unit remains low confidence. Shop units never contribute to this component.",
+      "shop_policy": "Shop matches remain immediate opportunity evidence for buy, hold, lock, or transition actions and contribute zero to lineup score until owned.",
+      "target_role_policy": "Explicit user role intent is a constraint ahead of the weighted fit score. A main-carry target cannot be satisfied by a member-only match.",
+      "stage_readiness_policy": "Evaluate every candidate through one season-neutral lifecycle readiness assessment instead of separate fee pools. It labels provisional observation, conditional start, future target, build-toward, or formed-core continuation. Readiness is an interpretation and continuity constraint, not a hidden sixth percentage. Temporary stage-2 low-cost pairs never create a durable target; a formed durable core is not replaced by an unrelated higher-cost meta line without explicit exit evidence.",
+      "contest_policy": "Hero popularity is a low-weight warning in stage 2 and 3 and a medium constraint once the player is committing; it is never a live opponent count.",
+      "missing_choice_policy": "Only the exact current choice question may treat its candidate facts as blocking. Other user-owned actions answer first and carry missing augment or descriptor-owned season choices as conditional uncertainty or reminders."
+    },
+    "augment_choice_evaluator": {
+      "ownership": "season-neutral Runtime evaluator over Match-pinned Core augment profiles and current facts",
+      "separate_from_lineup_business_score": true,
+      "required_candidate_count": 3,
+      "candidate_scope": "the exact newest current-match user-reported augment choice set, each candidate exactly once",
+      "target_context_precedence": [
+        "current_turn_instruction",
+        "newer_explicit_replacement",
+        "durable_target_plan",
+        "provisional_user_intent",
+        "none"
+      ],
+      "core_axes": [
+        "immediate_power",
+        "sustained_power",
+        "economy_trajectory",
+        "shop_access",
+        "leveling_tempo",
+        "item_economy",
+        "trait_enablement",
+        "star_up_progress",
+        "cap_value",
+        "flexibility",
+        "variance",
+        "commitment",
+        "failure_severity",
+        "payout_latency",
+        "reliability"
+      ],
+      "runtime_axes": [
+        "stabilization_score",
+        "growth_score",
+        "lineup_fit_score",
+        "candidate_coverage_score",
+        "condition_readiness_score",
+        "realization_score",
+        "risk_score"
+      ],
+      "objective_outputs": [
+        "top4_objective_fit",
+        "first_objective_fit"
+      ],
+      "objective_semantics": "Derived decision-fit scores for the current facts, never observed top-four or first-place probabilities.",
+      "lineup_association_policy": "Daily recipe associations are supporting compatibility evidence only. Compute them from the candidate lineup's normalized meta/board/item/tempo baseline with augment_fit excluded, and count one associated augment at most once per atomic lineup.",
+      "no_target_policy": "When no target exists, do not invent lineup fit. Prefer current realization, flexibility, generality, immediate stabilization, growth, payout timing, and risk.",
+      "ranking_unavailable_policy": "Evaluate from the captured Core Profile and current facts only. Do not fall back to popular recipes, another season, or stale rankings.",
+      "host_boundary": "The evaluator supplies ordered evidence. The Host owns the final explanation and may reorder only when it cites a typed current-fact reason absent from or newer than the evaluator input."
+    },
+    "target_plan": {
+      "accepted_fields": [
+        "id",
+        "name",
+        "unit_ids",
+        "core_unit_ids",
+        "unit_names",
+        "core_unit_names",
+        "traits",
+        "plan_stage",
+        "archetype",
+        "primary_carry_cost",
+        "contested"
+      ],
+      "use": "Owned board and bench facts may increase current_board_fit and lineup commitment when they directly advance the current target or transition plan. Shop facts are unowned immediate opportunities only: they may create buy, hold, lock, or transition actions, but never increase lineup score or commitment until purchased."
+    },
+    "hard_data_context": {
+      "preferred_source": "the active Core Profile's flat typed and route lookup indexes",
+      "accepted_fields": [
+        "entity_strategy_weights",
+        "strategy_weights"
+      ],
+      "use": "Add entity-axis evidence such as immediate_power, cap_power, economy, tempo, frontline, backline_damage, utility, sustain, control, positioning, pivot, and risk. These are weights and evidence, not patch-truth overrides."
+    },
+    "ranking_overlay_context": {
+      "preferred_source": "the immutable Master+ Ranking Overlay captured by Start Match and selected through typed artifacts",
+      "accepted_fields": [
+        "top_heroes",
+        "top_lineups",
+        "unit_observations",
+        "lineup_statistical_strength",
+        "lineup_formation_burden",
+        "lineup_flexibility",
+        "lineup_heat_and_contest"
+      ],
+      "use": "Use only compatible Zhangmeng/Tencent Master+ typed evidence captured for this Match. When rankings are unavailable, use live_state and the captured Core Profile without a foreign-version substitute."
+    },
+    "user_context": {
+      "use": "Bias style and constraints, such as play_to_win, hard-force preference, or willingness to pivot. User preference cannot override current match survival or patch truth."
+    },
+    "previous_advice_state": {
+      "accepted_fields": [
+        "emitted_tasks",
+        "recent_tasks",
+        "now",
+        "cooldown_seconds_by_trigger"
+      ],
+      "use": "Suppress repeated cruise advice while the trigger cooldown is active. This keeps cruise mode proactive without becoming noisy."
+    },
+    "combat_cap_estimator": {
+      "default_builder": "tools/build-jcc-combat-cap-estimator-context.mjs",
+      "source_order": [
+        "current match live_state",
+        "current patch hard-data indexes",
+        "current-Match captured Master+ Ranking Overlay evidence when available",
+        "target_plan"
+      ],
+      "accepted_fields": [
+        "board_power_score",
+        "item_power_score",
+        "streak_pressure_score",
+        "cap_power_score",
+        "survival_pressure_score",
+        "expected_damage_risk",
+        "estimator_policy",
+        "lineup_lifecycle",
+        "board_readiness",
+        "economy_leveling",
+        "roll_marginal_gain_score",
+        "decision_gap",
+        "readiness_confidence",
+        "next_level_value",
+        "immediate_upgrade_evidence",
+        "population_gain_score",
+        "equipment_closure_score",
+        "core_two_star_count",
+        "core_two_star_coverage_score",
+        "immediate_upgrade_gain_score",
+        "fault_tolerance_score",
+        "main_carry_ready",
+        "main_tank_ready"
+      ],
+      "use": "Fast first-pass estimate for current own board power and eventual cap gap. This is not full combat simulation; it gates whether the agent should stabilize from own-state evidence, preserve economy, pivot, or plan for a higher-cap line. It must not depend on opponent board unit sensing. The season-neutral lineup lifecycle and board-readiness fields constrain cost-curve mistakes such as a normal level-seven large roll for a four-cost carry."
+    },
+    "lineup_lifecycle": {
+      "accepted_fields": [
+        "schema",
+        "season_neutral",
+        "archetype",
+        "default_roll_level",
+        "current_stage_round",
+        "board_readiness",
+        "preferred_actions",
+        "conditional_actions",
+        "discouraged_actions",
+        "forbidden_actions",
+        "override_signals",
+        "prior_strength",
+        "formation_profile",
+        "formation_readiness",
+        "xp_alignment",
+        "conditional_decision",
+        "host_policy"
+      ],
+      "use": "Common cost-curve and board-readiness priors. Treat preferred and discouraged actions as conditional evidence, not fixed timing rules. Only truly impossible or unsupported actions belong in forbidden_actions. Current HP, economy, XP, board readiness, copy progress, contest pressure, target structure, current patch/rank-bracket data, active-season variables, and explicit user direction determine whether an override is justified."
+    }
+  },
+  "binding_policy": {
+    "strategy_semantics_file": "data/runtime/jcc/cruise-strategy-semantics-contract.json",
+    "uses_semantics_as_labels_only": true,
+    "minimum_value_score_to_speak_source": "data/runtime/jcc/runtime-ui-mode-contract.json#cruise_mode_policy.interrupt_policy.minimum_value_score_to_speak"
+  }
+}

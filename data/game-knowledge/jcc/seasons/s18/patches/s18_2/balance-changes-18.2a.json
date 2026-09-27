@@ -1,0 +1,2554 @@
+{
+  "schema": "jcc-core-balance-patch-v1",
+  "release_version": "18.2a",
+  "source_note_sha256": "8e1df346b4c789120727467bb892605025a8beff9f95d70e1a8a058ac90eafbf",
+  "baseline": {
+    "season_id": "s18",
+    "patch_id": "s18_2",
+    "mode_id": "mode18",
+    "hard_data_generation_id": "51d7e5cfd2cd16f4f8d01e96f2e3e5643e51c0c7e47870c57a146114c7477017"
+  },
+  "mapping_audit": {
+    "source_note": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/balance-notes-18.2a.md",
+    "scope": "complete_18_2_replay_plus_18_2a_delta",
+    "baseline_policy": "Full promoted 18.2 values; only explicit 18.2a deltas. Unmentioned star values and historical supplemental evidence are retained. Experience is owned by the integrating agent.",
+    "issues": [
+      {
+        "catalog": "champions",
+        "id": "2512",
+        "name": "凯尔",
+        "field": "skill.raw_values[0]",
+        "reported_from": [
+          62,
+          92,
+          96,
+          105
+        ],
+        "observed_current": [
+          62,
+          92,
+          96,
+          112
+        ],
+        "requested_to": [
+          62,
+          92,
+          105,
+          115
+        ],
+        "resolution": "Explicit requested new values applied against observed baseline; fourth-star old-value discrepancy retained."
+      },
+      {
+        "catalog": "champions",
+        "id": "4506",
+        "name": "绯红印记树怪",
+        "field": "armor_ignore",
+        "reported_changes": [
+          {
+            "from": "10%",
+            "to": "15%",
+            "meaning": "base armor ignore"
+          },
+          {
+            "from": "15% + 30% AP",
+            "to": "20% + 25% AP",
+            "meaning": "armor penetration formula"
+          }
+        ],
+        "observed_by_star": [
+          "10% + 30% AP",
+          "10% + 30% AP",
+          "10% + 70% AP",
+          "10% + 80% AP"
+        ],
+        "status": "resolved_by_user_clarification",
+        "resolution": "User clarified current base armor ignore as 15% and one/two-star formula as 15% + 30% AP. The earlier 20% + 25% AP announcement is superseded by this clarification. Unconfirmed high-star values remain historical."
+      },
+      {
+        "catalog": "champions",
+        "ids": [
+          "3507",
+          "4506"
+        ],
+        "field": "attributes_by_star.物攻",
+        "status": "unmentioned_stars_preserved",
+        "resolution": "Only base (one-star) attack damage changed; two/four-star scaling not extrapolated. Yi remains [60,93,139,209]; Cinderbrute remains [120,172,258,387]."
+      },
+      {
+        "catalog": "traits",
+        "id": "451",
+        "name": "黑荆棘",
+        "field": "balance_overrides.tank_sacrifice_resistances",
+        "reported_from": 15,
+        "requested_to": 12,
+        "observed_current": null,
+        "status": "baseline_parameter_absent",
+        "resolution": "Store explicit new coefficient as a semantic balance override; inherited text does not expose the tank sacrifice coefficient."
+      },
+      {
+        "catalog": "traits",
+        "id": "465",
+        "name": "赏金猎人",
+        "field": "balance_overrides.bounty_changes",
+        "observed_current": null,
+        "status": "task_rows_unavailable",
+        "resolution": "All six requested deltas retained as semantic overrides. No matching bounty task rows exist in inherited champions, traits, season mechanics or reward tables. Do not invent task IDs or merge the 12-to-7 gold change with the separate 12-gold kill task."
+      },
+      {
+        "catalog": "sprites",
+        "ids": [
+          "181032",
+          "181036",
+          "181042"
+        ],
+        "field": "offer_conditions.first_sprite_of_preparation_phase_only",
+        "status": "declarative_offer_condition",
+        "resolution": "Condition stored on all three families and six source variants, with visible descriptions and typed source text synchronized. This overlay does not implement shop enforcement."
+      },
+      {
+        "catalog": "champions",
+        "id": "5459",
+        "name": "拉克丝",
+        "status": "shared_canonical_skill",
+        "variant_source_ids": [
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469"
+        ],
+        "resolution": "All nine mapped elemental forms resolve to champion 5459; no separate numeric skill records exist to modify."
+      },
+      {
+        "field": "supplemental_source",
+        "status": "historical_evidence_retained",
+        "resolution": "Pinned supplemental HTML has pre-existing conflicting skill values (including Kayle, Diana, Ahri, Blue Sentinel and Lux). Operations update canonical skills, exact effect blocks and attributes only; raw supplemental evidence and source hashes are not rewritten."
+      }
+    ],
+    "no_change": [
+      {
+        "catalog": "traits",
+        "id": "344",
+        "name": "迅捷射手",
+        "reported_from": [
+          3,
+          5,
+          9,
+          15
+        ],
+        "requested_to": [
+          3,
+          5,
+          8,
+          12
+        ],
+        "observed_current": [
+          3,
+          5,
+          8,
+          12
+        ],
+        "status": "already_applied_in_18_2"
+      }
+    ],
+    "coverage": [
+      {
+        "catalog": "champions",
+        "id": "1505",
+        "name": "卡蜜尔"
+      },
+      {
+        "catalog": "champions",
+        "id": "2512",
+        "name": "凯尔"
+      },
+      {
+        "catalog": "champions",
+        "id": "2511",
+        "name": "乐芙兰"
+      },
+      {
+        "catalog": "champions",
+        "id": "2514",
+        "name": "提莫"
+      },
+      {
+        "catalog": "champions",
+        "id": "2503",
+        "name": "慎"
+      },
+      {
+        "catalog": "champions",
+        "id": "3506",
+        "name": "黛安娜"
+      },
+      {
+        "catalog": "champions",
+        "id": "3507",
+        "name": "易"
+      },
+      {
+        "catalog": "champions",
+        "id": "4511",
+        "name": "阿狸"
+      },
+      {
+        "catalog": "champions",
+        "id": "4506",
+        "name": "绯红印记树怪"
+      },
+      {
+        "catalog": "champions",
+        "id": "4500",
+        "name": "苍蓝雕纹魔像"
+      },
+      {
+        "catalog": "champions",
+        "id": "4512",
+        "name": "婕拉"
+      },
+      {
+        "catalog": "champions",
+        "id": "5459",
+        "name": "拉克丝"
+      },
+      {
+        "catalog": "champions",
+        "id": "5454",
+        "name": "艾希"
+      },
+      {
+        "catalog": "champions",
+        "id": "5450",
+        "name": "茂凯"
+      },
+      {
+        "catalog": "traits",
+        "id": "459",
+        "name": "日蚀骑士"
+      },
+      {
+        "catalog": "traits",
+        "id": "451",
+        "name": "黑荆棘",
+        "status": "user_declared_semantic_override"
+      },
+      {
+        "catalog": "traits",
+        "id": "465",
+        "name": "赏金猎人",
+        "champion_id": "5455",
+        "status": "user_declared_semantic_override"
+      },
+      {
+        "catalog": "sprites",
+        "id": "181182",
+        "name": "小人国",
+        "variant_ids": [
+          "181182",
+          "181183"
+        ]
+      },
+      {
+        "catalog": "sprites",
+        "id": "181032",
+        "name": "高阶变形术",
+        "variant_ids": [
+          "181032",
+          "181033"
+        ]
+      },
+      {
+        "catalog": "sprites",
+        "id": "181036",
+        "name": "低阶变形术",
+        "variant_ids": [
+          "181036",
+          "181037"
+        ]
+      },
+      {
+        "catalog": "sprites",
+        "id": "181042",
+        "name": "变形术",
+        "variant_ids": [
+          "181042",
+          "181043"
+        ]
+      }
+    ]
+  },
+  "operations": [
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.xp_to_next_level.7",
+      "from": 60,
+      "to": 56
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.xp_to_next_level.8",
+      "from": 68,
+      "to": 64
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.xp_to_next_level.9",
+      "from": 68,
+      "to": 64
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.reference_purchase_gold_at_standard_natural_timing.8",
+      "from": 60,
+      "to": 56
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.reference_purchase_gold_at_standard_natural_timing.9",
+      "from": 68,
+      "to": 64
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.reference_purchase_gold_at_standard_natural_timing.10",
+      "from": 68,
+      "to": 64
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "fields": {
+        "provenance": {
+          "patch_overrides": {
+            "progression": {
+              "authority": "s18_2_balance_override_over_inherited_standard",
+              "balance_release": "18.2",
+              "fields": [
+                "xp_to_next_level.7",
+                "xp_to_next_level.8",
+                "xp_to_next_level.9",
+                "reference_purchase_gold_at_standard_natural_timing.8",
+                "reference_purchase_gold_at_standard_natural_timing.9",
+                "reference_purchase_gold_at_standard_natural_timing.10"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "kind": "replace_text",
+      "catalog": "traits",
+      "id": "344",
+      "replacements": [
+        {
+          "from": "+9%",
+          "to": "+8%"
+        },
+        {
+          "from": "+15%",
+          "to": "+12%"
+        }
+      ]
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "traits",
+      "id": "347",
+      "fields": {
+        "balance_overrides": {
+          "release_version": "18.2-hotfix",
+          "true_damage_calculation_order": "after_resistance_settlement",
+          "tier_2_true_damage_enabled": false,
+          "true_damage_enabled_breakpoints": [
+            3,
+            4
+          ],
+          "status": "hotfix_applied"
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "traits",
+      "id": "450",
+      "fields": {
+        "balance_overrides": {
+          "placeable_plant_costs": {
+            "stonebark_tree": {
+              "base": 1,
+              "upgraded": 0
+            },
+            "life_flower": {
+              "base": 1,
+              "upgraded": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "traits",
+      "id": "453",
+      "fields": {
+        "balance_overrides": {
+          "reward_probability_status": "rebalanced_values_not_published",
+          "threshold_rewards": {
+            "130": {
+              "added": [
+                "2星凯特琳+1个基础装备+3金币"
+              ]
+            },
+            "185": {
+              "added": [
+                "1个成装锻造器+2星凯特琳+2星卡蜜尔"
+              ],
+              "changed": [
+                {
+                  "from": "1个成装锻造器+8金币",
+                  "to": "1个成装锻造器+10金币"
+                }
+              ]
+            },
+            "250": {
+              "changed": [
+                {
+                  "from": "2个成装锻造器+12金币",
+                  "to": "2个成装锻造器+20金币"
+                },
+                {
+                  "from": "2星莫甘娜+幸运装备宝箱+基础装备锻造器",
+                  "to": "2星莫甘娜+幸运装备宝箱+随机成装+3金币"
+                },
+                {
+                  "from": "2个幸运装备宝箱+6金币",
+                  "to": "2个幸运装备宝箱+18金币"
+                },
+                {
+                  "from": "幸运装备宝箱+2个基础装备锻造器+魔女拉克丝+5金币",
+                  "to": "幸运装备宝箱+2个基础装备锻造器+魔女拉克丝+18金币"
+                },
+                {
+                  "from": "1个神器锻造器+1个成装锻造器+5金币",
+                  "to": "1个神器锻造器+1个成装锻造器+18金币"
+                }
+              ]
+            },
+            "365": {
+              "all_rewards_extra_gold": 12,
+              "changed": [
+                {
+                  "from": "2个光明版秘法手套+20金币",
+                  "to": "2个光明版秘法手套+2星凯南+15金币"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "traits",
+      "id": "455",
+      "fields": {
+        "balance_overrides": {
+          "golden_pixie_thresholds": [
+            170000,
+            200000,
+            300000,
+            400000,
+            500000,
+            600000
+          ]
+        }
+      }
+    },
+    {
+      "kind": "patch_reward_group",
+      "catalog": "reward_tables",
+      "singleton": true,
+      "table_id": "trait:453:rewards",
+      "group_label": "130",
+      "invalidate_probabilities": true,
+      "probability_status": "rebalanced_values_not_published",
+      "changes": [
+        {
+          "kind": "add_outcome",
+          "rewards": [
+            {
+              "title": "凯特琳",
+              "count": 1,
+              "type": "hero",
+              "champion_id": "918051",
+              "champion_stars": 2
+            },
+            {
+              "title": "基础装备",
+              "count": 1
+            },
+            {
+              "title": "3金币",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "patch_reward_group",
+      "catalog": "reward_tables",
+      "singleton": true,
+      "table_id": "trait:453:rewards",
+      "group_label": "185",
+      "invalidate_probabilities": true,
+      "probability_status": "rebalanced_values_not_published",
+      "changes": [
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            {
+              "title": "成装锻造器"
+            },
+            {
+              "title": "8金币"
+            }
+          ],
+          "rewards": [
+            {
+              "title": "成装锻造器"
+            },
+            {
+              "title": "10金币"
+            }
+          ]
+        },
+        {
+          "kind": "add_outcome",
+          "rewards": [
+            {
+              "title": "成装锻造器"
+            },
+            {
+              "title": "凯特琳",
+              "type": "hero",
+              "champion_id": "918051",
+              "champion_stars": 2
+            },
+            {
+              "title": "卡蜜尔",
+              "type": "hero",
+              "champion_id": "918164",
+              "champion_stars": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "patch_reward_group",
+      "catalog": "reward_tables",
+      "singleton": true,
+      "table_id": "trait:453:rewards",
+      "group_label": "250",
+      "changes": [
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            {
+              "title": "成装锻造器",
+              "count": 2
+            },
+            {
+              "title": "12金币"
+            }
+          ],
+          "rewards": [
+            {
+              "title": "成装锻造器",
+              "count": 2
+            },
+            {
+              "title": "20金币"
+            }
+          ]
+        },
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            {
+              "title": "莫甘娜",
+              "type": "hero",
+              "champion_id": "918025"
+            },
+            {
+              "title": "幸运装备宝箱",
+              "type": "equip",
+              "item_id": "32311"
+            },
+            {
+              "title": "基础装备锻造器"
+            },
+            {
+              "title": "5金币"
+            }
+          ],
+          "rewards": [
+            {
+              "title": "莫甘娜",
+              "type": "hero",
+              "champion_id": "918025",
+              "champion_stars": 2
+            },
+            {
+              "title": "幸运装备宝箱",
+              "type": "equip",
+              "item_id": "32311"
+            },
+            {
+              "title": "随机成装"
+            },
+            {
+              "title": "3金币"
+            }
+          ]
+        },
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            {
+              "title": "幸运装备宝箱",
+              "count": 2,
+              "type": "equip",
+              "item_id": "32311"
+            },
+            {
+              "title": "6金币"
+            },
+            {
+              "title": "装备重铸器"
+            }
+          ],
+          "rewards": [
+            {
+              "title": "幸运装备宝箱",
+              "count": 2,
+              "type": "equip",
+              "item_id": "32311"
+            },
+            {
+              "title": "18金币"
+            },
+            {
+              "title": "装备重铸器"
+            }
+          ]
+        },
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            {
+              "title": "魔女拉克丝",
+              "type": "hero",
+              "champion_id": "918099"
+            },
+            {
+              "title": "基础装备锻造器",
+              "count": 2
+            },
+            {
+              "title": "幸运装备宝箱",
+              "type": "equip",
+              "item_id": "32311"
+            },
+            {
+              "title": "5金币"
+            }
+          ],
+          "rewards": [
+            {
+              "title": "魔女拉克丝",
+              "type": "hero",
+              "champion_id": "918099"
+            },
+            {
+              "title": "基础装备锻造器",
+              "count": 2
+            },
+            {
+              "title": "幸运装备宝箱",
+              "type": "equip",
+              "item_id": "32311"
+            },
+            {
+              "title": "18金币"
+            }
+          ]
+        },
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            {
+              "title": "神器锻造器"
+            },
+            {
+              "title": "成装锻造器"
+            },
+            {
+              "title": "5金币"
+            }
+          ],
+          "rewards": [
+            {
+              "title": "神器锻造器"
+            },
+            {
+              "title": "成装锻造器"
+            },
+            {
+              "title": "18金币"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "patch_reward_group",
+      "catalog": "reward_tables",
+      "singleton": true,
+      "table_id": "trait:453:rewards",
+      "group_label": "365",
+      "changes": [
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            {
+              "title": "光明版窃贼手套",
+              "count": 2,
+              "type": "equip",
+              "item_id": "1607"
+            },
+            {
+              "title": "20金币"
+            },
+            {
+              "title": "装备拆卸器",
+              "count": 3
+            }
+          ],
+          "rewards": [
+            {
+              "title": "光明版秘法手套",
+              "count": 2,
+              "type": "equip",
+              "item_id": "2092"
+            },
+            {
+              "title": "凯南",
+              "type": "hero",
+              "champion_id": "918085",
+              "champion_stars": 2
+            },
+            {
+              "title": "15金币"
+            }
+          ]
+        },
+        {
+          "kind": "append_reward_to_all_outcomes",
+          "reward": {
+            "title": "额外12金币"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "champions",
+      "id": "5457",
+      "fields": {
+        "balance_overrides": {
+          "initial_cells": 3,
+          "frontline_cells": 2,
+          "backline_cells": 1
+        }
+      }
+    },
+    {
+      "kind": "replace_text",
+      "catalog": "champions",
+      "id": "1507",
+      "replacements": [
+        {
+          "from": "造成445(",
+          "to": "造成415("
+        }
+      ]
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "champions",
+      "id": "3507",
+      "fields": {
+        "balance_overrides": {
+          "physical_form_attack_damage": 62,
+          "spell_form_magic_damage_by_star": [
+            130,
+            195,
+            315
+          ]
+        }
+      }
+    },
+    {
+      "kind": "disable",
+      "catalog": "augments",
+      "id": "20733",
+      "reason": "temporarily_disabled_in_18_2"
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "augments",
+      "ids": [
+        "20760",
+        "30760"
+      ],
+      "all": true,
+      "fields": {
+        "per_game_player_limit": 1,
+        "emblem_trait_effect_multiplier": 1.5
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "augments",
+      "ids": [
+        "20769",
+        "20778"
+      ],
+      "all": true,
+      "fields": {
+        "shared_per_game_limit": {
+          "group": "coven_familiar_or_dark_ritual",
+          "max_players": 1
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "augments",
+      "id": "20778",
+      "fields": {
+        "balance_overrides": {
+          "redeem_ap_by_tier": [
+            7,
+            15,
+            50,
+            75,
+            125,
+            200,
+            300
+          ]
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "augments",
+      "id": "30749",
+      "fields": {
+        "per_game_player_limit": 1,
+        "balance_overrides": {
+          "trait_count_rewards": {
+            "10": "18金币",
+            "11": "金铲铲冠冕/金锅锅冠冕/金锅铲冠冕"
+          }
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "sprites",
+      "ids": [
+        "181342",
+        "181343"
+      ],
+      "all": true,
+      "fields": {
+        "offer_conditions": {
+          "minimum_gold_exclusive": 20,
+          "minimum_eligible_non_three_star_units_from_previous_combat": 2,
+          "eligible_units_must_be_rollable_at_current_level": true
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "season_metadata",
+      "singleton": true,
+      "fields": {
+        "balance_overrides": {
+          "release_version": "18.2",
+          "nature_sprite_probability_status": "rebalanced_values_not_published",
+          "unknown_probability_policy": "do_not_reuse_prior_patch_probabilities_as_exact_18_2_values"
+        }
+      }
+    },
+    {
+      "kind": "add_entity",
+      "catalog": "items",
+      "entity": {
+        "address": "jcc:s18:item:6079",
+        "source": "jcc_user_supplied_18_2_balance_patch",
+        "id": "6079",
+        "name": "视界专注",
+        "type": "神器装备",
+        "map_id": null,
+        "icon_key": "horizon_focus",
+        "basic_desc": "",
+        "structured_stats": [],
+        "desc": "18.2重新启用；补丁未公布效果数值。",
+        "effects": {
+          "schema": "jcc-common-typed-effect-v1",
+          "source_text": "18.2重新启用；补丁未公布效果数值。",
+          "parse_status": "unpublished_values",
+          "structured_terms": [],
+          "conditional_tags": [],
+          "dynamic_placeholders": [],
+          "exact_effect_blocks": []
+        },
+        "tags": [
+          "artifact"
+        ],
+        "recipe": null,
+        "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/gamedata/equip/horizon_focus.png",
+        "source_proof": {
+          "provider_id": "user_supplied_official_patch_note",
+          "release_version": "18.2",
+          "published_values": false
+        },
+        "primary_role": "unknown_reenabled_artifact",
+        "browse_facets": [
+          "artifact",
+          "special"
+        ],
+        "usage_taxonomy_status": "patch_reenabled_effect_unpublished",
+        "availability_status": "enabled",
+        "enabled": true
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.xp_to_next_level.8",
+      "from": 64,
+      "to": 68
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.xp_to_next_level.9",
+      "from": 64,
+      "to": 68
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.reference_purchase_gold_at_standard_natural_timing.9",
+      "from": 64,
+      "to": 68
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.reference_purchase_gold_at_standard_natural_timing.10",
+      "from": 64,
+      "to": 68
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "fields": {
+        "provenance": {
+          "patch_overrides": {
+            "progression": {
+              "balance_release": "18.2a",
+              "authority": "user_supplied_patch_notes_2026_09_17"
+            }
+          }
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "champions",
+      "id": "4506",
+      "name": "绯红印记树怪",
+      "fields": {
+        "balance_overrides": {
+          "armor_ignore_patch_resolution": {
+            "release_version": "18.2a",
+            "source": "user_supplied_balance_notes",
+            "status": "user_confirmed",
+            "announced_changes": [
+              {
+                "name": "基础护甲无视",
+                "from": "10%",
+                "to": "15%",
+                "status": "user_confirmed"
+              },
+              {
+                "name": "护甲穿透（法术加成）",
+                "from": "15+30%",
+                "to": "20+25%",
+                "status": "superseded_by_user_clarification"
+              }
+            ],
+            "relationship_between_changes": "later_user_clarification_overrides_earlier_formula",
+            "resolved_current_formula": "15% + 30% AP",
+            "confirmed_stars": [1, 2],
+            "inherited_formula_status": "unmentioned_high_stars_historical_only",
+            "host_guidance": "用户确认当前基础护甲无视15%，一二星公式15% + 30%法术加成；此前20+25%的公告表述被本次确认覆盖。未确认的高星数值只保留为历史记录，不外推。"
+          }
+        }
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "1505",
+      "name": "卡蜜尔",
+      "path": "skill.raw_values",
+      "from": "10/15/25/40|160/240/410/700|60/100/250/310",
+      "to": "10/15/25/40|150/225/375/640|60/90/200/310"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "1505",
+      "name": "卡蜜尔",
+      "path": "skill.descriptions_by_star",
+      "from": {
+        "1": "劈砍当前目标，造成170(【物理加成】【法术加成】)物理伤害，并获得60点护盾，持续2秒。",
+        "2": "劈砍当前目标，造成255(【物理加成】【法术加成】)物理伤害，并获得100点护盾，持续2秒。",
+        "3": "劈砍当前目标，造成435(【物理加成】【法术加成】)物理伤害，并获得250点护盾，持续2秒。",
+        "4": "劈砍当前目标，造成740(【物理加成】【法术加成】)物理伤害，并获得310点护盾，持续2秒。"
+      },
+      "to": {
+        "1": "劈砍当前目标，造成160(【物理加成】【法术加成】)物理伤害，并获得60点护盾，持续2秒。",
+        "2": "劈砍当前目标，造成240(【物理加成】【法术加成】)物理伤害，并获得90点护盾，持续2秒。",
+        "3": "劈砍当前目标，造成400(【物理加成】【法术加成】)物理伤害，并获得200点护盾，持续2秒。",
+        "4": "劈砍当前目标，造成680(【物理加成】【法术加成】)物理伤害，并获得310点护盾，持续2秒。"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "1505",
+      "name": "卡蜜尔",
+      "path": "skill.values_by_star",
+      "from": {
+        "1": "伤害：【法术加成】 10/15/25|伤害：170 = 160(【物理加成】) + 10(【法术加成】) 160/240/410|护盾： 60/100/250",
+        "2": "伤害：【法术加成】 10/15/25|伤害：255 = 240(【物理加成】) + 15(【法术加成】) 160/240/410|护盾： 60/100/250",
+        "3": "伤害：【法术加成】 10/15/25|伤害：435 = 410(【物理加成】) + 25(【法术加成】) 160/240/410|护盾： 60/100/250",
+        "4": "伤害：【法术加成】 10/15/25/40|伤害：740 = 700(【物理加成】) + 40(【法术加成】) 160/240/410/700|护盾： 60/100/250/310"
+      },
+      "to": {
+        "1": "伤害：【法术加成】 10/15/25|伤害：160 = 150(【物理加成】) + 10(【法术加成】) 150/225/375|护盾： 60/90/200",
+        "2": "伤害：【法术加成】 10/15/25|伤害：240 = 225(【物理加成】) + 15(【法术加成】) 150/225/375|护盾： 60/90/200",
+        "3": "伤害：【法术加成】 10/15/25|伤害：400 = 375(【物理加成】) + 25(【法术加成】) 150/225/375|护盾： 60/90/200",
+        "4": "伤害：【法术加成】 10/15/25/40|伤害：680 = 640(【物理加成】) + 40(【法术加成】) 150/225/375/640|护盾： 60/90/200/310"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "1505",
+      "name": "卡蜜尔",
+      "path": "skill.effects.source_text",
+      "from": "劈砍当前目标，造成170(【物理加成】【法术加成】)物理伤害，并获得60点护盾，持续2秒。",
+      "to": "劈砍当前目标，造成160(【物理加成】【法术加成】)物理伤害，并获得60点护盾，持续2秒。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "1505",
+      "name": "卡蜜尔",
+      "path": "skill.effects.exact_effect_blocks",
+      "from": [
+        {
+          "scope": "官方值1",
+          "source_text": "伤害：【法术加成】 10/15/25/40"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "伤害：740 = 700(【物理加成】) + 40(【法术加成】) 160/240/410/700"
+        },
+        {
+          "scope": "官方值3",
+          "source_text": "护盾： 60/100/250/310"
+        }
+      ],
+      "to": [
+        {
+          "scope": "官方值1",
+          "source_text": "伤害：【法术加成】 10/15/25/40"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "伤害：680 = 640(【物理加成】) + 40(【法术加成】) 150/225/375/640"
+        },
+        {
+          "scope": "官方值3",
+          "source_text": "护盾： 60/90/200/310"
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2512",
+      "name": "凯尔",
+      "path": "skill.raw_values",
+      "from": "62/92/96/112|40/40/40/50",
+      "to": "62/92/105/115|35/35/35/45"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2512",
+      "name": "凯尔",
+      "path": "skill.descriptions_by_star",
+      "from": {
+        "1": "被动：【凯尔】基于其星级获得飞升，并获得可叠加的增益。  第1次飞升：普攻造成62(【法术加成】)额外魔法伤害。 第2次飞升：普攻对命中的敌人施加持续2秒的20%魔抗击碎。 第3次飞升：普攻发射冲击波，对命中的所有其他弈子造成40(【法术加成】)魔法伤害。 第4次飞升：获得无限距离。每攻击3次焰浪变得更大。  魔抗击碎：降低魔法抗性。",
+        "2": "被动：【凯尔】基于其星级获得飞升，并获得可叠加的增益。  第1次飞升：普攻造成92(【法术加成】)额外魔法伤害。 第2次飞升：普攻对命中的敌人施加持续2秒的20%魔抗击碎。 第3次飞升：普攻发射冲击波，对命中的所有其他弈子造成40(【法术加成】)魔法伤害。 第4次飞升：获得无限距离。每攻击3次焰浪变得更大。  魔抗击碎：降低魔法抗性。",
+        "3": "被动：【凯尔】基于其星级获得飞升，并获得可叠加的增益。  第1次飞升：普攻造成96(【法术加成】)额外魔法伤害。 第2次飞升：普攻对命中的敌人施加持续2秒的20%魔抗击碎。 第3次飞升：普攻发射冲击波，对命中的所有其他弈子造成40(【法术加成】)魔法伤害。 第4次飞升：获得无限距离。每攻击3次焰浪变得更大。  魔抗击碎：降低魔法抗性。",
+        "4": "被动：【凯尔】基于其星级获得飞升，并获得可叠加的增益。  第1次飞升：普攻造成112(【法术加成】)额外魔法伤害。 第2次飞升：普攻对命中的敌人施加持续2秒的20%魔抗击碎。 第3次飞升：普攻发射冲击波，对命中的所有其他弈子造成50(【法术加成】)魔法伤害。 第4次飞升：获得无限距离。每攻击3次焰浪变得更大。  魔抗击碎：降低魔法抗性。"
+      },
+      "to": {
+        "1": "被动：【凯尔】基于其星级获得飞升，并获得可叠加的增益。  第1次飞升：普攻造成62(【法术加成】)额外魔法伤害。 第2次飞升：普攻对命中的敌人施加持续2秒的20%魔抗击碎。 第3次飞升：普攻发射冲击波，对命中的所有其他弈子造成35(【法术加成】)魔法伤害。 第4次飞升：获得无限距离。每攻击3次焰浪变得更大。  魔抗击碎：降低魔法抗性。",
+        "2": "被动：【凯尔】基于其星级获得飞升，并获得可叠加的增益。  第1次飞升：普攻造成92(【法术加成】)额外魔法伤害。 第2次飞升：普攻对命中的敌人施加持续2秒的20%魔抗击碎。 第3次飞升：普攻发射冲击波，对命中的所有其他弈子造成35(【法术加成】)魔法伤害。 第4次飞升：获得无限距离。每攻击3次焰浪变得更大。  魔抗击碎：降低魔法抗性。",
+        "3": "被动：【凯尔】基于其星级获得飞升，并获得可叠加的增益。  第1次飞升：普攻造成105(【法术加成】)额外魔法伤害。 第2次飞升：普攻对命中的敌人施加持续2秒的20%魔抗击碎。 第3次飞升：普攻发射冲击波，对命中的所有其他弈子造成35(【法术加成】)魔法伤害。 第4次飞升：获得无限距离。每攻击3次焰浪变得更大。  魔抗击碎：降低魔法抗性。",
+        "4": "被动：【凯尔】基于其星级获得飞升，并获得可叠加的增益。  第1次飞升：普攻造成115(【法术加成】)额外魔法伤害。 第2次飞升：普攻对命中的敌人施加持续2秒的20%魔抗击碎。 第3次飞升：普攻发射冲击波，对命中的所有其他弈子造成45(【法术加成】)魔法伤害。 第4次飞升：获得无限距离。每攻击3次焰浪变得更大。  魔抗击碎：降低魔法抗性。"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2512",
+      "name": "凯尔",
+      "path": "skill.values_by_star",
+      "from": {
+        "1": "伤害：62(【法术加成】) 62/92/96|次要伤害：40(【法术加成】) 40/40/40",
+        "2": "伤害：92(【法术加成】) 62/92/96|次要伤害：40(【法术加成】) 40/40/40",
+        "3": "伤害：96(【法术加成】) 62/92/96|次要伤害：40(【法术加成】) 40/40/40",
+        "4": "伤害：112(【法术加成】) 62/92/96/112|次要伤害：50(【法术加成】) 40/40/40/50"
+      },
+      "to": {
+        "1": "伤害：62(【法术加成】) 62/92/105|次要伤害：35(【法术加成】) 35/35/35",
+        "2": "伤害：92(【法术加成】) 62/92/105|次要伤害：35(【法术加成】) 35/35/35",
+        "3": "伤害：105(【法术加成】) 62/92/105|次要伤害：35(【法术加成】) 35/35/35",
+        "4": "伤害：115(【法术加成】) 62/92/105/115|次要伤害：45(【法术加成】) 35/35/35/45"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2512",
+      "name": "凯尔",
+      "path": "skill.effects.source_text",
+      "from": "被动：【凯尔】基于其星级获得飞升，并获得可叠加的增益。  第1次飞升：普攻造成62(【法术加成】)额外魔法伤害。 第2次飞升：普攻对命中的敌人施加持续2秒的20%魔抗击碎。 第3次飞升：普攻发射冲击波，对命中的所有其他弈子造成40(【法术加成】)魔法伤害。 第4次飞升：获得无限距离。每攻击3次焰浪变得更大。  魔抗击碎：降低魔法抗性。",
+      "to": "被动：【凯尔】基于其星级获得飞升，并获得可叠加的增益。  第1次飞升：普攻造成62(【法术加成】)额外魔法伤害。 第2次飞升：普攻对命中的敌人施加持续2秒的20%魔抗击碎。 第3次飞升：普攻发射冲击波，对命中的所有其他弈子造成35(【法术加成】)魔法伤害。 第4次飞升：获得无限距离。每攻击3次焰浪变得更大。  魔抗击碎：降低魔法抗性。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2512",
+      "name": "凯尔",
+      "path": "skill.effects.exact_effect_blocks",
+      "from": [
+        {
+          "scope": "官方值1",
+          "source_text": "伤害：112(【法术加成】) 62/92/96/112"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "次要伤害：50(【法术加成】) 40/40/40/50"
+        }
+      ],
+      "to": [
+        {
+          "scope": "官方值1",
+          "source_text": "伤害：115(【法术加成】) 62/92/105/115"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "次要伤害：45(【法术加成】) 35/35/35/45"
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2511",
+      "name": "乐芙兰",
+      "path": "skill.raw_values",
+      "from": "10/15/40/100|260/390/615/1045|100/150/230/390",
+      "to": "10/15/30/100|260/390/615/1045|100/150/230/390"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2511",
+      "name": "乐芙兰",
+      "path": "skill.descriptions_by_star",
+      "from": {
+        "1": "被动：在玩家对战结束后，你最强的那个【乐芙兰】有10%的几率生成你场上一个友军的1星复制品，每次参与击败后提升4%。   主动：向当前目标发射一个镜像，从而造成260(【法术加成】)魔法伤害，并对周围的敌人们造成100(【法术加成】)魔法伤害。",
+        "2": "被动：在玩家对战结束后，你最强的那个【乐芙兰】有15%的几率生成你场上一个友军的1星复制品，每次参与击败后提升4%。   主动：向当前目标发射一个镜像，从而造成390(【法术加成】)魔法伤害，并对周围的敌人们造成150(【法术加成】)魔法伤害。",
+        "3": "被动：在玩家对战结束后，你最强的那个【乐芙兰】有40%的几率生成你场上一个友军的1星复制品，每次参与击败后提升4%。   主动：向当前目标发射一个镜像，从而造成615(【法术加成】)魔法伤害，并对周围的敌人们造成230(【法术加成】)魔法伤害。",
+        "4": "被动：在玩家对战结束后，你最强的那个【乐芙兰】有100%的几率生成你场上一个友军的1星复制品，每次参与击败后提升4%。   主动：向当前目标发射一个镜像，从而造成1045(【法术加成】)魔法伤害，并对周围的敌人们造成390(【法术加成】)魔法伤害。"
+      },
+      "to": {
+        "1": "被动：在玩家对战结束后，你最强的那个【乐芙兰】有10%的几率生成你场上一个友军的1星复制品，每次参与击败后提升4%。   主动：向当前目标发射一个镜像，从而造成260(【法术加成】)魔法伤害，并对周围的敌人们造成100(【法术加成】)魔法伤害。",
+        "2": "被动：在玩家对战结束后，你最强的那个【乐芙兰】有15%的几率生成你场上一个友军的1星复制品，每次参与击败后提升4%。   主动：向当前目标发射一个镜像，从而造成390(【法术加成】)魔法伤害，并对周围的敌人们造成150(【法术加成】)魔法伤害。",
+        "3": "被动：在玩家对战结束后，你最强的那个【乐芙兰】有30%的几率生成你场上一个友军的1星复制品，每次参与击败后提升4%。   主动：向当前目标发射一个镜像，从而造成615(【法术加成】)魔法伤害，并对周围的敌人们造成230(【法术加成】)魔法伤害。",
+        "4": "被动：在玩家对战结束后，你最强的那个【乐芙兰】有100%的几率生成你场上一个友军的1星复制品，每次参与击败后提升4%。   主动：向当前目标发射一个镜像，从而造成1045(【法术加成】)魔法伤害，并对周围的敌人们造成390(【法术加成】)魔法伤害。"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2511",
+      "name": "乐芙兰",
+      "path": "skill.values_by_star",
+      "from": {
+        "1": "复制几率：10%  10/15/40|伤害：260(【法术加成】)  260/390/615|次要伤害：100(【法术加成】) 100/150/230",
+        "2": "复制几率：15%  10/15/40|伤害：390(【法术加成】)  260/390/615|次要伤害：150(【法术加成】) 100/150/230",
+        "3": "复制几率：40%  10/15/40|伤害：615(【法术加成】)  260/390/615|次要伤害：230(【法术加成】) 100/150/230",
+        "4": "复制几率：100%  10/15/40/100|伤害：1045(【法术加成】)  260/390/615/1045|次要伤害：390(【法术加成】) 100/150/230/390"
+      },
+      "to": {
+        "1": "复制几率：10%  10/15/30|伤害：260(【法术加成】)  260/390/615|次要伤害：100(【法术加成】) 100/150/230",
+        "2": "复制几率：15%  10/15/30|伤害：390(【法术加成】)  260/390/615|次要伤害：150(【法术加成】) 100/150/230",
+        "3": "复制几率：30%  10/15/30|伤害：615(【法术加成】)  260/390/615|次要伤害：230(【法术加成】) 100/150/230",
+        "4": "复制几率：100%  10/15/30/100|伤害：1045(【法术加成】)  260/390/615/1045|次要伤害：390(【法术加成】) 100/150/230/390"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2511",
+      "name": "乐芙兰",
+      "path": "skill.effects.exact_effect_blocks",
+      "from": [
+        {
+          "scope": "官方值1",
+          "source_text": "复制几率：100%  10/15/40/100"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "伤害：1045(【法术加成】)  260/390/615/1045"
+        },
+        {
+          "scope": "官方值3",
+          "source_text": "次要伤害：390(【法术加成】) 100/150/230/390"
+        }
+      ],
+      "to": [
+        {
+          "scope": "官方值1",
+          "source_text": "复制几率：100%  10/15/30/100"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "伤害：1045(【法术加成】)  260/390/615/1045"
+        },
+        {
+          "scope": "官方值3",
+          "source_text": "次要伤害：390(【法术加成】) 100/150/230/390"
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2514",
+      "name": "提莫",
+      "path": "skill.raw_values",
+      "from": "60/90/135/230|135/200/310/515|10%/12%/15%/20%",
+      "to": "55/82/130/230|135/200/310/515|10%/12%/15%/20%"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2514",
+      "name": "提莫",
+      "path": "skill.descriptions_by_star",
+      "from": {
+        "1": "投掷2簇蘑菇，对相距最近的3个敌人造成60(【法术加成】)魔法伤害。然后猛摔出一个巨型蘑菇，对目标造成135(【法术加成】)魔法伤害。  每次施放有10%几率搜寻到一个额外的蘑菇，可供收集以获得额外效果。  红蘑菇：1次刷新(已搜寻到的红蘑菇：0) 绿蘑菇：1小小英雄生命值(已搜寻到的绿蘑菇：0) 黄蘑菇：2经验值(已搜寻到的黄蘑菇：0)",
+        "2": "投掷2簇蘑菇，对相距最近的3个敌人造成90(【法术加成】)魔法伤害。然后猛摔出一个巨型蘑菇，对目标造成200(【法术加成】)魔法伤害。  每次施放有12%几率搜寻到一个额外的蘑菇，可供收集以获得额外效果。  红蘑菇：1次刷新(已搜寻到的红蘑菇：0) 绿蘑菇：1小小英雄生命值(已搜寻到的绿蘑菇：0) 黄蘑菇：2经验值(已搜寻到的黄蘑菇：0)",
+        "3": "投掷2簇蘑菇，对相距最近的3个敌人造成135(【法术加成】)魔法伤害。然后猛摔出一个巨型蘑菇，对目标造成310(【法术加成】)魔法伤害。  每次施放有15%几率搜寻到一个额外的蘑菇，可供收集以获得额外效果。  红蘑菇：1次刷新(已搜寻到的红蘑菇：0) 绿蘑菇：1小小英雄生命值(已搜寻到的绿蘑菇：0) 黄蘑菇：2经验值(已搜寻到的黄蘑菇：0)",
+        "4": "投掷2簇蘑菇，对相距最近的3个敌人造成230(【法术加成】)魔法伤害。然后猛摔出一个巨型蘑菇，对目标造成515(【法术加成】)魔法伤害。  每次施放有20%几率搜寻到一个额外的蘑菇，可供收集以获得额外效果。  红蘑菇：1次刷新(已搜寻到的红蘑菇：0) 绿蘑菇：1小小英雄生命值(已搜寻到的绿蘑菇：0) 黄蘑菇：2经验值(已搜寻到的黄蘑菇：0)"
+      },
+      "to": {
+        "1": "投掷2簇蘑菇，对相距最近的3个敌人造成55(【法术加成】)魔法伤害。然后猛摔出一个巨型蘑菇，对目标造成135(【法术加成】)魔法伤害。  每次施放有10%几率搜寻到一个额外的蘑菇，可供收集以获得额外效果。  红蘑菇：1次刷新(已搜寻到的红蘑菇：0) 绿蘑菇：1小小英雄生命值(已搜寻到的绿蘑菇：0) 黄蘑菇：2经验值(已搜寻到的黄蘑菇：0)",
+        "2": "投掷2簇蘑菇，对相距最近的3个敌人造成82(【法术加成】)魔法伤害。然后猛摔出一个巨型蘑菇，对目标造成200(【法术加成】)魔法伤害。  每次施放有12%几率搜寻到一个额外的蘑菇，可供收集以获得额外效果。  红蘑菇：1次刷新(已搜寻到的红蘑菇：0) 绿蘑菇：1小小英雄生命值(已搜寻到的绿蘑菇：0) 黄蘑菇：2经验值(已搜寻到的黄蘑菇：0)",
+        "3": "投掷2簇蘑菇，对相距最近的3个敌人造成130(【法术加成】)魔法伤害。然后猛摔出一个巨型蘑菇，对目标造成310(【法术加成】)魔法伤害。  每次施放有15%几率搜寻到一个额外的蘑菇，可供收集以获得额外效果。  红蘑菇：1次刷新(已搜寻到的红蘑菇：0) 绿蘑菇：1小小英雄生命值(已搜寻到的绿蘑菇：0) 黄蘑菇：2经验值(已搜寻到的黄蘑菇：0)",
+        "4": "投掷2簇蘑菇，对相距最近的3个敌人造成230(【法术加成】)魔法伤害。然后猛摔出一个巨型蘑菇，对目标造成515(【法术加成】)魔法伤害。  每次施放有20%几率搜寻到一个额外的蘑菇，可供收集以获得额外效果。  红蘑菇：1次刷新(已搜寻到的红蘑菇：0) 绿蘑菇：1小小英雄生命值(已搜寻到的绿蘑菇：0) 黄蘑菇：2经验值(已搜寻到的黄蘑菇：0)"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2514",
+      "name": "提莫",
+      "path": "skill.values_by_star",
+      "from": {
+        "1": "小蘑菇伤害:60(【法术加成】) 60/90/135|大蘑菇伤害:135(【法术加成】) 135/200/310|采集几率： 10%/12%/15%",
+        "2": "小蘑菇伤害:90(【法术加成】) 60/90/135|大蘑菇伤害:200(【法术加成】) 135/200/310|采集几率： 10%/12%/15%",
+        "3": "小蘑菇伤害:135(【法术加成】) 60/90/135|大蘑菇伤害:310(【法术加成】) 135/200/310|采集几率： 10%/12%/15%",
+        "4": "小蘑菇伤害:230(【法术加成】) 60/90/135/230|大蘑菇伤害:515(【法术加成】) 135/200/310/515|采集几率： 10%/12%/15%/20%"
+      },
+      "to": {
+        "1": "小蘑菇伤害:55(【法术加成】) 55/82/130|大蘑菇伤害:135(【法术加成】) 135/200/310|采集几率： 10%/12%/15%",
+        "2": "小蘑菇伤害:82(【法术加成】) 55/82/130|大蘑菇伤害:200(【法术加成】) 135/200/310|采集几率： 10%/12%/15%",
+        "3": "小蘑菇伤害:130(【法术加成】) 55/82/130|大蘑菇伤害:310(【法术加成】) 135/200/310|采集几率： 10%/12%/15%",
+        "4": "小蘑菇伤害:230(【法术加成】) 55/82/130/230|大蘑菇伤害:515(【法术加成】) 135/200/310/515|采集几率： 10%/12%/15%/20%"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2514",
+      "name": "提莫",
+      "path": "skill.effects.source_text",
+      "from": "投掷2簇蘑菇，对相距最近的3个敌人造成60(【法术加成】)魔法伤害。然后猛摔出一个巨型蘑菇，对目标造成135(【法术加成】)魔法伤害。  每次施放有10%几率搜寻到一个额外的蘑菇，可供收集以获得额外效果。  红蘑菇：1次刷新(已搜寻到的红蘑菇：0) 绿蘑菇：1小小英雄生命值(已搜寻到的绿蘑菇：0) 黄蘑菇：2经验值(已搜寻到的黄蘑菇：0)",
+      "to": "投掷2簇蘑菇，对相距最近的3个敌人造成55(【法术加成】)魔法伤害。然后猛摔出一个巨型蘑菇，对目标造成135(【法术加成】)魔法伤害。  每次施放有10%几率搜寻到一个额外的蘑菇，可供收集以获得额外效果。  红蘑菇：1次刷新(已搜寻到的红蘑菇：0) 绿蘑菇：1小小英雄生命值(已搜寻到的绿蘑菇：0) 黄蘑菇：2经验值(已搜寻到的黄蘑菇：0)"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2514",
+      "name": "提莫",
+      "path": "skill.effects.exact_effect_blocks",
+      "from": [
+        {
+          "scope": "小蘑菇伤害",
+          "source_text": "230(【法术加成】) 60/90/135/230"
+        },
+        {
+          "scope": "大蘑菇伤害",
+          "source_text": "515(【法术加成】) 135/200/310/515"
+        },
+        {
+          "scope": "官方值3",
+          "source_text": "采集几率： 10%/12%/15%/20%"
+        }
+      ],
+      "to": [
+        {
+          "scope": "小蘑菇伤害",
+          "source_text": "230(【法术加成】) 55/82/130/230"
+        },
+        {
+          "scope": "大蘑菇伤害",
+          "source_text": "515(【法术加成】) 135/200/310/515"
+        },
+        {
+          "scope": "官方值3",
+          "source_text": "采集几率： 10%/12%/15%/20%"
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2503",
+      "name": "慎",
+      "path": "skill.raw_values",
+      "from": "325/400/500/600|200/275/375/500|35/55/80/135",
+      "to": "350/430/550/700|200/275/375/500|35/55/80/135"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2503",
+      "name": "慎",
+      "path": "skill.descriptions_by_star",
+      "from": {
+        "1": "为【慎】提供325(【法术加成】)护盾值，以及为其附近1个受到伤害的友军提供200(【法术加成】)护盾值，持续4秒。两者接下来的3次攻击获得40%攻击速度并造成35(【法术加成】)额外魔法伤害。",
+        "2": "为【慎】提供400(【法术加成】)护盾值，以及为其附近1个受到伤害的友军提供275(【法术加成】)护盾值，持续4秒。两者接下来的3次攻击获得40%攻击速度并造成55(【法术加成】)额外魔法伤害。",
+        "3": "为【慎】提供500(【法术加成】)护盾值，以及为其附近1个受到伤害的友军提供375(【法术加成】)护盾值，持续4秒。两者接下来的3次攻击获得40%攻击速度并造成80(【法术加成】)额外魔法伤害。",
+        "4": "为【慎】提供600(【法术加成】)护盾值，以及为其附近1个受到伤害的友军提供500(【法术加成】)护盾值，持续4秒。两者接下来的3次攻击获得40%攻击速度并造成135(【法术加成】)额外魔法伤害。"
+      },
+      "to": {
+        "1": "为【慎】提供350(【法术加成】)护盾值，以及为其附近1个受到伤害的友军提供200(【法术加成】)护盾值，持续4秒。两者接下来的3次攻击获得40%攻击速度并造成35(【法术加成】)额外魔法伤害。",
+        "2": "为【慎】提供430(【法术加成】)护盾值，以及为其附近1个受到伤害的友军提供275(【法术加成】)护盾值，持续4秒。两者接下来的3次攻击获得40%攻击速度并造成55(【法术加成】)额外魔法伤害。",
+        "3": "为【慎】提供550(【法术加成】)护盾值，以及为其附近1个受到伤害的友军提供375(【法术加成】)护盾值，持续4秒。两者接下来的3次攻击获得40%攻击速度并造成80(【法术加成】)额外魔法伤害。",
+        "4": "为【慎】提供700(【法术加成】)护盾值，以及为其附近1个受到伤害的友军提供500(【法术加成】)护盾值，持续4秒。两者接下来的3次攻击获得40%攻击速度并造成135(【法术加成】)额外魔法伤害。"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2503",
+      "name": "慎",
+      "path": "skill.values_by_star",
+      "from": {
+        "1": "自身护盾：325(【法术加成】) 325/400/500|友军护盾：200(【法术加成】) 200/275/375|伤害：35(【法术加成】) 35/55/80",
+        "2": "自身护盾：400(【法术加成】) 325/400/500|友军护盾：275(【法术加成】) 200/275/375|伤害：55(【法术加成】) 35/55/80",
+        "3": "自身护盾：500(【法术加成】) 325/400/500|友军护盾：375(【法术加成】) 200/275/375|伤害：80(【法术加成】) 35/55/80",
+        "4": "自身护盾：600(【法术加成】) 325/400/500/600|友军护盾：500(【法术加成】) 200/275/375/500|伤害：135(【法术加成】) 35/55/80/135"
+      },
+      "to": {
+        "1": "自身护盾：350(【法术加成】) 350/430/550|友军护盾：200(【法术加成】) 200/275/375|伤害：35(【法术加成】) 35/55/80",
+        "2": "自身护盾：430(【法术加成】) 350/430/550|友军护盾：275(【法术加成】) 200/275/375|伤害：55(【法术加成】) 35/55/80",
+        "3": "自身护盾：550(【法术加成】) 350/430/550|友军护盾：375(【法术加成】) 200/275/375|伤害：80(【法术加成】) 35/55/80",
+        "4": "自身护盾：700(【法术加成】) 350/430/550/700|友军护盾：500(【法术加成】) 200/275/375/500|伤害：135(【法术加成】) 35/55/80/135"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2503",
+      "name": "慎",
+      "path": "skill.effects.source_text",
+      "from": "为【慎】提供325(【法术加成】)护盾值，以及为其附近1个受到伤害的友军提供200(【法术加成】)护盾值，持续4秒。两者接下来的3次攻击获得40%攻击速度并造成35(【法术加成】)额外魔法伤害。",
+      "to": "为【慎】提供350(【法术加成】)护盾值，以及为其附近1个受到伤害的友军提供200(【法术加成】)护盾值，持续4秒。两者接下来的3次攻击获得40%攻击速度并造成35(【法术加成】)额外魔法伤害。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "2503",
+      "name": "慎",
+      "path": "skill.effects.exact_effect_blocks",
+      "from": [
+        {
+          "scope": "官方值1",
+          "source_text": "自身护盾：600(【法术加成】) 325/400/500/600"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "友军护盾：500(【法术加成】) 200/275/375/500"
+        },
+        {
+          "scope": "官方值3",
+          "source_text": "伤害：135(【法术加成】) 35/55/80/135"
+        }
+      ],
+      "to": [
+        {
+          "scope": "官方值1",
+          "source_text": "自身护盾：700(【法术加成】) 350/430/550/700"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "友军护盾：500(【法术加成】) 200/275/375/500"
+        },
+        {
+          "scope": "官方值3",
+          "source_text": "伤害：135(【法术加成】) 35/55/80/135"
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "3506",
+      "name": "黛安娜",
+      "path": "skill.raw_values",
+      "from": "55/85/135/230|100/225/375/525",
+      "to": "75/115/180/230|150/275/500/525"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "3506",
+      "name": "黛安娜",
+      "path": "skill.descriptions_by_star",
+      "from": {
+        "1": "获得100(【法术加成】)护盾值，持续2秒，并放出6颗月光法球，由2格内的所有敌人分摊，每颗造成55(【法术加成】)魔法伤害。",
+        "2": "获得225(【法术加成】)护盾值，持续2秒，并放出6颗月光法球，由2格内的所有敌人分摊，每颗造成85(【法术加成】)魔法伤害。",
+        "3": "获得375(【法术加成】)护盾值，持续2秒，并放出6颗月光法球，由2格内的所有敌人分摊，每颗造成135(【法术加成】)魔法伤害。",
+        "4": "获得525(【法术加成】)护盾值，持续2秒，并放出6颗月光法球，由2格内的所有敌人分摊，每颗造成230(【法术加成】)魔法伤害。"
+      },
+      "to": {
+        "1": "获得150(【法术加成】)护盾值，持续2秒，并放出6颗月光法球，由2格内的所有敌人分摊，每颗造成75(【法术加成】)魔法伤害。",
+        "2": "获得275(【法术加成】)护盾值，持续2秒，并放出6颗月光法球，由2格内的所有敌人分摊，每颗造成115(【法术加成】)魔法伤害。",
+        "3": "获得500(【法术加成】)护盾值，持续2秒，并放出6颗月光法球，由2格内的所有敌人分摊，每颗造成180(【法术加成】)魔法伤害。",
+        "4": "获得525(【法术加成】)护盾值，持续2秒，并放出6颗月光法球，由2格内的所有敌人分摊，每颗造成230(【法术加成】)魔法伤害。"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "3506",
+      "name": "黛安娜",
+      "path": "skill.values_by_star",
+      "from": {
+        "1": "伤害：55(【法术加成】) 55/85/135|护盾值：100(【法术加成】) 100/225/375",
+        "2": "伤害：85(【法术加成】) 55/85/135|护盾值：225(【法术加成】) 100/225/375",
+        "3": "伤害：135(【法术加成】) 55/85/135|护盾值：375(【法术加成】) 100/225/375",
+        "4": "伤害：230(【法术加成】) 55/85/135/230|护盾值：525(【法术加成】) 100/225/375/525"
+      },
+      "to": {
+        "1": "伤害：75(【法术加成】) 75/115/180|护盾值：150(【法术加成】) 150/275/500",
+        "2": "伤害：115(【法术加成】) 75/115/180|护盾值：275(【法术加成】) 150/275/500",
+        "3": "伤害：180(【法术加成】) 75/115/180|护盾值：500(【法术加成】) 150/275/500",
+        "4": "伤害：230(【法术加成】) 75/115/180/230|护盾值：525(【法术加成】) 150/275/500/525"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "3506",
+      "name": "黛安娜",
+      "path": "skill.effects.source_text",
+      "from": "获得100(【法术加成】)护盾值，持续2秒，并放出6颗月光法球，由2格内的所有敌人分摊，每颗造成55(【法术加成】)魔法伤害。",
+      "to": "获得150(【法术加成】)护盾值，持续2秒，并放出6颗月光法球，由2格内的所有敌人分摊，每颗造成75(【法术加成】)魔法伤害。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "3506",
+      "name": "黛安娜",
+      "path": "skill.effects.exact_effect_blocks",
+      "from": [
+        {
+          "scope": "官方值1",
+          "source_text": "伤害：230(【法术加成】) 55/85/135/230"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "护盾值：525(【法术加成】) 100/225/375/525"
+        }
+      ],
+      "to": [
+        {
+          "scope": "官方值1",
+          "source_text": "伤害：230(【法术加成】) 75/115/180/230"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "护盾值：525(【法术加成】) 150/275/500/525"
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "3506",
+      "name": "黛安娜",
+      "path": "attributes_by_star.法力值",
+      "from": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "to": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "3507",
+      "name": "易",
+      "path": "attributes_by_star.物攻",
+      "from": [
+        62,
+        93,
+        139,
+        209
+      ],
+      "to": [
+        60,
+        93,
+        139,
+        209
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "3507",
+      "name": "易",
+      "path": "balance_overrides.physical_form_attack_damage",
+      "from": 62,
+      "to": 60
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "3507",
+      "name": "易",
+      "path": "balance_overrides.spell_form_magic_damage_by_star",
+      "from": [
+        130,
+        195,
+        315
+      ],
+      "to": [
+        125,
+        190,
+        285
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4511",
+      "name": "阿狸",
+      "path": "skill.raw_values",
+      "from": "425/640/3500/5000",
+      "to": "455/685/3500/5000"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4511",
+      "name": "阿狸",
+      "path": "skill.descriptions_by_star",
+      "from": {
+        "1": "对4格内被最多敌人环绕的那个区域发射一颗灵魄炸弹。它对半径3格内的敌人造成425(【法术加成】)魔法伤害，与中心的距离每增加1格，该伤害就会衰减20%。",
+        "2": "对4格内被最多敌人环绕的那个区域发射一颗灵魄炸弹。它对半径3格内的敌人造成640(【法术加成】)魔法伤害，与中心的距离每增加1格，该伤害就会衰减20%。",
+        "3": "对4格内被最多敌人环绕的那个区域发射一颗灵魄炸弹。它对半径3格内的敌人造成3500(【法术加成】)魔法伤害，与中心的距离每增加1格，该伤害就会衰减20%。",
+        "4": "对4格内被最多敌人环绕的那个区域发射一颗灵魄炸弹。它对半径3格内的敌人造成5000(【法术加成】)魔法伤害，与中心的距离每增加1格，该伤害就会衰减20%。"
+      },
+      "to": {
+        "1": "对4格内被最多敌人环绕的那个区域发射一颗灵魄炸弹。它对半径3格内的敌人造成455(【法术加成】)魔法伤害，与中心的距离每增加1格，该伤害就会衰减21%。",
+        "2": "对4格内被最多敌人环绕的那个区域发射一颗灵魄炸弹。它对半径3格内的敌人造成685(【法术加成】)魔法伤害，与中心的距离每增加1格，该伤害就会衰减21%。",
+        "3": "对4格内被最多敌人环绕的那个区域发射一颗灵魄炸弹。它对半径3格内的敌人造成3500(【法术加成】)魔法伤害，与中心的距离每增加1格，该伤害就会衰减21%。",
+        "4": "对4格内被最多敌人环绕的那个区域发射一颗灵魄炸弹。它对半径3格内的敌人造成5000(【法术加成】)魔法伤害，与中心的距离每增加1格，该伤害就会衰减21%。"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4511",
+      "name": "阿狸",
+      "path": "skill.values_by_star",
+      "from": {
+        "1": "伤害：425(【法术加成】) 425/640/3500",
+        "2": "伤害：640(【法术加成】) 425/640/3500",
+        "3": "伤害：3500(【法术加成】) 425/640/3500",
+        "4": "伤害：5000(【法术加成】) 425/640/3500/5000"
+      },
+      "to": {
+        "1": "伤害：455(【法术加成】) 455/685/3500",
+        "2": "伤害：685(【法术加成】) 455/685/3500",
+        "3": "伤害：3500(【法术加成】) 455/685/3500",
+        "4": "伤害：5000(【法术加成】) 455/685/3500/5000"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4511",
+      "name": "阿狸",
+      "path": "skill.effects.source_text",
+      "from": "对4格内被最多敌人环绕的那个区域发射一颗灵魄炸弹。它对半径3格内的敌人造成425(【法术加成】)魔法伤害，与中心的距离每增加1格，该伤害就会衰减20%。",
+      "to": "对4格内被最多敌人环绕的那个区域发射一颗灵魄炸弹。它对半径3格内的敌人造成455(【法术加成】)魔法伤害，与中心的距离每增加1格，该伤害就会衰减21%。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4511",
+      "name": "阿狸",
+      "path": "skill.effects.exact_effect_blocks",
+      "from": [
+        {
+          "scope": "官方值1",
+          "source_text": "伤害：5000(【法术加成】) 425/640/3500/5000"
+        }
+      ],
+      "to": [
+        {
+          "scope": "官方值1",
+          "source_text": "伤害：5000(【法术加成】) 455/685/3500/5000"
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4506",
+      "name": "绯红印记树怪",
+      "path": "skill.raw_values",
+      "from": "170/255/1000/1500|80%/80%/300%/400%",
+      "to": "155/235/1000/1500|80%/80%/300%/400%"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4506",
+      "name": "绯红印记树怪",
+      "path": "skill.descriptions_by_star",
+      "from": {
+        "1": "被动：当目标倒下时，跃至下个目标，从而造成170(【物理加成】)物理伤害。  主动：获得持续8秒的80%物理加成。在此期间，无视40%(【法术加成】)护甲。  红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。",
+        "2": "被动：当目标倒下时，跃至下个目标，从而造成255(【物理加成】)物理伤害。  主动：获得持续8秒的80%物理加成。在此期间，无视40%(【法术加成】)护甲。  红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。",
+        "3": "被动：当目标倒下时，跃至下个目标，从而造成1000(【物理加成】)物理伤害。  主动：获得持续8秒的300%物理加成。在此期间，无视80%(【法术加成】)护甲。  红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。",
+        "4": "被动：当目标倒下时，跃至下个目标，从而造成1500(【物理加成】)物理伤害。  主动：获得持续8秒的400%物理加成。在此期间，无视90%(【法术加成】)护甲。  红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。"
+      },
+      "to": {
+        "1": "被动：当目标倒下时，跃至下个目标，从而造成155(【物理加成】)物理伤害。  主动：获得持续8秒的80%物理加成。在此期间，无视40%(【法术加成】)护甲。  红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。",
+        "2": "被动：当目标倒下时，跃至下个目标，从而造成235(【物理加成】)物理伤害。  主动：获得持续8秒的80%物理加成。在此期间，无视40%(【法术加成】)护甲。  红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。",
+        "3": "被动：当目标倒下时，跃至下个目标，从而造成1000(【物理加成】)物理伤害。  主动：获得持续8秒的300%物理加成。在此期间，无视80%(【法术加成】)护甲。  红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。",
+        "4": "被动：当目标倒下时，跃至下个目标，从而造成1500(【物理加成】)物理伤害。  主动：获得持续8秒的400%物理加成。在此期间，无视90%(【法术加成】)护甲。  红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4506",
+      "name": "绯红印记树怪",
+      "path": "skill.values_by_star",
+      "from": {
+        "1": "跃击伤害：170(【物理加成】) 170/255/1000|额外攻击力：80% 80%/80%/300%|护甲无视：40% = 10% + 30%(【法术加成】)",
+        "2": "跃击伤害：255(【物理加成】) 170/255/1000|额外攻击力：80% 80%/80%/300%|护甲无视：40% = 10% + 30%(【法术加成】)",
+        "3": "跃击伤害：1000(【物理加成】) 170/255/1000|额外攻击力：300% 80%/80%/300%|护甲无视：80% = 10% + 70%(【法术加成】)",
+        "4": "跃击伤害：1500(【物理加成】) 170/255/1000/1500|额外攻击力：400% 80%/80%/300%/400%|护甲无视：90% = 10% + 80%(【法术加成】)"
+      },
+      "to": {
+        "1": "跃击伤害：155(【物理加成】) 155/235/1000|额外攻击力：80% 80%/80%/300%|护甲无视：40% = 10% + 30%(【法术加成】)",
+        "2": "跃击伤害：235(【物理加成】) 155/235/1000|额外攻击力：80% 80%/80%/300%|护甲无视：40% = 10% + 30%(【法术加成】)",
+        "3": "跃击伤害：1000(【物理加成】) 155/235/1000|额外攻击力：300% 80%/80%/300%|护甲无视：80% = 10% + 70%(【法术加成】)",
+        "4": "跃击伤害：1500(【物理加成】) 155/235/1000/1500|额外攻击力：400% 80%/80%/300%/400%|护甲无视：90% = 10% + 80%(【法术加成】)"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4506",
+      "name": "绯红印记树怪",
+      "path": "skill.effects.source_text",
+      "from": "被动：当目标倒下时，跃至下个目标，从而造成170(【物理加成】)物理伤害。  主动：获得持续8秒的80%物理加成。在此期间，无视40%(【法术加成】)护甲。  红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。",
+      "to": "被动：当目标倒下时，跃至下个目标，从而造成155(【物理加成】)物理伤害。  主动：获得持续8秒的80%物理加成。在此期间，无视40%(【法术加成】)护甲。  红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。红霸符：攻击1%灼烧敌人并治疗【绯红印记树怪】4%最大生命值。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4506",
+      "name": "绯红印记树怪",
+      "path": "skill.effects.exact_effect_blocks",
+      "from": [
+        {
+          "scope": "官方值1",
+          "source_text": "跃击伤害：1500(【物理加成】) 170/255/1000/1500"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "额外攻击力：400% 80%/80%/300%/400%"
+        },
+        {
+          "scope": "官方值3",
+          "source_text": "护甲无视：90% = 10% + 80%(【法术加成】)"
+        }
+      ],
+      "to": [
+        {
+          "scope": "官方值1",
+          "source_text": "跃击伤害：1500(【物理加成】) 155/235/1000/1500"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "额外攻击力：400% 80%/80%/300%/400%"
+        },
+        {
+          "scope": "官方值3",
+          "source_text": "护甲无视：90% = 10% + 80%(【法术加成】)"
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4506",
+      "name": "绯红印记树怪",
+      "path": "attributes_by_star.物攻",
+      "from": [
+        115,
+        172,
+        258,
+        387
+      ],
+      "to": [
+        120,
+        172,
+        258,
+        387
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4500",
+      "name": "苍蓝雕纹魔像",
+      "path": "skill.raw_values",
+      "from": "330/430/2000/5000|100/150/3500/9999",
+      "to": "350/450/2000/5000|100/150/3500/9999"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4500",
+      "name": "苍蓝雕纹魔像",
+      "path": "skill.descriptions_by_star",
+      "from": {
+        "1": "获得持续4秒的460(【法术加成】【生命上限】)护盾值。猛击地面，向敌人最密集的方向发出一道裂隙。被命中的敌人会被短暂击飞，受到100(【法术加成】)魔法伤害和10破法。  蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。  破法：提升下一次技能施放的法力消耗。",
+        "2": "获得持续4秒的664(【法术加成】【生命上限】)护盾值。猛击地面，向敌人最密集的方向发出一道裂隙。被命中的敌人会被短暂击飞，受到150(【法术加成】)魔法伤害和10破法。  蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。  破法：提升下一次技能施放的法力消耗。",
+        "3": "获得持续4秒的2521(【法术加成】【生命上限】)护盾值。猛击地面，向敌人最密集的方向发出一道裂隙。被命中的敌人会被短暂击飞，受到3500(【法术加成】)魔法伤害和10破法。  蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。  破法：提升下一次技能施放的法力消耗。",
+        "4": "获得持续4秒的5708(【法术加成】【生命上限】)护盾值。猛击地面，向敌人最密集的方向发出一道裂隙。被命中的敌人会被短暂击飞，受到9999(【法术加成】)魔法伤害和10破法。  蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。  破法：提升下一次技能施放的法力消耗。"
+      },
+      "to": {
+        "1": "获得持续4秒的480(【法术加成】【生命上限】)护盾值。猛击地面，向敌人最密集的方向发出一道裂隙。被命中的敌人会被短暂击飞，受到100(【法术加成】)魔法伤害和10破法。  蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。  破法：提升下一次技能施放的法力消耗。",
+        "2": "获得持续4秒的684(【法术加成】【生命上限】)护盾值。猛击地面，向敌人最密集的方向发出一道裂隙。被命中的敌人会被短暂击飞，受到150(【法术加成】)魔法伤害和10破法。  蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。  破法：提升下一次技能施放的法力消耗。",
+        "3": "获得持续4秒的2521(【法术加成】【生命上限】)护盾值。猛击地面，向敌人最密集的方向发出一道裂隙。被命中的敌人会被短暂击飞，受到3500(【法术加成】)魔法伤害和10破法。  蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。  破法：提升下一次技能施放的法力消耗。",
+        "4": "获得持续4秒的5708(【法术加成】【生命上限】)护盾值。猛击地面，向敌人最密集的方向发出一道裂隙。被命中的敌人会被短暂击飞，受到9999(【法术加成】)魔法伤害和10破法。  蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。  破法：提升下一次技能施放的法力消耗。"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4500",
+      "name": "苍蓝雕纹魔像",
+      "path": "skill.values_by_star",
+      "from": {
+        "1": "护盾值：460 = 10%【生命上限】 + 330(【法术加成】) 330/430/2000|伤害：100(【法术加成】) 100/150/3500",
+        "2": "护盾值：664 = 10%【生命上限】 + 430(【法术加成】) 330/430/2000|伤害：150(【法术加成】) 100/150/3500",
+        "3": "护盾值：2521 = 10%【生命上限】 + 2000(【法术加成】) 330/430/2000|伤害：3500(【法术加成】) 100/150/3500",
+        "4": "护盾值：5708 = 10%【生命上限】 + 5000(【法术加成】) 330/430/2000/5000|伤害：9999(【法术加成】) 100/150/3500/9999"
+      },
+      "to": {
+        "1": "护盾值：480 = 10%【生命上限】 + 350(【法术加成】) 350/450/2000|伤害：100(【法术加成】) 100/150/3500",
+        "2": "护盾值：684 = 10%【生命上限】 + 450(【法术加成】) 350/450/2000|伤害：150(【法术加成】) 100/150/3500",
+        "3": "护盾值：2521 = 10%【生命上限】 + 2000(【法术加成】) 350/450/2000|伤害：3500(【法术加成】) 100/150/3500",
+        "4": "护盾值：5708 = 10%【生命上限】 + 5000(【法术加成】) 350/450/2000/5000|伤害：9999(【法术加成】) 100/150/3500/9999"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4500",
+      "name": "苍蓝雕纹魔像",
+      "path": "skill.effects.source_text",
+      "from": "获得持续4秒的460(【法术加成】【生命上限】)护盾值。猛击地面，向敌人最密集的方向发出一道裂隙。被命中的敌人会被短暂击飞，受到100(【法术加成】)魔法伤害和10破法。  蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。  破法：提升下一次技能施放的法力消耗。",
+      "to": "获得持续4秒的480(【法术加成】【生命上限】)护盾值。猛击地面，向敌人最密集的方向发出一道裂隙。被命中的敌人会被短暂击飞，受到100(【法术加成】)魔法伤害和10破法。  蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。蓝霸符：【苍蓝雕纹魔像】每次施放技能时，友军们就会获得2法力回复。  破法：提升下一次技能施放的法力消耗。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4500",
+      "name": "苍蓝雕纹魔像",
+      "path": "skill.effects.exact_effect_blocks",
+      "from": [
+        {
+          "scope": "官方值1",
+          "source_text": "护盾值：5708 = 10%【生命上限】 + 5000(【法术加成】) 330/430/2000/5000"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "伤害：9999(【法术加成】) 100/150/3500/9999"
+        }
+      ],
+      "to": [
+        {
+          "scope": "官方值1",
+          "source_text": "护盾值：5708 = 10%【生命上限】 + 5000(【法术加成】) 350/450/2000/5000"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "伤害：9999(【法术加成】) 100/150/3500/9999"
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4512",
+      "name": "婕拉",
+      "path": "skill.raw_values",
+      "from": "37/55/225/425",
+      "to": "35/53/225/425"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4512",
+      "name": "婕拉",
+      "path": "skill.descriptions_by_star",
+      "from": {
+        "1": "在战场周围生成2株植物，它们会攻击相距最近的敌人10次。每次攻击造成37(【法术加成】)魔法伤害。",
+        "2": "在战场周围生成2株植物，它们会攻击相距最近的敌人10次。每次攻击造成55(【法术加成】)魔法伤害。",
+        "3": "在战场周围生成4株植物，它们会攻击相距最近的敌人10次。每次攻击造成225(【法术加成】)魔法伤害。",
+        "4": "在战场周围生成4株植物，它们会攻击相距最近的敌人10次。每次攻击造成425(【法术加成】)魔法伤害。"
+      },
+      "to": {
+        "1": "在战场周围生成2株植物，它们会攻击相距最近的敌人10次。每次攻击造成35(【法术加成】)魔法伤害。",
+        "2": "在战场周围生成2株植物，它们会攻击相距最近的敌人10次。每次攻击造成53(【法术加成】)魔法伤害。",
+        "3": "在战场周围生成4株植物，它们会攻击相距最近的敌人10次。每次攻击造成225(【法术加成】)魔法伤害。",
+        "4": "在战场周围生成4株植物，它们会攻击相距最近的敌人10次。每次攻击造成425(【法术加成】)魔法伤害。"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4512",
+      "name": "婕拉",
+      "path": "skill.values_by_star",
+      "from": {
+        "1": "伤害：37(【法术加成】) 37/55/225",
+        "2": "伤害：55(【法术加成】) 37/55/225",
+        "3": "伤害：225(【法术加成】) 37/55/225",
+        "4": "伤害：425(【法术加成】) 37/55/225/425"
+      },
+      "to": {
+        "1": "伤害：35(【法术加成】) 35/53/225",
+        "2": "伤害：53(【法术加成】) 35/53/225",
+        "3": "伤害：225(【法术加成】) 35/53/225",
+        "4": "伤害：425(【法术加成】) 35/53/225/425"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4512",
+      "name": "婕拉",
+      "path": "skill.effects.source_text",
+      "from": "在战场周围生成2株植物，它们会攻击相距最近的敌人10次。每次攻击造成37(【法术加成】)魔法伤害。",
+      "to": "在战场周围生成2株植物，它们会攻击相距最近的敌人10次。每次攻击造成35(【法术加成】)魔法伤害。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "4512",
+      "name": "婕拉",
+      "path": "skill.effects.exact_effect_blocks",
+      "from": [
+        {
+          "scope": "官方值1",
+          "source_text": "伤害：425(【法术加成】) 37/55/225/425"
+        }
+      ],
+      "to": [
+        {
+          "scope": "官方值1",
+          "source_text": "伤害：425(【法术加成】) 35/53/225/425"
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "5459",
+      "name": "拉克丝",
+      "path": "skill.raw_values",
+      "from": "355/550/6500/9999",
+      "to": "375/565/6500/9999"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "5459",
+      "name": "拉克丝",
+      "path": "skill.descriptions_by_star",
+      "from": {
+        "1": "被动：施放时，所有与【拉克丝】拥有同一特质/职业的己方弈子获得3(【法术加成】)法力值。  主动：向最大的敌群发射一道激光，造成355(【法术加成】)魔法伤害，每命中一个敌人，该伤害衰减25%（最低为40%）。",
+        "2": "被动：施放时，所有与【拉克丝】拥有同一特质/职业的己方弈子获得3(【法术加成】)法力值。  主动：向最大的敌群发射一道激光，造成550(【法术加成】)魔法伤害，每命中一个敌人，该伤害衰减25%（最低为40%）。",
+        "3": "被动：施放时，所有与【拉克丝】拥有同一特质/职业的己方弈子获得100(【法术加成】)法力值。  主动：向最大的敌群发射一道激光，造成6500(【法术加成】)魔法伤害，每命中一个敌人，该伤害衰减10%（最低为40%）。",
+        "4": "被动：施放时，所有与【拉克丝】拥有同一特质/职业的己方弈子获得999(【法术加成】)法力值。  主动：向最大的敌群发射一道激光，造成9999(【法术加成】)魔法伤害，每命中一个敌人，该伤害衰减10%（最低为40%）。"
+      },
+      "to": {
+        "1": "被动：施放时，所有与【拉克丝】拥有同一特质/职业的己方弈子获得3(【法术加成】)法力值。  主动：向最大的敌群发射一道激光，造成375(【法术加成】)魔法伤害，每命中一个敌人，该伤害衰减25%（最低为40%）。",
+        "2": "被动：施放时，所有与【拉克丝】拥有同一特质/职业的己方弈子获得3(【法术加成】)法力值。  主动：向最大的敌群发射一道激光，造成565(【法术加成】)魔法伤害，每命中一个敌人，该伤害衰减25%（最低为40%）。",
+        "3": "被动：施放时，所有与【拉克丝】拥有同一特质/职业的己方弈子获得100(【法术加成】)法力值。  主动：向最大的敌群发射一道激光，造成6500(【法术加成】)魔法伤害，每命中一个敌人，该伤害衰减10%（最低为40%）。",
+        "4": "被动：施放时，所有与【拉克丝】拥有同一特质/职业的己方弈子获得999(【法术加成】)法力值。  主动：向最大的敌群发射一道激光，造成9999(【法术加成】)魔法伤害，每命中一个敌人，该伤害衰减10%（最低为40%）。"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "5459",
+      "name": "拉克丝",
+      "path": "skill.values_by_star",
+      "from": {
+        "1": "伤害: 355(【法术加成】) 355/550/6500",
+        "2": "伤害: 550(【法术加成】) 355/550/6500",
+        "3": "伤害: 6500(【法术加成】) 355/550/6500",
+        "4": "伤害: 9999(【法术加成】) 355/550/6500/9999"
+      },
+      "to": {
+        "1": "伤害: 375(【法术加成】) 375/565/6500",
+        "2": "伤害: 565(【法术加成】) 375/565/6500",
+        "3": "伤害: 6500(【法术加成】) 375/565/6500",
+        "4": "伤害: 9999(【法术加成】) 375/565/6500/9999"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "5459",
+      "name": "拉克丝",
+      "path": "skill.effects.source_text",
+      "from": "被动：施放时，所有与【拉克丝】拥有同一特质/职业的己方弈子获得3(【法术加成】)法力值。  主动：向最大的敌群发射一道激光，造成355(【法术加成】)魔法伤害，每命中一个敌人，该伤害衰减25%（最低为40%）。",
+      "to": "被动：施放时，所有与【拉克丝】拥有同一特质/职业的己方弈子获得3(【法术加成】)法力值。  主动：向最大的敌群发射一道激光，造成375(【法术加成】)魔法伤害，每命中一个敌人，该伤害衰减25%（最低为40%）。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "5459",
+      "name": "拉克丝",
+      "path": "skill.effects.exact_effect_blocks",
+      "from": [
+        {
+          "scope": "伤害",
+          "source_text": "9999(【法术加成】) 355/550/6500/9999"
+        }
+      ],
+      "to": [
+        {
+          "scope": "伤害",
+          "source_text": "9999(【法术加成】) 375/565/6500/9999"
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "5454",
+      "name": "艾希",
+      "path": "skill.raw_values",
+      "from": "465/700/1000/1000|2/3/20/20|5/8/200/200|2/3/10/10|4/4/20/20|80/80/40/40",
+      "to": "465/700/1000/1000|2/3/20/20|9/14/200/200|2/3/10/10|3/3/20/20|80/80/40/40"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "5454",
+      "name": "艾希",
+      "path": "skill.descriptions_by_star",
+      "from": {
+        "1": "沿敌人最多的那条直线发射一支箭矢，造成465(【物理加成】)物理伤害，这个伤害每命中一个敌人就会衰减80%(最低为20%)。  这支箭矢会留下一道持续4秒的痕迹，对其中的敌人每秒造成5(【物理加成】) + 2(【法术加成】) + 2%最大生命值的物理伤害，并施加20%缓速效果。  缓速：降低攻击速度。",
+        "2": "沿敌人最多的那条直线发射一支箭矢，造成700(【物理加成】)物理伤害，这个伤害每命中一个敌人就会衰减80%(最低为20%)。  这支箭矢会留下一道持续4秒的痕迹，对其中的敌人每秒造成8(【物理加成】) + 3(【法术加成】) + 3%最大生命值的物理伤害，并施加20%缓速效果。  缓速：降低攻击速度。",
+        "3": "沿敌人最多的那条直线发射一支箭矢，造成1000(【物理加成】)物理伤害，这个伤害每命中一个敌人就会衰减40%(最低为20%)。  这支箭矢会留下一道持续20秒的痕迹，对其中的敌人每秒造成200(【物理加成】) + 20(【法术加成】) + 10%最大生命值的物理伤害，并施加20%缓速效果。  缓速：降低攻击速度。",
+        "4": "沿敌人最多的那条直线发射一支箭矢，造成1000(【物理加成】)物理伤害，这个伤害每命中一个敌人就会衰减40%(最低为20%)。  这支箭矢会留下一道持续20秒的痕迹，对其中的敌人每秒造成200(【物理加成】) + 20(【法术加成】) + 10%最大生命值的物理伤害，并施加20%缓速效果。  缓速：降低攻击速度。"
+      },
+      "to": {
+        "1": "沿敌人最多的那条直线发射一支箭矢，造成465(【物理加成】)物理伤害，这个伤害每命中一个敌人就会衰减80%(最低为20%)。  这支箭矢会留下一道持续3秒的痕迹，对其中的敌人每秒造成9(【物理加成】) + 2(【法术加成】) + 2%最大生命值的物理伤害，并施加20%缓速效果。  缓速：降低攻击速度。",
+        "2": "沿敌人最多的那条直线发射一支箭矢，造成700(【物理加成】)物理伤害，这个伤害每命中一个敌人就会衰减80%(最低为20%)。  这支箭矢会留下一道持续3秒的痕迹，对其中的敌人每秒造成14(【物理加成】) + 3(【法术加成】) + 3%最大生命值的物理伤害，并施加20%缓速效果。  缓速：降低攻击速度。",
+        "3": "沿敌人最多的那条直线发射一支箭矢，造成1000(【物理加成】)物理伤害，这个伤害每命中一个敌人就会衰减40%(最低为20%)。  这支箭矢会留下一道持续20秒的痕迹，对其中的敌人每秒造成200(【物理加成】) + 20(【法术加成】) + 10%最大生命值的物理伤害，并施加20%缓速效果。  缓速：降低攻击速度。",
+        "4": "沿敌人最多的那条直线发射一支箭矢，造成1000(【物理加成】)物理伤害，这个伤害每命中一个敌人就会衰减40%(最低为20%)。  这支箭矢会留下一道持续20秒的痕迹，对其中的敌人每秒造成200(【物理加成】) + 20(【法术加成】) + 10%最大生命值的物理伤害，并施加20%缓速效果。  缓速：降低攻击速度。"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "5454",
+      "name": "艾希",
+      "path": "skill.values_by_star",
+      "from": {
+        "1": "伤害：465【物理加成】 465/700/1000|裂隙伤害：【法术加成】 2/3/20|裂隙伤害：7=5(【物理加成】)+2(【法术加成】) 5/8/200|裂隙最大生命值伤害：2% 2/3/10",
+        "2": "伤害：700【物理加成】 465/700/1000|裂隙伤害：【法术加成】 2/3/20|裂隙伤害：11=8(【物理加成】)+3(【法术加成】) 5/8/200|裂隙最大生命值伤害：3% 2/3/10",
+        "3": "伤害：1000【物理加成】 465/700/1000|裂隙伤害：【法术加成】 2/3/20|裂隙伤害：220=200(【物理加成】)+20(【法术加成】) 5/8/200|裂隙最大生命值伤害：10% 2/3/10",
+        "4": "伤害：1000【物理加成】 465/700/1000/1000|裂隙伤害：【法术加成】 2/3/20/20|裂隙伤害：220=200(【物理加成】)+20(【法术加成】) 5/8/200/200|裂隙最大生命值伤害：10% 2/3/10/10"
+      },
+      "to": {
+        "1": "伤害：465【物理加成】 465/700/1000|裂隙伤害：【法术加成】 2/3/20|裂隙伤害：11=9(【物理加成】)+2(【法术加成】) 9/14/200|裂隙最大生命值伤害：2% 2/3/10",
+        "2": "伤害：700【物理加成】 465/700/1000|裂隙伤害：【法术加成】 2/3/20|裂隙伤害：17=14(【物理加成】)+3(【法术加成】) 9/14/200|裂隙最大生命值伤害：3% 2/3/10",
+        "3": "伤害：1000【物理加成】 465/700/1000|裂隙伤害：【法术加成】 2/3/20|裂隙伤害：220=200(【物理加成】)+20(【法术加成】) 9/14/200|裂隙最大生命值伤害：10% 2/3/10",
+        "4": "伤害：1000【物理加成】 465/700/1000/1000|裂隙伤害：【法术加成】 2/3/20/20|裂隙伤害：220=200(【物理加成】)+20(【法术加成】) 9/14/200/200|裂隙最大生命值伤害：10% 2/3/10/10"
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "5454",
+      "name": "艾希",
+      "path": "skill.effects.source_text",
+      "from": "沿敌人最多的那条直线发射一支箭矢，造成465(【物理加成】)物理伤害，这个伤害每命中一个敌人就会衰减80%(最低为20%)。  这支箭矢会留下一道持续4秒的痕迹，对其中的敌人每秒造成5(【物理加成】) + 2(【法术加成】) + 2%最大生命值的物理伤害，并施加20%缓速效果。  缓速：降低攻击速度。",
+      "to": "沿敌人最多的那条直线发射一支箭矢，造成465(【物理加成】)物理伤害，这个伤害每命中一个敌人就会衰减80%(最低为20%)。  这支箭矢会留下一道持续3秒的痕迹，对其中的敌人每秒造成9(【物理加成】) + 2(【法术加成】) + 2%最大生命值的物理伤害，并施加20%缓速效果。  缓速：降低攻击速度。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "5454",
+      "name": "艾希",
+      "path": "skill.effects.exact_effect_blocks",
+      "from": [
+        {
+          "scope": "官方值1",
+          "source_text": "伤害：1000【物理加成】 465/700/1000/1000"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "裂隙伤害：【法术加成】 2/3/20/20"
+        },
+        {
+          "scope": "官方值3",
+          "source_text": "裂隙伤害：220=200(【物理加成】)+20(【法术加成】) 5/8/200/200"
+        },
+        {
+          "scope": "官方值4",
+          "source_text": "裂隙最大生命值伤害：10% 2/3/10/10"
+        }
+      ],
+      "to": [
+        {
+          "scope": "官方值1",
+          "source_text": "伤害：1000【物理加成】 465/700/1000/1000"
+        },
+        {
+          "scope": "官方值2",
+          "source_text": "裂隙伤害：【法术加成】 2/3/20/20"
+        },
+        {
+          "scope": "官方值3",
+          "source_text": "裂隙伤害：220=200(【物理加成】)+20(【法术加成】) 9/14/200/200"
+        },
+        {
+          "scope": "官方值4",
+          "source_text": "裂隙最大生命值伤害：10% 2/3/10/10"
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "champions",
+      "id": "5450",
+      "name": "茂凯",
+      "path": "attributes_by_star.法力值",
+      "from": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "to": [
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "traits",
+      "id": "459",
+      "name": "日蚀骑士",
+      "path": "breakpoints",
+      "from": [
+        {
+          "color": 3,
+          "count": 3,
+          "effect": "你的所有单位获得5%最大生命值的护盾并造成8%额外魔法伤害。每拥有1名独特的三星【星级】英雄，获得额外加成：  1【星级】：每拥有1名三星英雄，护盾和魔法伤害提升1%。 3【星级】：额外获得15%【攻击速度】和15【护甲】【魔法抗性】。 5【星级】：将40%的额外魔法伤害转化为真实伤害。 8【星级】：在战斗期间内每过4秒，1个3星弈子飞升至4星。  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。",
+          "level": 1
+        }
+      ],
+      "to": [
+        {
+          "color": 3,
+          "count": 3,
+          "effect": "你的所有单位获得5%最大生命值的护盾并造成8%额外魔法伤害。每拥有1名独特的三星【星级】英雄，获得额外加成：  1【星级】：每拥有1名三星英雄，护盾和魔法伤害提升1%。 3【星级】：额外获得15%【攻击速度】和12【护甲】【魔法抗性】。 5【星级】：将40%的额外魔法伤害转化为真实伤害。 8【星级】：在战斗期间内每过4秒，1个3星弈子飞升至4星。  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "traits",
+      "id": "459",
+      "name": "日蚀骑士",
+      "path": "text",
+      "from": {
+        "desc2": "(3)你的所有单位获得5%最大生命值的护盾并造成8%额外魔法伤害。每拥有1名独特的三星【星级】英雄，获得额外加成：  1【星级】：每拥有1名三星英雄，护盾和魔法伤害提升1%。 3【星级】：额外获得15%【攻击速度】和15【护甲】【魔法抗性】。 5【星级】：将40%的额外魔法伤害转化为真实伤害。 8【星级】：在战斗期间内每过4秒，1个3星弈子飞升至4星。  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。",
+        "prefix": "(3)你的所有单位获得5%最大生命值的护盾并造成8%额外魔法伤害。每拥有1名独特的三星【星级】英雄，获得额外加成：  1【星级】：每拥有1名三星英雄，护盾和魔法伤害提升1%。 3【星级】：额外获得15%【攻击速度】和15【护甲】【魔法抗性】。 5【星级】：将40%的额外魔法伤害转化为真实伤害。 8【星级】：在战斗期间内每过4秒，1个3星弈子飞升至4星。  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。"
+      },
+      "to": {
+        "desc2": "(3)你的所有单位获得5%最大生命值的护盾并造成8%额外魔法伤害。每拥有1名独特的三星【星级】英雄，获得额外加成：  1【星级】：每拥有1名三星英雄，护盾和魔法伤害提升1%。 3【星级】：额外获得15%【攻击速度】和12【护甲】【魔法抗性】。 5【星级】：将40%的额外魔法伤害转化为真实伤害。 8【星级】：在战斗期间内每过4秒，1个3星弈子飞升至4星。  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。",
+        "prefix": "(3)你的所有单位获得5%最大生命值的护盾并造成8%额外魔法伤害。每拥有1名独特的三星【星级】英雄，获得额外加成：  1【星级】：每拥有1名三星英雄，护盾和魔法伤害提升1%。 3【星级】：额外获得15%【攻击速度】和12【护甲】【魔法抗性】。 5【星级】：将40%的额外魔法伤害转化为真实伤害。 8【星级】：在战斗期间内每过4秒，1个3星弈子飞升至4星。  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。"
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "traits",
+      "id": "451",
+      "name": "黑荆棘",
+      "fields": {
+        "balance_overrides": {
+          "tank_sacrifice_resistances": 12
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "traits",
+      "id": "465",
+      "name": "赏金猎人",
+      "fields": {
+        "balance_overrides": {
+          "bounty_changes": [
+            {
+              "reward": {
+                "kind": "champion",
+                "cost": 4
+              },
+              "requirement": {
+                "kind": "spell_casts",
+                "count": 6
+              },
+              "previous_requirement_count": 5
+            },
+            {
+              "requirement": {
+                "kind": "spell_casts",
+                "count": 8
+              },
+              "reward": {
+                "kind": "shop_refreshes",
+                "count": 6
+              },
+              "previous_reward_count": 10
+            },
+            {
+              "reward": {
+                "kind": "champion",
+                "cost": 5
+              },
+              "requirement": {
+                "kind": "attacks",
+                "count": 60
+              },
+              "previous_requirement_count": 50
+            },
+            {
+              "match_reward": {
+                "kind": "gold",
+                "amount": 12
+              },
+              "reward": {
+                "kind": "gold",
+                "amount": 7
+              },
+              "requirement_status": "not_specified_in_patch"
+            },
+            {
+              "reward": {
+                "kind": "gold",
+                "amount": 7
+              },
+              "requirement": {
+                "kind": "damage",
+                "amount": 10000
+              },
+              "previous_requirement_amount": 8000
+            },
+            {
+              "reward": {
+                "kind": "gold",
+                "amount": 12
+              },
+              "requirement": {
+                "kind": "kills",
+                "count": 8
+              },
+              "previous_requirement_count": 6
+            }
+          ],
+          "bounty_mapping_status": "user_declared_deltas_without_inherited_task_rows"
+        }
+      }
+    },
+    {
+      "kind": "disable",
+      "catalog": "sprites",
+      "id": "181182",
+      "name": "小人国",
+      "reason": "temporarily_disabled_in_18_2a"
+    },
+    {
+      "kind": "disable",
+      "catalog": "sprites",
+      "id": "181182",
+      "name": "小人国",
+      "variant_id": "181182",
+      "reason": "temporarily_disabled_in_18_2a"
+    },
+    {
+      "kind": "disable",
+      "catalog": "sprites",
+      "id": "181182",
+      "name": "小人国",
+      "variant_id": "181183",
+      "reason": "temporarily_disabled_in_18_2a"
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "sprites",
+      "id": "181032",
+      "name": "高阶变形术",
+      "fields": {
+        "offer_conditions": {
+          "first_sprite_of_preparation_phase_only": true
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "sprites",
+      "id": "181032",
+      "name": "高阶变形术",
+      "variant_id": "181032",
+      "fields": {
+        "offer_conditions": {
+          "first_sprite_of_preparation_phase_only": true
+        }
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "sprites",
+      "id": "181032",
+      "name": "高阶变形术",
+      "variant_id": "181032",
+      "path": "description",
+      "from": "你拥有的1个随机4费弈子会永久变形为1个5费弈子。",
+      "to": "你拥有的1个随机4费弈子会永久变形为1个5费弈子。仅作为每个准备阶段的第一个自然仙灵出现。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "sprites",
+      "id": "181032",
+      "name": "高阶变形术",
+      "variant_id": "181032",
+      "path": "effects.source_text",
+      "from": "你拥有的1个随机4费弈子会永久变形为1个5费弈子。",
+      "to": "你拥有的1个随机4费弈子会永久变形为1个5费弈子。仅作为每个准备阶段的第一个自然仙灵出现。"
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "sprites",
+      "id": "181032",
+      "name": "高阶变形术",
+      "variant_id": "181033",
+      "fields": {
+        "offer_conditions": {
+          "first_sprite_of_preparation_phase_only": true
+        }
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "sprites",
+      "id": "181032",
+      "name": "高阶变形术",
+      "variant_id": "181033",
+      "path": "description",
+      "from": "你拥有的那个星级最高的4费弈子永久变形为1个5费弈子。",
+      "to": "你拥有的那个星级最高的4费弈子永久变形为1个5费弈子。仅作为每个准备阶段的第一个自然仙灵出现。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "sprites",
+      "id": "181032",
+      "name": "高阶变形术",
+      "variant_id": "181033",
+      "path": "effects.source_text",
+      "from": "你拥有的那个星级最高的4费弈子永久变形为1个5费弈子。",
+      "to": "你拥有的那个星级最高的4费弈子永久变形为1个5费弈子。仅作为每个准备阶段的第一个自然仙灵出现。"
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "sprites",
+      "id": "181036",
+      "name": "低阶变形术",
+      "fields": {
+        "offer_conditions": {
+          "first_sprite_of_preparation_phase_only": true
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "sprites",
+      "id": "181036",
+      "name": "低阶变形术",
+      "variant_id": "181036",
+      "fields": {
+        "offer_conditions": {
+          "first_sprite_of_preparation_phase_only": true
+        }
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "sprites",
+      "id": "181036",
+      "name": "低阶变形术",
+      "variant_id": "181036",
+      "path": "description",
+      "from": "你拥有的1个随机1费弈子永久变形为1个2费弈子。",
+      "to": "你拥有的1个随机1费弈子永久变形为1个2费弈子。仅作为每个准备阶段的第一个自然仙灵出现。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "sprites",
+      "id": "181036",
+      "name": "低阶变形术",
+      "variant_id": "181036",
+      "path": "effects.source_text",
+      "from": "你拥有的1个随机1费弈子永久变形为1个2费弈子。",
+      "to": "你拥有的1个随机1费弈子永久变形为1个2费弈子。仅作为每个准备阶段的第一个自然仙灵出现。"
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "sprites",
+      "id": "181036",
+      "name": "低阶变形术",
+      "variant_id": "181037",
+      "fields": {
+        "offer_conditions": {
+          "first_sprite_of_preparation_phase_only": true
+        }
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "sprites",
+      "id": "181036",
+      "name": "低阶变形术",
+      "variant_id": "181037",
+      "path": "description",
+      "from": "你拥有的那个星级最高的1费弈子永久变形为1个2费弈子。",
+      "to": "你拥有的那个星级最高的1费弈子永久变形为1个2费弈子。仅作为每个准备阶段的第一个自然仙灵出现。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "sprites",
+      "id": "181036",
+      "name": "低阶变形术",
+      "variant_id": "181037",
+      "path": "effects.source_text",
+      "from": "你拥有的那个星级最高的1费弈子永久变形为1个2费弈子。",
+      "to": "你拥有的那个星级最高的1费弈子永久变形为1个2费弈子。仅作为每个准备阶段的第一个自然仙灵出现。"
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "sprites",
+      "id": "181042",
+      "name": "变形术",
+      "fields": {
+        "offer_conditions": {
+          "first_sprite_of_preparation_phase_only": true
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "sprites",
+      "id": "181042",
+      "name": "变形术",
+      "variant_id": "181042",
+      "fields": {
+        "offer_conditions": {
+          "first_sprite_of_preparation_phase_only": true
+        }
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "sprites",
+      "id": "181042",
+      "name": "变形术",
+      "variant_id": "181042",
+      "path": "description",
+      "from": "你拥有的1个随机2费弈子会永久变形为1个3费弈子。",
+      "to": "你拥有的1个随机2费弈子会永久变形为1个3费弈子。仅作为每个准备阶段的第一个自然仙灵出现。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "sprites",
+      "id": "181042",
+      "name": "变形术",
+      "variant_id": "181042",
+      "path": "effects.source_text",
+      "from": "你拥有的1个随机2费弈子会永久变形为1个3费弈子。",
+      "to": "你拥有的1个随机2费弈子会永久变形为1个3费弈子。仅作为每个准备阶段的第一个自然仙灵出现。"
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "sprites",
+      "id": "181042",
+      "name": "变形术",
+      "variant_id": "181043",
+      "fields": {
+        "offer_conditions": {
+          "first_sprite_of_preparation_phase_only": true
+        }
+      }
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "sprites",
+      "id": "181042",
+      "name": "变形术",
+      "variant_id": "181043",
+      "path": "description",
+      "from": "你拥有的那个星级最高的2费弈子永久变形为1个3费弈子。",
+      "to": "你拥有的那个星级最高的2费弈子永久变形为1个3费弈子。仅作为每个准备阶段的第一个自然仙灵出现。"
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "sprites",
+      "id": "181042",
+      "name": "变形术",
+      "variant_id": "181043",
+      "path": "effects.source_text",
+      "from": "你拥有的那个星级最高的2费弈子永久变形为1个3费弈子。",
+      "to": "你拥有的那个星级最高的2费弈子永久变形为1个3费弈子。仅作为每个准备阶段的第一个自然仙灵出现。"
+    }
+    ,{
+      "kind": "replace_text",
+      "catalog": "champions",
+      "id": "4506",
+      "name": "绯红印记树怪",
+      "replacements": [
+        { "from": "无视40%(【法术加成】)护甲", "to": "无视45%(【法术加成】)护甲" },
+        { "from": "护甲无视：40% = 10% + 30%(【法术加成】)", "to": "护甲无视：45% = 15% + 30%(【法术加成】)" }
+      ]
+    }
+  ],
+  "inherited_balance_delta": {
+    "release_version": "18.2",
+    "operation_count": 27,
+    "source_path": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/balance-changes-18.2.json",
+    "target_baseline_generation_id": "4d08f8301b7fc1a99a99a80c6f7f5d8268d35a90ace7d320d212a821ca12d999"
+  }
+}

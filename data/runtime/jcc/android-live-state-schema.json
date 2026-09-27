@@ -1,0 +1,188 @@
+{
+  "contract_id": "jcc-android-runtime-live-state-schema",
+  "purpose": "Generic Android ADB runtime live_state schema for JCC in-game state ingestion.",
+  "source_policy": "Use legal observable Android sources only. Unknown values remain unknown; do not hallucinate.",
+  "sections": {
+    "match": {
+      "label": "Match identity and lifecycle",
+      "fields": [
+        { "key": "match_id", "type": "string_or_null" },
+        { "key": "game_start_time", "type": "string_or_null" },
+        { "key": "game_end_time", "type": "string_or_null" },
+        { "key": "status", "type": "loading|in_game|ended|unknown" },
+        { "key": "mode", "type": "string_or_null" },
+        { "key": "set", "type": "string_or_null" },
+        { "key": "patch", "type": "string_or_null" }
+      ]
+    },
+    "local": {
+      "label": "Local player binding",
+      "fields": [
+        { "key": "local_chair_id", "type": "number_or_null" },
+        { "key": "binding_status", "type": "strongly_bound|weakly_bound|unbound" },
+        { "key": "binding_source", "type": "string_or_null" },
+        { "key": "binding_confidence", "type": "number" },
+        { "key": "binding_evidence", "type": "evidence_pointer_or_null" }
+      ]
+    },
+    "phase": {
+      "label": "Phase and timing",
+      "fields": [
+        { "key": "phase", "type": "string_or_unknown" },
+        { "key": "round", "type": "string_or_unknown" },
+        { "key": "stage", "type": "number_or_unknown" },
+        { "key": "turn_count", "type": "number_or_unknown" },
+        { "key": "planning_timer", "type": "number_or_unknown" },
+        { "key": "combat_timer", "type": "number_or_unknown" }
+      ]
+    },
+    "economy": {
+      "label": "Local economy",
+      "fields": [
+        { "key": "hp", "type": "number_or_unknown" },
+        { "key": "gold", "type": "number_or_unknown" },
+        { "key": "level", "type": "number_or_unknown" },
+        { "key": "xp", "type": "number_or_unknown" },
+        { "key": "xp_to_next", "type": "number_or_unknown" },
+        { "key": "interest", "type": "number_or_unknown" },
+        { "key": "streak", "type": "object_or_unknown" },
+        { "key": "income", "type": "object_or_unknown" },
+        { "key": "free_rerolls", "type": "number_or_unknown" },
+        { "key": "shop_locked", "type": "boolean_or_unknown" }
+      ]
+    },
+    "shop": {
+      "label": "Shop state",
+      "fields": [
+        { "key": "shop_units", "type": "array" },
+        { "key": "refresh_count", "type": "number_or_unknown" },
+        { "key": "lock_state", "type": "boolean_or_unknown" }
+      ]
+    },
+    "board": {
+      "label": "Board state",
+      "fields": [
+        { "key": "board_units", "type": "array" },
+        { "key": "board_size", "type": "number_or_unknown" },
+        { "key": "max_units", "type": "number_or_unknown" }
+      ]
+    },
+    "bench": {
+      "label": "Bench state",
+      "fields": [
+        { "key": "bench_units", "type": "array" },
+        { "key": "bench_full", "type": "boolean_or_unknown" },
+        { "key": "special_slots", "type": "array_or_unknown" }
+      ]
+    },
+    "items": {
+      "label": "Items and inventory",
+      "fields": [
+        { "key": "item_bench", "type": "array" },
+        { "key": "equipped_items", "type": "array" },
+        { "key": "components", "type": "array" },
+        { "key": "completed", "type": "array" },
+        { "key": "radiant_items", "type": "array" },
+        { "key": "artifact_items", "type": "array" },
+        { "key": "support_items", "type": "array" },
+        { "key": "emblems", "type": "array" },
+        { "key": "anvils", "type": "array" },
+        { "key": "reforgers", "type": "array" },
+        { "key": "removers", "type": "array" },
+        { "key": "duplicators", "type": "array" },
+        { "key": "loot_orbs", "type": "array" }
+      ]
+    },
+    "augments": {
+      "label": "Augments and hex choices",
+      "fields": [
+        { "key": "selection_active", "type": "boolean_or_unknown" },
+        { "key": "choices", "type": "array" },
+        { "key": "selected_augments", "type": "array" },
+        { "key": "rerolls", "type": "number_or_unknown" }
+      ]
+    },
+    "variables": {
+      "label": "Descriptor-owned set-specific match variables",
+      "fields": [
+        { "key": "other_set_variables", "type": "object" }
+      ]
+    },
+    "traits": {
+      "label": "Trait state",
+      "fields": [
+        { "key": "active_traits", "type": "array" }
+      ]
+    },
+    "carousel": {
+      "label": "Carousel state",
+      "fields": [
+        { "key": "active", "type": "boolean_or_unknown" },
+        { "key": "available_units", "type": "array" },
+        { "key": "can_pick_now", "type": "boolean_or_unknown" },
+        { "key": "selected_pick", "type": "object_or_unknown" }
+      ]
+    },
+    "rewards": {
+      "label": "Reward and choice UI",
+      "fields": [
+        { "key": "active", "type": "boolean_or_unknown" },
+        { "key": "choices", "type": "array" },
+        { "key": "selected_reward", "type": "object_or_unknown" },
+        { "key": "blocking_choice", "type": "object_or_unknown" }
+      ]
+    },
+    "opponents": {
+      "label": "Opponents and lobby",
+      "fields": [
+        { "key": "alive_count", "type": "number_or_unknown" },
+        { "key": "current_rank", "type": "number_or_unknown" },
+        { "key": "next_opponent", "type": "object_or_unknown" },
+        { "key": "current_opponent", "type": "object_or_unknown" }
+      ]
+    },
+    "combat": {
+      "label": "Combat state",
+      "fields": [
+        { "key": "active", "type": "boolean_or_unknown" },
+        { "key": "opponent_chair_id", "type": "number_or_unknown" },
+        { "key": "is_home_board", "type": "boolean_or_unknown" },
+        { "key": "result", "type": "object_or_unknown" },
+        { "key": "win_loss", "type": "string_or_unknown" },
+        { "key": "damage_taken", "type": "number_or_unknown" },
+        { "key": "damage_dealt", "type": "number_or_unknown" },
+        { "key": "earned_money", "type": "number_or_unknown" },
+        { "key": "remaining_units", "type": "array_or_unknown" }
+      ]
+    },
+    "actions": {
+      "label": "Action availability",
+      "fields": [
+        { "key": "can_buy", "type": "boolean_or_unknown" },
+        { "key": "can_sell", "type": "boolean_or_unknown" },
+        { "key": "can_level", "type": "boolean_or_unknown" },
+        { "key": "can_roll", "type": "boolean_or_unknown" },
+        { "key": "can_move", "type": "boolean_or_unknown" },
+        { "key": "can_equip", "type": "boolean_or_unknown" },
+        { "key": "can_choose_augment", "type": "boolean_or_unknown" },
+        { "key": "can_choose_reward", "type": "boolean_or_unknown" },
+        { "key": "can_pick_carousel", "type": "boolean_or_unknown" },
+        { "key": "unavailable_reason", "type": "string_or_unknown" }
+      ]
+    },
+    "metadata": {
+      "label": "Runtime metadata",
+      "fields": [
+        { "key": "source_health", "type": "object" },
+        { "key": "adb_device_id", "type": "string_or_null" },
+        { "key": "emulator_profile", "type": "string_or_unknown" },
+        { "key": "foreground_package", "type": "string_or_unknown" },
+        { "key": "freshness", "type": "object" },
+        { "key": "missing_fields", "type": "array" },
+        { "key": "stale_fields", "type": "array" },
+        { "key": "partial_fields", "type": "array" },
+        { "key": "fallback_fields", "type": "array" }
+      ]
+    }
+  }
+}

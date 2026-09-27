@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "product": "JCC Runtime",
+  "platform": "windows-x64",
+  "bundled": {
+    "electron": true,
+    "node_runtime": "electron",
+    "runtime_root": "resources/ui/electron",
+    "daemon_node_dependencies": { "minisearch": "resources/node_modules/minisearch" },
+    "tools_root": "resources/tools",
+    "data_root": "resources/data",
+    "host_contract": ["resources/AGENTS.md", "resources/CLAUDE.md"],
+    "adb": {
+      "required": true,
+      "root": "resources/adb",
+      "files": ["adb.exe", "AdbWinApi.dll", "AdbWinUsbApi.dll"]
+    },
+    "ocr": {
+      "required": true,
+      "runtime_root": "resources/ocr",
+      "python": "resources/ocr/python/python.exe",
+      "engine": "RapidOCR + ONNX Runtime CPU",
+      "config": "data/runtime/jcc/rapidocr-ppocrv5-mobile.yaml",
+      "model_root": "resources/ocr/models/ppocrv5-mobile",
+      "offline_first_run": true
+    },
+    "game_data": {
+      "core": "data/game-knowledge/jcc/active-profile.json -> data/game-knowledge/jcc/generated/<core_profile_id>/",
+      "common": "data/game-knowledge/jcc/common/ plus the active Core bundle",
+      "active_ranking": "data/live-rankings/jcc/active-generation.json -> data/live-rankings/jcc/generations/<generation_id>/",
+      "history_generations": 2,
+      "trend_days": 14
+    }
+  },
+  "external": {
+    "host_cli": ["codex", "kimi-code"],
+    "provider_auth": "user-owned",
+    "android_emulator": "user-owned",
+    "adb_enabled": true,
+    "game_and_companion": "user-owned"
+  },
+  "writable_data": {
+    "source": "electron.app.getPath('userData')",
+    "subdirectory": "runtime-data",
+    "must_not_default_to_install_directory": true
+  },
+    "release_gate": {
+      "missing_resource_is_build_error": true,
+      "clean_windows_without_node_or_python": true,
+      "offline_ocr_smoke": true,
+      "installed_path_adb_smoke": true,
+      "user_data_write_smoke": true,
+    "nsis_uninstaller_present": true,
+    "packaged_daemon_health_and_sqlite": true,
+      "uninstall_preserves_user_data_by_default": true,
+      "uninstall_opt_in_removes_current_user_data_and_logs": true,
+      "upgrade_preserves_user_data": true
+    }
+}

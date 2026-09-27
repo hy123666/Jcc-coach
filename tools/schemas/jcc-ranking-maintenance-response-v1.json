@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jcc-ranking-maintenance-response-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "target_identity", "input_hash", "annotations"],
+  "properties": {
+    "schema": {
+      "type": "string",
+      "const": "jcc-ranking-maintenance-response-v1"
+    },
+    "target_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_season_id",
+        "active_patch_id",
+        "game_mode_id",
+        "core_profile_id",
+        "hard_data_manifest_fingerprint",
+        "catalog_source_fingerprint",
+        "battle_type",
+        "lineup_version_id",
+        "ranking_set_id"
+      ],
+      "properties": {
+        "runtime_season_id": { "type": "string" },
+        "active_patch_id": { "type": "string" },
+        "game_mode_id": { "type": "string" },
+        "core_profile_id": { "type": "string" },
+        "hard_data_manifest_fingerprint": { "type": "string" },
+        "catalog_source_fingerprint": { "type": "string" },
+        "battle_type": { "type": "string" },
+        "lineup_version_id": { "type": "string" },
+        "ranking_set_id": { "type": "string" }
+      }
+    },
+    "input_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "annotations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "lineup_id",
+          "confidence",
+          "formation_burden",
+          "flexibility",
+          "strategy_style",
+          "condition_flags",
+          "rationale_codes"
+        ],
+        "properties": {
+          "lineup_id": { "type": "string", "minLength": 1, "maxLength": 160 },
+          "confidence": { "enum": ["low", "medium", "high"] },
+          "formation_burden": { "enum": ["low", "medium", "high", "unknown"] },
+          "flexibility": { "enum": ["low", "medium", "high", "unknown"] },
+          "strategy_style": {
+            "enum": [
+              "standard_leveling",
+              "fast_leveling",
+              "slow_roll",
+              "hyper_roll",
+              "conditional_vertical",
+              "flexible_transition",
+              "unknown"
+            ]
+          },
+          "condition_flags": {
+            "type": "array",
+            "maxItems": 8,
+            "items": {
+              "enum": [
+                "item_dependent",
+                "augment_dependent",
+                "emblem_dependent",
+                "three_star_dependent",
+                "high_cost_core",
+                "low_flexibility",
+                "transition_sensitive",
+                "low_sample_context"
+              ]
+            }
+          },
+          "rationale_codes": {
+            "type": "array",
+            "maxItems": 8,
+            "items": {
+              "enum": [
+                "new_current_day_recipe",
+                "core_roster_changed",
+                "main_carry_changed",
+                "equipment_requirements_changed",
+                "transition_structure_changed",
+                "condition_requirements_changed",
+                "lifecycle_changed",
+                "semantic_profile_unchanged",
+                "semantic_annotation_retry"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "schema": "jcc-cruise-strategy-semantics-contract-v1",
+  "purpose": "Provide non-binding tactical vocabulary and heuristic labels for runtime cruise-mode advice. This file must not become the strategy engine.",
+  "binding_policy": {
+    "is_hard_rule_source": false,
+    "is_strategy_source": false,
+    "is_language_and_intent_layer": true,
+    "decision_source_order": [
+      "current match live_state",
+      "JCC hard-data",
+      "current-Match captured Zhangmeng/Tencent Master+ Ranking Overlay evidence when available",
+      "user preferences and current-match confirmed variables",
+      "tactical vocabulary labels from this file"
+    ],
+    "rule": "Cruise advice must be computed from live_state, hard data, compatible Match-captured Zhangmeng/Tencent Master+ ranking evidence when available, and current context. Terms such as fast_8 or slow_roll are labels for explaining and organizing decisions, not fixed prescriptions."
+  },
+  "source_policy": {
+    "tft_lab_glossary": {
+      "url": "https://tft-lab.com/zh/handbook/glossary",
+      "use": "Shared tactics terminology and intent labels only. Do not treat glossary terms as mandatory strategy rules."
+    },
+    "jcc_hard_data": {
+      "use": "Authoritative entity, item, trait, augment, god, encounter, and formula data."
+    },
+    "live_rankings": {
+      "use": "Compatible Zhangmeng/Tencent Master+ typed evidence for current-day lineup strength, atomic recipes, hero heat, and item priors. It is fixed at Start Match and cannot override current match evidence."
+    }
+  },
+  "integrated_decision_orchestration": {
+    "common_framework": "data/game-knowledge/jcc/common/cruise-decision-framework.json",
+    "runtime_implementation": "ui/electron/cruise-decision-orchestrator.js",
+    "purpose": "Project verified current-Match facts and active Core semantic features into one bounded decision snapshot shared by proactive Cruise and direct strategy questions, then reconcile existing domain-evaluator evidence before the single Host-owned answer.",
+    "fixed_checkpoint_agenda": {
+      "implementation": "ui/electron/cruise-checkpoint-agenda.js",
+      "primary_cadence": true,
+      "fixed_checkpoint_is_obligation_not_canned_answer": true,
+      "choice_windows": ["2-1", "3-2", "4-2"],
+      "checkpoint_stages": ["2-2", "2-7", "3-3", "3-5", "3-7", "4-3", "4-5", "5-1", "5-3", "5-7", "6-1", "6-3"],
+      "strategy_blocks": {
+        "lineup_direction_commitment": ["2-2", "2-7", "3-3", "4-3"],
+        "formation_readiness_and_execution": ["3-5", "3-7", "4-5"],
+        "cap_floor_endgame": ["5-1", "5-3", "5-7", "6-1", "6-3"]
+      },
+      "recovery_stages": [
+        {
+          "stage_round": "2-5",
+          "recovery_id": "recover_direction_exploration",
+          "strategy_block_id": "lineup_direction_commitment",
+          "recovers_checkpoint_ids": ["direction_exploration"],
+          "completion_policy": "pending_or_partial_only",
+      "host_task_policy": "recover_existing_or_add_conditional_window",
+      "conditional_windows": ["one_cost_reroll_window"],
+      "completed_source_policy": "silent_unless_a_registered_conditional_window_applies"
+        }
+      ],
+      "folded_stages": {"4-4": "4-3", "5-4": "5-3", "6-4": "6-3"},
+      "supporting_event_policy": "Ordinary economy, shop, board, bench, HP, and equipment events are facts for the next fixed checkpoint or explicit structured-card action; they never open, preempt, or create a separate Host answer lane. No urgent, pivot, or delivery-recovery exception creates an automatic lane. The fixed checkpoint or explicit card action consumes the newest verified evidence.",
+    "recovery_policy": "2-5 resumes an unresolved direction_exploration obligation from 2-2 without creating a second exploration or ranking pass. It may create one conditional one_cost_reroll_window obligation only for a durable one-cost reroll target; otherwise a complete 2-2 delivery makes 2-5 silent.",
+      "delay_policy": "A fixed checkpoint that is blocked or slow remains pending, is recomputed from the newest verified snapshot, and is delivered at the next viable point. A same-block later checkpoint may absorb it only after the earlier checkpoint's catch-up window closes; the absorbed context remains auditable and is not silently discarded or replayed with stale wording.",
+      "answer_priority": "lineup_direction_first_then_economy_and_equipment_tempo_as_supporting_content",
+      "candidate_identity_policy": "2-2 uses the Master+ standard atomic roster as the primary candidate. A mature winning or popular variant may be mentioned only with explicit removed/added units and trait differences; it is not automatically promoted into a separate backup branch. At 4-3 the selected standard, winning, popular, or user-custom identity is locked and later advice cannot silently merge another lineup's members, equipment, or cap path."
+    },
+    "shared_axes": [
+      "survival_value",
+      "immediate_power_delta",
+      "economy_trajectory",
+      "progression_value",
+      "formation_progress",
+      "payout_readiness",
+      "flexibility",
+      "transition_cost",
+      "time_to_value",
+      "risk",
+      "confidence"
+    ],
+    "pipeline": [
+      "resolve one current-Match snapshot",
+      "project verified facts to Common semantic features",
+      "resolve active, pending, and unresolved effects against the Match-pinned Core",
+      "invoke only relevant existing domain evaluators",
+      "normalize equivalent action proposals",
+      "resolve mutually exclusive actions deterministically",
+      "attach one bounded integrated evidence packet to the existing answer owner",
+      "let the Host apply Common doctrine and explain one coherent decision"
+    ],
+    "implemented_evaluator_inputs": [
+      "economy_projection",
+      "lineup_direction",
+      "confirmed_augment_effect",
+      "confirmed_equipment_effect",
+      "verified_active_trait_effect"
+    ],
+    "extension_evaluators": [
+      "board_stabilization",
+      "roll_or_level",
+      "itemization",
+      "transition",
+      "positioning"
+    ],
+    "action_contract": {
+      "canonical_identity": "conflict_domain plus operation",
+      "equivalent_actions_merge_with_provenance": true,
+      "one_selected_action_per_conflict_domain": true,
+      "comparator_order": [
+        "typed legality and survival constraints",
+        "explicit priority band",
+        "stable canonical action id"
+      ],
+      "forbid_cross_route_score_comparison": true,
+      "suppressed_action_requires_typed_reason": true,
+      "compatible_actions_share_one_plan": true
+    },
+    "evidence_packet": {
+      "schema": "jcc-cruise-integrated-evidence-packet-v1",
+      "required_fields": [
+        "snapshot_identity",
+        "active_effect_refs",
+        "contributing_route_ids",
+        "selected_actions",
+        "suppressed_actions"
+      ],
+      "bounds": {
+        "active_effect_refs": 8,
+        "contributing_route_ids": 8,
+        "selected_actions": 4,
+        "suppressed_actions": 4
+      },
+      "forbidden_content": [
+        "complete live state",
+        "raw ranking payload",
+        "complete hard-data catalog",
+        "duplicated route packets"
+      ]
+    },
+    "performance_budget": {
+      "local_decision_total_p95_ms": 200,
+      "host_calls_per_visible_answer": 1,
+      "unchanged_decision_fingerprint_does_not_open_new_host_answer": true
+    },
+    "boundaries": {
+      "does_not_replace_common_doctrine": true,
+      "does_not_create_global_score": true,
+      "does_not_create_sixth_lineup_component": true,
+      "does_not_compare_route_local_scores_as_probabilities": true,
+      "does_not_create_sibling_answer": true,
+      "does_not_persist_match_features_after_stop": true,
+      "season_entities_come_only_from_captured_core": true,
+      "delayed_semantics_do_not_prove_pending_lifecycle": true,
+      "runtime_orchestration_is_not_owned_by_common": true
+    }
+  },
+  "strategy_archetypes": [
+    {
+      "id": "fast_8",
+      "terms": [
+        "快 8",
+        "Fast 8"
+      ],
+      "meaning": "Use economy and XP to reach level 8 quickly, usually to access 4-cost carries before the lobby.",
+      "cruise_use": "Check whether HP, streak, economy, items, and target carry availability support staying greedy toward level 8."
+    },
+    {
+      "id": "slow_roll",
+      "terms": [
+        "慢 D",
+        "Slow roll"
+      ],
+      "meaning": "Stay at a level and roll excess gold above interest thresholds to hit specific 3-star units.",
+      "cruise_use": "Trigger when current board needs low/mid-cost upgrades and the shop odds/bench pairs support holding level."
+    },
+    {
+      "id": "hyper_roll",
+      "terms": [
+        "梭哈",
+        "Hyper roll"
+      ],
+      "meaning": "Spend aggressively at low levels to hit low-cost 3-star units.",
+      "cruise_use": "Only suggest when pairs, contested state, HP, and economy make a low-cost 3-star line realistic."
+    },
+    {
+      "id": "open_fort_lose_streak",
+      "terms": [
+        "空城",
+        "连败",
+        "吃连败",
+        "Open fort",
+        "Lose streak"
+      ],
+      "meaning": "Intentionally keep board weak to preserve lose streak, economy, and priority.",
+      "cruise_use": "Guard the plan: do not accidentally break streak unless shop/HP/lobby state makes pivoting to tempo correct."
+    },
+    {
+      "id": "win_streak_tempo",
+      "terms": [
+        "连胜",
+        "节奏",
+        "Win streak",
+        "Tempo"
+      ],
+      "meaning": "Play immediate strength to preserve streak and pressure the lobby.",
+      "cruise_use": "Suggest leveling, slamming items, or buying board strength when the win streak is defendable."
+    },
+    {
+      "id": "sit_on_gold_interest",
+      "terms": [
+        "攒利息",
+        "Sit on gold",
+        "Greed"
+      ],
+      "meaning": "Avoid rolling or leveling to preserve interest thresholds.",
+      "cruise_use": "Compare interest breakpoints against holding pairs, key units, and HP risk."
+    },
+    {
+      "id": "roll_down_stabilize",
+      "terms": [
+        "一波 D",
+        "大 D",
+        "Roll down",
+        "Stabilize"
+      ],
+      "meaning": "Spend significant gold at a timing window to stop bleeding or complete a board spike.",
+      "cruise_use": "Trigger when HP, stage damage, board weakness, and level/shop odds imply survival risk."
+    },
+    {
+      "id": "pivot",
+      "terms": [
+        "转型",
+        "Pivot"
+      ],
+      "meaning": "Change composition or carry line based on items, augments, shops, or lobby contest.",
+      "cruise_use": "Trigger when current target is contested or unsupported while another line has better evidence."
+    },
+    {
+      "id": "capped_board",
+      "terms": [
+        "拉满",
+        "满配",
+        "Capped board"
+      ],
+      "meaning": "Late-game board with high population, upgraded carries, and correct items.",
+      "cruise_use": "Evaluate whether the current route can cap high enough or needs a higher-ceiling pivot."
+    }
+  ],
+  "operation_terms": [
+    {
+      "id": "refresh",
+      "terms": [
+        "D 牌",
+        "Refresh"
+      ],
+      "cruise_use": "Control when rolling is justified versus preserving economy."
+    },
+    {
+      "id": "sit_on_level",
+      "terms": [
+        "卡级",
+        "Sit on level"
+      ],
+      "cruise_use": "Use when shop odds favor the cost tier being chased."
+    },
+    {
+      "id": "level_up",
+      "terms": [
+        "升人口",
+        "上人口",
+        "拉条",
+        "Level up",
+        "Buy XP up"
+      ],
+      "cruise_use": "Use when adding a unit or improving odds beats interest preservation."
+    },
+    {
+      "id": "lock_shop",
+      "terms": [
+        "锁店",
+        "锁屋子",
+        "Lock shop"
+      ],
+      "cruise_use": "Suggest only when the next-round shop value beats natural refresh value."
+    },
+    {
+      "id": "sell_unit",
+      "terms": [
+        "卖牌",
+        "卖弈子",
+        "Sell unit"
+      ],
+      "cruise_use": "Suggest when selling preserves interest or bench space without damaging a realistic line."
+    }
+  ],
+  "cruise_trigger_extensions": [
+    {
+      "id": "interest_breakpoint_decision",
+      "meaning": "After shop refresh or bench change, decide whether keeping a unit is worth missing an interest breakpoint.",
+      "requires": [
+        "shop.shop_units",
+        "bench.bench_units",
+        "economy.gold",
+        "strategy.current_plan",
+        "unit_pair_value"
+      ]
+    },
+    {
+      "id": "streak_guard",
+      "meaning": "Protect intentional win-streak or lose-streak plans; warn before an action likely breaks the plan.",
+      "requires": [
+        "economy.hp",
+        "phase.stage_round",
+        "board.board_units",
+        "strategy.streak_plan"
+      ]
+    },
+    {
+      "id": "level_or_roll_timing",
+      "meaning": "At standard timing windows, decide whether to level, slow roll, roll down, or keep economy.",
+      "requires": [
+        "economy.gold",
+        "economy.level",
+        "economy.xp",
+        "phase.stage_round",
+        "board.board_units",
+        "shop_odds"
+      ]
+    },
+    {
+      "id": "shop_lock_decision",
+      "meaning": "When a shop contains multiple high-value cards but buying now is impossible or suboptimal, decide whether to lock.",
+      "requires": [
+        "shop.shop_units",
+        "economy.gold",
+        "bench.bench_units",
+        "strategy.current_plan"
+      ]
+    },
+    {
+      "id": "bench_space_pressure",
+      "meaning": "When bench is crowded, decide which speculative units or deny units should be sold first.",
+      "requires": [
+        "bench.bench_units",
+        "shop.shop_units",
+        "economy.gold",
+        "strategy.current_plan"
+      ]
+    },
+    {
+      "id": "item_slam_or_greed",
+      "meaning": "Decide whether to slam a component/completed item for tempo or greed for BIS.",
+      "requires": [
+        "items.item_bench",
+        "board.board_units",
+        "economy.hp",
+        "strategy.current_plan"
+      ]
+    },
+    {
+      "id": "key_unit_progression",
+      "meaning": "When a target/core unit is acquired, paired, upgraded, or becomes an actionable own-board/bench milestone, reassess whether to hold, roll, level, commit, or stay flexible.",
+      "requires": [
+        "board.board_units",
+        "bench.bench_units",
+        "strategy.current_plan",
+        "economy.gold",
+        "phase.stage_round"
+      ]
+    },
+    {
+      "id": "cap_gap_check",
+      "meaning": "Compare current route ceiling against lobby pace and decide whether to play for top-four, win-out, or pivot higher cap.",
+      "requires": [
+        "board.board_units",
+        "items",
+        "augments.selected_augments",
+        "live_rankings"
+      ]
+    }
+  ],
+  "output_policy": {
+    "visible_shape": "conclusion_reason_action",
+    "do_not_output_full_chain_of_thought": true,
+    "suppress_when_action_is_low_value_or_obvious": true,
+    "must_reference_current_evidence": true
+  }
+}

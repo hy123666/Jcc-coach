@@ -1,0 +1,41 @@
+{
+  "contract_id": "jcc-mumu-gameassist-source-contract",
+  "purpose": "Define what MuMu's bundled JCC gameassist package can and cannot prove for runtime live_state.",
+  "product_boundary": "mumu_gameassist_jkchess_apk_private_cache",
+  "observed_package": {
+    "package_name": "com.mumu.gameassist.jkchess",
+    "service": "com.mumu.gameassist.service.FloatingWindowService",
+    "apk_evidence": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+    "private_data_evidence": "raw-evidence-cleaned:mumu-gameassist-jkchess"
+  },
+  "expected_apk_structures": [
+    "com/mumu/gameassist/games/jcc/data/BuyHeroInfo",
+    "com/mumu/gameassist/games/jcc/data/WaitHeroInfo",
+    "com/mumu/gameassist/games/jcc/data/SellHeroInfo",
+    "com/mumu/gameassist/games/jcc/data/GiHeroInfo",
+    "com/mumu/gameassist/games/jcc/data/GiWaitHeroList",
+    "com/mumu/gameassist/games/jcc/data/PlayerBattleInfo",
+    "com/benjaminwan/ocrlibrary/OcrResult"
+  ],
+  "expected_private_tables": [
+    "user_lineup",
+    "lineup_index",
+    "config"
+  ],
+  "use_in_runtime": [
+    "ocr_candidate_source",
+    "visual_rect_candidate_source",
+    "lineup_template_cache",
+    "hero_identity_mapping_hint",
+    "do_not_use_as_live_local_board_state_without_runtime_binding"
+  ],
+  "live_state_boundary": "MuMu gameassist contains OCR, screen capture, lineup, and recommendation structures. It may expose candidate screen-derived hero/shop/bench/action observations, but current APK/database evidence does not prove a complete current local board_units or bench_units snapshot. Promote only when runtime-local binding and deterministic action folding are proven.",
+  "pollution_guard": "Never merge MuMu gameassist candidates into board_units or bench_units unless the local player binding is strongly_bound and candidates are replayed through a verified state transition reducer.",
+  "forbidden_sources": [
+    "credential extraction",
+    "private account cookies",
+    "game memory modification",
+    "anti-cheat bypass",
+    "unverified OCR candidate promotion"
+  ]
+}

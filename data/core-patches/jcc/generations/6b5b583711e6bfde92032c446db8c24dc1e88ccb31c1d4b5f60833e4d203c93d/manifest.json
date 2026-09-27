@@ -1,0 +1,119 @@
+{
+  "balance_patch": {
+    "applied_operations": 126,
+    "baseline": {
+      "hard_data_generation_id": "51d7e5cfd2cd16f4f8d01e96f2e3e5643e51c0c7e47870c57a146114c7477017",
+      "mode_id": "mode18",
+      "patch_id": "s18_2",
+      "season_id": "s18"
+    },
+    "release_version": "18.2a",
+    "schema": "jcc-core-balance-patch-v1",
+    "source_note_sha256": "8e1df346b4c789120727467bb892605025a8beff9f95d70e1a8a058ac90eafbf"
+  },
+  "deterministic": true,
+  "game": "金铲铲之战",
+  "hard_data_generation_id": "6b5b583711e6bfde92032c446db8c24dc1e88ccb31c1d4b5f60833e4d203c93d",
+  "hard_data_manifest": {
+    "bytes": 6247,
+    "file": "hard-data-manifest.json",
+    "sha256": "33aa18b837f3f071e8d4ce12aa7ff948e354fac57cbfb12d6d90ac7ce55cb338"
+  },
+  "identity": {
+    "mode_id": "mode18",
+    "patch_id": "s18_2",
+    "season_id": "s18"
+  },
+  "immutable": true,
+  "mode": "18",
+  "modeName": "Mode18NatureForce",
+  "packageId": "jcc-s18-s18_2",
+  "parent_core_generation_id": "51d7e5cfd2cd16f4f8d01e96f2e3e5643e51c0c7e47870c57a146114c7477017",
+  "promoted": false,
+  "rankings_included": false,
+  "release_version": "18.2a",
+  "runtime_patch_id": "s18_2",
+  "schema": "jcc-s18-hard-data-staging-v1",
+  "season": "18",
+  "source_package_id": "jcc-mode18-s19-18.18.2",
+  "upstream_provenance": {
+    "balance_patch": {
+      "baseline": {
+        "hard_data_generation_id": "51d7e5cfd2cd16f4f8d01e96f2e3e5643e51c0c7e47870c57a146114c7477017",
+        "mode_id": "mode18",
+        "patch_id": "s18_2",
+        "season_id": "s18"
+      },
+      "release_version": "18.2a",
+      "schema": "jcc-core-balance-patch-v1",
+      "source_note_sha256": "8e1df346b4c789120727467bb892605025a8beff9f95d70e1a8a058ac90eafbf"
+    },
+    "data_version": "18.18.2",
+    "framework_name": "Mode18NatureForce",
+    "item_usage_taxonomy": {
+      "authority": "developer_curated_current_patch_item_usage",
+      "content_sha256": "2624e5c833a9e1c36777baec6268c8d65a234f0198e9087655cb39571d7f723b",
+      "entries": 106,
+      "schema": "jcc-patch-item-usage-taxonomy-v1"
+    },
+    "mode": "18",
+    "official_augment_catalog": {
+      "augment_payload_sha256": "82e8c198eb5a2f16ab732f702bfdf1ca9e020d797d33851cb757fe8002dff497",
+      "augment_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/18/18.18.2-S19/hex.js",
+      "page_url": "https://jcc.qq.com/#/hex",
+      "provider_id": "jcc_official",
+      "rows": 257,
+      "snapshot_schema": "jcc-official-augment-snapshot-v1"
+    },
+    "season": "S19",
+    "season_id": "S19",
+    "source_documents": {
+      "augments": {
+        "source_document": "augments.md",
+        "source_sha256": "f6e0386ef9f443a4d4eacb8cc395fbf370e4eba560eda0e117820668f215d376"
+      },
+      "champions": {
+        "source_document": "champions-and-traits.md",
+        "source_sha256": "753f8778303ea5457aa80a11e84c8cb5259c4a78cfbce6b794815e71990cb63a"
+      },
+      "equipment": {
+        "source_document": "equipment.md",
+        "source_sha256": "401c096eb39e6b0af069c987027536d0d093c2a681c36bc9252ff3d7ecc979e6"
+      },
+      "sprites": {
+        "source_document": "nature-sprites.md",
+        "source_sha256": "b7641c1860588343470aa7497aec310159a51b89fc780a8e59ee18d8b30d4e24"
+      },
+      "traits": {
+        "source_document": "champions-and-traits.md",
+        "source_sha256": "753f8778303ea5457aa80a11e84c8cb5259c4a78cfbce6b794815e71990cb63a"
+      }
+    },
+    "supplemental_database": {
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "page_url": "https://jcc.datatft.com/database",
+      "provider_id": "datatft",
+      "snapshot_schema": "jcc-datatft-database-snapshot-v1"
+    },
+    "supplemental_rate_tables": {
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "index_asset_sha256": "fa0a4c3dcbecb5669b46c4ed6f7e49dff6809814df5bb89e438bfd34c5961470",
+      "page_url": "https://jcc.datatft.com/rate#1",
+      "provider_id": "datatft",
+      "snapshot_schema": "jcc-datatft-rate-snapshot-v1"
+    },
+    "supplemental_trait_tracker": {
+      "page_url": "https://jcc.datatft.com/tracker/s18",
+      "provider_id": "datatft",
+      "retained_default_candidate_rows": 81,
+      "snapshot_schema": "jcc-datatft-trait-tracker-snapshot-v2",
+      "tracker_asset_sha256": "d112d5fd825be63dda05790a29ed32a96505820b8d4970361c642463782ebc9d",
+      "tracker_asset_url": "https://jcc.datatft.com/assets/TraitTrackerS18View-0Pfy1-Ri.js",
+      "unique_champion_entities_used": 40,
+      "unit_slot_occurrences": 499,
+      "upstream_no_emblem_candidate_rows": 280
+    },
+    "version": "18.18.2"
+  },
+  "version": "18.18.2"
+}

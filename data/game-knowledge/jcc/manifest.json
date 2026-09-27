@@ -1,0 +1,41 @@
+{
+  "schema": "jcc-game-knowledge-manifest-v1",
+  "logical_id": "game_knowledge.root",
+  "common_documents": [
+    "common/concepts.json",
+    "common/standard-game-baseline.json",
+    "common/glossary.json",
+    "common/formulas.json",
+    "common/formula-runtime-specs.json",
+    "common/doctrine.json",
+    "common/complete-game-doctrine.json",
+    "common/routes.json",
+    "common/choice-framework.json",
+    "common/standard-mechanics.json",
+    "common/semantic-features.json",
+    "common/cruise-decision-framework.json",
+    "common/strategy-evidence-framework.json",
+    "common/equipment-player-aliases.json",
+    "common/retrieval-policy.json"
+  ],
+  "schemas": [
+    "schemas/common-document.schema.json",
+    "schemas/season-descriptor.schema.json",
+    "schemas/patch-source-manifest.schema.json"
+  ],
+  "season_descriptors": {
+    "s18": "seasons/s18/season-descriptor.json"
+  },
+  "patch_manifests": {
+    "s18_1": "seasons/s18/patches/s18_1/source-manifest.json",
+    "s18_2": "seasons/s18/patches/s18_2/source-manifest.json"
+  },
+  "season_archives": {},
+  "generation": {
+    "bundle_directory": "generated",
+    "candidate_profile": "candidates/candidate-profile.json",
+    "candidate_compilation": "isolated_only",
+    "production_activation": "explicit_verified_promotion_only",
+    "production_switching": "forbidden"
+  }
+}

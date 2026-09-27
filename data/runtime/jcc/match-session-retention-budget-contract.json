@@ -1,0 +1,60 @@
+{
+  "schema": "jcc-match-session-retention-budget-contract-v1",
+  "purpose": "Prevent one match_session from growing into large raw-state artifacts while preserving enough evidence for live coaching and review.",
+  "budgets": {
+    "active_match_structured_state_target_mb": 10,
+    "active_match_structured_state_warn_mb": 20,
+    "active_match_structured_state_hard_fail_mb": 50,
+    "postgame_summary_target_kb": 256,
+    "debug_trace_max_mb": 12
+  },
+  "default_retention": {
+    "store_raw_screenshots": false,
+    "store_image_base64": false,
+    "store_full_raw_logcat": false,
+    "store_full_live_state_every_tick": false,
+    "store_full_estimator_context_every_tick": false,
+    "store_backend_drafts_as_final_advice": false,
+    "allow_transient_visual_frame_until_host_response": true,
+    "transient_visual_frame_ttl_ms": 300000,
+    "transient_visual_frame_policy": "delete after host response; delete by TTL if the response never arrives"
+  },
+  "bounded_match_state": {
+    "lifecycle_active_tasks_max": 100,
+    "lifecycle_emitted_tasks_max": 200,
+    "confirmed_tasks_max": 100,
+    "skipped_tasks_max": 100,
+    "output_events_max": 200,
+    "manual_scouting_notes_max": 20,
+    "postgame_recent_match_summaries_max": 20
+  },
+  "persist_during_match": [
+    "latest standardized_live_state summary",
+    "active advice_task lifecycle",
+    "bounded output events",
+    "manual match variables",
+    "confirmed choices and user confirmations",
+    "pending visual requests without frame bytes"
+  ],
+  "persist_after_match": [
+    "structured decision summary",
+    "compact advice task summaries",
+    "confirmed choices",
+    "economy milestones",
+    "user confirmations"
+  ],
+  "debug_exceptions": {
+    "requires_explicit_debug_mode": true,
+    "raw_frames": "transient by default; explicit calibration samples only",
+    "full_state_retention": "allowed only with --retain-full-state or equivalent debug flag",
+    "rotation_required": true
+  },
+  "acceptance_rules": [
+    "Normal cruise pipeline output must redact full standardized_live_state unless explicitly requested.",
+    "Postgame summary writer must not store screenshots, full raw logs, or full live_state.",
+    "Visual sensing may temporarily persist one host-model image input, but must delete it after host response or by TTL.",
+    "Runtime JSON must be Node-written UTF-8 without BOM.",
+    "UI must display host-model final advice, not backend scorer drafts."
+  ],
+  "note": "The historical 81MB session shape is treated as a debug/raw retention smell. Product runtime should keep compact structured state and rotate review summaries."
+}

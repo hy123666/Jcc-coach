@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jcc-game-knowledge-patch-source-manifest-v1",
+  "type": "object",
+  "required": ["schema", "logical_id", "scope", "season_id", "patch_id", "source_artifacts"],
+  "properties": {
+    "schema": { "const": "jcc-game-knowledge-patch-source-manifest-v1" },
+    "logical_id": { "type": "string", "pattern": "^patch\\.s[0-9]+_[0-9]+$" },
+    "scope": { "const": "patch_source_manifest" },
+    "season_id": { "type": "string", "pattern": "^s[0-9]+$" },
+    "patch_id": { "type": "string", "pattern": "^s[0-9]+_[0-9]+$" },
+    "source_adapter": {
+      "type": "object",
+      "required": ["id", "command", "arguments", "verifiers"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "command": { "type": "string", "pattern": "^tools/[^.][^\\n]*\\.mjs$" },
+        "arguments": { "type": "array", "items": { "type": "string" } },
+        "verifiers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["command", "arguments"],
+            "properties": {
+              "command": { "type": "string", "pattern": "^tools/[^.][^\\n]*\\.mjs$" },
+              "arguments": { "type": "array", "items": { "type": "string" } }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_artifacts": { "type": "array", "minItems": 1 },
+    "activation_blockers": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "known_limitations": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "parent_core_generation_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "hard_data_inheritance": {
+      "type": "object",
+      "required": ["generation_id", "roles"],
+      "properties": {
+        "generation_id": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "roles": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "enum": ["mechanics_parameters", "reward_tables"] }
+        }
+      },
+      "additionalProperties": false
+    },
+    "release_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "upstream_source": {
+      "type": "object",
+      "required": ["mode", "season_id", "data_version", "catalog_counts"],
+      "properties": {
+        "mode": { "type": "string", "minLength": 1 },
+        "season_id": { "type": "string", "minLength": 1 },
+        "data_version": { "type": "string", "minLength": 1 },
+        "source_label": { "type": "string" },
+        "catalog_counts": {
+          "type": "object",
+          "required": ["champions", "traits", "augments", "equipment", "sprites"],
+          "properties": {
+            "champions": { "type": "integer", "minimum": 1 },
+            "traits": { "type": "integer", "minimum": 1 },
+            "augments": { "type": "integer", "minimum": 1 },
+            "equipment": { "type": "integer", "minimum": 1 },
+            "sprites": { "type": "integer", "minimum": 1 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "balance_patch": {
+      "type": "object",
+      "required": ["schema", "release_version", "source_note_sha256", "baseline"],
+      "properties": {
+        "schema": { "const": "jcc-core-balance-patch-v1" },
+        "release_version": { "type": "string", "minLength": 1 },
+        "source_note_sha256": { "type": "string", "pattern": "^[A-Fa-f0-9]{64}$" },
+        "baseline": { "type": "object" },
+        "applied_operations": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JCC Runtime Companion</string>
+    <string name="capture_channel_name">Runtime capture</string>
+    <string name="capture_notification_title">JCC runtime capture active</string>
+    <string name="capture_notification_text">Streaming transient frame metadata only</string>
+    <string name="default_runtime_host">10.0.2.2</string>
+</resources>

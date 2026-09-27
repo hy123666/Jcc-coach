@@ -1,0 +1,282 @@
+{
+  "schema": "jcc-coach-decision-benchmark-v1",
+  "scope": "common_game_doctrine",
+  "source": "user_reviewed_high_tier_operating_doctrine",
+  "season_neutral": true,
+  "cases": [
+    {
+      "id": "one_cost_reroll_level_4_recovery_floor",
+      "live_state": {
+        "phase": { "stage_round": "3-1" },
+        "economy": { "hp": 78, "gold": 38, "level": 4, "xp": { "value": 8, "to_next": 20 } },
+        "board": { "board_units": [{ "name": "Carry", "cost": 1, "star": 2 }] },
+        "bench": { "bench_units": [{ "name": "Carry", "cost": 1 }, { "name": "Carry", "cost": 1 }] }
+      },
+      "context": {
+        "target_plan": { "name": "One-cost reroll", "archetype": "one_cost_reroll", "primary_carry": { "name": "Carry", "cost": 1 }, "primary_carry_copies": 7 }
+      },
+      "expect": {
+        "correct_conclusion": "reroll_at_level_4_then_recover_economy",
+        "acceptable_alternatives": ["slow_roll_at_level_5_for_multiple_one_cost_targets"],
+        "explicitly_wrong_actions": ["push_level_6_before_primary_carry_progress"],
+        "archetype": "one_cost_reroll",
+        "default_roll_level": 4,
+        "preferred_actions": ["roll_for_primary_carry_at_level_4", "preserve_recovery_floor_around_32"],
+        "discouraged_actions": ["push_level_6_before_primary_carry_progress"]
+      }
+    },
+    {
+      "id": "two_cost_reroll_level_6_slow_roll",
+      "live_state": {
+        "phase": { "stage_round": "3-2" },
+        "economy": { "hp": 72, "gold": 52, "level": 6, "xp": { "value": 0, "to_next": 36 } },
+        "board": { "board_units": [{ "name": "Carry", "cost": 2, "star": 2 }] }
+      },
+      "context": {
+        "target_plan": { "name": "Two-cost reroll", "archetype": "two_cost_reroll", "primary_carry": { "name": "Carry", "cost": 2 }, "contested": false }
+      },
+      "expect": {
+        "correct_conclusion": "slow_roll_at_level_6",
+        "acceptable_alternatives": ["spend_below_interest_floor_when_contested_or_hp_requires"],
+        "explicitly_wrong_actions": ["push_level_7_before_core_progress"],
+        "archetype": "two_cost_reroll",
+        "default_roll_level": 6,
+        "preferred_actions": ["slow_roll_above_interest_floor"],
+        "discouraged_actions": ["push_level_7_before_core_progress"]
+      }
+    },
+    {
+      "id": "three_cost_carry_level_7_stabilize_then_slow_roll",
+      "live_state": {
+        "phase": { "stage_round": "3-5" },
+        "economy": { "hp": 61, "gold": 46, "level": 7, "xp": { "value": 0, "to_next": 60 } },
+        "board": { "board_units": [{ "name": "Carry", "cost": 3, "star": 1 }, { "name": "Tank", "cost": 3, "star": 2 }] }
+      },
+      "context": {
+        "target_plan": { "name": "Three-cost carry", "archetype": "three_cost_reroll", "primary_carry": { "name": "Carry", "cost": 3 }, "primary_carry_copies": 4, "contested": true }
+      },
+      "expect": {
+        "correct_conclusion": "stabilize_primary_carry_two_star_at_level_7_then_choose_roll_floor",
+        "acceptable_alternatives": ["wait_for_3_7_when_uncontested_and_economy_is_weak"],
+        "explicitly_wrong_actions": ["blind_push_level_8"],
+        "archetype": "three_cost_reroll",
+        "default_roll_level": 7,
+        "preferred_actions": ["find_primary_carry_two_star_before_greeding", "reassess_slow_roll_floor_from_contest_and_economy"],
+        "discouraged_actions": ["blind_push_level_8"]
+      }
+    },
+    {
+      "id": "four_cost_carry_contested_push_8_not_level_7_roll",
+      "live_state": {
+        "phase": { "stage_round": "4-1" },
+        "economy": { "hp": 48, "gold": 68, "level": 7, "xp": { "value": 40, "to_next": 60 } },
+        "board": { "board_units": [{ "name": "Transition carry", "cost": 2, "star": 2 }] }
+      },
+      "context": {
+        "target_plan": { "name": "Four-cost carry", "archetype": "four_cost_carry", "primary_carry": { "name": "Carry", "cost": 4 }, "contested": true }
+      },
+      "expect": {
+        "correct_conclusion": "push_level_8_on_4_1_then_search",
+        "acceptable_alternatives": ["limited_level_7_board_repair_only_if_lethal"],
+        "explicitly_wrong_actions": ["large_roll_at_level_7_for_two_star_four_cost_without_survival_or_board_upgrade_evidence"],
+        "archetype": "four_cost_carry",
+        "default_roll_level": 8,
+        "preferred_actions": ["push_level_8_on_4_1_then_search"],
+        "discouraged_actions": ["large_roll_at_level_7_for_two_star_four_cost_without_survival_or_board_upgrade_evidence"]
+      }
+    },
+    {
+      "id": "four_cost_carry_uncontested_default_4_2",
+      "live_state": {
+        "phase": { "stage_round": "4-2" },
+        "economy": { "hp": 64, "gold": 72, "level": 7, "xp": { "value": 48, "to_next": 60 } },
+        "board": { "board_units": [{ "name": "Transition carry", "cost": 2, "star": 2 }] }
+      },
+      "context": {
+        "target_plan": { "name": "Four-cost carry", "archetype": "four_cost_carry", "primary_carry": { "name": "Carry", "cost": 4 }, "contested": false }
+      },
+      "expect": {
+        "correct_conclusion": "push_level_8_on_4_2_then_search",
+        "acceptable_alternatives": ["advance_to_4_1_when_contest_changes"],
+        "explicitly_wrong_actions": ["large_roll_at_level_7_for_two_star_four_cost_without_survival_or_board_upgrade_evidence"],
+        "archetype": "four_cost_carry",
+        "default_roll_level": 8,
+        "preferred_actions": ["push_level_8_on_4_2_then_search"],
+        "discouraged_actions": ["large_roll_at_level_7_for_two_star_four_cost_without_survival_or_board_upgrade_evidence"]
+      }
+    },
+    {
+      "id": "legendary_cap_requires_loss_buffer",
+      "live_state": {
+        "phase": { "stage_round": "5-1" },
+        "economy": { "hp": 39, "gold": 66, "level": 8, "xp": { "value": 36, "to_next": 80 } },
+        "board": { "board_units": [{ "name": "Carry", "cost": 4, "star": 2 }, { "name": "Tank", "cost": 4, "star": 2 }] }
+      },
+      "context": {
+        "target_plan": { "name": "Legendary cap", "archetype": "legendary_cap", "primary_carry": { "name": "Legendary", "cost": 5 } }
+      },
+      "expect": {
+        "correct_conclusion": "require_loss_buffer_and_stable_board_before_level_9",
+        "acceptable_alternatives": ["stabilize_at_level_8_before_greeding"],
+        "explicitly_wrong_actions": ["greed_level_9_without_loss_buffer"],
+        "archetype": "legendary_cap",
+        "default_roll_level": 9,
+        "preferred_actions": ["push_level_9_only_with_loss_buffer_and_stable_board"],
+        "discouraged_actions": ["greed_level_9_without_loss_buffer"]
+      }
+    },
+    {
+      "id": "emblem_line_requires_condition_check",
+      "live_state": {
+        "phase": { "stage_round": "3-2" },
+        "economy": { "hp": 76, "gold": 51, "level": 6, "xp": { "value": 10, "to_next": 36 } },
+        "board": { "board_units": [{ "name": "Holder", "cost": 3, "star": 2 }] }
+      },
+      "context": {
+        "target_plan": { "name": "Emblem line", "archetype": "emblem_conditioned", "emblem_role": "formation_condition", "emblem_count": 1 }
+      },
+      "expect": {
+        "correct_conclusion": "validate_holder_breakpoint_and_rankings_before_commit",
+        "acceptable_alternatives": ["use_emblem_as_generic_cap_upgrade"],
+        "explicitly_wrong_actions": ["treat_emblem_as_automatic_commit"],
+        "archetype": "emblem_conditioned",
+        "preferred_actions": ["validate_emblem_condition_with_current_rankings_and_holder_fit"],
+        "discouraged_actions": ["treat_emblem_as_automatic_commit"]
+      }
+    },
+    {
+      "id": "xp_purchase_avoids_two_xp_overbuy",
+      "live_state": {
+        "phase": { "stage_round": "3-7" },
+        "economy": { "hp": 70, "gold": 54, "level": 7, "xp": { "value": 58, "to_next": 60 } },
+        "board": { "board_units": [{ "name": "Carry", "cost": 4, "star": 1 }] }
+      },
+      "context": {
+        "target_plan": { "name": "Four-cost carry", "archetype": "four_cost_carry", "primary_carry": { "name": "Carry", "cost": 4 } }
+      },
+      "expect": {
+        "correct_conclusion": "wait_for_natural_xp",
+        "acceptable_alternatives": ["buy_xp_only_for_immediate_tempo_reason"],
+        "explicitly_wrong_actions": ["buy_four_xp_for_two_xp_gap_without_tempo_reason"],
+        "xp_alignment": "wait_for_natural_xp",
+        "preferred_actions": ["avoid_manual_xp_overbuy_when_natural_xp_completes_level"],
+        "discouraged_actions": ["buy_four_xp_for_two_xp_gap_without_tempo_reason"]
+      }
+    },
+    {
+      "id": "three_cost_carry_can_level_8_for_required_four_cost_support",
+      "live_state": {
+        "phase": { "stage_round": "4-1" },
+        "economy": { "hp": 57, "gold": 64, "level": 7, "xp": { "value": 42, "to_next": 60 } },
+        "board": { "board_units": [{ "name": "Carry", "cost": 3, "star": 2 }, { "name": "Tank", "cost": 3, "star": 2 }] }
+      },
+      "context": {
+        "target_plan": {
+          "name": "Mixed three-cost carry structure",
+          "archetype": "three_cost_reroll",
+          "primary_carry": { "name": "Carry", "cost": 3 },
+          "primary_carry_copies": 4,
+          "target_level": 8,
+          "required_support_costs": [4],
+          "next_level_adds_material_trait": true
+        }
+      },
+      "expect": {
+        "correct_conclusion": "consider_level_8_before_finishing_three_star_for_required_support",
+        "acceptable_alternatives": ["stay_level_7_only_when_roll_marginal_gain_and_survival_are_better"],
+        "explicitly_wrong_actions": ["blind_push_level_8"],
+        "archetype": "three_cost_reroll",
+        "default_roll_level": 7,
+        "conditional_actions": ["consider_level_8_before_finishing_three_star_when_higher_cost_support_unlocks_the_board"],
+        "override_signals": ["higher_cost_support_required_for_structure", "next_level_material_board_spike"],
+        "discouraged_actions": ["blind_push_level_8"]
+      }
+    },
+    {
+      "id": "two_xp_gap_can_buy_now_for_contested_timing",
+      "live_state": {
+        "phase": { "stage_round": "4-1" },
+        "economy": { "hp": 51, "gold": 62, "level": 7, "xp": { "value": 58, "to_next": 60 } },
+        "board": { "board_units": [{ "name": "Transition carry", "cost": 3, "star": 2 }] }
+      },
+      "context": {
+        "target_plan": {
+          "name": "Contested four-cost timing",
+          "archetype": "four_cost_carry",
+          "primary_carry": { "name": "Carry", "cost": 4 },
+          "contested": true,
+          "must_contest_shop_pool": true,
+          "next_level_adds_key_unit": true
+        }
+      },
+      "expect": {
+        "correct_conclusion": "buy_xp_now_when_contested_level_timing_is_material",
+        "acceptable_alternatives": ["wait_only_if_leveling_now_cannot_change_board_or_shop_timing"],
+        "explicitly_wrong_actions": ["wait_for_natural_xp_despite_material_timing_override"],
+        "archetype": "four_cost_carry",
+        "default_roll_level": 8,
+        "xp_alignment": "buy_xp_now_for_tempo_override",
+        "preferred_actions": ["buy_xp_now_for_material_tempo_override"],
+        "override_signals": ["contested_pool_or_timing_race", "explicit_level_timing_urgency", "next_level_material_board_spike"],
+        "discouraged_actions": ["wait_for_natural_xp_despite_material_timing_override"],
+        "absent_preferred_actions": ["avoid_manual_xp_overbuy_when_natural_xp_completes_level"],
+        "absent_discouraged_actions": ["buy_four_xp_for_two_xp_gap_without_tempo_reason"]
+      }
+    },
+    {
+      "id": "four_cost_carry_lethal_level_7_limited_repair",
+      "live_state": {
+        "phase": { "stage_round": "4-1" },
+        "economy": { "hp": 9, "gold": 34, "level": 7, "xp": { "value": 12, "to_next": 60 } },
+        "board": { "board_units": [{ "name": "Transition carry", "cost": 2, "star": 2 }] }
+      },
+      "context": {
+        "target_plan": {
+          "name": "Four-cost carry",
+          "archetype": "four_cost_carry",
+          "primary_carry": { "name": "Carry", "cost": 4 },
+          "contested": false
+        }
+      },
+      "expect": {
+        "correct_conclusion": "limited_level_7_repair_is_allowed_when_waiting_for_8_is_not_survivable",
+        "acceptable_alternatives": ["push_level_8_only_if_the_board_can_survive_one_more_loss"],
+        "explicitly_wrong_actions": ["greed_level_8_without_survival_buffer"],
+        "archetype": "four_cost_carry",
+        "default_roll_level": 8,
+        "conditional_actions": ["spend_at_level_7_for_immediate_board_stabilization_when_waiting_for_8_is_not_survivable"],
+        "override_signals": ["lethal_or_single_loss_buffer"],
+        "discouraged_actions": ["large_roll_at_level_7_for_two_star_four_cost_without_survival_or_board_upgrade_evidence", "greed_level_8_without_survival_buffer"]
+      }
+    },
+    {
+      "id": "three_cost_carry_required_four_cost_support_is_not_a_fixed_level_7_rule",
+      "live_state": {
+        "phase": { "stage_round": "4-1" },
+        "economy": { "hp": 57, "gold": 64, "level": 7, "xp": { "value": 42, "to_next": 60 } },
+        "board": { "board_units": [{ "name": "Carry", "cost": 3, "star": 2 }, { "name": "Tank", "cost": 3, "star": 2 }] }
+      },
+      "context": {
+        "target_plan": {
+          "name": "Three-cost carry with four-cost support",
+          "archetype": "three_cost_reroll",
+          "primary_carry": { "name": "Carry", "cost": 3 },
+          "primary_carry_copies": 4,
+          "required_support_costs": [4],
+          "target_level": 8,
+          "next_level_adds_key_unit": true
+        }
+      },
+      "expect": {
+        "correct_conclusion": "level_8_is_a_conditional_option_before_finishing_three_star",
+        "acceptable_alternatives": ["stay_level_7_when_copy_progress_and_survival_are_stronger"],
+        "explicitly_wrong_actions": ["blind_push_level_8", "blind_finish_three_star_without_checking_next_level_board_spike"],
+        "archetype": "three_cost_reroll",
+        "default_roll_level": 7,
+        "conditional_actions": ["consider_level_8_before_finishing_three_star_when_higher_cost_support_unlocks_the_board"],
+        "override_signals": ["higher_cost_support_required_for_structure", "next_level_material_board_spike"],
+        "discouraged_actions": ["blind_push_level_8", "blind_finish_three_star_without_checking_next_level_board_spike"]
+      }
+    }
+  ]
+}

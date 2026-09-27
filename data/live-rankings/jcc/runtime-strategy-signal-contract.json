@@ -1,0 +1,480 @@
+{
+  "schema_version": 4,
+  "contract_id": "jcc-live-rankings-runtime-strategy-signal",
+  "purpose": "Expose audited Tencent/JCC daily ranking data as route-aware runtime strategy signal without replacing hard data or visible live state.",
+  "data_sources": {
+    "active_pointer": "data/live-rankings/jcc/active-ranking-closure.json",
+    "rank_signal": "active_generation:rank-signal.json",
+    "audit": "active_generation:audit.json",
+    "manifest": "active_generation:manifest.json",
+    "strategy_index": "active_generation:lineup-strategy-index.json",
+    "history_signals": "update_only:data/live-rankings/jcc/history/by-binding/<binding_sha256>/signals/<YYYYMMDD>.json",
+    "trend_summary": "update_only:data/live-rankings/jcc/history/by-binding/<binding_sha256>/latest-trend-summary.json",
+    "runtime_context": "compatibility_mirror:data/live-rankings/jcc/current/runtime-strategy-context.json"
+  },
+  "entrypoints": {
+    "verify_contract": "node tools/verify-jcc-runtime-rank-signal-contract.mjs",
+    "load_context": "node tools/load-jcc-runtime-rank-signal.mjs",
+    "load_context_summary": "node tools/load-jcc-runtime-rank-signal.mjs --summary-only",
+    "runtime_bootstrap": "node tools/bootstrap-jcc-runtime-agent.mjs"
+  },
+  "tier_selection": {
+    "default_tier_part": "0",
+    "explicit_cli_arg": "--tier-part",
+    "environment_fallbacks": [
+      "JCC_USER_TIER_PART",
+      "JCC_TIER_PART"
+    ],
+    "rank_label_arg": "--rank-label",
+    "rank_label_map": {
+      "master": "0",
+      "grandmaster": "0",
+      "challenger": "0",
+      "大师": "0",
+      "宗师": "0",
+      "王者": "0",
+      "diamond": "0",
+      "platinum": "0",
+      "钻石": "0",
+      "铂金": "0",
+      "all": "0",
+      "fallback": "0",
+      "全部": "0"
+    },
+    "supported_tier_parts": {
+      "0": "master_plus"
+    }
+  },
+  "precedence": [
+    "hard_data",
+    "live_state",
+    "rank_signal"
+  ],
+  "usage_policy": {
+    "rank_signal_role": "background_prior",
+    "offline_strategy_index_role": "During the audited ranking refresh, compile current-day national trait strength anchors, matched winning-lineup gameplay recipes, hero popularity and item-package evidence, and reverse augment/champion/item/trait indexes. Store shared recipe facts once and content-address relation-specific evidence; Live Runtime resolves only the requested candidate before bounded typed delivery. It never parses the raw snapshot or performs cross-source joins during a match.",
+    "history_role": "Keep compact prior-day signals in exact full-identity bindings. Runtime never reads history or day-over-day diff files. Refresh may compile a bounded same-binding trend summary into a current-day candidate as auxiliary evidence only; it has zero score weight and cannot change current-day ordering, membership, metrics, or strength classification.",
+    "must_not_override": [
+      "hard_data",
+      "visible_live_state",
+      "current_patch_rules"
+    ],
+    "fail_closed": "If audit or contract verification fails, skip rank_signal context and lower confidence instead of inventing rankings."
+  },
+  "route_signal_policy": {
+    "augment_choice": {
+      "signal_sections": [
+        "augment_lineup_signal",
+        "top_traits",
+        "top_lineups",
+        "top_heroes"
+      ],
+      "strategy_use": "Use augment_lineup_signal only as a lineup-association prior for visible augment candidates, then check current board, item, tempo, confirmed choices, and user intent. It is not independent augment win-rate.",
+      "precedence": [
+        "hard_data",
+        "live_state",
+        "rank_signal"
+      ]
+    },
+    "item_craft": {
+      "signal_sections": [
+        "top_equips",
+        "hero_item_signal",
+        "top_heroes",
+        "top_lineups"
+      ],
+      "strategy_use": "Use item and carry popularity as a craft prior while preserving hard-data item fit and current component constraints. hero_item_signal is inferred from equip_rank.top_3_hero and is not a perfect three-item combo truth.",
+      "precedence": [
+        "hard_data",
+        "live_state",
+        "rank_signal"
+      ]
+    },
+    "holder_assignment": {
+      "signal_sections": [
+        "top_heroes",
+        "top_equips",
+        "hero_item_signal"
+      ],
+      "strategy_use": "Use ranked carry/item pairings as holder hints after checking owned units, stars, current components, transfer cost, and near-term swaps.",
+      "precedence": [
+        "hard_data",
+        "live_state",
+        "rank_signal"
+      ]
+    },
+    "roll_or_level": {
+      "signal_sections": [
+        "top_lineups",
+        "top_traits",
+        "top_heroes",
+        "augment_lineup_signal"
+      ],
+      "strategy_use": "Use meta lineup strength as a tempo and cap prior, not as a substitute for economy, HP, shop odds, or contest state.",
+      "precedence": [
+        "hard_data",
+        "live_state",
+        "rank_signal"
+      ]
+    },
+    "trait_or_unit_swap": {
+      "signal_sections": [
+        "top_traits",
+        "top_lineups",
+        "top_heroes"
+      ],
+      "strategy_use": "Use trait and unit rank as pivot pressure only after checking board trait deltas and unit quality.",
+      "precedence": [
+        "hard_data",
+        "live_state",
+        "rank_signal"
+      ]
+    },
+    "positioning": {
+      "signal_sections": [
+        "top_lineups",
+        "top_heroes",
+        "top_equips",
+        "hero_item_signal"
+      ],
+      "strategy_use": "Use common carries and item threats as scouting priorities; actual opponent boards and next-opponent state dominate.",
+      "precedence": [
+        "hard_data",
+        "live_state",
+        "rank_signal"
+      ]
+    },
+    "reward_choice": {
+      "signal_sections": [
+        "augment_lineup_signal",
+        "top_traits",
+        "top_lineups",
+        "top_equips",
+        "hero_item_signal"
+      ],
+      "strategy_use": "Use meta demand and hero-item priors as reward priors while checking current board direction, owned components, and hard-data reward effects.",
+      "precedence": [
+        "hard_data",
+        "live_state",
+        "rank_signal"
+      ]
+    },
+    "postgame_review": {
+      "signal_sections": [
+        "augment_lineup_signal",
+        "top_traits",
+        "top_lineups",
+        "top_heroes",
+        "top_equips",
+        "hero_item_signal"
+      ],
+      "strategy_use": "Compare final decisions against daily meta priors and local match history without treating meta mismatch as automatic error.",
+      "precedence": [
+        "hard_data",
+        "live_state",
+        "rank_signal"
+      ]
+    }
+  },
+  "runtime_context_contract": {
+    "artifact_path": "compatibility_mirror:data/live-rankings/jcc/current/runtime-strategy-context.json",
+    "required_fields": [
+      "schema_version",
+      "generated_at",
+      "contract_id",
+      "stat_date",
+      "selected_tier_part",
+      "selected_tier_label",
+      "source_files",
+      "precedence",
+      "route_contexts"
+    ],
+    "summary_only_policy": "Diagnostic mode must not write runtime_context."
+  },
+  "strategy_index_policy": {
+    "schema": "jcc-live-ranking-strategy-index-v4",
+    "recipe_storage": {
+      "layout": "per-tier recipe_catalog plus interned field/value catalogs, content-addressed recipe_relation_catalog, and candidate/variant relation ids",
+      "losslessness": "Every normalized generation carries an expanded semantic hash. Publication materializes every candidate and rejects dangling recipe ids, dangling relation ids, receipt-count drift, or any expanded semantic hash mismatch.",
+      "runtime_resolution": "Runtime keeps normalized catalogs in the Active snapshot cache and materializes only the requested candidate. The Host-facing projection remains complete and bounded; storage references never cross the Provider boundary.",
+      "legacy_read": "v3 expanded generations remain readable only for an already pinned older Match or rollback inspection. New Active publication must use v4."
+    },
+    "source": "Current-day Master+ main_trait_strength supplies the only strength statistics and trait_group.minor_traits_datas[].hero_list supplies each exact atomic roster. lineup_group_list is the primary recipe source, the version-manifest allowlisted official curated popular-lineup JSON is the secondary recipe source, and hero_strength/get_hero_equip_ranking supply popularity, contest-pressure, and item-package evidence. Player lineups are not fetched or associated. Winning, popular, and national roster normalization share one non-conflicting auxiliary-unit registry; typed pets, summons, and unresolved source heroes remain auxiliary slots and never become canonical champion members or strength entities.",
+    "current_day_strength_gradient": {
+      "floor": "68% current-day top-four rate plus 32% normalized current-day average-rank quality",
+      "ceiling": "72% normalized current-day top-one rate plus 28% current-day top-four rate",
+      "composite": "68% floor plus 32% ceiling",
+      "authoritative_sample": "May apply Bayesian shrinkage and confidence only; direct composite weight is 0",
+      "appearance_rate": "Separate heat and contest evidence; direct composite weight is 0",
+      "history": "Same-binding auxiliary evidence only; direct composite weight is 0",
+      "recipe_metrics": "Recipe evidence only: winning and popular recipe statistics are discarded during normalization and are forbidden from the gradient, confidence, order, scorer, semantic maintenance, and Host payload"
+    },
+    "direction_showcase_policy": {
+      "authority": "Presentation grouping only. Every Master+ atomic candidate retains its own current-day S/A/B/C/D band, metrics, formation conditions, candidate and variant identities, and exact retrieval path.",
+      "family_key": "Resolve the published primary trait against the current Core trait identity, then require meaningful canonical-roster overlap. Shared carry or an incidental secondary trait alone cannot establish a family.",
+      "direction_key": "Within a family, use main carry and stronger roster overlap to identify close branches. A distinct carry or materially different roster remains a separate direction even when the primary trait matches.",
+      "generic_lobby": "Show five distinct current Master+ directions from S/A by default when available, with at most two directions from one family. Explain close variants under their representative without merging their metrics or conditions. Explicit band, candidate, and variant requests may inspect all five bands and all atomic candidates.",
+      "match": "Preserve full-pool eligibility and the registered five-component stage score. Give the Host five complete candidates initially, expand to ten only for an actual coverage gap, and ask for at least three distinct visible directions when supported. Match fit may elevate an A-band direction above an S-band direction without altering national strength.",
+      "band_directory": "Each of S/A/B/C/D may expose up to five lightweight direction references; the remaining atomic candidates stay searchable. C/D are not generic default main recommendations but may be discussed for an explicit request or an exceptional current-game fit.",
+      "later_convergence": "At 3-3, newly confirmed ordinary augments, items, or owned core units may justify one exact new Ranking direction that replaces a weaker retained direction. A durable user-confirmed target cannot be silently replaced."
+    },
+    "source_identity": {
+      "required_fields": [
+        "runtime_season_id",
+        "active_patch_id",
+        "game_mode_id",
+        "package_id",
+        "battle_type",
+        "lineup_version_id",
+        "patch_package",
+        "patch_version",
+        "upstream_season_id"
+      ],
+      "policy": "Keep runtime major-season identity separate from upstream data namespaces. Runtime may attach daily strategy evidence when the active artifact identity agrees and the layered capability status reports the required domain as available. A non-blocking partial domain must remain visible in capability_status and must not suppress independently available strength, hero, item, roster, or recipe evidence."
+    },
+    "required_evidence": [
+      "strength_anchors",
+      "recipe_match",
+      "recipe_evidence",
+      "main_carry",
+      "main_carry_item_packages",
+      "equipment_requirements",
+      "core_units",
+      "associated_augments",
+      "variants",
+      "condition_priors",
+      "hero_profiles",
+      "reverse_indexes",
+      "recipe_catalog",
+      "recipe_catalog_ids",
+      "recipe_relation_field_catalog",
+      "recipe_relation_value_catalog",
+      "recipe_relation_catalog",
+      "recipe_storage",
+      "data_quality",
+      "provenance",
+      "current_day_strength_gradient",
+      "semantic_maintenance_receipt"
+    ],
+    "cross_source_compilation": {
+      "timing": "audited_ranking_refresh_only",
+      "live_match_policy": "Runtime reads only the promoted compact typed index and must not parse raw ranking data, call ranking APIs, or ask a Host model to perform cross-source joins.",
+      "strength_authority": "Use only the Master+ national trait ranking for every user preference. User rank may change coaching style and risk tolerance, but it never selects a lower ranking dataset.",
+      "canonical_roster_authority": "For each Master+ strength anchor, only trait_group.minor_traits_datas[].hero_list may create its atomic roster variants. A recipe can never create a ranked candidate or add, remove, replace, or merge roster members. Raw roster ids previously classified by the exact-refresh auxiliary registry may be retained as auxiliary slots, but they remain outside champion matching, roles, indexes, and strength.",
+      "recipe_authority": "Winning-lineup rows are the primary roles/items/playbook/transition source. The allowlisted official curated popular-lineup JSON is secondary and fills only when no winning exact/compatible recipe exists. Analogous recipes may provide bounded role hints only. Player/UGC rows and smart/player recommendation endpoints are forbidden.",
+      "matching_order": [
+        "same source tuple and tier",
+        "complete normalized trait-family set",
+        "exact trait breakpoint counts",
+        "exact national atomic roster equality",
+        "bounded national-roster coverage against one atomic recipe",
+        "source priority: winning exact/compatible, popular exact/compatible, winning analogous, popular analogous",
+        "population and cost structure only as deterministic tie-break evidence"
+      ],
+      "match_classes": {
+        "exact": "The recipe roster equals the national atomic roster.",
+        "compatible": "The recipe has bounded high overlap with the national atomic roster and may enrich only roles, items, playbook, and transition evidence.",
+        "analogous": "Only partial roster similarity exists. It may hint at a role for an existing national-roster member, but supplies no recipe items, roster edits, transitions, lineup code, or strength.",
+        "unmatched": "No useful identity match. Preserve missing recipe fields instead of inventing them."
+      },
+      "stat_inheritance": "National strength metrics and authoritative sample support stay on strength_anchor. Winning and popular recipe metrics are discarded and cannot calibrate evidence, confidence, ordering, semantic maintenance, scorer behavior, or Host output. Analogous and unmatched recipes inherit nothing.",
+      "source_capability_states": ["available", "unavailable_empty", "unavailable_error", "stale", "malformed", "foreign_catalog", "player_contaminated"],
+      "partial_update_policy": "Official popular recipes may be normalized and cached for the exact Core Profile while Master+ strength is unavailable. This never creates or activates a Ranking Overlay; Runtime remains strength-unavailable and continues Core-only until a complete audited Master+ overlay exists.",
+      "season_extension": "Common matching is season-neutral. Special-mechanic payloads remain opaque season_extensions and are interpreted only by the active major-season descriptor."
+    },
+    "controlled_semantic_feature_policy": {
+      "vocabulary_authority": "Use only the closed season-neutral vocabulary defined by Common and compiled into the exact target Core Profile.",
+      "ranking_ownership": "During the audited daily Ranking refresh, deterministically compile lightweight lineup features from the exact Master+ strength anchor and atomic roster, then enrich them from winning recipes, secondary popular recipes, hero/item evidence, and Core-bound typed catalogs. These features are fields inside the Ranking Overlay, not a separate pipeline or publication.",
+      "runtime_ownership": "Runtime may map verified current-Match typed facts onto those compiled Core and Ranking feature domains only in bounded process memory for the active Match. It must not persist a learned feature corpus or publish Runtime mappings back into Core or Ranking data.",
+      "authority_boundary": "Compiled semantic features are supporting annotations. They cannot override typed facts, entity legality, atomic source variants, national Master+ metrics, source provenance, or the registered five-component stage-adaptive score.",
+      "weight_boundary": "No semantic feature has an independent score weight, creates a sixth scoring channel, or changes meta/augment/item/tempo/board weights. A feature may influence a decision only through an existing component's explicitly typed input contract.",
+      "forbidden_implementations": [
+        "fifth data pipeline",
+        "GraphRAG or generated graph assets",
+        "vector or embedding retrieval authority",
+        "LoRA, fine-tuning, or learned model weights"
+      ],
+      "fail_closed": "Unknown vocabulary, ambiguous entities, missing exact Core/Ranking bindings, or values outside the closed domain remain absent and cannot be inferred by semantic maintenance, lexical search, or the live Host."
+    },
+    "transition_lineup_policy": {
+      "source_priority": "Use an exact/compatible winning recipe transition first, then an exact/compatible official popular recipe transition, before bounded local adaptation. The national atomic roster remains the final roster authority; preserve recipe order, parent identity, and provenance without merging recipes.",
+      "local_allowed_operations": [
+        "validate unit, trait, item, stage, and population legality against the captured Core Profile",
+        "fill only missing population slots with a bounded legal completion that preserves the published parent and declared transition intent",
+        "replace a temporary main carry or primary tank with one role-compatible legal holder when the published temporary unit is unavailable",
+        "preserve equipment continuity by moving only proven owned items along the declared temporary-to-final carry or tank path",
+        "reorder the current trusted self board and bench without inventing opponent-board or counter-positioning facts"
+      ],
+      "bounded_completion": "Local completion is request-local and may fill only the explicit population gap between the published transition roster and the current verified level. It must not enumerate alternatives, splice siblings, cross parent lineups, or create a reusable generated roster.",
+      "strength_boundary": "A locally validated, completed, substituted, or rearranged transition remains Runtime adaptation evidence only. It must never inherit, claim, or display Master+ strength, ranking order, sample size, top-four rate, top-one rate, appearance rate, or winning-lineup publication status unless that exact source-published recipe carries the evidence.",
+      "generation_boundary": "Do not generate or persist an all-combinations lineup library, Cartesian roster space, synthetic transition catalog, or generated candidate pool. Runtime returns only the bounded adaptation needed for the current Match and discards it with that Match.",
+      "fail_closed": "If legality, role compatibility, population gap, equipment ownership, or published parent identity cannot be proven, keep the field unresolved and disclose the missing input instead of synthesizing a transition."
+    },
+    "hero_evidence": {
+      "strength_role": "secondary_context_only",
+      "primary_roles": [
+        "market_popularity",
+        "likely_contest_pressure_prior",
+        "item_preference"
+      ],
+      "item_packages": {
+        "highest_top1": "Literal highest observed first-place-rate package; retain play-rate evidence and do not present it as universally optimal.",
+        "most_popular": "Highest observed play-rate package; use only as the secondary package after the highest-top-one package.",
+        "artifact_and_radiant": "Keep hard-data item category tags so an explicit best-artifact or best-radiant query can retrieve the highest observed matching package."
+      },
+      "contest_boundary": "Popularity indicates likely market pressure only. It is not a live count of opponents holding the unit."
+    },
+    "equipment_requirement_policy": {
+      "precedence": [
+        "explicit_upstream_required",
+        "published_formation_required_emblem",
+        "published_recipe_items",
+        "hero_ranking_core_items",
+        "hero_ranking_highest_top1_package",
+        "hero_ranking_most_popular_package"
+      ],
+      "explicit_required_rule": "Keep a source row's explicit required items on that atomic final variant. Promote an explicit item to group-level required evidence only when every published final variant explicitly requires the same item on the same role holder.",
+      "formation_emblem_rule": "When every final variant in the exact winning-lineup group assigns the same emblem to the same holder, the emblem's granted trait resolves uniquely through the active current-patch trait catalog, and the holder does not naturally own that trait, compile a formation requirement with exact holder, granted trait, full variant coverage, and external-trait-member semantics. Missing or ambiguous trait resolution fails closed.",
+      "ordinary_consensus_rule": "A non-emblem item shared by every final variant is published core consensus unless an explicit upstream required field says otherwise; do not call it mandatory.",
+      "version_policy": "Derive item categories, granted traits, holder natural traits, and recipe evidence from the active promoted hard-data tuple. Do not hardcode season item or trait ids."
+    },
+    "reverse_index_policy": {
+      "keys": [
+        "augment_id",
+        "champion_id",
+        "item_id",
+        "canonical_trait_id"
+      ],
+      "source_identity_boundary": "Raw source family ids are non-queryable audit keys and cannot appear as semantic reverse-index keys.",
+      "augment_interpretation": "A confirmed augment retrieves associated recipes, then national trait strength filters and live state re-rank them. Association is not independent augment win rate."
+    },
+    "runtime_query_policy": {
+      "execution": "Use one deterministic in-process domain query over the promoted current-day typed index. The daemon may expose a thin internal API, but the Host model never scans raw snapshots or performs network lookup in a live turn.",
+      "natural_language_compilation": "Compile each natural-language lineup request into one validated season-neutral typed intent before retrieval. The intent may contain two through six trait constraints, exact trait breakpoints, precedence-preserving AND/OR/NOT logic, independent question groups, and champion role semantics including main carry, primary tank, and member. Ordinary OR remains one any-branch query; only explicit compare-each wording expands alternatives into separate display obligations. Ambiguous aliases retain explicit candidate interpretations. Unknown explicit traits, unknown role-bound champions, illegal breakpoints, and resolver faults fail closed instead of disappearing from the query. A pure NOT request inherits an earlier query only when it targets an entity in that earlier query or explicitly names continuation, correction, or a group. Corrections and continuations reduce only against an explicitly targeted prior group without using provider prose as canonical query state.",
+      "search_pool": "The complete current-day promoted Master+ typed lineup index is the candidate search pool for every query. The static Meta Map is a compact orientation capsule, never a whitelist, eligibility gate, shortlist, or substitute search index.",
+      "atomic_variant_evaluation": "Evaluate every composition, breakpoint, exclusion, and champion-role clause against one source-declared published final variant atomically. Conditions split across variants never form an exact match, nested transitions remain attached to their published parent, and cross-variant core frequency cannot synthesize a query result.",
+      "no_exact_match_policy": "When no atomic published variant exactly satisfies a typed group, return an explicit partial_downgrade with no_atomic_exact_match and rank only bounded partial coverage. An unresolved entity or invalid breakpoint is unresolved rather than partial and must not trigger a Meta fallback that looks like a match. Answer other independently resolved groups normally, then request clarification for the unresolved group. Never describe a partial, analogous, member-only, or breakpoint-mismatched result as exact.",
+      "evidence_lanes": {
+        "target": "Explicit current target first, then provisional target intent, then durable target plan identity.",
+        "augment": "Only canonical augment confirmations. Item choices and major-season choices must never activate this lane.",
+        "board": "Trusted owned board and bench units. Role, copies, star level, and core coverage determine a board-commitment confidence inside the registered board component.",
+        "equipment": "Effective confirmed item bench and equipped-item facts.",
+        "intent": "Current user decision intent not already represented by the target lane.",
+        "shop": "Current shop evidence is an unowned immediate opportunity only. It may support buy/hold actions and typed lookup audit, but contributes zero to current_board_fit and lineup commitment.",
+        "meta": "Current-day Master+ national trait strength using top-four rate, top-one rate, and appearance rate. Missing national game count or average placement stays missing.",
+        "tempo": "A candidate-specific soft feasibility score from current stage, HP, gold, level, XP, and published transition populations; never a fixed roll-level command."
+      },
+      "fusion": "Do not fuse or rank evidence lanes before lineup scoring. Annotate the complete lightweight eligible Master+ candidate pool with typed lane hits, apply explicit target-role constraints, compute the registered five-component stage score exactly once, then truncate and hydrate only the winners.",
+      "working_set_budget": "The complete current-day Master+ pre-hydration candidate pool, including compact retrieval evidence, must serialize within 512KB. Full transitions, item packages, positioning, season extensions, and complete sibling variants stay in the candidate-id detail cache until primary-winner hydration.",
+      "target_role_semantics": "Parse explicit target role before ranking. Main-carry language requires strategy_profile.main_carry identity; a core member or trait activator is contextual only and cannot be labeled primary_target_match.",
+      "stage_adaptive_fit": "Use stage 2 weights meta 0.56, augment 0.20, item 0.14, tempo 0.07, board 0.03; stage 3 weights meta 0.47, augment 0.23, item 0.14, tempo 0.10, board 0.06; and stage 4+ weights meta 0.40, augment 0.22, item 0.13, tempo 0.13, board 0.12. User target role is a constraint before this weighted score, not a sixth percentage silently mixed into it. Early-stage owned units are weak commitment evidence and cannot overtake current Master+ direction evidence by themselves.",
+      "stage_readiness": "Run every returned candidate through the same season-neutral lifecycle readiness assessment. Keep low-cost, three-cost, four-cost, and legendary lines in one universal index; label whether each is observation-only, a conditional current start, a future target, a build-toward line, or an established core. This assessment must not create a durable target or replace the five registered weights.",
+      "source_isolation_at_query": "Meta ordering and meta_strength use only candidates with a national Master+ strength anchor. Winning-lineup and popular-lineup metrics are discarded during recipe normalization and never enter recipe generations, the Host decision payload, ranking quality, national sample size, or nonzero meta strength. Host-visible lineup strength statistics are limited to national top-four rate, top-one rate, and appearance rate.",
+      "cache_identity": "Include current ranking identity, rank tier, target and intent, canonical choices, stage/economy, board/bench, shop, and equipment fingerprints.",
+      "pagination": {
+        "display_only": "Standard next-three and next-five requests paginate presentation only. Page size must never truncate the Master+ search pool, alter typed matching, or become a business ranking limit.",
+        "cursor_identity": "Bind the cursor to the reduced typed-query identity plus the exact promoted Master+ data fingerprint. The compiled strategy index publishes a deterministic complete-content fingerprint, and Runtime also fingerprints the current compact candidate content so recipe-only drift cannot reuse an old page. Store only the full lightweight ordered candidate ids, finite scores, typed match reasons, shown ids, and bounded idempotence receipts; never store or persist full lineup strategy packages in the cursor.",
+        "exclude_shown": "Every continuation excludes all candidate ids already shown by the same cursor and reports exhaustion without repeating candidates.",
+        "invalidation": "Any material query-condition change or Master+ data-fingerprint change creates a new cursor. A stale fingerprint fails closed and cannot page against newly promoted data.",
+        "byte_budget": "Cursor serialization has a strict bounded byte budget and deterministic compaction. Oversized or malformed cursor state fails closed rather than dropping candidate identity, score, match reason, or shown-id truth."
+      },
+      "output": "After the one stage-weighted score, return two or three compact winners with typed match reasons and source authority; hydrate the selected compatible recipe gameplay package only for those winners, using winning recipes before popular recipes."
+    },
+    "runtime_reconciliation": [
+      "current_stage",
+      "hp_and_loss_buffer",
+      "gold_level_and_xp",
+      "current_board_quality",
+      "confirmed_equipment",
+      "confirmed_choices",
+      "current_user_target"
+    ],
+    "forbidden_claims": [
+      "lineup_variant_is_an_independent_sample",
+      "associated_augment_is_an_independent_augment_winrate",
+      "hero_popularity_is_live_contest_count",
+      "analogous_recipe_inherits_national_strength",
+      "recipe_metrics_are_national_trait_strength",
+      "recipe_metrics_enter_host_decision_payload",
+      "shop_unit_counts_as_owned_board_commitment",
+      "historical_trend_changes_live_match_ranking",
+      "published_position_is_opponent_counter_positioning",
+      "lifecycle_prior_is_a_fixed_level_or_roll_command"
+      ,"cross_variant_rosters_are_composable"
+      ,"published_core_consensus_is_always_mandatory"
+    ]
+  },
+  "history_policy": {
+    "archive_after": "successful audited promotion only",
+    "keep_distinct_dates": 14,
+    "same_date_behavior": "overwrite the same YYYYMMDD signal idempotently",
+    "retained_content": "compact metric and signal deltas only, partitioned by complete immutable ranking binding",
+    "live_match_use": "compiled_same_binding_auxiliary_evidence_only; direct history and latest-diff reads are forbidden; current-day promoted metrics remain the only ranking-strength inputs",
+    "binding_fields": [
+      "runtime_season_id",
+      "active_patch_id",
+      "core_profile_id",
+      "catalog_source_fingerprint",
+      "hard_data_manifest_fingerprint",
+      "battle_type",
+      "selected_tier_part",
+      "lineup_version_id",
+      "ranking_set_id"
+    ],
+    "score_weight": 0,
+    "may_change_candidate_order": false,
+    "may_change_candidate_membership": false,
+    "excluded_content": ["snapshot", "raw", "associated_lineups"],
+    "prune_policy": "Every successful audited refresh invokes the shared history archive/prune script. Keep the latest 14 distinct stat dates and delete older compact signals only after the replacement trend summary is written atomically."
+  },
+  "hero_item_signal_policy": {
+    "source": "get_hero_equip_ranking.combine_itemid_details for per-hero packages; equip_rank.top_3_hero remains a lower-weight item-to-hero association fallback",
+    "role": "background_prior_for_item_craft_and_holder_assignment",
+    "not_a_truth_source_for": [
+      "perfect_three_item_combo",
+      "augment_conditioned_itemization",
+      "trait_conditioned_itemization",
+      "current_game_best_item_when_live_state_disagrees"
+    ],
+    "must_yield_to": [
+      "visible_live_state",
+      "owned_components",
+      "owned_units_and_star_levels",
+      "selected_augments",
+      "active_traits",
+      "stage_tempo",
+      "hard_data_item_fit"
+    ],
+    "required_wording": "Treat as daily ranking prior. Say it is a prior when evidence is only hero_item_signal."
+  },
+  "augment_lineup_signal_policy": {
+    "source": "lineup_group.info.list.rune_id_group",
+    "role": "background_prior_for_augment_choice_and_postgame_review",
+    "interpretation": "lineup_association_prior_not_independent_augment_winrate",
+    "not_independent_winrate": true,
+    "not_a_truth_source_for": [
+      "independent_augment_winrate",
+      "augment_causal_power",
+      "current_game_best_augment_when_live_state_disagrees",
+      "final_selected_augment_confirmation"
+    ],
+    "must_yield_to": [
+      "visible_live_state",
+      "current_choice_set",
+      "selected_augments",
+      "owned_units_and_star_levels",
+      "owned_components",
+      "stage_tempo",
+      "hard_data_augment_effects",
+      "user_intent"
+    ],
+    "required_wording": "Treat as daily lineup-association prior. Do not call it independent augment win rate.",
+    "choice_evaluator_boundary": {
+      "deduplicate": "Count one associated augment at most once per atomic lineup, even when source rows repeat it.",
+      "baseline": "The compatibility input supplied to augment choice uses the normalized meta, board, item, and tempo fit baseline with augment_fit excluded.",
+      "no_feedback_loop": "Never feed the registered five-component lineup score, which already contains augment_fit, back into augment choice lineup_fit.",
+      "metrics_boundary": "Winning-recipe or popular-recipe rates never become augment scores, confidence, or independent strength.",
+      "unavailable_boundary": "No compatible Master+ Ranking Overlay means no lineup-association input; Core-only augment evaluation remains available."
+    }
+  }
+}

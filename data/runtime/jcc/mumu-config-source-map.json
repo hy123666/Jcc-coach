@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-10T10:30:52.343Z",
+  "endpoints": [],
+  "data_models": [
+    {
+      "id": "BuyHeroInfo",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/BuyHeroInfo",
+      "role": "shop_purchase_candidate",
+      "live_state_mapping": [
+        "shop_units",
+        "candidate_actions.buy"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "WaitHeroInfo",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/WaitHeroInfo",
+      "role": "bench_wait_candidate",
+      "live_state_mapping": [
+        "bench_units.candidate_observations"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "SellHeroInfo",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/SellHeroInfo",
+      "role": "sell_action_candidate",
+      "live_state_mapping": [
+        "candidate_actions.sell"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "GiHeroInfo",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/GiHeroInfo",
+      "role": "board_or_visible_hero_candidate",
+      "live_state_mapping": [
+        "board_units.candidate_observations"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "GiHeroList",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/GiHeroList",
+      "role": "visible_hero_list_candidate",
+      "live_state_mapping": [
+        "board_units.candidate_observations"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "GiWaitHeroList",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/GiWaitHeroList",
+      "role": "bench_wait_list_candidate",
+      "live_state_mapping": [
+        "bench_units.candidate_observations"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "PlayerBattleInfo",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/PlayerBattleInfo",
+      "role": "player_battle_context_candidate",
+      "live_state_mapping": [
+        "players.candidate_observations",
+        "opponents.candidate_observations"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "PlayerBattleInfoList",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/PlayerBattleInfoList",
+      "role": "player_battle_context_list_candidate",
+      "live_state_mapping": [
+        "players.candidate_observations",
+        "opponents.candidate_observations"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "GiGameStatus",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/GiGameStatus",
+      "role": "game_status_candidate",
+      "live_state_mapping": [
+        "phase",
+        "round",
+        "stage"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "StageData",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/StageData",
+      "role": "mumu_recommendation_stage_payload_schema_evidence_only",
+      "live_state_mapping": [
+        "mumu_reference.recommendation_payload.stage"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "StageRecommendData",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/StageRecommendData",
+      "role": "mumu_recommendation_stage_payload_schema_evidence_only",
+      "live_state_mapping": [
+        "mumu_reference.recommendation_payload.stage"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "XYPosition",
+      "descriptor": "com/mumu/gameassist/api/XYPosition",
+      "role": "screen_or_board_xy_position",
+      "live_state_mapping": [
+        "position.candidate_xy"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "ChessPositionApi",
+      "descriptor": "com/mumu/gameassist/api/ChessPositionApi",
+      "role": "chess_position_api_model",
+      "live_state_mapping": [
+        "position.candidate_grid"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "PositionApiData",
+      "descriptor": "com/mumu/gameassist/api/PositionApiData",
+      "role": "position_payload_wrapper",
+      "live_state_mapping": [
+        "position.candidate_grid"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "LineupDetailData",
+      "descriptor": "com/mumu/gameassist/api/LineupDetailData",
+      "role": "mumu_lineup_payload_schema_evidence_only",
+      "live_state_mapping": [
+        "mumu_reference.lineup_payload"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "OuterPositionApiData",
+      "descriptor": "com/mumu/gameassist/api/OuterPositionApiData",
+      "role": "outer_position_payload",
+      "live_state_mapping": [
+        "mumu_reference.positioning_payload"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "ChosenApiData",
+      "descriptor": "com/mumu/gameassist/api/ChosenApiData",
+      "role": "augment_or_chosen_payload",
+      "live_state_mapping": [
+        "augments.candidate_observations",
+        "mumu_reference.augment_payload"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "SecretskillApiData",
+      "descriptor": "com/mumu/gameassist/api/SecretskillApiData",
+      "role": "secret_skill_or_augment_payload",
+      "live_state_mapping": [
+        "augments.candidate_observations",
+        "mumu_reference.augment_payload"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "LineupApiData",
+      "descriptor": "com/mumu/gameassist/api/LineupApiData",
+      "role": "mumu_lineup_api_payload_schema_evidence_only",
+      "live_state_mapping": [
+        "mumu_reference.lineup_payload"
+      ],
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    }
+  ],
+  "recommended_pipeline": [
+    "Use ADB/MediaProjection frame capture for current visible state.",
+    "Use MuMu class names to normalize OCR/ROI outputs into BuyHeroInfo/WaitHeroInfo/GiHeroInfo/SellHeroInfo-shaped candidates.",
+    "Resolve hero identity against local JCC hard-data catalog.",
+    "Run strategy/recommendation through project hard-data, live-ranking signals, formulas, and AI-native route evaluators; never through MuMu lineup_index.",
+    "Promote to board_units/bench_units only after current-frame evidence or current-match action reducer verifies local-player scope."
+  ]
+}

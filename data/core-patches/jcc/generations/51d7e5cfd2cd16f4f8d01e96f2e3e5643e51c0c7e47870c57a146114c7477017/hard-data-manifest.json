@@ -1,0 +1,171 @@
+{
+  "counts": {
+    "augments": 261,
+    "balance_patch_audit": 81,
+    "champions": 65,
+    "chess_variants": 260,
+    "items": 151,
+    "mechanics_parameters": 0,
+    "per_match_variables": 0,
+    "reward_tables": 15,
+    "season_mechanics": 176,
+    "source_entity_mappings": 11,
+    "trait_diversity_roster_support": 7,
+    "traits": 36
+  },
+  "deterministic": true,
+  "files": {
+    "indexes/augment_stage_authority.json": {
+      "bytes": 246332,
+      "sha256": "5fb727e484ef299b66d5268d6b2e39c71d9665c7ccfb550708e830e11ce6e88f"
+    },
+    "indexes/balance_patch_audit.json": {
+      "bytes": 10026,
+      "sha256": "7b3ac55ec470a65346e8c639eaad08694391105358695cb287054a794226af27"
+    },
+    "indexes/champion_damage_profile.json": {
+      "bytes": 22559,
+      "sha256": "983bf88ea5ad587bb637043e0373530a0070a1c7ad8c7040767bf67fe81add14"
+    },
+    "indexes/champion_item_fit.json": {
+      "bytes": 679640,
+      "sha256": "7c38ac7e46f72191de271daa9ed980dc4020ab259d1277b316705332d007157d"
+    },
+    "indexes/champion_role_profile.json": {
+      "bytes": 21637,
+      "sha256": "1de684a3d34c606deb24c18e1f012a621b27b8718b2bd4c46c9d989d72b5a9f0"
+    },
+    "indexes/component_to_item_candidates.json": {
+      "bytes": 50964,
+      "sha256": "f0f6b0de1232c2a4cd4d78dd9186debcabe96419fe7463f6de03e48d104b72bf"
+    },
+    "indexes/entity_alias_gateway.json": {
+      "bytes": 324790,
+      "sha256": "2cd7401ecc92a2cd4f17be13f571693b282ef96f68e00f31968c7b7458aa7010"
+    },
+    "indexes/entity_strategy_weights.json": {
+      "bytes": 464532,
+      "sha256": "244b297a3e468295ec93b6fe341da3d0cbcf31016fc92289d31e623ede6b2e89"
+    },
+    "indexes/item_conflicts.json": {
+      "bytes": 66731,
+      "sha256": "7126c56e6250adf5650a69ad39f6a09da07f60faab07609b54945b8bc91b2c89"
+    },
+    "indexes/item_holder_fit.json": {
+      "bytes": 1131461,
+      "sha256": "2c55e9fb10827db1e46e5d5ef7bd09bd936c086ee6e77ebac23bc36cda54b66c"
+    },
+    "indexes/item_holders.json": {
+      "bytes": 240169,
+      "sha256": "24e1a268d895fd41b8c0cf17e13fa0060dad53bdc01313b764228cb4b3cdc20d"
+    },
+    "indexes/item_wait_cost.json": {
+      "bytes": 26504,
+      "sha256": "1de15d00df32378bc452ef182d8be0de5c5fee62aaff70d2c866bf325bf194a2"
+    },
+    "indexes/supplemental_source_audit.json": {
+      "bytes": 82993,
+      "sha256": "c1be65331809b36bd54790599338bdd109813da35745d863ed9f6f27a7788571"
+    },
+    "indexes/trait_breakpoints.json": {
+      "bytes": 80085,
+      "sha256": "7cf6b06ee64b1a98a80dda7efb65534be8f34e5f5b80e9f2cdf79eb2860abbe1"
+    },
+    "indexes/trait_diversity_roster_index.json": {
+      "bytes": 5221,
+      "sha256": "7a6b8670e5fd8453dc5799a259cd736f2a9513e3aa9cb254e030d92572ee9754"
+    },
+    "indexes/trait_unit_matrix.json": {
+      "bytes": 46972,
+      "sha256": "8663b657fabf48672aa47cdc8c05486ea93d54ce9c684a66012b9a59714d364c"
+    },
+    "normalized/augments.json": {
+      "bytes": 1755586,
+      "sha256": "8fda5b017eb245ce4773af3916b9f44eea16fb0ecba3aaa098bd06e6ac06f1dd"
+    },
+    "normalized/balance_patch_audit.json": {
+      "bytes": 10026,
+      "sha256": "7b3ac55ec470a65346e8c639eaad08694391105358695cb287054a794226af27"
+    },
+    "normalized/champions.json": {
+      "bytes": 713638,
+      "sha256": "e59143f632fc2cbce0944395f72c2b071be6a66101035baa9396acaa346c45dd"
+    },
+    "normalized/chess_variants.json": {
+      "bytes": 126343,
+      "sha256": "9e989e511775df992b10e7a5f6e09fa5e740018255ba58c8477c50f85c2dbfc8"
+    },
+    "normalized/items.json": {
+      "bytes": 829984,
+      "sha256": "92ab4dcbf76c8f821163195ffe0263d48d76c1da7c920d4701b185c8b5390679"
+    },
+    "normalized/mechanics_parameters.json": {
+      "bytes": 27997,
+      "sha256": "652b6927e3b5ec20553a3d393afb8efdaee384004bb8e5bd32960ac10247eec9"
+    },
+    "normalized/per_match_variables.json": {
+      "bytes": 189,
+      "sha256": "d414f54f8c2a8ed6a50a4d99e7707e63ab6665d88385f55fe06e0e81496244ad"
+    },
+    "normalized/reward_tables.json": {
+      "bytes": 227656,
+      "sha256": "c1cafdf5f0bc52ab860d146650923180ccc08f0b070afbe23b25c3217ebffe5e"
+    },
+    "normalized/season_mechanics.json": {
+      "bytes": 3174364,
+      "sha256": "9b861a50fd8b1c5fcb997fee06b3c80bbe46d41d87c840f5b96b763112bd8445"
+    },
+    "normalized/source_entity_mappings.json": {
+      "bytes": 3725,
+      "sha256": "1fe0428168e9df57a8368a87e83b84de1122a08acb1ce6a14601610473d84a12"
+    },
+    "normalized/trait-diversity-rosters/none/10.json": {
+      "bytes": 64205,
+      "sha256": "8201cf7b17ac1faeaa2d322c488d54393b69e97cd98c63c3bc03175763d0872c"
+    },
+    "normalized/trait-diversity-rosters/none/4.json": {
+      "bytes": 8856,
+      "sha256": "6e9ed698503f1e29e0e8ae492718210fb5b5cbd0834f4a7e12391b617d7f9466"
+    },
+    "normalized/trait-diversity-rosters/none/5.json": {
+      "bytes": 15141,
+      "sha256": "d48d663e8e48000aa260bd0aeded673aade5a8b3f8fb6b02e930b91834a102e8"
+    },
+    "normalized/trait-diversity-rosters/none/6.json": {
+      "bytes": 41397,
+      "sha256": "09c9d0897737dca6e3c4835a829757321ba144bf0aace64ebfdbd29b5c523b53"
+    },
+    "normalized/trait-diversity-rosters/none/7.json": {
+      "bytes": 15380,
+      "sha256": "a76f16f4993552651c8da8bc6a689a56e9ea95dc466b11503945285b12174d5f"
+    },
+    "normalized/trait-diversity-rosters/none/8.json": {
+      "bytes": 36088,
+      "sha256": "cbd505d87fc631dae11b8e741a9cc828d7875d7d22a96d8f84a4b5ebd3d64616"
+    },
+    "normalized/trait-diversity-rosters/none/9.json": {
+      "bytes": 53095,
+      "sha256": "bf43a10955212853d7532313936a22cd597feee2d4859bc1ead25eb2f05d1289"
+    },
+    "normalized/trait_diversity_roster_support.json": {
+      "bytes": 42536,
+      "sha256": "2135797b65f7e371772a91ae681489074189979e50a8f792629ec949f3f7b4f4"
+    },
+    "normalized/traits.json": {
+      "bytes": 97790,
+      "sha256": "d2df71e1a5743971d997ccaff64ebc525556432e434deee7d49143628341d208"
+    },
+    "runtime-catalog-overlay.json": {
+      "bytes": 288160,
+      "sha256": "ad672ec72241ea8bc3d593504238bd2689f6bd01d5a75276cc9fae95185f2899"
+    }
+  },
+  "identity": {
+    "mode_id": "mode18",
+    "patch_id": "s18_1",
+    "season_id": "s18"
+  },
+  "rankings_included": false,
+  "runtime_patch_id": "s18_1",
+  "schema": "jcc-hard-data-content-manifest-v1"
+}

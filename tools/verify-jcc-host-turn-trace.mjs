@@ -1,0 +1,30 @@
+import assert from "node:assert/strict";
+import { createHostTurnTrace, updateHostTurnTrace, hostDeliveryTrace } from "../ui/electron/host-turn-trace.js";
+const start = "2026-09-06T10:00:00.000Z";
+const initial = createHostTurnTrace({ request: { request_id: "req", secret: "must-not-log" },
+  task: { response_task_id: "owner", revision: 3 }, taskId: "attempt", prompt: "中文",
+  invocation: { route: { match_session_id: "match", key: "route" }, host_session_id: "session", turn_prompt_bytes: 6 }, now: start });
+assert.equal(initial.prompt_chars, 2);
+assert.equal(initial.prompt_bytes, 6);
+assert.equal(JSON.stringify(initial).includes("must-not-log"), false);
+const dispatched = updateHostTurnTrace(initial, "dispatch", { now: "2026-09-06T10:00:01.000Z" });
+const token = updateHostTurnTrace(dispatched, "first_token", { now: "2026-09-06T10:00:03.000Z" });
+const final = updateHostTurnTrace(token, "final", { now: "2026-09-06T10:00:06.000Z", status: "ok" });
+assert.equal(final.first_token_ms, 2000);
+assert.equal(final.provider_elapsed_ms, 5000);
+assert.equal(final.semantic_validation_status, "pending");
+assert.equal(updateHostTurnTrace(final, "validation", { status: "failed" }).delivery_status, "withheld");
+assert.equal(updateHostTurnTrace(final, "validation", { status: "passed" }).delivery_status, "ready");
+const rejected = updateHostTurnTrace(final, "validation", { status: "failed", validationError: "missing_decision" });
+assert.equal(rejected.validation_error, "missing_decision");
+assert.equal(updateHostTurnTrace(rejected, "validation", { status: "passed" }).validation_error, null);
+assert.equal(updateHostTurnTrace(final, "validation", { status: "failed", validationError: "x".repeat(3000) }).validation_error.length, 2000);
+assert.equal(hostDeliveryTrace({ status: "failed" }).delivery_status, "failure_acknowledged");
+assert.equal(initial.provider_dispatch_at, null);
+const failed = updateHostTurnTrace(initial, "failed", { status: "decode_failed" });
+assert.equal(failed.final_event_at, null);
+assert.equal(failed.delivery_status, "failed");
+assert.equal(failed.semantic_validation_status, "not_run");
+assert.equal(failed.normalization_status, "decode_failed");
+assert.ok(failed.attempt_ended_at);
+console.log(JSON.stringify({ ok: true, checked: ["metadata-only", "chars-not-tokens", "separate-timing-phases", "semantic-before-delivery", "immutable-trace-updates"] }));

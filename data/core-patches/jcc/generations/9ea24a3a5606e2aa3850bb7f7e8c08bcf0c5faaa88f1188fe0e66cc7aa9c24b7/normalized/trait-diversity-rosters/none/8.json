@@ -1,0 +1,1295 @@
+{
+  "objective_views": {
+    "bronze_trait_scaling": {
+      "accessibility_fallback_roster_ids": [
+        "4db3c6197dc57e704c62ea528dc57303b57dcf620ec0de0d8cfac4140ecb4797",
+        "e2f83ae924b2384f8e423dee61b006fbb2d6d08bd2fac4763169a86515e142a8",
+        "e6adc92c6cf8c24f7b4698a4be0514f4c41c58921662dfc12b745c6623b34620"
+      ],
+      "common_champion_ids": [
+        "1506",
+        "3502",
+        "3506",
+        "5456"
+      ],
+      "frequent_champions": [
+        {
+          "champion_id": "1506",
+          "count": 2,
+          "share": 1
+        },
+        {
+          "champion_id": "3502",
+          "count": 2,
+          "share": 1
+        },
+        {
+          "champion_id": "3506",
+          "count": 2,
+          "share": 1
+        },
+        {
+          "champion_id": "5456",
+          "count": 2,
+          "share": 1
+        }
+      ],
+      "high_cost_frontier_roster_ids": [
+        "0d0f7f79ff8047f9ce0949ad21edba71e4d1498b2fed4843bcc13aef6d322a8a",
+        "d2a31c4719210d2ebec6327d40b45ef2d047d04f3bdd9fee90eae3e09a7c1a8c"
+      ],
+      "maximum_high_cost_unit_count": 3,
+      "maximum_objective_value": 10,
+      "objective_id": "bronze_trait_scaling",
+      "primary_metric": "bronze_trait_count",
+      "primary_roster_ids": [
+        "0d0f7f79ff8047f9ce0949ad21edba71e4d1498b2fed4843bcc13aef6d322a8a",
+        "d2a31c4719210d2ebec6327d40b45ef2d047d04f3bdd9fee90eae3e09a7c1a8c"
+      ]
+    },
+    "trait_ladder_reward_progress": {
+      "accessibility_fallback_roster_ids": [
+        "4db3c6197dc57e704c62ea528dc57303b57dcf620ec0de0d8cfac4140ecb4797"
+      ],
+      "common_champion_ids": [
+        "1506",
+        "3502",
+        "3506",
+        "5456"
+      ],
+      "frequent_champions": [
+        {
+          "champion_id": "1506",
+          "count": 2,
+          "share": 1
+        },
+        {
+          "champion_id": "3502",
+          "count": 2,
+          "share": 1
+        },
+        {
+          "champion_id": "3506",
+          "count": 2,
+          "share": 1
+        },
+        {
+          "champion_id": "5456",
+          "count": 2,
+          "share": 1
+        }
+      ],
+      "high_cost_frontier_roster_ids": [
+        "0d0f7f79ff8047f9ce0949ad21edba71e4d1498b2fed4843bcc13aef6d322a8a",
+        "d2a31c4719210d2ebec6327d40b45ef2d047d04f3bdd9fee90eae3e09a7c1a8c"
+      ],
+      "maximum_high_cost_unit_count": 3,
+      "maximum_objective_value": 10,
+      "objective_id": "trait_ladder_reward_progress",
+      "primary_metric": "non_unique_active_trait_count",
+      "primary_roster_ids": [
+        "0d0f7f79ff8047f9ce0949ad21edba71e4d1498b2fed4843bcc13aef6d322a8a",
+        "d2a31c4719210d2ebec6327d40b45ef2d047d04f3bdd9fee90eae3e09a7c1a8c",
+        "e2f83ae924b2384f8e423dee61b006fbb2d6d08bd2fac4763169a86515e142a8",
+        "e6adc92c6cf8c24f7b4698a4be0514f4c41c58921662dfc12b745c6623b34620"
+      ]
+    }
+  },
+  "population": 8,
+  "provider_traits": [],
+  "role_constraint_status": "satisfied",
+  "roster_support_id": "s18_2:trait_diversity_rosters",
+  "rosters": [
+    {
+      "champion_ids": [
+        "1506",
+        "1501",
+        "2513",
+        "3502",
+        "3506",
+        "4503",
+        "4502",
+        "5456"
+      ],
+      "metrics": {
+        "active_trait_count": 10,
+        "bronze_trait_count": 10,
+        "five_cost_unit_count": 1,
+        "four_cost_unit_count": 2,
+        "high_cost_unit_count": 3,
+        "non_unique_active_trait_count": 10,
+        "source_quality": 1019,
+        "total_unit_cost": 23,
+        "tracker_high_cost_carry_count": 1,
+        "tracker_high_cost_tank_count": 2
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [
+          {
+            "added_champion_ids": [
+              "5458"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "1501",
+              "2513",
+              "3502",
+              "3506",
+              "4503",
+              "4502",
+              "5456"
+            ],
+            "overlap_count": 8,
+            "overlap_ratio": 1,
+            "population": 9,
+            "removed_champion_ids": [],
+            "roster_id": "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+            "status": "exact_add_only",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          },
+          {
+            "added_champion_ids": [
+              "3512",
+              "4500"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "1501",
+              "3502",
+              "3506",
+              "4503",
+              "4502",
+              "5456"
+            ],
+            "overlap_count": 7,
+            "overlap_ratio": 0.875,
+            "population": 9,
+            "removed_champion_ids": [
+              "2513"
+            ],
+            "roster_id": "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          }
+        ],
+        "trait_ladder_reward_progress": [
+          {
+            "added_champion_ids": [
+              "5458"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "1501",
+              "2513",
+              "3502",
+              "3506",
+              "4503",
+              "4502",
+              "5456"
+            ],
+            "overlap_count": 8,
+            "overlap_ratio": 1,
+            "population": 9,
+            "removed_champion_ids": [],
+            "roster_id": "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+            "status": "exact_add_only",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          },
+          {
+            "added_champion_ids": [
+              "3512",
+              "4500"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "1501",
+              "3502",
+              "3506",
+              "4503",
+              "4502",
+              "5456"
+            ],
+            "overlap_count": 7,
+            "overlap_ratio": 0.875,
+            "population": 9,
+            "removed_champion_ids": [
+              "2513"
+            ],
+            "roster_id": "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          }
+        ]
+      },
+      "ordinal": 2,
+      "population": 8,
+      "roster_id": "0d0f7f79ff8047f9ce0949ad21edba71e4d1498b2fed4843bcc13aef6d322a8a",
+      "source_champion_ids": [
+        "918084",
+        "918497",
+        "918991",
+        "918009",
+        "918131",
+        "918032",
+        "918876",
+        "918955"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918032,918084,918131,918497,918876,918955,918991",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "343",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1506",
+        "2503",
+        "3502",
+        "3512",
+        "3504",
+        "3506",
+        "4500",
+        "5456"
+      ],
+      "metrics": {
+        "active_trait_count": 10,
+        "bronze_trait_count": 9,
+        "five_cost_unit_count": 1,
+        "four_cost_unit_count": 1,
+        "high_cost_unit_count": 2,
+        "non_unique_active_trait_count": 10,
+        "source_quality": 1218,
+        "total_unit_cost": 24,
+        "tracker_high_cost_carry_count": 1,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [
+          {
+            "added_champion_ids": [
+              "1501",
+              "4503",
+              "4502"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "3512",
+              "3506",
+              "4500",
+              "5456"
+            ],
+            "overlap_count": 6,
+            "overlap_ratio": 0.75,
+            "population": 9,
+            "removed_champion_ids": [
+              "2503",
+              "3504"
+            ],
+            "roster_id": "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          },
+          {
+            "added_champion_ids": [
+              "1501",
+              "2513",
+              "4503",
+              "4502",
+              "5458"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "3506",
+              "5456"
+            ],
+            "overlap_count": 4,
+            "overlap_ratio": 0.5,
+            "population": 9,
+            "removed_champion_ids": [
+              "2503",
+              "3512",
+              "3504",
+              "4500"
+            ],
+            "roster_id": "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          }
+        ],
+        "trait_ladder_reward_progress": [
+          {
+            "added_champion_ids": [
+              "1501",
+              "4503",
+              "4502"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "3512",
+              "3506",
+              "4500",
+              "5456"
+            ],
+            "overlap_count": 6,
+            "overlap_ratio": 0.75,
+            "population": 9,
+            "removed_champion_ids": [
+              "2503",
+              "3504"
+            ],
+            "roster_id": "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          },
+          {
+            "added_champion_ids": [
+              "1501",
+              "2513",
+              "4503",
+              "4502",
+              "5458"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "3506",
+              "5456"
+            ],
+            "overlap_count": 4,
+            "overlap_ratio": 0.5,
+            "population": 9,
+            "removed_champion_ids": [
+              "2503",
+              "3512",
+              "3504",
+              "4500"
+            ],
+            "roster_id": "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          }
+        ]
+      },
+      "ordinal": 3,
+      "population": 8,
+      "roster_id": "e2f83ae924b2384f8e423dee61b006fbb2d6d08bd2fac4763169a86515e142a8",
+      "source_champion_ids": [
+        "918084",
+        "918098",
+        "918009",
+        "918096",
+        "918107",
+        "918131",
+        "918997",
+        "918955"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918084,918096,918098,918107,918131,918955,918997",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "350",
+          "identity_match_kind": "unique_official_name_prefix",
+          "source_name": "神谕者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 3,
+          "bronze_tier": false,
+          "count": 1,
+          "id": "463",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1506",
+        "2503",
+        "3502",
+        "3512",
+        "3505",
+        "3506",
+        "4500",
+        "5456"
+      ],
+      "metrics": {
+        "active_trait_count": 10,
+        "bronze_trait_count": 9,
+        "five_cost_unit_count": 1,
+        "four_cost_unit_count": 1,
+        "high_cost_unit_count": 2,
+        "non_unique_active_trait_count": 10,
+        "source_quality": 1218,
+        "total_unit_cost": 24,
+        "tracker_high_cost_carry_count": 1,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [
+          {
+            "added_champion_ids": [
+              "1501",
+              "4503",
+              "4502"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "3512",
+              "3506",
+              "4500",
+              "5456"
+            ],
+            "overlap_count": 6,
+            "overlap_ratio": 0.75,
+            "population": 9,
+            "removed_champion_ids": [
+              "2503",
+              "3505"
+            ],
+            "roster_id": "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          },
+          {
+            "added_champion_ids": [
+              "1501",
+              "2513",
+              "4503",
+              "4502",
+              "5458"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "3506",
+              "5456"
+            ],
+            "overlap_count": 4,
+            "overlap_ratio": 0.5,
+            "population": 9,
+            "removed_champion_ids": [
+              "2503",
+              "3512",
+              "3505",
+              "4500"
+            ],
+            "roster_id": "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          }
+        ],
+        "trait_ladder_reward_progress": [
+          {
+            "added_champion_ids": [
+              "1501",
+              "4503",
+              "4502"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "3512",
+              "3506",
+              "4500",
+              "5456"
+            ],
+            "overlap_count": 6,
+            "overlap_ratio": 0.75,
+            "population": 9,
+            "removed_champion_ids": [
+              "2503",
+              "3505"
+            ],
+            "roster_id": "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          },
+          {
+            "added_champion_ids": [
+              "1501",
+              "2513",
+              "4503",
+              "4502",
+              "5458"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "3506",
+              "5456"
+            ],
+            "overlap_count": 4,
+            "overlap_ratio": 0.5,
+            "population": 9,
+            "removed_champion_ids": [
+              "2503",
+              "3512",
+              "3505",
+              "4500"
+            ],
+            "roster_id": "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          }
+        ]
+      },
+      "ordinal": 4,
+      "population": 8,
+      "roster_id": "e6adc92c6cf8c24f7b4698a4be0514f4c41c58921662dfc12b745c6623b34620",
+      "source_champion_ids": [
+        "918084",
+        "918098",
+        "918009",
+        "918096",
+        "918121",
+        "918131",
+        "918997",
+        "918955"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918084,918096,918098,918121,918131,918955,918997",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "350",
+          "identity_match_kind": "unique_official_name_prefix",
+          "source_name": "神谕者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 3,
+          "bronze_tier": false,
+          "count": 1,
+          "id": "463",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1506",
+        "2503",
+        "3502",
+        "3512",
+        "3506",
+        "4500",
+        "5456",
+        "5458"
+      ],
+      "metrics": {
+        "active_trait_count": 10,
+        "bronze_trait_count": 10,
+        "five_cost_unit_count": 2,
+        "four_cost_unit_count": 1,
+        "high_cost_unit_count": 3,
+        "non_unique_active_trait_count": 10,
+        "source_quality": 1020,
+        "total_unit_cost": 26,
+        "tracker_high_cost_carry_count": 2,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [
+          {
+            "added_champion_ids": [
+              "1501",
+              "4503",
+              "4502"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "3512",
+              "3506",
+              "4500",
+              "5456"
+            ],
+            "overlap_count": 6,
+            "overlap_ratio": 0.75,
+            "population": 9,
+            "removed_champion_ids": [
+              "2503",
+              "5458"
+            ],
+            "roster_id": "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          },
+          {
+            "added_champion_ids": [
+              "1501",
+              "2513",
+              "4503",
+              "4502"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "3506",
+              "5456",
+              "5458"
+            ],
+            "overlap_count": 5,
+            "overlap_ratio": 0.625,
+            "population": 9,
+            "removed_champion_ids": [
+              "2503",
+              "3512",
+              "4500"
+            ],
+            "roster_id": "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          }
+        ],
+        "trait_ladder_reward_progress": [
+          {
+            "added_champion_ids": [
+              "1501",
+              "4503",
+              "4502"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "3512",
+              "3506",
+              "4500",
+              "5456"
+            ],
+            "overlap_count": 6,
+            "overlap_ratio": 0.75,
+            "population": 9,
+            "removed_champion_ids": [
+              "2503",
+              "5458"
+            ],
+            "roster_id": "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          },
+          {
+            "added_champion_ids": [
+              "1501",
+              "2513",
+              "4503",
+              "4502"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "3506",
+              "5456",
+              "5458"
+            ],
+            "overlap_count": 5,
+            "overlap_ratio": 0.625,
+            "population": 9,
+            "removed_champion_ids": [
+              "2503",
+              "3512",
+              "4500"
+            ],
+            "roster_id": "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          }
+        ]
+      },
+      "ordinal": 5,
+      "population": 8,
+      "roster_id": "d2a31c4719210d2ebec6327d40b45ef2d047d04f3bdd9fee90eae3e09a7c1a8c",
+      "source_champion_ids": [
+        "918084",
+        "918098",
+        "918009",
+        "918096",
+        "918131",
+        "918997",
+        "918955",
+        "918998"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918084,918096,918098,918131,918955,918997,918998",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "350",
+          "identity_match_kind": "unique_official_name_prefix",
+          "source_name": "神谕者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 3,
+          "id": "454",
+          "identity_match_confidence": 0.583333,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "峡谷怪物",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1512",
+        "1506",
+        "1507",
+        "1509",
+        "2508",
+        "3502",
+        "4507",
+        "4502"
+      ],
+      "metrics": {
+        "active_trait_count": 9,
+        "bronze_trait_count": 9,
+        "five_cost_unit_count": 0,
+        "four_cost_unit_count": 2,
+        "high_cost_unit_count": 2,
+        "non_unique_active_trait_count": 9,
+        "source_quality": 917,
+        "total_unit_cost": 17,
+        "tracker_high_cost_carry_count": 1,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [
+          {
+            "added_champion_ids": [
+              "1501",
+              "3512",
+              "3506",
+              "4503",
+              "4500",
+              "5456"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "4502"
+            ],
+            "overlap_count": 3,
+            "overlap_ratio": 0.375,
+            "population": 9,
+            "removed_champion_ids": [
+              "1512",
+              "1507",
+              "1509",
+              "2508",
+              "4507"
+            ],
+            "roster_id": "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          },
+          {
+            "added_champion_ids": [
+              "1501",
+              "2513",
+              "3506",
+              "4503",
+              "5456",
+              "5458"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "4502"
+            ],
+            "overlap_count": 3,
+            "overlap_ratio": 0.375,
+            "population": 9,
+            "removed_champion_ids": [
+              "1512",
+              "1507",
+              "1509",
+              "2508",
+              "4507"
+            ],
+            "roster_id": "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          }
+        ],
+        "trait_ladder_reward_progress": [
+          {
+            "added_champion_ids": [
+              "1501",
+              "3512",
+              "3506",
+              "4503",
+              "4500",
+              "5456"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "4502"
+            ],
+            "overlap_count": 3,
+            "overlap_ratio": 0.375,
+            "population": 9,
+            "removed_champion_ids": [
+              "1512",
+              "1507",
+              "1509",
+              "2508",
+              "4507"
+            ],
+            "roster_id": "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          },
+          {
+            "added_champion_ids": [
+              "1501",
+              "2513",
+              "3506",
+              "4503",
+              "5456",
+              "5458"
+            ],
+            "kept_champion_ids": [
+              "1506",
+              "3502",
+              "4502"
+            ],
+            "overlap_count": 3,
+            "overlap_ratio": 0.375,
+            "population": 9,
+            "removed_champion_ids": [
+              "1512",
+              "1507",
+              "1509",
+              "2508",
+              "4507"
+            ],
+            "roster_id": "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+            "status": "degraded_transition",
+            "target_high_cost_unit_count": 4,
+            "target_objective_value": 11
+          }
+        ]
+      },
+      "ordinal": 27,
+      "population": 8,
+      "roster_id": "4db3c6197dc57e704c62ea528dc57303b57dcf620ec0de0d8cfac4140ecb4797",
+      "source_champion_ids": [
+        "918045",
+        "918084",
+        "918110",
+        "918498",
+        "918019",
+        "918009",
+        "918076",
+        "918876"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918019,918045,918076,918084,918110,918498,918876",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "344",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "451",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "黑色荆棘",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        }
+      ]
+    }
+  ],
+  "schema": "jcc-trait-diversity-roster-shard-v2",
+  "source_candidate_rows": 5,
+  "source_maximum_active_trait_count": 10,
+  "support_key": "none"
+}

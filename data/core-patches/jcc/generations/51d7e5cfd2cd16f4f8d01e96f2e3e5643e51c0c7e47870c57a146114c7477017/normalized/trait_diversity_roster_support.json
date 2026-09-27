@@ -1,0 +1,1520 @@
+{
+  "augment_bindings": [
+    {
+      "aliases": [
+        "羁绊天梯",
+        "拼盘天梯"
+      ],
+      "augment_address": "jcc:s18:augment:30749",
+      "augment_id": "30749",
+      "augment_name": "拼盘天梯",
+      "external_id": "DA_TraitLadder",
+      "objective_id": "trait_ladder_reward_progress",
+      "roster_support_id": "s18_1:trait_diversity_rosters"
+    },
+    {
+      "aliases": [
+        "终身黄铜 I"
+      ],
+      "augment_address": "jcc:s18:augment:10242",
+      "augment_id": "10242",
+      "augment_name": "终身黄铜 I",
+      "external_id": "DA_BronzeForLifeI",
+      "objective_id": "bronze_trait_scaling",
+      "roster_support_id": "s18_1:trait_diversity_rosters"
+    },
+    {
+      "aliases": [
+        "终身黄铜 II"
+      ],
+      "augment_address": "jcc:s18:augment:20242",
+      "augment_id": "20242",
+      "augment_name": "终身黄铜 II",
+      "external_id": "DA_BronzeForLifeII",
+      "objective_id": "bronze_trait_scaling",
+      "roster_support_id": "s18_1:trait_diversity_rosters"
+    }
+  ],
+  "champion_refs": {
+    "1500": {
+      "cost": 1,
+      "id": "1500",
+      "name": "奥恩"
+    },
+    "1501": {
+      "cost": 1,
+      "id": "1501",
+      "name": "洛"
+    },
+    "1502": {
+      "cost": 1,
+      "id": "1502",
+      "name": "蕾欧娜"
+    },
+    "1503": {
+      "cost": 1,
+      "id": "1503",
+      "name": "可酷伯"
+    },
+    "1504": {
+      "cost": 1,
+      "id": "1504",
+      "name": "雷克塞"
+    },
+    "1505": {
+      "cost": 1,
+      "id": "1505",
+      "name": "卡蜜尔"
+    },
+    "1506": {
+      "cost": 1,
+      "id": "1506",
+      "name": "阿卡丽"
+    },
+    "1507": {
+      "cost": 1,
+      "id": "1507",
+      "name": "韦鲁斯"
+    },
+    "1508": {
+      "cost": 1,
+      "id": "1508",
+      "name": "绯红树怪"
+    },
+    "1509": {
+      "cost": 1,
+      "id": "1509",
+      "name": "霞"
+    },
+    "1510": {
+      "cost": 1,
+      "id": "1510",
+      "name": "卡尔玛"
+    },
+    "1511": {
+      "cost": 1,
+      "id": "1511",
+      "name": "苍蓝哨戒"
+    },
+    "1512": {
+      "cost": 1,
+      "id": "1512",
+      "name": "维迦"
+    },
+    "2500": {
+      "cost": 2,
+      "id": "2500",
+      "name": "峡谷迅捷蟹"
+    },
+    "2501": {
+      "cost": 2,
+      "id": "2501",
+      "name": "阿利斯塔"
+    },
+    "2502": {
+      "cost": 2,
+      "id": "2502",
+      "name": "瑟庄妮"
+    },
+    "2503": {
+      "cost": 2,
+      "id": "2503",
+      "name": "慎"
+    },
+    "2504": {
+      "cost": 2,
+      "id": "2504",
+      "name": "伊莉丝"
+    },
+    "2505": {
+      "cost": 1,
+      "id": "2505",
+      "name": "约里克"
+    },
+    "2507": {
+      "cost": 2,
+      "id": "2507",
+      "name": "暗影狼"
+    },
+    "2508": {
+      "cost": 2,
+      "id": "2508",
+      "name": "沃里克"
+    },
+    "2509": {
+      "cost": 2,
+      "id": "2509",
+      "name": "芸阿娜"
+    },
+    "2510": {
+      "cost": 2,
+      "id": "2510",
+      "name": "凯特琳"
+    },
+    "2511": {
+      "cost": 2,
+      "id": "2511",
+      "name": "乐芙兰"
+    },
+    "2512": {
+      "cost": 2,
+      "id": "2512",
+      "name": "凯尔"
+    },
+    "2513": {
+      "cost": 2,
+      "id": "2513",
+      "name": "魔沼蛙"
+    },
+    "2514": {
+      "cost": 2,
+      "id": "2514",
+      "name": "提莫"
+    },
+    "3500": {
+      "cost": 3,
+      "id": "3500",
+      "name": "赫卡里姆"
+    },
+    "3501": {
+      "cost": 3,
+      "id": "3501",
+      "name": "蔚"
+    },
+    "3502": {
+      "cost": 3,
+      "id": "3502",
+      "name": "费德提克"
+    },
+    "3503": {
+      "cost": 3,
+      "id": "3503",
+      "name": "远古石甲虫"
+    },
+    "3504": {
+      "cost": 3,
+      "id": "3504",
+      "name": "雷恩加尔"
+    },
+    "3505": {
+      "cost": 3,
+      "id": "3505",
+      "name": "卡兹克"
+    },
+    "3506": {
+      "cost": 3,
+      "id": "3506",
+      "name": "黛安娜"
+    },
+    "3507": {
+      "cost": 3,
+      "id": "3507",
+      "name": "易"
+    },
+    "3508": {
+      "cost": 3,
+      "id": "3508",
+      "name": "崔丝塔娜"
+    },
+    "3509": {
+      "cost": 3,
+      "id": "3509",
+      "name": "深红锋喙鸟"
+    },
+    "3510": {
+      "cost": 3,
+      "id": "3510",
+      "name": "阿兹尔"
+    },
+    "3511": {
+      "cost": 3,
+      "id": "3511",
+      "name": "卡西奥佩娅"
+    },
+    "3512": {
+      "cost": 3,
+      "id": "3512",
+      "name": "克格莫"
+    },
+    "3515": {
+      "cost": 3,
+      "id": "3515",
+      "name": "拉莫斯"
+    },
+    "4500": {
+      "cost": 4,
+      "id": "4500",
+      "name": "苍蓝雕纹魔像"
+    },
+    "4501": {
+      "cost": 4,
+      "id": "4501",
+      "name": "莫甘娜"
+    },
+    "4502": {
+      "cost": 4,
+      "id": "4502",
+      "name": "莉莉娅"
+    },
+    "4503": {
+      "cost": 4,
+      "id": "4503",
+      "name": "阿木木"
+    },
+    "4504": {
+      "cost": 4,
+      "id": "4504",
+      "name": "墨菲特"
+    },
+    "4505": {
+      "cost": 4,
+      "id": "4505",
+      "name": "瑟提"
+    },
+    "4506": {
+      "cost": 4,
+      "id": "4506",
+      "name": "绯红印记树怪"
+    },
+    "4507": {
+      "cost": 4,
+      "id": "4507",
+      "name": "奈德丽"
+    },
+    "4508": {
+      "cost": 4,
+      "id": "4508",
+      "name": "伊泽瑞尔"
+    },
+    "4509": {
+      "cost": 4,
+      "id": "4509",
+      "name": "厄斐琉斯"
+    },
+    "4510": {
+      "cost": 4,
+      "id": "4510",
+      "name": "希维尔"
+    },
+    "4511": {
+      "cost": 4,
+      "id": "4511",
+      "name": "阿狸"
+    },
+    "4512": {
+      "cost": 4,
+      "id": "4512",
+      "name": "婕拉"
+    },
+    "4513": {
+      "cost": 4,
+      "id": "4513",
+      "name": "索拉卡"
+    },
+    "5450": {
+      "cost": 5,
+      "id": "5450",
+      "name": "茂凯"
+    },
+    "5451": {
+      "cost": 5,
+      "id": "5451",
+      "name": "塔里克"
+    },
+    "5452": {
+      "cost": 5,
+      "id": "5452",
+      "name": "纳尔"
+    },
+    "5453": {
+      "cost": 5,
+      "id": "5453",
+      "name": "凯南"
+    },
+    "5454": {
+      "cost": 5,
+      "id": "5454",
+      "name": "艾希"
+    },
+    "5455": {
+      "cost": 5,
+      "id": "5455",
+      "name": "德莱文"
+    },
+    "5456": {
+      "cost": 5,
+      "id": "5456",
+      "name": "拉露恩"
+    },
+    "5457": {
+      "cost": 5,
+      "id": "5457",
+      "name": "艾翁"
+    },
+    "5458": {
+      "cost": 5,
+      "id": "5458",
+      "name": "远古巨龙"
+    },
+    "5459": {
+      "cost": 5,
+      "id": "5459",
+      "name": "拉克丝"
+    }
+  },
+  "counts": {
+    "augment_bindings": 3,
+    "catalog_champion_entities": 65,
+    "population_buckets": 7,
+    "source_candidate_rows": 43,
+    "support_keys": 1,
+    "unique_champion_entities_used": 32,
+    "unit_slot_occurrences": 347
+  },
+  "group_shards": [
+    {
+      "byte_size": 8856,
+      "metric_maxima": {
+        "bronze_trait_count": 4,
+        "non_unique_active_trait_count": 4
+      },
+      "objective_views": {
+        "bronze_trait_scaling": {
+          "accessibility_fallback_roster_ids": [],
+          "common_champion_ids": [
+            "1507",
+            "1509"
+          ],
+          "frequent_champions": [
+            {
+              "champion_id": "1507",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "1509",
+              "count": 2,
+              "share": 1
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "733dd679e8475b88873f2bb01241ef17cd3790dad6d6da6de6ff1c3e8cbc63ff",
+            "81c05c301b00ba60ee6c56cba76feeb571a109d5e74ba44b21bcc0b7a5ed8eaf"
+          ],
+          "maximum_high_cost_unit_count": 1,
+          "maximum_objective_value": 4,
+          "objective_id": "bronze_trait_scaling",
+          "primary_metric": "bronze_trait_count",
+          "primary_roster_ids": [
+            "733dd679e8475b88873f2bb01241ef17cd3790dad6d6da6de6ff1c3e8cbc63ff",
+            "81c05c301b00ba60ee6c56cba76feeb571a109d5e74ba44b21bcc0b7a5ed8eaf"
+          ]
+        },
+        "trait_ladder_reward_progress": {
+          "accessibility_fallback_roster_ids": [],
+          "common_champion_ids": [
+            "1507",
+            "1509"
+          ],
+          "frequent_champions": [
+            {
+              "champion_id": "1507",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "1509",
+              "count": 2,
+              "share": 1
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "733dd679e8475b88873f2bb01241ef17cd3790dad6d6da6de6ff1c3e8cbc63ff",
+            "81c05c301b00ba60ee6c56cba76feeb571a109d5e74ba44b21bcc0b7a5ed8eaf"
+          ],
+          "maximum_high_cost_unit_count": 1,
+          "maximum_objective_value": 4,
+          "objective_id": "trait_ladder_reward_progress",
+          "primary_metric": "non_unique_active_trait_count",
+          "primary_roster_ids": [
+            "733dd679e8475b88873f2bb01241ef17cd3790dad6d6da6de6ff1c3e8cbc63ff",
+            "81c05c301b00ba60ee6c56cba76feeb571a109d5e74ba44b21bcc0b7a5ed8eaf"
+          ]
+        }
+      },
+      "population": 4,
+      "provider_traits": [],
+      "relative_path": "normalized/trait-diversity-rosters/none/4.json",
+      "role_constraint_status": "unavailable_at_population",
+      "sha256": "6e9ed698503f1e29e0e8ae492718210fb5b5cbd0834f4a7e12391b617d7f9466",
+      "source_candidate_rows": 2,
+      "support_key": "none"
+    },
+    {
+      "byte_size": 15141,
+      "metric_maxima": {
+        "bronze_trait_count": 6,
+        "non_unique_active_trait_count": 6
+      },
+      "objective_views": {
+        "bronze_trait_scaling": {
+          "accessibility_fallback_roster_ids": [],
+          "common_champion_ids": [
+            "1509",
+            "3502",
+            "4502",
+            "4509",
+            "5456"
+          ],
+          "frequent_champions": [
+            {
+              "champion_id": "1509",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "3502",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4502",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4509",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "5456",
+              "count": 1,
+              "share": 1
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "b360c1af545880e7253f858784576b15fb45a89f923282bfeb4825383bb8cfeb"
+          ],
+          "maximum_high_cost_unit_count": 3,
+          "maximum_objective_value": 6,
+          "objective_id": "bronze_trait_scaling",
+          "primary_metric": "bronze_trait_count",
+          "primary_roster_ids": [
+            "b360c1af545880e7253f858784576b15fb45a89f923282bfeb4825383bb8cfeb",
+            "6f431e4b76026eda75c147e9dc6f0f1e5d7b5cf75a60e6b0879a86ebf164fbd7"
+          ]
+        },
+        "trait_ladder_reward_progress": {
+          "accessibility_fallback_roster_ids": [],
+          "common_champion_ids": [
+            "1509",
+            "3502",
+            "4502",
+            "4509",
+            "5456"
+          ],
+          "frequent_champions": [
+            {
+              "champion_id": "1509",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "3502",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4502",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4509",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "5456",
+              "count": 1,
+              "share": 1
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "b360c1af545880e7253f858784576b15fb45a89f923282bfeb4825383bb8cfeb"
+          ],
+          "maximum_high_cost_unit_count": 3,
+          "maximum_objective_value": 6,
+          "objective_id": "trait_ladder_reward_progress",
+          "primary_metric": "non_unique_active_trait_count",
+          "primary_roster_ids": [
+            "b360c1af545880e7253f858784576b15fb45a89f923282bfeb4825383bb8cfeb",
+            "6f431e4b76026eda75c147e9dc6f0f1e5d7b5cf75a60e6b0879a86ebf164fbd7"
+          ]
+        }
+      },
+      "population": 5,
+      "provider_traits": [],
+      "relative_path": "normalized/trait-diversity-rosters/none/5.json",
+      "role_constraint_status": "satisfied",
+      "sha256": "d48d663e8e48000aa260bd0aeded673aade5a8b3f8fb6b02e930b91834a102e8",
+      "source_candidate_rows": 2,
+      "support_key": "none"
+    },
+    {
+      "byte_size": 41397,
+      "metric_maxima": {
+        "bronze_trait_count": 7,
+        "non_unique_active_trait_count": 7
+      },
+      "objective_views": {
+        "bronze_trait_scaling": {
+          "accessibility_fallback_roster_ids": [],
+          "common_champion_ids": [],
+          "frequent_champions": [
+            {
+              "champion_id": "3502",
+              "count": 8,
+              "share": 0.8888888888888888
+            },
+            {
+              "champion_id": "3506",
+              "count": 8,
+              "share": 0.8888888888888888
+            },
+            {
+              "champion_id": "1501",
+              "count": 7,
+              "share": 0.7777777777777778
+            },
+            {
+              "champion_id": "5456",
+              "count": 7,
+              "share": 0.7777777777777778
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "0ea117128e2277e162fd9c03224781faeec8d162eae70952de42d58de4845f3d",
+            "25229decc945975e00d4d1ac72d052e916fb727a8bf406cd48fb4951c9e16618",
+            "59a48bfd0b8c55914bc7062b94d923b90661ccd91dd1c3b0e1a14cab51bee1cd",
+            "60ca6b7862823768cee03cc86c7ca8a1e307b8ce6b0a524c041b011e5708306f",
+            "743ad36f57df4e528fb323664d19ccaad958b5b97e85e2c866bc273b9a395a9a",
+            "7c377e9a158953da8ad1570a7cb554233eb48e9f5188aada2667f3b42aa0a3b4",
+            "ad756b056467e7c237be9e012ade81d9829959126fcc8dad155761bbaba5058a",
+            "b9e5ffaf689b3524f7e02935b68f3b7d436e8986c967a6a3669439b4e82433a1",
+            "ff3ba749de98d9b936be3744a92af705d6f13fcc626c746e3e6eda9200bb23cb"
+          ],
+          "maximum_high_cost_unit_count": 2,
+          "maximum_objective_value": 7,
+          "objective_id": "bronze_trait_scaling",
+          "primary_metric": "bronze_trait_count",
+          "primary_roster_ids": [
+            "0ea117128e2277e162fd9c03224781faeec8d162eae70952de42d58de4845f3d",
+            "25229decc945975e00d4d1ac72d052e916fb727a8bf406cd48fb4951c9e16618",
+            "59a48bfd0b8c55914bc7062b94d923b90661ccd91dd1c3b0e1a14cab51bee1cd",
+            "60ca6b7862823768cee03cc86c7ca8a1e307b8ce6b0a524c041b011e5708306f",
+            "743ad36f57df4e528fb323664d19ccaad958b5b97e85e2c866bc273b9a395a9a",
+            "7c377e9a158953da8ad1570a7cb554233eb48e9f5188aada2667f3b42aa0a3b4",
+            "ad756b056467e7c237be9e012ade81d9829959126fcc8dad155761bbaba5058a",
+            "b9e5ffaf689b3524f7e02935b68f3b7d436e8986c967a6a3669439b4e82433a1",
+            "ff3ba749de98d9b936be3744a92af705d6f13fcc626c746e3e6eda9200bb23cb"
+          ]
+        },
+        "trait_ladder_reward_progress": {
+          "accessibility_fallback_roster_ids": [],
+          "common_champion_ids": [],
+          "frequent_champions": [
+            {
+              "champion_id": "3502",
+              "count": 8,
+              "share": 0.8888888888888888
+            },
+            {
+              "champion_id": "3506",
+              "count": 8,
+              "share": 0.8888888888888888
+            },
+            {
+              "champion_id": "1501",
+              "count": 7,
+              "share": 0.7777777777777778
+            },
+            {
+              "champion_id": "5456",
+              "count": 7,
+              "share": 0.7777777777777778
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "0ea117128e2277e162fd9c03224781faeec8d162eae70952de42d58de4845f3d",
+            "25229decc945975e00d4d1ac72d052e916fb727a8bf406cd48fb4951c9e16618",
+            "59a48bfd0b8c55914bc7062b94d923b90661ccd91dd1c3b0e1a14cab51bee1cd",
+            "60ca6b7862823768cee03cc86c7ca8a1e307b8ce6b0a524c041b011e5708306f",
+            "743ad36f57df4e528fb323664d19ccaad958b5b97e85e2c866bc273b9a395a9a",
+            "7c377e9a158953da8ad1570a7cb554233eb48e9f5188aada2667f3b42aa0a3b4",
+            "ad756b056467e7c237be9e012ade81d9829959126fcc8dad155761bbaba5058a",
+            "b9e5ffaf689b3524f7e02935b68f3b7d436e8986c967a6a3669439b4e82433a1",
+            "ff3ba749de98d9b936be3744a92af705d6f13fcc626c746e3e6eda9200bb23cb"
+          ],
+          "maximum_high_cost_unit_count": 2,
+          "maximum_objective_value": 7,
+          "objective_id": "trait_ladder_reward_progress",
+          "primary_metric": "non_unique_active_trait_count",
+          "primary_roster_ids": [
+            "0ea117128e2277e162fd9c03224781faeec8d162eae70952de42d58de4845f3d",
+            "25229decc945975e00d4d1ac72d052e916fb727a8bf406cd48fb4951c9e16618",
+            "59a48bfd0b8c55914bc7062b94d923b90661ccd91dd1c3b0e1a14cab51bee1cd",
+            "60ca6b7862823768cee03cc86c7ca8a1e307b8ce6b0a524c041b011e5708306f",
+            "743ad36f57df4e528fb323664d19ccaad958b5b97e85e2c866bc273b9a395a9a",
+            "7c377e9a158953da8ad1570a7cb554233eb48e9f5188aada2667f3b42aa0a3b4",
+            "ad756b056467e7c237be9e012ade81d9829959126fcc8dad155761bbaba5058a",
+            "b9e5ffaf689b3524f7e02935b68f3b7d436e8986c967a6a3669439b4e82433a1",
+            "ff3ba749de98d9b936be3744a92af705d6f13fcc626c746e3e6eda9200bb23cb"
+          ]
+        }
+      },
+      "population": 6,
+      "provider_traits": [],
+      "relative_path": "normalized/trait-diversity-rosters/none/6.json",
+      "role_constraint_status": "satisfied",
+      "sha256": "09c9d0897737dca6e3c4835a829757321ba144bf0aace64ebfdbd29b5c523b53",
+      "source_candidate_rows": 9,
+      "support_key": "none"
+    },
+    {
+      "byte_size": 15380,
+      "metric_maxima": {
+        "bronze_trait_count": 9,
+        "non_unique_active_trait_count": 9
+      },
+      "objective_views": {
+        "bronze_trait_scaling": {
+          "accessibility_fallback_roster_ids": [],
+          "common_champion_ids": [
+            "1501",
+            "1506",
+            "3502",
+            "3506",
+            "4502",
+            "4503",
+            "5456"
+          ],
+          "frequent_champions": [
+            {
+              "champion_id": "1501",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "1506",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "3502",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "3506",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4502",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4503",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "5456",
+              "count": 1,
+              "share": 1
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "4ebe21e540db04024630786b6e258db3cffa0bd6ded661e35850154771553138"
+          ],
+          "maximum_high_cost_unit_count": 3,
+          "maximum_objective_value": 9,
+          "objective_id": "bronze_trait_scaling",
+          "primary_metric": "bronze_trait_count",
+          "primary_roster_ids": [
+            "4ebe21e540db04024630786b6e258db3cffa0bd6ded661e35850154771553138",
+            "0009e1a17a336daf877c9210aa804adb9169c9174d46600b4b2be28fe63c97b9"
+          ]
+        },
+        "trait_ladder_reward_progress": {
+          "accessibility_fallback_roster_ids": [],
+          "common_champion_ids": [
+            "1501",
+            "1506",
+            "3502",
+            "3506",
+            "4502",
+            "4503",
+            "5456"
+          ],
+          "frequent_champions": [
+            {
+              "champion_id": "1501",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "1506",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "3502",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "3506",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4502",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4503",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "5456",
+              "count": 1,
+              "share": 1
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "4ebe21e540db04024630786b6e258db3cffa0bd6ded661e35850154771553138"
+          ],
+          "maximum_high_cost_unit_count": 3,
+          "maximum_objective_value": 9,
+          "objective_id": "trait_ladder_reward_progress",
+          "primary_metric": "non_unique_active_trait_count",
+          "primary_roster_ids": [
+            "4ebe21e540db04024630786b6e258db3cffa0bd6ded661e35850154771553138",
+            "0009e1a17a336daf877c9210aa804adb9169c9174d46600b4b2be28fe63c97b9"
+          ]
+        }
+      },
+      "population": 7,
+      "provider_traits": [],
+      "relative_path": "normalized/trait-diversity-rosters/none/7.json",
+      "role_constraint_status": "satisfied",
+      "sha256": "a76f16f4993552651c8da8bc6a689a56e9ea95dc466b11503945285b12174d5f",
+      "source_candidate_rows": 2,
+      "support_key": "none"
+    },
+    {
+      "byte_size": 36088,
+      "metric_maxima": {
+        "bronze_trait_count": 10,
+        "non_unique_active_trait_count": 10
+      },
+      "objective_views": {
+        "bronze_trait_scaling": {
+          "accessibility_fallback_roster_ids": [
+            "4db3c6197dc57e704c62ea528dc57303b57dcf620ec0de0d8cfac4140ecb4797",
+            "e2f83ae924b2384f8e423dee61b006fbb2d6d08bd2fac4763169a86515e142a8",
+            "e6adc92c6cf8c24f7b4698a4be0514f4c41c58921662dfc12b745c6623b34620"
+          ],
+          "common_champion_ids": [
+            "1506",
+            "3502",
+            "3506",
+            "5456"
+          ],
+          "frequent_champions": [
+            {
+              "champion_id": "1506",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "3502",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "3506",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "5456",
+              "count": 2,
+              "share": 1
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "0d0f7f79ff8047f9ce0949ad21edba71e4d1498b2fed4843bcc13aef6d322a8a",
+            "d2a31c4719210d2ebec6327d40b45ef2d047d04f3bdd9fee90eae3e09a7c1a8c"
+          ],
+          "maximum_high_cost_unit_count": 3,
+          "maximum_objective_value": 10,
+          "objective_id": "bronze_trait_scaling",
+          "primary_metric": "bronze_trait_count",
+          "primary_roster_ids": [
+            "0d0f7f79ff8047f9ce0949ad21edba71e4d1498b2fed4843bcc13aef6d322a8a",
+            "d2a31c4719210d2ebec6327d40b45ef2d047d04f3bdd9fee90eae3e09a7c1a8c"
+          ]
+        },
+        "trait_ladder_reward_progress": {
+          "accessibility_fallback_roster_ids": [
+            "4db3c6197dc57e704c62ea528dc57303b57dcf620ec0de0d8cfac4140ecb4797"
+          ],
+          "common_champion_ids": [
+            "1506",
+            "3502",
+            "3506",
+            "5456"
+          ],
+          "frequent_champions": [
+            {
+              "champion_id": "1506",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "3502",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "3506",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "5456",
+              "count": 2,
+              "share": 1
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "0d0f7f79ff8047f9ce0949ad21edba71e4d1498b2fed4843bcc13aef6d322a8a",
+            "d2a31c4719210d2ebec6327d40b45ef2d047d04f3bdd9fee90eae3e09a7c1a8c"
+          ],
+          "maximum_high_cost_unit_count": 3,
+          "maximum_objective_value": 10,
+          "objective_id": "trait_ladder_reward_progress",
+          "primary_metric": "non_unique_active_trait_count",
+          "primary_roster_ids": [
+            "0d0f7f79ff8047f9ce0949ad21edba71e4d1498b2fed4843bcc13aef6d322a8a",
+            "d2a31c4719210d2ebec6327d40b45ef2d047d04f3bdd9fee90eae3e09a7c1a8c",
+            "e2f83ae924b2384f8e423dee61b006fbb2d6d08bd2fac4763169a86515e142a8",
+            "e6adc92c6cf8c24f7b4698a4be0514f4c41c58921662dfc12b745c6623b34620"
+          ]
+        }
+      },
+      "population": 8,
+      "provider_traits": [],
+      "relative_path": "normalized/trait-diversity-rosters/none/8.json",
+      "role_constraint_status": "satisfied",
+      "sha256": "cbd505d87fc631dae11b8e741a9cc828d7875d7d22a96d8f84a4b5ebd3d64616",
+      "source_candidate_rows": 5,
+      "support_key": "none"
+    },
+    {
+      "byte_size": 53095,
+      "metric_maxima": {
+        "bronze_trait_count": 11,
+        "non_unique_active_trait_count": 11
+      },
+      "objective_views": {
+        "bronze_trait_scaling": {
+          "accessibility_fallback_roster_ids": [
+            "0ad6a79ff63ea4db82cbaaecd46e4d3ef08811e3dace7abf1436e0ebd22b1e0f",
+            "4783506ec54ccfd542d8e5243faf8e660ef0089a5250673356d2b4ff69dd768b",
+            "5da69ea70056b53b07f9575cbfbf3ea955a6e76f3582b78e48fb4f48c999b4d5",
+            "41ffa377dca670d36f4aa63d300ec1a9dd362669f3053258c0291aff1f32cf1c",
+            "d1dbf323bf05152d8934def8111837e4488b390e78802390ee3381386d44705a"
+          ],
+          "common_champion_ids": [
+            "1501",
+            "1506",
+            "3502",
+            "3506",
+            "4502",
+            "4503",
+            "5456"
+          ],
+          "frequent_champions": [
+            {
+              "champion_id": "1501",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "1506",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "3502",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "3506",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "4502",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "4503",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "5456",
+              "count": 2,
+              "share": 1
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba"
+          ],
+          "maximum_high_cost_unit_count": 4,
+          "maximum_objective_value": 11,
+          "objective_id": "bronze_trait_scaling",
+          "primary_metric": "bronze_trait_count",
+          "primary_roster_ids": [
+            "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+            "9b0c5133c1d2a0116622560d1bd18a13f225fa2f10644b04404233a7945848d3",
+            "3269b57173ca61069a776e4637690ca7945f0c2bacaa800efd6e6c4c8fe9cc44"
+          ]
+        },
+        "trait_ladder_reward_progress": {
+          "accessibility_fallback_roster_ids": [
+            "4783506ec54ccfd542d8e5243faf8e660ef0089a5250673356d2b4ff69dd768b"
+          ],
+          "common_champion_ids": [
+            "1501",
+            "1506",
+            "3502",
+            "3506",
+            "4502",
+            "4503",
+            "5456"
+          ],
+          "frequent_champions": [
+            {
+              "champion_id": "1501",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "1506",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "3502",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "3506",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "4502",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "4503",
+              "count": 2,
+              "share": 1
+            },
+            {
+              "champion_id": "5456",
+              "count": 2,
+              "share": 1
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba"
+          ],
+          "maximum_high_cost_unit_count": 4,
+          "maximum_objective_value": 11,
+          "objective_id": "trait_ladder_reward_progress",
+          "primary_metric": "non_unique_active_trait_count",
+          "primary_roster_ids": [
+            "3563a28e97cce64cea5fb640bb0e75c7b1465cb2dfeed7f8de0c0e0b82c58f44",
+            "9076f5cd7fd4e9a824980db3a2823c4c4a8f9966da4a393afa94a7b9f7f745ba",
+            "0ad6a79ff63ea4db82cbaaecd46e4d3ef08811e3dace7abf1436e0ebd22b1e0f",
+            "41ffa377dca670d36f4aa63d300ec1a9dd362669f3053258c0291aff1f32cf1c",
+            "5da69ea70056b53b07f9575cbfbf3ea955a6e76f3582b78e48fb4f48c999b4d5",
+            "9b0c5133c1d2a0116622560d1bd18a13f225fa2f10644b04404233a7945848d3",
+            "d1dbf323bf05152d8934def8111837e4488b390e78802390ee3381386d44705a",
+            "3269b57173ca61069a776e4637690ca7945f0c2bacaa800efd6e6c4c8fe9cc44"
+          ]
+        }
+      },
+      "population": 9,
+      "provider_traits": [],
+      "relative_path": "normalized/trait-diversity-rosters/none/9.json",
+      "role_constraint_status": "satisfied",
+      "sha256": "bf43a10955212853d7532313936a22cd597feee2d4859bc1ead25eb2f05d1289",
+      "source_candidate_rows": 9,
+      "support_key": "none"
+    },
+    {
+      "byte_size": 64205,
+      "metric_maxima": {
+        "bronze_trait_count": 12,
+        "non_unique_active_trait_count": 12
+      },
+      "objective_views": {
+        "bronze_trait_scaling": {
+          "accessibility_fallback_roster_ids": [
+            "2c8d2612ee00964283dc2fb0cb5ef0e689f1e7dfac4feec4096bc7cc3e19c938",
+            "85b118c5d722add375b14fa9288af463dbd75e0a68c162bb651d77b5e17b6c90"
+          ],
+          "common_champion_ids": [
+            "1501",
+            "1506",
+            "3502",
+            "3506",
+            "3512",
+            "4500",
+            "4502",
+            "4503",
+            "5456",
+            "5458"
+          ],
+          "frequent_champions": [
+            {
+              "champion_id": "1501",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "1506",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "3502",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "3506",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "3512",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4500",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4502",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4503",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "5456",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "5458",
+              "count": 1,
+              "share": 1
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "49df0a1bbfa736dc60b6955dfb007743c834383dc69cc1c1535a8f92ea6e8baa"
+          ],
+          "maximum_high_cost_unit_count": 5,
+          "maximum_objective_value": 12,
+          "objective_id": "bronze_trait_scaling",
+          "primary_metric": "bronze_trait_count",
+          "primary_roster_ids": [
+            "49df0a1bbfa736dc60b6955dfb007743c834383dc69cc1c1535a8f92ea6e8baa",
+            "3e273588e677b185e2b9680bc3a5a5bed99e44e6725ae5a84263d5ef4176765e",
+            "c02a89a5a16de28c18d05693536224f8d2c87ecd49fedb37cedd54a6c3a52db2",
+            "215b65492d13b9a4720721550d45137c5474cd558dfc6132d9d80aa9ac711680",
+            "cb785a3c68e012f67e82443e25fba9723785dfd00148347910545de48b836df0",
+            "fb79c1f8faa07452ace1ed4920a1b957d97e4898c999f13c5e65c901da55ae36",
+            "0c96ec330473381adfd31150fed4e641105c3b065d64f62351a5633878488b5b",
+            "1ed326a0dcebbef48dafafc01ac42020b03f309ce76465f68f2e21715433ab39",
+            "e1320b2d20f4c93881f1260c460f8435d44c506fdc5453eff4c1b9bcbf9223e6",
+            "f4293ee40b91cf6230363b5437ced89969adb718a40aef901013e3c25e441fc2"
+          ]
+        },
+        "trait_ladder_reward_progress": {
+          "accessibility_fallback_roster_ids": [
+            "d424b14c8023258ed0096c8460c9b45ce4f006c216fe1c8c0d918af6a3fcdb01",
+            "e86cd4c691756346f7eb7cf9ff2ec4a56c0c5333a2a74fc6162d5aa293618bc9"
+          ],
+          "common_champion_ids": [
+            "1501",
+            "1506",
+            "3502",
+            "3506",
+            "3512",
+            "4500",
+            "4502",
+            "4503",
+            "5456",
+            "5458"
+          ],
+          "frequent_champions": [
+            {
+              "champion_id": "1501",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "1506",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "3502",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "3506",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "3512",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4500",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4502",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "4503",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "5456",
+              "count": 1,
+              "share": 1
+            },
+            {
+              "champion_id": "5458",
+              "count": 1,
+              "share": 1
+            }
+          ],
+          "high_cost_frontier_roster_ids": [
+            "49df0a1bbfa736dc60b6955dfb007743c834383dc69cc1c1535a8f92ea6e8baa"
+          ],
+          "maximum_high_cost_unit_count": 5,
+          "maximum_objective_value": 12,
+          "objective_id": "trait_ladder_reward_progress",
+          "primary_metric": "non_unique_active_trait_count",
+          "primary_roster_ids": [
+            "49df0a1bbfa736dc60b6955dfb007743c834383dc69cc1c1535a8f92ea6e8baa",
+            "2c8d2612ee00964283dc2fb0cb5ef0e689f1e7dfac4feec4096bc7cc3e19c938",
+            "3e273588e677b185e2b9680bc3a5a5bed99e44e6725ae5a84263d5ef4176765e",
+            "85b118c5d722add375b14fa9288af463dbd75e0a68c162bb651d77b5e17b6c90",
+            "c02a89a5a16de28c18d05693536224f8d2c87ecd49fedb37cedd54a6c3a52db2",
+            "215b65492d13b9a4720721550d45137c5474cd558dfc6132d9d80aa9ac711680",
+            "cb785a3c68e012f67e82443e25fba9723785dfd00148347910545de48b836df0",
+            "fb79c1f8faa07452ace1ed4920a1b957d97e4898c999f13c5e65c901da55ae36",
+            "0c96ec330473381adfd31150fed4e641105c3b065d64f62351a5633878488b5b",
+            "1ed326a0dcebbef48dafafc01ac42020b03f309ce76465f68f2e21715433ab39",
+            "e1320b2d20f4c93881f1260c460f8435d44c506fdc5453eff4c1b9bcbf9223e6",
+            "f4293ee40b91cf6230363b5437ced89969adb718a40aef901013e3c25e441fc2"
+          ]
+        }
+      },
+      "population": 10,
+      "provider_traits": [],
+      "relative_path": "normalized/trait-diversity-rosters/none/10.json",
+      "role_constraint_status": "satisfied",
+      "sha256": "8201cf7b17ac1faeaa2d322c488d54393b69e97cd98c63c3bc03175763d0872c",
+      "source_candidate_rows": 14,
+      "support_key": "none"
+    }
+  ],
+  "identity": {
+    "mode_id": "mode18",
+    "patch_id": "s18_1",
+    "season_id": "s18"
+  },
+  "objective_definitions": [
+    {
+      "objective_id": "trait_ladder_reward_progress",
+      "primary_metric": "non_unique_active_trait_count",
+      "reward_table_ref": "augment:30749:rewards",
+      "runtime_policy": "Prefer the next reachable reward threshold, then use current-match strength and Master+ evidence only as post-selection evidence.",
+      "tie_breakers": [
+        "high_cost_unit_count"
+      ]
+    },
+    {
+      "objective_id": "bronze_trait_scaling",
+      "primary_metric": "bronze_trait_count",
+      "reward_table_ref": null,
+      "runtime_policy": "Maximize currently active bronze-tier traits without treating tracker quality as lineup-strength evidence.",
+      "tie_breakers": [
+        "high_cost_unit_count"
+      ]
+    }
+  ],
+  "policy": {
+    "master_plus_rankings_may_rerank_only_after_trait_objective_eligibility": true,
+    "official_catalog_identity_only": true,
+    "rosters_are_atomic_and_must_not_be_spliced": true,
+    "runtime_online_fetch_forbidden": true,
+    "tracker_metrics_are_not_master_plus_strength": true
+  },
+  "populations": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "roster_support_id": "s18_1:trait_diversity_rosters",
+  "schema": "jcc-trait-diversity-roster-support-v2",
+  "source": {
+    "page_url": "https://jcc.datatft.com/tracker/s18",
+    "provider_id": "datatft",
+    "tracker_asset_sha256": "d112d5fd825be63dda05790a29ed32a96505820b8d4970361c642463782ebc9d",
+    "tracker_asset_url": "https://jcc.datatft.com/assets/TraitTrackerS18View-0Pfy1-Ri.js",
+    "trust_role": "supplemental_precomputed_roster_candidates_not_strength_authority"
+  },
+  "support_keys": [
+    {
+      "provider_traits": [],
+      "support_key": "none"
+    }
+  ],
+  "trait_refs": {
+    "340": {
+      "id": "340",
+      "name": "斗士",
+      "type": "class"
+    },
+    "341": {
+      "id": "341",
+      "name": "护卫",
+      "type": "class"
+    },
+    "342": {
+      "id": "342",
+      "name": "重装战士",
+      "type": "class"
+    },
+    "343": {
+      "id": "343",
+      "name": "主宰",
+      "type": "class"
+    },
+    "344": {
+      "id": "344",
+      "name": "迅捷射手",
+      "type": "class"
+    },
+    "345": {
+      "id": "345",
+      "name": "猎人",
+      "type": "class"
+    },
+    "346": {
+      "id": "346",
+      "name": "狂战士",
+      "type": "class"
+    },
+    "347": {
+      "id": "347",
+      "name": "裁决使",
+      "type": "class"
+    },
+    "348": {
+      "id": "348",
+      "name": "魔战士",
+      "type": "class"
+    },
+    "349": {
+      "id": "349",
+      "name": "法师",
+      "type": "class"
+    },
+    "350": {
+      "id": "350",
+      "name": "神谕",
+      "type": "class"
+    },
+    "351": {
+      "id": "351",
+      "name": "召唤师",
+      "type": "class"
+    },
+    "450": {
+      "id": "450",
+      "name": "永恒之森",
+      "type": "trait"
+    },
+    "451": {
+      "id": "451",
+      "name": "黑荆棘",
+      "type": "trait"
+    },
+    "452": {
+      "id": "452",
+      "name": "灵魂莲华",
+      "type": "trait"
+    },
+    "453": {
+      "id": "453",
+      "name": "魔女",
+      "type": "trait"
+    },
+    "454": {
+      "id": "454",
+      "name": "峡谷野怪",
+      "type": "trait"
+    },
+    "455": {
+      "id": "455",
+      "name": "花仙子",
+      "type": "trait"
+    },
+    "456": {
+      "id": "456",
+      "name": "约德尔人",
+      "type": "trait"
+    },
+    "457": {
+      "id": "457",
+      "name": "野兽之灵",
+      "type": "trait"
+    },
+    "458": {
+      "id": "458",
+      "name": "地狱火",
+      "type": "trait"
+    },
+    "459": {
+      "id": "459",
+      "name": "日蚀骑士",
+      "type": "trait"
+    },
+    "460": {
+      "id": "460",
+      "name": "月蚀骑士",
+      "type": "trait"
+    },
+    "461": {
+      "id": "461",
+      "name": "日月双蚀",
+      "type": "trait"
+    },
+    "462": {
+      "id": "462",
+      "name": "绝命花妖",
+      "type": "trait"
+    },
+    "463": {
+      "id": "463",
+      "name": "宿敌",
+      "type": "trait"
+    },
+    "464": {
+      "id": "464",
+      "name": "远古树精",
+      "type": "trait"
+    },
+    "465": {
+      "id": "465",
+      "name": "赏金猎人",
+      "type": "trait"
+    },
+    "466": {
+      "id": "466",
+      "name": "翠神",
+      "type": "trait"
+    },
+    "467": {
+      "id": "467",
+      "name": "宝石骑士",
+      "type": "trait"
+    },
+    "468": {
+      "id": "468",
+      "name": "月华神女",
+      "type": "trait"
+    },
+    "469": {
+      "id": "469",
+      "name": "大元素使",
+      "type": "trait"
+    },
+    "471": {
+      "id": "471",
+      "name": "顶级掠食者",
+      "type": "trait"
+    },
+    "472": {
+      "id": "472",
+      "name": "魔岩巨兽",
+      "type": "trait"
+    },
+    "473": {
+      "id": "473",
+      "name": "帝王斑蝶",
+      "type": "trait"
+    },
+    "486": {
+      "id": "486",
+      "name": "荆棘之兴",
+      "type": "trait"
+    }
+  }
+}

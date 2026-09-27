@@ -1,0 +1,81 @@
+{
+  "schema": "jcc-android-live-state-contract-fixture-v1",
+  "match": {
+    "status": "in_game",
+    "local_chair_id": 1
+  },
+  "field_matrix": {
+    "verified_fields": ["economy.hp"],
+    "partial_fields": ["opponents.alive_count"],
+    "missing_fields": ["board.board_units"],
+    "fallback_fields": [],
+    "blocked_fields": []
+  },
+  "live_state": {
+    "match": { "status": "in_game" },
+    "local": { "local_chair_id": 1 },
+    "phase": {},
+    "economy": { "hp": 100 },
+    "shop": { "shop_units": [] },
+    "board": { "board_units": [] },
+    "bench": { "bench_units": [] },
+    "items": { "item_bench": [], "equipped_items": [] },
+    "augments": {},
+    "variables": {},
+    "traits": {},
+    "carousel": {},
+    "rewards": {},
+    "opponents": { "alive_count": 7 },
+    "combat": {},
+    "actions": {},
+    "metadata": {
+      "missing_fields": ["board.board_units"],
+      "partial_fields": ["opponents.alive_count"],
+      "fallback_fields": [],
+      "stale_fields": []
+    },
+    "hp": 100,
+    "shop_candidates": [],
+    "board_units": [],
+    "bench_units": [],
+    "item_bench": [],
+    "equipped_items": [],
+    "missing_fields": ["board.board_units"],
+    "partial_fields": ["opponents.alive_count"],
+    "fallback_fields": [],
+    "stale_fields": [],
+    "field_status": {
+      "economy.hp": {
+        "status": "verified",
+        "source_type": "external_file",
+        "observed_pattern": "fixture_hp",
+        "extractor": "contract_fixture",
+        "confidence": 1,
+        "freshness_budget": "current_frame",
+        "evidence_status": "verified"
+      },
+      "opponents.alive_count": {
+        "status": "partial",
+        "source_type": "external_file",
+        "observed_pattern": "fixture_alive_count",
+        "extractor": "contract_fixture",
+        "confidence": 0.5,
+        "freshness_budget": "one_round",
+        "evidence_status": "partial",
+        "blocker": "fixture_has_no_complete_opponent_state",
+        "next_experiment": "capture_complete_opponent_state"
+      },
+      "board.board_units": {
+        "status": "missing",
+        "source_type": "external_file",
+        "observed_pattern": "fixture_missing_board",
+        "extractor": "contract_fixture",
+        "confidence": 0,
+        "freshness_budget": "current_frame",
+        "evidence_status": "missing",
+        "blocker": "fixture_has_no_board_capture",
+        "next_experiment": "capture_board_units"
+      }
+    }
+  }
+}

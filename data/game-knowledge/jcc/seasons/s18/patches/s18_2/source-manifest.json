@@ -1,0 +1,574 @@
+{
+  "schema": "jcc-game-knowledge-patch-source-manifest-v1",
+  "logical_id": "patch.s18_2",
+  "scope": "patch_source_manifest",
+  "season_id": "s18",
+  "patch_id": "s18_2",
+  "release_version": "18.2a",
+  "parent_core_generation_id": "51d7e5cfd2cd16f4f8d01e96f2e3e5643e51c0c7e47870c57a146114c7477017",
+  "hard_data_inheritance": {
+    "generation_id": "51d7e5cfd2cd16f4f8d01e96f2e3e5643e51c0c7e47870c57a146114c7477017",
+    "roles": [
+      "mechanics_parameters",
+      "reward_tables"
+    ]
+  },
+  "upstream_source": {
+    "mode": "18",
+    "season_id": "S19",
+    "data_version": "18.18.2",
+    "source_label": "自然之力",
+    "catalog_counts": {
+      "champions": 65,
+      "traits": 36,
+      "augments": 257,
+      "equipment": 157,
+      "sprites": 350
+    }
+  },
+  "balance_patch": {
+    "schema": "jcc-core-balance-patch-v1",
+    "release_version": "18.2a",
+    "source_note_sha256": "8e1df346b4c789120727467bb892605025a8beff9f95d70e1a8a058ac90eafbf",
+    "baseline": {
+      "season_id": "s18",
+      "patch_id": "s18_2",
+      "mode_id": "mode18",
+      "hard_data_generation_id": "51d7e5cfd2cd16f4f8d01e96f2e3e5643e51c0c7e47870c57a146114c7477017"
+    }
+  },
+  "activation_blockers": [],
+  "confirmed_patch_augment_extensions": [
+    {
+      "id": "datatft:DA_ForgedInStrength",
+      "external_id": "DA_ForgedInStrength",
+      "name": "神力天铸",
+      "tier": 3,
+      "rounds": [
+        "2-1"
+      ],
+      "category_ids": [
+        "equipment"
+      ],
+      "category_labels": [
+        "装备"
+      ],
+      "description": "获得1件随机神器。当你降至35生命值时，额外获得1件随机神器、1件随机成装、以及2件随机基础装备。",
+      "tags": [
+        "augment_category:equipment",
+        "effect:random_artifact",
+        "effect:random_completed_item",
+        "effect:random_component",
+        "condition:health_threshold_35",
+        "timing:delayed_reward",
+        "risk:health_threshold"
+      ],
+      "effects": {
+        "parse_status": "structured",
+        "exact_effect_blocks": [],
+        "structured_terms": [
+          {
+            "trigger": {
+              "kind": "passive"
+            },
+            "activation": "unconditional_static",
+            "reward_terms": [
+              {
+                "kind": "random_artifact",
+                "count": 1
+              }
+            ],
+            "source_text": "获得1件随机神器"
+          },
+          {
+            "trigger": {
+              "kind": "health_threshold",
+              "health": 35
+            },
+            "activation": "condition_required",
+            "reward_terms": [
+              {
+                "kind": "random_artifact",
+                "count": 1
+              },
+              {
+                "kind": "random_completed_item",
+                "count": 1
+              },
+              {
+                "kind": "random_component",
+                "count": 2
+              }
+            ],
+            "source_text": "当你降至35生命值时，额外获得1件随机神器、1件随机成装、以及2件随机基础装备"
+          }
+        ],
+        "conditional_tags": [
+          {
+            "kind": "condition",
+            "source_text": "当你降至35生命值时"
+          }
+        ],
+        "dynamic_placeholders": [],
+        "source_text": "获得1件随机神器。当你降至35生命值时，额外获得1件随机神器、1件随机成装、以及2件随机基础装备。"
+      },
+      "authority": "developer_confirmed_s18_patch_extension_from_frozen_supplement"
+    }
+  ],
+  "known_limitations": [],
+  "runtime_mapping_validation": {
+    "receipt": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/mumu-runtime-id-mapping-receipt.json",
+    "catalog_overlay": "data/core-patches/jcc/generations/9ea24a3a5606e2aa3850bb7f7e8c08bcf0c5faaa88f1188fe0e66cc7aa9c24b7/runtime-catalog-overlay.json",
+    "allowed_unresolved_shop_only_ids": [],
+    "policy": "Unknown own-board or bench ids fail activation. A shop-only id may remain unresolved only when this patch explicitly lists it and the bounded live receipt proves it never appeared in own-state evidence."
+  },
+  "source_entity_mappings": {
+    "schema": "jcc-patch-source-entity-mappings-v1",
+    "champion_runtime_semantics": [
+      {
+        "canonical_champion_id": "5458",
+        "population_cost": 2,
+        "trait_contributions": [
+          {
+            "trait_id": "454",
+            "trait_name": "峡谷野怪",
+            "value": 2
+          }
+        ],
+        "authority": "developer_confirmed_s18_top_predator_rule"
+      },
+      {
+        "canonical_champion_id": "5459",
+        "population_cost": 1,
+        "base_trait_contributions": [
+          {
+            "trait_id": "469",
+            "trait_name": "大元素使",
+            "value": 1
+          }
+        ],
+        "variant_trait_contribution": 2,
+        "variant_source": "season_mechanic.grand_elementalist",
+        "authority": "developer_confirmed_s18_grand_elementalist_rule"
+      }
+    ],
+    "champion_aliases": [
+      {
+        "source_id": "14514",
+        "canonical_champion_id": "4501",
+        "canonical_name": "莫甘娜",
+        "mapping_kind": "tencent_recipe_alias",
+        "authority": "developer_confirmed_from_s18_official_recipe"
+      },
+      {
+        "source_id": "15460",
+        "canonical_champion_id": "5452",
+        "canonical_name": "纳尔",
+        "mapping_kind": "tencent_recipe_alias",
+        "authority": "developer_confirmed_from_s18_official_recipe"
+      }
+    ],
+    "champion_variants": [
+      {
+        "source_id": "15461",
+        "canonical_champion_id": "5459",
+        "canonical_name": "拉克丝",
+        "variant_order": 1,
+        "variant_trait_id": "451",
+        "variant_trait_name": "黑荆棘",
+        "mapping_kind": "grand_elementalist_variant",
+        "authority": "developer_confirmed_s18_variant_sequence"
+      },
+      {
+        "source_id": "15462",
+        "canonical_champion_id": "5459",
+        "canonical_name": "拉克丝",
+        "variant_order": 2,
+        "variant_trait_id": "452",
+        "variant_trait_name": "灵魂莲华",
+        "mapping_kind": "grand_elementalist_variant",
+        "authority": "developer_confirmed_s18_variant_sequence"
+      },
+      {
+        "source_id": "15463",
+        "canonical_champion_id": "5459",
+        "canonical_name": "拉克丝",
+        "variant_order": 3,
+        "variant_trait_id": "453",
+        "variant_trait_name": "魔女",
+        "mapping_kind": "grand_elementalist_variant",
+        "authority": "developer_confirmed_s18_variant_sequence"
+      },
+      {
+        "source_id": "15464",
+        "canonical_champion_id": "5459",
+        "canonical_name": "拉克丝",
+        "variant_order": 4,
+        "variant_trait_id": "450",
+        "variant_trait_name": "永恒之森",
+        "mapping_kind": "grand_elementalist_variant",
+        "authority": "developer_confirmed_s18_variant_sequence"
+      },
+      {
+        "source_id": "15465",
+        "canonical_champion_id": "5459",
+        "canonical_name": "拉克丝",
+        "variant_order": 5,
+        "variant_trait_id": "455",
+        "variant_trait_name": "花仙子",
+        "mapping_kind": "grand_elementalist_variant",
+        "authority": "developer_confirmed_s18_variant_sequence"
+      },
+      {
+        "source_id": "15466",
+        "canonical_champion_id": "5459",
+        "canonical_name": "拉克丝",
+        "variant_order": 6,
+        "variant_trait_id": "458",
+        "variant_trait_name": "地狱火",
+        "mapping_kind": "grand_elementalist_variant",
+        "authority": "developer_confirmed_s18_variant_sequence"
+      },
+      {
+        "source_id": "15467",
+        "canonical_champion_id": "5459",
+        "canonical_name": "拉克丝",
+        "variant_order": 7,
+        "variant_trait_id": "460",
+        "variant_trait_name": "月蚀骑士",
+        "mapping_kind": "grand_elementalist_variant",
+        "authority": "developer_confirmed_s18_variant_sequence"
+      },
+      {
+        "source_id": "15468",
+        "canonical_champion_id": "5459",
+        "canonical_name": "拉克丝",
+        "variant_order": 8,
+        "variant_trait_id": "457",
+        "variant_trait_name": "野兽之灵",
+        "mapping_kind": "grand_elementalist_variant",
+        "authority": "developer_confirmed_s18_variant_sequence"
+      },
+      {
+        "source_id": "15469",
+        "canonical_champion_id": "5459",
+        "canonical_name": "拉克丝",
+        "variant_order": 9,
+        "variant_trait_id": "459",
+        "variant_trait_name": "日蚀骑士",
+        "mapping_kind": "grand_elementalist_variant",
+        "authority": "developer_confirmed_s18_variant_sequence"
+      }
+    ]
+  },
+  "offline_core_supplement_sources": {
+    "datatft_s18_frozen": {
+      "external_version": "jcc_18.1",
+      "season_number": 18,
+      "platform_id": 2,
+      "scope": "offline_frozen_core_supplement",
+      "historical_source_evidence_only": false,
+      "production_core_input": true,
+      "network_refresh": false,
+      "runtime_retrieval": false,
+      "ranking_authority": false,
+      "retained_roles": [
+        "database_hard_data_enrichment",
+        "reward_rate_tables",
+        "trait_tracking",
+        "champion_item_sprite_expansions"
+      ],
+      "patch_policy": "retain_as_current_core_baseline_input_then_apply_explicit_patch_delta"
+    }
+  },
+  "ranking_sources": {
+    "national_master_plus": {
+      "source_role": "strength_and_canonical_roster_authority",
+      "battle_type": "31",
+      "tier_part": "0",
+      "main_trait_endpoint": "/go/jgame/get_main_trait_strength_trend",
+      "canonical_roster_alias": "trait_group",
+      "canonical_roster_path": "data[0].data.minor_traits_datas[].hero_list",
+      "player_lineups_enabled": false
+    },
+    "winning_lineups": {
+      "source_role": "primary_recipe_only",
+      "endpoint": "/go/jgame/common_proxy_v2",
+      "request_alias": "lineup_group_list",
+      "metrics_authority": false,
+      "statistics_policy": "discard_before_recipe_compilation",
+      "player_lineups_enabled": false
+    },
+    "popular_lineups": {
+      "source_role": "secondary_recipe_only",
+      "source_kind": "official_curated_popular_lineup",
+      "url": "https://game.gtimg.cn/images/lol/act/jkzlkauto/json/lineupJson/m19/11/18/lineup_detail_total.json",
+      "channel": "11",
+      "mode": "18",
+      "upstream_season": "19",
+      "max_source_age_hours": 72,
+      "freshness_authority": "http_last_modified_and_etag",
+      "version_binding": "official_mode_endpoint_plus_current_core_catalog",
+      "metrics_authority": false,
+      "statistics_policy": "discard_before_recipe_compilation",
+      "player_lineups_enabled": false,
+      "known_unresolved_references": [
+        {
+          "kind": "augment",
+          "source_id": "20775",
+          "observed_in_recipe_source_id": "4793",
+          "canonical_name": null,
+          "status": "stale_hidden_source_reference",
+          "evidence": "The seven augments rendered by the current recipe UI resolve independently; 20775 is an extra eighth replace-field reference absent from the current official catalog and UI.",
+          "policy": "exclude_from_recipe_candidates_and_retain_audit_reference"
+        }
+      ]
+    }
+  },
+  "source_adapter": {
+    "id": "official_primary_datatft_enrichment_mode18_v9",
+    "command": "tools/stage-jcc-s18-hard-data.mjs",
+    "arguments": [
+      "--datatft-snapshot",
+      "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/datatft-s18-database.json",
+      "--datatft-rate-snapshot",
+      "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/datatft-s18-rate.json",
+      "--datatft-trait-tracker-snapshot",
+      "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/datatft-s18-trait-tracker.json",
+      "--official-augment-snapshot",
+      "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/official-s18-augments.json",
+      "--item-usage-taxonomy",
+      "data/game-knowledge/jcc/seasons/s18/patches/s18_2/item-usage-taxonomy.json",
+      "--balance-patch",
+      "data/game-knowledge/jcc/seasons/s18/patches/s18_2/balance-changes-18.2a.json",
+      "--patch-source-manifest",
+      "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-manifest.json",
+      "--champions-doc",
+      "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/champions-and-traits.md",
+      "--augments-doc",
+      "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/augments.md",
+      "--sprites-doc",
+      "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/nature-sprites.md",
+      "--equipment-doc",
+      "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/equipment.md"
+    ],
+    "verifiers": [
+      {
+        "command": "tools/verify-jcc-s18-source-import.mjs",
+        "arguments": [
+          "--champions-doc",
+          "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/champions-and-traits.md",
+          "--augments-doc",
+          "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/augments.md",
+          "--sprites-doc",
+          "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/nature-sprites.md",
+          "--equipment-doc",
+          "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/equipment.md",
+          "--patch-source-manifest",
+          "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-manifest.json"
+        ]
+      },
+      {
+        "command": "tools/verify-jcc-official-augment-source.mjs",
+        "arguments": [
+          "--snapshot",
+          "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/official-s18-augments.json",
+          "--patch-source-manifest",
+          "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-manifest.json"
+        ]
+      },
+      {
+        "command": "tools/verify-jcc-datatft-database-source.mjs",
+        "arguments": [
+          "--snapshot",
+          "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/datatft-s18-database.json"
+        ]
+      },
+      {
+        "command": "tools/verify-jcc-datatft-rate-source.mjs",
+        "arguments": [
+          "--snapshot",
+          "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/datatft-s18-rate.json"
+        ]
+      },
+      {
+        "command": "tools/verify-jcc-datatft-trait-tracker-source.mjs",
+        "arguments": [
+          "--snapshot",
+          "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/datatft-s18-trait-tracker.json",
+          "--patch-source-manifest",
+          "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-manifest.json"
+        ]
+      },
+      {
+        "command": "tools/verify-jcc-s18-18.2a-hard-data.mjs",
+        "arguments": [
+          "--manifest",
+          "${hard_data_package_dir}/manifest.json"
+        ]
+      },
+      {
+        "command": "tools/verify-jcc-mumu-runtime-id-mapping.mjs",
+        "arguments": [
+          "--receipt",
+          "data/game-knowledge/jcc/seasons/s18/patches/s18_2/mumu-runtime-id-mapping-receipt.json",
+          "--overlay",
+          "${hard_data_package_dir}/runtime-catalog-overlay.json",
+          "--season",
+          "${season_id}",
+          "--patch",
+          "${patch_id}"
+        ]
+      }
+    ]
+  },
+  "source_artifacts": [
+    {
+      "role": "patch_player_aliases",
+      "path": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/player-entity-aliases.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-patch-player-entity-aliases-v1"
+      }
+    },
+    {
+      "role": "patch_strategy",
+      "path": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/strategy-overrides.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "season_id": "s18",
+        "patch_id": "s18_2"
+      }
+    },
+    {
+      "role": "primary_augment_catalog_snapshot",
+      "path": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/official-s18-augments.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-official-augment-snapshot-v1"
+      }
+    },
+    {
+      "role": "supplemental_hard_data_snapshot",
+      "path": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/datatft-s18-database.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-datatft-database-snapshot-v1"
+      }
+    },
+    {
+      "role": "supplemental_rate_and_reward_snapshot",
+      "path": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/datatft-s18-rate.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-datatft-rate-snapshot-v1"
+      }
+    },
+    {
+      "role": "supplemental_trait_diversity_roster_snapshot",
+      "path": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/datatft-s18-trait-tracker.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-datatft-trait-tracker-snapshot-v2"
+      }
+    },
+    {
+      "role": "item_usage_taxonomy",
+      "path": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/item-usage-taxonomy.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-patch-item-usage-taxonomy-v1"
+      }
+    },
+    {
+      "role": "official_hard_data_source_receipt",
+      "path": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/source-docs/official-source-receipt.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-official-hard-data-source-receipt-v1"
+      }
+    },
+    {
+      "role": "balance_patch_overlay",
+      "path": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/balance-changes-18.2a.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-core-balance-patch-v1",
+        "release_version": "18.2a"
+      }
+    },
+    {
+      "role": "hard_data_manifest",
+      "path": "data/core-patches/jcc/generations/9ea24a3a5606e2aa3850bb7f7e8c08bcf0c5faaa88f1188fe0e66cc7aa9c24b7/manifest.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "packageId": "jcc-s18-s18_2",
+        "runtime_patch_id": "s18_2"
+      }
+    },
+    {
+      "role": "hard_data_content_manifest",
+      "path": "data/core-patches/jcc/generations/9ea24a3a5606e2aa3850bb7f7e8c08bcf0c5faaa88f1188fe0e66cc7aa9c24b7/hard-data-manifest.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true
+    },
+    {
+      "role": "augment_stage_authority",
+      "path": "data/core-patches/jcc/generations/9ea24a3a5606e2aa3850bb7f7e8c08bcf0c5faaa88f1188fe0e66cc7aa9c24b7/indexes/augment_stage_authority.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-decision-input-augment-stage-authority-v1"
+      }
+    },
+    {
+      "role": "supplemental_source_audit",
+      "path": "data/core-patches/jcc/generations/9ea24a3a5606e2aa3850bb7f7e8c08bcf0c5faaa88f1188fe0e66cc7aa9c24b7/indexes/supplemental_source_audit.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-supplemental-hard-data-audit-v1"
+      }
+    },
+    {
+      "role": "trait_diversity_roster_support",
+      "path": "data/core-patches/jcc/generations/9ea24a3a5606e2aa3850bb7f7e8c08bcf0c5faaa88f1188fe0e66cc7aa9c24b7/normalized/trait_diversity_roster_support.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-trait-diversity-roster-support-v2"
+      }
+    },
+    {
+      "role": "runtime_catalog_overlay",
+      "path": "data/core-patches/jcc/generations/9ea24a3a5606e2aa3850bb7f7e8c08bcf0c5faaa88f1188fe0e66cc7aa9c24b7/runtime-catalog-overlay.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true
+    },
+    {
+      "role": "mumu_runtime_id_mapping_receipt",
+      "path": "data/game-knowledge/jcc/seasons/s18/patches/s18_2/mumu-runtime-id-mapping-receipt.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-mumu-runtime-id-mapping-receipt-v1"
+      }
+    }
+  ],
+  "hard_data_candidate": {
+    "schema": "jcc-hard-data-candidate-reference-v1",
+    "generation_id": "9ea24a3a5606e2aa3850bb7f7e8c08bcf0c5faaa88f1188fe0e66cc7aa9c24b7",
+    "generation_dir": "data/core-patches/jcc/generations/9ea24a3a5606e2aa3850bb7f7e8c08bcf0c5faaa88f1188fe0e66cc7aa9c24b7",
+    "immutable": true
+  }
+}

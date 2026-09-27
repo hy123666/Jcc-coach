@@ -1,0 +1,553 @@
+{
+  "schema": "jcc-resource-policy-modifier-catalog-v1",
+  "purpose": "Confirmed and pending match-scoped resource/economy modifiers. This is the parent catalog for XP, gold, shop refresh, interest, HP-cost, and reward-timing policies.",
+  "source_policy": {
+    "confirmed_rows_may_mutate_policy": true,
+    "pending_rows_fail_closed": true,
+    "observed_live_state_overrides_predicted_grants": true,
+    "xp_policy_is_a_view_of_resource_policy": true
+  },
+  "resource_domains": [
+    "xp",
+    "gold",
+    "shop_refresh",
+    "interest",
+    "hp",
+    "loot",
+    "reward_timing"
+  ],
+  "confirmed_modifiers": [
+    {
+      "key": "augment_level_up",
+      "kind": "augment",
+      "resource_domains": [
+        "xp"
+      ],
+      "match": [
+        "升级咯",
+        "升级咯！",
+        "Level Up"
+      ],
+      "patch": {
+        "manual_xp_per_click_delta": 2
+      },
+      "one_time_xp_grants": [
+        {
+          "xp": 6,
+          "timing": "on_augment_selected"
+        }
+      ],
+      "confidence": "high_hard_data",
+      "source": "active_hard_data:indexes/entity_strategy_playbooks.json#augment_3008",
+      "note": "即刻获得6经验值；在你购买经验值的时候，免费获得额外的2经验值。",
+      "policy_fields": [
+        "manual_xp_per_click_delta"
+      ],
+      "effect_classes": [
+        "policy_mutation",
+        "flat_grant"
+      ],
+      "trigger_timing": [
+        "on_select",
+        "persistent_match_rule"
+      ],
+      "mutation_scope": "match_session",
+      "runtime_consumers": [
+        "leveling_economy_context",
+        "economy_action_scorer",
+        "choice_advice",
+        "postgame_review"
+      ],
+      "promotion_state": "confirmed",
+      "classification": {
+        "primary_domain": "xp",
+        "resource_domains": [
+          "xp"
+        ],
+        "effect_classes": [
+          "policy_mutation",
+          "flat_grant"
+        ],
+        "trigger_timing": [
+          "on_select",
+          "persistent_match_rule"
+        ],
+        "mutation_scope": "match_session"
+      }
+    },
+    {
+      "key": "augment_ambition",
+      "kind": "augment",
+      "resource_domains": [
+        "xp",
+        "hp",
+        "shop_refresh"
+      ],
+      "match": [
+        "上进心"
+      ],
+      "patch": {
+        "manual_xp_gold_cost_delta": -1
+      },
+      "on_level_up_rewards": {
+        "hp": 2,
+        "free_rerolls": 1
+      },
+      "confidence": "high_hard_data",
+      "source": "active_hard_data:indexes/entity_strategy_playbooks.json#augment_30028",
+      "note": "购买经验的费用降低1；每当你升级时，获得2生命值和1次免费刷新。",
+      "policy_fields": [
+        "manual_xp_gold_cost_delta"
+      ],
+      "effect_classes": [
+        "policy_mutation",
+        "triggered_reward"
+      ],
+      "trigger_timing": [
+        "on_level_up",
+        "persistent_match_rule"
+      ],
+      "mutation_scope": "match_session",
+      "runtime_consumers": [
+        "leveling_economy_context",
+        "economy_action_scorer",
+        "choice_advice",
+        "postgame_review"
+      ],
+      "promotion_state": "confirmed",
+      "classification": {
+        "primary_domain": "xp",
+        "resource_domains": [
+          "xp",
+          "hp",
+          "shop_refresh"
+        ],
+        "effect_classes": [
+          "policy_mutation",
+          "triggered_reward"
+        ],
+        "trigger_timing": [
+          "on_level_up",
+          "persistent_match_rule"
+        ],
+        "mutation_scope": "match_session"
+      }
+    },
+    {
+      "key": "augment_wise_spending",
+      "kind": "augment",
+      "resource_domains": [
+        "xp",
+        "gold",
+        "shop_refresh"
+      ],
+      "match": [
+        "明智消费",
+        "Wise Spending"
+      ],
+      "patch": {
+        "can_buy_xp": false,
+        "shop_refresh_xp_gain": 2
+      },
+      "one_time_gold_grants": [
+        {
+          "gold": 3,
+          "timing": "on_augment_selected"
+        }
+      ],
+      "confidence": "high_hard_data",
+      "source": "active_hard_data:indexes/entity_strategy_playbooks.json#augment_1004",
+      "note": "每次花费金币刷新商店时，获得2经验值；立刻获得3金币；你不能再购买经验值。",
+      "policy_fields": [
+        "can_buy_xp",
+        "shop_refresh_xp_gain"
+      ],
+      "effect_classes": [
+        "policy_mutation",
+        "flat_grant",
+        "restriction",
+        "conversion_rule"
+      ],
+      "trigger_timing": [
+        "on_select",
+        "on_shop_refresh",
+        "persistent_match_rule"
+      ],
+      "mutation_scope": "match_session",
+      "runtime_consumers": [
+        "leveling_economy_context",
+        "economy_action_scorer",
+        "choice_advice",
+        "postgame_review"
+      ],
+      "promotion_state": "confirmed",
+      "classification": {
+        "primary_domain": "xp",
+        "resource_domains": [
+          "xp",
+          "gold",
+          "shop_refresh"
+        ],
+        "effect_classes": [
+          "policy_mutation",
+          "flat_grant",
+          "restriction",
+          "conversion_rule"
+        ],
+        "trigger_timing": [
+          "on_select",
+          "on_shop_refresh",
+          "persistent_match_rule"
+        ],
+        "mutation_scope": "match_session"
+      }
+    },
+    {
+      "key": "augment_patient_study",
+      "kind": "augment",
+      "resource_domains": [
+        "xp",
+        "reward_timing"
+      ],
+      "match": [
+        "耐心学习",
+        "Patient Study"
+      ],
+      "patch": {
+        "post_player_combat_xp_win": 2,
+        "post_player_combat_xp_loss": 3
+      },
+      "confidence": "high_hard_data",
+      "source": "active_hard_data:indexes/entity_strategy_playbooks.json#augment_3158",
+      "note": "在与玩家的战斗后，如果你赢了则获得2经验，如果你输了则获得3经验。",
+      "policy_fields": [
+        "post_player_combat_xp_win",
+        "post_player_combat_xp_loss"
+      ],
+      "effect_classes": [
+        "policy_mutation"
+      ],
+      "trigger_timing": [
+        "combat_end_win_loss"
+      ],
+      "mutation_scope": "match_session",
+      "runtime_consumers": [
+        "leveling_economy_context",
+        "economy_action_scorer",
+        "choice_advice",
+        "postgame_review"
+      ],
+      "promotion_state": "confirmed",
+      "classification": {
+        "primary_domain": "xp",
+        "resource_domains": [
+          "xp",
+          "reward_timing"
+        ],
+        "effect_classes": [
+          "policy_mutation"
+        ],
+        "trigger_timing": [
+          "combat_end_win_loss"
+        ],
+        "mutation_scope": "match_session"
+      }
+    },
+    {
+      "key": "augment_late_game_returns",
+      "kind": "augment",
+      "resource_domains": [
+        "xp",
+        "reward_timing"
+      ],
+      "match": [
+        "后期收益"
+      ],
+      "patch": {
+        "player_combat_start_xp_gain": 2
+      },
+      "confidence": "high_hard_data",
+      "source": "active_hard_data:indexes/entity_strategy_playbooks.json#augment_20661",
+      "note": "每个玩家战斗回合开始时，获得2经验值。",
+      "policy_fields": [
+        "player_combat_start_xp_gain"
+      ],
+      "effect_classes": [
+        "policy_mutation"
+      ],
+      "trigger_timing": [
+        "combat_start"
+      ],
+      "mutation_scope": "match_session",
+      "runtime_consumers": [
+        "leveling_economy_context",
+        "economy_action_scorer",
+        "choice_advice",
+        "postgame_review"
+      ],
+      "promotion_state": "confirmed",
+      "classification": {
+        "primary_domain": "xp",
+        "resource_domains": [
+          "xp",
+          "reward_timing"
+        ],
+        "effect_classes": [
+          "policy_mutation"
+        ],
+        "trigger_timing": [
+          "combat_start"
+        ],
+        "mutation_scope": "match_session"
+      }
+    }
+  ],
+  "pending_confirmation": [
+    {
+      "key": "augment_explosive_growth_plus",
+      "kind": "augment",
+      "resource_domains": [
+        "xp",
+        "reward_timing"
+      ],
+      "match": [
+        "爆炸式增长+",
+        "Explosive Growth+"
+      ],
+      "patch": {},
+      "confidence": "medium",
+      "note": "立刻以及接下来的3个回合开始时，获得10经验值。Needs scheduled-grant event modeling before automatic mutation.",
+      "policy_fields": [],
+      "effect_classes": [
+        "scheduled_grant"
+      ],
+      "trigger_timing": [
+        "on_user_confirmed"
+      ],
+      "mutation_scope": "match_session",
+      "runtime_consumers": [
+        "leveling_economy_context",
+        "economy_action_scorer",
+        "choice_advice",
+        "postgame_review"
+      ],
+      "promotion_state": "pending",
+      "classification": {
+        "primary_domain": "xp",
+        "resource_domains": [
+          "xp",
+          "reward_timing"
+        ],
+        "effect_classes": [
+          "scheduled_grant"
+        ],
+        "trigger_timing": [
+          "on_user_confirmed"
+        ],
+        "mutation_scope": "match_session"
+      }
+    },
+    {
+      "key": "augment_reach_the_summit",
+      "kind": "augment",
+      "resource_domains": [
+        "xp",
+        "shop_refresh",
+        "reward_timing"
+      ],
+      "match": [
+        "登上最高峰"
+      ],
+      "patch": {},
+      "confidence": "medium",
+      "note": "立刻获得10经验值；当你到达9级时，立刻升至10级并获得8次商店刷新。",
+      "policy_fields": [],
+      "effect_classes": [
+        "scheduled_grant"
+      ],
+      "trigger_timing": [
+        "on_user_confirmed"
+      ],
+      "mutation_scope": "match_session",
+      "runtime_consumers": [
+        "leveling_economy_context",
+        "economy_action_scorer",
+        "choice_advice",
+        "postgame_review"
+      ],
+      "promotion_state": "pending",
+      "classification": {
+        "primary_domain": "xp",
+        "resource_domains": [
+          "xp",
+          "shop_refresh",
+          "reward_timing"
+        ],
+        "effect_classes": [
+          "scheduled_grant"
+        ],
+        "trigger_timing": [
+          "on_user_confirmed"
+        ],
+        "mutation_scope": "match_session"
+      }
+    },
+    {
+      "key": "generic_flat_xp_grant",
+      "kind": "reward",
+      "resource_domains": [
+        "xp",
+        "loot"
+      ],
+      "match": [
+        "experience",
+        "XP",
+        "经验"
+      ],
+      "patch": {},
+      "confidence": "low",
+      "note": "Flat XP grants affect observed current XP. Do not infer future manual XP policy from generic XP text.",
+      "policy_fields": [],
+      "effect_classes": [
+        "uncertain_text_signal"
+      ],
+      "trigger_timing": [
+        "on_user_confirmed"
+      ],
+      "mutation_scope": "match_session",
+      "runtime_consumers": [
+        "leveling_economy_context",
+        "economy_action_scorer",
+        "choice_advice",
+        "postgame_review"
+      ],
+      "promotion_state": "pending",
+      "classification": {
+        "primary_domain": "xp",
+        "resource_domains": [
+          "xp",
+          "loot"
+        ],
+        "effect_classes": [
+          "uncertain_text_signal"
+        ],
+        "trigger_timing": [
+          "on_user_confirmed"
+        ],
+        "mutation_scope": "match_session"
+      }
+    }
+  ],
+  "taxonomy": {
+    "resource_domains": {
+      "xp": [
+        "level_threshold",
+        "manual_purchase",
+        "passive_income",
+        "scheduled_grant",
+        "combat_result",
+        "shop_refresh_conversion"
+      ],
+      "gold": [
+        "flat_grant",
+        "spend_conversion",
+        "interest",
+        "income_timing",
+        "opportunity_cost"
+      ],
+      "shop_refresh": [
+        "refresh_to_xp",
+        "free_reroll_grant",
+        "refresh_cost",
+        "refresh_reward"
+      ],
+      "interest": [
+        "interest_breakpoint",
+        "interest_cap",
+        "interest_exception"
+      ],
+      "hp": [
+        "hp_grant",
+        "hp_cost",
+        "survival_buffer"
+      ],
+      "loot": [
+        "anvil",
+        "duplicator",
+        "item_component",
+        "emblem",
+        "generic_reward"
+      ],
+      "reward_timing": [
+        "on_select",
+        "per_round",
+        "combat_start",
+        "combat_end_win_loss",
+        "on_level_up",
+        "scheduled_round",
+        "threshold_level"
+      ]
+    },
+    "effect_classes": [
+      "policy_mutation",
+      "flat_grant",
+      "scheduled_grant",
+      "conversion_rule",
+      "triggered_reward",
+      "restriction",
+      "uncertain_text_signal"
+    ],
+    "runtime_consumers": {
+      "leveling_economy_context": [
+        "xp",
+        "gold",
+        "shop_refresh",
+        "interest",
+        "hp",
+        "reward_timing"
+      ],
+      "economy_action_scorer": [
+        "xp",
+        "gold",
+        "shop_refresh",
+        "interest",
+        "hp"
+      ],
+      "choice_advice": [
+        "xp",
+        "gold",
+        "shop_refresh",
+        "hp",
+        "loot",
+        "reward_timing"
+      ],
+      "postgame_review": [
+        "xp",
+        "gold",
+        "shop_refresh",
+        "interest",
+        "hp",
+        "loot",
+        "reward_timing"
+      ]
+    },
+    "promotion_rules": {
+      "confirmed_rows_may_mutate_policy": true,
+      "pending_rows_do_not_mutate_policy": true,
+      "explicit_live_state_overrides_catalog_prediction": true,
+      "scheduled_grants_require_event_model_before_policy_mutation": true,
+      "xp_policy_is_derived_view_not_separate_source": true
+    },
+    "known_policy_fields": [
+      "xp_to_next_delta",
+      "manual_xp_per_click_delta",
+      "manual_xp_gold_cost_delta",
+      "can_buy_xp",
+      "shop_refresh_xp_gain",
+      "post_player_combat_xp_win",
+      "post_player_combat_xp_loss",
+      "player_combat_start_xp_gain",
+      "per_round_xp_gain"
+    ]
+  }
+}

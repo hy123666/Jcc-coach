@@ -1,0 +1,79 @@
+{
+  "schema": "jcc-runtime-session-contract-v1",
+  "purpose": "Defines session boundaries for the CLI-agent-hosted JCC runtime coach.",
+  "sessions": {
+    "device_connection": {
+      "meaning": "MuMu / ADB connection lifecycle.",
+      "may_outlive_match": true,
+      "created_by": "connect_or_rescan_mumu",
+      "ended_by": "disconnect_device_or_close_runtime",
+      "stop_match_effect": "must_not_disconnect",
+      "startup_policy": "Do not auto-discover on every startup after a device is already bound. Discovery is a menu/settings action."
+    },
+    "daily_session": {
+      "meaning": "No-active-match chat/review/settings/memory context.",
+      "visible_when": [
+        "no_active_match",
+        "match_stopped"
+      ],
+      "allowed_reads": [
+        "hard_data",
+        "daily_big_data",
+        "user_memory",
+        "recent_20_match_summaries",
+        "runtime_settings"
+      ],
+      "allowed_writes": [
+        "user_memory_suggestions",
+        "user_approved_strategy_memory",
+        "postgame_review_notes",
+        "runtime_settings"
+      ],
+      "must_not_write": [
+        "current_match.live_state",
+        "current_match.manual_match_variables"
+      ]
+    },
+    "match_session": {
+      "meaning": "One active game.",
+      "created_by": "Start Match",
+      "tool": "tools/start-jcc-new-match-session.mjs",
+      "requires_new_match_session_id": true,
+      "clears_on_start": [
+        "live_state",
+        "advice_task",
+        "manual_match_variables",
+        "match_context",
+        "current_watcher_events"
+      ],
+      "does_not_clear": [
+        "device_connection",
+        "hard_data",
+        "daily_big_data",
+        "catalog",
+        "user_memory",
+        "recent_match_summaries"
+      ],
+      "ended_by": "Stop Match",
+      "stop_effect": "return_to_daily_session"
+    },
+    "response_task": {
+      "meaning": "One host-model answer/output task.",
+      "created_by": "user_message_or_advice_task",
+      "cancelled_by": "input_box_square_stop",
+      "cancel_effect": [
+        "stop_current_answer",
+        "keep_device_connection",
+        "keep_match_session",
+        "keep_live_state",
+        "return_to_cruise_or_current_mode_prompt"
+      ]
+    }
+  },
+  "context_pack_policy": {
+    "startup": "Inject once when the runtime starts. Must be short and must not start watcher or scan MuMu.",
+    "match": "Inject after Start Match. Contains match_session_id and match-scoped rules.",
+    "mode": "Inject lazily when a focused mode is active. Contains only that mode's extra rules.",
+    "skill": ".codex/skills/jcc-runtime-agent/SKILL.md is the single root skill; mode packs are generated context, not separate skills."
+  }
+}

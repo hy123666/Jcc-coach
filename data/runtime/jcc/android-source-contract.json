@@ -1,0 +1,56 @@
+{
+  "contract_id": "jcc-android-runtime-source-contract",
+  "purpose": "Define generic Android ADB source boundaries for JCC live_state ingestion.",
+  "product_boundary": "generic_android_adb_source",
+  "sample_profiles": [
+    {
+      "profile": "mumu",
+      "status": "sample_verified",
+      "verified_capabilities": [
+        "adb_device_online",
+        "foreground_package_detection",
+        "external_file_pull",
+        "public_net_log_signal_extraction"
+      ],
+      "not_product_boundary": true
+    },
+    {
+      "profile": "generic-adb",
+      "status": "contract_defined_not_cross_emulator_verified",
+      "required_capabilities": [
+        "adb shell",
+        "logcat or external readable files",
+        "dumpsys activity/window",
+        "foreground package detection"
+      ]
+    }
+  ],
+  "allowed_sources": [
+    "adb logcat",
+    "adb shell dumpsys",
+    "adb shell external readable files",
+    "/sdcard/Android/data readable files",
+    "user-authorized readable cache/log files",
+    "public static resource mapping",
+    "ocr fallback",
+    "user input fallback"
+  ],
+  "forbidden_sources": [
+    "memory injection",
+    "game process modification",
+    "anti-cheat bypass",
+    "private account data scraping",
+    "credential extraction"
+  ],
+  "source_events": [
+    "raw_event",
+    "candidate_signal",
+    "match_start",
+    "local_player_binding",
+    "field_update",
+    "field_unknown",
+    "field_stale"
+  ],
+  "evidence_policy": "Every live_state field must carry source/evidence/confidence/freshness/status through the field evidence matrix.",
+  "targeted_capture_contract": "data/runtime/jcc/android-runtime-capture-contract.json"
+}

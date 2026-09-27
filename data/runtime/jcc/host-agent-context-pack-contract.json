@@ -1,0 +1,57 @@
+{
+  "schema": "jcc-host-agent-context-pack-contract-v1",
+  "purpose": "Contract for compact context packs injected into the host CLI model.",
+  "generator": "tools/build-jcc-host-agent-context-pack.mjs",
+  "scopes": {
+    "startup": {
+      "must_include": [
+        "root_skill_path",
+        "session_contract_summary",
+        "required_node_json_rule",
+        "data_readiness",
+        "available_runtime_tools",
+        "worker_orchestrator_summary",
+        "active_season_module",
+        "retention_budget",
+        "daily_session_entry"
+      ],
+      "must_not_do": [
+        "auto_discover_mumu_every_start",
+        "start_watcher",
+        "create_match_session",
+        "write_current_match_live_state"
+      ]
+    },
+    "match": {
+      "must_include": [
+        "match_session_id",
+        "start_match_reset_policy",
+        "watcher_command_hint",
+        "cruise_mode_policy",
+        "pollution_guards"
+      ],
+      "requires": [
+        "match_session_id"
+      ]
+    },
+    "mode": {
+      "must_include": [
+        "mode_id",
+        "mode_purpose",
+        "allowed_sources",
+        "allowed_writes",
+        "must_not_write",
+        "response_expectation"
+      ],
+      "requires": [
+        "mode_id"
+      ]
+    }
+  },
+  "mode_pack_policy": "Mode context packs are loaded only when the UI/user activates a mode. They are not separate skills.",
+  "worker_orchestrator_policy": "Context packs may point the host model to a deterministic worker plan. Workers gather and score evidence; only the host CLI model produces final user-visible coaching text.",
+  "specialist_agent_policy": "Context packs may expose optional CLI-native specialist subagent lanes for complex/background analysis. Specialist agents inherit the host CLI model by default, return structured packets only, and must never produce final user-visible coaching text.",
+  "season_module_policy": "Context packs expose the active season module, but runtime session/mode/output rules must stay season-invariant.",
+  "retention_budget_policy": "Context packs remind the host model that raw frames/full live_state retention is debug-only and normal match artifacts must stay compact.",
+  "json_io_policy": "All context pack artifacts are written by Node as UTF-8 no-BOM JSON/Markdown."
+}

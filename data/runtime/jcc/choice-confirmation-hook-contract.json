@@ -1,0 +1,91 @@
+{
+  "schema": "jcc-choice-confirmation-hook-contract-v2",
+  "purpose": "Define the common, season-neutral boundary between current-match choice candidate reports and explicit final-choice confirmation.",
+  "authority": {
+    "runtime_choice_descriptors": "compiled active rules bundle",
+    "canonical_state": "SQLite current match context",
+    "common_runtime_must_not_name_season_modes": true,
+    "major_season_migration": "Declare or replace the major-season choice descriptor; common confirmation code and contracts remain unchanged."
+  },
+  "source_boundary": {
+    "s4_status": "4358 s=4 is an attention signal only. It does not prove the semantic panel type, candidate names, or final selected choice.",
+    "candidate_source": "Obey each compiled descriptor candidate_input_policy. Current product active choices use current_match_user_report only.",
+    "final_selection_source": "same-match explicit user confirmation or a separately declared proven final-selection source",
+    "no_raw_frame_retention_by_default": true,
+    "no_active_choice_ocr_or_host_visual_fallback": true
+  },
+  "trigger_sources": [
+    "explicit_user_message",
+    "runtime_ui_mode_button",
+    "compiled_active_choice_checkpoint"
+  ],
+  "choice_contract_resolution": {
+    "base_modes_source": "data/runtime/jcc/common-choice-runtime-contract.json:runtime_choice_modes",
+    "season_modes_source": "active major-season choice_mechanics descriptors",
+    "candidate_paths_source": "compiled descriptor candidate_paths",
+    "confirmation_event_source": "compiled descriptor runtime_ui_mode.substeps when present",
+    "missing_selection_prompt_source": "compiled descriptor missing_selection_prompt_template"
+  },
+  "runtime_flow": [
+    "choice_checkpoint_or_user_intent_observed",
+    "user_reports_current_visible_candidates",
+    "one_choice_advice_owner_runs",
+    "user_confirms_final_selection_or_skips",
+    "confirmed_fact_updates_context_without_a_sibling_answer",
+    "one_optional_semantic_followup_runs_only_when_declared_and_actionable"
+  ],
+  "confirmation_policy": {
+    "required_for_final_state": true,
+    "pending_state_field": "choices.pending_confirmation",
+    "candidate_sets_are_not_final_selections": true,
+    "cross_match_confirmation_rejected": true,
+    "new_match_resets_pending_and_confirmed_match_choices": true,
+    "confirmation_only_answer_owner": "one explicit semantic follow-up or no strategy answer",
+    "mixed_confirmation_and_question_answer_owner": "direct user response task"
+  },
+  "augment_policy": {
+    "candidate_source": "current_match_user_report",
+    "selected_state_field": "augments.selected_augments",
+    "reroll_state_field": "augments.reroll_events",
+    "owned_text_panel_recovery": {
+      "enabled": true,
+      "trigger": "manual augment-mode owned-panel action only",
+      "source": "user_triggered_owned_augment_text_panel_ocr",
+      "stage_binding_rule": "Only the fixed 2-1, 3-2, and 4-2 augment rows may be promoted; ignore non-augment rows.",
+      "must_not": [
+        "run_from_cruise_background",
+        "replace_current_candidate_set",
+        "confirm_cross_match_or_stale_panels",
+        "promote_non_augment_rows"
+      ]
+    }
+  },
+  "active_season_choice_policy": {
+    "candidate_source": "compiled descriptor candidate_input_policy",
+    "current_product_source": "current_match_user_report",
+    "mode_and_stage_source": "compiled active major-season descriptor",
+    "confirmation_storage": "descriptor-declared match variable or generic confirmed-choice history",
+    "post_confirmation_followup": "Only a descriptor-declared, current-match, action-changing missing fact may request one user follow-up.",
+    "future_season_policy": "A season without the prior mechanic does not inherit its mode, stage, vocabulary, storage field, or follow-up."
+  },
+  "item_choice_policy": {
+    "candidate_source": "current_match_user_report",
+    "user_trigger_required": true,
+    "structured_inventory_context": "trusted current item facts may inform advice but do not prove which visible choice candidate was selected",
+    "fixed_round_auto_trigger": false,
+    "no_ocr_or_host_visual_candidate_intake": true
+  },
+  "pollution_guard": {
+    "match_scoped": true,
+    "confirmed_choices_do_not_carry_across_matches": true,
+    "pending_confirmation_expires_on_new_match_or_choice_skipped": true,
+    "raw_status_and_visual_attention_do_not_become_semantic_choices": true,
+    "candidate_report_does_not_create_a_second_host_answer": true
+  },
+  "compatibility_fixture": {
+    "tool": "tools/build-jcc-choice-confirmation-state.mjs",
+    "status": "test_fixture_only_not_product_runtime",
+    "required_flag": "--compatibility-fixture",
+    "reason": "Season-neutral fold scenarios remain useful as regression evidence, but production confirmation is owned by canonical runtime state plus compiled active rules."
+  }
+}

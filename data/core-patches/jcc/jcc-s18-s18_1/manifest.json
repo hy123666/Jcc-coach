@@ -1,0 +1,60 @@
+{
+  "schema": "jcc-s18-hard-data-staging-v1",
+  "packageId": "jcc-s18-s18_1",
+  "game": "金铲铲之战",
+  "mode": "18",
+  "season": "18",
+  "modeName": "Mode18NatureForce",
+  "version": "18.18.1",
+  "runtime_patch_id": "s18_1",
+  "source_package_id": "jcc-mode18-s19-18.18.1",
+  "identity": {
+    "season_id": "s18",
+    "patch_id": "s18_1",
+    "mode_id": "mode18"
+  },
+  "upstream_provenance": {
+    "mode": "18",
+    "season": "S19",
+    "version": "18.18.1",
+    "framework_name": "Mode18NatureForce",
+    "season_id": "S19",
+    "data_version": "18.18.1",
+    "source_documents": {
+      "champions": {
+        "source_document": "champions-and-traits.md",
+        "source_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849"
+      },
+      "traits": {
+        "source_document": "champions-and-traits.md",
+        "source_sha256": "ea246fd0a776d1b4b6c2e2c907271da42aee7d79895f8488ccab5c5be4b02849"
+      },
+      "augments": {
+        "source_document": "augments.md",
+        "source_sha256": "08ecb71bec09f7e8206f9a55f4a13bf1a02c77b35d094e76740f8e3942fa02d6"
+      },
+      "equipment": {
+        "source_document": "equipment.md",
+        "source_sha256": "b492e963ee3c59b25a17b486e84b424e617c12f4ae7f2957f4732501f51c8b28"
+      },
+      "sprites": {
+        "source_document": "nature-sprites.md",
+        "source_sha256": "6ab0cf008d61ed9bc4cc12ca6045243d8d7486e6241d7ecec702cfff675e1929"
+      }
+    },
+    "supplemental_database": {
+      "provider_id": "datatft",
+      "page_url": "https://jcc.datatft.com/database",
+      "encrypted_data_asset_sha256": "8cae0cd98ca872df36b99df51d09e3966e3f1a67e7c1d3c15744a17e5b05021a",
+      "snapshot_schema": "jcc-datatft-database-snapshot-v1"
+    }
+  },
+  "deterministic": true,
+  "promoted": false,
+  "rankings_included": false,
+  "hard_data_manifest": {
+    "file": "hard-data-manifest.json",
+    "sha256": "e52bae236d1fae1714885fc48e5ade6a6ef258cb456c56c62303e1ae60bfb49e",
+    "bytes": 4316
+  }
+}

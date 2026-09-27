@@ -1,0 +1,34 @@
+{
+  "schema": "jcc-game-knowledge-common-document-v1",
+  "logical_id": "common.routes",
+  "scope": "common",
+  "kind": "route_definitions",
+  "season_neutral": true,
+  "entity_references": [],
+  "entries": [
+    {
+      "id": "route.opening",
+      "stages": ["stage_1", "stage_2"],
+      "goal": "Preserve flexible board, economy, equipment, and choice options.",
+      "exit_conditions": ["material core evidence", "health pressure", "explicit user commitment"]
+    },
+    {
+      "id": "route.reroll",
+      "stages": ["stage_2", "stage_3", "stage_4"],
+      "goal": "Search at the cost-appropriate level while protecting a recovery floor.",
+      "exit_conditions": ["copy window missed", "pool pressure", "equipment mismatch", "lethal tempo"]
+    },
+    {
+      "id": "route.leveling",
+      "stages": ["stage_3", "stage_4", "stage_5_plus"],
+      "goal": "Convert economy into population and higher-cost access when the board can survive the timing.",
+      "exit_conditions": ["stabilization required", "insufficient economy", "current board already has higher marginal upgrades"]
+    },
+    {
+      "id": "route.pivot",
+      "stages": ["any"],
+      "goal": "Change direction only when the alternative has stronger current-match evidence and an executable transition.",
+      "exit_conditions": ["new direction confirmed", "original direction recovers", "transition cost is no longer affordable"]
+    }
+  ]
+}

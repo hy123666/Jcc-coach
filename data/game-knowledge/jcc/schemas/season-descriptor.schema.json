@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jcc-game-knowledge-season-descriptor-v1",
+  "type": "object",
+  "required": ["schema", "logical_id", "scope", "season_id", "inherits", "mechanics", "manual_variable_fields", "extensions", "season_entity_terms"],
+  "properties": {
+    "schema": { "const": "jcc-game-knowledge-season-descriptor-v1" },
+    "logical_id": { "type": "string", "pattern": "^season\\.s[0-9]+$" },
+    "scope": { "const": "season" },
+    "season_id": { "type": "string", "pattern": "^s[0-9]+$" },
+    "inherits": { "type": "object" },
+    "mechanics": { "type": "array" },
+    "manual_variable_fields": { "type": "array" },
+    "extensions": {
+      "type": "object",
+      "properties": {
+        "decision_math_inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["field", "evidence_source", "optional", "default", "missing_disclosure"],
+            "properties": {
+              "field": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+              "evidence_source": { "enum": ["season_mechanics"] },
+              "optional": { "const": true },
+              "default": {},
+              "missing_disclosure": { "type": "string", "minLength": 1 }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    "season_entity_terms": { "type": "array", "items": { "type": "string", "minLength": 2 } },
+    "standard_mechanics_overrides": { "type": "array" },
+    "source_references": { "type": "array" },
+    "runtime_contract": {
+      "type": "object",
+      "required": ["schema", "normal_rules", "special_rules"],
+      "properties": {
+        "schema": { "const": "jcc-season-runtime-contract-v1" },
+        "normal_rules": { "type": "object" },
+        "special_rules": { "type": "object" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

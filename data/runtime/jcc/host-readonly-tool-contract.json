@@ -1,0 +1,78 @@
+{
+  "schema": "jcc-host-readonly-tool-contract-v1",
+  "contract_version": "jcc-host-readonly-tools-v7",
+  "codex_tool_exposure": "Pin jcc as a direct-model-only namespace on fresh and resumed threads. Model-owned Code Mode overrides generic feature toggles. Verify untruncated outbound function_call_output, not only dynamicToolCall completion events.",
+  "delivery_semantics": "payload_state distinguishes complete, partial, unavailable and reuse_notice. more_available means optional further candidate pages, not incomplete returned candidates. cache_hit describes source computation reuse; an explicitly recovered cached payload is still delivered in full. knowledge_ledger is a request-time snapshot. Local references resolve inside the current result document; external variant references identify optional follow-up queries.",
+  "explicit_recovery": "A repeated same-turn query whose cached result is already sufficient returns a reuse notice even with recover=true unless recovery_reason is context_compaction, session_recovery, or lost_evidence. The model may declare lost evidence without a separate verification call. New queries, incomplete evidence, new turns and requested variants remain retrievable. Recovery metadata is excluded from query identity.",
+  "semantic_routing": "Model intent is not a keyword whitelist. Explicit current Core entities receive bounded authoritative facts on both native and prefetch paths. Typed tool operations remain available regardless of prefetch route hints; permissions and snapshot identity still bind every call.",
+  "last_reviewed": "2026-09-17",
+  "owner": "jcc-runtime",
+  "purpose": "Expose bounded JCC knowledge and deterministic calculation tools inside one logical provider turn without granting filesystem, persistence, source-policy, or answer-owner authority.",
+  "tools": [
+    {
+      "name": "jcc.query_knowledge",
+      "purpose": "Retrieve route- and facet-scoped evidence, bounded typed entity relations, or request a bounded expansion of the current Master+ Ranking candidate working set, from the current immutable evidence snapshot.",
+      "read_only": true
+    },
+    {
+      "name": "jcc.calculate",
+      "purpose": "Run an allowed current-Core deterministic calculation against the same immutable snapshot and declared defaults.",
+      "read_only": true
+    }
+  ],
+  "provider_modes": {
+    "codex": "native_dynamic_tools",
+    "kimi": "native_dynamic_tools",
+    "unknown": "prefetch_complete"
+  },
+  "capability_verification": "Provider modes describe supported transports, not session guarantees. Codex verifies thread registration; Kimi verifies this session's isolated MCP initialize, initialized notification and tools/list exchange. Unverified sessions explicitly remain prefetch_complete. A receipt is scoped to the live provider session, and observed calls are recorded separately from registration.",
+  "kimi_tool_exposure": "Kimi persistent ACP sessions use isolated provider homes and MCP HTTP credentials, with an active-turn token and cancellation signal on each call. Only the two JCC MCP tools may execute. Installed ACP 0.29.2 still exposes builtin tool schemas; its supported permission rules deny their execution rather than pretending agent-file flags hide them. Results use a 45,000-byte transport ceiling below both the MCP text limit and v1 model-result preview threshold, with whole-candidate pagination rather than silent cutting. Ephemeral maintenance remains explicitly prefetch-only.",
+  "budget": {
+    "normal_target_total_calls": 2,
+    "complex_request_hard_max_total_calls": 12,
+    "complex_request_advisory_max_expansion_cycles": 3,
+    "max_calls_per_tool": 10,
+    "depth": 1,
+    "max_argument_bytes_per_call": 16384,
+    "minimum_reserved_tool_bytes_for_native_turn": 262144,
+    "max_argument_item_lengths_are_schema_bounded": true,
+    "policy": "Native-tool providers retrieve knowledge on demand; prefetch-complete is only for providers without native tools. Search returns bounded complete atomic candidates; expansion adds new candidate identities from the retrieved working set. Stop once coverage is sufficient, but allow explicit re-fetch after compaction or when a fact is missing. The complete serialized current-turn prompt, tool arguments, and tool results share the enforceable logical-turn byte budget; the static session capsule retains its separate bounded budget. Native-tool reserve is computed from the evidence plan and requested candidate count inside the owning turn ceiling. Total calls are resource ceilings, not required planning steps."
+  },
+  "delivery": {
+    "result_protocol": {
+      "schema": "jcc-query-knowledge-result-v2",
+      "top_level_fields": ["ok", "result", "delivery", "query_identity", "evidence_snapshot_id"],
+      "transport_rule": "If the provider transport exposes tool content as text, the adapter parses the JSON exactly once before model reasoning; the model reads result and delivery directly.",
+      "duplicate_payload_rule": "The provider wire result contains one canonical result payload and never repeats the same candidate or relation object under another wrapper."
+    },
+    "provider_visibility": "Runtime registers jcc.query_knowledge and jcc.calculate with the owning Provider session. Codex disables generic shell tools and pins jcc in features.code_mode.direct_only_tool_namespaces on start and resume; shell flags alone do not prevent model-owned Code Mode wrappers. Runtime-owned Codex config sets tool_output_token_limit=262144 to preserve the broker's maximum 1 MiB result. Kimi uses its verified, permission-isolated MCP transport and its smaller complete-result ceiling. Compatibility transport, when a Provider cannot register native tools, is selected inside the adapter as prefetch_complete and is never exposed as an Agent-selectable tool path. Verify actual model-bound tool content, not rollout storage alone. This does not raise logical-turn budgets or permit dropping atomic candidate fields.",
+    "search_continuation": "search_constraints, when present, is the sole natural-language lineup filter; question is background. Empty search_constraints requests broad retrieval. Search and expansion use the complete compatible Master+ pool, independent of previous route queries. Return complete bounded pages with total_matching_count, remaining_count and a snapshot/task/selector-bound next_cursor. Expansion excludes previously delivered candidate IDs; explicit retrieval remains unrestricted within budgets.",
+    "wiki_lifecycle": "Start Match captures eligible published Wiki pages into a content-addressed SQLite snapshot and persists its reference with the Match season snapshot. All Match reads and recovery use that revision; lobby and later Matches may use newer revisions. Legacy Matches without a Wiki reference receive unavailable rather than current mutable pages. Explicit page scope survives curation and omitted-scope updates preserve prior classification.",
+    "historical_trends": "Compile dated raw observations into the same-binding trend and immutable Ranking artifacts. Retrieve only pinned compiled history, never mutable historical directories during a Match. Label strength-anchor trends separately from atomic-roster statistics. Older generations without observations explicitly report series unavailable; do not reconstruct or fabricate a sequence from deltas. History cannot affect current-day score or order.",
+    "relation_pagination": "Continue both entity and relation offsets; relations beyond 100 remain retrievable with cursors bound to snapshot, operation, selectors, source policy and page size.",
+    "relation_index_binding": "Relation follow-ups advertised by a Ranking projection must query the same captured Core and Ranking relationship index. Core-only source policy excludes Ranking relations; ordinary bound Ranking lookups must not be intercepted by a Core-only index.",
+    "retrieval_authority": "Core relation placeholders must not shadow canonical entity details. Native Wiki and Ranking trend retrieval must query the captured authorized source, not rely on optional prefetch. Wiki queries preserve full selected page content and exclude unclassified legacy pages. Search question is a lineup filter, not a copy of stage, economy or output instructions; lowering limit repeats the leading candidates.",
+    "duplicate_objects": "For Ranking search, preserve the selected canonical roster, roles, strength, equipment, transition, formation and condition facts once in a compact comparison projection; replace expanded sibling population variants, recipe alternatives and typed relations with exact follow-up indexes. Merge any remaining identical large objects within each tool result using the existing hash-checked JSON Pointer reference schema; preserve differing facts and reconstruct before local validation. All targets must exist inside the same result. Apply before byte-budget truncation.",
+    "variant_intent": "Resolve arbitrary natural-language references to the existing candidate, query get_lineup_variants by exact candidate identity, then fetch required published variants with get_lineup. Do not use literal-phrase routing. Keep recipe alternatives separate from published atomic variants.",
+    "local_reuse": "Every snapshot-bound query receives a canonical identity from snapshot, operation and normalized arguments (cursor included; recovery metadata excluded). delivery.cache_hit identifies cached queries; delivery.reused_result distinguishes a lightweight notice from full delivery. Same-turn repeated queries reuse prior evidence. For recover=true on a complete, sufficient result actually delivered on the wire, recovery_reason states compaction, session recovery, or lost evidence; partial deliveries are not treated as complete. Exact get_lineup may reuse a complete candidate delivered by search_lineups; explicit recovery or a requested variant/facet remains available. Validate freshness before and after all calls, including cache hits. Different operations and selectors remain retrievable."
+  },
+  "security": {
+    "allowed": ["current evidence snapshot", "captured Core indexes", "compatible captured Ranking indexes when policy allows", "current Match facts", "DecisionMath"],
+    "forbidden": ["arbitrary filesystem browsing", "network", "writes", "SQLite mutation", "new answer task", "source-policy changes", "cross-match or newer-snapshot reads"],
+    "no_big_data": "The active_core_profile_only policy removes Ranking and Wiki from both tools and prefetch. A tool argument cannot widen that policy.",
+    "typed_relation_operations": ["get_common_knowledge", "get_entity", "get_related_entities", "get_lineup", "get_lineup_variants", "get_ranking_trend", "get_strategy_wiki"],
+    "typed_relation_errors": ["not_found", "snapshot_mismatch", "source_forbidden", "cursor_expired"]
+  },
+  "freshness": {
+    "pre_and_post_call_validation": true,
+    "applies_to_empty_arguments": true,
+    "response_owner_fields": ["response_task_id", "mode", "match_session_id", "origin", "event_key", "minimum_revision", "accepting_status"],
+    "same_owner_revision_advance_allowed": true,
+    "invalidates_on": ["task replacement", "owner-field change", "choice report or revision change", "decision action change", "Match change", "Core change", "Ranking source identity change", "cancellation"]
+  },
+  "fallback": {
+    "policy": "A provider without verified same-turn custom tools receives a prefetch-complete bounded evidence packet and a coverage receipt reconciled against the evidence actually present on the wire. Codex retries thread bootstrap without dynamicTools only when the installed app-server explicitly rejects that field, then records prefetch_complete for the live provider session. Tool-enabled turns reserve evidence space from the plan before dispatch and remain inside the ordinary or strategic turn ceiling.",
+    "must_not_claim_tool_support": true,
+    "must_not_launch_a_second_model_turn": true
+  }
+}

@@ -1,0 +1,886 @@
+[
+  {
+    "address": "jcc:s18:champion_role_profile:1500",
+    "champion_address": "jcc:s18:champion:1500",
+    "name": "奥恩",
+    "role": "frontline",
+    "range": 1,
+    "cost": 1,
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:1501",
+    "champion_address": "jcc:s18:champion:1501",
+    "name": "洛",
+    "role": "frontline",
+    "range": 1,
+    "cost": 1,
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:1502",
+    "champion_address": "jcc:s18:champion:1502",
+    "name": "蕾欧娜",
+    "role": "frontline",
+    "range": 1,
+    "cost": 1,
+    "tags": [
+      "control",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:1503",
+    "champion_address": "jcc:s18:champion:1503",
+    "name": "可酷伯",
+    "role": "frontline",
+    "range": 1,
+    "cost": 1,
+    "tags": [
+      "healing",
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:1504",
+    "champion_address": "jcc:s18:champion:1504",
+    "name": "雷克塞",
+    "role": "frontline",
+    "range": 1,
+    "cost": 1,
+    "tags": [
+      "aoe",
+      "healing",
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:1505",
+    "champion_address": "jcc:s18:champion:1505",
+    "name": "卡蜜尔",
+    "role": "frontline",
+    "range": 1,
+    "cost": 1,
+    "tags": [
+      "magic_damage",
+      "physical_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:1506",
+    "champion_address": "jcc:s18:champion:1506",
+    "name": "阿卡丽",
+    "role": "melee",
+    "range": 1,
+    "cost": 1,
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:1507",
+    "champion_address": "jcc:s18:champion:1507",
+    "name": "韦鲁斯",
+    "role": "ranged_carry",
+    "range": 4,
+    "cost": 1,
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:1508",
+    "champion_address": "jcc:s18:champion:1508",
+    "name": "绯红树怪",
+    "role": "ranged_carry",
+    "range": 4,
+    "cost": 1,
+    "tags": [
+      "magic_damage",
+      "physical_damage",
+      "wound"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:1509",
+    "champion_address": "jcc:s18:champion:1509",
+    "name": "霞",
+    "role": "ranged_carry",
+    "range": 4,
+    "cost": 1,
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "physical_damage",
+      "sunder"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:1510",
+    "champion_address": "jcc:s18:champion:1510",
+    "name": "卡尔玛",
+    "role": "ap_carry",
+    "range": 4,
+    "cost": 1,
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:1511",
+    "champion_address": "jcc:s18:champion:1511",
+    "name": "苍蓝哨戒",
+    "role": "ap_carry",
+    "range": 4,
+    "cost": 1,
+    "tags": [
+      "magic_damage",
+      "mana"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:1512",
+    "champion_address": "jcc:s18:champion:1512",
+    "name": "维迦",
+    "role": "ap_carry",
+    "range": 4,
+    "cost": 1,
+    "tags": [
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2500",
+    "champion_address": "jcc:s18:champion:2500",
+    "name": "峡谷迅捷蟹",
+    "role": "frontline",
+    "range": 1,
+    "cost": 2,
+    "tags": [
+      "aoe",
+      "healing",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2501",
+    "champion_address": "jcc:s18:champion:2501",
+    "name": "阿利斯塔",
+    "role": "frontline",
+    "range": 1,
+    "cost": 2,
+    "tags": [
+      "control",
+      "healing",
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2502",
+    "champion_address": "jcc:s18:champion:2502",
+    "name": "瑟庄妮",
+    "role": "frontline",
+    "range": 1,
+    "cost": 2,
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2503",
+    "champion_address": "jcc:s18:champion:2503",
+    "name": "慎",
+    "role": "frontline",
+    "range": 1,
+    "cost": 2,
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2504",
+    "champion_address": "jcc:s18:champion:2504",
+    "name": "伊莉丝",
+    "role": "frontline",
+    "range": 1,
+    "cost": 2,
+    "tags": [
+      "attack_speed",
+      "healing",
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2505",
+    "champion_address": "jcc:s18:champion:2505",
+    "name": "约里克",
+    "role": "frontline",
+    "range": 1,
+    "cost": 1,
+    "tags": [
+      "control",
+      "healing",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2507",
+    "champion_address": "jcc:s18:champion:2507",
+    "name": "暗影狼",
+    "role": "melee",
+    "range": 1,
+    "cost": 2,
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2508",
+    "champion_address": "jcc:s18:champion:2508",
+    "name": "沃里克",
+    "role": "frontline",
+    "range": 1,
+    "cost": 2,
+    "tags": [
+      "attack_speed",
+      "healing",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2509",
+    "champion_address": "jcc:s18:champion:2509",
+    "name": "芸阿娜",
+    "role": "ranged_carry",
+    "range": 4,
+    "cost": 2,
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2510",
+    "champion_address": "jcc:s18:champion:2510",
+    "name": "凯特琳",
+    "role": "ranged_carry",
+    "range": 4,
+    "cost": 2,
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2511",
+    "champion_address": "jcc:s18:champion:2511",
+    "name": "乐芙兰",
+    "role": "ap_carry",
+    "range": 4,
+    "cost": 2,
+    "tags": [
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2512",
+    "champion_address": "jcc:s18:champion:2512",
+    "name": "凯尔",
+    "role": "ap_carry",
+    "range": 4,
+    "cost": 2,
+    "tags": [
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2513",
+    "champion_address": "jcc:s18:champion:2513",
+    "name": "魔沼蛙",
+    "role": "ranged_carry",
+    "range": 4,
+    "cost": 2,
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:2514",
+    "champion_address": "jcc:s18:champion:2514",
+    "name": "提莫",
+    "role": "ap_carry",
+    "range": 4,
+    "cost": 2,
+    "tags": [
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3500",
+    "champion_address": "jcc:s18:champion:3500",
+    "name": "赫卡里姆",
+    "role": "frontline",
+    "range": 1,
+    "cost": 3,
+    "tags": [
+      "healing",
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3501",
+    "champion_address": "jcc:s18:champion:3501",
+    "name": "蔚",
+    "role": "frontline",
+    "range": 1,
+    "cost": 3,
+    "tags": [
+      "attack_speed",
+      "control",
+      "healing",
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3502",
+    "champion_address": "jcc:s18:champion:3502",
+    "name": "费德提克",
+    "role": "frontline",
+    "range": 1,
+    "cost": 3,
+    "tags": [
+      "healing",
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3503",
+    "champion_address": "jcc:s18:champion:3503",
+    "name": "远古石甲虫",
+    "role": "frontline",
+    "range": 1,
+    "cost": 3,
+    "tags": [
+      "control",
+      "magic_damage",
+      "physical_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3504",
+    "champion_address": "jcc:s18:champion:3504",
+    "name": "雷恩加尔",
+    "role": "frontline",
+    "range": 1,
+    "cost": 3,
+    "tags": [
+      "healing",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3505",
+    "champion_address": "jcc:s18:champion:3505",
+    "name": "卡兹克",
+    "role": "frontline",
+    "range": 1,
+    "cost": 3,
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "mana"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3506",
+    "champion_address": "jcc:s18:champion:3506",
+    "name": "黛安娜",
+    "role": "frontline",
+    "range": 1,
+    "cost": 3,
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3507",
+    "champion_address": "jcc:s18:champion:3507",
+    "name": "易",
+    "role": "frontline",
+    "range": 1,
+    "cost": 3,
+    "tags": [
+      "attack_speed",
+      "healing",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3508",
+    "champion_address": "jcc:s18:champion:3508",
+    "name": "崔丝塔娜",
+    "role": "ranged_carry",
+    "range": 4,
+    "cost": 3,
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3509",
+    "champion_address": "jcc:s18:champion:3509",
+    "name": "深红锋喙鸟",
+    "role": "ranged_carry",
+    "range": 4,
+    "cost": 3,
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3510",
+    "champion_address": "jcc:s18:champion:3510",
+    "name": "阿兹尔",
+    "role": "ap_carry",
+    "range": 4,
+    "cost": 3,
+    "tags": [
+      "attack_speed",
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3511",
+    "champion_address": "jcc:s18:champion:3511",
+    "name": "卡西奥佩娅",
+    "role": "ap_carry",
+    "range": 4,
+    "cost": 3,
+    "tags": [
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3512",
+    "champion_address": "jcc:s18:champion:3512",
+    "name": "克格莫",
+    "role": "ranged_carry",
+    "range": 4,
+    "cost": 3,
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:3515",
+    "champion_address": "jcc:s18:champion:3515",
+    "name": "拉莫斯",
+    "role": "frontline",
+    "range": 1,
+    "cost": 3,
+    "tags": [
+      "control",
+      "magic_damage",
+      "physical_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4500",
+    "champion_address": "jcc:s18:champion:4500",
+    "name": "苍蓝雕纹魔像",
+    "role": "frontline",
+    "range": 1,
+    "cost": 4,
+    "tags": [
+      "control",
+      "magic_damage",
+      "mana",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4501",
+    "champion_address": "jcc:s18:champion:4501",
+    "name": "莫甘娜",
+    "role": "frontline",
+    "range": 2,
+    "cost": 4,
+    "tags": [
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4502",
+    "champion_address": "jcc:s18:champion:4502",
+    "name": "莉莉娅",
+    "role": "frontline",
+    "range": 1,
+    "cost": 4,
+    "tags": [
+      "healing",
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4503",
+    "champion_address": "jcc:s18:champion:4503",
+    "name": "阿木木",
+    "role": "frontline",
+    "range": 1,
+    "cost": 4,
+    "tags": [
+      "healing",
+      "magic_damage",
+      "true_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4504",
+    "champion_address": "jcc:s18:champion:4504",
+    "name": "墨菲特",
+    "role": "frontline",
+    "range": 1,
+    "cost": 4,
+    "tags": [
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4505",
+    "champion_address": "jcc:s18:champion:4505",
+    "name": "瑟提",
+    "role": "frontline",
+    "range": 1,
+    "cost": 4,
+    "tags": [
+      "aoe",
+      "healing",
+      "magic_damage",
+      "mana",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4506",
+    "champion_address": "jcc:s18:champion:4506",
+    "name": "绯红印记树怪",
+    "role": "frontline",
+    "range": 1,
+    "cost": 4,
+    "tags": [
+      "healing",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4507",
+    "champion_address": "jcc:s18:champion:4507",
+    "name": "奈德丽",
+    "role": "ranged_carry",
+    "range": 5,
+    "cost": 4,
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4508",
+    "champion_address": "jcc:s18:champion:4508",
+    "name": "伊泽瑞尔",
+    "role": "ranged_carry",
+    "range": 4,
+    "cost": 4,
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4509",
+    "champion_address": "jcc:s18:champion:4509",
+    "name": "厄斐琉斯",
+    "role": "ranged_carry",
+    "range": 4,
+    "cost": 4,
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4510",
+    "champion_address": "jcc:s18:champion:4510",
+    "name": "希维尔",
+    "role": "ranged_carry",
+    "range": 4,
+    "cost": 4,
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4511",
+    "champion_address": "jcc:s18:champion:4511",
+    "name": "阿狸",
+    "role": "ap_carry",
+    "range": 4,
+    "cost": 4,
+    "tags": [
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4512",
+    "champion_address": "jcc:s18:champion:4512",
+    "name": "婕拉",
+    "role": "ap_carry",
+    "range": 4,
+    "cost": 4,
+    "tags": [
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:4513",
+    "champion_address": "jcc:s18:champion:4513",
+    "name": "索拉卡",
+    "role": "ap_carry",
+    "range": 4,
+    "cost": 4,
+    "tags": [
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:5450",
+    "champion_address": "jcc:s18:champion:5450",
+    "name": "茂凯",
+    "role": "frontline",
+    "range": 1,
+    "cost": 5,
+    "tags": [
+      "healing",
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:5451",
+    "champion_address": "jcc:s18:champion:5451",
+    "name": "塔里克",
+    "role": "frontline",
+    "range": 1,
+    "cost": 5,
+    "tags": [
+      "healing",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:5452",
+    "champion_address": "jcc:s18:champion:5452",
+    "name": "纳尔",
+    "role": "frontline",
+    "range": 2,
+    "cost": 5,
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:5453",
+    "champion_address": "jcc:s18:champion:5453",
+    "name": "凯南",
+    "role": "frontline",
+    "range": 2,
+    "cost": 5,
+    "tags": [
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:5454",
+    "champion_address": "jcc:s18:champion:5454",
+    "name": "艾希",
+    "role": "ranged_carry",
+    "range": 5,
+    "cost": 5,
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:5455",
+    "champion_address": "jcc:s18:champion:5455",
+    "name": "德莱文",
+    "role": "ranged_carry",
+    "range": 5,
+    "cost": 5,
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:5456",
+    "champion_address": "jcc:s18:champion:5456",
+    "name": "拉露恩",
+    "role": "ap_carry",
+    "range": 4,
+    "cost": 5,
+    "tags": [
+      "aoe",
+      "magic_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:5457",
+    "champion_address": "jcc:s18:champion:5457",
+    "name": "艾翁",
+    "role": "ap_carry",
+    "range": 3,
+    "cost": 5,
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:5458",
+    "champion_address": "jcc:s18:champion:5458",
+    "name": "远古巨龙",
+    "role": "frontline",
+    "range": 2,
+    "cost": 5,
+    "tags": [
+      "aoe",
+      "physical_damage"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  },
+  {
+    "address": "jcc:s18:champion_role_profile:5459",
+    "champion_address": "jcc:s18:champion:5459",
+    "name": "拉克丝",
+    "role": "ap_carry",
+    "range": 5,
+    "cost": 5,
+    "tags": [
+      "magic_damage",
+      "mana"
+    ],
+    "confidence": "deterministic_semantic_heuristic"
+  }
+]

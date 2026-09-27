@@ -1,0 +1,115 @@
+{
+  "schema": "jcc-game-knowledge-common-document-v1",
+  "logical_id": "common.cruise_decision_framework",
+  "scope": "common",
+  "kind": "cruise_decision_framework",
+  "season_neutral": true,
+  "entity_references": [],
+  "entries": [
+    {
+      "id": "cruise.shared_decision_axes",
+      "purpose": "Provide one season-neutral semantic language for organizing current-Match evidence across proactive Cruise and direct strategy questions without replacing domain evaluators or Host judgement.",
+      "axes": [
+        "survival_value",
+        "immediate_power_delta",
+        "economy_trajectory",
+        "progression_value",
+        "formation_progress",
+        "payout_readiness",
+        "flexibility",
+        "transition_cost",
+        "time_to_value",
+        "risk",
+        "confidence"
+      ],
+      "policy": "Axes normalize interpretation and explanation. They are not placement probabilities, do not create a global strength score, and do not replace route-specific facts or formulas."
+    },
+    {
+      "id": "cruise.active_effect_vocabulary",
+      "states": [
+        "active",
+        "pending",
+        "applied_or_active",
+        "resolved",
+        "expired",
+        "unresolved"
+      ],
+      "sources": [
+        "confirmed augment",
+        "confirmed equipment and holder",
+        "verified active trait breakpoint",
+        "active season descriptor extension"
+      ],
+      "policy": "Effect shape comes from the Match-pinned Core, but current lifecycle comes only from a typed current-Match fact. A delayed effect without lifecycle evidence remains unresolved; semantic delivery tags never prove that a payout is still pending."
+    },
+    {
+      "id": "cruise.doctrine_integration",
+      "policy": {
+        "common_doctrine_remains_active": true,
+        "semantic_features_organize_evidence_not_experience": true,
+        "deterministic_math_owns_exact_values": true,
+        "host_resolves_non_numeric_tradeoffs": true,
+        "missing_material_facts_remain_explicit": true,
+        "newer_verified_facts_override_older_context": true
+      }
+    },
+    {
+      "id": "cruise.semantic_authority_boundary",
+      "policy": {
+        "semantic_tags_have_no_independent_strength_weight": true,
+        "ranking_strength_remains_master_plus_authority": true,
+        "typed_facts_and_legality_cannot_be_overridden": true,
+        "common_vocabulary_does_not_own_runtime_orchestration": true
+      }
+    },
+    {
+      "id": "cruise.fixed_checkpoint_agenda",
+      "purpose": "Define the season-neutral strategic cadence shared by Cruise, without hardcoding the answer or replacing Host judgement.",
+      "choice_windows": ["2-1", "3-2", "4-2"],
+      "checkpoint_stages": ["2-2", "2-7", "3-3", "3-5", "3-7", "4-3", "4-5", "5-1", "5-3", "5-7", "6-1", "6-3"],
+      "strategy_blocks": {
+        "lineup_direction_commitment": ["2-2", "2-7", "3-3", "4-3"],
+        "formation_readiness_and_execution": ["3-5", "3-7", "4-5"],
+        "cap_floor_endgame": ["5-1", "5-3", "5-7", "6-1", "6-3"]
+      },
+      "recovery_stages": [
+        {
+          "stage_round": "2-5",
+          "recovery_id": "recover_direction_exploration",
+          "strategy_block_id": "lineup_direction_commitment",
+          "recovers_checkpoint_ids": ["direction_exploration"],
+          "completion_policy": "pending_or_partial_only",
+        "host_task_policy": "recover_existing_or_add_conditional_window",
+        "conditional_windows": ["one_cost_reroll_window"],
+        "completed_source_policy": "silent_unless_a_registered_conditional_window_applies"
+        }
+      ],
+      "folded_stages": {"4-4": "4-3", "5-4": "5-3", "6-4": "6-3"},
+      "priority": ["lineup_direction", "formation_readiness", "cap_floor", "economy", "equipment", "tempo"],
+      "policy": "A fixed checkpoint creates one strategic obligation inside an ordered strategy block. Runtime chooses when to recompute and which evidence to attach; the Host Agent chooses the semantic seed, route, degree of convergence, and natural-language answer. A later checkpoint in the same block supersedes an older undelivered obligation only after its catch-up window closes, and must absorb its relevant unresolved context. Ordinary events, urgent facts, equipment facts, target changes, and delivery recovery are supporting evidence for the fixed checkpoint or explicit structured-card action, not competing Host answer owners.",
+      "recovery_policy": "2-5 recovers the 2-2 direction_exploration obligation without creating a second exploration or reranking completed directions. It also owns one registered conditional one_cost_reroll_window only when the durable target is a one-cost reroll line; otherwise a completed 2-2 remains silent.",
+      "candidate_identity_policy": "Master+ standard atomic rosters remain primary. Mature winning/popular variants are disclosed as explicit member and trait differences, not automatic backup branches. Final confirmation locks one complete candidate identity; standard, winning, popular, and user-custom variants may be compared but never silently merged."
+    },
+    {
+      "id": "cruise.lifecycle_window_policy",
+      "purpose": "Keep proactive advice tied to the current lineup archetype and its actual readiness window while guaranteeing registered fixed strategic checkpoint obligations.",
+      "lifecycle_states": [
+        "open_exploration",
+        "candidate_screening",
+        "relative_leader",
+        "direction_commitment",
+        "execution_and_formation",
+        "cap_expansion",
+        "exit_or_pivot"
+      ],
+      "archetype_window_policy": {
+        "one_cost_reroll": "Resolve the primary three-star, quality recovery, and cap/exit windows from copy progress, target level, HP, gold, board quality, contest pressure, and the current stage; after the core is complete, evaluate secondary targets, cap units, economy recovery, or exit rather than repeating early-roll advice.",
+        "two_cost_reroll": "Resolve the search and three-star boundary from target cost, target search level, copy progress, HP, gold, contest pressure, board quality, and the current stage; later evaluate remaining three-star requirements, cap additions, and economy recovery.",
+        "three_cost_reroll": "Resolve direction, search, investment, cap, and exit windows from copy progress, target level, HP, gold, board quality, contest pressure, required support units, and the current stage; a completed core moves directly to cap or recovery decisions.",
+        "four_cost_or_eight": "Resolve level-eight stabilization, quality floor, and the choice between saving for nine and rolling for survival from current board quality, HP, economy, equipment, choices, and stage readiness.",
+        "legendary_or_nine_five": "Resolve whether the board and HP can buy the cap, whether to stabilize at eight first, and the replacement order for high-cost units from current evidence rather than a fixed stage script."
+      },
+      "policy": "Registered fixed stages are mandatory strategic opportunities, not canned wording. The answer must provide a coherent direction, conditions, and executable next action; it should not enumerate every shop event. Ordinary events remain supporting evidence and cannot open or interrupt a Host lane; the fixed checkpoint consumes their newest verified facts."
+    }
+  ]
+}

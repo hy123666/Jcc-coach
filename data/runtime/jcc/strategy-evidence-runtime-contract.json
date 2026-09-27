@@ -1,0 +1,96 @@
+{
+  "schema": "jcc-strategy-evidence-runtime-contract-v1",
+  "last_reviewed": "2026-09-16",
+  "candidate_boundaries": {
+    "retrieval_pool": "Search the full compatible lightweight pool; retrieval pagination is not the Agent working set.",
+    "fit_scoring_order": "Native queries and prefetch use the same registered stage-fit evaluator over the complete eligible pool before selecting the bounded complete Agent working set. Do not rescore only the truncated page or add a second numerical ranking.",
+    "active_choice_policy": "Mechanical fit and effect consumers use every currently effective confirmed augment, deduplicated by canonical stage and identity. A bounded recent mixed-event history must not remove an active effect.",
+    "agent_working_set_max": 10,
+    "display_set": "Respect the user's requested number and the active strategic obligation's complete-candidate requirements.",
+    "atomicity": "Preserve complete roster, identity and required strategy facts for every materialized candidate. Shared evidence uses verifiable addresses rather than repeated full objects.",
+    "task_boundary": "Evidence presence cannot activate another mode's delivery contract. An explicitly absorbed strategic obligation retains its full contract even on a choice-confirmation turn."
+  },
+  "owner": "jcc-runtime",
+  "purpose": "Require every strategy answer owner to receive one immutable, policy-scoped, multi-route evidence plan and a machine-checkable coverage receipt before the Host forms an answer.",
+  "common_framework": "data/game-knowledge/jcc/common/strategy-evidence-framework.json",
+  "applies_to": [
+    "daily_chat_strategy_question",
+    "match_direct_question",
+    "explicit_no_big_data_question",
+    "structured_choice_advice",
+    "lineup_card",
+    "proactive_cruise_answer"
+  ],
+  "pipeline": [
+    "capture_request_and_match_pinned_snapshot",
+    "detect_all_material_routes",
+    "declare_critical_and_optional_evidence_obligations",
+    "declare_minimal_prefetch_only_when_native_tools_are_unavailable",
+    "produce_coverage_receipts_and_forbidden_source_receipts",
+    "expose_snapshot_bound_readonly_tools_when_provider_supports_them",
+    "let_one_host_turn_plan_synthesize_and_answer",
+    "validate_answer_owner_and_claim_boundaries"
+  ],
+  "snapshot_contract": {
+    "schema": "jcc-strategy-evidence-snapshot-v1",
+    "identity_inputs": [
+      "match_session_id",
+      "request_id",
+      "core_profile_id",
+      "ranking_overlay_id_or_unavailable_identity",
+      "evidence_policy_id",
+      "stage_round",
+      "decision_snapshot_id",
+      "decision_action_fingerprint",
+      "response_task_id",
+      "response_task_revision",
+      "response_task_mode",
+      "response_task_match_session_id",
+      "response_task_origin",
+      "response_task_event_key",
+      "choice_kind",
+      "choice_stage_round",
+      "choice_report_id",
+      "choice_set_revision",
+      "choice_revisions"
+    ],
+    "immutable_for_one_logical_host_turn": true,
+    "provider_tool_calls_must_use_same_snapshot": true,
+    "later_live_state_cannot_mutate_an_active_turn": true
+  },
+  "coverage_contract": {
+    "states": ["satisfied", "missing", "forbidden", "not_applicable", "degraded"],
+    "critical_missing_policy": "The Host may answer unaffected parts, but it must not invent the affected claim. Mark the result partial or blocked only for the obligations that cannot be answered responsibly.",
+    "forbidden_policy": "A forbidden source remains forbidden in prefetch, tools, scoring, answer selection, and recovery turns.",
+    "receipt_fields": ["facet_id", "criticality", "state", "evidence_keys", "reason", "delivery"],
+    "wire_truth": "A satisfied receipt must resolve to a key present in strategy_evidence_prefetch.evidence or to a verified snapshot-bound same-turn tool. A prefetch-only provider must downgrade absent evidence before dispatch."
+  },
+  "authority_boundary": {
+    "runtime": ["source policy", "snapshot identity", "typed retrieval", "budget", "coverage", "freshness", "tool authorization"],
+    "agent": ["question understanding", "internal planning", "cross-domain tradeoffs", "strategy choice", "natural-language explanation"],
+    "forbidden_runtime_behavior": [
+      "precompute the final natural-language answer",
+      "replace route evaluators with one global score",
+      "treat tags as a new strength authority",
+      "persist a complete Host payload or tool result corpus"
+    ]
+  },
+  "payload_budget": {
+    "current_turn_target_bytes": 1048576,
+    "current_turn_absolute_bytes": 2097152,
+    "ordinary_current_turn_target_bytes": 1048576,
+    "ordinary_current_turn_absolute_bytes": 2097152,
+    "strategic_current_turn_target_bytes": 4194304,
+    "strategic_current_turn_absolute_bytes": 8388608,
+    "native_tool_minimum_reserve_bytes": 262144,
+    "current_turn_prompt_bytes_include_instructions_and_serialized_delta": true,
+    "critical_evidence_is_relevance_compacted_before_optional_evidence_is_removed": true,
+    "complete_payload_is_memory_only": true,
+    "tool_results_share_the_same_logical_turn_budget": true
+  },
+  "migration_policy": {
+    "final_state": "All strategy answer entrypoints use this evidence plan and coverage contract.",
+    "preserve": ["answer ownership", "structured-card revisions", "choice truth", "proactive freshness", "cancellation", "no-big-data isolation"],
+    "retire_after_cutover": ["single-route evidence authority", "season-name special cases", "uncovered Host guessing"]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "jcc-runtime-agent-wiki-index-v1",
+  "purpose": "Product-facing knowledge base for runtime agents that connect to JCC runtime. This is not an OMX development wiki and not a strategy data source.",
+  "default_entry": "README.md",
+  "source_policy": {
+    "strategy_inputs": [
+      "project hard-data indexes",
+      "daily Zhangmeng/live-ranking big data",
+      "current match live_state",
+      "user-confirmed current-match variables"
+    ],
+    "wiki_role": [
+      "runtime operating instructions",
+      "source boundary reminders",
+      "validated runbooks",
+      "user preference and review memory entrypoints"
+    ],
+    "forbidden_strategy_sources": [
+      "runtime-agent wiki prose",
+      "MuMu lus.json",
+      "MuMu lineup_index",
+      "MuMu user_lineup",
+      "unverified debug logs",
+      "previous-match observations"
+    ]
+  },
+  "namespaces": {
+    "official": {
+      "path": "official/",
+      "writer": "project release/build pipeline",
+      "mutable_by_runtime_agent": false,
+      "purpose": "Versioned project instructions and runbooks for connected agents."
+    },
+    "user_memory": {
+      "path": "user-memory/",
+      "writer": "user-approved runtime memory writer",
+      "mutable_by_runtime_agent": true,
+      "purpose": "Player preferences, habits, review notes, and explicit long-term coaching memory."
+    }
+  },
+  "pages": [
+    {
+      "id": "runtime-agent-overview",
+      "path": "README.md",
+      "category": "official",
+      "tags": ["runtime", "agent", "source-boundary"]
+    },
+    {
+      "id": "mumu-desktop-runtime",
+      "path": "official/mumu-desktop-runtime.md",
+      "category": "official",
+      "tags": ["mumu", "logcat", "bridge", "live-state"]
+    },
+    {
+      "id": "quickstart",
+      "path": "official/quickstart.md",
+      "category": "official",
+      "tags": ["quickstart", "setup", "mumu", "ui"]
+    },
+    {
+      "id": "host-multimodal-visual-sensing-runbook",
+      "path": "official/host-multimodal-visual-sensing-runbook.md",
+      "category": "official",
+      "tags": ["multimodal", "visual-sensing", "user-triggered", "equipment", "augment", "economy"]
+    },
+    {
+      "id": "user-memory-template",
+      "path": "user-memory/README.md",
+      "category": "user_memory",
+      "tags": ["preference", "review", "memory"]
+    }
+  ]
+}

@@ -1,0 +1,864 @@
+{
+  "applied_operations": 126,
+  "baseline": {
+    "hard_data_generation_id": "51d7e5cfd2cd16f4f8d01e96f2e3e5643e51c0c7e47870c57a146114c7477017",
+    "mode_id": "mode18",
+    "patch_id": "s18_2",
+    "season_id": "s18"
+  },
+  "operations": [
+    {
+      "catalog": "mechanics_parameters",
+      "index": 0,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "mechanics_parameters",
+      "index": 1,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "mechanics_parameters",
+      "index": 2,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "mechanics_parameters",
+      "index": 3,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "mechanics_parameters",
+      "index": 4,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "mechanics_parameters",
+      "index": 5,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "mechanics_parameters",
+      "index": 6,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "traits",
+      "id": "344",
+      "index": 7,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "traits",
+      "id": "347",
+      "index": 8,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "traits",
+      "id": "450",
+      "index": 9,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "traits",
+      "id": "453",
+      "index": 10,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "traits",
+      "id": "455",
+      "index": 11,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "reward_tables",
+      "index": 12,
+      "kind": "patch_reward_group"
+    },
+    {
+      "catalog": "reward_tables",
+      "index": 13,
+      "kind": "patch_reward_group"
+    },
+    {
+      "catalog": "reward_tables",
+      "index": 14,
+      "kind": "patch_reward_group"
+    },
+    {
+      "catalog": "reward_tables",
+      "index": 15,
+      "kind": "patch_reward_group"
+    },
+    {
+      "catalog": "champions",
+      "id": "5457",
+      "index": 16,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "champions",
+      "id": "1507",
+      "index": 17,
+      "kind": "replace_text"
+    },
+    {
+      "catalog": "champions",
+      "id": "3507",
+      "index": 18,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "augments",
+      "id": "20733",
+      "index": 19,
+      "kind": "disable"
+    },
+    {
+      "catalog": "augments",
+      "index": 20,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "augments",
+      "index": 21,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "augments",
+      "id": "20778",
+      "index": 22,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "augments",
+      "id": "30749",
+      "index": 23,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "sprites",
+      "index": 24,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "season_metadata",
+      "index": 25,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "items",
+      "id": "6079",
+      "index": 26,
+      "kind": "add_entity",
+      "name": "视界专注"
+    },
+    {
+      "catalog": "mechanics_parameters",
+      "index": 27,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "mechanics_parameters",
+      "index": 28,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "mechanics_parameters",
+      "index": 29,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "mechanics_parameters",
+      "index": 30,
+      "kind": "replace_field"
+    },
+    {
+      "catalog": "mechanics_parameters",
+      "index": 31,
+      "kind": "merge_fields"
+    },
+    {
+      "catalog": "champions",
+      "id": "4506",
+      "index": 32,
+      "kind": "merge_fields",
+      "name": "绯红印记树怪"
+    },
+    {
+      "catalog": "champions",
+      "id": "1505",
+      "index": 33,
+      "kind": "replace_field",
+      "name": "卡蜜尔"
+    },
+    {
+      "catalog": "champions",
+      "id": "1505",
+      "index": 34,
+      "kind": "replace_field",
+      "name": "卡蜜尔"
+    },
+    {
+      "catalog": "champions",
+      "id": "1505",
+      "index": 35,
+      "kind": "replace_field",
+      "name": "卡蜜尔"
+    },
+    {
+      "catalog": "champions",
+      "id": "1505",
+      "index": 36,
+      "kind": "replace_field",
+      "name": "卡蜜尔"
+    },
+    {
+      "catalog": "champions",
+      "id": "1505",
+      "index": 37,
+      "kind": "replace_field",
+      "name": "卡蜜尔"
+    },
+    {
+      "catalog": "champions",
+      "id": "2512",
+      "index": 38,
+      "kind": "replace_field",
+      "name": "凯尔"
+    },
+    {
+      "catalog": "champions",
+      "id": "2512",
+      "index": 39,
+      "kind": "replace_field",
+      "name": "凯尔"
+    },
+    {
+      "catalog": "champions",
+      "id": "2512",
+      "index": 40,
+      "kind": "replace_field",
+      "name": "凯尔"
+    },
+    {
+      "catalog": "champions",
+      "id": "2512",
+      "index": 41,
+      "kind": "replace_field",
+      "name": "凯尔"
+    },
+    {
+      "catalog": "champions",
+      "id": "2512",
+      "index": 42,
+      "kind": "replace_field",
+      "name": "凯尔"
+    },
+    {
+      "catalog": "champions",
+      "id": "2511",
+      "index": 43,
+      "kind": "replace_field",
+      "name": "乐芙兰"
+    },
+    {
+      "catalog": "champions",
+      "id": "2511",
+      "index": 44,
+      "kind": "replace_field",
+      "name": "乐芙兰"
+    },
+    {
+      "catalog": "champions",
+      "id": "2511",
+      "index": 45,
+      "kind": "replace_field",
+      "name": "乐芙兰"
+    },
+    {
+      "catalog": "champions",
+      "id": "2511",
+      "index": 46,
+      "kind": "replace_field",
+      "name": "乐芙兰"
+    },
+    {
+      "catalog": "champions",
+      "id": "2514",
+      "index": 47,
+      "kind": "replace_field",
+      "name": "提莫"
+    },
+    {
+      "catalog": "champions",
+      "id": "2514",
+      "index": 48,
+      "kind": "replace_field",
+      "name": "提莫"
+    },
+    {
+      "catalog": "champions",
+      "id": "2514",
+      "index": 49,
+      "kind": "replace_field",
+      "name": "提莫"
+    },
+    {
+      "catalog": "champions",
+      "id": "2514",
+      "index": 50,
+      "kind": "replace_field",
+      "name": "提莫"
+    },
+    {
+      "catalog": "champions",
+      "id": "2514",
+      "index": 51,
+      "kind": "replace_field",
+      "name": "提莫"
+    },
+    {
+      "catalog": "champions",
+      "id": "2503",
+      "index": 52,
+      "kind": "replace_field",
+      "name": "慎"
+    },
+    {
+      "catalog": "champions",
+      "id": "2503",
+      "index": 53,
+      "kind": "replace_field",
+      "name": "慎"
+    },
+    {
+      "catalog": "champions",
+      "id": "2503",
+      "index": 54,
+      "kind": "replace_field",
+      "name": "慎"
+    },
+    {
+      "catalog": "champions",
+      "id": "2503",
+      "index": 55,
+      "kind": "replace_field",
+      "name": "慎"
+    },
+    {
+      "catalog": "champions",
+      "id": "2503",
+      "index": 56,
+      "kind": "replace_field",
+      "name": "慎"
+    },
+    {
+      "catalog": "champions",
+      "id": "3506",
+      "index": 57,
+      "kind": "replace_field",
+      "name": "黛安娜"
+    },
+    {
+      "catalog": "champions",
+      "id": "3506",
+      "index": 58,
+      "kind": "replace_field",
+      "name": "黛安娜"
+    },
+    {
+      "catalog": "champions",
+      "id": "3506",
+      "index": 59,
+      "kind": "replace_field",
+      "name": "黛安娜"
+    },
+    {
+      "catalog": "champions",
+      "id": "3506",
+      "index": 60,
+      "kind": "replace_field",
+      "name": "黛安娜"
+    },
+    {
+      "catalog": "champions",
+      "id": "3506",
+      "index": 61,
+      "kind": "replace_field",
+      "name": "黛安娜"
+    },
+    {
+      "catalog": "champions",
+      "id": "3506",
+      "index": 62,
+      "kind": "replace_field",
+      "name": "黛安娜"
+    },
+    {
+      "catalog": "champions",
+      "id": "3507",
+      "index": 63,
+      "kind": "replace_field",
+      "name": "易"
+    },
+    {
+      "catalog": "champions",
+      "id": "3507",
+      "index": 64,
+      "kind": "replace_field",
+      "name": "易"
+    },
+    {
+      "catalog": "champions",
+      "id": "3507",
+      "index": 65,
+      "kind": "replace_field",
+      "name": "易"
+    },
+    {
+      "catalog": "champions",
+      "id": "4511",
+      "index": 66,
+      "kind": "replace_field",
+      "name": "阿狸"
+    },
+    {
+      "catalog": "champions",
+      "id": "4511",
+      "index": 67,
+      "kind": "replace_field",
+      "name": "阿狸"
+    },
+    {
+      "catalog": "champions",
+      "id": "4511",
+      "index": 68,
+      "kind": "replace_field",
+      "name": "阿狸"
+    },
+    {
+      "catalog": "champions",
+      "id": "4511",
+      "index": 69,
+      "kind": "replace_field",
+      "name": "阿狸"
+    },
+    {
+      "catalog": "champions",
+      "id": "4511",
+      "index": 70,
+      "kind": "replace_field",
+      "name": "阿狸"
+    },
+    {
+      "catalog": "champions",
+      "id": "4506",
+      "index": 71,
+      "kind": "replace_field",
+      "name": "绯红印记树怪"
+    },
+    {
+      "catalog": "champions",
+      "id": "4506",
+      "index": 72,
+      "kind": "replace_field",
+      "name": "绯红印记树怪"
+    },
+    {
+      "catalog": "champions",
+      "id": "4506",
+      "index": 73,
+      "kind": "replace_field",
+      "name": "绯红印记树怪"
+    },
+    {
+      "catalog": "champions",
+      "id": "4506",
+      "index": 74,
+      "kind": "replace_field",
+      "name": "绯红印记树怪"
+    },
+    {
+      "catalog": "champions",
+      "id": "4506",
+      "index": 75,
+      "kind": "replace_field",
+      "name": "绯红印记树怪"
+    },
+    {
+      "catalog": "champions",
+      "id": "4506",
+      "index": 76,
+      "kind": "replace_field",
+      "name": "绯红印记树怪"
+    },
+    {
+      "catalog": "champions",
+      "id": "4500",
+      "index": 77,
+      "kind": "replace_field",
+      "name": "苍蓝雕纹魔像"
+    },
+    {
+      "catalog": "champions",
+      "id": "4500",
+      "index": 78,
+      "kind": "replace_field",
+      "name": "苍蓝雕纹魔像"
+    },
+    {
+      "catalog": "champions",
+      "id": "4500",
+      "index": 79,
+      "kind": "replace_field",
+      "name": "苍蓝雕纹魔像"
+    },
+    {
+      "catalog": "champions",
+      "id": "4500",
+      "index": 80,
+      "kind": "replace_field",
+      "name": "苍蓝雕纹魔像"
+    },
+    {
+      "catalog": "champions",
+      "id": "4500",
+      "index": 81,
+      "kind": "replace_field",
+      "name": "苍蓝雕纹魔像"
+    },
+    {
+      "catalog": "champions",
+      "id": "4512",
+      "index": 82,
+      "kind": "replace_field",
+      "name": "婕拉"
+    },
+    {
+      "catalog": "champions",
+      "id": "4512",
+      "index": 83,
+      "kind": "replace_field",
+      "name": "婕拉"
+    },
+    {
+      "catalog": "champions",
+      "id": "4512",
+      "index": 84,
+      "kind": "replace_field",
+      "name": "婕拉"
+    },
+    {
+      "catalog": "champions",
+      "id": "4512",
+      "index": 85,
+      "kind": "replace_field",
+      "name": "婕拉"
+    },
+    {
+      "catalog": "champions",
+      "id": "4512",
+      "index": 86,
+      "kind": "replace_field",
+      "name": "婕拉"
+    },
+    {
+      "catalog": "champions",
+      "id": "5459",
+      "index": 87,
+      "kind": "replace_field",
+      "name": "拉克丝"
+    },
+    {
+      "catalog": "champions",
+      "id": "5459",
+      "index": 88,
+      "kind": "replace_field",
+      "name": "拉克丝"
+    },
+    {
+      "catalog": "champions",
+      "id": "5459",
+      "index": 89,
+      "kind": "replace_field",
+      "name": "拉克丝"
+    },
+    {
+      "catalog": "champions",
+      "id": "5459",
+      "index": 90,
+      "kind": "replace_field",
+      "name": "拉克丝"
+    },
+    {
+      "catalog": "champions",
+      "id": "5459",
+      "index": 91,
+      "kind": "replace_field",
+      "name": "拉克丝"
+    },
+    {
+      "catalog": "champions",
+      "id": "5454",
+      "index": 92,
+      "kind": "replace_field",
+      "name": "艾希"
+    },
+    {
+      "catalog": "champions",
+      "id": "5454",
+      "index": 93,
+      "kind": "replace_field",
+      "name": "艾希"
+    },
+    {
+      "catalog": "champions",
+      "id": "5454",
+      "index": 94,
+      "kind": "replace_field",
+      "name": "艾希"
+    },
+    {
+      "catalog": "champions",
+      "id": "5454",
+      "index": 95,
+      "kind": "replace_field",
+      "name": "艾希"
+    },
+    {
+      "catalog": "champions",
+      "id": "5454",
+      "index": 96,
+      "kind": "replace_field",
+      "name": "艾希"
+    },
+    {
+      "catalog": "champions",
+      "id": "5450",
+      "index": 97,
+      "kind": "replace_field",
+      "name": "茂凯"
+    },
+    {
+      "catalog": "traits",
+      "id": "459",
+      "index": 98,
+      "kind": "replace_field",
+      "name": "日蚀骑士"
+    },
+    {
+      "catalog": "traits",
+      "id": "459",
+      "index": 99,
+      "kind": "replace_field",
+      "name": "日蚀骑士"
+    },
+    {
+      "catalog": "traits",
+      "id": "451",
+      "index": 100,
+      "kind": "merge_fields",
+      "name": "黑荆棘"
+    },
+    {
+      "catalog": "traits",
+      "id": "465",
+      "index": 101,
+      "kind": "merge_fields",
+      "name": "赏金猎人"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181182",
+      "index": 102,
+      "kind": "disable",
+      "name": "小人国"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181182",
+      "index": 103,
+      "kind": "disable",
+      "name": "小人国",
+      "variant_id": "181182"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181182",
+      "index": 104,
+      "kind": "disable",
+      "name": "小人国",
+      "variant_id": "181183"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181032",
+      "index": 105,
+      "kind": "merge_fields",
+      "name": "高阶变形术"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181032",
+      "index": 106,
+      "kind": "merge_fields",
+      "name": "高阶变形术",
+      "variant_id": "181032"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181032",
+      "index": 107,
+      "kind": "replace_field",
+      "name": "高阶变形术",
+      "variant_id": "181032"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181032",
+      "index": 108,
+      "kind": "replace_field",
+      "name": "高阶变形术",
+      "variant_id": "181032"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181032",
+      "index": 109,
+      "kind": "merge_fields",
+      "name": "高阶变形术",
+      "variant_id": "181033"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181032",
+      "index": 110,
+      "kind": "replace_field",
+      "name": "高阶变形术",
+      "variant_id": "181033"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181032",
+      "index": 111,
+      "kind": "replace_field",
+      "name": "高阶变形术",
+      "variant_id": "181033"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181036",
+      "index": 112,
+      "kind": "merge_fields",
+      "name": "低阶变形术"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181036",
+      "index": 113,
+      "kind": "merge_fields",
+      "name": "低阶变形术",
+      "variant_id": "181036"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181036",
+      "index": 114,
+      "kind": "replace_field",
+      "name": "低阶变形术",
+      "variant_id": "181036"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181036",
+      "index": 115,
+      "kind": "replace_field",
+      "name": "低阶变形术",
+      "variant_id": "181036"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181036",
+      "index": 116,
+      "kind": "merge_fields",
+      "name": "低阶变形术",
+      "variant_id": "181037"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181036",
+      "index": 117,
+      "kind": "replace_field",
+      "name": "低阶变形术",
+      "variant_id": "181037"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181036",
+      "index": 118,
+      "kind": "replace_field",
+      "name": "低阶变形术",
+      "variant_id": "181037"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181042",
+      "index": 119,
+      "kind": "merge_fields",
+      "name": "变形术"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181042",
+      "index": 120,
+      "kind": "merge_fields",
+      "name": "变形术",
+      "variant_id": "181042"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181042",
+      "index": 121,
+      "kind": "replace_field",
+      "name": "变形术",
+      "variant_id": "181042"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181042",
+      "index": 122,
+      "kind": "replace_field",
+      "name": "变形术",
+      "variant_id": "181042"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181042",
+      "index": 123,
+      "kind": "merge_fields",
+      "name": "变形术",
+      "variant_id": "181043"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181042",
+      "index": 124,
+      "kind": "replace_field",
+      "name": "变形术",
+      "variant_id": "181043"
+    },
+    {
+      "catalog": "sprites",
+      "id": "181042",
+      "index": 125,
+      "kind": "replace_field",
+      "name": "变形术",
+      "variant_id": "181043"
+    }
+  ],
+  "release_version": "18.2a",
+  "schema": "jcc-core-balance-patch-audit-v1"
+}

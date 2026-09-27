@@ -1,0 +1,30 @@
+{
+  "schema": "jcc-strategy-evidence-kernel-migration-matrix-v1",
+  "last_reviewed": "2026-08-24",
+  "owner": "jcc-runtime",
+  "final_target": "All strategy answer entrypoints use one evidence kernel while existing domain owners remain authoritative.",
+  "surfaces": [
+    { "surface": "direct_daily_or_match_question", "status": "kernel_required", "preserve": ["direct answer owner", "provider conversation continuity"] },
+    { "surface": "cruise_no_big_data", "status": "kernel_required", "preserve": ["typed UI activation", "active_core_profile_only isolation"] },
+    { "surface": "structured_choice_advice", "status": "kernel_required", "preserve": ["current-match user report authority", "card revision", "exactly-once owner"] },
+    { "surface": "lineup_card", "status": "kernel_required", "preserve": ["pinned result schema", "atomic roster"] },
+    { "surface": "proactive_cruise", "status": "kernel_required", "preserve": ["registered event admission", "cooldown", "freshness", "one event follow-up"] }
+  ],
+  "existing_components": [
+    { "component": "resolveRuntimeContextPolicy", "classification": "source_policy_and_route_hint", "action": "retain_below_kernel" },
+    { "component": "semanticRouteKindForHostRequest", "classification": "legacy_route_annotation", "action": "retain_only_as_a_non_authoritative_compatibility_annotation_beside_all_material_common_routes" },
+    { "component": "DecisionMathService", "classification": "deterministic_evidence_owner", "action": "reuse" },
+    { "component": "semantic feature layer", "classification": "typed_relation_and_explanation_evidence", "action": "reuse_without_independent_score" },
+    { "component": "Ranking typed retrieval", "classification": "master_plus_observation_owner", "action": "reuse_when_policy_allows" },
+    { "component": "Cruise scorer and orchestrator", "classification": "route_specific_supporting_evidence", "action": "reuse_without_answer_ownership" },
+    { "component": "structured choice reports", "classification": "current_choice_fact_authority", "action": "reuse" }
+  ],
+  "absence_guards": [
+    "no GraphRAG or vector database dependency",
+    "no second Runtime transcript",
+    "no complete catalog in every turn",
+    "no model call dedicated only to planning",
+    "no provider-global filesystem knowledge lookup",
+    "no single-route truncation of a multi-domain question"
+  ]
+}

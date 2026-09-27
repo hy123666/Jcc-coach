@@ -1,0 +1,24 @@
+{
+  "schema": "jcc-game-knowledge-common-document-v1",
+  "logical_id": "common.retrieval_policy",
+  "scope": "common",
+  "kind": "retrieval_policy",
+  "season_neutral": true,
+  "entity_references": [],
+  "entries": [
+    {
+      "id": "retrieval.layer_order",
+      "order": ["current_match_facts", "active_patch_indexes", "active_season_extensions", "common_knowledge"],
+      "policy": "Retrieve the smallest typed evidence set that can decide the current action."
+    },
+    {
+      "id": "retrieval.budget",
+      "policy": "Return identifiers, compact summaries, and bounded evidence references before hydrating exact detail.",
+      "forbidden": ["raw ranking snapshots", "complete entity catalogs", "unbounded diagnostics"]
+    },
+    {
+      "id": "retrieval.version_fence",
+      "policy": "All season and patch retrieval must match the selected profile fingerprint; mismatches fail closed."
+    }
+  ]
+}

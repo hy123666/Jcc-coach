@@ -1,0 +1,12 @@
+{
+  "schema": "jcc-xp-policy-modifier-catalog-compat-v1",
+  "status": "compat_pointer",
+  "canonical_catalog": "data/runtime/jcc/resource-policy-modifier-catalog.json",
+  "source_catalog": "data/runtime/jcc/resource-policy-modifier-catalog.json",
+  "deprecated_direct_xp_rows": true,
+  "policy": {
+    "xp_policy_is_a_view_of_resource_policy": true,
+    "runtime_strategy_tables_read_resource_catalog_first": true
+  },
+  "note": "XP is part of the broader resource/economy policy layer. Keep concrete modifier rows in resource-policy-modifier-catalog.json and filter rows whose resource_domains include xp."
+}

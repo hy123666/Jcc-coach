@@ -1,0 +1,37 @@
+{
+  "schema": "jcc-live-ranking-generation-v1",
+  "generation_id": "20260926-182e365774f065a7e8bac4e0",
+  "stat_date": "20260926",
+  "content_sha256": "182e365774f065a7e8bac4e0c652551e6de25af3c50c1d4bb92ad003d6da1282",
+  "core_profile_id": "a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151",
+  "season_id": "s18",
+  "patch_id": "s18_2",
+  "catalog_fingerprint": "bd6921b1397a47e07e0728cf7c87df8eca84c2299e4952676cc4b897fbd56a92",
+  "hard_data_manifest_fingerprint": "86a9fcbf0d0f5bf6766c6e68718aa68e5f5c2c2a0662bf84cd49853a1b2bc549",
+  "artifacts": [
+    {
+      "path": "audit.json",
+      "sha256": "e72b626883a82f01d0ca434cae524f93fba2604dc825ad9b4d872880f3470034"
+    },
+    {
+      "path": "latest-diff.json",
+      "sha256": "0b02213b00e3507265013fde48e55aad4deed50a67300c82616b3db3d3fdfb6a"
+    },
+    {
+      "path": "lineup-strategy-index.json",
+      "sha256": "139edd040196836be620da0ce09d208567dd736a058ed686726b9ebfeca24760"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "906ab6d424798580dc210f2ddd3ce8e4e0d94a3c54aa5527db63b89ee76b912f"
+    },
+    {
+      "path": "rank-signal.json",
+      "sha256": "e85699cf5df8c5db0c831723a24c3eec34be9fe6ba9dfe43b5110d535c0f979f"
+    },
+    {
+      "path": "snapshot.json",
+      "sha256": "0ef97454a9f0a2f8e60fdd941dd58e4d5d380c8f97a93379a28bb9e6821cc984"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "core_profile_id": "a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151",
+  "generation_id": "38a4d0d8ac941d45ae0f5ab71ff58ce9ee8b137aaca1ddf868eadebb64588b4f",
+  "generation_path": "recipe-generations/38a4d0d8ac941d45ae0f5ab71ff58ce9ee8b137aaca1ddf868eadebb64588b4f/recipes.json",
+  "patch_id": "s18_2",
+  "schema": "jcc-live-ranking-recipe-candidate-v1",
+  "season_id": "s18",
+  "source_roles": [
+    "popular_recipe",
+    "winning_recipe"
+  ],
+  "status": "available"
+}

@@ -1,0 +1,335 @@
+{
+  "schema": "jcc-host-context-lifecycle-contract-v2",
+  "purpose": "Machine authority for host CLI provider session lifetime, turn boundaries, selected-context injection, and runtime-owned truth boundaries.",
+  "owner": "jcc-runtime",
+  "last_reviewed": "2026-09-18",
+  "empty_completion_policy": "A successfully completed Codex coach turn with no assistant text, non-user item activity, tool call or provider error may continue once in the same live session and response task. Recheck task revision/accepting status and route ownership, use the remaining answer budget, preserve schema and tools, and send only a continuation of the existing request. No bootstrap replay, model switch or retry loop. Commentary-only, partial, cancelled, failed and rate-limited turns are excluded; finality and soft-format rules remain unchanged. Lobby and Match use the shared runner.",
+  "final_delivery_policy": "Codex completed agent messages with phase=final_answer are eligible for delivery, including recovery of an already completed final message when the turn subsequently fails. Commentary and unfinished deltas are not final answers. Legacy messages without phase are eligible only when their owning turn completed successfully. Never apply natural-language strategy heuristics or issue a correction turn to determine finality.",
+  "native_capability_receipt_policy": {
+    "fresh_codex_registration": "A successful thread/start RPC carrying both JCC dynamic tools acknowledges registration. Current Codex Thread responses do not echo dynamicTools; absence of that response field is not rejection. An explicitly returned incomplete declaration is rejected.",
+    "resume": "A resumed session must explicitly prove its tools or be replaced by a newly registered session and fully bootstrapped. Never infer capability from global support or an old persisted mode.",
+    "receipt": "Record route, session, accepted tool identities, verification basis, fallback reason, timestamp, and actually observed successful tool calls separately. Registration acceptance is not a fabricated tool-call observation.",
+    "entity_evidence": "Explicit current Core entities receive bounded facts in native and prefetch modes independently of natural-language keyword routing. Keywords are optional prefetch/math hints, never tool access authority."
+  },
+  "task_projection_boundary": {
+    "registry": "ui/electron/host-task-contract-registry.js",
+    "projector": "ui/electron/host-request-projection.js",
+    "policy": "Every rebuild selects current task inputs through the registry. Previous materialized Host evidence is not inherited. A rebuilt request and any recovery carry a content-derived projection identity.",
+    "native_session_role": "Own transcript continuity and native compaction; Runtime retains business identities and current facts, not a replacement transcript.",
+    "evidence_materialization": "One complete selected candidate with addressable local aliases; preserve the existing trusted-session ledger reuse and snapshot-bound typed retrieval.",
+    "trace": "Metadata-only request and attempt identity, actual prompt bytes and characters, dispatch, acceptance, first text, attempt end, semantic validation and renderer ACK. Unknown provider timestamps and token usage are never estimated as observations."
+  },
+  "runtime_authority": {
+    "canonical_state_store": ".jcc-runtime-data/app.sqlite",
+    "canonical_state_owner": "jcc_runtime_daemon",
+    "daemon_startup_timeout_policy": "Electron waits up to 300000ms as a final abnormal-start guard while a replacement Runtime Daemon loads modules, acquires the writer lease, restores canonical SQLite state, and reconciles Active Ranking before publishing ready. Readiness ends the wait immediately; deterministic process exit, lease conflict, or startup contract failure still fails immediately.",
+    "writer_lease_identity_policy": "The canonical SQLite writer lease binds one same-host daemon process instance by PID and observed process start time. A live process that only reused an old PID is not the lease owner and the stale lease may be recovered. A live matching process instance, remote owner, malformed or ownerless lease, or owner identity that cannot be verified must fail closed.",
+    "watcher_cleanup_identity_policy": "A persisted watcher PID is not termination authority. Cleanup must verify the recorded process-instance identity against the current process before terminating its tree. PID reuse or an unverifiable identity must never authorize killing a different process.",
+    "provider_memory_role": "cache_only",
+    "provider_memory_must_not_be_truth_for": [
+      "daily_session",
+      "match_session",
+      "live_state",
+      "match_variables",
+      "user_memory",
+      "hard_data",
+      "daily_rankings",
+      "strategy_wiki"
+    ],
+    "legacy_json_role": "compatibility_mirror_or_debug_export_only",
+    "legacy_json_hydration_policy": "Normal startup must never hydrate or seed SQLite from a legacy JSON mirror, including when SQLite is empty. Initialize from current compiled defaults and contracts; any future one-shot migration must be explicit, validated, and unable to restore live match, provider, or response-task ownership.",
+    "user_preferences_policy": "Hydrated SQLite user_preferences are authoritative from the first lobby bootstrap and persist across provider switches, New Conversation, and Start Match. A compatibility JSON mirror must never override them.",
+    "renderer_projection_policy": "Renderer reads receive a bounded UI projection. Internal semantic-event logs and completed advice history remain daemon diagnostics and must not be copied into every getState or catalog response.",
+    "read_only_action_policy": "getState, decision-input option reads, and manual-variable option reads hydrate from SQLite without rewriting canonical state or appending ordinary action/hydration audit events. A detected canonical repair is the only allowed write on that path.",
+    "mode_switch_policy": "Mode selection is a bounded control-plane mutation. It never builds a context pack, starts visual sensing, or cancels an owned Host turn; those actions resolve context lazily when they actually execute."
+  },
+  "host_session_lifetimes": {
+    "lobby": {
+      "semantic_owner": "app_opening",
+      "provider_process_policy": "one_persistent_lobby_provider_process_until_exit_or_explicit_New_Conversation",
+      "provider_session_policy": "one_provider_native_lobby_conversation_until_exit_or_explicit_New_Conversation",
+      "starts_when": "the Electron app opens and runtime enters or resumes the lobby/daily surface",
+      "continues_across": [
+        "daily chat turns",
+        "postgame review turns",
+        "user preference turns",
+        "strategy wiki turns",
+        "Start Match transitions"
+      ],
+      "ends_when": "Exit closes the app/runtime, or explicit New Conversation closes only the current lobby provider conversation, clears its bounded daily-route ranking query cursor, and starts the next lobby generation",
+      "daily_ranking_query_cursor_policy": "The daily route may persist one bounded lightweight ranking-query cursor per canonical typed-query identity and promoted Master+ data fingerprint so next-three or next-five excludes shown ids idempotently. The cursor stores ids, scores, match reasons, shown ids, and bounded request receipts only; it never stores complete strategy packages. Explicit New Conversation clears every cursor owned by the retired lobby generation without clearing preferences, Wiki, review records, or promoted rankings.",
+      "must_not_write": [
+        "current-match live_state",
+        "current-match match variables",
+        "current-match watcher events"
+      ]
+    },
+    "match": {
+      "semantic_owner": "start_match",
+      "provider_process_policy": "one_persistent_match_provider_process_per_Start_Match",
+      "provider_session_policy": "one_persistent_match_provider_session_per_Start_Match",
+      "starts_when": "Start Match creates a new match_session_id",
+      "turn_policy": "repeated user, runtime-event, choice, manual-variable, and cruise turns within the same live game reuse the same provider process/session",
+      "ranking_requery_policy": "After Start Match, each material change to stage, target or typed intent, canonical choices, HP/economy, trusted board/bench, shop opportunity, or effective equipment re-evaluates the complete lightweight Master+ candidate pool under the existing registered stage weights. A previous display page, Meta Map family list, or hydrated winner package must never become the next search pool.",
+      "ends_when": "Stop Match or clean app Exit closes the active match provider process/session; Stop Match returns to the existing lobby process/session, while Exit invalidates the persisted match route and the next launch requires a new Start Match",
+      "clears_on_start": [
+        "live_state",
+        "advice_task",
+        "manual match variables",
+        "match context",
+        "user-confirmed equipment",
+        "user-confirmed scouting notes",
+        "current watcher events",
+        "response task payload and resolved decision snapshot",
+        "runtime event, trigger, detector, advice, and retry history",
+        "renderer-local structured-card drafts and delivered-response identity cache",
+        "queued or in-flight match-owned OCR work that has not reached the resident worker",
+        "match-scoped context-pack, request, response, and lifecycle latest mirrors"
+      ],
+      "clears_on_stop_or_clean_exit": [
+        "live_state and match context",
+        "manual match variables and current-match equipment confirmations",
+        "response task payload and resolved decision snapshot",
+        "runtime event, trigger, detector, advice, and retry history",
+        "visual request and HUD refresh state",
+        "match-scoped context-pack, request, response, and lifecycle latest mirrors",
+        "pending, retry, running, or requested queue work owned by the closed match"
+      ],
+      "sqlite_session_policy": "Exactly one match_session row may remain active. Start Match marks the previous active row superseded before activating the new row; Stop Match and clean Exit mark the owned row stopped. Closed session metadata is bounded and never enters active-match context.",
+      "queue_scope_policy": "Every match-owned queue row carries explicit match scope. Closing or superseding that match makes all of its nonterminal queue rows terminal; unscoped legacy nonterminal work has a bounded expiry and can never survive indefinitely.",
+    "boundary_shutdown_policy": "Start Match commits the new canonical match identity, then must confirm the prior match provider transport and watcher process tree have stopped before publishing the new watcher workspace or starting replacement children. Stop Match reports clean success only after both owned process trees confirm exit. A failed confirmation leaves the new boundary degraded and retryable; it never starts a second competing owner.",
+    "boundary_identity_policy": "The prior active Match used for compare-and-set ownership is separate from historical previous-Match metadata. Starting from idle uses no active predecessor even when a historical Match is retained. A rejected early boundary commit must not be treated as a successful initialization.",
+      "transient_cache_policy": "Match-owned renderer drafts, response delivery keys, watcher buffers, mutation tails, pipeline results, background HUD work, RapidOCR queue entries, provider homes, and match/mode context packs are scoped by match_session_id and retired at Start Match supersession or Stop Match. Late old-match completions are fenced from canonical persistence and renderer delivery.",
+      "durable_retention_policy": "Before Start Match supersession or Stop Match clears transient match state, Runtime builds one bounded structured postgame summary from the latest canonical facts and compact decision lifecycle. Daemon stores it in the closed SQLite match-session payload and exposes at most the latest 20 summaries to review readers. Match retirement must preserve SQLite user preferences, approved strategy memory, strategy Wiki, the persistent lobby provider conversation, daily chat ownership, ranking and hard-data packages, and device connection. A developer-invoked retired-version reset may remove all prior match summaries and transient Wiki curation inputs only when an explicit season id resolves to a valid registered archive manifest and is neither the active nor candidate season. A successful reset writes a receipt bound to that season and archive identity; retired-version local-artifact pruning requires the matching receipt before dry-run or deletion. The cleanup still preserves published Wiki, preferences, daily ownership, provider-native history, and data packages. It must not retain raw screenshots, full live-state dumps, full Host request bodies, or unbounded match diagnostics as review memory.",
+      "sqlite_diagnostic_retention_policy": "Daemon startup, Start Match, Stop Match, and clean shutdown enforce the same bounded SQLite budget. Keep at most 2000 recent runtime events and 8 MiB of event payloads, 300 structured logs, and 500 terminal queue rows in total after per-queue limits; stale nonterminal queue work expires after six hours. These rows are diagnostics, not conversation memory or gameplay knowledge.",
+      "wiki_work_retention_policy": "Published, draft, stale, and archived wiki_pages are durable user knowledge. A curation request carries one canonical run_id from request creation through validated Host response application. Unfinished curation runs expire after 24 hours; retain at most 50 terminal curation runs and 100 unreferenced source events. Source events referenced by a wiki page or an active curation run are protected from pruning.",
+      "must_not_end": [
+        "lobby provider process/session",
+        "device_connection",
+        "daily_session",
+        "durable user preferences and strategy memory",
+        "strategy Wiki",
+        "bounded recent postgame summaries"
+      ]
+    },
+    "response_task": {
+      "semantic_owner": "one_model_answer",
+      "provider_process_policy": "turn_inside_existing_lobby_or_match_provider_process",
+      "provider_session_policy": "turn_inside_existing_lobby_or_match_provider_session",
+      "stop_answer_policy": "input-box Stop interrupts only the current response_task",
+      "answer_timeout_start_policy": "Queue wait, session preparation, and turn admission use their own bounded start budget. The answer timeout begins only when the native provider turn/prompt is dispatched and Runtime records provider_awaiting_since.",
+      "stop_answer_acceptance_policy": "report cancellation as accepted only after the provider exposes and accepts a targetable turn/prompt cancellation; if the current turn is not yet targetable or cancellation is still settling, preserve the native process/session and report cancelling or cancellation failure instead of closing transport",
+      "cancelling_task_policy": "When provider cancellation is accepted but not yet acknowledged, keep the canonical response_task in cancelling with its original response_task_id and a retained adapter handle. Late model output loses delivery ownership. A later exact Stop must still target the same task; clear ownership only after provider settlement, handle release, or that later exact Stop confirms no provider turn remains.",
+      "stop_answer_must_not": [
+        "close the lobby provider process/session",
+        "close the match provider process/session",
+        "change the active UI mode",
+        "clear live_state",
+        "stop the watcher",
+        "disconnect MuMu or ADB",
+        "end the match"
+      ]
+    }
+  },
+  "native_provider_context_policy": {
+    "conversation_owner": "provider_native_thread_or_session",
+    "codex_transport": "one live app-server thread with repeated turn/start calls",
+    "kimi_transport": "one live ACP session with repeated session/prompt calls",
+    "history_owner": "provider_native_conversation",
+    "context_compaction_owner": "provider_native_conversation",
+    "jcc_must_not": [
+      "create a parallel transcript/session mechanism",
+      "replay prior user or coach turns on every request",
+      "replace provider-native context compaction with a JCC chat summary",
+      "use resume or load for ordinary turns"
+    ],
+    "jcc_may_supply": [
+      "one versioned static product/game context capsule at native session bootstrap",
+      "one in-session static capsule update when its fingerprint changes",
+      "current SQLite-owned dynamic decision facts for each turn"
+    ],
+    "provider_switch_policy": "Changing provider, executable command, launch arguments, version, provider home, read-only tool contract version, or another transport-owning setting ends the old provider-native conversations and bootstraps new lobby and active-match conversations owned by the selected transport identity. Changing only model or reasoning effort on the same selected CLI updates subsequent turns inside the existing native conversation and must not close, resume, or replace it. Warmups and late completions from the prior transport identity are stale and must not block, close, or overwrite the selected provider route.",
+    "readonly_strategy_tool_policy": "When a provider supports registered custom tools, bind jcc.query_knowledge and jcc.calculate to the immutable evidence snapshot of the active logical turn and expose their schemas at provider-session bootstrap. Dispatch validates call, provider thread, provider turn, Match, Core, response/card revision, and action identity before work and before returning. A tool call may refine evidence inside that same turn but cannot widen source policy, mutate canonical state, start another answer owner, or survive cancellation or a later turn. Providers without custom tools use keyed prefetch-complete evidence, reconcile coverage against evidence actually present on the wire, and must not receive a fake filesystem lookup contract."
+  },
+  "reasoning_effort_policy": {
+    "selection_owner": "user_selected_host_cli_setting",
+    "session_policy": "Use the user-selected model and reasoning effort for subsequent turns in the owning lobby or match provider session. A manual model or effort change must update that live native conversation in place and preserve its thread/session history.",
+    "per_turn_dynamic_routing_enabled": false,
+    "reason": "A 2026-07-27 real Codex gpt-5.6-sol persistent-session benchmark found no material latency benefit for automatic low-versus-high routing on comparable short turns, so automatic per-task routing stays disabled. Manual user changes are mutable turn configuration, not provider transport identity.",
+    "benchmark": {
+      "provider": "codex",
+      "model": "gpt-5.6-sol",
+      "low_turn_elapsed_ms": [8869, 7866],
+      "high_turn_elapsed_ms": [9179, 7700],
+      "both_verified_same_session_and_process_per_run": true
+    },
+    "provider_capability_policy": "Codex applies model and effort on turn/start. Kimi applies model and thinking through ACP session/set_config_option when the live session advertises those config options. An adapter that cannot change a requested setting in place must report the unsupported configuration instead of silently replacing an active match conversation.",
+    "future_enablement_gate": "Only enable automatic per-task effort routing after a repeated benchmark demonstrates a material end-to-end latency or quality benefit. Never restart a lobby or match provider session merely to change model or turn effort."
+  },
+  "resume_policy": {
+    "app_restart_policy": "Every new Electron app launch or Runtime Daemon process retires the previous Match and all its queued work, restores Active knowledge, increments the lobby generation, and bootstraps a fresh lobby provider session regardless of clean_shutdown. Renderer reload in the same app and daemon reuses live ownership. Only a provider transport failure within the same live app and daemon may resume its existing route. Old completion callbacks cannot cross the committed app boundary.",
+    "replacement_bootstrap_policy": "If an adapter replaces a resumed native conversation, including replacement caused by incomplete tool registration, the replacement is a fresh session and must receive the full current static capsule before becoming ready. A recovery probe or unchanged old fingerprint cannot establish initialization of a different native session.",
+    "cancellation_settlement_policy": "An in-flight native interruption owns one shared settlement promise. Local cancellation notification must not release its handle or admit the next turn before native interruption is accepted, the turn completes, or the owning transport is definitively closed. Repeated Stop requests retain access to the same unsettled owner.",
+    "shutdown_preemption_policy": "Clean Exit signals cancellation and fences late bootstrap creation before waiting for serialized state cleanup. Shutdown must not wait behind the bootstrap it is intended to stop before issuing that signal.",
+    "allowed_only_after": [
+      "provider process crash",
+      "provider transport recovery within the same live app and daemon",
+      "adapter restart while the owning app-opening or match session remains active"
+    ],
+    "must_resume": [
+      "the exact saved provider session id when the adapter exposes one",
+      "the exact route key bound to lobby or match ownership",
+      "the sanitized provider home for that route"
+    ],
+    "must_not_use_resume_for": [
+      "normal repeated turns inside a still-live provider process/session",
+      "static context fingerprint updates inside a still-live provider process/session",
+      "crossing from lobby to match",
+      "crossing from one match_session_id to another",
+      "reopening the app or replacing the Runtime Daemon process",
+      "restoring gameplay truth from provider memory"
+    ],
+    "recovery_source_of_truth": "reload canonical runtime state from SQLite and rebuild selected context before sending the recovered turn",
+    "missing_provider_session_fallback": "after an interrupted runtime attempts native resume/load exactly once and the provider reports that the saved session/thread is missing, bootstrap one fresh provider-native conversation for the same still-active runtime owner and include the current turn; do not replay prior chat history or loop resume attempts",
+    "clean_shutdown_policy": "clean Exit invalidates the active match route and cannot be treated as crash recovery on the next app launch"
+  },
+  "context_injection_policy": {
+    "static_context_scope": "provider_session_fingerprint",
+    "static_context_injected_once_per_fingerprint": true,
+    "static_context_update_policy": "when the fingerprint changes while the owning provider process/session is alive, replace the static capsule once inside that same live session",
+    "static_context_update_must_not": [
+      "start a sibling provider process/session",
+      "call provider resume or load",
+      "discard the current lobby or match conversation",
+      "overwrite SQLite-owned dynamic facts"
+    ],
+    "static_context_fingerprint_inputs": [
+      "provider",
+      "user_preferences_fingerprint",
+      "host_session_route",
+      "common_instruction_contract_version",
+      "readonly_tool_contract_version",
+      "active_season_id",
+      "active_patch_id",
+      "hard_data_manifest",
+      "season_catalog_fingerprint",
+      "active_rules_source_fingerprint",
+      "daily_ranking_snapshot_hash",
+      "published_strategy_wiki_fingerprint",
+      "economy_doctrine_fingerprint"
+    ],
+    "static_context_layers": [
+      "common host instructions",
+      "common/base game doctrine",
+      "active major-season rules and mechanics",
+      "active minor-patch hard-data manifest and optional patch strategy priors",
+      "current-season catalog",
+      "current-patch curated equipment browse and role taxonomy",
+      "daily ranking summary",
+      "published strategy wiki",
+      "economy doctrine"
+    ],
+    "dynamic_context_per_turn": [
+      "request_id",
+      "request_hash",
+      "response_task identity and cancellation state",
+      "host_session_kind",
+      "active_mode",
+      "match_session_id",
+      "current_turn_contract",
+      "phase and economy facts",
+      "board/shop/bench summaries when available",
+      "item_bench and equipped item facts by field-level source priority",
+      "current match variables",
+      "user-confirmed choices",
+      "latest user message and provisional intent",
+      "validated typed ranking-query intent, query identity, Master+ data fingerprint, and bounded cursor page when lineup retrieval owns the turn",
+      "runtime_event_context when an admitted semantic event owns the turn",
+      "strategy evidence snapshot, multi-route plan, facet coverage receipt, and bounded prefetched evidence",
+      "missing critical facts"
+    ],
+    "dynamic_context_must_not_depend_on": [
+      "provider-global memory",
+      "previous host transcript as gameplay truth",
+      "unregistered Markdown requirements",
+      "legacy JSON mirrors as canonical state"
+    ]
+  },
+  "request_architecture": {
+    "layers": {
+      "request_metadata": "Runtime-only task, route, mode, match, cancellation, timestamp, and fingerprint identity. Persist metadata references, never a full static or daily-data payload.",
+      "static_capsule": "Game doctrine, evidence priority, active season mechanics, version knowledge map, current-day ranking meta map, and published strategy knowledge. Inject once per live provider-session fingerprint.",
+      "turn_delta": "The current resolved decision snapshot, user/card intent, missing facts, and a bounded typed evidence packet selected for this decision."
+    },
+    "production_pending_request_policy": "Select advice_response_requested events in process. Do not serialize a complete request event to a child process or copy it through stdout before starting the Host turn.",
+    "persistence_policy": "Canonical response_task and daemon queues persist a metadata-only host request reference. The complete turn payload exists only while the owning provider turn is active.",
+    "deep_persistence_sanitization_policy": "Before any canonical transition, recursively replace every nested host_request payload with a bounded identity reference. Top-level compaction is insufficient because visual status, lifecycle, retry, or detached-result objects may otherwise retain a complete request transitively.",
+    "ranking_query_state_policy": "Daily-route continuation may persist only a strict-budget lightweight cursor keyed by canonical typed-query identity plus promoted Master+ fingerprint. Match turns recompute ranking against the complete typed index whenever material decision state changes. Neither route persists a full hydrated lineup strategy package as query state.",
+    "size_budgets": {
+      "static_capsule_target_tokens": "up_to_50000",
+      "static_capsule_max_tokens": 50000,
+      "static_capsule_max_bytes": 262144,
+      "per_turn_protocol_target_tokens": "300-800",
+      "ordinary_decision_evidence_target_tokens": "2000-4000",
+      "complex_decision_evidence_target_tokens": 6000,
+      "complete_primary_strategy_package_policy": "A selected primary lineup may exceed the complex evidence token target only when preserving its complete atomic winning-lineup group, source-declared final variants, transition chains, role equipment, positioning, and season extension. It must still remain inside turn_delta_max_bytes and must never be persisted as a complete request payload.",
+      "turn_delta_target_bytes": 1048576,
+      "turn_delta_max_bytes": 2097152,
+      "strategic_turn_delta_target_bytes": 4194304,
+      "strategic_turn_delta_max_bytes": 8388608,
+      "quick_record_turn_target_bytes": 131072,
+      "quick_record_turn_max_bytes": 131072,
+      "manual_match_variables_turn_target_bytes": 16384,
+    "native_tool_minimum_reserve_bytes": 262144,
+      "turn_delta_over_target_policy": "Ordinary turns use a 1MiB soft target and 2MiB absolute in-memory ceiling. Fixed strategic turns use a 4MiB soft target and 8MiB absolute ceiling. The context-only manual-match-variables surface uses a 16KiB persistent-turn optimization target while remaining under the ordinary absolute ceiling. Build relevance-first packets and reduce diagnostics, duplicate prose, and optional evidence before reducing candidate count; strategic turns must never replace a complete atomic roster with only core-unit hints or restore every sibling variant from one ranking row. No complete turn payload may be persisted.",
+      "dynamic_fact_projection_policy": "The current live-state projection owns normalized HUD facts for the turn, so match facts do not repeat the same stage or economy snapshot. Raw ADB transport, ROI coordinates, screenshot references, parser counters, watcher output, and source commands remain bounded Runtime diagnostics; Host turns receive only normalized facts and compact source-health status.",
+    "readonly_tool_budget_policy": "The complete serialized current-turn prompt, tool arguments, and results share the owning turn's budget instead of creating a second payload budget: 1MiB target / 2MiB ceiling for ordinary turns and 4MiB target / 8MiB ceiling for fixed strategic turns. The static capsule retains its separate 256KB bounded budget. Native-tool turns reserve at least 256KiB and may reserve more from the evidence plan and requested candidate count within the owning turn ceiling. Normal turns target at most two calls; complex multi-domain turns may use at most six total calls, with no more than three calls per tool and at most 16KB of arguments per call. query_knowledge may request a bounded expand_ranking_candidates operation when the current real Master+ working set is insufficient; the Agent decides whether semantic coverage is sufficient, while Runtime controls the bounded expansion size and source policy. Three expansion cycles are advisory only because providers do not expose a portable cycle counter. Optional evidence compacts first; critical evidence that still cannot fit produces a bounded partial result rather than invention.",
+      "successful_diagnostic_max_bytes": 65536,
+      "failed_diagnostic_max_bytes": 262144,
+      "absolute_ceiling_policy": "Environment variables and user settings may reduce the ordinary 2MiB or strategic 8MiB ceiling but cannot increase them."
+    },
+    "static_capsule_content_limits": {
+      "approved_personal_strategy_rules": 12,
+      "scoped_published_wiki_summaries": 8,
+      "current_day_master_plus_lineup_families": 12,
+      "supported_rank_tiers": [
+        "master_plus"
+      ],
+      "exact_detail_policy": "Complete current-day lineup, champion, item, augment, trait, transition, and recipe records remain in typed local indexes and enter only the turn that queries them. A static season meta map containing names never satisfies an exact-detail request. Ordinary Match questions and explicit no-big-data questions share the same current-Core typed retrieval; rankings are an optional separate evidence layer, not a prerequisite for champion-to-trait, skill, rule, item, augment, or transition evidence."
+    },
+    "diagnostic_policy": "Fault diagnostics are disabled by default. When explicitly enabled, write bounded compact references and error summaries asynchronously after canonical answer completion, retain at most seven days, and never delay or determine delivery. Permanent runtime telemetry intake, proxy evidence bundles, and installed acceptance artifacts are retired and are not product readiness requirements.",
+    "match_fact_capture_query_policy": "Quick Record performs deterministic query-scoped entity and alias recall from the active catalog before the Host turn. The Host receives only that bounded shortlist plus current facts; Runtime validates proposed operations against the complete fingerprinted catalog and serializes its sparse commit with structured-card fact mutations. Operation inference is allowed only when the Host omitted the operation field; an explicitly unsupported operation always fails closed.",
+    "hard_data_query_policy": "The explicit Cruise no-big-data action uses its own Renderer-to-Runtime action. The Renderer supplies only user text; Runtime validates the active match, Cruise mode, and registered capability before stamping active_core_profile_only request metadata. Generic sendMessage rejects caller-supplied hard-data capability fields. Retrieval bypasses ranking/Wiki/strategy-package readers and rank-derived Cruise obligations, runs Core Profile-scoped deterministic item, augment, lineup, transition, or exact-entity evaluators, and sends only current facts, calculation results, assumptions, defaults, missing inputs, and source audit. A multi-domain request composes all requested evaluator results instead of selecting one domain. When the user delegates open lineup construction, deterministic core selection replaces the missing-target prompt and remains explicitly non-ranking theorycraft. The persistent provider may remember prior rankings, so Host instructions forbid substituting memory-derived candidates; this is decision-source isolation, not a false claim of provider-memory erasure.",
+    "provider_timeout_policy": "Provider admission and answer generation have separate deadlines. Codex answer time starts only after turn/start returns a native turn id; Kimi answer time starts only immediately before session/prompt dispatch after prompt preparation. Renderer polling and local queue time cannot consume the answer budget.",
+    "renderer_polling_policy": "Read-only Renderer actions may project canonical-slice repairs into the returned view but never persist state, mirrors, tasks, events, clear, age out, or replace a response owner. Durable repair belongs to daemon startup or a real mutating action; Start Match separately clears prior-match event history, decision snapshots, and response ownership.",
+    "decision_snapshot_policy": "Semantic admission, Host context, freshness, and delivery evaluate the same resolved SQLite-owned decision snapshot identity and registered decision-family fingerprints. Ordinary persistence revision changes are not task replacement."
+  },
+  "version_layering": {
+    "common_host_instructions": "provider-neutral, season-neutral, patch-neutral",
+    "common_game_doctrine": "reusable base game rules and economy doctrine",
+    "major_season_mechanics": "data/game-knowledge/jcc/seasons/<season_id>",
+    "minor_patch_updates": "active_patch_id, hard-data manifest, live rankings, and optional patch strategy overrides",
+    "ordinary_minor_patches_must_not": [
+      "rewrite common host instructions",
+      "create patch-shaped major-season rule directories",
+      "copy major-season mechanics into common/base contracts"
+    ],
+    "example_current_major_season": "s18"
+  },
+  "command_semantics": {
+    "start_match": "first creates the new canonical match_session_id; only after that succeeds does it close and audit the previous match provider route, commit the new match boundary, start match-scoped sensing, and wait for the new persistent match provider process/session to accept its initial static bootstrap before returning readiness; the lobby process/session remains available. Match creation and readiness are separate result fields: a retryable watcher or Host bootstrap failure keeps the new canonical match boundary active but must be reported as degraded, never as ready.",
+    "new_conversation": "closes only the current lobby provider-native conversation, increments the lobby generation, and bootstraps a fresh lobby conversation while preserving durable preferences, Wiki, review records, MuMu, and active match state",
+    "switch_host_cli": "when provider transport identity changes, cancels the current answer, closes the old provider-owned lobby and active-match transports, invalidates prior-transport warmups, and bootstraps replacement native conversations without changing durable preferences or canonical match facts; when only model or reasoning changes on the same CLI transport, preserves both native conversations and applies the configuration to subsequent turns",
+    "stop_answer": "interrupts only the current response_task inside the owning provider session and preserves the active mode; an unacknowledged or not-yet-targetable cancellation must not close that provider transport or discard its cancellation handle, so a later retry can interrupt the same turn once the provider exposes a target id",
+    "stop_match": "immediately blocks the active match route from starting a late provider bootstrap, preempts any bootstrap transport already in progress before waiting on the serialized state transition, closes the active match provider process/session, performs a bounded wait for the watcher process tree to exit, closes the SQLite match session, retires its nonterminal queue work, clears every match-scoped runtime/KV snapshot, and returns to the existing lobby provider process/session; a watcher termination failure is explicit degraded completion rather than a false clean stop",
+    "exit": "closes lobby, match, provider, watcher, OCR, daemon-owned child processes, and app runtime resources; clean shutdown is recorded only after the watcher process tree and other owned resources confirm termination, and the previous match route is never resumed on the next launch"
+  },
+  "verification": {
+    "primary_verifier": "tools/verify-jcc-host-session-lifecycle-contract.mjs",
+    "optional_real_provider_verifier": "tools/verify-jcc-host-session-live-smoke.mjs",
+    "requirements_authority_verifier": "tools/verify-jcc-requirements-authority.mjs",
+    "provider_timeout_boundary_verifier": "tools/verify-jcc-host-provider-timeout-boundary.mjs",
+    "authority_domain": "host_context_session_lifecycle",
+    "notes": "Normal dispatch, same-transport model/effort changes, and in-session static-context updates prove one process/session with zero resume/load calls; crash recovery proves exactly one provider restore before current SQLite-owned context is reapplied. Tests prove missing Codex and Kimi sessions each fall back to one fresh bootstrap with the current turn, Start Match establishes the new canonical boundary before closing the old route and waits for initial native bootstrap readiness, clean Exit cannot resume a stale match, and slow Stop Answer cancellation preserves the owning native process/session."
+  }
+}

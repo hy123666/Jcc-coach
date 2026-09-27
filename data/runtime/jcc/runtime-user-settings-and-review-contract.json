@@ -1,0 +1,130 @@
+{
+  "schema": "jcc-runtime-user-settings-and-review-contract-v1",
+  "purpose": "Product contract for non-match UI settings, daily chat memory, and postgame review memory used by the runtime coach.",
+  "settings": {
+    "rank_tier": {
+      "ui_placement": "menu_settings",
+      "required": false,
+      "product_default": "master",
+      "source": "user_confirmed_menu_setting",
+      "allowed_values": ["emerald", "diamond", "master"],
+      "strategy_effect": "Adjust risk tolerance, explanation granularity, and operational assumptions. The live-ranking segment is always master_plus for every user preference; lower user ranks should still receive more robust top-four guidance unless the user says otherwise.",
+      "live_ranking_scope": {
+        "master": "master_plus",
+        "emerald": "master_plus",
+        "diamond": "master_plus"
+      },
+      "legacy_value_migration": {
+        "challenger": "master"
+      },
+      "fallback_policy": "Historical challenger preferences normalize to master. If master_plus evidence is unavailable, expose that absence explicitly and do not silently mix in platinum_to_diamond or all-tier evidence."
+    },
+    "operation_speed": {
+      "ui_placement": "menu_settings",
+      "required": false,
+      "source": "user_confirmed_menu_setting",
+      "allowed_values": [
+        "slow_needs_one_round_notice",
+        "normal_can_pivot_next_round",
+        "fast_can_pivot_same_round"
+      ],
+      "strategy_effect": "Controls whether the coach recommends same-round large pivots, one-round-ahead preparation, or only small changes during action phases."
+    },
+    "default_goal": {
+      "ui_placement": "daily_chat_or_menu_settings",
+      "required": false,
+      "source": "user_confirmed_menu_setting",
+      "allowed_values": [
+        "safe_top_four",
+        "balanced",
+        "win_first"
+      ],
+      "strategy_effect": "Long-term preference that biases cruise advice, but current match live_state and user messages can override it."
+    },
+    "diagnostic_evidence_enabled": {
+      "ui_placement": "menu_settings_diagnostics",
+      "required": false,
+      "product_default": false,
+      "source": "user_confirmed_runtime_setting",
+      "strategy_effect": "none",
+      "behavior": "When enabled, retain bounded OCR and Host diagnostic evidence for troubleshooting. Diagnostic persistence must run after canonical work, never delay answer delivery, and expire after seven days."
+    }
+  },
+  "daily_chat_mode": {
+    "mode_id": "daily_chat",
+    "visible_when": ["no_active_match", "match_stopped"],
+    "purpose": "General chat, preference capture, and review discussion outside an active match.",
+    "allowed_memory_writes": [
+      "user_preferences",
+      "risk_tolerance",
+      "comfort_lines",
+      "disliked_lines",
+      "communication_style",
+      "postgame_review_notes"
+    ],
+    "memory_write_policy": "The agent may suggest memory updates, but durable user_memory writes require user approval.",
+    "reads": [
+      "recent_match_decision_summaries",
+      "user_memory_profile",
+      "hard_data",
+      "daily_big_data"
+    ],
+    "must_not_read": [
+      "raw_screenshots",
+      "full_raw_logcat",
+      "previous_match_live_state_full_dump"
+    ]
+  },
+  "postgame_review_mode": {
+    "mode_id": "postgame_review",
+    "visible_when": ["match_stopped", "no_active_match"],
+    "purpose": "Review recent match decisions, identify recurring mistakes, and update user-approved learning notes.",
+    "retention": {
+      "max_recent_matches": 20,
+      "store_structured_decision_summary_only": true,
+      "store_raw_screenshots": false,
+      "store_full_raw_logs": false,
+      "rotation_policy": "drop_oldest_when_over_limit"
+    },
+    "match_summary_fields": [
+      "match_session_id",
+      "started_at",
+      "ended_at",
+      "result_rank",
+      "target_plan_history",
+      "augment_choices",
+      "item_choice_decisions",
+      "item_slams",
+      "economy_milestones",
+      "level_or_roll_decisions",
+      "shop_hold_sell_decisions",
+      "manual_scouting_notes",
+      "positioning_decisions",
+      "pivot_decisions",
+      "advice_tasks",
+      "user_confirmations",
+      "missed_information",
+      "review_tags"
+    ],
+    "review_outputs": [
+      "one_match_summary",
+      "mistake_attribution",
+      "next_match_focus",
+      "memory_update_suggestion"
+    ]
+  },
+  "runtime_policy": {
+    "active_match_restriction": "daily_chat and postgame_review may be opened only when no active match is running or after Stop Match. During active match, user chat is routed into cruise mode or the active task mode.",
+    "strategy_priority": [
+      "current user message",
+      "current match live_state",
+      "user-confirmed current-match variables",
+      "menu settings",
+      "user-approved long-term memory",
+      "hard-data",
+      "daily big-data",
+      "recent match summaries"
+    ],
+    "pollution_guard": "Recent match summaries and user memory can bias strategy, but previous-match concrete board/shop/economy facts must not be copied into a new match live_state."
+  }
+}

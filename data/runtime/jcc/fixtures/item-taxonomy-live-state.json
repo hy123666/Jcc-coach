@@ -1,0 +1,35 @@
+{
+  "schema": "jcc-item-taxonomy-live-state-fixture-v1",
+  "live_state": {
+    "items": {
+      "item_bench": [],
+      "equipped_items": [],
+      "components": [],
+      "completed": [],
+      "radiant_items": [],
+      "artifact_items": [],
+      "support_items": [],
+      "emblems": [],
+      "anvils": [],
+      "reforgers": [],
+      "removers": [],
+      "duplicators": [],
+      "loot_orbs": []
+    },
+    "field_status": {
+      "items.item_bench": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "capture_item_bench" },
+      "items.equipped_items": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "capture_equipped_items" },
+      "items.components": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "classify_components" },
+      "items.completed": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "classify_completed" },
+      "items.radiant_items": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "classify_radiant_items" },
+      "items.artifact_items": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "classify_artifact_items" },
+      "items.support_items": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "classify_support_items" },
+      "items.emblems": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "classify_emblems" },
+      "items.anvils": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "classify_anvils" },
+      "items.reforgers": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "classify_reforgers" },
+      "items.removers": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "classify_removers" },
+      "items.duplicators": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "classify_duplicators" },
+      "items.loot_orbs": { "status": "not_observed", "blocker": "fixture_has_no_live_capture", "next_experiment": "classify_loot_orbs" }
+    }
+  }
+}

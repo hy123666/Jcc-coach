@@ -1,0 +1,578 @@
+{
+  "layout_id": "jcc-mumu-16x9-normalized-v1",
+  "coordinate_space": "normalized_0_to_1",
+  "supported_aspect_ratio": "16:9",
+  "layout_mismatch_policy": "emit_layout_mismatch_status",
+  "selected_augment_side_rail_policy": {
+    "self_owner_scope": "left_rail",
+    "opponent_board_scope": "removed_from_product_runtime",
+    "view_switch_policy": "Do not infer opponent selected augments, opponent board, or opponent item bench from S=2/current-view screens. Product runtime keeps only self left-rail selected augment slots when explicitly refreshed."
+  },
+  "on_demand_choice_classifier_policy": {
+    "trigger": "user_asks_what_should_i_choose_or_4358_s4_seen",
+    "classification_order": [
+      "item_choice_panel",
+      "augment_choice",
+      "unknown_choice_panel"
+    ],
+    "coarse_scan_policy": "capture_full_frame_then_classify_by_text_card_count_and_icon_density; run OCR/icon matching only on the detected panel ROI",
+    "s4_policy": "4358 s=4 is a trigger for immediate visual classification, not proof that the panel is a normal augment choice"
+  },
+  "dynamic_equipped_item_policy": {
+    "primary_source_order": [
+      "4356_or_4357_gi_equip_rect_if_non_empty",
+      "4353_current_view_unit_position_to_hp_bar_bottom_centered_row",
+      "manual_user_confirmation"
+    ],
+    "roi_model": {
+      "model_id": "unit_detected_hp_bar_bottom_row_v3",
+      "meaning": "For each 4353 current_view unit, detect the nearby green HP bar, then scan exactly three centered item slots directly below that HP bar. No fixed board-screen offset fallback may promote unit-attached equipment.",
+      "slot_semantics": "slot0/slot1/slot2 are the visible equipped-item row under the unit HP bar, not a broad neighborhood search.",
+      "promotion_policy": "Only this HP-bar-bottom row is allowed to promote unit-attached equipment candidates. Unit-local grid or board sliding-window scans are debug/calibration-only and must not update live_state."
+    },
+    "promotion_policy": "unit-attached equipment must be scoped to a current_view unit, gated to stable planning/actionable phase, and derived from the HP-bar-bottom row model"
+  },
+  "regions": {
+    "phase": {
+      "top_bar": {
+        "x": 0.3,
+        "y": 0,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "augment_trigger_text": {
+        "x": 0.3,
+        "y": 0,
+        "w": 0.4,
+        "h": 0.3
+      },
+      "shop_band": {
+        "x": 0.08,
+        "y": 0.71,
+        "w": 0.84,
+        "h": 0.22
+      },
+      "augment_choice_panel": {
+        "x": 0.145,
+        "y": 0.16,
+        "w": 0.695,
+        "h": 0.575
+      },
+      "item_choice_panel": {
+        "x": 0.1,
+        "y": 0.54,
+        "w": 0.8,
+        "h": 0.34
+      },
+      "shop_area_item_forge_panel": {
+        "x": 0.08,
+        "y": 0.6,
+        "w": 0.84,
+        "h": 0.32
+      }
+    },
+    "economy": {
+      "gold": {
+        "x": 0.5,
+        "y": 0.765,
+        "w": 0.06,
+        "h": 0.065
+      },
+      "level": {
+        "x": 0.172,
+        "y": 0.765,
+        "w": 0.05,
+        "h": 0.065
+      },
+      "xp_progress": {
+        "x": 0.22,
+        "y": 0.765,
+        "w": 0.052,
+        "h": 0.065
+      },
+      "hp_local_scoreboard_detected_row_policy": {
+        "meaning": "Local HP is the number immediately left of the local player's enlarged/highlighted avatar ring on the right scoreboard.",
+        "promotion_policy": "Do not OCR fixed scoreboard HP boxes. First split the right scoreboard into fixed rows, detect the local avatar outer ring by circular boundary strength, then crop that row's HP number dynamically. If the local avatar row is unavailable, leave HP unknown instead of reading arbitrary scoreboard or damage numbers."
+      }
+    },
+    "shop_slots": [
+      {
+        "slot": 0,
+        "x": 0.115,
+        "y": 0.735,
+        "w": 0.145,
+        "h": 0.18
+      },
+      {
+        "slot": 1,
+        "x": 0.27,
+        "y": 0.735,
+        "w": 0.145,
+        "h": 0.18
+      },
+      {
+        "slot": 2,
+        "x": 0.425,
+        "y": 0.735,
+        "w": 0.145,
+        "h": 0.18
+      },
+      {
+        "slot": 3,
+        "x": 0.58,
+        "y": 0.735,
+        "w": 0.145,
+        "h": 0.18
+      },
+      {
+        "slot": 4,
+        "x": 0.735,
+        "y": 0.735,
+        "w": 0.145,
+        "h": 0.18
+      }
+    ],
+    "bench_slots": [
+      {
+        "slot": 0,
+        "x": 0.145,
+        "y": 0.615,
+        "w": 0.07,
+        "h": 0.085
+      },
+      {
+        "slot": 1,
+        "x": 0.22,
+        "y": 0.615,
+        "w": 0.07,
+        "h": 0.085
+      },
+      {
+        "slot": 2,
+        "x": 0.295,
+        "y": 0.615,
+        "w": 0.07,
+        "h": 0.085
+      },
+      {
+        "slot": 3,
+        "x": 0.37,
+        "y": 0.615,
+        "w": 0.07,
+        "h": 0.085
+      },
+      {
+        "slot": 4,
+        "x": 0.445,
+        "y": 0.615,
+        "w": 0.07,
+        "h": 0.085
+      },
+      {
+        "slot": 5,
+        "x": 0.52,
+        "y": 0.615,
+        "w": 0.07,
+        "h": 0.085
+      },
+      {
+        "slot": 6,
+        "x": 0.595,
+        "y": 0.615,
+        "w": 0.07,
+        "h": 0.085
+      },
+      {
+        "slot": 7,
+        "x": 0.67,
+        "y": 0.615,
+        "w": 0.07,
+        "h": 0.085
+      },
+      {
+        "slot": 8,
+        "x": 0.745,
+        "y": 0.615,
+        "w": 0.07,
+        "h": 0.085
+      }
+    ],
+    "board_region": {
+      "x": 0.18,
+      "y": 0.24,
+      "w": 0.64,
+      "h": 0.38
+    },
+    "augment_choice_text_slots": [
+      {
+        "slot": 0,
+        "card": {
+          "x": 0.1837,
+          "y": 0.1967,
+          "w": 0.16,
+          "h": 0.4659
+        },
+        "name": {
+          "x": 0.1881,
+          "y": 0.4066,
+          "w": 0.1525,
+          "h": 0.044
+        },
+        "desc": {
+          "x": 0.1888,
+          "y": 0.4538,
+          "w": 0.1506,
+          "h": 0.1824
+        }
+      },
+      {
+        "slot": 1,
+        "card": {
+          "x": 0.415,
+          "y": 0.1956,
+          "w": 0.165,
+          "h": 0.4615
+        },
+        "name": {
+          "x": 0.4194,
+          "y": 0.4033,
+          "w": 0.1556,
+          "h": 0.0484
+        },
+        "desc": {
+          "x": 0.4213,
+          "y": 0.4527,
+          "w": 0.1537,
+          "h": 0.1879
+        }
+      },
+      {
+        "slot": 2,
+        "card": {
+          "x": 0.6512,
+          "y": 0.2077,
+          "w": 0.1656,
+          "h": 0.4571
+        },
+        "name": {
+          "x": 0.6556,
+          "y": 0.4055,
+          "w": 0.1575,
+          "h": 0.044
+        },
+        "desc": {
+          "x": 0.6562,
+          "y": 0.4527,
+          "w": 0.1562,
+          "h": 0.1978
+        }
+      }
+    ],
+    "owned_augment_text_panel": {
+      "x": 0.8819,
+      "y": 0.1656,
+      "w": 0.1031,
+      "h": 0.3956,
+      "meaning": "Manual augment-mode owned-augment detail text panel. Rows contain the current Match's selected augments only."
+    },
+    "owned_augment_text_panel_slots": [
+      {
+        "slot": 0,
+        "kind": "augment",
+        "choice_stage_round": "2-1",
+        "text": {
+          "x": 0.8819,
+          "y": 0.1656,
+          "w": 0.1031,
+          "h": 0.09
+        }
+      },
+      {
+        "slot": 1,
+        "kind": "augment",
+        "choice_stage_round": "3-2",
+        "text": {
+          "x": 0.8819,
+          "y": 0.2578,
+          "w": 0.1031,
+          "h": 0.1044
+        }
+      },
+      {
+        "slot": 2,
+        "kind": "augment",
+        "choice_stage_round": "4-2",
+        "text": {
+          "x": 0.8819,
+          "y": 0.3633,
+          "w": 0.1031,
+          "h": 0.1033
+        }
+      }
+    ],
+    "basic_component_forge_name_row": {
+      "x": 0.2656,
+      "y": 0.8396,
+      "w": 0.4744,
+      "h": 0.0495,
+      "meaning": "Basic component forge visible option names only. Four visible options, manually triggered by item_choice mode with item_choice_kind=basic_component_forge."
+    },
+    "completed_item_forge_name_row": {
+      "x": 0.1531,
+      "y": 0.8385,
+      "w": 0.7056,
+      "h": 0.0418,
+      "meaning": "Completed-item forge visible option names only. This ROI is manually triggered by item_choice mode and is not a cruise auto-sensing region."
+    },
+    "artifact_forge_name_row": {
+      "x": 0.2656,
+      "y": 0.8385,
+      "w": 0.4775,
+      "h": 0.0396,
+      "meaning": "Artifact forge visible option names only. Four visible options, manually triggered by item_choice mode with item_choice_kind=artifact_forge."
+    },
+    "selected_augment_slots": {
+      "self": [
+        {
+          "slot": 0,
+          "owner_scope": "self",
+          "x": 0.02,
+          "y": 0.36,
+          "w": 0.04,
+          "h": 0.07
+        },
+        {
+          "slot": 1,
+          "owner_scope": "self",
+          "x": 0.02,
+          "y": 0.435,
+          "w": 0.04,
+          "h": 0.07
+        },
+        {
+          "slot": 2,
+          "owner_scope": "self",
+          "x": 0.02,
+          "y": 0.51,
+          "w": 0.04,
+          "h": 0.07
+        }
+      ]
+    },
+    "item_bench_panel_left": {
+      "x": 0.006,
+      "y": 0.088,
+      "w": 0.084,
+      "h": 0.676,
+      "columns": 2,
+      "rows": 10,
+      "slot_order": "column_major_top_to_bottom_left_then_right",
+      "meaning": "Left inventory rail can grow into two columns; scan all candidate cells and promote only confident icon matches."
+    },
+    "item_bench_slots": [
+      {
+        "slot": 0,
+        "owner_scope": "self",
+        "column": 0,
+        "row": 0,
+        "x": 0.01,
+        "y": 0.096,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 1,
+        "owner_scope": "self",
+        "column": 0,
+        "row": 1,
+        "x": 0.01,
+        "y": 0.162,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 2,
+        "owner_scope": "self",
+        "column": 0,
+        "row": 2,
+        "x": 0.01,
+        "y": 0.228,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 3,
+        "owner_scope": "self",
+        "column": 0,
+        "row": 3,
+        "x": 0.01,
+        "y": 0.294,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 4,
+        "owner_scope": "self",
+        "column": 0,
+        "row": 4,
+        "x": 0.01,
+        "y": 0.36,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 5,
+        "owner_scope": "self",
+        "column": 0,
+        "row": 5,
+        "x": 0.01,
+        "y": 0.426,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 6,
+        "owner_scope": "self",
+        "column": 0,
+        "row": 6,
+        "x": 0.01,
+        "y": 0.492,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 7,
+        "owner_scope": "self",
+        "column": 0,
+        "row": 7,
+        "x": 0.01,
+        "y": 0.558,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 8,
+        "owner_scope": "self",
+        "column": 0,
+        "row": 8,
+        "x": 0.01,
+        "y": 0.624,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 9,
+        "owner_scope": "self",
+        "column": 0,
+        "row": 9,
+        "x": 0.01,
+        "y": 0.69,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 10,
+        "owner_scope": "self",
+        "column": 1,
+        "row": 0,
+        "x": 0.052,
+        "y": 0.096,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 11,
+        "owner_scope": "self",
+        "column": 1,
+        "row": 1,
+        "x": 0.052,
+        "y": 0.162,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 12,
+        "owner_scope": "self",
+        "column": 1,
+        "row": 2,
+        "x": 0.052,
+        "y": 0.228,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 13,
+        "owner_scope": "self",
+        "column": 1,
+        "row": 3,
+        "x": 0.052,
+        "y": 0.294,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 14,
+        "owner_scope": "self",
+        "column": 1,
+        "row": 4,
+        "x": 0.052,
+        "y": 0.36,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 15,
+        "owner_scope": "self",
+        "column": 1,
+        "row": 5,
+        "x": 0.052,
+        "y": 0.426,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 16,
+        "owner_scope": "self",
+        "column": 1,
+        "row": 6,
+        "x": 0.052,
+        "y": 0.492,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 17,
+        "owner_scope": "self",
+        "column": 1,
+        "row": 7,
+        "x": 0.052,
+        "y": 0.558,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 18,
+        "owner_scope": "self",
+        "column": 1,
+        "row": 8,
+        "x": 0.052,
+        "y": 0.624,
+        "w": 0.034,
+        "h": 0.056
+      },
+      {
+        "slot": 19,
+        "owner_scope": "self",
+        "column": 1,
+        "row": 9,
+        "x": 0.052,
+        "y": 0.69,
+        "w": 0.034,
+        "h": 0.056
+      }
+    ]
+  },
+  "product_decisions": {
+    "no_opponent_view_roi": "Opponent board/power/positioning ROI paths are intentionally removed from product runtime."
+  }
+}

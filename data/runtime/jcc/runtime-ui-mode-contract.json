@@ -1,0 +1,1160 @@
+{
+  "schema": "jcc-runtime-ui-mode-contract-v1",
+  "purpose": "Explicit user/UI intent modes for match-scoped runtime advice. Modes avoid guessing the visible panel type when the user already knows what they are asking.",
+  "match_scoped": true,
+  "renderer_mode_policy": {
+    "authority": "This contract supplies presentation metadata; the backend active season id and normalized active-season option groups supply runtime capability evidence.",
+    "unavailable_mode_behavior": "hide_and_fail_closed",
+    "missing_choice_prompt_policy": "Render a missing-choice prompt only when its owning backend mode is available for the active season capability set.",
+    "major_season_migration_policy": "A new major season changes season-scoped mode descriptors and normalized option groups. Common renderer code must not add season-name conditionals.",
+    "control_lane_policy": "setMode updates mode ownership and returns after bounded canonical persistence. It must not build Host context, run visual sensing, or cancel an existing response owner. Context is built by the later action that needs it.",
+    "last_click_wins_policy": "Concurrent renderer mode clicks preserve the latest requested mode. Late success or failure from an older request cannot overwrite or roll back the newer local selection."
+  },
+  "renderer_prompt_preset_policy": {
+    "ordinary_prompt_presets": "prefill_editable_composer_and_require_explicit_send",
+    "scope": "Every ordinary text prompt preset in every match mode, including descriptor primary presets and fallback mode prompts.",
+    "operational_action_exception": "Only an explicitly declared operational control may execute immediately. Its descriptor must identify the operation and it must not masquerade as a text prompt preset.",
+    "structured_card_exception": "Structured-card save, advice, confirmation, and OCR draft controls keep their registered action semantics and are not composer prompt presets."
+  },
+  "structured_card_lifecycle_policy": {
+    "draft_scope": "current_match_session",
+    "draft_persistence": "Unconfirmed candidate, tier, stage, target-note, and selection drafts survive temporary mode changes and structured-card unmounts inside the same match. They reset only at a canonical Start Match or Stop Match boundary.",
+    "submitted_report_hydration": "A remounted card restores the current canonical reported candidate set, target note, and tier when no newer dirty renderer draft exists.",
+    "answer_owner_mode": "An explicit structured-card advice action owns one structured_card_action Host task in the card's registered backend choice mode. Final confirmation is a state-only action and owns no Host task.",
+    "candidate_revision_policy": "Candidate-bearing save or advice actions require the current canonical choice_set_revision and report_id. A stale candidate card must fail closed and cannot overwrite a newer reported choice set.",
+    "stage_identity_policy": "A candidate revision is reusable only inside the same active match, backend mode, choice kind, and stage. Moving from 2-1 to 3-2 or 4-2 creates a fresh r0 binding even when the same mode is reused; reopening the same stage keeps its draft and revision.",
+    "equipment_window_identity_policy": "Independent equipment selections within one stage use distinct choice_window_instance_id values in reports, bindings, and confirmations. Reopening a card hydrates its existing window. Only the explicit next-equipment-selection action starts a fresh window; editing or clearing candidates does not bypass confirmation protection. Augment checkpoints retain one canonical selection per stage.",
+    "host_choice_evidence_policy": "A structured-card advice request must promote that exact card report into the Host request as current_match_user_report choices. Final confirmation persists the selected choice so later Host turns receive it through canonical current-match facts. Older observed or game_state_brief candidates cannot replace the current card report.",
+    "final_confirm_rebase_policy": "Final confirmation may rebase a stale binding only inside the same active match, stage, choice kind, and equipment window, and only when the payload supplies exact slot plus ref or name identity that still matches the current canonical candidate set. Cross-match, cross-stage, cross-kind, cross-window, and identity-missing confirmation fail closed. The backend returns the refreshed canonical payload_binding.",
+    "equipment_binding_policy": "Fact-only equipment edits and whole-snapshot confirmation are independent of the surrounding choice-card revision, including when a stale binding is present. They persist facts without opening a Host lane. Whole-equipment advice is not fact-only and follows normal response ownership.",
+    "truthful_success_policy": "Renderer confirmation success appears only after canonical persistence succeeds. Confirmation does not wait for or promise a response task; explicit advice keeps its normal response-task success and retry rules.",
+    "confirmation_response_policy": "Final confirmation records the exact selected choice and returns an operational status with response_task null. Reconfirming the same choice is idempotent and never creates a Host answer.",
+    "observer_dedupe_policy": "A structured final confirmation remains context for later advice but cannot emit or retry a sibling confirmed_choices_changed answer.",
+    "choice_window_preemption": "Choice-window reservation protects structured-card actions and must never cancel, expire, or replace them as automatic cruise advice.",
+    "same_owner_revision_policy": "Normal daemon persistence may advance a response task revision while the same task id, match, mode, origin, event key, and accepting status remain current. That revision advance does not detach or discard the Host result; cancellation, replacement, match mismatch, or terminal status does.",
+    "delivery_release": "Explicit card advice returns to cruise after terminal response delivery is acknowledged. Final confirmation needs no delivery ACK and may leave the card immediately after persistence.",
+    "navigation_is_not_answer_ownership": "Opening or retaining a card, confirming a choice, and saving equipment or match variables do not reserve the Host lane. Registered fixed checkpoints remain eligible without a tab change. An actual active user/card response task retains ownership. Completed canonical responses use normal freshness, rendering and ACK checks regardless of the selected card; never fabricate an ACK or force a tab switch merely to release Cruise.",
+    "status_ping_policy": "A punctuation-only status ping while an answer is in flight reports the existing task status and must not create, preempt, or replace a Host task."
+  },
+  "default_chat_prefill": "选哪个",
+  "modes": {
+    "manual_match_variables": {
+      "renderer": {
+        "ui_mode_key": "vars",
+        "order": 60,
+        "short_label": "变量",
+        "icon_key": "eye",
+        "prompt": "填写本局变量。",
+        "visible_in_match_rail": true,
+        "secondary": true,
+        "availability": {
+          "kind": "always"
+        }
+      },
+      "label": "手动变量",
+      "placement": "top_panel",
+      "fields": [
+        "target_plan"
+      ],
+      "season_field_policy": "Additional match-variable controls are derived from the active-season capability, normalized option groups, and active major-season rules. Common UI contract fields must not name a season mechanic.",
+      "trigger": "runtime_ui_panel_confirm",
+      "output_event": "manual_match_variables_confirmed",
+      "response_policy": "context_only_no_host_task",
+      "opening_judgment_policy": "Confirmed variables become canonical match context. They do not create a separate opening-judgment Host turn; the next user-owned advice or fixed strategic checkpoint absorbs their still-material effect.",
+      "first_augment_output_scope": "Before the first augment is confirmed, rank the three augments and refresh decision and explain how the confirmed opening variables affect that ranking. Do not prematurely prescribe two or three lineup directions; those belong after the first augment confirmation."
+    },
+    "augment_choice": {
+      "renderer": {
+        "ui_mode_key": "augment",
+        "order": 20,
+        "short_label": "海克斯",
+        "icon_key": "sparkles",
+        "prompt": "选哪个？要不要刷新？",
+        "visible_in_match_rail": true,
+        "secondary": false,
+        "availability": {
+          "kind": "always"
+        },
+        "missing_choice_kinds": [
+          "augment"
+        ],
+        "primary_presets": []
+      },
+      "label": "海克斯选择",
+      "prefill": "选哪个",
+      "choice_kind": "augment_choice",
+      "data_sources": [
+        "current_match_user_report",
+        "manual_match_variables",
+        "effective_equipment_when_available",
+        "confirmed_choice_context",
+        "live_state",
+        "augment_catalog",
+        "current_day_rankings"
+      ],
+      "auto_discussion_on_s4": true,
+      "confirmation_required": true,
+      "allowed_actions": [
+        "choose",
+        "reroll_slot",
+        "reroll_multiple",
+        "wait",
+        "ask_user_context",
+        "confirm_choice"
+      ],
+      "choice_poll_policy": {
+        "worker": "current_match_user_report_with_host_scoring",
+        "candidate_input_policy": "current_match_user_report",
+        "user_report_contract": {
+          "report_required_before_advice": true,
+          "report_prompt": "请在强化卡片中搜索并填写当前三个强化；2-1 可同时确认当前装备，后续只修改发生变化的槽位。装备缺失不阻塞强化建议。",
+          "refresh_report_prefix": "直接修改实际刷新的候选槽位，再重新获取建议。",
+          "refresh_creates_new_choice_set_revision": true,
+          "current_match_only": true,
+          "no_ocr_or_vision_fallback": true,
+          "explicit_ocr_draft": {
+            "enabled": true,
+            "trigger": "user_clicks_quick_ocr_after_selecting_stage_and_tier",
+            "scope": "augment_choice_only",
+            "authority": "renderer_draft_only",
+            "complete_set_required_before_replace": true,
+            "catalog_validation": "exact_current_stage_and_tier",
+            "writes": [
+              "bounded_diagnostic_event_only"
+            ],
+            "opens_host_answer": false,
+            "requires_user_submission_for_candidate_truth": true
+          }
+        },
+        "phase": "augment_choice",
+        "stop_on_fields": [
+          "augments.choices"
+        ],
+        "storage_policy": "Structured current-match report only; do not capture or retain OCR/vision frames for this choice intake.",
+        "pollution_policy": "Latest user-reported or explicitly confirmed choice set replaces previous pending candidates; selected_augments require user confirmation.",
+        "reroll_history_policy": {
+          "current_choice_set": "latest user-reported three-choice set only",
+          "previous_choice_sets": "same-window prior user-reported sets retained as strategy evidence and backup comparison",
+          "normal_total_visible_options": 6,
+          "special_double_reroll_visible_options": 9,
+          "allowed_advice": [
+            "choose_current_best",
+            "reroll_weak_slot",
+            "reroll_multiple_slots",
+            "hold_backup_from_current_or_previous_sets"
+          ]
+        }
+      },
+      "manual_owned_augment_text_panel": {
+        "label": "读取已选强化",
+        "placement": "augment_choice_mode_secondary_preset",
+        "prefill": "我已点开已拥有强化符文，读取这个强化",
+        "interaction_policy": "immediate_operational_action_after_explicit_user_opened_panel; this is not current-choice candidate reporting and must not be converted into a report-prefill flow",
+        "trigger": "user_clicks_owned_augment_detail_panel_then_sends_preset",
+        "worker": "resident_rapidocr_text_panel_roi",
+        "roi_script": "tools/roi_owned_augment_text_panel.py",
+        "aggregator": "tools/jcc_owned_augment_text_panel_aggregator.py",
+        "writes": [
+          "match_context.choice_confirmations"
+        ],
+        "stage_binding_policy": "Fixed row binding from the in-game owned augment text panel: row1=2-1 augment, row2=3-2 augment, row3=4-2 augment. Ignore every non-augment row.",
+        "pollution_policy": "Manual only. Do not run from cruise. Do not use side-rail icon matching as final selected augment state.",
+        "user_hint": "先在游戏里点开右侧“已拥有强化符文”面板",
+        "user_hint_delivery": "ui_only_not_sent_to_runtime_or_host"
+      },
+      "card_report_policy": {
+        "card_type": "augment_card",
+        "report_surface": "structured_search_card",
+        "candidate_label": "强化",
+        "candidate_option_group_terms": [
+          "augment"
+        ],
+        "candidate_count": 3,
+        "stage_tabs": [
+          "2-1",
+          "3-2",
+          "4-2"
+        ],
+        "candidate_identity_policy": "ID-first dual-scope lookup. Opening an empty dropdown lists only candidates known legal for the exact stage and selected tier. Explicit typing searches the full current-season catalog, keeps known cross-stage matches visible with their legal-stage label, and keeps unknown-stage matches visible as current-match user-report evidence. Known stage mismatches cannot be confirmed for the current stage; unknown-stage results require explicit user selection and never silently become hard-data truth. Aliases and speech variants are search evidence only.",
+        "candidate_kind_isolation_policy": "A technical row in the raw buff source is not automatically a player-facing augment. The active season source-kind classifier and descriptor exclusions must remove season-specific rewards, reward subchoices, and other non-choice entities before normalization and catalog compilation. Unknown-stage true augments remain available only through explicit full-catalog search and never enter exact-stage dropdowns.",
+        "candidate_category_filter": {
+          "enabled_when_catalog_declares_categories": true,
+          "definition_source": "active_core_profile.decision_input_catalog.choice_descriptors.augment.category_definitions",
+          "renderer_control": "multi_select_checkboxes",
+          "empty_selection_policy": "show_all_categories_within_current_stage_and_tier",
+          "multiple_selection_policy": "match_any_selected_category",
+          "runtime_authority": "Runtime validates category ids and filters both strict dropdown and typed search results; Renderer-only filtering is insufficient.",
+          "season_neutrality": "Common UI renders stable ids and labels supplied by the active catalog and must not embed major-season category names."
+        },
+        "first_report_requires": [
+          "visible_augment_candidates"
+        ],
+        "first_report_optional_context": [
+          "current_equipment"
+        ],
+        "later_reports_use_delta_fields": [
+          "equipment_delta",
+          "refreshed_visible_candidates"
+        ],
+        "refresh_send_policy": "preserve_all_slots_and_edit_only_the_candidates_that_actually_changed_then_submit_from_card",
+        "equipment_editor": {
+          "shared_across_modes_and_stages": true,
+          "categories": [
+            "components",
+            "completed",
+            "radiant",
+            "artifacts",
+            "emblems"
+          ],
+          "omitted_category_policy": "preserve_existing_value",
+          "explicit_empty_category_policy": "clear_that_category",
+          "empty_confirmation_policy": "An explicitly submitted empty category is confirmed empty. Omitted categories retain their existing value and confirmation state.",
+          "backspace_policy": "remove_one_last_whole_token_and_preserve_other_copies",
+          "layout_policy": "one_full_width_category_per_row",
+          "fact_sync_policy": "Every add, remove, or clear is persisted as a no-model current-match equipment fact so all decision modes inherit the same editor state. Only the single whole-equipment advice action may open a Host answer.",
+          "lookup_policy": "Every equipment category opens a catalog-backed dropdown. Empty completed-item, radiant-item, and artifact dropdowns use curated browse_facets such as tank, physical, magic, attack-speed, mana, sustain, utility, and economy/special. Raw stat/effect tags must never determine holder-role facets: incidental AP, AD, health, armor, magic resistance, healing, or recovery text does not make an item a magic, physical, or frontline recommendation. Explicit typing always searches every option in that equipment category regardless of the selected facet. Components do not display role facets.",
+          "quantity_policy": "Repeated copies are valid inventory facts. Adding the same catalog item appends one copy; chip click and empty Backspace remove one copy only; clear removes the full category. Equipment adapters preserve copy counts when merging overlapping observations and never collapse two occupied slots merely because item ids match."
+        },
+        "submission_actions": [
+          "unified_choice_advice",
+          "equipment_category_fact_update_only",
+          "whole_equipment_advice",
+          "final_confirmation"
+        ],
+        "unified_choice_advice_policy": "The card exposes one 获取建议 action. Its Host request reads the exact card candidates plus all currently reliable canonical variables, shared equipment, chat intent, target plan, live state, rules, and current-day rankings. Missing equipment never blocks the choice answer; mention only a missing fact that would materially change the ranking. The output remains focused on the current choice rather than expanding into an unsolicited full-match report.",
+      "no_ocr_or_vision_fallback": true,
+      "explicit_ocr_draft_policy": "A user-triggered Quick OCR action may update only the local renderer draft. Each uniquely resolved row that is legal for the selected stage and tier may fill its physical slot; unresolved rows remain unchanged or empty, and the UI reports recognized_count/3. Entering augment mode reserves the shared OCR lane before asynchronous mode setup: no new periodic or stage-only HUD OCR job may be admitted until the player leaves that mode, while an already in-flight job may finish. Start Match prewarms the single shared worker; Quick OCR is a foreground mechanical request with a bounded end-to-end choice-window budget measured from queue admission, runs ahead of queued background HUD requests after the current in-flight job, uses a unique transport request identity for every attempt, and removes an expired queued request before Python execution. The hot click path sends the full frame and normalized panel ROI to that resident process so crop and recognition happen in memory without a separate cold Python/Pillow cropper. Catalog identity includes one deterministic source fingerprint over the exact active hard-data manifest and every normalized catalog input, alias gateway, stage authority, and common/major-season choice rule in addition to season and patch. Any same-version source drift fails closed before dropdown, search, save, confirmation, or OCR consumes the catalog. The legacy MuMu visual overlay is not choice identity authority. It never writes the canonical reported choice set, never opens a Host answer, never auto-sends, and never applies to season-choice or item-choice cards. If stage, tier, candidate fields, or active match changes while OCR is running, the late result is discarded instead of overwriting the newer local draft. Per-step capture, queue, ROI, OCR, aggregation, and total timing remains available as bounded diagnostics.",
+      "stage_identity_policy": "Each report and draft is scoped by active match, backend mode, choice kind, and stage. Reopening a prior stage restores that exact stage report; a later stage never replaces it. Concurrent identical submissions are idempotent and share one report identity, while a stale revision with different content fails closed."
+      },
+      "final_confirmation_policy": {
+        "required": true,
+        "final_state_field": "augments.selected_augments",
+        "state_write_strategy": "replace_stage_entry",
+        "pending_candidates_are_not_final": true,
+        "prior_advice_required": false,
+        "dirty_candidate_policy": "One confirm click first atomically saves the latest candidate set without a model answer, then confirms the selected candidate against the returned binding.",
+        "confirmation_response_policy": "state_only_no_host_task"
+      }
+    },
+    "item_choice": {
+      "renderer": {
+        "ui_mode_key": "item",
+        "order": 40,
+        "short_label": "装备",
+        "icon_key": "dumbbell",
+        "prompt": "这几个装备选哪个？",
+        "visible_in_match_rail": true,
+        "secondary": false,
+        "availability": {
+          "kind": "always"
+        },
+        "missing_choice_kinds": [
+          "item"
+        ],
+        "primary_presets": []
+      },
+      "label": "装备/锻造器选择",
+      "prefill": "选哪个",
+      "choice_kind": "item_choice_panel",
+      "data_sources": [
+        "current_match_user_report",
+        "confirmed_choice_context",
+        "live_state",
+        "items.item_bench",
+        "items.equipped_items",
+        "own_board_units",
+        "economy"
+      ],
+      "auto_answer": false,
+      "confirmation_required": true,
+      "choice_poll_policy": {
+        "worker": "current_match_user_report_with_host_scoring",
+        "candidate_input_policy": "current_match_user_report",
+        "user_report_contract": {
+          "report_required_before_advice": true,
+          "report_prompt": "请在装备选择卡片中搜索并填写当前锻造器候选，再按需更新共享装备事实。",
+          "refresh_report_prefix": "直接修改发生变化的候选槽位，再重新获取建议。",
+          "refresh_creates_new_choice_set_revision": true,
+          "current_match_only": true,
+          "no_ocr_or_vision_fallback": true
+        },
+        "phase": "item_choice",
+        "stop_on_fields": [
+          "items.choice_options"
+        ],
+        "storage_policy": "Structured current-match report only; do not capture or retain OCR/vision frames for this choice intake.",
+        "pollution_policy": "Only current-match user-reported item-choice candidates and explicit confirmations may become items.choice_options. Ordinary shop/economy/augment/god text must not be promoted as final choice state.",
+        "default_item_choice_kind": "basic_component_forge",
+        "supported_item_choice_kinds": [
+          "basic_component_forge",
+          "completed_item_forge",
+          "artifact_forge",
+          "radiant_item_choice"
+        ],
+        "expected_count_by_kind": {
+          "basic_component_forge": 4,
+          "completed_item_forge": 5,
+          "artifact_forge": 4,
+          "radiant_item_choice": 4
+        },
+        "manual_trigger_policy": "Accept a current-match user report only after the user enters item_choice mode and sends the choice preset/message; cruise must not auto-run item forge ROI sensing.",
+        "scope_policy": "Narrow item mode to current-match user-reported item/anvil/forge candidate cards. It must not auto-scan inventory, hero/item reward three-choice panels, opponent items, or ordinary equipment text."
+      },
+      "pre_advice_context_refresh": {
+        "purpose": "Item advice must consider the current inventory, confirmed current-match reports, and equipped items, not only the visible forge/reward options.",
+        "required_candidate_sources": [
+          "items.item_bench",
+          "items.equipped_items.dynamic_hp_bar_self",
+          "board.board_units",
+          "economy.gold",
+          "economy.level",
+          "economy.hp",
+          "augments.selected_augments.self"
+        ],
+        "sensing_paths": [
+          "left item rail specialized structured source -> items.item_bench candidates",
+          "trusted mumu_4356 rectangles mapped to anchored mumu_4353 own units -> items.equipped_items",
+          "resident self-state HUD ROI OCR -> gold/level/hp/xp"
+        ],
+        "confidence_policy": "Missing or low-confidence equipment context lowers advice confidence; do not fabricate item state."
+      },
+      "card_report_policy": {
+        "card_type": "item_card",
+        "report_surface": "structured_search_card",
+        "candidate_label": "装备",
+        "candidate_option_group_terms": [
+          "item",
+          "component",
+          "artifact",
+          "forge",
+          "equipment",
+          "emblem",
+          "trait"
+        ],
+        "supported_choice_kinds": [
+          "basic_component_forge",
+          "completed_item_forge",
+          "artifact_forge",
+          "radiant_item_choice"
+        ],
+        "unsupported_choice_kinds": [
+          "hero_item_reward_three_choice",
+          "opponent_item_scan",
+          "general_inventory_scan"
+        ],
+        "candidate_counts_by_kind": {
+          "basic_component_forge": 4,
+          "completed_item_forge": 5,
+          "artifact_forge": 4,
+          "radiant_item_choice": 4
+        },
+        "refresh_send_policy": "preserve_all_slots_and_edit_only_the_candidates_that_actually_changed_then_submit_from_card",
+        "equipment_editor": {
+          "shared_across_modes_and_stages": true,
+          "categories": [
+            "components",
+            "completed",
+            "radiant",
+            "artifacts",
+            "emblems"
+          ],
+          "omitted_category_policy": "preserve_existing_value",
+          "explicit_empty_category_policy": "clear_that_category",
+          "backspace_policy": "remove_one_last_whole_token_and_preserve_other_copies",
+          "visible_in_item_choice_mode": true,
+          "fact_sync_policy": "Every add, remove, or clear is persisted as a no-model current-match equipment fact and inherited by augment, season-choice, item-choice, and later-stage cards.",
+          "lookup_policy": "Dropdown browsing may use item-tag facets. Explicit typing searches the complete selected equipment category across every facet.",
+          "quantity_policy": "Repeated copies are valid inventory facts and are preserved as repeated entries."
+        },
+        "no_ocr_or_vision_fallback": true
+      },
+      "final_confirmation_policy": {
+        "required": true,
+        "final_state_field": "items.confirmed_choice",
+        "state_write_strategy": "replace_latest",
+        "pending_candidates_are_not_final": true,
+        "prior_advice_required": false,
+        "dirty_candidate_policy": "One confirm click first saves the latest reported options without a model answer, then confirms the selected option.",
+        "confirmation_response_policy": "state_only_no_host_task"
+      },
+      "shared_equipment_context_policy": {
+        "effective_context_name": "effective_equipment",
+        "field_level_resolution": true,
+        "source_precedence": [
+          "trusted_mumu_4357_and_4356_to_4353",
+          "current_match_user_confirmation",
+          "explicit_visual_or_icon_candidate_fallback"
+        ],
+        "use_confirmed_field_immediately": true,
+        "do_not_start_visual_fallback_after_user_confirmation": true
+      }
+    },
+    "refresh_self_state": {
+      "label": "刷新我方状态",
+      "trigger": "refresh_self_state_requested",
+      "data_sources": [
+        "mumu_4352",
+        "mumu_4353",
+        "mumu_4354",
+        "self_state_roi_ocr",
+        "confirmed_choice_context",
+        "mumu_4357_item_bench",
+        "trusted_mumu_4356_equipped_items"
+      ],
+      "writes": [
+        "phase.stage_round",
+        "phase.current_round_text",
+        "economy.hp",
+        "economy.gold",
+        "economy.level",
+        "economy.xp"
+      ]
+    },
+    "daily_chat": {
+      "label": "daily chat / review chat",
+      "visible_when": [
+        "no_active_match",
+        "match_stopped"
+      ],
+      "trigger": "daily_chat_message",
+      "data_sources": [
+        "runtime_user_settings",
+        "user_memory",
+        "recent_match_decision_summaries",
+        "hard_data",
+        "daily_big_data"
+      ],
+      "writes": [
+        "user_memory_suggestions"
+      ],
+      "must_not_write": [
+        "current_match.live_state"
+      ],
+      "renderer": {
+        "core_theory_action": {
+          "label": "别吃大数据",
+          "prompt": "别吃大数据：",
+          "description": "只使用当前版本硬数据和通用玩法，不读取每日大数据；适合讨论理论阵容、英雄、羁绊、装备、强化和转职。",
+          "interaction": "prefill_daily_core_theory_query",
+          "request_kind": "daily_core_theory_query",
+          "source_policy": "active_core_profile_only",
+          "evidence_policy_id": "active_core_profile_only",
+          "origin_action_id": "daily_no_big_data",
+          "toggle_behavior": "second_click_returns_to_normal_daily_chat"
+        },
+        "ranking_recommendation_action": {
+          "label": "大数据推荐",
+          "prompt": "大数据推荐阵容：",
+          "description": "读取当前 Master+ 强度梯度和已编译配方证据；输入数量只控制最终展示，不改变内部候选比较。",
+          "interaction": "prefill_daily_ranking_recommendation",
+          "request_kind": "ranking_recommendation_query",
+          "source_policy": "master_plus_ranking_and_compiled_recipe_evidence",
+          "evidence_policy_id": "normal_selected_context",
+          "origin_action_id": "daily_ranking_recommendation",
+          "default_count": 5,
+          "min_count": 1,
+          "max_count": 16,
+          "toggle_behavior": "second_click_returns_to_normal_daily_chat"
+        }
+      },
+      "contract": "data/runtime/jcc/runtime-user-settings-and-review-contract.json"
+    },
+    "postgame_review": {
+      "label": "postgame review",
+      "visible_when": [
+        "no_active_match",
+        "match_stopped"
+      ],
+      "trigger": "postgame_review_requested",
+      "data_sources": [
+        "recent_match_decision_summaries",
+        "user_memory",
+        "hard_data",
+        "daily_big_data"
+      ],
+      "retention_policy": "Keep at most 20 recent structured match decision summaries. Do not retain raw screenshots or full raw logs.",
+      "writes": [
+        "postgame_review_notes",
+        "user_memory_suggestions"
+      ],
+      "must_not_write": [
+        "current_match.live_state"
+      ],
+      "contract": "data/runtime/jcc/runtime-user-settings-and-review-contract.json"
+    },
+    "lineup_card": {
+      "renderer": {
+        "ui_mode_key": "lineup",
+        "order": 50,
+        "short_label": "阵容图",
+        "icon_key": "shield",
+        "prompt": "把当前讨论的目标阵容整理到阵容图，并写清核心装备、站位、过渡和关键节点。",
+        "visible_in_match_rail": true,
+        "secondary": true,
+        "availability": {
+          "kind": "always"
+        },
+        "primary_presets": [
+          {
+            "label": "上限阵容图",
+            "prompt": "结合当前赛季大数据、本局已确认变量、强化、装备、棋子和经济，把当前方向能实现的最高上限阵容生成到阵容图；写清成立条件、核心与副C装备、主坦装备、站位、过渡、D牌和上人口节点，并注明当前不满足的条件。",
+            "description": "生成当前条件可追求的最高强度版本，并标明成立门槛。",
+            "interaction": "prefill_only"
+          }
+        ]
+      },
+      "label": "阵容图",
+      "trigger": "lineup_card_requested",
+      "prefill": "把当前讨论的目标阵容整理到阵容图，并写清核心装备、站位、过渡和关键节点。",
+      "final_confirmation_action": {
+        "label": "确认最终阵容：",
+        "prompt": "确认最终阵容：",
+        "interaction": "prefill_confirmation_intent",
+        "request_kind": "host_question",
+        "backend_mode": "lineup_card",
+        "lineup_card_intent": "final_target",
+        "lineup_target_sources": ["candidate", "chat_discovery", "user_custom"],
+        "requires_user_text_after_toggle": true
+      },
+      "data_sources": [
+        "live_state",
+        "manual_match_variables",
+        "season_catalog",
+        "hard_data",
+        "daily_big_data",
+        "user_intent"
+      ],
+      "writes": [
+        "lineup_display_slots.lineup"
+      ],
+      "must_not_write": [
+        "current_match.live_state"
+      ],
+      "outputs": [
+        "final_text",
+        "lineup_handoff",
+        "runtime_materialized_lineup_card"
+      ],
+      "response_policy": "Host returns final_text plus a minimal lineup_handoff when Runtime must materialize a card. Runtime restores canonical facts and Renderer owns 4x7 layout; handoff failure never suppresses usable text.",
+      "lineup_handoff_contract": {
+        "provider_fields": [
+          "candidate_id",
+          "variant_id",
+          "target_source",
+          "target_identity",
+          "adjustments",
+          "equipment_priority",
+          "positioning_intent"
+        ],
+        "runtime_materializes": [
+          "canonical_roster",
+          "population",
+          "main_carry",
+          "main_tank",
+          "standard_equipment",
+          "trusted_positioning",
+          "source_identity"
+        ],
+        "failure_scope": "card_only",
+        "unknown_equipment_policy": "A complete valid roster with an explicit unknown, pending, or not_provided_in_evidence equipment status remains publishable with an empty equipment list. Backend and renderer apply the same equipment-completeness rule."
+      },
+      "prefill_context_policy": {
+        "include_sources": [
+          "season_catalog",
+          "hard_data",
+          "daily_big_data",
+          "manual_match_variables",
+          "confirmed_choice_context",
+          "live_state",
+          "effective_equipment",
+          "latest_user_intent"
+        ],
+        "must_state_missing_cap_conditions": true,
+        "default_goal": "attainable_ceiling_from_current_match_context"
+      }
+    }
+  },
+  "fallback_classifier_policy": {
+    "enabled": false,
+    "use_only_when": "Not used for active choice candidate intake. Active choice modes require a current-match user report.",
+    "unknown_choice_panel_is_exception_only": true,
+    "supported_choice_kinds": []
+  },
+  "cruise_mode_policy": {
+    "mode_id": "cruise",
+    "renderer": {
+      "ui_mode_key": "cruise",
+      "order": 10,
+      "short_label": "巡航",
+      "icon_key": "bot",
+      "prompt": "巡航中：我现在该留哪些牌？",
+      "visible_in_match_rail": true,
+      "secondary": false,
+      "availability": {
+        "kind": "always"
+      },
+      "fact_capture_action": {
+        "label": "快速记录",
+        "prompt": "补充或更正本局信息：",
+        "description": "用自然语言补充或更正强化、装备、装备持有人和当前赛季变量；只记录事实，不获取策略建议。",
+        "interaction": "prefill_fact_capture",
+        "request_kind": "match_fact_capture",
+        "toggle_behavior": "second_click_returns_to_normal_cruise"
+      },
+      "equipped_item_editor": {
+        "location": "in_match_target_or_variable_panel",
+        "separate_mode": false,
+        "source": "user_confirmed_equipment.equipped_items",
+        "hydrate_champions_from": "trusted_own_board_with_current_season_search_fallback",
+        "slots_per_champion": 3,
+        "shared_with_quick_record": true,
+        "fact_only": true
+      },
+      "hard_data_action": {
+        "label": "别吃大数据",
+        "prompt": "别吃大数据：",
+        "description": "只使用当前 Core Profile、通用公式、本局可靠事实和用户明确提供的信息，不读取当天排名、阵容强度、英雄装备榜或策略 Wiki。",
+        "interaction": "prefill_hard_data_query",
+        "request_kind": "hard_data_query",
+        "source_policy": "active_core_profile_only",
+        "evidence_policy_id": "active_core_profile_only",
+        "origin_action_id": "cruise_no_big_data",
+        "toggle_behavior": "second_click_returns_to_normal_cruise"
+      },
+      "popular_recipe_action": {
+        "label": "查热门阵容",
+        "prompt": "查热门阵容：",
+        "description": "只查询当前版本腾讯官方热门阵容模板；不读取本局现场，不参与国服强度、阵容匹配或巡航评分。",
+        "interaction": "prefill_popular_recipe_query",
+        "request_kind": "popular_recipe_query",
+        "source_policy": "captured_popular_recipe_generation_only",
+        "evidence_policy_id": "popular_recipe_catalog_only",
+        "origin_action_id": "cruise_popular_recipe_query",
+        "placement": "cruise_actions_last",
+        "toggle_behavior": "second_click_returns_to_normal_cruise"
+      },
+      "primary_presets": [
+        {
+          "label": "上限阵容",
+          "prompt": "按当前阶段和本局条件，规划可实现的上限阵容。我的方向或补充条件：",
+          "description": "补充想玩的英雄、羁绊、装备、强化或目标后再发送；若尚未定方向，也可以直接说明现有条件。",
+          "interaction": "prefill_only"
+        },
+        {
+          "label": "经济节奏",
+          "prompt": "结合当前阶段和本局条件，告诉我这回合该存钱、卖牌、升级还是搜牌，并给出下一关键节点。我的补充条件（可留空）：",
+          "description": "判断当前该存钱、升级、搜牌还是卖牌保利息。",
+          "interaction": "prefill_only"
+        },
+        {
+          "label": "阵容方向",
+          "prompt": "结合当前阶段和本局条件，判断该继续、过渡还是转阵；有目标就校验，没有就给出 2-3 个可走方向和转向条件。\n\n我的目标或偏好（可留空）：",
+          "description": "有目标时校验方向；没有目标时从当前局面发现可走阵容。",
+          "interaction": "prefill_only",
+          "target_authority_policy": "A durable target_plan may be validated. Provisional intent is context only. With no declared target, discover directions from live evidence and treat ranking lines as candidates rather than as the player's target."
+        },
+        {
+          "label": "查大数据",
+          "prompt": "结合当前阶段，查询与这局决策有关的大数据。具体想查：",
+          "description": "补充阵容、英雄、装备、强化或运营问题后再发送。",
+          "interaction": "prefill_only"
+        },
+        {
+          "label": "强化适配",
+          "prompt": "结合当前阶段和本局条件，判断已选强化适合哪些方向；有目标就校验后续强化优先级，没有就给出 2-3 个候选方向和转向条件。我的补充条件（可留空）：",
+          "description": "有目标时校验强化适配；没有目标时先从强化、装备、来牌和大数据发现候选方向。",
+          "interaction": "prefill_only",
+          "target_authority_policy": "A durable target_plan may be validated. Provisional intent remains current-turn context only. With no declared target, discover candidate directions and label ranking evidence as candidate support rather than as the player's target."
+        },
+        {
+          "label": "装备/D牌",
+          "prompt": "结合当前阶段、已有装备和阵容方向，告诉我现在该合什么、给谁，是否要补功能装，以及何时搜牌或升级。我的目标或补充条件（可留空）：",
+          "description": "检查合装、第二套装备、功能装和D牌等级。",
+          "interaction": "prefill_only"
+        }
+      ]
+    },
+    "label": "巡航模式",
+    "default_active": true,
+    "purpose": "Continuously consume match-scoped live_state events and proactively emit short advice only when the strategic value crosses a threshold.",
+    "strategy_semantics": "data/runtime/jcc/cruise-strategy-semantics-contract.json",
+    "fixed_checkpoint_agenda": {
+      "implementation": "ui/electron/cruise-checkpoint-agenda.js",
+      "primary_cadence": true,
+      "stages": ["2-2", "2-7", "3-3", "3-5", "3-7", "4-3", "4-5", "5-1", "5-3", "5-7", "6-1", "6-3"],
+      "strategy_blocks": {
+        "lineup_direction_commitment": ["2-2", "2-7", "3-3", "4-3"],
+        "formation_readiness_and_execution": ["3-5", "3-7", "4-5"],
+        "cap_floor_endgame": ["5-1", "5-3", "5-7", "6-1", "6-3"]
+      },
+      "recovery_stages": [
+        {
+          "stage_round": "2-5",
+          "recovery_id": "recover_direction_exploration",
+          "strategy_block_id": "lineup_direction_commitment",
+          "recovers_checkpoint_ids": ["direction_exploration"],
+          "completion_policy": "pending_or_partial_only",
+      "host_task_policy": "recover_existing_or_add_conditional_window",
+      "conditional_windows": ["one_cost_reroll_window"],
+      "completed_source_policy": "silent_unless_a_registered_conditional_window_applies"
+        }
+      ],
+      "choice_windows": ["2-1", "3-2", "4-2"],
+      "folded_stages": {"4-4": "4-3", "5-4": "5-3", "6-4": "6-3"},
+      "policy": "Fixed stages create ordered strategy-block obligations; ordinary automatic events are fact-only supporting evidence and cannot open or preempt a Host answer. A later checkpoint in the same block absorbs an older unresolved checkpoint while preserving its required fields. Explicit user card actions remain independently answerable; all other automatic event categories are closed.",
+    "recovery_policy": "2-5 is not a general fixed checkpoint. It recovers a pending or partial 2-2 direction_exploration obligation with the latest verified state. Independently, it creates one registered one_cost_reroll_window obligation only when a durable one-cost reroll target exists; all other completed 2-2 paths remain silent."
+    },
+    "strategy_semantics_policy": "Non-binding tactical vocabulary only. Advice must be computed from live_state, JCC hard data, compatible Match-captured Zhangmeng/Tencent Master+ Ranking Overlay evidence when available, user preferences, and current-match variables.",
+    "strategy_scorer": "tools/score-jcc-cruise-strategy.mjs",
+    "agent_output_loop": "data/runtime/jcc/cruise-agent-output-loop-contract.json",
+    "runtime_pipeline": "tools/run-jcc-cruise-runtime-pipeline.mjs",
+    "visible_output_style": "short_actionable_draft",
+    "not_an_endless_stream": true,
+    "event_sources": [
+      "shop.shop_units_changed_after_round_refresh",
+      "board.board_units_changed",
+      "bench.bench_units_changed",
+      "self_state_refresh_requested_for_economy_items",
+      "economy.gold_level_xp_hp_changed",
+      "phase.stage_round_changed",
+      "augments.selected_augments_confirmed",
+      "items.item_bench_or_equipped_items_changed",
+      "lineup_code_target_or_transition_changed",
+      "user_chat_message"
+    ],
+    "proactive_advice_triggers": [
+      {
+        "id": "direction_commit_or_exit",
+        "runtime_event_type": "line_decision_context_changed",
+        "runtime_event_category": "line_decision_context",
+        "meaning": "Registered fixed-checkpoint strategic direction and commitment obligation.",
+        "requires": ["phase.stage_round", "live_rankings", "strategy.current_plan"]
+      },
+      {
+        "id": "lineup_convergence_checkpoint",
+        "runtime_event_type": "line_decision_context_changed",
+        "runtime_event_category": "line_decision_context",
+        "meaning": "Registered fixed-checkpoint lineup exploration, convergence, and final confirmation obligation.",
+        "requires": ["phase.stage_round", "live_rankings", "strategy.current_plan"]
+      },
+      {
+        "id": "cap_gap_check",
+        "runtime_event_type": "line_decision_context_changed",
+        "runtime_event_category": "line_decision_context",
+        "meaning": "Registered fixed-checkpoint ceiling and floor obligation.",
+        "requires": ["phase.stage_round", "live_rankings", "strategy.current_plan"]
+      }
+    ],
+    "interrupt_policy": {
+      "minimum_value_score_to_speak": 0.7,
+      "cooldown_seconds_by_trigger": {
+        "direction_commit_or_exit": 30,
+        "cap_gap_check": 30,
+        "lineup_convergence_checkpoint": 45
+      },
+      "cooldown_resolution_policy": {
+        "typed_trigger_precedence": "When decision_trigger_id is registered, use cooldown_seconds_by_trigger for that trigger and dedupe by trigger id.",
+        "semantic_category_fallback": "Use semantic_event_admission_policy category cooldown only when no registered decision_trigger_id owns the event.",
+        "never_stack_both": true,
+        "global_cadence_still_applies": true
+      },
+      "decision_snapshot_contract": {
+        "schema": "jcc-runtime-decision-snapshot-v1",
+        "authority": "One resolved SQLite-owned snapshot identity is shared by semantic admission, Host selected context, freshness, and delivery.",
+        "material_fingerprint_domains": {
+          "equipment_fit_context": ["equipment", "target_plan", "confirmed_choices"],
+          "economy_management_context": ["stage_round", "economy", "board_bench", "target_plan", "confirmed_choices"],
+          "hp_pressure": ["stage_round", "economy.hp", "board_bench", "target_plan"],
+          "tempo_decision_context": ["stage_round", "economy", "board_bench", "equipment", "target_plan"],
+          "line_decision_context": ["stage_round", "board_bench", "equipment", "confirmed_choices", "target_plan"],
+          "shop_decision_context": ["stage_round", "shop", "board_bench", "economy"],
+          "bench_pressure": ["stage_round", "board_bench", "shop", "economy"]
+        },
+        "revision_policy": "A normal persistence revision advance does not detach a Host result while response task id, match, mode, origin, event key, and accepting status still identify the same owner.",
+        "delivery_policy": "Unrelated fact churn must not discard decision-stable advice. A newer same-family action, registered choice or major-stage boundary, or changed required action fingerprint may supersede it."
+      },
+      "semantic_event_admission_policy": [
+        {
+          "category": "choice_window",
+          "source": "stage_category",
+          "cooldown_seconds": 0,
+          "priority": 100,
+          "opens_host_answer": false,
+          "purpose": "Reserve the answer lane for the current-match user-reported choice workflow."
+        },
+        {
+          "category": "choice_quiet_window",
+          "source": "stage_category",
+          "cooldown_seconds": 0,
+          "priority": 100,
+          "opens_host_answer": false,
+          "purpose": "Keep proactive cruise quiet immediately before a choice window."
+        },
+        {
+          "category": "confirmed_choice_context",
+          "event_types": [
+            "confirmed_choices_changed"
+          ],
+          "cooldown_seconds": 5,
+          "priority": 90,
+          "opens_host_answer": true,
+          "delivery_policy": "durable_context_followup",
+          "freshness_policy": { "scope": "durable_context", "require_material_fingerprint": false }
+        },
+        {
+          "category": "global_choice_advice",
+          "event_types": [
+            "reported_choices_changed"
+          ],
+          "source": "explicit_structured_card_action",
+          "cooldown_seconds": 0,
+          "priority": 89,
+          "opens_host_answer": true,
+          "delivery_policy": "one_user_card_action_one_runtime_event_followup",
+          "freshness_policy": { "scope": "durable_context", "require_material_fingerprint": false }
+        },
+        {
+          "category": "choice_advice",
+          "event_types": [
+            "reported_choices_changed"
+          ],
+          "source": "explicit_structured_card_action",
+          "cooldown_seconds": 0,
+          "priority": 88,
+          "opens_host_answer": true,
+          "delivery_policy": "one_user_card_action_one_runtime_event_followup",
+          "freshness_policy": { "scope": "durable_context", "require_material_fingerprint": false }
+        },
+        {
+          "category": "match_variables_context",
+          "event_types": [
+            "match_variables_changed"
+          ],
+          "source": "context_only_manual_match_variables",
+          "cooldown_seconds": 5,
+          "priority": 85,
+          "opens_host_answer": false,
+          "delivery_policy": "merge_into_first_2_1_user_owned_augment_answer",
+          "freshness_policy": { "scope": "durable_context", "require_material_fingerprint": false }
+        },
+        {
+          "category": "hp_pressure",
+          "event_types": [
+            "hp_pressure_bucket_changed"
+          ],
+          "qualifying_current_buckets": [
+            "danger",
+            "critical"
+          ],
+          "cooldown_seconds": 20,
+          "priority": 75,
+          "opens_host_answer": false,
+          "freshness_policy": { "scope": "decision_stable", "max_round_advance": 1, "require_material_fingerprint": false }
+        },
+        {
+          "category": "tempo_decision_context",
+          "event_types": [
+            "tempo_decision_context_changed"
+          ],
+          "cooldown_seconds": 20,
+          "priority": 66,
+          "opens_host_answer": false,
+          "freshness_policy": { "scope": "decision_stable", "max_round_advance": 1, "require_material_fingerprint": false }
+        },
+        {
+          "category": "streak_decision_context",
+          "event_types": [
+            "streak_decision_context_changed"
+          ],
+          "cooldown_seconds": 45,
+          "priority": 64,
+          "opens_host_answer": false,
+          "freshness_policy": { "scope": "decision_stable", "max_round_advance": 1, "require_material_fingerprint": false }
+        },
+        {
+          "category": "line_decision_context",
+          "event_types": [
+            "line_decision_context_changed"
+          ],
+          "cooldown_seconds": 60,
+          "priority": 63,
+          "opens_host_answer": false,
+          "freshness_policy": { "scope": "decision_stable", "max_round_advance": 1, "require_material_fingerprint": false }
+        },
+        {
+          "category": "economy_management_context",
+          "event_types": [
+            "economic_decision_context_changed",
+            "level_roll_decision_context_changed"
+          ],
+          "cooldown_seconds": 60,
+          "priority": 60,
+          "opens_host_answer": false,
+          "freshness_policy": { "scope": "decision_stable", "max_round_advance": 1, "require_material_fingerprint": false }
+        },
+        {
+          "category": "equipment_fit_context",
+          "event_types": [
+            "equipment_fit_changed"
+          ],
+          "cooldown_seconds": 45,
+          "priority": 58,
+          "opens_host_answer": false,
+          "freshness_policy": { "scope": "decision_stable", "max_round_advance": 1, "require_material_fingerprint": false }
+        },
+        {
+          "category": "shop_decision_context",
+          "event_types": [
+            "shop_decision_context_changed"
+          ],
+          "cooldown_seconds": 45,
+          "priority": 57,
+          "opens_host_answer": false,
+          "freshness_policy": { "scope": "stage_exact", "max_round_advance": 0, "require_material_fingerprint": true }
+        },
+        {
+          "category": "early_direction_context",
+          "event_types": [
+            "early_direction_context_changed"
+          ],
+          "cooldown_seconds": 45,
+          "priority": 46,
+          "opens_host_answer": false,
+          "freshness_policy": { "scope": "decision_stable", "max_round_advance": 1, "require_material_fingerprint": false }
+        },
+        {
+          "category": "bench_pressure",
+          "event_types": [
+            "bench_capacity_pressure",
+            "bench_decision_context_changed"
+          ],
+          "cooldown_seconds": 30,
+          "priority": 40,
+          "opens_host_answer": false,
+          "freshness_policy": { "scope": "stage_exact", "max_round_advance": 0, "require_material_fingerprint": true }
+        }
+      ],
+      "self_state_refresh_policy": {
+        "default_enabled": true,
+        "trigger_events": [
+          "planning_phase_status_1",
+          "shop_units_updated_or_round_refresh",
+          "choice_window_status_4",
+          "missing_economy_for_active_advice"
+        ],
+        "min_interval_seconds": 12,
+        "visual_phase": "economy",
+        "hud_refresh_fields": [
+          "economy.gold",
+          "economy.hp",
+          "economy.level",
+          "economy.xp"
+        ],
+        "structured_context_fields_read_without_visual_refresh": [
+          "items.item_bench",
+          "items.equipped_items"
+        ],
+        "storage_policy": "Do not persist screenshots. Background self-state refresh updates HUD fields only. It must not start item icon matching; one bounded item fallback is allowed only for an explicit user refresh/equipment request or conflict check.",
+        "manual_refresh_self_state_still_supported": true
+      },
+      "equipment_context_confirmation_policy": {
+        "source_precedence": [
+          "mumu_4357_and_trusted_4356",
+          "current_match_user_confirmation",
+          "explicit_visual_or_icon_candidate_fallback"
+        ],
+        "field_policy": {
+          "independent_fields": [
+            "item_bench",
+            "equipped_items"
+          ],
+          "use_highest_currently_available_source": true,
+          "never_wait_for_structured_source": true,
+          "never_wait_for_visual_candidate": true,
+          "user_confirmation_is_immediately_decision_usable": true,
+          "ask_only_for_decision_changing_missing_fields": true
+        },
+        "trigger": "A recent lineup direction change, a recent confirmed choice affecting that target, or a registered item decision needs a specific equipment field that is still missing and can change the next action. A durable target by itself is not sufficient.",
+        "ui_policy": "Keep ordinary equipment facts in the shared structured editor embedded in choice cards. After the daemon-owned equipment snapshot has hydrated, the editor exposes a whole-snapshot confirm action that records facts with request_advice=false even when the surrounding choice card has no candidate binding, and a separate whole-equipment advice action that alone opens the Host lane. An unhydrated renderer default must never be submitted as an explicit empty inventory. Reconfirming the same visible contents refreshes their current match and stage scope instead of being discarded as a no-op. The final rail mode is a narrow equipment-choice/forge card for low-frequency timed decisions, not a permanent free-form equipment-report mode. Shared equipment state is inherited across cards and may also be updated through text or voice.",
+        "response_policy": "status_prompt_only_no_host_answer_lane",
+        "user_reply_answer_owner": "The user's reply owns the one direct Host answer and may immediately decide from the newly confirmed field.",
+        "material_context_recency_seconds": 180,
+        "cooldown_seconds": 120,
+        "max_prompts_per_match": 3,
+        "same_material_context_once": true,
+        "suppress_when": [
+          "a Host response task is active",
+          "an active choice window owns the interaction",
+          "current view is S=2/non-self",
+          "no target lineup or explicit item-dependent decision exists",
+          "all equipment fields required by the current decision are already reliable",
+          "the same missing field was already asked for this material context or is inside cooldown"
+        ]
+      },
+      "dedupe_policy": "Do not repeat the same advice unless live_state changed enough to alter the action.",
+      "cadence_policy": {
+        "normal_maximum": "one proactive coaching answer per one to two rounds",
+        "exceptions": [
+          "active user-reported choice window",
+          "danger or critical HP",
+          "material lineup pivot or stabilization decision"
+        ],
+        "stale_policy": "Freshness is decision-scoped, not whole-live-state-scoped. Durable confirmations survive ordinary fact churn. A non-durable proactive event must not open a Host task while its current stage is unavailable. If an already-owned task temporarily loses current-stage verification, preserve its owner and defer delivery until the stage is known again; do not delete the answer. A fixed strategic task must own its decision action fingerprint before it enters the Host lane; a completed response with no such identity fails closed instead of leaving the renderer spinning. When a direct user or explicit card answer owns the single Host lane, any pending lineup-convergence checkpoint is rebuilt from the latest verifiable stage and folded into that answer only when it adds a material action; successful delivery closes the absorbed checkpoint, while failed or cancelled delivery leaves it retryable. Old-stage wording is never replayed, and a missing current stage cannot reopen the historical checkpoint. Decision-stable economy, tempo, lineup, and equipment advice may survive at most one ordinary round only while their own action fingerprint remains unchanged and no newer same-family decision supersedes them. A scorer-driven event must recompute delivery freshness from the same registered decision-trigger fingerprint domain used when it was admitted. Shop and bench actions remain exact-stage and material-fingerprint strict and fail closed when the required fingerprint is absent. Never cross a choice or major-stage boundary with advice whose action is no longer provably relevant.",
+        "transient_non_self_view_policy": "S=2/non-self current view suppresses new proactive advice and cannot update own-board facts, but it is not evidence that an already-owned answer from the last trusted self snapshot became stale. Do not preempt or discard that answer solely because the view changed transiently."
+      },
+      "content_agenda_policy": {
+        "kind": "coverage_agenda_not_canned_copy",
+        "brief_decisions": "Lead with one or two immediate actions and the condition that changes them.",
+        "standard_decisions": "Cover up to three linked actions such as economy, unit retention, item posture, lineup direction, or timing.",
+        "expanded_short_decisions": "After a confirmed major choice, cover immediate action, candidate lines, transition/economy posture, future choice types, item direction, and the next level or roll checkpoint in at most five sentences.",
+        "question_policy": "Ask at most one focused question and only when the missing fact materially changes the next action."
+      },
+      "max_visible_lines": 4
+    },
+    "user_message_policy": "A user chat message during cruise mode creates an advice_task with the current live_state and the user's text as constraints. After the answer, return to cruise mode.",
+    "settings_and_memory_sources": [
+      "runtime_user_settings.rank_tier",
+      "runtime_user_settings.operation_speed",
+      "runtime_user_settings.default_goal",
+      "user_memory.approved_preferences",
+      "recent_match_decision_summaries"
+    ],
+    "settings_effect_policy": {
+      "rank_tier": "Bias meta confidence, risk tolerance, and explanation depth without overriding current match evidence.",
+      "operation_speed": "Limit same-round large pivot advice when user needs one-round notice; allow faster same-round pivots only for fast users.",
+      "default_goal": "Bias safe top-four vs first-place/cap lines until current user message overrides it."
+    },
+    "pollution_guard": "Recent match summaries and user memory may bias advice, but previous-match concrete board/shop/economy facts must never be copied into the current match live_state.",
+    "task_handoff_policy": "Explicit common modes and active-season modes temporarily override cruise mode. Structured choice modes open their card and wait for a card action; they do not prefill the chat composer or start OCR/vision. When the task finishes, skips, expires, or switches, return to cruise mode."
+  },
+  "streaming_advice_policy": {
+    "augment_choice": "After the user reports the current augment candidates, score that latest report once. A refreshed report creates a new current choice-set revision and supersedes the prior pending set; it never starts OCR or vision.",
+    "user_chat_during_active_mode": "Merge the user's message into the active mode context, recompute advice, and keep the same pending choice until confirmed or skipped.",
+    "final_state_requires_confirmation": true
+  },
+  "product_decisions": {
+    "opponent_board_modes_removed": {
+      "reason": "MuMu structured runtime does not provide reliable opponent board unit identity. Opponent power and positioning are intentionally not product modes.",
+      "replacement": "Use own live_state, hard data, compatible Match-captured Zhangmeng/Tencent Master+ Ranking Overlay evidence when available, and user-confirmed scouting notes only. Do not auto-capture opponent board snapshots."
+    }
+  },
+  "approved_current_decisions": {
+    "decision_date": "2026-07-29",
+    "scope": "current machine contract for UI modes, choice cards, setup selectors, proactive delivery, and lineup-card output",
+    "structured_user_card_reports_not_ocr": {
+      "applies_to": [
+        "augment_choice",
+        "item_choice",
+        "active_season_choice_modes"
+      ],
+      "candidate_input_policy": "current_match_user_report",
+      "report_surface": "structured_search_card",
+      "no_ocr_or_vision_fallback": true,
+      "explicit_augment_ocr_draft_exception": "Augment mode may offer one user-triggered OCR convenience that produces renderer-local draft text only. Canonical candidate truth remains current_match_user_report after explicit submission.",
+      "submit_policy": "user may request choice-only, whole-equipment, or whole-card advice; equipment category edits and whole-snapshot equipment confirmation are no-model fact updates, ignore a missing or stale surrounding choice binding, and refresh current-match scope even when the visible equipment contents are unchanged; candidate-bearing actions require the current canonical revision; exact final confirmation never requires a prior advice request",
+      "refresh_policy": "user edits only the candidates that actually changed; unchanged slots remain and no action auto-sends or starts OCR/vision"
+    },
+    "card_final_confirmation": {
+      "applies_to": [
+        "augment_choice",
+        "item_choice",
+        "active_season_choice_modes"
+      ],
+      "pending_candidates_are_not_final_state": true,
+      "final_state_requires_explicit_user_confirmation": true,
+      "response_policy": "confirmation-only persists canonical state and opens no Host response task",
+      "later_use": "explicit advice and fixed strategic checkpoints read the confirmed choice from canonical current-match facts"
+    },
+    "round_and_tier_selectors": {
+      "round_selector": {
+        "owner": "current_match_setup_or_refresh_control",
+        "writes": [
+          "phase.stage_round",
+          "phase.current_round_text"
+        ],
+        "response_policy": "status_only_no_host_answer_lane"
+      },
+      "tier_selector": {
+        "owner": "runtime_user_settings",
+        "writes": [
+          "runtime_user_settings.rank_tier"
+        ],
+        "response_policy": "status_only_no_host_answer_lane"
+      }
+    },
+    "season_descriptor_visibility": "Season-specific choice modes are supplied only by the active major-season descriptor. Any active season without a matching descriptor hides that mode and its missing-choice prompt fail-closed.",
+    "choice_entity_kind_isolation": "Raw technical asset membership never implies a player-facing choice kind. Build-time source classification plus active-season exclusions remove rewards and subchoices before common catalogs are generated; exact-stage dropdowns admit only stage-bound legal choices, while explicit typing may discover labeled cross-stage or unresolved true choices.",
+    "shared_equipment_context": "Choice cards and cruise item decisions consume one effective equipment context resolved per field from structured MuMu facts, current-match user confirmation, then fallback candidates. Do not duplicate equipment modes.",
+    "item_mode_narrowed": "Item choice mode is limited to user-reported item/anvil/forge candidate cards and item-dependent advice; it is not a general visual item scanner.",
+    "big_data_and_cap_prefill": "Ceiling-lineup and data quick actions prefill a short open-ended user prompt only. Current catalog, rankings, hard data, match facts, confirmed choices, and equipment are attached by runtime selected context when the user sends.",
+    "lineup_handoff_schema": "lineup_card uses the minimal Provider lineup_handoff. Runtime materializes canonical card data and Renderer owns layout; usable final_text is independent from card publication.",
+    "deep_timeout_seconds": 300,
+    "version_layering": "Common UI stays season-neutral; major-season mechanics live in season descriptors; ordinary minor patches update hard-data/ranking/strategy tuples only."
+  },
+  "choice_card_workflow_policy": {
+    "schema": "jcc-choice-card-workflow-policy-v1",
+    "applies_to_common_modes": [
+      "augment_choice",
+      "item_choice"
+    ],
+    "applies_to_active_season_modes": true,
+    "card_types": [
+      "augment_card",
+      "item_card",
+      "descriptor_defined_season_choice_card"
+    ],
+    "candidate_report_source": "current_match_user_report",
+    "candidate_report_storage": "structured_json_current_match_only",
+    "no_ocr_or_vision_candidate_intake": true,
+    "input_surface_policy": {
+      "mode_entry": "open the structured searchable decision card; do not prefill or auto-send the chat composer",
+      "candidate_update": "user edits only changed slots and submits from the card",
+      "candidate_lookup": "empty dropdown uses the exact-stage and tier legal index; explicit typing searches the full current-season catalog and labels stage mismatch or unknown-stage evidence",
+      "equipment_update": "shared token fields inherit across all structured choice modes; add/remove/clear persist without a Host answer, omitted fields preserve, explicit empty fields clear, and typed search ignores browse facets while matching the active Core's compiled player aliases",
+      "natural_language": "free chat remains available as supplemental context but cannot silently confirm a structured candidate",
+      "auto_send": false
+    },
+    "final_confirm_policy": {
+      "required_before_final_state_write": true,
+      "prior_advice_required": false,
+      "dirty_candidate_atomic_save": true,
+      "confirmation_owner": "current interaction only",
+      "strategy_followup_on_confirmation": false,
+      "exact_identity_required": "slot plus candidate ref or exact candidate name",
+      "stale_binding_rebase": "same active match, stage, and choice kind only when exact identity remains in the current canonical set",
+      "explicit_card_owner_suppresses_observer_sibling": true,
+      "mixed_confirmation_plus_question": "direct_user_response_task_owns_answer",
+      "confirmation_only": "persist_state_and_return_status_without_host_task"
+    }
+  },
+  "match_setup_selector_policy": {
+    "schema": "jcc-match-setup-selector-policy-v1",
+    "controls": {
+      "round_selector": {
+        "placement": "match_setup_or_refresh_surface",
+        "scope": "current_match",
+        "allowed_write_fields": [
+          "phase.stage_round",
+          "phase.current_round_text"
+        ],
+        "must_not_write": [
+          "match_context.target_plan",
+          "runtime_user_settings.rank_tier"
+        ],
+        "host_response_policy": "status_only_no_strategy_answer"
+      },
+      "rank_tier_selector": {
+        "placement": "user_preferences_or_match_setup_affordance",
+        "scope": "user_setting",
+        "allowed_write_fields": [
+          "runtime_user_settings.rank_tier"
+        ],
+        "must_not_write": [
+          "current_match.live_state",
+          "manual_match_variables.seasonVariables"
+        ],
+        "host_response_policy": "status_only_no_strategy_answer"
+      }
+    }
+  }
+}

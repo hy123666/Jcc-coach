@@ -1,0 +1,319 @@
+{
+  "contract_id": "jcc-android-runtime-targeted-capture-contract",
+  "product_boundary": "generic_android_adb_source",
+  "source_contract_ref": "data/runtime/jcc/android-source-contract.json",
+  "purpose": "Define repeatable, legal targeted Android ADB captures for promoting missing JCC live_state fields without guessing.",
+  "allowed_sources": [
+    "adb logcat",
+    "adb shell dumpsys",
+    "adb shell external readable files",
+    "/sdcard/Android/data readable files",
+    "user-authorized readable cache/log files",
+    "public static resource mapping",
+    "ocr fallback",
+    "user input fallback"
+  ],
+  "privacy_policy": {
+    "forbidden_methods": [
+      "memory injection",
+      "process modification",
+      "anti-cheat bypass",
+      "private account scraping",
+      "credential extraction"
+    ],
+    "redaction_required": true,
+    "account_data_policy": "Do not collect private account identity, credentials, payment, auth, token, cookie, or contact data."
+  },
+  "diff_policy": {
+    "same_fields_ignored": true,
+    "changed_fields_emit_candidate_signal": true,
+    "promotion_policy": "Only promote changed candidates into live_state after local_chair_id binding and a focused verifier prove field semantics.",
+    "baseline_required": true
+  },
+  "output_artifacts": [
+    "probe-report.json",
+    "targeted-capture-diff.json",
+    "source-health.json",
+    "targeted-capture-candidate-signals.json",
+    "candidate-runtime-signals.json",
+    "match-live-state.json",
+    "runtime-coverage-report.json"
+  ],
+  "scenarios": [
+    {
+      "id": "loading",
+      "goal": "Capture match lifecycle start, foreground package, emulator profile, source freshness, and early set/mode hints.",
+      "allowed_sources": [
+        "adb logcat",
+        "adb shell dumpsys",
+        "adb shell external readable files",
+        "/sdcard/Android/data readable files"
+      ],
+      "capture_steps": [
+        "Start capture before queue/loading transition.",
+        "Run foreground package and dumpsys window/activity snapshots.",
+        "Pull public external net logs after GameStart appears."
+      ],
+      "target_fields": [
+        "match.match_id",
+        "match.game_start_time",
+        "match.mode",
+        "match.set",
+        "match.patch",
+        "metadata.source_health",
+        "metadata.foreground_package"
+      ],
+      "success_criteria": [
+        "GameStart or equivalent evidence is present.",
+        "Each promoted field has evidence and freshness metadata."
+      ],
+      "reject_if": [
+        "Evidence requires private app data, memory reads, or anti-cheat bypass."
+      ]
+    },
+    {
+      "id": "opening",
+      "goal": "Bind local player/chair at the start of every match and prevent prior-match chair reuse.",
+      "allowed_sources": [
+        "adb logcat",
+        "adb shell external readable files",
+        "/sdcard/Android/data readable files",
+        "ocr fallback"
+      ],
+      "capture_steps": [
+        "Capture from opening minion/first round until first player life report.",
+        "Record local report, chair, and player life evidence after GameStart.",
+        "Compare against previous match window to ensure no chair leakage."
+      ],
+      "target_fields": [
+        "local.local_chair_id",
+        "local.binding_status",
+        "local.binding_source",
+        "local.binding_confidence",
+        "local.binding_evidence",
+        "economy.hp"
+      ],
+      "success_criteria": [
+        "local_chair_id has same-window evidence.",
+        "hp evidence is filtered by bound local_chair_id."
+      ],
+      "reject_if": [
+        "Evidence reuses a chair from a previous GameStart.",
+        "Evidence requires private account scraping."
+      ]
+    },
+    {
+      "id": "planning_shop",
+      "goal": "Capture planning/shop economy, board, bench, traits, and shop transitions after player actions.",
+      "allowed_sources": [
+        "adb logcat",
+        "adb shell dumpsys",
+        "adb shell external readable files",
+        "/sdcard/Android/data readable files",
+        "ocr fallback"
+      ],
+      "capture_steps": [
+        "Capture baseline at start of planning.",
+        "Buy one shop unit, move one unit between board and bench, and optionally sell one unit.",
+        "Manually roll once only if gold is visible/known, then capture the delta."
+      ],
+      "target_fields": [
+        "shop.shop_units",
+        "shop.refresh_count",
+        "shop.lock_state",
+        "board.board_units",
+        "board.board_size",
+        "board.max_units",
+        "bench.bench_units",
+        "bench.bench_full",
+        "traits.active_traits",
+        "economy.gold",
+        "economy.level",
+        "economy.xp",
+        "economy.xp_to_next",
+        "economy.interest",
+        "economy.streak",
+        "actions.can_buy",
+        "actions.can_sell",
+        "actions.can_roll",
+        "actions.can_level",
+        "actions.can_move"
+      ],
+      "success_criteria": [
+        "Changed board/bench/shop/economy fields produce candidate signal evidence.",
+        "Promotion keeps local_chair_id binding and does not infer unchanged fields."
+      ],
+      "reject_if": [
+        "Evidence depends on process modification, memory injection, or private account data."
+      ]
+    },
+    {
+      "id": "combat",
+      "goal": "Capture combat state, opponent pairing, result, damage, income, and remaining units.",
+      "allowed_sources": [
+        "adb logcat",
+        "adb shell dumpsys",
+        "adb shell external readable files",
+        "/sdcard/Android/data readable files",
+        "ocr fallback"
+      ],
+      "capture_steps": [
+        "Capture immediately before combat starts.",
+        "Capture during combat for pairing/result/damage signals; do not promote visible opponent-board units from current-view data.",
+        "Capture after result, damage, and income resolve."
+      ],
+      "target_fields": [
+        "combat.active",
+        "combat.opponent_chair_id",
+        "combat.is_home_board",
+        "combat.result",
+        "combat.win_loss",
+        "combat.damage_taken",
+        "combat.damage_dealt",
+        "combat.earned_money",
+        "combat.remaining_units",
+        "opponents.current_opponent"
+      ],
+      "success_criteria": [
+        "Opponent chair and result evidence are from the active match window.",
+        "Damage/income evidence is not promoted to total hp/gold unless separately proven."
+      ],
+      "reject_if": [
+        "Evidence requires anti-cheat bypass or hidden process memory."
+      ]
+    },
+    {
+      "id": "augment_choice",
+      "goal": "Capture augment choice UI/options and selected augment.",
+      "allowed_sources": [
+        "adb logcat",
+        "adb shell external readable files",
+        "/sdcard/Android/data readable files",
+        "public static resource mapping",
+        "ocr fallback",
+        "user input fallback"
+      ],
+      "capture_steps": [
+        "Pause on augment selection screen before choosing.",
+        "Capture option IDs/text/icons and reroll count if present.",
+        "Capture after selecting one augment."
+      ],
+      "target_fields": [
+        "augments.selection_active",
+        "augments.choices",
+        "augments.selected_augments",
+        "augments.rerolls",
+        "actions.can_choose_augment"
+      ],
+      "success_criteria": [
+        "Each choice has slot/id or OCR/user fallback evidence.",
+        "Selected augment is linked to the post-choice delta."
+      ],
+      "reject_if": [
+        "Evidence includes private user/account data.",
+        "Names are guessed without ID/OCR/user evidence."
+      ]
+    },
+    {
+      "id": "item_reward",
+      "goal": "Capture item drops, item bench, equipped items, anvils, and reward choices.",
+      "allowed_sources": [
+        "adb logcat",
+        "adb shell external readable files",
+        "/sdcard/Android/data readable files",
+        "public static resource mapping",
+        "ocr fallback",
+        "user input fallback"
+      ],
+      "capture_steps": [
+        "Capture before a loot/item reward resolves.",
+        "Capture after orbs/anvils/items appear on bench.",
+        "Equip one item and capture the holder/item delta."
+      ],
+      "target_fields": [
+        "items.item_bench",
+        "items.equipped_items",
+        "items.components",
+        "items.completed",
+        "items.special_items",
+        "items.loot_orbs",
+        "rewards.active",
+        "rewards.choices",
+        "rewards.selected_reward",
+        "rewards.blocking_choice",
+        "actions.can_equip",
+        "actions.can_choose_reward"
+      ],
+      "success_criteria": [
+        "Item bench and equipped item evidence are separated.",
+        "Reward choices are not promoted unless options are observed."
+      ],
+      "reject_if": [
+        "Evidence depends on process modification, memory injection, anti-cheat bypass, private data, or non-user-authorized cache access."
+      ]
+    },
+    {
+      "id": "carousel",
+      "goal": "Capture carousel availability, units, items, positions, pick state, and selected pick.",
+      "allowed_sources": [
+        "adb logcat",
+        "adb shell dumpsys",
+        "adb shell external readable files",
+        "/sdcard/Android/data readable files",
+        "ocr fallback",
+        "user input fallback"
+      ],
+      "capture_steps": [
+        "Capture when carousel stage starts.",
+        "Capture while units/items are visible and before picking.",
+        "Capture immediately after selected pick resolves."
+      ],
+      "target_fields": [
+        "carousel.active",
+        "carousel.available_units",
+        "carousel.can_pick_now",
+        "carousel.selected_pick",
+        "actions.can_pick_carousel"
+      ],
+      "success_criteria": [
+        "Available carousel units/items carry evidence per entry.",
+        "Selected pick is tied to a post-pick delta."
+      ],
+      "reject_if": [
+        "Evidence requires private account data or anti-cheat bypass."
+      ]
+    },
+    {
+      "id": "postgame",
+      "goal": "Capture match end, final result, and stale-state boundary.",
+      "allowed_sources": [
+        "adb logcat",
+        "adb shell dumpsys",
+        "adb shell external readable files",
+        "/sdcard/Android/data readable files",
+        "ocr fallback"
+      ],
+      "capture_steps": [
+        "Capture immediately before final combat resolves.",
+        "Capture postgame/result screen.",
+        "Start a new lobby/loading baseline to verify prior match state is stale."
+      ],
+      "target_fields": [
+        "match.game_end_time",
+        "match.status",
+        "combat.result",
+        "combat.win_loss",
+        "opponents.current_rank",
+        "metadata.stale_fields",
+        "actions.unavailable_reason"
+      ],
+      "success_criteria": [
+        "match_end evidence gates player-specific strategy state.",
+        "Stale fields are reported rather than reused."
+      ],
+      "reject_if": [
+        "Evidence requires private account scraping or process modification."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "strength_status": "available",
+  "recipe_status": "available",
+  "checked_at": "2026-09-26T22:49:33.582Z",
+  "minimums": {
+    "traitCount": 33,
+    "heroCount": 59,
+    "equipCount": 119,
+    "winningRecipeCount": 36
+  },
+  "catalog_compatibility": {
+    "schema": "jcc-live-ranking-catalog-compatibility-v1",
+    "status": "pass",
+    "minimum_match_ratio": 0.8,
+    "allowed_champion_identity_count": 347,
+    "allowed_item_identity_count": 284,
+    "sections": {
+      "hero_strength": {
+        "observed_count": 78,
+        "matched_count": 73,
+        "match_ratio": 0.9358974358974359,
+        "unknown_ids": [
+          "4515",
+          "3513",
+          "1513",
+          "3514",
+          "2516"
+        ]
+      },
+      "lineup_units": {
+        "observed_count": 71,
+        "matched_count": 70,
+        "match_ratio": 0.9859154929577465,
+        "unknown_ids": [
+          "4515"
+        ]
+      },
+      "main_carries": {
+        "observed_count": 25,
+        "matched_count": 25,
+        "match_ratio": 1,
+        "unknown_ids": []
+      },
+      "ranked_items": {
+        "observed_count": 165,
+        "matched_count": 165,
+        "match_ratio": 1,
+        "unknown_ids": []
+      },
+      "lineup_items": {
+        "observed_count": 56,
+        "matched_count": 56,
+        "match_ratio": 1,
+        "unknown_ids": []
+      },
+      "hero_equipment_items": {
+        "observed_count": 66,
+        "matched_count": 66,
+        "match_ratio": 1,
+        "unknown_ids": []
+      }
+    },
+    "failures": []
+  },
+  "coverage": {
+    "static_basis": {
+      "patch_package": "jcc-s18-s18_2",
+      "version": "18.18.2",
+      "mode": "18",
+      "season": "18",
+      "trait_count": 36,
+      "champion_count": 65,
+      "item_count": 158,
+      "augment_count": 258
+    },
+    "tiers": {
+      "0": {
+        "traitCount": 50,
+        "heroCounts": {
+          "1": 78,
+          "2": 78,
+          "3": 78,
+          "255": 78
+        },
+        "equipCount": 144,
+        "lineupGroupCount": 49,
+        "winningSourceGroupCount": 49,
+        "winningSourceVariantCount": 518,
+        "winningRecipeStatus": "available",
+        "winningRecipeCount": 516,
+        "winningRecipeQuarantineCount": 2,
+        "popularSourceRowCount": 58,
+        "popularRecipeCount": 58,
+        "popularRecipeQuarantineCount": 0,
+        "traitDetailCount": 50,
+        "emptyTraitDetailCount": 0,
+        "traitGroupCount": 50,
+        "canonicalRosterCount": 521,
+        "emptyTraitGroupCount": 0,
+        "equipDate": "20260926",
+        "lineupDate": "20260926",
+        "requestIdentityMatches": true,
+        "probeResponseMatches": true,
+        "traitRequestIdentityMismatchCount": 0,
+        "heroEquipExpectedCount": 71,
+        "heroEquipCount": 71,
+        "heroEquipFailureCount": 0,
+        "heroEquipDateMissingCount": 0,
+        "heroEquipDateMismatchCount": 0
+      }
+    }
+  },
+  "failures": [],
+  "warnings": [],
+  "source_identity": {
+    "runtime_season_id": "s18",
+    "active_patch_id": "s18_2",
+    "game_mode_id": "jcc-mode18",
+    "package_id": "jcc-s18-s18_2",
+    "source_package_id": "jcc-s18-s18_2",
+    "core_profile_id": "a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151",
+    "hard_data_manifest_fingerprint": "86a9fcbf0d0f5bf6766c6e68718aa68e5f5c2c2a0662bf84cd49853a1b2bc549",
+    "catalog_source_fingerprint": "bd6921b1397a47e07e0728cf7c87df8eca84c2299e4952676cc4b897fbd56a92",
+    "battle_type": "31",
+    "lineup_version_id": "v6",
+    "ranking_set_id": "18",
+    "patch_package": "jcc-s18-s18_2",
+    "patch_version": "18.18.2",
+    "upstream_season_id": "S19"
+  },
+  "semantic_maintenance": {
+    "schema": "jcc-ranking-semantic-maintenance-receipt-v1",
+    "status": "ready",
+    "annotation_count": 50,
+    "reused_annotation_count": 0,
+    "input_hash": "2a84af97f09b3962eda4bbe3951874636bf7b296504eef9426a49308301caa64",
+    "output_hash": "28973fdb19ef2aec4fe6f21e954ab656d77ca11c5702494bcf6ad21aa353ff23",
+    "provider": "version-pipeline",
+    "model": "runtime-selected",
+    "duration_ms": 1300178,
+    "failure_code": null,
+    "failure_reason": null,
+    "authority": "non_authoritative_semantic_annotation_only",
+    "current_day_strength_unchanged": true
+  }
+}

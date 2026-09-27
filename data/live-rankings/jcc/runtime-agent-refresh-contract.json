@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "contract_id": "jcc-live-rankings-runtime-refresh",
+  "purpose": "Runtime agents must keep Tencent/JCC daily ranking data ready without relying on Codex App or any specific CLI shell.",
+  "source_identity": {
+    "battle_type": "31",
+    "lineup_version_id": "v6",
+    "ranking_tier_part": "0",
+    "ranking_tier_label": "master_plus",
+    "policy": "The promoted rank signal and lineup strategy index must both carry and match these registered upstream source identifiers before live-match use. Missing or mismatched values fail closed."
+  },
+  "agent_agnostic_entrypoints": {
+    "runtime_bootstrap": "node tools/bootstrap-jcc-runtime-agent.mjs",
+    "live_rankings_guard": "node tools/ensure-jcc-live-rankings.mjs",
+    "force_refresh_and_verify": "node tools/update-jcc-live-rankings.mjs",
+    "version_candidate_refresh": "node tools/run-jcc-version-pipeline.mjs rankings --season <season_id> --patch <patch_id> --expected-core-profile-id <sha256>",
+    "verify_only": "node tools/verify-jcc-live-rankings.mjs",
+    "verify_strategy_signal_contract": "node tools/verify-jcc-runtime-rank-signal-contract.mjs",
+    "load_strategy_context": "node tools/load-jcc-runtime-rank-signal.mjs"
+  },
+  "refresh_policy": {
+    "on_agent_start": "Run live_rankings_guard with the active Core Profile before answering strategy questions or loading rank-signal context.",
+    "developer_default_target": "An unqualified force refresh always follows the active Core Profile. Candidate ranking builds must explicitly select the candidate profile or provide its exact Core Profile id; candidate publication never changes the production pointer.",
+    "major_version_policy": "Use the generic version pipeline rankings phase with explicit season, patch, and expected Core Profile id. Never infer the season from ranking rows and never reuse the prior active season identity.",
+    "minor_patch_policy": "Bind the latest available Tencent stat_date to the internally compiled target patch and catalog fingerprint. The upstream API is not required to expose the local minor-patch label.",
+    "coverage_policy": "Derive minimum trait, champion, equipment, and lineup coverage from the selected Core Profile catalogs. Do not preserve fixed counts from a prior major season.",
+    "payload_identity_policy": "Endpoints without an explicit set parameter require positive catalog compatibility: hero-strength, lineup-unit, and main-carry identities must match the selected Core Profile at the registered threshold. Local labels and fingerprints cannot relabel a foreign-season payload.",
+    "staleness_hours": 18,
+    "latest_probe": "Probe Tencent get_main_trait_strength_trend and get_hero_strength_trend for the latest stat_date within 7 days where both payloads are non-empty.",
+    "refresh_when": [
+      "current snapshot is missing",
+      "audit is missing or not pass",
+      "latest non-empty stat_date differs from current snapshot stat_date",
+      "current snapshot age exceeds staleness_hours"
+    ],
+    "offline_policy": "Runtime bootstrap performs a local immutable-generation availability check and never refreshes rankings implicitly. Missing compatible rankings succeeds as explicit unavailable. Only the explicit update action or force_refresh_and_verify entrypoint performs network refresh."
+  },
+  "data_contract": {
+    "generation_retention": "Only active and explicitly pending Core profiles protect Ranking/Recipe candidate pointers and qualify for bounded previous Ranking/Recipe retention. Retaining an archived or previous Core on disk does not retain its daily rankings. Active generation pointers, publication closure references and live Match leases remain protected; retired-Core generations become removable when these references are released.",
+    "production_locator": "data/live-rankings/jcc/active-ranking-closure.json -> one immutable Ranking generation plus one exact-Core recipe generation with independently dated source capabilities; active-generation.json and active-recipe-generation.json are compatibility mirrors only",
+    "immutable_generation_artifacts": [
+      "snapshot.json",
+      "rank-signal.json",
+      "lineup-strategy-index.json",
+      "latest-diff.json",
+      "audit.json",
+      "manifest.json"
+    ],
+    "candidate_pointer": "data/live-rankings/jcc/candidates/<core_profile_id>.json references one verified immutable generation and is not a production activation pointer",
+    "recipe_candidate": "data/live-rankings/jcc/recipe-candidates/<core_profile_id>.json references one content-addressed recipe generation. It is a non-authoritative candidate and never activates ranking strength by itself.",
+    "active_closure_pointer": "data/live-rankings/jcc/active-ranking-closure.json atomically binds the active immutable Ranking generation, exact-Core recipe generation, Core identity, Ranking stat_date, and per-source recipe freshness profile. Runtime resolves this pointer first and fails closed when identities are incompatible or mirrors diverge.",
+    "active_recipe_pointer": "data/live-rankings/jcc/active-recipe-generation.json is a compatibility mirror of the recipe generation named by active-ranking-closure.json. It is not an independent production selector when the closure pointer exists.",
+    "strategy_signal_contract": "data/live-rankings/jcc/runtime-strategy-signal-contract.json",
+    "runtime_strategy_context": "A bounded derived context may be written as a compatibility artifact, but production evidence is always resolved from the immutable active generation.",
+    "compatibility_mirrors": "data/live-rankings/jcc/current and previous are optional non-authoritative update/diff mirrors. Their absence never makes an immutable active generation unavailable, and Runtime must never select them as ranking authority.",
+    "history_retention": "data/live-rankings/jcc/history/by-binding/<binding_sha256>/signals keeps the latest 14 distinct compact stat dates for one exact season, patch, Core Profile, catalog, hard-data, battle-type, tier, lineup-version, and ranking-set binding; same-date refresh overwrites and automatic pruning runs after successful promotion",
+    "trend_summary": "Each exact binding owns one latest-trend-summary.json with bounded 1-day, 3-day, and 7-day changes. Refresh may compile that same-binding summary into the current strategy index as auxiliary discovery evidence. Runtime must never read history files or day-over-day diff directly. Compiled trend cannot change current-day score, order, membership, or displayed metrics, but a confidence-bounded rising-discovery signal may adjust recommendation priority after current strength, reliability, and formation burden are preserved.",
+    "unavailable_state": "If the active Core Profile has no exact compatible Ranking Overlay, Runtime reports unavailable with no inherited stat_date and continues with Common, Core hard data, deterministic math, and current-match facts only",
+    "recipe_source_policy": "Fetch winning lineup_group_list as the primary recipe source and only the patch manifest's allowlisted official Tencent curated popular-lineup JSON as the secondary recipe source. Record ranking_stat_date, winning_recipe_source_date, and popular_recipe_source_date independently. Never call player/smart recommendation endpoints, retain player/UGC rows, or use recipe metrics as strength.",
+    "recipe_freshness_policy": "Classify each exact-Core recipe source independently: same-day fresh; 1-2 ranking-stat days behind recent_lag and still eligible for structural pairing; 3-7 days behind stale_reference and eligible only for exact or high-confidence compatible structural matches; more than 7 days behind expired and excluded from automatic pairing; incompatible Core, season, or patch forbidden regardless of date. Recipe dates and metrics never impersonate the Ranking stat date or strength authority.",
+    "source_identity_policy": "Tencent raw family ids remain opaque source-row keys for fetch association, history, deduplication, and audit only. They never determine player-visible trait names, canonical trait ids, lineup merging, or Agent semantics. Production lineup semantics come from source trait text when available plus current-Core roster calculation and explicit emblem or special-contribution state.",
+    "atomic_variant_policy": "Each Master+ row keeps one standard atomic roster plus deterministic same-row variants. Runtime compares population, added, removed and replaced units, trait state, sample count, top-four rate, top-one rate, and deltas versus the standard roster. These are descriptive lineup-internal observations for formation, floor, cap, and replacement reasoning; they are not universal unit-value rules.",
+    "partial_recipe_cache_policy": "If Master+ strength or canonical trait_group rosters are unavailable, a valid popular recipe generation may still be published and atomically activated for the explicit popular-template query. Skip semantic maintenance and Ranking Overlay verification/promotion, preserve the last-known-good Ranking Overlay pointer, and expose full_ranking_overlay_available=false.",
+    "auxiliary_unit_policy": "Winning recipes, official popular recipes, and national Master+ atomic rosters share one exact-refresh auxiliary-unit registry. Recipe rows explicitly typed as pet, summon, or another non-champion unit are retained as auxiliary_units in final and transition rosters. They are not validated as champions, do not occupy champion population unless explicitly declared, and do not quarantine the parent recipe. A source row explicitly typed as a hero but absent from the current Core Catalog is retained as a population-occupying external_roster_unit with unresolved Core identity; it cannot enter champion matching, role inference, hero indexes, or strength until mapped. When the same raw id later appears in a winning or national roster without type metadata, only a non-conflicting registry identity may restore it as an auxiliary; conflicting identities fail closed. Unknown supplementary augment or item references remain auditable recipe-local evidence and do not quarantine an otherwise valid atomic roster."
+  },
+  "strategy_context_policy": {
+    "on_agent_start": "Inspect the local immutable Ranking Overlay without network access. When available, verify the strategy signal contract and load its bounded context; when unavailable, continue Core-only and expose null ranking identity and stat date.",
+    "runtime_handoff": "load_strategy_context reads the active immutable generation. Any written runtime-strategy-context file is a non-authoritative compatibility artifact.",
+    "summary_only": "The --summary-only loader mode is diagnostic and must not update runtime_strategy_context.",
+    "tier_fallback": "Always use tier_part=0 (Master+) for ranking evidence regardless of user rank/profile. Platinum-Diamond and all-tier datasets are not downloaded, promoted, or used by Runtime.",
+    "strength_cleaning": "Compute one deterministic current-day gradient from Master+ top-four rate, top-one rate, and average rank. Only an explicitly authoritative national current-day sample count may control Bayesian shrinkage and confidence; its direct strength weight is zero. Appearance rate remains a separate heat/contest signal. Winning/popular recipe statistics are discarded and never enter strength, confidence, order, scorer, maintenance, or Host evidence.",
+    "semantic_maintenance": "After the deterministic candidate generation is prepared, the update flow uses one or more bounded ephemeral maintenance Host calls to annotate every semantically changed lineup with formation-burden, flexibility, strategy-style, and condition labels. The calls receive compact Common principles plus the exact target Core identity, have no publication authority, and are never reused as Lobby or Match conversation state. The full packet remains one atomic maintenance task: all batches must validate against the full input hash before any maintained generation is published. The default end-to-end maintenance deadline is 90 minutes and each Host call remains bounded to 15 minutes. An incomplete run preserves the previous Active closure and checkpoints validated batches for exact-input recovery.",
+    "semantic_maintenance_limits": {
+      "total_deadline_minutes": 90,
+      "total_deadline_ms": 5400000,
+      "host_call_timeout_minutes": 15,
+      "host_call_timeout_ms": 900000
+    },
+    "typed_augment_effects": "Every imported current-Core augment keeps its full source text and passes through the season-neutral Common typed-effect parser for trigger conditions, target scope, numeric or reward terms, duration, stacks, caps, repetition, probability, and dynamic randomness. Unmapped semantics remain explicit and auditable instead of being silently treated as an empty effect."
+  },
+  "shell_contract": {
+    "codex_cli": "invoke runtime_bootstrap in the project before runtime strategy work",
+    "claude_code_cli": "invoke runtime_bootstrap in the project before runtime strategy work",
+    "kimi_cli": "invoke runtime_bootstrap in the project before runtime strategy work",
+    "other_agents": "invoke runtime_bootstrap or live_rankings_guard; do not depend on Codex App automations"
+  }
+}

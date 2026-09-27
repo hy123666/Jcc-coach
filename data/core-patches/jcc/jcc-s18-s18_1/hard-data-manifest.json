@@ -1,0 +1,125 @@
+{
+  "schema": "jcc-hard-data-content-manifest-v1",
+  "identity": {
+    "season_id": "s18",
+    "patch_id": "s18_1",
+    "mode_id": "mode18"
+  },
+  "runtime_patch_id": "s18_1",
+  "deterministic": true,
+  "rankings_included": false,
+  "counts": {
+    "champions": 65,
+    "chess_variants": 260,
+    "traits": 36,
+    "items": 151,
+    "augments": 266,
+    "god_rewards": 0,
+    "encounters": 0,
+    "season_mechanics": 176,
+    "per_match_variables": 0,
+    "mechanics_parameters": 0
+  },
+  "files": {
+    "normalized/champions.json": {
+      "sha256": "4ce66cdb3bbafe8fbf553cdf23c819cf159f330873b5145498772748fd0b2bb8",
+      "bytes": 356940
+    },
+    "normalized/chess_variants.json": {
+      "sha256": "83341511892f52d0055d60cd09749ce274b50cc238520672b47cd2ed058af6e2",
+      "bytes": 126343
+    },
+    "normalized/traits.json": {
+      "sha256": "dc03cc32f1d0c539f083f3020e49587dd00b09d47bd877a2fbef3e3c5149d25a",
+      "bytes": 97745
+    },
+    "normalized/items.json": {
+      "sha256": "db40d5f4869dec423c847557992669775c9dc2a5b0ed0d299b79f538d351d73d",
+      "bytes": 374073
+    },
+    "normalized/augments.json": {
+      "sha256": "7633491c1c9fc795680fb5f7faa4e9e0665f93a0195fb2d40766d5140980b5fb",
+      "bytes": 471796
+    },
+    "normalized/god_rewards.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "normalized/encounters.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "normalized/season_mechanics.json": {
+      "sha256": "7a78c8d3ca6054689bd299cd8c60ecce2f80792aeb345b85c083a76a257cfced",
+      "bytes": 1071054
+    },
+    "normalized/per_match_variables.json": {
+      "sha256": "eddd22e5e9ab54a9137e6ae4a219fd9e90154417e200874345abe8e93a9c7e9a",
+      "bytes": 189
+    },
+    "normalized/mechanics_parameters.json": {
+      "sha256": "831d8f90d26a9e2883dfbb1287e1d7cfa595176057650e734eb991f2b582008b",
+      "bytes": 12218
+    },
+    "indexes/entity_alias_gateway.json": {
+      "sha256": "98393aba1cee48113e12e458290a4ad050414c90de1a69ded087c588060dd04f",
+      "bytes": 298294
+    },
+    "indexes/champion_damage_profile.json": {
+      "sha256": "eef5c1c5f3786a2966627606ff96dc9dd641b5fe62122a91c0d606514edf93a0",
+      "bytes": 21604
+    },
+    "indexes/champion_role_profile.json": {
+      "sha256": "af7b078a14739ff24b34b44fa6d89e4147a3e4ae6dc82fbe87c655a2f0019177",
+      "bytes": 20682
+    },
+    "indexes/champion_item_fit.json": {
+      "sha256": "97da17a480a7cee0992816eac38520e413a0fb5edc0a3e0a11efa2f17d0806d2",
+      "bytes": 656850
+    },
+    "indexes/item_holder_fit.json": {
+      "sha256": "5a87e0757bf1332270f0602028e6fd162ba5018da83e75d57aa0b954462e441d",
+      "bytes": 1129704
+    },
+    "indexes/item_holders.json": {
+      "sha256": "276117725b502c757f37bb3164f9b93fb83c8208d704602bebfa0058503ea39e",
+      "bytes": 240169
+    },
+    "indexes/item_conflicts.json": {
+      "sha256": "5982bd0eff9ac42719cbd93d2ffac7044cf7fb020c12f17ebc44f11f23bffc6e",
+      "bytes": 32955
+    },
+    "indexes/component_to_item_candidates.json": {
+      "sha256": "195e2312f5299e3dee8f15684d20408f55c0967f9768d7f4cc799211a8aa5a7a",
+      "bytes": 49648
+    },
+    "indexes/item_wait_cost.json": {
+      "sha256": "b7128e7beb795d7ce6340fa7dc17349e6fb02e5ac1a739e980755d89400f8833",
+      "bytes": 25188
+    },
+    "indexes/trait_breakpoints.json": {
+      "sha256": "e009e8079b16b53d8bbfb6d7fdcdb13ab8536cf9eaa2eaeb8ac8f24e31370487",
+      "bytes": 77783
+    },
+    "indexes/trait_unit_matrix.json": {
+      "sha256": "3e84891e5a3f13d56003c8795e5e2e57de93ab1ad6a6121836369feddc7e3755",
+      "bytes": 46392
+    },
+    "indexes/entity_strategy_weights.json": {
+      "sha256": "9668d482ac7d25514727faa088ac1d9b82f0be8dc6fbc1162f61d5492ecf1984",
+      "bytes": 472106
+    },
+    "indexes/augment_stage_authority.json": {
+      "sha256": "3276c228cf6ccdf681e9e74e19e0955bfbee2d150ccd3c90a76a543e11aa96b1",
+      "bytes": 208340
+    },
+    "indexes/supplemental_source_audit.json": {
+      "sha256": "2574dc9dfd285a7b7cf0079734cb6037ce8b79a450423eea9e191f7c68ac796a",
+      "bytes": 86057
+    },
+    "runtime-catalog-overlay.json": {
+      "sha256": "fda9bbfdb9761a4094885f57e30c6ec8f4f0008e272a476a6aa131effc882dfb",
+      "bytes": 281327
+    }
+  }
+}

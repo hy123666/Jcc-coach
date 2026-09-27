@@ -1,0 +1,153 @@
+{
+  "schema": "jcc-game-knowledge-common-document-v1",
+  "logical_id": "common.strategy_evidence_framework",
+  "scope": "common",
+  "kind": "strategy_evidence_framework",
+  "season_neutral": true,
+  "entity_references": [],
+  "purpose": "Define the shared evidence language used by direct questions, structured choices, and proactive Cruise without turning strategy judgement into one global program or score.",
+  "entries": [
+    {
+      "id": "strategy_evidence.framework",
+      "framework_schema": "jcc-common-strategy-evidence-framework-v1",
+      "routes": [
+    {
+      "id": "rules_explanation",
+      "intent_terms": ["怎么玩", "规则", "怎么赢", "利息", "经验", "升级", "扣血", "牌库", "刷新概率"],
+      "critical_facets": ["common_game_doctrine", "current_core_identity"],
+      "optional_facets": ["deterministic_math", "current_match_state"]
+    },
+    {
+      "id": "entity_details",
+      "intent_terms": ["英雄", "棋子", "技能", "属性", "羁绊", "装备", "强化", "海克斯", "几费", "定位"],
+      "critical_facets": ["current_core_identity", "current_core_entity_details"],
+      "optional_facets": ["current_match_state", "ranking_observations"]
+    },
+    {
+      "id": "lineup_construction",
+      "intent_terms": ["阵容", "搭一套", "九五", "95", "84", "成型", "主C", "主坦", "替换"],
+      "critical_facets": ["common_game_doctrine", "current_core_identity", "champion_trait_map", "champion_skill_role_profiles", "legal_roster_solution"],
+      "optional_facets": ["current_match_state", "ranking_lineup_candidates", "formation_difficulty_profile", "semantic_seed", "candidate_frontier", "semantic_relations"]
+    },
+    {
+      "id": "transition_planning",
+      "intent_terms": ["过渡", "六人口", "6人口", "七人口", "7人口", "八人口", "8人口", "平替", "替换成本", "装备通用"],
+      "critical_facets": ["current_core_identity", "transition_candidates", "equipment_continuity"],
+      "optional_facets": ["current_match_state", "ranking_transition_evidence", "formation_difficulty_profile", "semantic_seed", "candidate_frontier", "semantic_relations"]
+    },
+    {
+      "id": "itemization",
+      "intent_terms": ["装备", "出装", "神装", "合装", "散件", "神器", "光明", "装备通用", "施法频率", "伤害最大"],
+      "critical_facets": ["current_core_identity", "equipment_effects_and_fit"],
+      "optional_facets": ["current_equipment_and_holders", "deterministic_math", "semantic_seed", "candidate_frontier", "ranking_item_observations"]
+    },
+    {
+      "id": "augment_selection",
+      "intent_terms": ["强化", "海克斯", "三选一", "刷新强化", "强化最好", "强化选择"],
+      "critical_facets": ["current_core_identity", "augment_effects_and_fit"],
+      "optional_facets": ["current_choice_candidates", "current_match_state", "semantic_seed", "candidate_frontier", "ranking_augment_associations", "semantic_relations"]
+    },
+    {
+      "id": "economy_tempo",
+      "intent_terms": ["经济", "金币", "利息", "连胜", "连败", "升级", "升人口", "D牌", "搜牌", "保血", "卖血", "节奏"],
+      "critical_facets": ["common_game_doctrine", "current_match_state", "deterministic_math"],
+      "optional_facets": ["target_or_candidate_direction", "active_effect_timing"]
+    },
+    {
+      "id": "current_match_strategy",
+      "intent_terms": ["这把", "现在", "当前", "接下来", "该怎么办", "巡航", "适合玩什么", "转不转"],
+      "critical_facets": ["common_game_doctrine", "current_core_identity", "current_match_state"],
+      "optional_facets": ["target_or_candidate_direction", "formation_difficulty_profile", "semantic_seed", "candidate_frontier", "semantic_relations", "ranking_observations", "deterministic_math"]
+    },
+    {
+      "id": "lobby_meta_strategy",
+      "intent_terms": ["上分思路", "当前版本", "版本环境", "当前环境", "强势阵容", "版本上分"],
+      "critical_facets": ["common_game_doctrine", "current_core_identity", "ranking_observations"],
+      "optional_facets": ["ranking_lineup_candidates", "formation_difficulty_profile", "ranking_item_observations", "ranking_augment_associations", "semantic_relations"]
+    },
+    {
+      "id": "postgame_review_strategy",
+      "intent_terms": ["复盘", "上一把", "上一局", "为什么输了", "为什么第四", "复盘聊天"],
+      "critical_facets": ["common_game_doctrine", "current_core_identity", "recent_match_decision_summaries"],
+      "optional_facets": ["ranking_observations", "formation_difficulty_profile", "semantic_relations"]
+    },
+    {
+      "id": "ranking_query",
+      "intent_terms": ["大数据", "国服", "大师以上", "榜单", "胜率", "前四率", "登顶率", "平均排名", "热门阵容"],
+      "critical_facets": ["current_core_identity", "ranking_observations"],
+      "optional_facets": ["ranking_lineup_candidates", "ranking_item_observations", "ranking_augment_associations"]
+    }
+  ],
+      "coverage_states": ["satisfied", "missing", "forbidden", "not_applicable", "degraded"],
+      "evidence_classes": {
+    "common": "Season-neutral rules, doctrine, formulas, routes, tags, and relation meanings.",
+    "core": "Match-pinned current-season entities, effects, legality, formulas, aliases, and semantic features.",
+    "ranking": "Compatible current-day Tencent/JCC Master+ observations and atomic recipes only.",
+    "match": "Current SQLite-owned live facts, explicit confirmations, choices, target state, and freshness.",
+    "deterministic": "DecisionMath and route-specific evaluator results with assumptions and claim boundaries."
+  },
+      "policy": {
+    "multi_route_planning_required": true,
+    "tags_organize_and_expand_evidence_but_do_not_own_strength": true,
+    "typed_identity_legality_and_source_policy_remain_authoritative": true,
+    "agent_owns_tradeoffs_strategy_and_explanation": true,
+    "runtime_owns_source_selection_snapshot_budget_and_coverage": true,
+    "critical_missing_evidence_must_be_disclosed_or_block_the_affected_claim": true
+  },
+      "extension_policy": {
+    "new_route": "Add only when an existing route cannot express a materially different evidence obligation.",
+    "new_facet_or_tag": "Add to Common only when it is season-neutral and cannot be represented by the existing vocabulary; version-owned meanings remain in Core compilation.",
+    "major_season_update": "Compile the new season's entities into these routes and audit unmapped semantics without copying or renaming the Common framework."
+      }
+    },
+    {
+      "id": "formation_difficulty",
+      "framework_schema": "jcc-common-formation-difficulty-framework-v1",
+      "purpose": "Describe how difficult a lineup is to make and how ready the current match is to realize it, without changing national strength authority.",
+      "ownership": {
+        "common": "season-neutral dimensions, evidence states, and lifecycle vocabulary",
+        "core": "current-version costs, legality, traits, effects, craftability, and special mechanics",
+        "ranking": "current-day roster, recipe, transition, hero-heat, and explicit requirement evidence",
+        "runtime": "transient current-match readiness from stage, HP, economy, board, copies, equipment, and choices"
+      },
+      "parallel_outputs": [
+        "national_strength",
+        "formation_burden",
+        "current_formation_readiness"
+      ],
+      "dimensions": [
+        "target_population",
+        "high_cost_dependency",
+        "star_requirements",
+        "emblem_or_transfer_dependency",
+        "augment_dependency",
+        "item_dependency",
+        "special_mechanic_dependency",
+        "trait_breakpoint_pressure",
+        "transition_support",
+        "equipment_continuity",
+        "preformation_loss_risk",
+        "contest_pressure",
+        "flexibility_and_replacement_cost"
+      ],
+      "evidence_states": ["explicit", "derived", "unknown", "not_applicable"],
+      "rules": {
+        "strength_is_not_reduced_by_burden": true,
+        "hero_or_lineup_use_rate_is_heat_not_formation_probability": true,
+        "recommended_augments_are_not_required_without_explicit_evidence": true,
+        "high_three_star_rank_is_not_a_mandatory_star_requirement": true,
+        "unknown_requirements_remain_unknown": true,
+        "runtime_readiness_is_not_persisted_as_ranking_fact": true
+      },
+      "archetype_inputs": [
+        "one_cost_reroll",
+        "two_cost_reroll",
+        "three_cost_reroll",
+        "four_cost_reroll_or_theft_ancestor",
+        "eight_population_four_cost_operation",
+        "nine_population_five_cost_operation",
+        "special_mechanic_lineup"
+      ]
+    }
+  ]
+}

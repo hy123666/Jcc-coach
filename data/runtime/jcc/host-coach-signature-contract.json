@@ -1,0 +1,267 @@
+{
+  "schema": "jcc-host-coach-signature-contract-v1",
+  "purpose": "A DSPy-style, CLI-neutral signature and metric contract for turning selected JCC runtime context into one AI-native coach answer.",
+  "design_source": "Inspired by DSPy signatures/metrics, but kept as a product contract instead of a hot-path Python dependency.",
+  "runtime_shape": {
+    "state_owner": "jcc_runtime_orchestrator",
+    "visible_voice": "host_cli_agent_main_model",
+    "selected_context_per_request": true,
+    "host_session_memory_role": "contextual_memory_not_canonical_game_truth",
+    "deterministic_workers_are_evidence_not_visible_coaches": true,
+    "context_lifecycle_contract": "data/runtime/jcc/host-context-lifecycle-contract.json",
+    "provider_session_policy": "one persistent lobby provider process/session per app opening and one persistent match provider process/session per Start Match; repeated turns reuse the live owning session, and resume is crash/recovery only"
+  },
+  "interaction_event_contract": {
+    "one_visible_coach_answer_per_user_interaction": true,
+    "visible_coach_answer_definition": "A strategy-bearing coach final_text. Operational system status may be shown separately, but it must not contain a second strategy answer.",
+    "direct_user_message": {
+      "response_owner": "the direct user response_task",
+      "derived_context_events": "context_only",
+      "failure_policy": "report the owned task failure; do not replay latest_user_intent_changed or target_plan_changed as automatic cruise answers"
+    },
+    "latest_user_intent_changed": {
+      "meaning": "observable interaction context from the latest user message",
+      "response_policy": "direct_user_task_only",
+      "must_carry": [
+        "interaction_id",
+        "response_task_id"
+      ]
+    },
+    "target_plan_changed": {
+      "meaning": "a durable target-plan fact changed",
+      "response_policy": "context_only",
+      "must_not_include": "ordinary lineup, economy, or item questions that only mention a possible line"
+    },
+    "confirmation_only_interaction": {
+      "response_owner": "none",
+      "status_policy": "a factual confirmation status may be shown immediately, but it is not a strategy answer",
+      "delivery_trigger": "persist the canonical choice only; later explicit advice and fixed checkpoints read it"
+    },
+    "mixed_confirmation_and_question": {
+      "response_owner": "the direct user response_task",
+      "derived_confirmed_choices_event": "context_only"
+    },
+    "manual_match_variables": {
+      "response_owner": "none at confirmation time; the next user-owned advice or fixed strategic checkpoint absorbs the opening-variable judgment",
+      "immediate_ui_output": "operational confirmation status only",
+      "response_policy": "context_only",
+      "delivery_trigger": "persist variables immediately without opening or reserving a Host lane",
+      "first_augment_scope": "preselection ranks the three augments and refresh decision using the variables; candidate lineup directions begin only after the first augment is confirmed"
+    },
+    "match_fact_capture": {
+      "request_kind": "match_fact_capture",
+      "entry_authority": "explicit Cruise Quick Record control only; matching visible text in ordinary chat is never sufficient",
+      "response_owner": "one direct fact-receipt task",
+      "host_role": "propose closed-schema normalized fact operations only",
+      "runtime_role": "resolve, validate, persist one sparse current-match patch, and replace model wording with a receipt of actual accepted and unresolved facts",
+      "strategy_advice_forbidden": true,
+      "target_plan_mutation_forbidden": true,
+      "sibling_answer_forbidden": true
+    },
+    "proactive_followup": "A structured semantic decision event may open one later Host response after deterministic facts are committed. The follow-up is the main model's strategy judgment over the latest selected live state, rules, rankings, target, choices, and missing facts; it is not a second answer to the original interaction. Field mutations alone do not open a host response lane.",
+    "choice_card_final_confirmation": {
+      "applies_to": [
+        "augment_card",
+        "god_card",
+        "item_card"
+      ],
+      "pending_candidate_report_policy": "context_only_until_user_confirms_final_choice",
+      "final_confirm_response_owner": "none for confirmation-only; a separate explicit advice request owns its normal Host response",
+      "strategy_answer_on_confirmation": false,
+      "persistence_before_success": true,
+      "response_policy": "state_only_no_host_task",
+      "duplicate_confirmation_policy": "return already-recorded status without opening a Host task or appending a duplicate fact",
+      "later_selected_context": [
+        "exact confirmed choice",
+        "current effective equipment",
+        "latest user intent",
+        "durable target plan when present",
+        "current decision snapshot",
+        "coach content agenda"
+      ]
+    },
+    "choice_card_advice_action": {
+      "response_owner": "one structured_card_action task in the registered backend choice mode",
+      "renderer_action": "one unified 获取建议 action; there is no separate choice-only versus whole-card choice advice button",
+      "candidate_authority": "the exact canonical reported_choice_set submitted by the current card action",
+      "selected_context": "exact candidates plus all reliable canonical variables, shared equipment, chat intent, target plan, live state, rules, and current-day rankings",
+      "missing_equipment_policy": "equipment is useful but optional; answer without it and mention only a missing equipment fact that would materially change the choice",
+      "output_focus": "focus on the current choice even though the input context is complete; augment preselection must include both candidate ranking and an explicit keep/refresh action",
+      "automatic_cruise_policy": "not an automatic cruise task; choice-window reservation and cross-stage proactive expiry must not cancel it",
+      "delivery_policy": "deliver exactly once, acknowledge, then return the choice mode to cruise",
+      "status_ping_policy": "punctuation-only status checks observe this owner without opening or preempting another response task"
+    }
+  },
+  "structured_context_semantics": [
+    "stage_round in game_state_brief and game_rule_contract is the authoritative current game stage for this answer.",
+    "active_rules_bundle explains the game mechanics; game_state_brief applies those mechanics to the current match snapshot.",
+    "coach_rules_brief.stage_decision_tasks explains what the coach should do at the current stage before falling back to generic transition advice.",
+    "coach_rules_brief.decision_model.context_priority explains which facts dominate when live_state, user intent, and backend drafts conflict.",
+    "match_facts are match-session memory owned by JCC Runtime. Newer recent_user_messages and choice_confirmations supersede older conflicting intentions.",
+    "strategy_wiki_context contains curated published strategy memory. It is a soft prior below current live_state, active rules, current-season hard data, daily big data, and newer user intent.",
+    "Every active choice mechanic obeys its compiled candidate_input_policy. Current product augment, item/anvil, and active-season choice candidate sets come only from the current-match user report; candidates are not proof of what the user finally selected.",
+    "Ordinary chat may update latest user intent and provisional target context, but it never writes candidate sets, final choices, equipment, or match variables. The explicit match_fact_capture request kind is a separate authorized fact-only path; Runtime validates every proposed operation against current catalogs and descriptors before persistence. Structured cards remain the normal direct editing path.",
+    "Backend scorer output is evidence for ranking and action candidates. It is not the visible coach voice in manual user-choice mode.",
+    "latest_user_intent is the raw/provisional user interaction context; target_plan is a separately sourced durable plan fact. A lineup-related question must not silently become a confirmed target plan.",
+    "When no durable target_plan exists, latest_target_intent may participate in strategy-fit, economy, equipment, and later event decisions only with provisional_user_intent authority; it does not create a response lane or silently become confirmed.",
+    "Static common, season, hard-data, daily-ranking, wiki, and economy context may be bootstrapped once per provider-session fingerprint. A changed fingerprint replaces that capsule once inside the same live owning session instead of creating or resuming a provider session; dynamic current facts must still be supplied on every turn.",
+    "JCC Runtime SQLite state is the source of truth; provider session memory is cache only and cannot recover or overwrite runtime-owned facts.",
+    "Active augment, item/anvil, and active-season choice cards use structured user card reports as candidate context; OCR or vision output cannot supply candidate names for those active product flows.",
+    "Augment Quick OCR is a renderer-draft convenience only. The shared resident worker may be warmed once at Start Match, but OCR output remains local until the player submits and confirms the structured card.",
+    "effective_equipment is the shared per-field equipment context. Use trusted structured MuMu fields first, then current-match user confirmation, then explicit fallback candidates; never wait for lower-priority sources after a sufficient confirmed field is present.",
+    "Whole-snapshot equipment confirmation is a fact-only current-match action available after daemon-owned equipment hydration; it persists despite a missing or stale surrounding choice-set binding, does not create a Host response task, and never treats an unhydrated renderer default as an explicit empty inventory. Whole-equipment advice is a separate explicit interaction with exactly one Host response owner.",
+    "Candidate-bearing structured-card submissions require the current canonical choice-set revision. Only final confirmation may rebase a stale same-match/same-stage/same-kind binding, and only when exact slot plus ref/name identity still matches the current canonical set.",
+    "A final-confirm success status is truthful only after canonical choice persistence succeeds. Confirmation-only is a state update and never opens a Host response task; later explicit advice and fixed strategic checkpoints read the confirmed choice from canonical state.",
+    "Proactive delivery validity is decision-scoped. Non-durable proactive answers fail closed when the current stage is unavailable. Decision-stable events compare their own action fingerprint and may ignore unrelated live-state churn; scorer-driven events recompute that fingerprint in the same registered decision-trigger domain used at admission. Exact shop and bench events require their material fingerprints and fail closed when those fingerprints are unavailable.",
+    "Manual round selector values are current-match user-confirmed phase context; rank tier selector values are user settings. They are not strategy answers and must not create Host sibling tasks.",
+    "A missing choice is blocking only when the active user request asks which option to take in that exact choice window. For lineup, economy, item, target, or other user-owned actions in any stage, answer first and attach the missing choice as conditional uncertainty or a card reminder.",
+    "Target-role semantics are part of retrieval identity. Main-carry intent must not be satisfied by a lineup where the champion is only a member or trait activator; national Master+ strength, winning-lineup recipe evidence, and hero-market/item evidence remain provenance-distinct.",
+    "A selected strategy_profile canonical_variant is one atomic published roster. Every sibling variant and mature recipe variant remains a separately named atomic alternative, and every nested transition remains attached to its exact parent; population does not classify source role. Live adjustments must name explicit one-for-one substitutions.",
+    "strategy_profile.equipment_requirements separates variant-specific explicit upstream requirements, full-variant-consensus group requirements, formation-required emblems, and non-mandatory published core consensus. Required advice names the holder; an external-holder emblem also names the granted trait and lineup-formation effect only after the current trait catalog resolves that grant uniquely. Missing or ambiguous grants fail closed. Item preference then falls through to published recipe, hero core, highest-top-one, and most-popular evidence.",
+    "Craftability is exact current-patch hard-data evidence. An item may be described as craftable only when it appears in component_recipe_contexts for the named owned component; desired traits or lineup fit cannot synthesize an unlisted emblem or recipe."
+  ],
+  "signatures": {
+    "manual_augment_choice": {
+      "input_fields": [
+        "runtime_context.coach_rules_brief",
+        "runtime_context.game_state_brief",
+        "runtime_context.match_facts",
+        "context.live_state_summary",
+        "context.choices or augments.choice_candidates",
+        "strategy_wiki_context",
+        "task.evidence",
+        "user_message"
+      ],
+      "required_semantics": [
+        "Current-match user-reported choices are candidate options, not confirmed selected choices.",
+        "Answer the user's active question before cruise/background advice.",
+        "Use the current stage and forbidden_waiting_for list before generic game knowledge.",
+        "Use coach_rules_brief.stage_decision_tasks[current_stage] before generic transition or economy advice.",
+        "If game_rule_contract marks the current stage as a choice checkpoint, answer that choice now and do not tell the user to wait for it.",
+        "For augment preselection at any registered augment checkpoint, explain the ranking in final_text and return only the minimal choice_handoff needed for the UI selection or refresh action.",
+        "If a declared choice checkpoint is past and its selected option is unknown, ask what was selected or state the selection is unknown.",
+        "If the answer arrives after the transient window, still answer the user and mention the snapshot when useful."
+      ],
+      "output_fields": [
+        "generated_by=current_cli_agent_main_model",
+        "final_text",
+        "choice_handoff only when Runtime must apply a UI selection or refresh action"
+      ],
+      "visible_fast_hint_policy": "Manual mode should prefer AI-native host output. Deterministic scorer evidence may be included in the host request, but should not replace the final model answer unless the product explicitly enables emergency fast hints."
+    },
+    "cruise_advice": {
+      "input_fields": [
+        "runtime_context.coach_rules_brief",
+        "runtime_context.game_state_brief",
+        "runtime_context.match_facts",
+        "context.live_state_summary",
+        "context.runtime_event_context when present",
+        "task.evidence",
+        "daily_big_data",
+        "season_catalog",
+        "strategy_wiki_context",
+        "itemization_context when relevant"
+      ],
+      "required_semantics": [
+        "Speak only when new evidence materially changes advice or a high-value event fires.",
+        "Do not repeat a semantically equivalent suggestion for the same stage/economy/action state.",
+        "Do not say to wait for a choice checkpoint that is current or already past.",
+        "Use current stage_round from game_state_brief as stronger evidence than old phrasing in backend drafts.",
+        "Use coach_rules_brief.stage_decision_tasks[current_stage] to decide whether this stage calls for economy, choice, board, item, or missing-information behavior.",
+        "Ask the user for missing final selections from active major-season choice mechanics when those facts affect the next decision.",
+        "When runtime_event_context is present, answer that exact semantic event once. Treat parallel scorer tasks as evidence, not independent answer owners.",
+        "When a target line exists, proactively surface the one or two most actionable decisions among economy/roll timing, key units to hold or seek, item slam or holder, future choice priorities, and commit-or-pivot conditions.",
+        "Do not invent a win/loss streak. Use a structured streak fact or explicit user plan when present; otherwise ask one focused question only when streak posture would materially change the current action."
+      ],
+      "output_fields": [
+        "generated_by=current_cli_agent_main_model",
+        "final_text",
+        "candidate_refs only when Runtime must preserve or materialize exact Ranking identities"
+      ]
+    },
+    "lineup_card": {
+      "input_fields": [
+        "runtime_context.coach_rules_brief",
+        "runtime_context.game_state_brief",
+        "season_catalog",
+        "selected_ranking_candidates",
+        "strategy_wiki_context",
+        "match_facts.match_variables",
+        "live_state_summary",
+        "user_message"
+      ],
+      "required_semantics": [
+        "Use only current-season champion names from season_catalog.",
+        "Prefer data-backed similar candidates before inventing a fresh comp.",
+        "Return a minimal lineup_handoff when the active mode is lineup_card or the direct user message explicitly asks Runtime to materialize a lineup/board/card. Ordinary lineup discussion remains text advice and needs no handoff.",
+        "Use selected_ranking_candidates, daily_big_data, current match variables, confirmed choices, live_state, and latest user intent to choose the lineup instead of only paraphrasing the user's text.",
+        "Explain main carry items, moves, leveling and positioning priorities in final_text when they matter.",
+        "Do not hand-write renderer coordinates, canonical rosters, loadouts, or card layout. Runtime restores authoritative candidate facts and Renderer builds the card. Missing optional handoff details must not suppress usable final_text."
+      ],
+      "output_fields": [
+        "generated_by=current_cli_agent_main_model",
+        "final_text",
+        "lineup_handoff with target identity and semantic adjustments"
+      ],
+      "lineup_handoff_contract": {
+        "purpose": "Provider-to-Runtime mechanical identity handoff only",
+        "fields": [
+          "candidate_id",
+          "variant_id",
+          "target_source",
+          "target_identity",
+          "adjustments",
+          "equipment_priority",
+          "positioning_intent"
+        ],
+        "materialization_policy": "Runtime restores canonical roster, population, carries, equipment and trusted positioning; Renderer owns card layout.",
+        "degradation_policy": "A missing or incomplete handoff skips or degrades card publication but never suppresses usable final_text."
+      }
+    }
+  },
+  "metrics": {
+    "rule_timing_correctness": [
+      "Never says to wait for a choice checkpoint that game_rule_contract marks current or past.",
+      "Uses the active major-season normal and special rules for checkpoint timing instead of hardcoded stage memory.",
+      "Treats minor-patch strategy as a soft prior that cannot redefine game-rule timing."
+    ],
+    "choice_fact_correctness": [
+      "Distinguishes current-match user-reported candidate sets from confirmed final selections.",
+      "Asks for an unknown final selected choice when that fact affects later advice."
+    ],
+    "current_season_correctness": [
+      "Does not invent old-season champions.",
+      "Uses current-season catalog and current-season special rules when attached."
+    ],
+    "context_recency": [
+      "Latest user intent overrides older conflicting target plans.",
+      "Newer choice confirmations override older candidate observations.",
+      "Cruise output should not display expired proactive advice. Freshness is decision-scoped: non-durable advice requires a current stage, unrelated live-state churn must not cancel a stable economy, tempo, lineup-direction, or equipment action, and scorer-driven advice must retain its registered decision-trigger fingerprint domain; a newer same-family decision, an exact shop/bench change, a choice boundary, or a major-stage boundary makes the older action stale."
+    ],
+    "answer_shape": [
+      "Chinese final_text is short and actionable.",
+      "Explains what to do, why now, evidence used, and uncertainty only as needed.",
+      "Does not expose raw ranking ids or backend scorer internals.",
+      "One user interaction produces at most one strategy-bearing coach answer; derived intent and target-plan context cannot create sibling automatic answers.",
+      "Choice-card final confirmation is state-only; explicit card advice and fixed strategic checkpoints use the canonical response-task delivery path."
+    ]
+  },
+  "dependency_policy": {
+    "dspy_runtime_dependency": "not_in_hot_path",
+    "allowed_future_use": "offline prompt/signature optimization and eval-set tuning",
+    "reason": "Hot match advice must stay CLI-neutral and low-latency. Runtime contracts should be plain JSON selected context that any host CLI agent can consume."
+  },
+  "host_request_timeout_policy": {
+    "schema": "jcc-host-request-timeout-policy-v1",
+    "default_turn_timeout_seconds": 90,
+    "manual_choice_timeout_seconds": 45,
+    "deep_strategy_timeout_seconds": 300,
+    "deep_strategy_applies_to": [
+      "lineup_card",
+      "postgame_review",
+      "user_requested_deep_analysis",
+      "data_cap_lineup_generation"
+    ],
+    "timeout_result_policy": "canonical_response_task_failure_or_audit_only_according_to_response_owner; never create a sibling answer"
+  }
+}

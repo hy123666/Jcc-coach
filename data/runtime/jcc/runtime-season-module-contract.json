@@ -1,0 +1,218 @@
+{
+  "schema": "jcc-runtime-season-module-contract-v1",
+  "purpose": "Define season/version identity lineage while the promoted immutable Core Profile is the only production game-knowledge selector.",
+  "active_selection": {
+    "primary": "data/game-knowledge/jcc/active-profile.json#runtime_identity",
+    "compatibility_fallback": null,
+    "policy": "A valid promoted Core Profile runtime_identity selects the production season, patch, local package, upstream source package, hard-data manifest, and provenance as one atomic identity. Missing or invalid active-profile data fails closed. No second mutable active-version metadata copy is retained."
+  },
+  "version_identity_mapping": {
+    "runtime_major_season": {
+      "field": "season_id",
+      "example": "s18",
+      "pattern": "^s\\d+$",
+      "meaning": "Runtime rules, mechanism policy, overlays, visual references, and host strategy defaults that are tied to a major set/season. Patch-shaped ids such as s18_1 are invalid here."
+    },
+    "runtime_minor_patch": {
+      "field": "active_patch_id",
+      "example": "s18_1",
+      "meaning": "Runtime-selected minor patch for hard data, rankings, and patch-scoped strategy overrides inside the active major season."
+    },
+    "upstream_mode_identity": {
+      "field": "game_mode_id",
+      "example": "jcc-mode18",
+      "meaning": "Upstream game mode identity. It usually changes with the major set/season, not with every balance patch."
+    },
+    "upstream_data_package": {
+      "field": "package_id",
+      "example": "jcc-s18-s18_1",
+      "meaning": "Runtime-local logical package identity. It follows product season and patch naming and never embeds upstream season labels."
+    },
+    "resolution_order": [
+      "Require the promoted Core Profile runtime_identity as the atomic production selector.",
+      "Fail closed when active-profile or any referenced immutable artifact is missing or invalid.",
+      "Use the selected season_id for major-season runtime rules and season-scoped policy.",
+      "Use the selected active_patch_id for patch-scoped strategy overrides, hard-data refreshes, and live rankings.",
+      "Use the selected hard_data_manifest as the authoritative package entrypoint; do not infer package paths from display names.",
+      "Treat upstream package labels as source identity, not as runtime season authority."
+    ]
+  },
+  "promotion_tuple": {
+    "immutable_fields": [
+      "season_id",
+      "active_patch_id",
+      "game_mode_id",
+      "package_id",
+      "source_package_id",
+      "hard_data_manifest"
+    ],
+    "content_fingerprint": "rules_source_fingerprint is compiled from the tuple plus reusable base rules, major-season normal/special rules, optional patch strategy, and exceptional audited rule overrides.",
+    "policy": "Compile the complete tuple into the immutable Core Profile runtime_identity and promote its one small active pointer only after verification. Do not partially advance one field. New matches pin the Core Profile, complete tuple, and exact rules_source_fingerprint.",
+    "history_requirement": "Every promoted tuple remains addressable through retained season modules, hard-data packages, previous live rankings, and requirement/runbook history."
+  },
+  "activation_policy": {
+    "scope": "new_match_only",
+    "policy": "A changed active season, patch tuple, or compiled rule source applies only to matches created after promotion. In-progress match sessions continue only while both their captured tuple and rules_source_fingerprint still match; otherwise runtime fails closed.",
+    "candidate_blocker_policy": "A compiled candidate may exist before every release input is available. Any declared activation_blocker prevents promotion. A missing compatible Master+ ranking overlay is an explicit unavailable capability, not a Core Profile blocker; Runtime must never substitute another season's overlay.",
+    "match_snapshot_fields": [
+      "season_id",
+      "active_patch_id",
+      "game_mode_id",
+      "package_id",
+      "source_package_id",
+      "hard_data_manifest",
+      "rules_source_fingerprint"
+    ],
+    "reason": "Coaching advice, postgame summaries, and replay/debug evidence must remain explainable against the data version that produced them."
+  },
+  "versioned_layers": {
+    "active_game_rules": {
+      "common_knowledge_path": "data/game-knowledge/jcc/common/",
+      "common_runtime_path": "data/runtime/jcc/common-choice-runtime-contract.json",
+      "season_descriptor_path_pattern": "data/game-knowledge/jcc/seasons/<season_id>/season-descriptor.json",
+      "contains": ["common gameplay doctrine", "runtime choice lifecycle", "season choice mechanics", "season manual variables", "season timing", "season-only host mode add-ons and aliases"],
+      "policy": "The promoted Core Profile is the game-rule authority. tools/jcc_active_rules_contract.mjs composes its common doctrine, Runtime product choice contract, and active season descriptor into the compatibility-shaped active rules bundle consumed by existing Runtime modules."
+    },
+    "runtime_choice_mode_contracts": {
+      "common_path": "data/runtime/jcc/common-choice-runtime-contract.json#runtime_choice_modes",
+      "season_path_pattern": "data/game-knowledge/jcc/seasons/<season_id>/season-descriptor.json#runtime_contract",
+      "contains": ["mode and phase", "intent terms", "trigger terms", "aliases", "current-match user-report prompt", "composer prefill and refresh-prefill behavior", "candidate paths", "descriptor-owned candidate seed/sync variable fields", "advice-task trigger terms", "visible-window answer contract", "host mode context", "missing-selection prompt"],
+      "checkpoint_semantic_contract": {
+        "required_mechanic_fields": ["mechanic_id", "kind", "mode", "phase", "label", "stages", "intent_terms"],
+        "compiled_checkpoint_fields": ["mechanic_id", "kind", "mode", "phase", "choice_label", "stage_round", "intent_terms", "trigger_terms", "aliases", "semantic_terms", "source_layer"],
+        "matching_policy": "Common Host and scorer validation must match checkpoint references only from the active compiled descriptor's label, kind, intent_terms, trigger_terms, advice-task trigger terms, and aliases. It must not carry hardcoded augment or season-mechanic keyword tables.",
+        "absent_mechanic_policy": "If the active major-season rules do not declare a mechanic, no checkpoint, missing-choice follow-up, Host validation rule, or mode routing for that mechanic may be compiled."
+      },
+      "policy": "Reusable choice modes live in base rules. Season-only modes, labels, task triggers, answer contracts, host context, and any link between a season choice card and a season manual-variable field live in that major season. A descriptor may declare candidate_seed_variable_field and candidate_sync_variable_field so Start Match variables, current cards, and later checkpoints share one canonical field without common code naming the mechanic. Candidate synchronization is a no-model fact update and must not create a sibling answer. A descriptor may also declare advice_optional_fields for values not revealed before advice and final_selection_required_fields for values required only after the selected option resolves; unselected candidates must not block final confirmation. Active product candidate intake is a current-match user report; compatibility or calibration OCR tools are outside the product route. The active-rules compiler is the single descriptor and checkpoint builder; common runtime, cruise routing, Host validation, and host context packs consume only descriptors present in the active compiled rules and must not hardcode a season-only mode or keyword table."
+    },
+    "choice_availability_index": {
+      "generated_path_pattern": "data/game-knowledge/jcc/generated/<core_profile_id>/augment-stage-authority.json",
+      "catalog_path_pattern": "data/game-knowledge/jcc/generated/<core_profile_id>/decision-input-catalog.json",
+      "key_shape": "season_id + patch_id + choice_kind + stage_round + tier -> candidate ids",
+      "source_policy": "Compile both artifacts from the candidate Core Profile's hard-data package, audited stage authority, Common choice framework, and major-season descriptor before promotion. Publish them in the same immutable Core Profile directory and activate them through the one active-profile pointer. Runtime must not read shared generated fallbacks. Visual icon manifests provide assets and aliases only and are never gameplay-stage authority.",
+      "entity_alias_policy": "Season-neutral equipment player aliases live in Common; champion and other version-owned player aliases live in the current patch. Core compilation binds both only to unique entities in the selected catalog, records inactive Common aliases without creating entities, and publishes one compiled alias gateway. Runtime candidate APIs carry the bound aliases as search terms into every catalog-backed structured-card combobox, including shared confirmed equipment and holder editors. Search and language understanding may use aliases, but canonical ids and names remain the only persisted facts.",
+      "browse_policy": "Empty dropdowns fail closed to candidates known legal for the exact stage and tier. Unknown-stage rows are excluded from default browsing and retained in an explicit audit list.",
+      "search_policy": "Explicit typed search may discover the full current-season catalog. Known cross-stage results carry legal-stage metadata and are not confirmable for the wrong stage; unknown-stage rows carry a visible unknown marker and remain explicit current-match user-report candidates, not promoted hard-data truth.",
+      "minor_patch_policy": "A minor patch that changes augment availability publishes a new hard-data package and rebuilt Core Profile artifacts as one verified candidate; it does not rewrite common host instructions or major-season rules unless timing/mechanics truly changed."
+    },
+    "runtime_manual_variable_contracts": {
+      "common_path": "data/runtime/jcc/runtime-ui-mode-contract.json#modes.manual_match_variables.fields",
+      "season_path_pattern": "data/game-knowledge/jcc/seasons/<season_id>/season-descriptor.json#manual_variable_fields",
+      "contains": ["field key and label", "control and cardinality", "season option source", "summary role", "legacy payload migration aliases"],
+      "policy": "The common manual-variable surface owns only season-neutral fields such as target_plan. Every season-specific field is declared by the active major-season descriptor and compiled through tools/jcc_active_rules_contract.mjs. Electron, the renderer, match context, Host context, and validation consume the compiled descriptors; none may embed S17 field names. A future season without an S17 descriptor must render and persist no S17 field, even when stale option data exists. Legacy payload aliases are migration input only and stay inside the owning season descriptor."
+    },
+    "hard_data_package": {
+      "path_pattern": "data/core-patches/jcc/generations/<hard_data_generation_id>/",
+      "contains": ["champions", "traits", "items", "augments", "season-declared optional entities and special mechanisms"],
+      "policy": "Never mutate a published hard-data generation in place, including during a same-patch source refresh. package_id is the runtime-local logical identity; source_package_id preserves upstream source proof; hard_data_generation_id addresses exact normalized bytes. Publish and verify a new generation, compile a new Core Profile candidate, then switch only the active Core pointer."
+    },
+    "patch_strategy_overrides": {
+      "path_pattern": "data/game-knowledge/jcc/seasons/<season_id>/patches/<patch_id>/strategy-overrides.json",
+      "contains": ["tempo bias", "economy policy bias", "contested meta policy", "host model strategy notes"],
+      "policy": "Patch strategy overrides may tune coaching priors for the active minor patch. They must not redefine game-rule timing such as augment stages, choice pretriggers, or base leveling thresholds."
+    },
+    "patch_rule_overrides": {
+      "path_pattern": "data/game-knowledge/jcc/seasons/<season_id>/patches/<patch_id>/rule-overrides.json",
+      "contains": ["exceptional same-season timing changes", "exceptional same-season mechanic contract changes"],
+      "policy": "Absent by default. If present, rules_changed must be true and the file must declare affected surfaces, old/new behavior, applicability, and rollback evidence. Override payload is limited to a rule-surface whitelist, every payload path must be covered by changed_rule_surfaces, and declared surfaces are replaced exactly rather than deep-merged. Ordinary balance or meta changes are forbidden here."
+    },
+    "mumu_catalog_overlay": {
+      "active_selector": "data/game-knowledge/jcc/active-profile.json#runtime_catalog_overlay_path",
+      "generation_path_pattern": "data/game-knowledge/jcc/generated/<core_profile_id>/runtime-catalog-overlay.json",
+      "contains": ["id_to_name", "icon_urls", "aliases", "same_icon_groups"],
+      "compatibility_mirror": "data/runtime/jcc/mumu-catalog-overlay.json",
+      "policy": "Production resolves the immutable overlay through the active Core Profile. The shared compatibility mirror is non-authoritative and must never select a season."
+    },
+    "live_rankings": {
+      "active_pointer": "data/live-rankings/jcc/active-ranking-closure.json",
+      "generation_path_pattern": "data/live-rankings/jcc/generations/<ranking_overlay_id>/",
+      "contains": ["manifest.json", "audit.json", "rank-signal.json", "lineup-strategy-index.json"],
+      "policy": "Build and audit a complete immutable Master+ Ranking Overlay generation plus its exact-Core recipe generation, then atomically publish one small active closure pointer. active-generation.json and active-recipe-generation.json are compatibility mirrors; historical current/previous mirrors are evidence only. Runtime resolves the closure and never uses trend history for live decisions."
+    },
+    "visual_reference_assets": {
+      "current_dir": "data/runtime/jcc/visual-icons/",
+      "contains": ["item_templates", "augment_templates", "champion_templates", "manifest"],
+      "policy": "Reference assets are versioned by manifest and used as model/context references, not as the default hard live matcher."
+    },
+    "mechanism_policy_tables": {
+      "contains": ["Common formula kernels", "Core-compiled current-version resource modifiers", "Core-compiled augment semantic profiles", "economy resource taxonomy"],
+      "policy": "Common owns formula algorithms and the closed semantic vocabulary. The exact Core Profile supplies current-version values, typed resource modifiers, and static augment features. Runtime computes match-dependent axes from the Match-pinned Core and current facts; it must not read a global season taxonomy or a retired season's named modifier table."
+    }
+  },
+  "minor_patch_default_policy": {
+    "hard_data": "Minor patches default to refreshing or replacing the active hard-data package/manifest for balance, roster, item, augment, and source-data changes. Do not alter season normal/special rules unless upstream changed actual game-rule timing or mechanics.",
+    "live_rankings": "Minor patches default to refreshing data/live-rankings/jcc/current while preserving previous and regenerating diff/rank signal.",
+    "strategy_overrides": "Minor patches may add or replace patch strategy overrides when the meta/economy/read-prior changed but game rules did not.",
+    "runtime_code": "Minor patches should not require runtime code or canonical host-instruction changes unless a machine contract or source boundary changes."
+  },
+  "exceptional_patch_rule_override_policy": {
+    "allowed_only_when": [
+      "Upstream changes game-rule timing within the same major season.",
+      "Upstream changes a season mechanic formula or choice-window structure that runtime rules model explicitly.",
+      "A production defect proves the existing season rule file encoded timing or mechanics incorrectly."
+    ],
+    "requirements": [
+      "Document why the patch is an exception.",
+      "Keep patch strategy and game-rule timing separate.",
+      "Update affected machine contracts, requirements registry, and changelog in the same change.",
+      "Declare every changed rule surface exactly; undeclared payload, overlapping declarations, and non-rule metadata overrides fail closed.",
+      "Verify old in-progress match sessions retain their captured tuple."
+    ],
+    "default_rejection": "Do not edit season normal/special rules for ordinary balance, rankings, popularity, tempo, or economy-prior changes."
+  },
+  "rollback_and_history_policy": {
+    "rollback_unit": "active Core Profile promotion tuple",
+    "policy": "Rollback by restoring the previously promoted tuple, not by mutating current files in place to approximate an older state.",
+    "preserve": [
+      "old season modules",
+      "old patch strategy override files",
+      "old hard-data packages",
+      "previous live rankings",
+      "postgame summaries and match tuple snapshots",
+      "requirements changelog entries"
+    ],
+    "forbidden": [
+      "Deleting historical season or patch modules solely because a newer patch is active.",
+      "Rewriting postgame or debug evidence to match a newer tuple.",
+      "Inferring rollback from package display names instead of explicit tuple history."
+    ]
+  },
+  "runtime_invariant_layers": [
+    "device_connection",
+    "daily_session",
+    "match_session",
+    "response_task",
+    "mode_system",
+    "host_agent_context_pack",
+    "host_multimodal_visual_request",
+    "advice_task_lifecycle",
+    "postgame_summary_retention",
+    "vertical_runtime_ui_shell",
+    "lineup_text_board_renderer"
+  ],
+  "switching_workflow": [
+    "prepare the complete candidate promotion tuple",
+    "create new hard-data package for the new season or minor patch",
+    "build and verify the unpromoted package only through explicit --candidate-manifest; never use an environment-variable path override",
+    "create or refresh season catalog overlay and visual reference manifest",
+    "sync current live rankings for the selected season",
+    "create or refresh patch strategy overrides when the minor patch changes meta/economy priors",
+    "rebuild strategy tables and mechanism policy indexes when their source data changed",
+    "run season module, common-season-neutrality, and season-aware renderer verifiers",
+    "run runtime backend verifier",
+    "switch active season pointer only after verifiers pass",
+    "apply the promoted tuple and compiled rules_source_fingerprint to new matches only"
+  ],
+  "do_not_port_assumptions": [
+    "A retired season's choice mechanics must not appear unless the active compiled descriptor declares them",
+    "A retired season's manual variables must not appear unless the active compiled descriptor declares them",
+    "A retired season's special item or mechanism names must not enter shared Runtime contracts",
+    "UI variable labels may need a season-specific display mapping even when the UI shell remains reusable"
+  ],
+  "compatibility_policy": {
+    "keep_old_season_modules": true,
+    "reason": "Older seasons can return, and historical postgame summaries should remain explainable.",
+    "runtime_live_state_schema": "stable_outer_shape_with_season_specific_match_variables",
+    "missing_contract_or_match_snapshot": "fail_closed_without_hardcoded_season_fallback"
+  }
+}

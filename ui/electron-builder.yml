@@ -1,0 +1,45 @@
+appId: com.jcc.runtime
+productName: JCC Runtime
+artifactName: JCC-Runtime-${version}-${arch}.${ext}
+afterPack: scripts/after-pack-jcc.cjs
+files:
+  - "dist/**/*"
+  - "electron/**/*"
+  - "package.json"
+
+directories:
+  output: release
+  buildResources: assets
+
+extraResources:
+  - from: "../resources/ocr"
+    to: "ocr"
+  - from: "../tools"
+    to: "tools"
+  - from: "../tools/bin"
+    to: "adb"
+  - from: "../data"
+    to: "data"
+  - from: "../ui/electron"
+    to: "ui/electron"
+  - from: "node_modules/minisearch"
+    to: "node_modules/minisearch"
+  - from: "../AGENTS.md"
+    to: "AGENTS.md"
+  - from: "../CLAUDE.md"
+    to: "CLAUDE.md"
+
+win:
+  target:
+    - nsis
+  icon: assets/jcc-runtime.ico
+
+nsis:
+  include: installer/uninstall-user-data.nsh
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: JCC Runtime
+  deleteAppDataOnUninstall: false

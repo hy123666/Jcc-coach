@@ -1,0 +1,79 @@
+{
+  "schema": "jcc-game-knowledge-common-document-v1",
+  "logical_id": "common.semantic_features",
+  "scope": "common",
+  "kind": "semantic_features",
+  "season_neutral": true,
+  "entity_references": [],
+  "entries": [
+    {
+      "id": "semantic_feature_contract",
+      "type": "contract",
+      "feature_namespaces": ["identity", "category", "role", "effect", "trigger", "target", "output", "cadence", "condition", "delivery", "reliability", "scaling", "commitment", "rule_change", "failure", "risk", "tempo", "route", "objective", "formation", "evidence"],
+      "relation_namespace": "relation",
+      "policy": {
+        "typed_facts_remain_authoritative": true,
+        "features_only_score_within_existing_channels": true,
+        "features_cannot_create_entity_legality": true,
+        "runtime_match_features_are_transient": true,
+        "automatic_publication_by_model": false
+      }
+    },
+    {
+      "id": "controlled_feature_ids",
+      "type": "feature_registry",
+      "values": [
+        "identity.champion", "identity.item", "identity.augment", "identity.trait", "identity.lineup", "identity.match_state",
+        "category.combat", "category.economy", "category.equipment", "category.trait", "category.tempo", "category.exclusive", "category.special",
+        "role.main_carry", "role.main_tank", "role.secondary_carry", "role.frontline", "role.backline", "role.support", "role.temporary_carry", "role.temporary_tank",
+        "effect.attack_damage", "effect.spell_power", "effect.attack_speed", "effect.mana", "effect.mana_gain", "effect.armor", "effect.magic_resist", "effect.health", "effect.durability", "effect.damage_amp", "effect.damage_reduction", "effect.penetration", "effect.wound", "effect.armor_shred", "effect.magic_resist_shred", "effect.crit_chance", "effect.healing", "effect.shield", "effect.control", "effect.economy", "effect.experience", "effect.item_generation", "effect.item_conversion", "effect.shop_access", "effect.leveling", "effect.trait_enablement", "effect.star_up", "effect.unit_generation", "effect.loot", "effect.team_size",
+        "trigger.combat_start", "trigger.basic_attack", "trigger.cast", "trigger.kill", "trigger.low_health", "trigger.timed", "trigger.round_start", "trigger.shop_refresh", "trigger.level_up", "trigger.purchase", "trigger.combat_result", "trigger.win", "trigger.loss", "trigger.player_elimination", "trigger.stage_start", "trigger.after_rounds", "trigger.item_equipped", "trigger.unit_star_up", "trigger.trait_threshold",
+        "target.self", "target.single", "target.team", "target.frontline", "target.backline", "target.trait_units", "target.adjacent",
+        "output.ad", "output.ap", "output.mixed", "output.tank",
+        "cadence.attack", "cadence.spell_cast",
+        "condition.requires_three_star", "condition.requires_emblem", "condition.requires_augment", "condition.requires_item", "condition.requires_population", "condition.requires_hp", "condition.requires_gold", "condition.requires_board_strength", "condition.requires_unit", "condition.requires_trait", "condition.requires_basic_attack", "condition.requires_cast", "condition.requires_melee", "condition.requires_ranged", "condition.requires_low_health", "condition.requires_kill", "condition.requires_win", "condition.requires_loss", "condition.requires_rounds", "condition.requires_item_slot", "condition.requires_future_augment_slot", "condition.conditional_effect",
+        "delivery.immediate", "delivery.recurring", "delivery.delayed", "delivery.milestone", "delivery.permanent",
+        "reliability.guaranteed", "reliability.conditional", "reliability.random", "reliability.choice",
+        "scaling.flat", "scaling.per_round", "scaling.per_stage", "scaling.per_level", "scaling.per_star", "scaling.per_trait", "scaling.per_kill", "scaling.capped", "scaling.uncapped",
+        "commitment.universal", "commitment.ad", "commitment.ap", "commitment.frontline", "commitment.reroll", "commitment.fast_level", "commitment.trait_locked", "commitment.champion_locked",
+        "rule_change.shop", "rule_change.interest", "rule_change.leveling", "rule_change.items", "rule_change.trait_count", "rule_change.combat", "rule_change.augment_tier", "rule_change.stat_override", "rule_change.stat_cap",
+        "failure.condition_unmet", "failure.payout_unreached", "failure.round_loss", "failure.resource_forfeit", "failure.effect_overridden", "failure.trigger_unavailable", "failure.duplicate_effect_low_value",
+        "risk.effect_waste", "risk.condition_mismatch", "risk.effect_overlap",
+        "risk.high_economy_cost", "risk.high_cost_dependency", "risk.contested", "risk.slow_start", "risk.item_dependency", "risk.augment_dependency", "risk.transition_cost", "risk.hp_cost", "risk.interest_loss", "risk.random_variance", "risk.delayed_payout", "risk.lock_in", "risk.failure_loss", "risk.rule_restriction", "risk.low_immediate_power",
+        "tempo.early", "tempo.mid", "tempo.late", "tempo.immediate", "tempo.long_term", "tempo.reroll", "tempo.fast_level", "tempo.transition",
+        "route.lineup_direction", "route.lineup_data_query", "route.lineup_execution", "route.itemization", "route.augment_choice", "route.roll_or_level", "route.economy", "route.positioning", "route.transition", "route.numeric_calculation",
+        "objective.damage", "objective.cast_frequency", "objective.survivability", "objective.trait_coverage", "objective.economy", "objective.stabilization", "objective.top_four", "objective.first_place", "objective.flexibility", "objective.lineup_fit",
+        "formation.has_published_transition", "formation.generated_transition_gap_fill",
+        "evidence.core_profile", "evidence.ranking_recipe", "evidence.current_match"
+      ]
+    },
+    {
+      "id": "controlled_relation_ids",
+      "type": "relation_registry",
+      "values": [
+        "relation.affects", "relation.benefits", "relation.suitable_for", "relation.modifies", "relation.activates_after", "relation.compatible_with", "relation.conflicts_with", "relation.overrides", "relation.requires_role", "relation.prefers_effect", "relation.advises", "relation.conditioned_on", "relation.carried_by", "relation.transitions_to", "relation.member_of", "relation.contains", "relation.has_trait", "relation.costs", "relation.has_role", "relation.grants", "relation.tagged_with", "relation.has_main_carry", "relation.has_main_tank", "relation.requires_item"
+      ]
+    },
+    {
+      "id": "pipeline_ownership",
+      "type": "ownership",
+      "common": "defines vocabulary and relation semantics",
+      "core": "compiles current-version entity features from normalized hard data",
+      "ranking": "compiles lineup-instance features from current Master+ recipes and observations",
+      "runtime": "maps current-match facts to transient features without writing them back"
+    },
+    {
+      "id": "vocabulary_extension_policy",
+      "type": "contract",
+      "policy": {
+        "compile_against_current_registry_first": true,
+        "unmapped_semantics_must_be_audited": true,
+        "unmapped_semantics_cannot_silently_become_special": true,
+        "season_neutral_new_concepts_extend_common": true,
+        "season_only_new_concepts_remain_in_season_descriptor": true,
+        "schema_and_regression_update_required_for_new_common_features": true,
+        "runtime_or_model_cannot_publish_new_features": true
+      }
+    }
+  ]
+}

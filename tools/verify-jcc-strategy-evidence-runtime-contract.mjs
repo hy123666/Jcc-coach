@@ -1,0 +1,40 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const readJson = async (relative) => JSON.parse(await readFile(path.join(repoRoot, relative), "utf8"));
+const common = await readJson("data/game-knowledge/jcc/common/strategy-evidence-framework.json");
+const runtime = await readJson("data/runtime/jcc/strategy-evidence-runtime-contract.json");
+const tools = await readJson("data/runtime/jcc/host-readonly-tool-contract.json");
+const migration = await readJson("data/runtime/jcc/strategy-evidence-kernel-migration-matrix.json");
+
+assert.equal(common.season_neutral, true);
+assert.ok(common.entries[0].routes.length >= 8);
+assert.equal(runtime.common_framework, "data/game-knowledge/jcc/common/strategy-evidence-framework.json");
+assert.equal(runtime.snapshot_contract.immutable_for_one_logical_host_turn, true);
+assert.equal(runtime.payload_budget.current_turn_target_bytes, 1024 * 1024);
+assert.equal(runtime.payload_budget.current_turn_absolute_bytes, 2 * 1024 * 1024);
+assert.equal(runtime.payload_budget.ordinary_current_turn_target_bytes, 1024 * 1024);
+assert.equal(runtime.payload_budget.ordinary_current_turn_absolute_bytes, 2 * 1024 * 1024);
+assert.equal(runtime.payload_budget.strategic_current_turn_target_bytes, 4 * 1024 * 1024);
+assert.equal(runtime.payload_budget.strategic_current_turn_absolute_bytes, 8 * 1024 * 1024);
+assert.equal(runtime.payload_budget.native_tool_minimum_reserve_bytes, 262144);
+assert.equal(runtime.payload_budget.current_turn_prompt_bytes_include_instructions_and_serialized_delta, true);
+assert.equal(tools.provider_modes.codex, "native_dynamic_tools");
+assert.equal(tools.provider_modes.kimi, "native_dynamic_tools");
+assert.match(tools.capability_verification, /Unverified sessions explicitly remain prefetch_complete/);
+assert.equal(tools.budget.normal_target_total_calls, 2);
+assert.equal(tools.budget.complex_request_hard_max_total_calls, 12);
+assert.equal(tools.budget.max_calls_per_tool, 10);
+assert(tools.security.typed_relation_operations.includes("get_lineup_variants"));
+assert.equal(tools.budget.minimum_reserved_tool_bytes_for_native_turn, 262144);
+assert.equal(tools.freshness.pre_and_post_call_validation, true);
+assert.equal(tools.freshness.applies_to_empty_arguments, true);
+assert.equal(tools.freshness.same_owner_revision_advance_allowed, true);
+assert.equal(tools.security.no_big_data.includes("cannot widen"), true);
+assert.ok(migration.surfaces.every((surface) => surface.status === "kernel_required"));
+assert.ok(migration.absence_guards.includes("no single-route truncation of a multi-domain question"));
+
+console.log(JSON.stringify({ ok: true, schema: "jcc-strategy-evidence-runtime-contract-verification-v1" }));

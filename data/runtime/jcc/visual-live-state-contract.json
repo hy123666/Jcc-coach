@@ -1,0 +1,177 @@
+{
+  "contract_id": "jcc-visual-live-state-contract",
+  "product_boundary": "observable_screen_visual_source",
+  "purpose": "Define bounded screenshot-derived visual observations for JCC runtime live_state.",
+  "allowed_sources": [
+    "adb exec-out screencap -p",
+    "MuMu NemuShell screencap for desktop MuMu visual calibration",
+    "user-authorized MediaProjection in future Android-side capture",
+    "curated offline fixture images",
+    "host CLI agent native multimodal model that receives only the current authorized frame and returns structured JSON",
+    "public static champion/augment/item catalogs",
+    "existing match-scoped Android runtime log signals as secondary evidence"
+  ],
+  "forbidden_sources": [
+    "SSL pinning bypass",
+    "Frida hooks",
+    "anti-cheat bypass",
+    "game process memory reads",
+    "game process memory writes",
+    "private account data scraping",
+    "credential extraction",
+    "unbounded raw screenshot retention"
+  ],
+  "mvp_fields": [
+    "phase.phase",
+    "economy.hp",
+    "economy.gold",
+    "economy.level",
+    "economy.xp",
+    "shop.shop_units",
+    "board.board_units",
+    "bench.bench_units",
+    "augments.selection_active",
+    "augments.choices",
+    "augments.selected_augments",
+    "items.choice_options",
+    "items.item_bench",
+    "items.equipped_items"
+  ],
+  "on_demand_visual_policy": {
+    "trigger": "user asks for immediate choice/advice and MuMu GI has no reliable event for the visible screen",
+    "primary_runtime": "MuMu structured facts plus calibrated resident RapidOCR ROI workers",
+    "default_persist_raw_frames": false,
+    "output": "structured visual candidates only",
+    "candidate_fields": [
+      "economy.hp",
+      "economy.gold",
+      "economy.level",
+      "economy.xp",
+      "on_demand_choice.screen_type",
+      "on_demand_choice.choices",
+      "augments.choices",
+      "augments.selected_augments",
+      "items.choice_options",
+      "items.item_bench",
+      "items.equipped_items"
+    ],
+    "catalog": "active-profile.runtime_catalog_overlay_path"
+  },
+  "vision_model_policy": {
+    "contract": "data/runtime/jcc/vision-model-sensing-contract.json",
+    "tool": "tools/run-jcc-vision-model-observation.mjs",
+    "role": "bounded fallback for missing or ambiguous scoped OCR evidence; never the hot-path truth source",
+    "trigger": "explicit runtime mode, high-value cruise uncertainty, or user-visible choice/event context",
+    "not_per_frame": true,
+    "output": "structured visual_observations candidates only",
+    "frame_retention": "no raw frame retention by default; host CLI agent output must not embed image bytes in structured output",
+    "mumu_bridge_priority": "MuMu 4352/4353/4354/4358 remain primary for unit/shop/phase facts. Vision model output must not overwrite verified bridge fields.",
+    "catalog_constraint": "Vision output is validated against the Match-pinned active Core Profile runtime catalog overlay and may use data/runtime/jcc/visual-icons/manifest.json as visual reference data. Unmatched names stay unresolved candidates.",
+    "owner_scope_policy": "Self refresh writes only visual candidates for own items/augments/equipment. No vision model output may write board_units, bench_units, opponent board, or opponent positioning facts.",
+    "fallbacks": [
+      "resident RapidOCR workers are the primary path for calibrated choice text and HUD fields",
+      "scene-scoped icon matching is fallback/validation only; 4357 remains the structured item_bench source"
+    ]
+  },
+  "on_demand_choice_policy": {
+    "purpose": "Handle user-triggered choice/advice requests. The primary product path is an explicit runtime_ui_mode button; visual classification is a fallback.",
+    "trigger_sources": [
+      "explicit user visual question",
+      "runtime UI mode button",
+      "4358 s=4 game status candidate"
+    ],
+    "s4_semantics": "4358 s=4 is a visual-attention trigger, not a reliable semantic label. The active descriptor and explicit Runtime mode determine whether the panel is a supported augment, item, or other current-season choice.",
+    "mode_contract": "data/runtime/jcc/runtime-ui-mode-contract.json",
+    "screen_types": [
+      "item_choice_panel",
+      "shop_area_item_forge_panel",
+      "reward_choice_panel",
+      "augment_choice",
+      "unknown_choice_panel"
+    ],
+    "classifier_policy": "The explicit runtime_ui_mode selects the calibrated ROI. If the mode is missing, ask the user which panel is open. If scoped OCR is missing or ambiguous, the host multimodal agent may inspect the same transient frame as fallback.",
+    "low_confidence_policy": "If screen_type or choices are low confidence, ask for user confirmation instead of answering with fake precision.",
+    "confirmation_policy": "Visible choice drafts and agent advice never confirm a selection. Augment, active-season, and item/anvil selections become canonical only through the corresponding structured card. Ordinary chat and diagnostic OCR cannot write candidates or final choices.",
+    "item_forge_context_policy": "Rounds such as 5-3, 5-7, and 6-7 are strategy/common-knowledge hints only. Do not auto-trigger visual sensing, context, or pending advice from fixed rounds; use the item_choice runtime UI mode.",
+    "legacy_log_text_policy": "Text lines emitted by emulator helper logs are ignored by product live_state and visible advice. Calibrated ROI OCR is the primary visible-choice text source."
+  },
+  "field_statuses": [
+    "verified",
+    "visual_candidate",
+    "visual_low_confidence_candidate",
+    "visual_model_candidate_unresolved",
+    "log_candidate",
+    "conflicted",
+    "missing",
+    "stale",
+    "layout_mismatch"
+  ],
+  "storage_policy": {
+    "default_persist_raw_frames": false,
+    "default_frame_lifecycle": "transient_in_memory_or_temp_file_deleted_after_processing",
+    "delete_raw_frame_after_visual_processing": true,
+    "ring_buffer_frame_limit": 30,
+    "explicit_persist_flag": "--persist-frame",
+    "persist_when": [
+      "explicit_fixture",
+      "explicit_debug_or_calibration_request"
+    ],
+    "production_rule": "Scoped ROI OCR or fallback multimodal sensing must output structured candidates and delete transient raw frames immediately. Do not keep PNG screenshots by default."
+  },
+  "match_session_policy": {
+    "coach_mode_scope": "ADB/device connection may stay open across games, but each game must start a new match_session.",
+    "required_start_event": "new_game_start",
+    "reset_on_new_match": [
+      "visual_observation_buffer",
+      "action_reducer_state",
+      "candidate_board_units",
+      "candidate_bench_units",
+      "candidate_shop_units",
+      "candidate_augments",
+      "candidate_selected_augments",
+      "candidate_items",
+      "frame_hash_history",
+      "visual_sensing_history",
+      "coach_decision_history"
+    ],
+    "carry_across_matches": [
+      "device_connection",
+      "static_catalogs",
+      "roi_layout",
+      "model_contracts",
+      "hard_data_indexes"
+    ],
+    "mismatch_policy": "If visual observations and live_state have different match_session_id values, reject applying those observations instead of merging cross-match data."
+  },
+  "icon_recognition_policy": {
+    "purpose": "Keep catalog icon assets as optional multimodal references while restricting live 2D icon matching to left-item-rail fallback and conflict validation.",
+    "input_shape": "The only live icon matcher emits scene-scoped left-item-rail item candidates with confidence and normalized rectangles.",
+    "catalog": "active-profile.runtime_catalog_overlay_path",
+    "candidate_fields": [
+      "augments.selected_augments",
+      "items.choice_options",
+      "items.item_bench",
+      "items.equipped_items",
+      "champions.icon_candidates"
+    ],
+    "promotion_policy": "4357 is the only structured source that may populate items.item_bench. left_item_rail_roi_icon stays in items.item_bench_candidates as fallback, validation, or conflict evidence and must not populate items.item_bench. This exception cannot be reused for unit-attached equipment, selected augments, opponent side rails, board/bench identity, or opponent board facts. Selected augments require same-match confirmation through the structured augment card; owned-augment panel OCR remains diagnostic only.",
+    "equipment_policy": "4357 is primary for left inventory/sidebar equipment. 4356 visible equipment rectangles can attach only to trusted own 4353 units under the S=1 plus fresh non-empty 4354 shop anchor; otherwise keep unassigned diagnostics. S=2 4356 may include visible equipment but cannot be assigned to own or opponent units.",
+    "unit_equipment_roi_policy": {
+      "primary_model": "unit_detected_hp_bar_bottom_row_v3",
+      "anchor": "4353 current_view unit position -> detected nearby green HP bar -> three centered item slots directly below the HP bar",
+      "allowed_promotion_anchor": "S=1 plus fresh non-empty 4354 shop anchor and fresh 4353 own-unit candidate evidence.",
+      "forbidden_promotion_sources": [
+        "unit-local broad grid scans",
+        "board-region sliding-window scans",
+        "generic unit-neighborhood texture/icon hits"
+      ],
+      "debug_policy": "Broad grid/sliding scans are not part of the runtime equipment pipeline and must not enter formal visual observations or live_state."
+    },
+    "owner_scope_policy": "Self selected augment side rails and owned-augment text-panel OCR are reference/debug candidates only, not final selected-augment truth. Opponent selected augments, opponent item bench, opponent board, opponent positioning, and S=2 current-view side rails are not product sensing paths."
+  },
+  "promotion_policy": "Visual observations may become live_state candidates with evidence and confidence. They must not become verified board_units or bench_units until fixture replay and runtime checks prove the field semantics.",
+  "pollution_guard": "A visual session must be match scoped. Prior-match frames, prior action reducers, and anonymous global logs cannot seed a new match visual state.",
+  "product_decisions": {
+    "opponent_board_visual_state_removed": "Opponent board snapshots are not part of product live_state. Do not mutate live_state from opponent/current-view visual facts."
+  }
+}

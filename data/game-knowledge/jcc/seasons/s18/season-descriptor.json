@@ -1,0 +1,177 @@
+{
+  "schema": "jcc-game-knowledge-season-descriptor-v1",
+  "logical_id": "season.s18",
+  "scope": "season",
+  "season_id": "s18",
+  "inherits": {
+    "common_manifest": "manifest.json",
+    "standard_mechanics": [
+      "mechanic.augment_choice",
+      "mechanic.carousel_checkpoint"
+    ]
+  },
+  "mechanics": [
+    {
+      "id": "season_mechanic.nature_sprite_shop",
+      "kind": "shop_extension",
+      "catalog_entity_kind": "nature_sprite",
+      "acquisition_surface": "normal_shop_refresh",
+      "choice_window": false,
+      "requires_explicit_confirmation": false,
+      "runtime_ui_mode": null,
+      "authority": "active_patch_catalog_and_current_match_shop_observation"
+    },
+    {
+      "id": "season_mechanic.grand_elementalist",
+      "kind": "entity_variant",
+      "catalog_entity_kind": "champion",
+      "canonical_entity_id": "5459",
+      "canonical_entity_name": "拉克丝",
+      "base_trait_id": "469",
+      "base_trait_name": "大元素使",
+      "selected_trait_contribution": 2,
+      "shop_conversion": {
+        "trigger": "own_one_grand_elementalist_on_board_or_bench",
+        "effect": "convert_other_grand_elementalists_in_shop_to_the_owned_selected_trait_and_class"
+      },
+      "variant_order": [
+        "黑荆棘",
+        "灵魂莲华",
+        "魔女",
+        "永恒之森",
+        "花仙子",
+        "地狱火",
+        "月蚀骑士",
+        "野兽之灵",
+        "日蚀骑士"
+      ],
+      "authority": "developer_confirmed_s18_major_season_mechanic"
+    }
+  ],
+  "manual_variable_fields": [],
+  "extensions": {
+    "choice_pretriggers": {},
+    "itemization_context_fields": [],
+    "decision_math_inputs": [
+      {
+        "field": "nature_sprite_effect",
+        "evidence_source": "season_mechanics",
+        "optional": true,
+        "default": null,
+        "missing_disclosure": "The active-season nature sprite effect was not confirmed and was omitted from the calculation."
+      }
+    ],
+    "retrieval_namespaces": [
+      "nature_sprite"
+    ],
+    "shop_extensions": [
+      {
+        "mechanic_id": "season_mechanic.nature_sprite_shop",
+        "catalog_entity_kind": "nature_sprite",
+        "sensing_status": "catalog_ready_runtime_mapping_live_verified_with_explicit_shop_only_exception"
+      }
+    ]
+  },
+  "season_entity_terms": [
+    "自然之力",
+    "小精灵商店",
+    "大元素使",
+    "元素拉克丝",
+    "mode18natureforce"
+  ],
+  "standard_mechanics_overrides": [],
+  "source_references": [],
+  "runtime_contract": {
+    "schema": "jcc-season-runtime-contract-v1",
+    "normal_rules": {
+      "schema": "jcc-season-normal-rules-v1",
+      "scope": "season_normal",
+      "season_id": "s18",
+      "patch_scope": "major_season_rules_not_patch_balance",
+      "game_mode_id": "jcc-mode18",
+      "display_name": "S18 inherited standard flow",
+      "choice_mechanics": [
+        {
+          "mechanic_id": "augment_choice",
+          "kind": "augment",
+          "mode": "augment_choice",
+          "phase": "augment_choice",
+          "label": "augment choice",
+          "intent_terms": [
+            "海克斯",
+            "强化",
+            "海克斯强化",
+            "augment",
+            "hex"
+          ],
+          "trigger_terms": [
+            "augment_choice",
+            "augment_choice_advice"
+          ],
+          "aliases": [
+            "augment",
+            "hex",
+            "强化选择"
+          ],
+          "source": "common.standard_mechanics",
+          "stages": [
+            "2-1",
+            "3-2",
+            "4-2"
+          ]
+        }
+      ],
+      "choice_pretriggers": {
+        "1-4": {
+          "target_stage_round": "2-1",
+          "kind": "augment"
+        },
+        "3-1": {
+          "target_stage_round": "3-2",
+          "kind": "augment"
+        },
+        "4-1": {
+          "target_stage_round": "4-2",
+          "kind": "augment"
+        }
+      },
+      "stage_decision_tasks": {
+        "2-4": "Standard carousel checkpoint: prioritize the most needed, hardest-to-obtain, or immediate key-item component. Prefer a scarce main carry, primary tank, core trait unit, or immediate upgrade only when its value clearly exceeds the item.",
+        "3-4": "Standard carousel checkpoint: prioritize the most needed, hardest-to-obtain, or immediate key-item component. Prefer a scarce main carry, primary tank, core trait unit, or immediate upgrade only when its value clearly exceeds the item.",
+        "4-4": "Standard carousel checkpoint: prioritize the most needed, hardest-to-obtain, or immediate key-item component. Prefer a scarce main carry, primary tank, core trait unit, or immediate upgrade only when its value clearly exceeds the item.",
+        "5-4": "Standard carousel checkpoint: prioritize the most needed, hardest-to-obtain, or immediate key-item component. Prefer a scarce main carry, primary tank, core trait unit, or immediate upgrade only when its value clearly exceeds the item.",
+        "6-4": "Standard carousel checkpoint: prioritize the most needed, hardest-to-obtain, or immediate key-item component. Prefer a scarce main carry, primary tank, core trait unit, or immediate upgrade only when its value clearly exceeds the item.",
+        "7-4": "Standard carousel checkpoint: prioritize the most needed, hardest-to-obtain, or immediate key-item component. Prefer a scarce main carry, primary tank, core trait unit, or immediate upgrade only when its value clearly exceeds the item."
+      },
+      "stage_strategy_protocol": {},
+      "host_model_invariants": [
+        "The standard augment and carousel checkpoints are inherited from Common and are not S18-specific mechanics.",
+        "Carousel checkpoints are advisory stage tasks, not structured choice modes or manual variables."
+      ],
+      "missing_choice_followups": {}
+    },
+    "special_rules": {
+      "schema": "jcc-season-special-rules-v1",
+      "scope": "season_special",
+      "season_id": "s18",
+      "patch_scope": "major_season_rules_not_patch_balance",
+      "game_mode_id": "jcc-mode18",
+      "display_name": "S18 Nature Force season extensions",
+      "mechanics": {
+        "decision_input_catalog": {
+          "source_kind_exclusions": {},
+          "policy": "Only explicit player-facing choice entities may enter a choice catalog. Nature sprites remain shop-extension entities."
+        },
+        "choice_mechanics": [],
+        "shop_extensions": [
+          {
+            "mechanic_id": "season_mechanic.nature_sprite_shop",
+            "catalog_entity_kind": "nature_sprite",
+            "choice_kind": null,
+            "manual_variable_field": null
+          }
+        ]
+      }
+    }
+  }
+}

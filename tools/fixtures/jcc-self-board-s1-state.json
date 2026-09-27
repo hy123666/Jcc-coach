@@ -1,0 +1,381 @@
+{
+  "ok": true,
+  "match_session_id": "self-board-s1-live",
+  "phase": {
+    "mumu_status_code": 1,
+    "phase_name": "planning_or_actionable"
+  },
+  "current_view": {
+    "raw_units": [
+      {
+        "id": "12458",
+        "raw_id": 12458,
+        "x": 655,
+        "y": 389,
+        "area": "current_view",
+        "slot": 0,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "22460",
+        "raw_id": 22460,
+        "x": 967,
+        "y": 573,
+        "area": "current_view",
+        "slot": 1,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "11463",
+        "raw_id": 11463,
+        "x": 625,
+        "y": 573,
+        "area": "current_view",
+        "slot": 2,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "23460",
+        "raw_id": 23460,
+        "x": 879,
+        "y": 577,
+        "area": "current_view",
+        "slot": 3,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "13460",
+        "raw_id": 13460,
+        "x": 887,
+        "y": 279,
+        "area": "current_view",
+        "slot": 4,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "12458",
+        "raw_id": 12458,
+        "x": 793,
+        "y": 279,
+        "area": "current_view",
+        "slot": 5,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "13460",
+        "raw_id": 13460,
+        "x": 1073,
+        "y": 279,
+        "area": "current_view",
+        "slot": 6,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "21454",
+        "raw_id": 21454,
+        "x": 719,
+        "y": 581,
+        "area": "current_view",
+        "slot": 7,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "23458",
+        "raw_id": 23458,
+        "x": 803,
+        "y": 578,
+        "area": "current_view",
+        "slot": 8,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "23462",
+        "raw_id": 23462,
+        "x": 556,
+        "y": 386,
+        "area": "current_view",
+        "slot": 9,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "21454",
+        "raw_id": 21454,
+        "x": 421,
+        "y": 279,
+        "area": "current_view",
+        "slot": 10,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "13458",
+        "raw_id": 13458,
+        "x": 1166,
+        "y": 279,
+        "area": "current_view",
+        "slot": 11,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "13462",
+        "raw_id": 13462,
+        "x": 980,
+        "y": 279,
+        "area": "current_view",
+        "slot": 12,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "13462",
+        "raw_id": 13462,
+        "x": 607,
+        "y": 279,
+        "area": "current_view",
+        "slot": 13,
+        "source": "mumu_gi_fixture"
+      }
+    ],
+    "filtered_units": [
+      {
+        "id": "12458",
+        "raw_id": 12458,
+        "x": 655,
+        "y": 389,
+        "area": "current_view",
+        "slot": 0,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "22460",
+        "raw_id": 22460,
+        "x": 967,
+        "y": 573,
+        "area": "current_view",
+        "slot": 1,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "11463",
+        "raw_id": 11463,
+        "x": 625,
+        "y": 573,
+        "area": "current_view",
+        "slot": 2,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "23460",
+        "raw_id": 23460,
+        "x": 879,
+        "y": 577,
+        "area": "current_view",
+        "slot": 3,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "21454",
+        "raw_id": 21454,
+        "x": 719,
+        "y": 581,
+        "area": "current_view",
+        "slot": 7,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "23458",
+        "raw_id": 23458,
+        "x": 803,
+        "y": 578,
+        "area": "current_view",
+        "slot": 8,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "23462",
+        "raw_id": 23462,
+        "x": 556,
+        "y": 386,
+        "area": "current_view",
+        "slot": 9,
+        "source": "mumu_gi_fixture"
+      }
+    ],
+    "derived_traits": []
+  },
+  "board": {
+    "board_units": [],
+    "local_board_units_candidate": [
+      {
+        "id": "12458",
+        "raw_id": 12458,
+        "x": 655,
+        "y": 389,
+        "area": "current_view",
+        "slot": 0,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "22460",
+        "raw_id": 22460,
+        "x": 967,
+        "y": 573,
+        "area": "current_view",
+        "slot": 1,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "11463",
+        "raw_id": 11463,
+        "x": 625,
+        "y": 573,
+        "area": "current_view",
+        "slot": 2,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "23460",
+        "raw_id": 23460,
+        "x": 879,
+        "y": 577,
+        "area": "current_view",
+        "slot": 3,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "21454",
+        "raw_id": 21454,
+        "x": 719,
+        "y": 581,
+        "area": "current_view",
+        "slot": 7,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "23458",
+        "raw_id": 23458,
+        "x": 803,
+        "y": 578,
+        "area": "current_view",
+        "slot": 8,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "23462",
+        "raw_id": 23462,
+        "x": 556,
+        "y": 386,
+        "area": "current_view",
+        "slot": 9,
+        "source": "mumu_gi_fixture"
+      }
+    ],
+    "promotion_status": "candidate_promoted_by_s1_self_view_anchor"
+  },
+  "bench": {
+    "bench_units": [
+      {
+        "id": "13460",
+        "raw_id": 13460,
+        "x": 887,
+        "y": 279,
+        "area": "bench",
+        "slot": 0,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "12458",
+        "raw_id": 12458,
+        "x": 793,
+        "y": 279,
+        "area": "bench",
+        "slot": 1,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "13460",
+        "raw_id": 13460,
+        "x": 1073,
+        "y": 279,
+        "area": "bench",
+        "slot": 2,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "21454",
+        "raw_id": 21454,
+        "x": 421,
+        "y": 279,
+        "area": "bench",
+        "slot": 3,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "13458",
+        "raw_id": 13458,
+        "x": 1166,
+        "y": 279,
+        "area": "bench",
+        "slot": 4,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "13462",
+        "raw_id": 13462,
+        "x": 980,
+        "y": 279,
+        "area": "bench",
+        "slot": 5,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "13462",
+        "raw_id": 13462,
+        "x": 607,
+        "y": 279,
+        "area": "bench",
+        "slot": 6,
+        "source": "mumu_gi_fixture"
+      }
+    ]
+  },
+  "shop": {
+    "shop_units": [
+      {
+        "id": "12457",
+        "raw_id": 12457,
+        "slot": 0,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "13452",
+        "raw_id": 13452,
+        "slot": 1,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "12461",
+        "raw_id": 12461,
+        "slot": 2,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "12454",
+        "raw_id": 12454,
+        "slot": 3,
+        "source": "mumu_gi_fixture"
+      },
+      {
+        "id": "13454",
+        "raw_id": 13454,
+        "slot": 4,
+        "source": "mumu_gi_fixture"
+      }
+    ]
+  },
+  "items": {
+    "item_bench": [],
+    "equipped_items": []
+  },
+  "metadata": {
+    "source": "rebuilt_minimal_fixture_after_visual_mainline_cleanup"
+  }
+}

@@ -1,0 +1,759 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-10T10:30:52.343Z",
+  "product_boundary": "mumu_gameassist_jkchess_apk_private_cache",
+  "package_name": "com.mumu.gameassist.jkchess",
+  "source_root": "raw-evidence-cleaned:mumu-gameassist-jkchess",
+  "live_state_boundary": "MuMu gameassist contains OCR, screen capture, lineup, and recommendation structures. It may expose candidate screen-derived hero/shop/bench/action observations, but current APK/database evidence does not prove a complete current local board_units or bench_units snapshot. Promote only when runtime-local binding and deterministic action folding are proven.",
+  "pollution_guard": "Never merge MuMu gameassist candidates into board_units or bench_units unless the local player binding is strongly_bound and candidates are replayed through a verified state transition reducer.",
+  "direct_live_board_snapshot_status": "not_observed",
+  "classes": [
+    {
+      "id": "BuyHeroInfo",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/BuyHeroInfo",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "shop_purchase_candidate",
+      "live_state_mapping": [
+        "shop_units",
+        "candidate_actions.buy"
+      ],
+      "constructors": [
+        {
+          "signature": "(II)Lcom/mumu/gameassist/games/jcc/data/BuyHeroInfo;",
+          "parameters": [
+            {
+              "descriptor": "I",
+              "type": "int"
+            },
+            {
+              "descriptor": "I",
+              "type": "int"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "WaitHeroInfo",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/WaitHeroInfo",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "bench_wait_candidate",
+      "live_state_mapping": [
+        "bench_units.candidate_observations"
+      ],
+      "constructors": [
+        {
+          "signature": "(III)Lcom/mumu/gameassist/games/jcc/data/WaitHeroInfo;",
+          "parameters": [
+            {
+              "descriptor": "I",
+              "type": "int"
+            },
+            {
+              "descriptor": "I",
+              "type": "int"
+            },
+            {
+              "descriptor": "I",
+              "type": "int"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "SellHeroInfo",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/SellHeroInfo",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "sell_action_candidate",
+      "live_state_mapping": [
+        "candidate_actions.sell"
+      ],
+      "constructors": [
+        {
+          "signature": "(I)Lcom/mumu/gameassist/games/jcc/data/SellHeroInfo;",
+          "parameters": [
+            {
+              "descriptor": "I",
+              "type": "int"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "GiHeroInfo",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/GiHeroInfo",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "board_or_visible_hero_candidate",
+      "live_state_mapping": [
+        "board_units.candidate_observations"
+      ],
+      "constructors": [
+        {
+          "signature": "(III)Lcom/mumu/gameassist/games/jcc/data/GiHeroInfo;",
+          "parameters": [
+            {
+              "descriptor": "I",
+              "type": "int"
+            },
+            {
+              "descriptor": "I",
+              "type": "int"
+            },
+            {
+              "descriptor": "I",
+              "type": "int"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "GiHeroList",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/GiHeroList",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "visible_hero_list_candidate",
+      "live_state_mapping": [
+        "board_units.candidate_observations"
+      ],
+      "constructors": [
+        {
+          "signature": "(Ljava/util/List;)Lcom/mumu/gameassist/games/jcc/data/GiHeroList;",
+          "parameters": [
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "GiWaitHeroList",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/GiWaitHeroList",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "bench_wait_list_candidate",
+      "live_state_mapping": [
+        "bench_units.candidate_observations"
+      ],
+      "constructors": [
+        {
+          "signature": "(Ljava/util/List;)Lcom/mumu/gameassist/games/jcc/data/GiWaitHeroList;",
+          "parameters": [
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "PlayerBattleInfo",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/PlayerBattleInfo",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "player_battle_context_candidate",
+      "live_state_mapping": [
+        "players.candidate_observations",
+        "opponents.candidate_observations"
+      ],
+      "constructors": [
+        {
+          "signature": "(IILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/HashMap;)Lcom/mumu/gameassist/games/jcc/data/PlayerBattleInfo;",
+          "parameters": [
+            {
+              "descriptor": "I",
+              "type": "int"
+            },
+            {
+              "descriptor": "I",
+              "type": "int"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/HashMap;",
+              "type": "hashmap"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "PlayerBattleInfoList",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/PlayerBattleInfoList",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "player_battle_context_list_candidate",
+      "live_state_mapping": [
+        "players.candidate_observations",
+        "opponents.candidate_observations"
+      ],
+      "constructors": [
+        {
+          "signature": "(Ljava/util/List;)Lcom/mumu/gameassist/games/jcc/data/PlayerBattleInfoList;",
+          "parameters": [
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "GiGameStatus",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/GiGameStatus",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "game_status_candidate",
+      "live_state_mapping": [
+        "phase",
+        "round",
+        "stage"
+      ],
+      "constructors": [
+        {
+          "signature": "(I)Lcom/mumu/gameassist/games/jcc/data/GiGameStatus;",
+          "parameters": [
+            {
+              "descriptor": "I",
+              "type": "int"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "StageData",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/StageData",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "mumu_recommendation_stage_payload_schema_evidence_only",
+      "live_state_mapping": [
+        "mumu_reference.recommendation_payload.stage"
+      ],
+      "constructors": [
+        {
+          "signature": "(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Lcom/mumu/gameassist/games/jcc/data/TianXuanData;II)Lcom/mumu/gameassist/games/jcc/data/StageData;",
+          "parameters": [
+            {
+              "descriptor": "Ljava/util/Map;",
+              "type": "map"
+            },
+            {
+              "descriptor": "Ljava/util/Map;",
+              "type": "map"
+            },
+            {
+              "descriptor": "Ljava/util/Map;",
+              "type": "map"
+            },
+            {
+              "descriptor": "Ljava/util/Map;",
+              "type": "map"
+            },
+            {
+              "descriptor": "Ljava/util/Map;",
+              "type": "map"
+            },
+            {
+              "descriptor": "Ljava/util/Map;",
+              "type": "map"
+            },
+            {
+              "descriptor": "Ljava/util/Map;",
+              "type": "map"
+            },
+            {
+              "descriptor": "Lcom/mumu/gameassist/games/jcc/data/TianXuanData;",
+              "type": "com.mumu.gameassist.games.jcc.data.TianXuanData"
+            },
+            {
+              "descriptor": "I",
+              "type": "int"
+            },
+            {
+              "descriptor": "I",
+              "type": "int"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "StageRecommendData",
+      "descriptor": "com/mumu/gameassist/games/jcc/data/StageRecommendData",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "mumu_recommendation_stage_payload_schema_evidence_only",
+      "live_state_mapping": [
+        "mumu_reference.recommendation_payload.stage"
+      ],
+      "constructors": [
+        {
+          "signature": "(Lcom/mumu/gameassist/games/jcc/data/StageData;Lcom/mumu/gameassist/games/jcc/data/StageData;Lcom/mumu/gameassist/games/jcc/data/StageData;)Lcom/mumu/gameassist/games/jcc/data/StageRecommendData;",
+          "parameters": [
+            {
+              "descriptor": "Lcom/mumu/gameassist/games/jcc/data/StageData;",
+              "type": "com.mumu.gameassist.games.jcc.data.StageData"
+            },
+            {
+              "descriptor": "Lcom/mumu/gameassist/games/jcc/data/StageData;",
+              "type": "com.mumu.gameassist.games.jcc.data.StageData"
+            },
+            {
+              "descriptor": "Lcom/mumu/gameassist/games/jcc/data/StageData;",
+              "type": "com.mumu.gameassist.games.jcc.data.StageData"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "XYPosition",
+      "descriptor": "com/mumu/gameassist/api/XYPosition",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "screen_or_board_xy_position",
+      "live_state_mapping": [
+        "position.candidate_xy"
+      ],
+      "constructors": [
+        {
+          "signature": "(Ljava/lang/String;Ljava/lang/String;)Lcom/mumu/gameassist/api/XYPosition;",
+          "parameters": [
+            {
+              "descriptor": "Ljava/lang/String;",
+              "type": "string"
+            },
+            {
+              "descriptor": "Ljava/lang/String;",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "ChessPositionApi",
+      "descriptor": "com/mumu/gameassist/api/ChessPositionApi",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "chess_position_api_model",
+      "live_state_mapping": [
+        "position.candidate_grid"
+      ],
+      "constructors": [
+        {
+          "signature": "(Ljava/lang/String;Lcom/mumu/gameassist/api/XYPosition;)Lcom/mumu/gameassist/api/ChessPositionApi;",
+          "parameters": [
+            {
+              "descriptor": "Ljava/lang/String;",
+              "type": "string"
+            },
+            {
+              "descriptor": "Lcom/mumu/gameassist/api/XYPosition;",
+              "type": "com.mumu.gameassist.api.XYPosition"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "PositionApiData",
+      "descriptor": "com/mumu/gameassist/api/PositionApiData",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "position_payload_wrapper",
+      "live_state_mapping": [
+        "position.candidate_grid"
+      ],
+      "constructors": [
+        {
+          "signature": "(Ljava/util/List;)Lcom/mumu/gameassist/api/PositionApiData;",
+          "parameters": [
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "LineupDetailData",
+      "descriptor": "com/mumu/gameassist/api/LineupDetailData",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "mumu_lineup_payload_schema_evidence_only",
+      "live_state_mapping": [
+        "mumu_reference.lineup_payload"
+      ],
+      "constructors": [
+        {
+          "signature": "(Lcom/mumu/gameassist/api/LineupApiData;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/OuterPositionApiData;Ljava/util/List;Lcom/mumu/gameassist/api/SecretskillApiData;Ljava/util/List;)Lcom/mumu/gameassist/api/LineupDetailData;",
+          "parameters": [
+            {
+              "descriptor": "Lcom/mumu/gameassist/api/LineupApiData;",
+              "type": "com.mumu.gameassist.api.LineupApiData"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Lcom/mumu/gameassist/api/OuterPositionApiData;",
+              "type": "com.mumu.gameassist.api.OuterPositionApiData"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Lcom/mumu/gameassist/api/SecretskillApiData;",
+              "type": "com.mumu.gameassist.api.SecretskillApiData"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "OuterPositionApiData",
+      "descriptor": "com/mumu/gameassist/api/OuterPositionApiData",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "outer_position_payload",
+      "live_state_mapping": [
+        "mumu_reference.positioning_payload"
+      ],
+      "constructors": [
+        {
+          "signature": "(Lcom/mumu/gameassist/api/ContentPosApiData;Ljava/util/List;)Lcom/mumu/gameassist/api/OuterPositionApiData;",
+          "parameters": [
+            {
+              "descriptor": "Lcom/mumu/gameassist/api/ContentPosApiData;",
+              "type": "com.mumu.gameassist.api.ContentPosApiData"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "ChosenApiData",
+      "descriptor": "com/mumu/gameassist/api/ChosenApiData",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "augment_or_chosen_payload",
+      "live_state_mapping": [
+        "augments.candidate_observations",
+        "mumu_reference.augment_payload"
+      ],
+      "constructors": [
+        {
+          "signature": "(Ljava/lang/String;Ljava/lang/String;)Lcom/mumu/gameassist/api/ChosenApiData;",
+          "parameters": [
+            {
+              "descriptor": "Ljava/lang/String;",
+              "type": "string"
+            },
+            {
+              "descriptor": "Ljava/lang/String;",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "SecretskillApiData",
+      "descriptor": "com/mumu/gameassist/api/SecretskillApiData",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "secret_skill_or_augment_payload",
+      "live_state_mapping": [
+        "augments.candidate_observations",
+        "mumu_reference.augment_payload"
+      ],
+      "constructors": [
+        {
+          "signature": "(Lcom/mumu/gameassist/api/FruitApiData;)Lcom/mumu/gameassist/api/SecretskillApiData;",
+          "parameters": [
+            {
+              "descriptor": "Lcom/mumu/gameassist/api/FruitApiData;",
+              "type": "com.mumu.gameassist.api.FruitApiData"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    },
+    {
+      "id": "LineupApiData",
+      "descriptor": "com/mumu/gameassist/api/LineupApiData",
+      "observed": true,
+      "json_adapter_observed": true,
+      "role": "mumu_lineup_api_payload_schema_evidence_only",
+      "live_state_mapping": [
+        "mumu_reference.lineup_payload"
+      ],
+      "constructors": [
+        {
+          "signature": "(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/mumu/gameassist/api/ChosenApiData;Lcom/mumu/gameassist/api/PositionApiData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Lcom/mumu/gameassist/api/LineupApiData;",
+          "parameters": [
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            },
+            {
+              "descriptor": "Lcom/mumu/gameassist/api/ChosenApiData;",
+              "type": "com.mumu.gameassist.api.ChosenApiData"
+            },
+            {
+              "descriptor": "Lcom/mumu/gameassist/api/PositionApiData;",
+              "type": "com.mumu.gameassist.api.PositionApiData"
+            },
+            {
+              "descriptor": "Ljava/lang/String;",
+              "type": "string"
+            },
+            {
+              "descriptor": "Ljava/lang/String;",
+              "type": "string"
+            },
+            {
+              "descriptor": "Ljava/lang/String;",
+              "type": "string"
+            },
+            {
+              "descriptor": "Ljava/lang/String;",
+              "type": "string"
+            },
+            {
+              "descriptor": "Ljava/util/List;",
+              "type": "list"
+            }
+          ]
+        }
+      ],
+      "field_name_status": "structure_observed_field_names_obfuscated",
+      "promotion_rule": "candidate_only_until_screen_roi_or_runtime_local_player_binding_confirms identity and position"
+    }
+  ],
+  "ocr_and_capture_evidence": [
+    "j(DLjava/util/ArrayList;Landroid/graphics/Bitmap;DLjava/lang/String;)Lcom/benjaminwan/ocrlibrary/OcrResult;",
+    "&(II)Lcom/benjaminwan/ocrlibrary/Point;",
+    ";(Lcom/benjaminwan/ocrlibrary/Point;)Landroid/graphics/Rect;",
+    "W(Ljava/util/ArrayList;FIFDLjava/lang/String;[FDD)Lcom/benjaminwan/ocrlibrary/TextBlock;",
+    ", roundOcrText=",
+    "/libs/ocr/libRapidOcr.so",
+    "!Buy hex ocr failed, quit ocr loop",
+    "CvTestUiState(screenShot=",
+    "0Lcom/benjaminwan/ocrlibrary/OcrEngine$Companion;",
+    "&Lcom/benjaminwan/ocrlibrary/OcrEngine;",
+    ".Lcom/benjaminwan/ocrlibrary/OcrResult$Creator;",
+    "&Lcom/benjaminwan/ocrlibrary/OcrResult;",
+    "*Lcom/benjaminwan/ocrlibrary/Point$Creator;",
+    "\"Lcom/benjaminwan/ocrlibrary/Point;",
+    ".Lcom/benjaminwan/ocrlibrary/TextBlock$Creator;",
+    "&Lcom/benjaminwan/ocrlibrary/TextBlock;",
+    "'[Lcom/benjaminwan/ocrlibrary/OcrResult;",
+    "#[Lcom/benjaminwan/ocrlibrary/Point;",
+    "'[Lcom/benjaminwan/ocrlibrary/TextBlock;",
+    "5android.window.ScreenCapture$ScreenshotHardwareBuffer",
+    "begin buy hex ocr",
+    "captureDisplay",
+    "captureDisplayAndroid15 cause: ",
+    "captureDisplayAndroid15 error: ",
+    "5captureDisplayAndroid15: captureDisplay returned null",
+    "-captureDisplayAndroid15: displayToken is null",
+    "ch_PP-OCRv3_det_infer",
+    "ch_PP-OCRv3_rec_infer",
+    "Fhttps://mumu.nie.netease.com/api/toolbox/item/config/app_libs_rapidocr",
+    "roundOcrText",
+    "screenshot",
+    "takeScreenShot",
+    "takeScreenShot()V"
+  ],
+  "api_evidence": [
+    "(ILjava/lang/String;Lcom/mumu/gameassist/api/DeleteGenericDataItemData;)Lcom/mumu/gameassist/api/DeleteGenericDataItemResponse;",
+    "I(ILjava/lang/String;Lcom/mumu/gameassist/api/DeleteGenericDataItemData;)V",
+    "q(ILjava/lang/String;Lcom/mumu/gameassist/api/GetGenericDataData;)Lcom/mumu/gameassist/api/GetGenericDataResponse;",
+    "B(ILjava/lang/String;Lcom/mumu/gameassist/api/GetGenericDataData;)V",
+    "w(ILjava/lang/String;Lcom/mumu/gameassist/api/UploadGenericDataData;)Lcom/mumu/gameassist/api/UploadGenericDataResponse;",
+    "E(ILjava/lang/String;Lcom/mumu/gameassist/api/UploadGenericDataData;)V",
+    "V(Lcom/mumu/gameassist/api/GenericDataItem;)Lcom/mumu/gameassist/api/UploadItemRequest;",
+    ",(Lcom/mumu/gameassist/api/GenericDataItem;)V",
+    "G(Lcom/mumu/gameassist/api/LineupDetailRequest;LS3/c;)Ljava/lang/Object;",
+    "I(Lcom/mumu/gameassist/api/ZmLineupDetailRequest;LS3/c;)Ljava/lang/Object;",
+    "h(Ljava/lang/String;Lcom/mumu/gameassist/games/jcc/data/Lineup;)Lcom/mumu/gameassist/api/GenericDataItem;",
+    "U(Ljava/lang/String;Ljava/lang/String;)Lcom/mumu/gameassist/api/UploadGenericDataData;",
+    "Z(Ljava/lang/String;Ljava/lang/String;Z)Lcom/mumu/gameassist/api/DeleteGenericDataItemData;",
+    "P(Ljava/lang/String;Ljava/util/List;)Lcom/mumu/gameassist/api/GetGenericDataData;",
+    "D(Ljava/lang/String;Z)Lcom/mumu/gameassist/api/ZmLineupDetailRequest;",
+    "?(Ljava/util/List;)Lcom/mumu/gameassist/api/LineupDetailRequest;",
+    "DeleteGenericDataItemData(game=",
+    "#DeleteGenericDataItemResponse(code=",
+    "/GeneratedJsonAdapter(DeleteGenericDataItemData)",
+    "3GeneratedJsonAdapter(DeleteGenericDataItemResponse)",
+    "%GeneratedJsonAdapter(GenericDataItem)",
+    "(GeneratedJsonAdapter(GetGenericDataData)",
+    ",GeneratedJsonAdapter(GetGenericDataResponse)",
+    ")GeneratedJsonAdapter(LineupDetailRequest)",
+    "+GeneratedJsonAdapter(UploadGenericDataData)",
+    "/GeneratedJsonAdapter(UploadGenericDataResponse)",
+    "+GeneratedJsonAdapter(ZmLineupDetailRequest)",
+    "GenericDataItem(id=",
+    "GetGenericDataData(game=",
+    "GetGenericDataResponse(code=",
+    "3Lcom/mumu/gameassist/api/DeleteGenericDataItemData;",
+    ">Lcom/mumu/gameassist/api/DeleteGenericDataItemDataJsonAdapter;",
+    "7Lcom/mumu/gameassist/api/DeleteGenericDataItemResponse;",
+    "BLcom/mumu/gameassist/api/DeleteGenericDataItemResponseJsonAdapter;",
+    ")Lcom/mumu/gameassist/api/GenericDataItem;",
+    "4Lcom/mumu/gameassist/api/GenericDataItemJsonAdapter;",
+    ",Lcom/mumu/gameassist/api/GetGenericDataData;",
+    "7Lcom/mumu/gameassist/api/GetGenericDataDataJsonAdapter;",
+    "0Lcom/mumu/gameassist/api/GetGenericDataResponse;",
+    ";Lcom/mumu/gameassist/api/GetGenericDataResponseJsonAdapter;",
+    "-Lcom/mumu/gameassist/api/LineupDetailRequest;",
+    "8Lcom/mumu/gameassist/api/LineupDetailRequestJsonAdapter;",
+    "/Lcom/mumu/gameassist/api/UploadGenericDataData;",
+    ":Lcom/mumu/gameassist/api/UploadGenericDataDataJsonAdapter;",
+    "3Lcom/mumu/gameassist/api/UploadGenericDataResponse;",
+    ">Lcom/mumu/gameassist/api/UploadGenericDataResponseJsonAdapter;",
+    "/Lcom/mumu/gameassist/api/ZmLineupDetailRequest;",
+    ":Lcom/mumu/gameassist/api/ZmLineupDetailRequestJsonAdapter;",
+    "LineupDetailRequest(reqGroup=",
+    "UploadGenericDataData(game=",
+    "UploadGenericDataResponse(code=",
+    "ZmLineupDetailRequest(lineupId=",
+    "Fhttps://mumu.nie.netease.com/api/toolbox/item/config/app_libs_rapidocr",
+    "@https://mumu.nie.netease.com/api/toolbox/item/config/ch_pp_ocrv3",
+    "Lhttps://mumu.nie.netease.com/api/toolbox/item/config/tool_apk_jkchess_assist",
+    "enull cannot be cast to non-null type kotlin.collections.List<com.mumu.gameassist.api.GenericDataItem>"
+  ],
+  "direct_live_snapshot_tokens": [],
+  "runtime_use": {
+    "can_use_now": [
+      "class names and roles as parser/schema vocabulary",
+      "OCR/capture evidence as confirmation that MuMu uses a visual pipeline",
+      "lineup/private-cache schema as reverse-engineering evidence only",
+      "position classes as coordinate-model hints for ROI calibration"
+    ],
+    "cannot_claim_yet": [
+      "direct SDK call returning current local board_units",
+      "direct SDK call returning current local bench_units",
+      "raw action-log coordinate equals UI slot without calibration"
+    ]
+  }
+}

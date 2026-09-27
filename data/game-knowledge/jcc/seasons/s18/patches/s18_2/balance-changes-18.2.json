@@ -1,0 +1,463 @@
+{
+  "schema": "jcc-core-balance-patch-v1",
+  "release_version": "18.2",
+  "source_note_sha256": "f08c39502b8632cdf056a2981b55e33177b7f09a77121ae72c968d7a6fdd527b",
+  "baseline": {
+    "season_id": "s18",
+    "patch_id": "s18_2",
+    "mode_id": "mode18",
+    "hard_data_generation_id": "51d7e5cfd2cd16f4f8d01e96f2e3e5643e51c0c7e47870c57a146114c7477017"
+  },
+  "operations": [
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.xp_to_next_level.7",
+      "from": 60,
+      "to": 56
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.xp_to_next_level.8",
+      "from": 68,
+      "to": 64
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.xp_to_next_level.9",
+      "from": 68,
+      "to": 64
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.reference_purchase_gold_at_standard_natural_timing.8",
+      "from": 60,
+      "to": 56
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.reference_purchase_gold_at_standard_natural_timing.9",
+      "from": 68,
+      "to": 64
+    },
+    {
+      "kind": "replace_field",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "path": "progression.reference_purchase_gold_at_standard_natural_timing.10",
+      "from": 68,
+      "to": 64
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "mechanics_parameters",
+      "singleton": true,
+      "fields": {
+        "provenance": {
+          "patch_overrides": {
+            "progression": {
+              "authority": "s18_2_balance_override_over_inherited_standard",
+              "balance_release": "18.2",
+              "fields": [
+                "xp_to_next_level.7",
+                "xp_to_next_level.8",
+                "xp_to_next_level.9",
+                "reference_purchase_gold_at_standard_natural_timing.8",
+                "reference_purchase_gold_at_standard_natural_timing.9",
+                "reference_purchase_gold_at_standard_natural_timing.10"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "kind": "replace_text",
+      "catalog": "traits",
+      "id": "344",
+      "replacements": [
+        { "from": "+9%", "to": "+8%" },
+        { "from": "+15%", "to": "+12%" }
+      ]
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "traits",
+      "id": "347",
+      "fields": {
+        "balance_overrides": {
+          "release_version": "18.2-hotfix",
+          "true_damage_calculation_order": "after_resistance_settlement",
+          "tier_2_true_damage_enabled": false,
+          "true_damage_enabled_breakpoints": [3, 4],
+          "status": "hotfix_applied"
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "traits",
+      "id": "450",
+      "fields": {
+        "balance_overrides": {
+          "placeable_plant_costs": {
+            "stonebark_tree": { "base": 1, "upgraded": 0 },
+            "life_flower": { "base": 1, "upgraded": 0 }
+          }
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "traits",
+      "id": "453",
+      "fields": {
+        "balance_overrides": {
+          "reward_probability_status": "rebalanced_values_not_published",
+          "threshold_rewards": {
+            "130": {
+              "added": ["2星凯特琳+1个基础装备+3金币"]
+            },
+            "185": {
+              "added": ["1个成装锻造器+2星凯特琳+2星卡蜜尔"],
+              "changed": [
+                { "from": "1个成装锻造器+8金币", "to": "1个成装锻造器+10金币" }
+              ]
+            },
+            "250": {
+              "changed": [
+                { "from": "2个成装锻造器+12金币", "to": "2个成装锻造器+20金币" },
+                { "from": "2星莫甘娜+幸运装备宝箱+基础装备锻造器", "to": "2星莫甘娜+幸运装备宝箱+随机成装+3金币" },
+                { "from": "2个幸运装备宝箱+6金币", "to": "2个幸运装备宝箱+18金币" },
+                { "from": "幸运装备宝箱+2个基础装备锻造器+魔女拉克丝+5金币", "to": "幸运装备宝箱+2个基础装备锻造器+魔女拉克丝+18金币" },
+                { "from": "1个神器锻造器+1个成装锻造器+5金币", "to": "1个神器锻造器+1个成装锻造器+18金币" }
+              ]
+            },
+            "365": {
+              "all_rewards_extra_gold": 12,
+              "changed": [
+                { "from": "2个光明版秘法手套+20金币", "to": "2个光明版秘法手套+2星凯南+15金币" }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "traits",
+      "id": "455",
+      "fields": {
+        "balance_overrides": {
+          "golden_pixie_thresholds": [170000, 200000, 300000, 400000, 500000, 600000]
+        }
+      }
+    },
+    {
+      "kind": "patch_reward_group",
+      "catalog": "reward_tables",
+      "singleton": true,
+      "table_id": "trait:453:rewards",
+      "group_label": "130",
+      "invalidate_probabilities": true,
+      "probability_status": "rebalanced_values_not_published",
+      "changes": [
+        {
+          "kind": "add_outcome",
+          "rewards": [
+            { "title": "凯特琳", "count": 1, "type": "hero", "champion_id": "918051", "champion_stars": 2 },
+            { "title": "基础装备", "count": 1 },
+            { "title": "3金币", "count": 1 }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "patch_reward_group",
+      "catalog": "reward_tables",
+      "singleton": true,
+      "table_id": "trait:453:rewards",
+      "group_label": "185",
+      "invalidate_probabilities": true,
+      "probability_status": "rebalanced_values_not_published",
+      "changes": [
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            { "title": "成装锻造器" },
+            { "title": "8金币" }
+          ],
+          "rewards": [
+            { "title": "成装锻造器" },
+            { "title": "10金币" }
+          ]
+        },
+        {
+          "kind": "add_outcome",
+          "rewards": [
+            { "title": "成装锻造器" },
+            { "title": "凯特琳", "type": "hero", "champion_id": "918051", "champion_stars": 2 },
+            { "title": "卡蜜尔", "type": "hero", "champion_id": "918164", "champion_stars": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "patch_reward_group",
+      "catalog": "reward_tables",
+      "singleton": true,
+      "table_id": "trait:453:rewards",
+      "group_label": "250",
+      "changes": [
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            { "title": "成装锻造器", "count": 2 },
+            { "title": "12金币" }
+          ],
+          "rewards": [
+            { "title": "成装锻造器", "count": 2 },
+            { "title": "20金币" }
+          ]
+        },
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            { "title": "莫甘娜", "type": "hero", "champion_id": "918025" },
+            { "title": "幸运装备宝箱", "type": "equip", "item_id": "32311" },
+            { "title": "基础装备锻造器" },
+            { "title": "5金币" }
+          ],
+          "rewards": [
+            { "title": "莫甘娜", "type": "hero", "champion_id": "918025", "champion_stars": 2 },
+            { "title": "幸运装备宝箱", "type": "equip", "item_id": "32311" },
+            { "title": "随机成装" },
+            { "title": "3金币" }
+          ]
+        },
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            { "title": "幸运装备宝箱", "count": 2, "type": "equip", "item_id": "32311" },
+            { "title": "6金币" },
+            { "title": "装备重铸器" }
+          ],
+          "rewards": [
+            { "title": "幸运装备宝箱", "count": 2, "type": "equip", "item_id": "32311" },
+            { "title": "18金币" },
+            { "title": "装备重铸器" }
+          ]
+        },
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            { "title": "魔女拉克丝", "type": "hero", "champion_id": "918099" },
+            { "title": "基础装备锻造器", "count": 2 },
+            { "title": "幸运装备宝箱", "type": "equip", "item_id": "32311" },
+            { "title": "5金币" }
+          ],
+          "rewards": [
+            { "title": "魔女拉克丝", "type": "hero", "champion_id": "918099" },
+            { "title": "基础装备锻造器", "count": 2 },
+            { "title": "幸运装备宝箱", "type": "equip", "item_id": "32311" },
+            { "title": "18金币" }
+          ]
+        },
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            { "title": "神器锻造器" },
+            { "title": "成装锻造器" },
+            { "title": "5金币" }
+          ],
+          "rewards": [
+            { "title": "神器锻造器" },
+            { "title": "成装锻造器" },
+            { "title": "18金币" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "patch_reward_group",
+      "catalog": "reward_tables",
+      "singleton": true,
+      "table_id": "trait:453:rewards",
+      "group_label": "365",
+      "changes": [
+        {
+          "kind": "replace_outcome",
+          "match_rewards": [
+            { "title": "光明版窃贼手套", "count": 2, "type": "equip", "item_id": "1607" },
+            { "title": "20金币" },
+            { "title": "装备拆卸器", "count": 3 }
+          ],
+          "rewards": [
+            { "title": "光明版秘法手套", "count": 2, "type": "equip", "item_id": "2092" },
+            { "title": "凯南", "type": "hero", "champion_id": "918085", "champion_stars": 2 },
+            { "title": "15金币" }
+          ]
+        },
+        {
+          "kind": "append_reward_to_all_outcomes",
+          "reward": { "title": "额外12金币" }
+        }
+      ]
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "champions",
+      "id": "5457",
+      "fields": {
+        "balance_overrides": {
+          "initial_cells": 3,
+          "frontline_cells": 2,
+          "backline_cells": 1
+        }
+      }
+    },
+    {
+      "kind": "replace_text",
+      "catalog": "champions",
+      "id": "1507",
+      "replacements": [
+        { "from": "造成445(", "to": "造成415(" }
+      ]
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "champions",
+      "id": "3507",
+      "fields": {
+        "balance_overrides": {
+          "physical_form_attack_damage": 62,
+          "spell_form_magic_damage_by_star": [130, 195, 315]
+        }
+      }
+    },
+    {
+      "kind": "disable",
+      "catalog": "augments",
+      "id": "20733",
+      "reason": "temporarily_disabled_in_18_2"
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "augments",
+      "ids": ["20760", "30760"],
+      "all": true,
+      "fields": {
+        "per_game_player_limit": 1,
+        "emblem_trait_effect_multiplier": 1.5
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "augments",
+      "ids": ["20769", "20778"],
+      "all": true,
+      "fields": {
+        "shared_per_game_limit": {
+          "group": "coven_familiar_or_dark_ritual",
+          "max_players": 1
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "augments",
+      "id": "20778",
+      "fields": {
+        "balance_overrides": {
+          "redeem_ap_by_tier": [7, 15, 50, 75, 125, 200, 300]
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "augments",
+      "id": "30749",
+      "fields": {
+        "per_game_player_limit": 1,
+        "balance_overrides": {
+          "trait_count_rewards": {
+            "10": "18金币",
+            "11": "金铲铲冠冕/金锅锅冠冕/金锅铲冠冕"
+          }
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "sprites",
+      "ids": ["181342", "181343"],
+      "all": true,
+      "fields": {
+        "offer_conditions": {
+          "minimum_gold_exclusive": 20,
+          "minimum_eligible_non_three_star_units_from_previous_combat": 2,
+          "eligible_units_must_be_rollable_at_current_level": true
+        }
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "season_metadata",
+      "singleton": true,
+      "fields": {
+        "balance_overrides": {
+          "release_version": "18.2",
+          "nature_sprite_probability_status": "rebalanced_values_not_published",
+          "unknown_probability_policy": "do_not_reuse_prior_patch_probabilities_as_exact_18_2_values"
+        }
+      }
+    },
+    {
+      "kind": "add_entity",
+      "catalog": "items",
+      "entity": {
+        "address": "jcc:s18:item:6079",
+        "source": "jcc_user_supplied_18_2_balance_patch",
+        "id": "6079",
+        "name": "视界专注",
+        "type": "神器装备",
+        "map_id": null,
+        "icon_key": "horizon_focus",
+        "basic_desc": "",
+        "structured_stats": [],
+        "desc": "18.2重新启用；补丁未公布效果数值。",
+        "effects": {
+          "schema": "jcc-common-typed-effect-v1",
+          "source_text": "18.2重新启用；补丁未公布效果数值。",
+          "parse_status": "unpublished_values",
+          "structured_terms": [],
+          "conditional_tags": [],
+          "dynamic_placeholders": [],
+          "exact_effect_blocks": []
+        },
+        "tags": ["artifact"],
+        "recipe": null,
+        "icon_url": "https://game.gtimg.cn/images/lol/act/jkzlk/gamedata/equip/horizon_focus.png",
+        "source_proof": {
+          "provider_id": "user_supplied_official_patch_note",
+          "release_version": "18.2",
+          "published_values": false
+        },
+        "primary_role": "unknown_reenabled_artifact",
+        "browse_facets": ["artifact", "special"],
+        "usage_taxonomy_status": "patch_reenabled_effect_unpublished",
+        "availability_status": "enabled",
+        "enabled": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "schema": "jcc-harness-entrypoint-contract-v1",
+  "purpose": "Machine-readable entrypoint for any coding harness that maintains JCC Runtime without rediscovering architecture from prose.",
+  "authority_registry": "docs/requirements/requirements-registry.json",
+  "entrypoints": [
+    "AGENTS.md",
+    ".codex/skills/jcc-runtime-agent/SKILL.md"
+  ],
+  "modules": {
+    "common": {
+      "root": "data/game-knowledge/jcc/common/",
+      "manifest": "data/game-knowledge/jcc/manifest.json#common_documents",
+      "semantic_vocabulary": "data/game-knowledge/jcc/common/semantic-features.json",
+      "cruise_decision_framework": "data/game-knowledge/jcc/common/cruise-decision-framework.json",
+      "strategy_evidence_framework": "data/game-knowledge/jcc/common/strategy-evidence-framework.json",
+      "owner": "season-neutral concepts, formulas, doctrine, routes, controlled semantic vocabulary, decision orchestration contracts, and retrieval policy"
+    },
+    "runtime": {
+      "contract_root": "data/runtime/jcc/",
+      "strategy_evidence_contract": "data/runtime/jcc/strategy-evidence-runtime-contract.json",
+      "host_readonly_tool_contract": "data/runtime/jcc/host-readonly-tool-contract.json",
+      "strategy_evidence_migration_matrix": "data/runtime/jcc/strategy-evidence-kernel-migration-matrix.json",
+      "strategy_evidence_kernel": "ui/electron/strategy-evidence-kernel.js",
+      "host_readonly_tool_broker": "ui/electron/host-readonly-tool-broker.js",
+      "retired_version_db_reset": "tools/maintain-jcc-runtime-db.mjs --reset-retired-version-runtime --season-id <season_id> --vacuum",
+      "retired_version_artifact_prune": "tools/prune-jcc-runtime-local-artifacts.mjs --retired-version --season-id <season_id> --apply",
+      "owner": "product sessions, UI actions, sensing, Host transport, persistence, and bounded diagnostics"
+    },
+    "versioning": {
+      "contract": "data/runtime/jcc/knowledge-profile-contract.json",
+      "manifest": "data/game-knowledge/jcc/manifest.json",
+      "pipeline": "tools/run-jcc-version-pipeline.mjs",
+      "hard_data_store": "tools/jcc_hard_data_package_store.mjs",
+      "owner": "Common, season, patch, immutable hard-data and Core Profile generations, promotion, archive, and retention"
+    },
+    "rankings": {
+      "contract": "data/runtime/jcc/knowledge-profile-contract.json#ranking_publication",
+      "refresh_contract": "data/live-rankings/jcc/runtime-agent-refresh-contract.json",
+      "strategy_contract": "data/live-rankings/jcc/runtime-strategy-signal-contract.json",
+      "source_adapter": "tools/sync-jcc-live-rankings.mjs",
+      "update_entrypoint": "tools/update-jcc-live-rankings.mjs",
+      "recipe_source_adapter": "tools/jcc_live_rankings_recipe_sources.mjs",
+      "recipe_generation_store": "tools/jcc_live_rankings_recipe_store.mjs",
+      "strength_evaluator": "tools/jcc_ranking_strength_evaluator.mjs",
+      "semantic_maintenance": "tools/jcc_ranking_maintenance.mjs",
+      "maintenance_finalizer": "tools/finalize-jcc-ranking-maintenance.mjs",
+      "runtime_retrieval": "ui/electron/ranking-query-retrieval.js",
+      "root": "data/live-rankings/jcc/",
+      "owner": "Tencent/JCC Master+ trait strength, winning-lineup recipes, official curated popular templates, hero heat and item evidence; immutable generations and exact Core Profile binding"
+    },
+    "requirements": {
+      "registry": "docs/requirements/requirements-registry.json",
+      "changelog": "docs/requirements/CHANGELOG.md",
+      "verifier": "tools/verify-jcc-requirements-authority.mjs"
+    }
+  },
+  "version_pipeline": {
+    "phases": [
+      "source",
+      "inspect",
+      "compile",
+      "rankings",
+      "verify",
+      "promote",
+      "archive",
+      "prune"
+    ],
+    "compatibility_aliases": {
+      "intelligence": "rankings"
+    },
+    "source_policy": "Patch-specific source adapters write only to guarded staging directories and publish immutable hard-data generations. The Tencent ranking adapter resolves the explicit current Core Profile, season, patch, and catalog identity; it never infers or relabels a season from ranking rows.",
+    "intelligence_policy": "The rankings phase fetches Zhangmeng/Tencent Master+ data, validates catalog compatibility, computes a deterministic current-day strength gradient, compiles typed evidence, optionally adds closed one-shot semantic annotations, then atomically publishes one immutable Ranking Overlay. The intelligence phase name is a compatibility alias only. Missing current-version data reports rankings unavailable and never blocks an otherwise releasable Core Profile or falls back to another season. The pinned S18 DataTFT snapshot remains an offline immutable Core supplement for declared reward-rate, trait-tracking, and champion/item/sprite hard-data enrichment roles; it is not Ranking authority, Runtime retrieval, or a network refresh target.",
+    "activation_policy": "Core and Ranking Overlay publication remain independent immutable lifecycles. Promotion may activate an exact compatible ranking candidate when present; otherwise the Core remains usable with ranking capability explicitly unavailable.",
+    "runtime_policy": "Runtime reads the promoted Core Profile and an exact compatible Tencent Ranking Overlay captured at Start Match, or an explicit unavailable identity. Raw API responses, mutable pointers, and complete ranking payloads are never persisted in Host queues or injected wholesale into a turn."
+  },
+  "major_season_update": {
+    "runbook": "docs/requirements/jcc-season-version-governance-runbook.md#major-season-agent-checklist",
+    "descriptor": {
+      "path_pattern": "data/game-knowledge/jcc/seasons/<season_id>/season-descriptor.json",
+      "schema": "data/game-knowledge/jcc/schemas/season-descriptor.schema.json",
+      "registration": "data/game-knowledge/jcc/manifest.json#seasons",
+      "owns": "major-season mechanics, inherited/replaced/disabled standard mechanics, season-only variables, aliases, exclusions, and mode extensions"
+    },
+    "patch": {
+      "path_pattern": "data/game-knowledge/jcc/seasons/<season_id>/patches/<patch_id>/source-manifest.json",
+      "source_adapter_contract": "data/runtime/jcc/knowledge-profile-contract.json#source_adapter",
+      "owns": "source identity, immutable hard-data candidate reference, normalized catalogs, values, aliases, effect parameters, and explicit verified exceptions"
+    },
+    "common_policy": "Do not fork Common for a new season. Compile the new hard data against the existing controlled vocabulary, audit every unmapped semantic, and extend Common only for a genuinely reusable cross-season concept.",
+    "alias_policy": "Keep stable equipment player aliases in Common and version-owned champion aliases in the patch. Every Core compile must rebind both sets against the selected catalog, fail on unbound patch aliases or ambiguity, retain unbound Common aliases as inactive audit rows, and rebuild the compiled alias gateway plus decision-input catalog. Never add entity aliases as Runtime JavaScript name branches.",
+    "semantic_rebuild": [
+      "Core hard-data tags and typed relations",
+      "semantic-feature-index",
+      "strategy-evidence route and facet bindings",
+      "decision-input-catalog",
+      "augment-stage-authority",
+      "runtime-catalog-overlay",
+      "compiled Common plus descriptor plus patch bundle"
+    ],
+    "ranking_rebuild": "Run the rankings phase against the exact new Core identity. Ranking tags and recipe relations compile only when compatible Tencent Master+ data exists; otherwise activate the Core with rankings explicitly unavailable.",
+    "ui_policy": "Common Runtime and renderer consume compiled descriptor declarations. Add no season-named UI code. Add a shared control only when a descriptor introduces a new reusable generic control shape; a season with no manual fields renders no season-variable controls.",
+    "ordered_phases": [
+      "source",
+      "inspect",
+      "compile",
+      "rankings",
+      "verify",
+      "promote",
+      "archive",
+      "prune"
+    ],
+    "required_verification_profile": "version_update"
+  },
+  "verification_profiles": {
+    "retired_version_cleanup": [
+      "tools/verify-jcc-runtime-local-artifact-prune.mjs",
+      "tools/verify-jcc-runtime-retired-version-cleanup.mjs",
+      "tools/verify-jcc-runtime-state-store.mjs",
+      "tools/verify-jcc-requirements-authority.mjs"
+    ],
+    "version_update": [
+      "tools/verify-jcc-version-pipeline-architecture.mjs",
+      "tools/verify-jcc-tencent-primary-ranking-source.mjs",
+      "tools/verify-jcc-hard-data-package-store.mjs",
+      "tools/verify-jcc-live-rankings-sync-contract.mjs",
+      "tools/verify-jcc-live-ranking-recipe-sources.mjs",
+      "tools/verify-jcc-cruise-popular-recipe-query.mjs",
+      "tools/verify-jcc-live-ranking-generation-store.mjs",
+      "tools/verify-jcc-live-ranking-active-closure-store.mjs",
+      "tools/verify-jcc-live-ranking-active-closure.mjs",
+      "tools/verify-jcc-ranking-coverage-audit.mjs",
+      "tools/verify-jcc-ranking-strength-evaluator.mjs",
+      "tools/verify-jcc-live-rankings-history.mjs",
+      "tools/verify-jcc-ranking-maintenance.mjs",
+      "tools/verify-jcc-ranking-maintenance-runtime-session.mjs",
+      "tools/verify-jcc-ranking-maintenance-publication.mjs",
+      "tools/verify-jcc-live-ranking-strategy-runtime.mjs",
+      "tools/verify-jcc-semantic-feature-layer.mjs",
+      "tools/verify-jcc-cruise-decision-orchestrator.mjs",
+      "tools/verify-jcc-semantic-evidence-router.mjs",
+      "tools/verify-jcc-strategy-evidence-runtime-contract.mjs",
+      "tools/verify-jcc-strategy-evidence-kernel.mjs",
+      "tools/verify-jcc-host-readonly-tools.mjs",
+      "tools/verify-jcc-strategy-evidence-old-authority-absence.mjs",
+      "tools/verify-jcc-game-knowledge-compiler.mjs",
+      "tools/verify-jcc-player-entity-aliases.mjs",
+      "tools/verify-jcc-game-knowledge-profile-store.mjs",
+      "tools/verify-jcc-season-archive.mjs",
+      "tools/verify-jcc-core-profile-runtime-identity.mjs",
+      "tools/verify-jcc-match-core-profile-binding.mjs",
+      "tools/verify-jcc-cruise-profile-binding.mjs",
+      "tools/verify-jcc-runtime-rank-signal-contract.mjs",
+      "tools/verify-jcc-hard-data.mjs",
+      "tools/verify-jcc-itemization-decision-context.mjs",
+      "tools/verify-jcc-season-version-isolation.mjs",
+      "tools/verify-jcc-common-season-neutrality.mjs",
+      "tools/verify-jcc-common-host-knowledge.mjs",
+      "tools/verify-jcc-season-aware-renderer-modes.mjs",
+      "tools/verify-jcc-season-variable-panel-runtime.mjs",
+      "tools/verify-jcc-season-variable-canonical-roundtrip.mjs",
+      "tools/verify-jcc-requirements-authority.mjs"
+    ],
+    "cruise_decision": [
+      "tools/verify-jcc-cruise-decision-orchestrator.mjs",
+      "tools/verify-jcc-cruise-trigger-coverage.mjs",
+      "tools/verify-jcc-cruise-strategy-scorer.mjs",
+      "tools/verify-jcc-runtime-event-request-ownership.mjs",
+      "tools/verify-jcc-proactive-coach-decision-delta.mjs",
+      "tools/verify-jcc-runtime-event-pipeline-preemption.mjs",
+      "tools/verify-jcc-semantic-feature-layer.mjs",
+      "tools/verify-jcc-strategy-evidence-kernel.mjs",
+      "tools/verify-jcc-strategy-evidence-old-authority-absence.mjs",
+      "tools/verify-jcc-requirements-authority.mjs"
+    ],
+    "augment_choice": [
+      "tools/verify-jcc-semantic-feature-layer.mjs",
+      "tools/verify-jcc-strategy-evidence-kernel.mjs",
+      "tools/verify-jcc-host-readonly-tools.mjs",
+      "tools/verify-jcc-augment-choice-evaluator.mjs",
+      "tools/verify-jcc-augment-choice-runtime-integration.mjs",
+      "tools/verify-jcc-cruise-strategy-scorer.mjs",
+      "tools/verify-jcc-user-reported-choice-contract.mjs",
+      "tools/verify-jcc-runtime-mainline-paths.mjs",
+      "tools/verify-jcc-requirements-authority.mjs"
+    ],
+    "strategy_evidence": [
+      "tools/verify-jcc-strategy-evidence-runtime-contract.mjs",
+      "tools/verify-jcc-strategy-evidence-kernel.mjs",
+      "tools/verify-jcc-host-readonly-tools.mjs",
+      "tools/verify-jcc-strategy-evidence-old-authority-absence.mjs",
+      "tools/verify-jcc-host-selected-context-contract.mjs",
+      "tools/verify-jcc-host-context-storage-budget.mjs",
+      "tools/verify-jcc-requirements-authority.mjs"
+    ]
+  },
+  "retired_surfaces": [
+    "GraphRAG and generated graph assets",
+    "indexes/hot route shards",
+    "permanent telemetry acceptance artifacts",
+    "legacy normal/special rule production fallback",
+    "shared S17 augment taxonomy and name-special-case scorer branches",
+    "production MuMu decrypted-config catalogs and S17-specific choice ROI tools",
+    "direct monolithic hard-data builders and collectors outside registered patch adapters",
+    "full hard-data or ranking payload persistence in Runtime queues or SQLite"
+  ]
+}

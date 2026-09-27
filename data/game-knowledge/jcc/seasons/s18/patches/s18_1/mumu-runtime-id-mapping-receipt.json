@@ -1,0 +1,872 @@
+{
+  "schema": "jcc-mumu-runtime-id-mapping-receipt-v1",
+  "identity": {
+    "season_id": "s18",
+    "patch_id": "s18_1",
+    "mode_id": "mode18",
+    "champion_catalog_sha256": "acbc892b625f6771010a14ed9a6dcd8be69c111c9d789a6a9707e576b7211739",
+    "champion_mapping_sha256": "6aeed4edb070e497f7cccd91b382ac8961d0e877b8a4f7fde253308b91040817"
+  },
+  "evidence": {
+    "match_session_id": "s18-live-id-validation-20260821-2",
+    "first_observed_at": "2026-08-21T07:21:40.515Z",
+    "last_observed_at": "2026-08-21T07:59:37.738Z",
+    "raw_events_sha256": "6dc3d131fb753d6feeef9b7166d4792685afeea07615cd6e1920c5e3c1562ef7",
+    "raw_events_persisted_in_profile": false,
+    "relevant_event_count": 1459,
+    "command_counts": {
+      "4352": 283,
+      "4353": 747,
+      "4354": 429
+    },
+    "event_identity_validation": {
+      "status": "producer_attested_legacy",
+      "raw_events_replayed": false,
+      "producer_path": "tools/watch-jcc-mumu-runtime-logcat.mjs",
+      "producer_invariant_commit": "177f9b18a30ca7353cc57b9fee313ac336bae979",
+      "producer_invariant_introduced_at": "2026-06-11T17:13:03+08:00",
+      "guaranteed_fields": [
+        "nonempty_match_session_id",
+        "iso_observed_at"
+      ],
+      "basis": "The only production watcher event factory populated state.match_session_id and new Date().toISOString() unconditionally before this capture; future receipts require per-event validation."
+    },
+    "mapping_reclassification": {
+      "raw_id": "15468",
+      "previous_classification": "shop_only_out_of_catalog",
+      "current_classification": "grand_elementalist_variant",
+      "canonical_champion_id": "5459",
+      "variant_trait_id": "457",
+      "variant_trait_name": "野兽之灵",
+      "authority": "developer_confirmed_s18_variant_sequence",
+      "raw_events_replayed": false,
+      "raw_events_sha256_unchanged": true
+    }
+  },
+  "coverage": {
+    "unique_raw_id_count": 73,
+    "resolved_raw_id_count": 73,
+    "mapping_ratio": 1,
+    "canonical_entity_count": 61,
+    "multi_source_canonical_count": 32,
+    "multi_star_canonical_count": 10
+  },
+  "resolved": [
+    {
+      "raw_id": "11505",
+      "canonical_id": "1505",
+      "name": "卡蜜尔",
+      "star": 1,
+      "occurrences": 56,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "12502",
+      "canonical_id": "2502",
+      "name": "瑟庄妮",
+      "star": 1,
+      "occurrences": 60,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "12514",
+      "canonical_id": "2514",
+      "name": "提莫",
+      "star": 1,
+      "occurrences": 92,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "12504",
+      "canonical_id": "2504",
+      "name": "伊莉丝",
+      "star": 1,
+      "occurrences": 93,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "11504",
+      "canonical_id": "1504",
+      "name": "雷克塞",
+      "star": 1,
+      "occurrences": 42,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "11507",
+      "canonical_id": "1507",
+      "name": "韦鲁斯",
+      "star": 1,
+      "occurrences": 35,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "11503",
+      "canonical_id": "1503",
+      "name": "可酷伯",
+      "star": 1,
+      "occurrences": 28,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "11508",
+      "canonical_id": "1508",
+      "name": "绯红树怪",
+      "star": 1,
+      "occurrences": 710,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "11502",
+      "canonical_id": "1502",
+      "name": "蕾欧娜",
+      "star": 1,
+      "occurrences": 63,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "11500",
+      "canonical_id": "1500",
+      "name": "奥恩",
+      "star": 1,
+      "occurrences": 82,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "11510",
+      "canonical_id": "1510",
+      "name": "卡尔玛",
+      "star": 1,
+      "occurrences": 26,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "11511",
+      "canonical_id": "1511",
+      "name": "苍蓝哨戒",
+      "star": 1,
+      "occurrences": 310,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "12505",
+      "canonical_id": "2505",
+      "name": "约里克",
+      "star": 1,
+      "occurrences": 73,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "11509",
+      "canonical_id": "1509",
+      "name": "霞",
+      "star": 1,
+      "occurrences": 22,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "12513",
+      "canonical_id": "2513",
+      "name": "魔沼蛙",
+      "star": 1,
+      "occurrences": 394,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "12508",
+      "canonical_id": "2508",
+      "name": "沃里克",
+      "star": 1,
+      "occurrences": 27,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "12500",
+      "canonical_id": "2500",
+      "name": "峡谷迅捷蟹",
+      "star": 1,
+      "occurrences": 28,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "13504",
+      "canonical_id": "3504",
+      "name": "雷恩加尔",
+      "star": 1,
+      "occurrences": 15,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "21511",
+      "canonical_id": "1511",
+      "name": "苍蓝哨戒",
+      "star": 2,
+      "occurrences": 323,
+      "commands": [
+        4352,
+        4353
+      ]
+    },
+    {
+      "raw_id": "11501",
+      "canonical_id": "1501",
+      "name": "洛",
+      "star": 1,
+      "occurrences": 17,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "13502",
+      "canonical_id": "3502",
+      "name": "费德提克",
+      "star": 1,
+      "occurrences": 12,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "12501",
+      "canonical_id": "2501",
+      "name": "阿利斯塔",
+      "star": 1,
+      "occurrences": 26,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "13500",
+      "canonical_id": "3500",
+      "name": "赫卡里姆",
+      "star": 1,
+      "occurrences": 3,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "11512",
+      "canonical_id": "1512",
+      "name": "维迦",
+      "star": 1,
+      "occurrences": 18,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "12503",
+      "canonical_id": "2503",
+      "name": "慎",
+      "star": 1,
+      "occurrences": 19,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "11506",
+      "canonical_id": "1506",
+      "name": "阿卡丽",
+      "star": 1,
+      "occurrences": 11,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "12512",
+      "canonical_id": "2512",
+      "name": "凯尔",
+      "star": 1,
+      "occurrences": 17,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "13507",
+      "canonical_id": "3507",
+      "name": "易",
+      "star": 1,
+      "occurrences": 5,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "12509",
+      "canonical_id": "2509",
+      "name": "芸阿娜",
+      "star": 1,
+      "occurrences": 8,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "12511",
+      "canonical_id": "2511",
+      "name": "乐芙兰",
+      "star": 1,
+      "occurrences": 22,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "13501",
+      "canonical_id": "3501",
+      "name": "蔚",
+      "star": 1,
+      "occurrences": 15,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "12510",
+      "canonical_id": "2510",
+      "name": "凯特琳",
+      "star": 1,
+      "occurrences": 18,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "22513",
+      "canonical_id": "2513",
+      "name": "魔沼蛙",
+      "star": 2,
+      "occurrences": 663,
+      "commands": [
+        4352,
+        4353
+      ]
+    },
+    {
+      "raw_id": "12507",
+      "canonical_id": "2507",
+      "name": "暗影狼",
+      "star": 1,
+      "occurrences": 228,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "13515",
+      "canonical_id": "3515",
+      "name": "拉莫斯",
+      "star": 1,
+      "occurrences": 13,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "21508",
+      "canonical_id": "1508",
+      "name": "绯红树怪",
+      "star": 2,
+      "occurrences": 626,
+      "commands": [
+        4352,
+        4353
+      ]
+    },
+    {
+      "raw_id": "13506",
+      "canonical_id": "3506",
+      "name": "黛安娜",
+      "star": 1,
+      "occurrences": 10,
+      "commands": [
+        4352,
+        4354
+      ]
+    },
+    {
+      "raw_id": "13503",
+      "canonical_id": "3503",
+      "name": "远古石甲虫",
+      "star": 1,
+      "occurrences": 316,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "13509",
+      "canonical_id": "3509",
+      "name": "深红锋喙鸟",
+      "star": 1,
+      "occurrences": 575,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "13505",
+      "canonical_id": "3505",
+      "name": "卡兹克",
+      "star": 1,
+      "occurrences": 12,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "13511",
+      "canonical_id": "3511",
+      "name": "卡西奥佩娅",
+      "star": 1,
+      "occurrences": 24,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "23503",
+      "canonical_id": "3503",
+      "name": "远古石甲虫",
+      "star": 2,
+      "occurrences": 495,
+      "commands": [
+        4352,
+        4353
+      ]
+    },
+    {
+      "raw_id": "31511",
+      "canonical_id": "1511",
+      "name": "苍蓝哨戒",
+      "star": 3,
+      "occurrences": 455,
+      "commands": [
+        4353
+      ]
+    },
+    {
+      "raw_id": "22507",
+      "canonical_id": "2507",
+      "name": "暗影狼",
+      "star": 2,
+      "occurrences": 452,
+      "commands": [
+        4352,
+        4353
+      ]
+    },
+    {
+      "raw_id": "13508",
+      "canonical_id": "3508",
+      "name": "崔丝塔娜",
+      "star": 1,
+      "occurrences": 3,
+      "commands": [
+        4352,
+        4354
+      ]
+    },
+    {
+      "raw_id": "23508",
+      "canonical_id": "3508",
+      "name": "崔丝塔娜",
+      "star": 2,
+      "occurrences": 2,
+      "commands": [
+        4352
+      ]
+    },
+    {
+      "raw_id": "14506",
+      "canonical_id": "4506",
+      "name": "绯红印记树怪",
+      "star": 1,
+      "occurrences": 392,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "14503",
+      "canonical_id": "4503",
+      "name": "阿木木",
+      "star": 1,
+      "occurrences": 5,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "15458",
+      "canonical_id": "5458",
+      "name": "远古巨龙",
+      "star": 1,
+      "occurrences": 324,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "23509",
+      "canonical_id": "3509",
+      "name": "深红锋喙鸟",
+      "star": 2,
+      "occurrences": 367,
+      "commands": [
+        4352,
+        4353
+      ]
+    },
+    {
+      "raw_id": "14508",
+      "canonical_id": "4508",
+      "name": "伊泽瑞尔",
+      "star": 1,
+      "occurrences": 13,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "14500",
+      "canonical_id": "4500",
+      "name": "苍蓝雕纹魔像",
+      "star": 1,
+      "occurrences": 423,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "31508",
+      "canonical_id": "1508",
+      "name": "绯红树怪",
+      "star": 3,
+      "occurrences": 240,
+      "commands": [
+        4352,
+        4353
+      ]
+    },
+    {
+      "raw_id": "13512",
+      "canonical_id": "3512",
+      "name": "克格莫",
+      "star": 1,
+      "occurrences": 340,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "14501",
+      "canonical_id": "4501",
+      "name": "莫甘娜",
+      "star": 1,
+      "occurrences": 2,
+      "commands": [
+        4352,
+        4354
+      ]
+    },
+    {
+      "raw_id": "14513",
+      "canonical_id": "4513",
+      "name": "索拉卡",
+      "star": 1,
+      "occurrences": 18,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "14509",
+      "canonical_id": "4509",
+      "name": "厄斐琉斯",
+      "star": 1,
+      "occurrences": 7,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "24500",
+      "canonical_id": "4500",
+      "name": "苍蓝雕纹魔像",
+      "star": 2,
+      "occurrences": 161,
+      "commands": [
+        4353
+      ]
+    },
+    {
+      "raw_id": "13510",
+      "canonical_id": "3510",
+      "name": "阿兹尔",
+      "star": 1,
+      "occurrences": 16,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "14504",
+      "canonical_id": "4504",
+      "name": "墨菲特",
+      "star": 1,
+      "occurrences": 7,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "15457",
+      "canonical_id": "5457",
+      "name": "艾翁",
+      "star": 1,
+      "occurrences": 19,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "15452",
+      "canonical_id": "5452",
+      "name": "纳尔",
+      "star": 1,
+      "occurrences": 122,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "15456",
+      "canonical_id": "5456",
+      "name": "拉露恩",
+      "star": 1,
+      "occurrences": 17,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "15455",
+      "canonical_id": "5455",
+      "name": "德莱文",
+      "star": 1,
+      "occurrences": 37,
+      "commands": [
+        4352,
+        4353
+      ]
+    },
+    {
+      "raw_id": "15454",
+      "canonical_id": "5454",
+      "name": "艾希",
+      "star": 1,
+      "occurrences": 37,
+      "commands": [
+        4352,
+        4353
+      ]
+    },
+    {
+      "raw_id": "15453",
+      "canonical_id": "5453",
+      "name": "凯南",
+      "star": 1,
+      "occurrences": 2,
+      "commands": [
+        4352,
+        4353
+      ]
+    },
+    {
+      "raw_id": "15450",
+      "canonical_id": "5450",
+      "name": "茂凯",
+      "star": 1,
+      "occurrences": 21,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "15451",
+      "canonical_id": "5451",
+      "name": "塔里克",
+      "star": 1,
+      "occurrences": 111,
+      "commands": [
+        4352,
+        4353,
+        4354
+      ]
+    },
+    {
+      "raw_id": "25456",
+      "canonical_id": "5456",
+      "name": "拉露恩",
+      "star": 2,
+      "occurrences": 1,
+      "commands": [
+        4352
+      ]
+    },
+    {
+      "raw_id": "14511",
+      "canonical_id": "4511",
+      "name": "阿狸",
+      "star": 1,
+      "occurrences": 15,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "14505",
+      "canonical_id": "4505",
+      "name": "瑟提",
+      "star": 1,
+      "occurrences": 1,
+      "commands": [
+        4354
+      ]
+    },
+    {
+      "raw_id": "25458",
+      "canonical_id": "5458",
+      "name": "远古巨龙",
+      "star": 2,
+      "occurrences": 47,
+      "commands": [
+        4353
+      ]
+    },
+    {
+      "raw_id": "15468",
+      "canonical_id": "5459",
+      "name": "拉克丝",
+      "star": 1,
+      "occurrences": 3,
+      "commands": [
+        4354
+      ],
+      "mapping_kind": "grand_elementalist_variant",
+      "source_variant": {
+        "source_id": "15468",
+        "order": 8,
+        "trait_id": "457",
+        "trait_name": "野兽之灵"
+      }
+    }
+  ],
+  "unresolved": [],
+  "acceptance": {
+    "status": "passed",
+    "allowed_shop_only_ids": [],
+    "rules": [
+      "bench_current_view_and_shop_commands_observed",
+      "every_relevant_event_has_one_match_session_and_valid_timestamp",
+      "own_state_unknown_ids_forbidden",
+      "raw_star_prefix_matches_catalog_star",
+      "explicit_patch_source_alias_requires_exact_raw_id",
+      "mapping_ratio_at_least_98_percent",
+      "shop_only_unknown_ids_require_explicit_patch_exception"
+    ]
+  }
+}

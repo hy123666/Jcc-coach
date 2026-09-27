@@ -1,0 +1,278 @@
+{
+  "schema": "jcc-itemization-decision-contract-v1",
+  "purpose": "Keep item craft, holder assignment, artifact, radiant, and special-item advice live-game-first while allowing only compatible Match-captured Zhangmeng/Tencent Master+ ranking evidence as an optional prior.",
+  "decision_actions": [
+    "slam_now",
+    "wait_component",
+    "temporary_holder",
+    "hold_for_artifact_or_choice",
+    "reforge_or_remover_line",
+    "do_not_craft_yet"
+  ],
+  "source_precedence": [
+    "trusted_mumu_4357_item_bench_and_4356_to_4353_assignment",
+    "current_match_explicit_user_confirmation",
+    "explicit_visual_or_icon_candidate_fallback",
+    "survival_and_tempo_pressure",
+    "owned_components_and_tools",
+    "owned_units_star_levels_and_target_plan",
+    "selected_augments_traits_active_season_variables_and_encounter",
+    "hard_data_champion_item_fit",
+    "captured_master_plus_hero_item_evidence"
+  ],
+  "information_resolution_policy": {
+    "field_level_precedence": true,
+    "independent_fields": [
+      "item_bench",
+      "equipped_items"
+    ],
+    "use_highest_currently_available_source": true,
+    "never_wait_for_structured_source": true,
+    "never_wait_for_visual_candidate": true,
+    "historical_command_presence_is_not_current_field_authority": true,
+    "authoritative_empty_requires_current_payload_observed": true,
+    "structured_observed_empty_clears_older_fallback_for_that_field": true,
+    "partial_user_confirmation_is_immediately_usable": true,
+    "visual_candidate_is_never_a_prerequisite": true,
+    "missing_field_policy": "Ask only for the specific missing field when it can change the next item action. The current direct answer owns that clarification; recording it must not create a sibling answer.",
+    "decision_posture_owner": "The deterministic scorer may emit slam_now or wait_component with evidence. The Host model owns the exact craft, holder, transfer, or tool action from current live state, hard data, compatible Match-captured Zhangmeng/Tencent Master+ ranking evidence when available, confirmed choices, user intent, and active-season mechanics."
+  },
+  "wait_vs_slam_policy": {
+    "slam_now_when": [
+      "hp is low enough that one or two losses threaten elimination or forced rolldown",
+      "current streak has high value and the item clearly protects it",
+      "board has a strong holder and the item is broadly transferable or removable",
+      "item completes a core anti-lobby need such as wound, shred, sunder, frontline durability, or immediate carry damage"
+    ],
+    "wait_component_when": [
+      "hp and board strength allow one more round of greed",
+      "component is contested between multiple high-value core items",
+      "near-term reward, anvil, artifact, radiant, active-season reward, or augment can change the best item",
+      "craft would lock a narrow direction without remover/reforger protection",
+      "current holder is weak or likely to be sold soon"
+    ],
+    "must_explain_tradeoff": true,
+    "forbidden_wording": [
+      "大数据说 A，所以无脑做 A",
+      "排名最高所以必做",
+      "完美装备就是这一套，不用看局势"
+    ],
+    "preferred_wording_shape": "This is a prior. In this game, because of hp/tempo/components/holder/tools, choose slam_now or wait_component and state the cost."
+  },
+  "artifact_radiant_special_policy": {
+    "hard_data_source": "active_hard_data:indexes/champion_item_fit.json",
+    "tag_source": "active_hard_data:indexes/item_tags.json",
+    "supported_item_tags": [
+      "artifact",
+      "radiant",
+      "support",
+      "special",
+      "emblem",
+      "completed"
+    ],
+    "runtime_context_builder": "node tools/build-jcc-itemization-context.mjs --champion <name>",
+    "strategy_use": "For a known main carry or sub carry, use champion_item_fit to shortlist artifact/radiant/special candidates, then rerank by current live_state, components, augments, traits, current-match user-confirmed scouting notes, and whether the item is removable or reforgeable. Do not infer opponent board threats from current-view sensing.",
+    "not_claimed": [
+      "Master+ hero-item evidence is not an augment-conditioned or trait-conditioned perfect item table.",
+      "Artifact fit from role tags is a hard-data candidate ranking, not proof that the artifact is always correct in the current game.",
+      "If a specific artifact is absent from current catalog or visual recognition, do not invent it."
+    ],
+    "taxonomy_policy": {
+      "artifact_is_parent_category": true,
+      "preserve_upstream_subtype_when_present": true,
+      "missing_subtype_does_not_block_use": true,
+      "runtime_ui_may_merge_subtypes_under_one_artifact_row": true,
+      "examples_are_not_hardcoded": "Ornn artifact is one possible source subtype, not the definition of the entire artifact category."
+    }
+  },
+  "craft_recipe_authority": {
+    "source": "active_patch_normalized_items_official_recipe_fields_compiled_into_component_to_item_candidates",
+    "turn_context": "component_recipe_contexts",
+    "exact_match_required": true,
+    "desired_trait_is_not_recipe_evidence": true,
+    "missing_recipe_behavior": "Do not claim the item or emblem is craftable. State that current hard data does not confirm the recipe and continue with confirmed alternatives."
+  },
+  "lineup_role_equipment_policy": {
+    "source": "captured_master_plus_winning_lineup_and_hero_item_evidence_plus_active_patch_hero_item_index",
+    "precedence": [
+      "explicit_upstream_required_item",
+      "formation_required_emblem",
+      "captured_master_plus_lineup_role_items",
+      "captured_master_plus_hero_core_items",
+      "captured_master_plus_hero_replacement_items"
+    ],
+    "holder_binding_required": true,
+    "explicit_required_rule": "A source-row required item remains variant-specific unless every final variant explicitly requires the same item on the same role holder.",
+    "formation_emblem_rule": "Name the exact holder and granted trait only after the granted trait resolves uniquely through the active current-patch trait catalog. If the holder lacks that natural trait, explain that the emblem makes it an external trait member and may be required for the published lineup breakpoint. Missing or ambiguous trait resolution fails closed.",
+    "consensus_boundary": "An ordinary item repeated across every final variant is core consensus, not automatically mandatory."
+  },
+  "theorycraft_item_optimizer_policy": {
+    "request_evidence_policy": "active_core_profile_only",
+    "service": "DecisionMathService.optimize_item_loadouts",
+    "agent_owns_final_explanation": true,
+    "mechanical_scope": "Resolve current-profile entities, compose supplied or proven static modifiers, enumerate legal loadouts, calculate bounded static proxies, preserve unresolved conditional effects, and return assumptions plus provenance. It is not a complete combat simulator and does not replace Agent judgement.",
+    "input_adapter": {
+      "required": [
+        "target_main_carry"
+      ],
+      "current_match_fields": [
+        "main_carry_star",
+        "main_carry_equipped_items",
+        "confirmed_augments",
+        "active_traits_and_breakpoints",
+        "emblem_granted_traits",
+        "active_season_mechanic_effects"
+      ],
+      "authority": "Use reliable Runtime facts first and explicit current-match user or Quick Record confirmation second. Never fabricate unobserved equipped items, final augments, active breakpoints, emblem grants, or season-mechanic state.",
+      "missing_policy": "Target identity is critical. With three or more other material fields missing, ask first. With fewer than three, calculate from declared defaults and disclose every omission."
+    },
+    "candidate_scope": {
+      "default": [
+        "completed"
+      ],
+      "explicit_or_owned_only": [
+        "artifact",
+        "radiant",
+        "support",
+        "emblem",
+        "special"
+      ],
+      "reason": "A theoretical result made only of unavailable special equipment is not a useful default live-game answer."
+    },
+    "current_item_slot_policy": {
+      "slot_count": 3,
+      "default_behavior": "Every trusted current_items entry is locked and occupies one equipment slot. Recommendations must preserve those entries unless replace_current_items is exactly true.",
+      "replacement_gate": "Only replace_current_items=true allows the optimizer to enumerate loadouts that replace trusted current_items.",
+      "owned_special_items": "A confirmed owned artifact, radiant, support, emblem, or special item is legal as a locked current item even when the candidate pool remains the default completed category. Ownership does not add other unowned special items to that pool.",
+      "explicit_locked_items": "locked_items remain hard constraints regardless of replace_current_items.",
+      "duplicate_current_item_behavior": "Preserve every explicitly supplied current_items copy as a separate occupied slot. Candidate-ID exclusion prevents the optimizer from inventing another copy unless a future quantity-aware inventory input explicitly proves it.",
+      "overflow_behavior": "Fail closed when effective locked items or current items exceed the three-slot limit."
+    },
+    "multi_objective_output": [
+      "maximum_auto_attack_damage_proxy",
+      "maximum_spell_power_proxy",
+      "fastest_first_cast_proxy",
+      "equal_weight_balanced_proxy",
+      "bounded_pareto_frontier"
+    ],
+    "forbidden_inputs": [
+      "daily_rank_hero_item_signal",
+      "winning_lineup_item_recipe",
+      "strategy_wiki",
+      "remembered_meta_best_in_slot"
+    ]
+  },
+  "augment_effect_choice_evaluator_policy": {
+    "service": "DecisionMathService.evaluate_augment_effect_choices",
+    "operation": "evaluate_augment_effect_choices",
+    "request_evidence_policy": "active_core_profile_only",
+    "candidate_boundary": "Evaluate only explicit current-choice candidates or a legal set resolved from the active decision-input catalog. Explicit candidates must resolve uniquely in the captured Core Profile; tier mismatch and entities outside the active decision catalog fail closed.",
+    "inputs": [
+      "explicit candidates or active-catalog legal-set constraints",
+      "normalized augment effect blocks",
+      "explicit rule modifiers",
+      "reliable current-match facts",
+      "missing and defaulted input declarations"
+    ],
+    "dimensions": [
+      "immediate",
+      "economy",
+      "growth",
+      "conditional",
+      "risk"
+    ],
+    "pareto_policy": "Return the non-dominated frontier by maximizing immediate, economy, and growth while minimizing conditional and risk. Do not collapse it into a universal total ranking.",
+    "unresolved_policy": "Unparsed prose, dynamic placeholders, unmet conditions, and semantic-only effects remain explicit conditional or risk evidence; they are never silently converted into exact value.",
+    "forbidden_inputs": [
+      "daily rankings",
+      "Meta Map strength",
+      "winning-lineup recipes",
+      "strategy Wiki",
+      "provider-memory meta priors"
+    ],
+    "not_claimed": [
+      "universal best augment",
+      "ranking strength",
+      "full combat simulation"
+    ]
+  },
+  "trait_roster_role_coverage_solver_policy": {
+    "service": "DecisionMathService.solve_trait_roster_role_coverage",
+    "operation": "solve_trait_roster_role_coverage",
+    "request_evidence_policy": "active_core_profile_only",
+    "required_inputs": [
+      "population",
+      "main_carry",
+      "main_tank"
+    ],
+    "optional_current_facts": [
+      "owned_units",
+      "confirmed_emblems and holders",
+      "target_traits and requested breakpoint counts",
+      "missing and defaulted input declarations"
+    ],
+    "legality": "Use one unique current-profile champion per roster slot. Main carry, main tank, and owned units are hard continuity constraints. Resolve every unit, trait, and emblem-granted trait against the captured current-version catalogs and fail closed on ambiguity or population overflow.",
+    "construction_objectives": [
+      "requested trait deficit coverage",
+      "exact next trait breakpoint coverage",
+      "main-carry and main-tank role coverage",
+      "frontline and backline skeleton coverage",
+      "owned-core continuity",
+      "deterministic lower-cost tie breaking"
+    ],
+    "output": [
+      "legal roster skeleton",
+      "per-unit roles and natural traits",
+      "natural and emblem trait counts",
+      "achieved and next breakpoints with current-profile text",
+      "shop-cost composition",
+      "assumptions, defaults, missing inputs, and source audit"
+    ],
+    "role_boundary": "Main carry and main tank come only from explicit inputs. Other frontline/backline labels are bounded catalog-derived coverage labels, not proof of ideal combat role.",
+    "emblem_boundary": "Count only explicitly supplied emblem traits. Do not infer ownership, craftability, holder legality, strength, or combat value.",
+    "forbidden_inputs": [
+      "daily rankings",
+      "Meta Map strength",
+      "winning-lineup recipes",
+      "strategy Wiki",
+      "provider-memory lineup priors"
+    ],
+    "not_claimed": [
+      "lineup strength",
+      "combat simulation",
+      "meta ranking",
+      "best final composition"
+    ]
+  },
+  "shared_optimizer_boundary": {
+    "common_services": [
+      "captured_core_profile_identity",
+      "decision_input_snapshot",
+      "closed_allowed_source_set",
+      "entity_resolution",
+      "missing_input_threshold",
+      "assumption_and_scenario_reporting",
+      "deterministic_tie_breaking",
+      "source_provenance_audit"
+    ],
+    "domain_specific_adapters": {
+      "equipment": "legal item pool, slot and ownership constraints, stat and mana-cycle objectives, unresolved conditional effects, slam/wait and holder semantics",
+      "augment": "only explicit current candidates or an active-catalog legal set, stage/tier legality, effect blocks, explicit rule modifiers, current facts, five decision dimensions, and a non-dominated Pareto frontier",
+      "lineup": "current-profile legal units and traits, population legality, explicit main carry and main tank, owned-core continuity, emblem counts, role coverage, exact breakpoints, cost composition, and explicit no-strength/no-simulation boundaries"
+    },
+    "non_goal": "Do not force equipment, augment, and lineup decisions through one generic score formula. They share lifecycle and audit infrastructure, not domain semantics."
+  },
+  "host_model_rules": [
+    "If advice uses captured Master+ hero-item evidence, call it a current-day ranking prior and keep live-state authority explicit.",
+    "If advice uses champion_item_fit, say it is a hard-data fit candidate and still check live state.",
+    "When the user asks whether to make an item now, answer slam/wait/temporary holder instead of only naming a best item.",
+    "A craft recommendation is valid only when the exact output item appears in component_recipe_contexts for the named owned component. Never infer a craftable emblem from a desired trait, lineup, or remembered recipe.",
+    "When evidence is insufficient, ask for or trigger current HP, stage, streak, owned components, holder, tools, and current board strength before claiming a final craft.",
+    "Treat current-match explicit user equipment confirmation as reliable fallback evidence with explicit provenance, but never relabel it as MuMu 4357/4356 live_state.",
+    "Use each reliable equipment field immediately. Do not wait for MuMu recovery or visual/icon evidence after current-match user confirmation supplies the field needed for the decision.",
+    "If item bench is known but holder assignment is missing, or vice versa, ask only for the missing field when it can change the next action; otherwise answer conditionally from the available field.",
+    "Visual or icon matches remain candidates. Ask the user to confirm them before treating them as owned equipment.",
+    "Recording equipment creates no derived sibling answer. The user's equipment reply remains the single direct Host answer owner, so after a runtime prompt it may immediately decide slam, wait, holder, or the next missing fact from the newly recorded context.",
+    "When the selected lineup contains equipment_requirements, state explicit and formation-required items before generic hero item packages, bind every required item to its exact holder, and preserve the distinction between variant-specific, group-mandatory, and core-consensus evidence."
+  ]
+}

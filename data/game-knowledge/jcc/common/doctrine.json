@@ -1,0 +1,33 @@
+{
+  "schema": "jcc-game-knowledge-common-document-v1",
+  "logical_id": "common.doctrine",
+  "scope": "common",
+  "kind": "doctrine",
+  "season_neutral": true,
+  "entity_references": [],
+  "entries": [
+    {
+      "id": "doctrine.strongest_board_economy",
+      "principles": [
+        "Balance board strength, health preservation, interest, and future upgrade access.",
+        "Do not spend solely because a stage or gold bucket changed.",
+        "Explain the immediate benefit and opportunity cost of spending."
+      ]
+    },
+    {
+      "id": "doctrine.commitment",
+      "principles": [
+        "Keep early direction provisional until board, equipment, choices, economy, and current evidence agree.",
+        "Do not displace an established core with an unrelated higher-scoring plan without explicit exit evidence."
+      ]
+    },
+    {
+      "id": "doctrine.itemization",
+      "principles": [
+        "Resolve ownership and holder facts per field from the highest reliable source.",
+        "Treat published item packages as evidence, not unconditional perfect-item requirements.",
+        "Require an exact current-patch recipe before claiming craftability."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "jcc-match-fact-capture-contract-v1",
+  "purpose": "Allow one explicit Cruise Quick Record interaction to normalize and persist current-match facts without turning ordinary chat into a canonical fact source or producing strategy advice.",
+  "entry": {
+    "ui_mode": "cruise",
+    "label": "快速记录",
+    "request_kind": "match_fact_capture",
+    "interaction": "prefill_then_user_edits_and_sends",
+    "active_match_required": true,
+    "visible_text_alone_never_authorizes_fact_writes": true
+  },
+  "ownership": {
+    "one_user_interaction_one_response_owner": true,
+    "response_kind": "agent_fact_receipt",
+    "strategy_advice_forbidden": true,
+    "target_plan_mutation_forbidden": true,
+    "ordinary_latest_intent_mutation_forbidden": true,
+    "proactive_sibling_answer_forbidden": true,
+    "strategy_field_allowlist": "The delivered response is rebuilt from the persisted fact receipt. Host-supplied pinned lineup, choice recommendation, recommended action, and follow-up question fields are discarded."
+  },
+  "two_layer_interpretation": {
+    "host_role": "Interpret shorthand, speech-to-text mistakes, corrections, quantities, replacement language, holder assignments, and current-season variable mentions into a closed operation schema.",
+    "runtime_role": "Resolve every proposed name against the active fingerprinted catalog and descriptor, enforce stage and category legality, reject ambiguity, persist only accepted canonical facts, and generate the final receipt from actual persistence results.",
+    "host_output_is_never_directly_trusted_as_canonical_state": true
+  },
+  "allowed_operations": [
+    "set_choice",
+    "replace_equipment",
+    "add_equipment",
+    "remove_equipment",
+    "clear_equipment",
+    "assign_equipment",
+    "clear_equipment_assignments",
+    "set_match_variable"
+  ],
+  "forbidden_operations": [
+    "set_target_plan",
+    "set_lineup_direction",
+    "request_advice",
+    "write_arbitrary_json_path"
+  ],
+  "persistence": {
+    "scope": "exact_active_match_only",
+    "sparse_patch": true,
+    "validate_before_write": true,
+    "single_match_context_update": true,
+    "late_result_policy": "The canonical commit point compares the expected match and response-task owner without an intervening await. A match change during legacy mirror I/O returns no success, restores the current-match mirror when available, and cannot publish the old response.",
+    "partial_resolution_policy": "persist uniquely resolved operations and report every unresolved fragment without guessing",
+    "replacement_atomicity_policy": "An equipment replacement snapshot is rejected as a whole when any named item is unresolved; additive and removal updates persist their uniquely resolved entries.",
+    "receipt_quantity_policy": "Equipment removal receipts report only copies actually removed and explicitly report any requested quantity not present in current canonical inventory.",
+    "duplicate_equipment_policy": "preserve inventory quantities as repeated canonical entries; remove one copy per requested quantity",
+    "equipped_inventory_exclusion_policy": "Equipping a user-confirmed item moves one matching canonical copy out of the inventory category when available and into equipped_items. A missing inventory copy does not block an explicit holder fact. Snapshot edits de-duplicate only the copies proven to be the same physical item and preserve additional owned copies.",
+    "omitted_equipment_category_policy": "preserve",
+    "explicit_empty_equipment_category_policy": "clear",
+    "holder_intent_policy": "temporary is provenance only and never becomes a target-lineup assertion",
+    "choice_policy": "a uniquely resolved stage-legal final choice may be recorded without fabricating an unreported candidate set",
+    "choice_stage_policy": "Fixed-checkpoint choices use descriptor stages. Descriptor choices without fixed checkpoints require the exact current verified stage.",
+    "choice_reward_policy": "A reported reward is canonical only after descriptor-owned reward catalog, parent-choice, and stage validation. Invalid reward text is unresolved while the independently valid primary choice may still persist.",
+    "card_hydration_policy": "structured cards expose the current canonical final selection independently of candidate drafts and use a local edit generation plus canonical revision fence so older asynchronous hydration cannot overwrite a newer draft"
+  },
+  "holder_editor": {
+    "surface": "common in-match target/variable panel; never a separate mode",
+    "rows": "trusted own-board champions plus user-searchable current-season champions",
+    "slots_per_champion": 3,
+    "catalog_groups": [
+      "components",
+      "completed",
+      "radiant",
+      "support",
+      "artifacts",
+      "emblems",
+      "special_or_other"
+    ],
+    "canonical_field": "user_confirmed_equipment.equipped_items",
+    "shared_with_quick_record": true,
+    "manual_and_quick_record_updates_share_revision_fence": true
+  },
+  "context_budget": {
+    "target_turn_bytes": 131072,
+    "absolute_turn_bytes": 131072,
+    "inherits_general_strategy_turn_budget": false,
+    "mandatory_on_degradation": [
+      "hidden request_kind",
+      "fact capture response schema",
+      "active canonical catalog",
+      "bounded current-match facts"
+    ],
+    "overflow_policy": "Compact repeated inventory to canonical quantities first; if mandatory evidence still exceeds the limit, fail explicitly instead of downgrading to ordinary Cruise chat."
+  },
+  "alias_lifecycle": {
+    "season_neutral_runtime": true,
+    "active_catalog_only": true,
+    "compile_time_sources": [
+      "official_names",
+      "hard-data aliases",
+      "normalized abbreviations",
+      "speech-near candidates"
+    ],
+    "major_season_refresh_policy": "Generate an ambiguity and missing-alias review report from the new season hard data; require human additions only for real player slang that cannot be derived safely.",
+    "unknown_or_ambiguous_policy": "fail_closed_and_return_unresolved"
+  },
+  "missing_fact_interop": {
+    "normal_user_question_answers_first": true,
+    "missing_fact_reminder_may_reference_quick_record": true,
+    "missing_choice_or_variable_never_blocks_an_unrelated_user_action": true
+  }
+}
