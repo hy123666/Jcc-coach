@@ -49,3 +49,11 @@ See the [publication checklist](docs/release/PUBLICATION-CHECKLIST.en.md). `docs
 Original code uses [PolyForm Noncommercial 1.0.0](LICENSE), permitting noncommercial use under its terms. This is source-available software, not MIT or OSI-defined open source. Third-party code, game data and models retain their own terms; see [NOTICE](NOTICE.md).
 
 Configuration, databases and logs reside in Electron's user-data directory, separate from the installation directory. Do not upload them to this repository. Your chosen model service receives questions and selected match evidence needed to answer. Report issues with the version, reproduction steps and redacted diagnostics, never credentials or private chats.
+
+## Community and Feedback
+
+You're welcome to share your experience and report issues. Please include "JCC coach" in your friend request.
+
+WeChat:
+
+<img src="docs/images/wechat-contact.png" alt="WeChat contact QR code for feedback" width="320">
