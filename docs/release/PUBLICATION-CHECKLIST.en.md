@@ -28,6 +28,6 @@ The maintainer has chosen not to pursue ADB replacement/provenance or dependency
 1. Verify bilingual documents and synchronize development templates, staging and public source.
 2. Completed: project licenses and third-party notices are in the rebuilt 0.1.5 package; all 181 inventoried notice hashes matched. Earlier references to the EXE missing notices describe the previous build.
 3. Completed: package parity, Daemon startup and simulated-Provider strategic delivery passed. See the [repackage record](2026-09-27-repackage.md) for the new SHA-256 and verification boundaries.
-4. Review public files and privacy boundaries, commit the release changes, then push the public repository and publish the installer through Releases. Nothing has been uploaded yet.
+4. Completed: public main pushed and [v0.1.5](https://github.com/hy123666/Jcc-coach/releases/tag/v0.1.5) published September 27, 2026. The installer and SHA256SUMS.txt are uploaded; the GitHub asset digest matches the local hash. The release tag refers to source commit 84cb602; subsequent main commits may update publication-status documentation.
 
 Do not represent source export, simulated-Provider tests or earlier local feedback as a new clean-machine full live-match acceptance test.
