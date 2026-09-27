@@ -40,6 +40,8 @@ export function releaseSourceFiles(source) {
     /^(ui\/(src|electron|assets|scripts|installer)\/|data\/runtime\/jcc\/)/.test(file)
     || /^(AGENTS\.md|CLAUDE\.md|\.codex\/skills\/jcc-runtime-agent\/SKILL\.md)$/.test(file)
     || /^docs\/(requirements|release)\/.*\.(json|md)$/.test(file)
+    || /^docs\/public\//.test(file)
+    || /^third-party-notices\//.test(file)
     || /^tools\/[^/]+\.(mjs|js|cjs|py|ps1)$/.test(file)
     || /^tools\/fixtures\/.*\.(nsi|json|mjs|py)$/.test(file)
     || /^ui\/(package(-lock)?\.json|index\.html|vite\.config\.ts|tsconfig[^/]*\.json|electron-builder\.yml)$/.test(file)

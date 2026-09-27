@@ -12,6 +12,12 @@ directories:
   buildResources: assets
 
 extraResources:
+  - from: "../docs/public/LICENSE"
+    to: "LICENSE"
+  - from: "../docs/public/NOTICE.md"
+    to: "NOTICE.md"
+  - from: "../third-party-notices"
+    to: "third-party-notices"
   - from: "../resources/ocr"
     to: "ocr"
   - from: "../tools"

@@ -55,3 +55,7 @@ android-companion/.gradle/
 android-companion/build/
 android-companion/app/build/
 android-companion/app/.cxx/
+
+# These are collected license texts, not installed dependencies.
+!third-party-notices/npm/node_modules/
+!third-party-notices/npm/node_modules/**

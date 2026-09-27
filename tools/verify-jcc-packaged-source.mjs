@@ -36,6 +36,14 @@ async function verifyDist(relative = 'dist') {
   }
 }
 await verifyDist();
+for (const file of ['LICENSE', 'NOTICE.md']) {
+  assert((await readFile(path.join(source, 'docs/public', file))).equals(await readFile(path.join(resources, file))), `Packaged project notice mismatch: ${file}`);
+  checked++;
+}
+for (const file of Object.keys(manifest.files).filter(f => f.startsWith('third-party-notices/'))) {
+  assert((await readFile(path.join(source, file))).equals(await readFile(path.join(resources, file))), `Packaged third-party notice mismatch: ${file}`);
+  checked++;
+}
 const expectedPackage = JSON.parse(await readFile(path.join(source, 'ui/package.json'), 'utf8'));
 const packagedPackage = JSON.parse(asar.extractFile(archive, 'package.json').toString());
 assert.equal(packagedPackage.version, expectedPackage.version, 'Packaged version mismatch');

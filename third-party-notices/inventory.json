@@ -1,0 +1,1544 @@
+{
+  "schema": "jcc-third-party-inventory-v1",
+  "notices": [
+    {
+      "file": "npm/node_modules/@babel/code-frame/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/compat-data/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/core/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/generator/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/helper-compilation-targets/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/helper-globals/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/helper-module-imports/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/helper-module-transforms/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/helper-plugin-utils/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/helper-string-parser/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/helper-validator-identifier/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/helper-validator-option/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/helpers/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30"
+    },
+    {
+      "file": "npm/node_modules/@babel/parser/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "2e97627cb278aa7556fb9e8817368302301a595b6c7582512b8d74c57b773652"
+    },
+    {
+      "file": "npm/node_modules/@babel/plugin-transform-react-jsx-self/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/plugin-transform-react-jsx-source/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/template/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/traverse/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@babel/types/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+    },
+    {
+      "file": "npm/node_modules/@jridgewell/gen-mapping/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c"
+    },
+    {
+      "file": "npm/node_modules/@jridgewell/remapping/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c"
+    },
+    {
+      "file": "npm/node_modules/@jridgewell/resolve-uri/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "b8778b155bfde5a28b023a558753c0fa058a52bb9de35c343c250be1bbcdedab"
+    },
+    {
+      "file": "npm/node_modules/@jridgewell/sourcemap-codec/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c"
+    },
+    {
+      "file": "npm/node_modules/@jridgewell/trace-mapping/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c"
+    },
+    {
+      "file": "npm/node_modules/@rolldown/pluginutils/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
+    },
+    {
+      "file": "npm/node_modules/@types/babel__core/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "file": "npm/node_modules/@types/babel__generator/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "file": "npm/node_modules/@types/babel__template/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "file": "npm/node_modules/@types/babel__traverse/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "file": "npm/node_modules/@types/estree/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "file": "npm/node_modules/@vitejs/plugin-react/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "29b68325fe026047d13e187b44c33b2acacf7dc647dec4583702e59f235e13b5"
+    },
+    {
+      "file": "npm/node_modules/baseline-browser-mapping/LICENSE.txt",
+      "source": "installed app.asar",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "file": "npm/node_modules/browserslist/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "21c2679a63d7699c0e644409e2f17d0adbc7a965003feb06b3ff4b833d21f722"
+    },
+    {
+      "file": "npm/node_modules/caniuse-lite/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "fd3a263fe19ed8faa9068b43abaebafc02c77897b0c6fc09abc04bb592e5f16e"
+    },
+    {
+      "file": "npm/node_modules/convert-source-map/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "1fa6ee8bb95a81ae3d73a5bd074a3ac380ffec13697051063ca1a601921b91db"
+    },
+    {
+      "file": "npm/node_modules/debug/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95"
+    },
+    {
+      "file": "npm/node_modules/electron-to-chromium/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "25ba5c59dad3e0dd8f9540beaa0f0a86a10e3aec35af5fdc8e88c5f6a5c0d8c6"
+    },
+    {
+      "file": "npm/node_modules/esbuild/LICENSE.md",
+      "source": "installed app.asar",
+      "sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681"
+    },
+    {
+      "file": "npm/node_modules/escalade/license",
+      "source": "installed app.asar",
+      "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+    },
+    {
+      "file": "npm/node_modules/fdir/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "9a39f2aadab11a3697edd668ff2d8ad885b649737b7ab4d3bf12b34e5ada0c86"
+    },
+    {
+      "file": "npm/node_modules/gensync/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "e3a956681ee067f971ac413994171b3d90ca801ec6324e76c9c55366cfe31cb0"
+    },
+    {
+      "file": "npm/node_modules/js-tokens/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "2213d91c606205c71eb051a199478cdc2adde945893404d7f1421436dd6d5cc1"
+    },
+    {
+      "file": "npm/node_modules/jsesc/LICENSE-MIT.txt",
+      "source": "installed app.asar",
+      "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a"
+    },
+    {
+      "file": "npm/node_modules/json5/LICENSE.md",
+      "source": "installed app.asar",
+      "sha256": "53e59feb13058722d977c699eb0407c7bce2f93c949b681bbd2ff31698535927"
+    },
+    {
+      "file": "npm/node_modules/lru-cache/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+    },
+    {
+      "file": "npm/node_modules/lucide-react/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "3c57143f22dac950efebf84002e360bba5458c7b90fe583b0667aaaef1a7256e"
+    },
+    {
+      "file": "npm/node_modules/lucide-react/dist/esm/icons/copyright.js",
+      "source": "installed app.asar",
+      "sha256": "0c74923563a07b8404fc14d77f339dbee05b929d0bf1d57da61330ce5f2588bf"
+    },
+    {
+      "file": "npm/node_modules/lucide-react/dist/esm/icons/copyright.js.map",
+      "source": "installed app.asar",
+      "sha256": "4bcdc996eb4435dbc7aeef5c4dec94961c32f2db9c2cb01fd3a8f8bbb7db27b7"
+    },
+    {
+      "file": "npm/node_modules/minisearch/LICENSE.txt",
+      "source": "installed app.asar",
+      "sha256": "70d37354d6395629fb99edb28cb37a5d356ffa24a48cd02a5def5b83a300a899"
+    },
+    {
+      "file": "npm/node_modules/ms/license.md",
+      "source": "installed app.asar",
+      "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801"
+    },
+    {
+      "file": "npm/node_modules/nanoid/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987"
+    },
+    {
+      "file": "npm/node_modules/node-releases/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "3706296ed611888111ceccc1dff4712844dea4bde0b185c82d718c3b69895abe"
+    },
+    {
+      "file": "npm/node_modules/picocolors/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750"
+    },
+    {
+      "file": "npm/node_modules/picomatch/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9"
+    },
+    {
+      "file": "npm/node_modules/postcss/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8"
+    },
+    {
+      "file": "npm/node_modules/react/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "npm/node_modules/react-dom/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "npm/node_modules/react-refresh/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "npm/node_modules/rollup/LICENSE.md",
+      "source": "installed app.asar",
+      "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8"
+    },
+    {
+      "file": "npm/node_modules/scheduler/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "npm/node_modules/semver/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+    },
+    {
+      "file": "npm/node_modules/source-map-js/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd"
+    },
+    {
+      "file": "npm/node_modules/tinyglobby/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "22c68811e174cbbfb3813d4135918df4f540959c14d872e601d9abe83d3cde8f"
+    },
+    {
+      "file": "npm/node_modules/update-browserslist-db/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "c414dde36704bd9c8a76c7aa2921b19270ff9abeb478ea0050250d16cf29b0f6"
+    },
+    {
+      "file": "npm/node_modules/vite/LICENSE.md",
+      "source": "installed app.asar",
+      "sha256": "a77a1c089806b39ad339535bdf3677f636c91d96693e8ad7b11fe733f650ea64"
+    },
+    {
+      "file": "npm/node_modules/yallist/LICENSE",
+      "source": "installed app.asar",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+    },
+    {
+      "file": "electron/LICENSE.electron.txt",
+      "source": "installed Electron distribution",
+      "sha256": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d"
+    },
+    {
+      "file": "electron/LICENSES.chromium.html",
+      "source": "installed Electron distribution",
+      "sha256": "f9c475876b01bb4d654b8f630f11219cc96198efe91d7f2602a97f0f3c86c3cb"
+    },
+    {
+      "file": "python/LICENSE.txt",
+      "source": "bundled Python",
+      "sha256": "e502c6b880ff58d614901495a9009c136539cd0b1e2a2abb8fc00b934c203419"
+    },
+    {
+      "file": "python/site-packages/annotated_types-0.7.0.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+    },
+    {
+      "file": "python/site-packages/anyio-4.9.0.dist-info/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0"
+    },
+    {
+      "file": "python/site-packages/certifi-2025.4.26.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+    },
+    {
+      "file": "python/site-packages/certifi-2026.6.17.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+    },
+    {
+      "file": "python/site-packages/charset_normalizer-3.4.7.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "18577485d3704f1a479ded8e573c0976cfed315fd2fd17983fa988da4c2f70d1"
+    },
+    {
+      "file": "python/site-packages/colorama-0.4.6.dist-info/licenses/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318"
+    },
+    {
+      "file": "python/site-packages/colorlog-6.10.1.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "b1d9082bc483623fd59fc7279b457f0e40d942a76426cde257239e04dfe4125a"
+    },
+    {
+      "file": "python/site-packages/cv2/LICENSE-3RD-PARTY.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "55bf7d4a1de21d130a39ca38824eb61ba061edbf8449838634246bde30fde403"
+    },
+    {
+      "file": "python/site-packages/cv2/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "edef0fac1eb08d29d34563f724742e078da2513e196133a12c6ad9ff01e26107"
+    },
+    {
+      "file": "python/site-packages/distro-1.9.0.dist-info/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14"
+    },
+    {
+      "file": "python/site-packages/h11-0.16.0.dist-info/licenses/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361"
+    },
+    {
+      "file": "python/site-packages/httpcore-1.0.9.dist-info/licenses/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5"
+    },
+    {
+      "file": "python/site-packages/httpx-0.28.1.dist-info/licenses/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d"
+    },
+    {
+      "file": "python/site-packages/idna-3.10.dist-info/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "a59f0b0ef3635874109a4461ca44ff7a70d50696e814767bfaf721d4c9b0db0f"
+    },
+    {
+      "file": "python/site-packages/idna-3.18.dist-info/licenses/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+    },
+    {
+      "file": "python/site-packages/numpy/ma/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7"
+    },
+    {
+      "file": "python/site-packages/numpy/random/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a"
+    },
+    {
+      "file": "python/site-packages/numpy/_core/include/numpy/random/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "a804dff0ead9fadc5293456410bcbfc32bf024be9c4513459663fb7b442d2341"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "8db000e158c162e7249787852d8c69764706502ccee725c06641b31c1e95c8af"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "19060ef465e1797d682ee0fc3081bd25ab1395e995e43d25c9d13c95d9a3cd6b"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/ma/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/random/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "cf5619f25b112d5ce7c896efffc8e610bcb345dfadcc19f2c1460aa48fff2c9e"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "92c10699884321f1c2947fe2a70ab23b0fbf1507f756d89dd08f38c61fc3d4fa"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "41190663b77bee5302386495a07b7eabfbfa571aa0ae2f11da6764162062fc4f"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "322ac46d870c8aeead6c53adcccc839296fb3c8e456eae155081297daf7f8013"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "28cad82ce1379dc529df30da78ec012d7d0d1d576b03ddcb93388aee53659f59"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "454ec7350e478e037061850b67395753b425b1cb0a34bbc26290b020bf89d763"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+      "source": "bundled Python site-packages",
+      "sha256": "aea41976c720f91bd19725c16916a1ace40eb1ea42620d340e587a5de4bbcea0"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "d208152e2777ffd0126eacc1bd21c0320d69e4e6b622d21a2a12a47e8ef73763"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "a732977853530066790c42817087f4829b518dd98d340c916acbfd227e39d3cb"
+    },
+    {
+      "file": "python/site-packages/numpy-2.4.6.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "585483905b13d4b42f800c55ba99e89d6e2e33ccd5f503e201c07531d148ff41"
+    },
+    {
+      "file": "python/site-packages/omegaconf-2.3.1.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "b31375ed5d5cbe7ec2d0c4c14df8afa7a8e5501bbe25f70b6cbc461685f4b91a"
+    },
+    {
+      "file": "python/site-packages/onnxruntime/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "c250d6278f0b47a6439fb7592b08b58a55eb9f535aa49a1db63211c3f982b674"
+    },
+    {
+      "file": "python/site-packages/openai-1.76.0.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "d711ed37bb19ae7249af8d093b8fc6ea758fd3554b92ac61500c1ad3cc0e3fb9"
+    },
+    {
+      "file": "python/site-packages/opencv_python-4.13.0.92.dist-info/LICENSE-3RD-PARTY.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "55bf7d4a1de21d130a39ca38824eb61ba061edbf8449838634246bde30fde403"
+    },
+    {
+      "file": "python/site-packages/opencv_python-4.13.0.92.dist-info/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "edef0fac1eb08d29d34563f724742e078da2513e196133a12c6ad9ff01e26107"
+    },
+    {
+      "file": "python/site-packages/packaging-26.2.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+    },
+    {
+      "file": "python/site-packages/packaging-26.2.dist-info/licenses/LICENSE.APACHE",
+      "source": "bundled Python site-packages",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "file": "python/site-packages/packaging-26.2.dist-info/licenses/LICENSE.BSD",
+      "source": "bundled Python site-packages",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+    },
+    {
+      "file": "python/site-packages/pillow-11.2.1.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "fd31630d7502b4964511c5508dd20ef044ef40935e7b511384f0b400ff7d42d0"
+    },
+    {
+      "file": "python/site-packages/pillow-12.2.0.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "75bb81b58f9b39786eeb2e56a1eb829aae501042d49e1dc766ca187b6ce9656f"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/cachecontrol/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/certifi/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/distlib/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/distro/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/idna/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "b7a336abf3b04e180ec065cdd16e705d079e1cc7a14f910aa6e9187f36b9cd87"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/msgpack/COPYING",
+      "source": "bundled Python site-packages",
+      "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/packaging/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/packaging/LICENSE.APACHE",
+      "source": "bundled Python site-packages",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/packaging/LICENSE.BSD",
+      "source": "bundled Python site-packages",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/pkg_resources/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/platformdirs/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/pygments/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/pyproject_hooks/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/requests/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/resolvelib/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/rich/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/tomli/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/tomli_w/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/truststore/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+    },
+    {
+      "file": "python/site-packages/pip/_vendor/urllib3/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+    },
+    {
+      "file": "python/site-packages/pip-24.0.dist-info/AUTHORS.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "4b05e6e279304649ad9ced5963e74bcbb10f7a840d5cc34b6f2e423771a53616"
+    },
+    {
+      "file": "python/site-packages/pip-24.0.dist-info/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/AUTHORS.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "5b73479bffada0916044cb29c47ab20360215e3c838ff2e7562ecdfcb11645bd"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/certifi/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/distro/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+      "source": "bundled Python site-packages",
+      "sha256": "b7a336abf3b04e180ec065cdd16e705d079e1cc7a14f910aa6e9187f36b9cd87"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/msgpack/COPYING",
+      "source": "bundled Python site-packages",
+      "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/packaging/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE",
+      "source": "bundled Python site-packages",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD",
+      "source": "bundled Python site-packages",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/pygments/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/requests/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/rich/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/tomli/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/truststore/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+    },
+    {
+      "file": "python/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+    },
+    {
+      "file": "python/site-packages/protobuf-7.35.1.dist-info/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d"
+    },
+    {
+      "file": "python/site-packages/pyclipper-1.4.0.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "73c25539e7fb486b834c33747d579e0bc56c0f984294c88f3cb2329420ba300f"
+    },
+    {
+      "file": "python/site-packages/pydantic-2.11.3.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+    },
+    {
+      "file": "python/site-packages/pydantic_core-2.33.1.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "fbe7f615f18d135c07000e5a86325db27f42c7729699ef166ac1f7a3f4586bf4"
+    },
+    {
+      "file": "python/site-packages/pyperclip-1.9.0.dist-info/licenses/AUTHORS.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "76820689e76855e13b0951caa0a352e44236bf44b79cf0be514db88cdb99fe4c"
+    },
+    {
+      "file": "python/site-packages/pyperclip-1.9.0.dist-info/licenses/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "f5793f4c4b281de1f2f92cdeb28e31e57e2dab802ce967b0bbd107ed5bbc2e35"
+    },
+    {
+      "file": "python/site-packages/pyyaml-6.0.3.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4"
+    },
+    {
+      "file": "python/site-packages/requests-2.34.2.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+    },
+    {
+      "file": "python/site-packages/requests-2.34.2.dist-info/licenses/NOTICE",
+      "source": "bundled Python site-packages",
+      "sha256": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc"
+    },
+    {
+      "file": "python/site-packages/setuptools-65.5.0.dist-info/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "db3f0246b1f9278f15845b99fec478b8b506eb76487993722f8c6e254285faf8"
+    },
+    {
+      "file": "python/site-packages/shapely-2.1.2.dist-info/licenses/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "e8cd7d34604d2758ff589f0f34d6ed79c3f7fb14aaf5e12fb09221421391a3bf"
+    },
+    {
+      "file": "python/site-packages/shapely-2.1.2.dist-info/licenses/LICENSE_GEOS",
+      "source": "bundled Python site-packages",
+      "sha256": "91a5bb11df4d44bfddc0c68db43681705326107781599fb6c6ff821042072d64"
+    },
+    {
+      "file": "python/site-packages/shapely-2.1.2.dist-info/licenses/LICENSE_win32",
+      "source": "bundled Python site-packages",
+      "sha256": "9b30cd1a09789884dd54e5828e31d2bf8e6879034e7cf7b6e0321444cf6dd11d"
+    },
+    {
+      "file": "python/site-packages/six-1.17.0.dist-info/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0"
+    },
+    {
+      "file": "python/site-packages/sniffio-1.3.1.dist-info/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "652c878488d1456361e08c3f8607fd7ba59892a14103d15cce4ff93c85b5cc8b"
+    },
+    {
+      "file": "python/site-packages/sniffio-1.3.1.dist-info/LICENSE.APACHE2",
+      "source": "bundled Python site-packages",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "python/site-packages/sniffio-1.3.1.dist-info/LICENSE.MIT",
+      "source": "bundled Python site-packages",
+      "sha256": "3e6dae555eb92787fc82d1d48355677f454c7f65aeb38d3f9e72bf9a3daf034b"
+    },
+    {
+      "file": "python/site-packages/tqdm-4.67.1.dist-info/LICENCE",
+      "source": "bundled Python site-packages",
+      "sha256": "dc33252e829015e3b150086fb9b3a40f6ad6fb32c2f4610ce812fa677d35986a"
+    },
+    {
+      "file": "python/site-packages/tqdm-4.68.3.dist-info/licenses/LICENCE",
+      "source": "bundled Python site-packages",
+      "sha256": "fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de"
+    },
+    {
+      "file": "python/site-packages/typing_extensions-4.13.2.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+    },
+    {
+      "file": "python/site-packages/typing_inspection-0.4.0.dist-info/licenses/LICENSE",
+      "source": "bundled Python site-packages",
+      "sha256": "4e40cba793a388dd456577b8657175bbe95e4ded2970534b3c59cccc2661a708"
+    },
+    {
+      "file": "python/site-packages/urllib3-2.7.0.dist-info/licenses/LICENSE.txt",
+      "source": "bundled Python site-packages",
+      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+    },
+    {
+      "file": "python/tcl/tk8.6/demos/license.terms",
+      "source": "bundled Python Tcl",
+      "sha256": "0d1e4405f6273f091732764ed89b57066be63ce64869be6c71ea337dc4f2f9b5"
+    },
+    {
+      "file": "python/tcl/tk8.6/license.terms",
+      "source": "bundled Python Tcl",
+      "sha256": "0d1e4405f6273f091732764ed89b57066be63ce64869be6c71ea337dc4f2f9b5"
+    }
+  ],
+  "npm": [
+    {
+      "name": "@babel/code-frame",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/compat-data",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/core",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/generator",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/helper-compilation-targets",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/helper-globals",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/helper-module-imports",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/helper-module-transforms",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/helper-plugin-utils",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/helper-string-parser",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/helper-validator-identifier",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/helper-validator-option",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/helpers",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/parser",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/plugin-transform-react-jsx-self",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/plugin-transform-react-jsx-source",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/template",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/traverse",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@babel/types",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@esbuild/win32-x64",
+      "version": "0.27.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@jridgewell/gen-mapping",
+      "version": "0.3.13",
+      "license": "MIT"
+    },
+    {
+      "name": "@jridgewell/remapping",
+      "version": "2.3.5",
+      "license": "MIT"
+    },
+    {
+      "name": "@jridgewell/resolve-uri",
+      "version": "3.1.2",
+      "license": "MIT"
+    },
+    {
+      "name": "@jridgewell/sourcemap-codec",
+      "version": "1.5.5",
+      "license": "MIT"
+    },
+    {
+      "name": "@jridgewell/trace-mapping",
+      "version": "0.3.31",
+      "license": "MIT"
+    },
+    {
+      "name": "@rolldown/pluginutils",
+      "version": "1.0.0-rc.3",
+      "license": "MIT"
+    },
+    {
+      "name": "@rollup/rollup-win32-x64-gnu",
+      "version": "4.62.0",
+      "license": "MIT"
+    },
+    {
+      "name": "@rollup/rollup-win32-x64-msvc",
+      "version": "4.62.0",
+      "license": "MIT"
+    },
+    {
+      "name": "@types/babel__core",
+      "version": "7.20.5",
+      "license": "MIT"
+    },
+    {
+      "name": "@types/babel__generator",
+      "version": "7.27.0",
+      "license": "MIT"
+    },
+    {
+      "name": "@types/babel__template",
+      "version": "7.4.4",
+      "license": "MIT"
+    },
+    {
+      "name": "@types/babel__traverse",
+      "version": "7.28.0",
+      "license": "MIT"
+    },
+    {
+      "name": "@types/estree",
+      "version": "1.0.9",
+      "license": "MIT"
+    },
+    {
+      "name": "@vitejs/plugin-react",
+      "version": "5.2.0",
+      "license": "MIT"
+    },
+    {
+      "name": "baseline-browser-mapping",
+      "version": "2.10.37",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "browserslist",
+      "version": "4.28.2",
+      "license": "MIT"
+    },
+    {
+      "name": "caniuse-lite",
+      "version": "1.0.30001799",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "convert-source-map",
+      "version": "2.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "debug",
+      "version": "4.4.3",
+      "license": "MIT"
+    },
+    {
+      "name": "electron-to-chromium",
+      "version": "1.5.373",
+      "license": "ISC"
+    },
+    {
+      "name": "esbuild",
+      "version": "0.27.7",
+      "license": "MIT"
+    },
+    {
+      "name": "escalade",
+      "version": "3.2.0",
+      "license": "MIT"
+    },
+    {
+      "name": "fdir",
+      "version": "6.5.0",
+      "license": "MIT"
+    },
+    {
+      "name": "gensync",
+      "version": "1.0.0-beta.2",
+      "license": "MIT"
+    },
+    {
+      "name": "js-tokens",
+      "version": "4.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "jsesc",
+      "version": "3.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "json5",
+      "version": "2.2.3",
+      "license": "MIT"
+    },
+    {
+      "name": "lru-cache",
+      "version": "5.1.1",
+      "license": "ISC"
+    },
+    {
+      "name": "lucide-react",
+      "version": "0.561.0",
+      "license": "ISC"
+    },
+    {
+      "name": "minisearch",
+      "version": "7.2.0",
+      "license": "MIT"
+    },
+    {
+      "name": "ms",
+      "version": "2.1.3",
+      "license": "MIT"
+    },
+    {
+      "name": "nanoid",
+      "version": "3.3.12",
+      "license": "MIT"
+    },
+    {
+      "name": "node-releases",
+      "version": "2.0.47",
+      "license": "MIT"
+    },
+    {
+      "name": "picocolors",
+      "version": "1.1.1",
+      "license": "ISC"
+    },
+    {
+      "name": "picomatch",
+      "version": "4.0.4",
+      "license": "MIT"
+    },
+    {
+      "name": "postcss",
+      "version": "8.5.15",
+      "license": "MIT"
+    },
+    {
+      "name": "react",
+      "version": "19.2.7",
+      "license": "MIT"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.2.7",
+      "license": "MIT"
+    },
+    {
+      "name": "react-refresh",
+      "version": "0.18.0",
+      "license": "MIT"
+    },
+    {
+      "name": "rollup",
+      "version": "4.62.0",
+      "license": "MIT"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.27.0",
+      "license": "MIT"
+    },
+    {
+      "name": "semver",
+      "version": "6.3.1",
+      "license": "ISC"
+    },
+    {
+      "name": "source-map-js",
+      "version": "1.2.1",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "tinyglobby",
+      "version": "0.2.17",
+      "license": "MIT"
+    },
+    {
+      "name": "update-browserslist-db",
+      "version": "1.2.3",
+      "license": "MIT"
+    },
+    {
+      "name": "vite",
+      "version": "7.3.5",
+      "license": "MIT"
+    },
+    {
+      "name": "yallist",
+      "version": "3.1.1",
+      "license": "ISC"
+    }
+  ],
+  "python": [
+    {
+      "name": "annotated-types",
+      "version": "0.7.0",
+      "license": null,
+      "metadataDirectory": "annotated_types-0.7.0.dist-info"
+    },
+    {
+      "name": "antlr4-python3-runtime",
+      "version": "4.9.3",
+      "license": "BSD",
+      "metadataDirectory": "antlr4_python3_runtime-4.9.3.dist-info"
+    },
+    {
+      "name": "anyio",
+      "version": "4.9.0",
+      "license": "MIT",
+      "metadataDirectory": "anyio-4.9.0.dist-info"
+    },
+    {
+      "name": "certifi",
+      "version": "2025.4.26",
+      "license": "MPL-2.0",
+      "metadataDirectory": "certifi-2025.4.26.dist-info"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.6.17",
+      "license": "MPL-2.0",
+      "metadataDirectory": "certifi-2026.6.17.dist-info"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.4.7",
+      "license": "MIT",
+      "metadataDirectory": "charset_normalizer-3.4.7.dist-info"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "license": null,
+      "metadataDirectory": "colorama-0.4.6.dist-info"
+    },
+    {
+      "name": "colorlog",
+      "version": "6.10.1",
+      "license": "MIT License",
+      "metadataDirectory": "colorlog-6.10.1.dist-info"
+    },
+    {
+      "name": "distro",
+      "version": "1.9.0",
+      "license": "Apache License, Version 2.0",
+      "metadataDirectory": "distro-1.9.0.dist-info"
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "license": "Apache 2.0",
+      "metadataDirectory": "flatbuffers-25.12.19.dist-info"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "license": "MIT",
+      "metadataDirectory": "h11-0.16.0.dist-info"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "license": "BSD-3-Clause",
+      "metadataDirectory": "httpcore-1.0.9.dist-info"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "license": "BSD-3-Clause",
+      "metadataDirectory": "httpx-0.28.1.dist-info"
+    },
+    {
+      "name": "idna",
+      "version": "3.10",
+      "license": null,
+      "metadataDirectory": "idna-3.10.dist-info"
+    },
+    {
+      "name": "idna",
+      "version": "3.18",
+      "license": "BSD-3-Clause",
+      "metadataDirectory": "idna-3.18.dist-info"
+    },
+    {
+      "name": "jiter",
+      "version": "0.9.0",
+      "license": "MIT",
+      "metadataDirectory": "jiter-0.9.0.dist-info"
+    },
+    {
+      "name": "numpy",
+      "version": "2.4.6",
+      "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "metadataDirectory": "numpy-2.4.6.dist-info"
+    },
+    {
+      "name": "omegaconf",
+      "version": "2.3.1",
+      "license": null,
+      "metadataDirectory": "omegaconf-2.3.1.dist-info"
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.27.0",
+      "license": "MIT License",
+      "metadataDirectory": "onnxruntime-1.27.0.dist-info"
+    },
+    {
+      "name": "openai",
+      "version": "1.76.0",
+      "license": "Apache-2.0",
+      "metadataDirectory": "openai-1.76.0.dist-info"
+    },
+    {
+      "name": "opencv-python",
+      "version": "4.13.0.92",
+      "license": "Apache 2.0",
+      "metadataDirectory": "opencv_python-4.13.0.92.dist-info"
+    },
+    {
+      "name": "packaging",
+      "version": "26.2",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "metadataDirectory": "packaging-26.2.dist-info"
+    },
+    {
+      "name": "pillow",
+      "version": "11.2.1",
+      "license": "MIT-CMU",
+      "metadataDirectory": "pillow-11.2.1.dist-info"
+    },
+    {
+      "name": "pillow",
+      "version": "12.2.0",
+      "license": "MIT-CMU",
+      "metadataDirectory": "pillow-12.2.0.dist-info"
+    },
+    {
+      "name": "pip",
+      "version": "24.0",
+      "license": "MIT",
+      "metadataDirectory": "pip-24.0.dist-info"
+    },
+    {
+      "name": "pip",
+      "version": "26.1.2",
+      "license": "MIT",
+      "metadataDirectory": "pip-26.1.2.dist-info"
+    },
+    {
+      "name": "protobuf",
+      "version": "7.35.1",
+      "license": "3-Clause BSD License",
+      "metadataDirectory": "protobuf-7.35.1.dist-info"
+    },
+    {
+      "name": "pyclipper",
+      "version": "1.4.0",
+      "license": "MIT",
+      "metadataDirectory": "pyclipper-1.4.0.dist-info"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.11.3",
+      "license": "MIT",
+      "metadataDirectory": "pydantic-2.11.3.dist-info"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.33.1",
+      "license": "MIT",
+      "metadataDirectory": "pydantic_core-2.33.1.dist-info"
+    },
+    {
+      "name": "pyperclip",
+      "version": "1.9.0",
+      "license": "BSD",
+      "metadataDirectory": "pyperclip-1.9.0.dist-info"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "license": "MIT",
+      "metadataDirectory": "pyyaml-6.0.3.dist-info"
+    },
+    {
+      "name": "rapidocr",
+      "version": "3.8.4",
+      "license": "Apache-2.0",
+      "metadataDirectory": "rapidocr-3.8.4.dist-info"
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "license": "Apache-2.0",
+      "metadataDirectory": "requests-2.34.2.dist-info"
+    },
+    {
+      "name": "setuptools",
+      "version": "65.5.0",
+      "license": null,
+      "metadataDirectory": "setuptools-65.5.0.dist-info"
+    },
+    {
+      "name": "shapely",
+      "version": "2.1.2",
+      "license": "BSD 3-Clause",
+      "metadataDirectory": "shapely-2.1.2.dist-info"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "license": "MIT",
+      "metadataDirectory": "six-1.17.0.dist-info"
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "license": "MIT OR Apache-2.0",
+      "metadataDirectory": "sniffio-1.3.1.dist-info"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.67.1",
+      "license": "MPL-2.0 AND MIT",
+      "metadataDirectory": "tqdm-4.67.1.dist-info"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.68.3",
+      "license": "MPL-2.0 AND MIT",
+      "metadataDirectory": "tqdm-4.68.3.dist-info"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.13.2",
+      "license": "PSF-2.0",
+      "metadataDirectory": "typing_extensions-4.13.2.dist-info"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.0",
+      "license": null,
+      "metadataDirectory": "typing_inspection-0.4.0.dist-info"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.7.0",
+      "license": "MIT",
+      "metadataDirectory": "urllib3-2.7.0.dist-info"
+    }
+  ],
+  "models": [
+    {
+      "file": "ch_PP-LCNet_x0_25_textline_ori_cls_mobile.onnx",
+      "sha256": "54379ae5174d026780215fc748a7f31910dee36818e63d49e17dc598ecc82df7",
+      "source": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.8.0/onnx/PP-OCRv5/cls/ch_PP-LCNet_x0_25_textline_ori_cls_mobile.onnx",
+      "matchesUpstreamIndex": true
+    },
+    {
+      "file": "ch_PP-OCRv5_det_mobile.onnx",
+      "sha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+      "source": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.8.0/onnx/PP-OCRv5/det/ch_PP-OCRv5_det_mobile.onnx",
+      "matchesUpstreamIndex": true
+    },
+    {
+      "file": "ch_PP-OCRv5_rec_mobile.onnx",
+      "sha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "source": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.8.0/onnx/PP-OCRv5/rec/ch_PP-OCRv5_rec_mobile.onnx",
+      "matchesUpstreamIndex": true
+    }
+  ],
+  "adb": [
+    {
+      "file": "adb.exe",
+      "sha256": "9c3a7b68458565d669926134e9cc257cbdd01ffd89939938f578e87f57b0737c",
+      "status": "Official same-version binary comparison differs; exact distribution provenance unresolved"
+    },
+    {
+      "file": "AdbWinApi.dll",
+      "sha256": "72a757d0ece8940fe2489e2d5094d4a27a2a1f590d203906433cb71bd02dbb66",
+      "status": "Official same-version binary comparison differs; exact distribution provenance unresolved"
+    },
+    {
+      "file": "AdbWinUsbApi.dll",
+      "sha256": "c3c5d859ceb4cd972cdeddf231b278af42d2eb2c37554e566e16d112ee66cbb6",
+      "status": "Official same-version binary comparison differs; exact distribution provenance unresolved"
+    }
+  ]
+}
