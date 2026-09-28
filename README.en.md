@@ -12,13 +12,21 @@ A Windows coaching app combining Master+ rankings, game knowledge and live match
 4. For Start Match, launch MuMu and the game. Confirm ADB debugging is set to “开启本地连接” (local connections enabled); leave it unchanged if already enabled. Open the game window's **工具箱 → 金铲铲之战工具箱** and enable **金铲铲阵容大师**.
 5. In Runtime, choose “连接 MuMu”, use “一键识别 MuMu / ADB 端口”, connect the correct instance, then start a match.
 
-See the [Getting Started guide](docs/GETTING-STARTED.en.md) for setup and troubleshooting. MuMu is the currently supported environment for complete live board/shop information. A successful ADB connection alone does not confirm all game data is available. Chinese UI labels are retained here so you can find the actual controls; this translation does not imply an English application UI.
+See the [Getting Started guide](https://github.com/hy123666/Jcc-coach/blob/main/docs/GETTING-STARTED.en.md) for setup and troubleshooting. MuMu is the currently supported emulator for complete live telemetry. A successful ADB connection alone does not mean board and shop information is ready: enabling MuMu's **金铲铲阵容大师** is necessary for complete board and shop champion information. Chinese UI labels are retained so you can find the actual controls; this translation does not imply an English application UI.
+
+## Model Choice and Response Speed
+
+Lobby chat can use models with higher reasoning effort for deeper discussion. For live Start Match sessions, prioritize a faster-responding model and an appropriate reasoning level so advice arrives before the choice window closes. Do not automatically reuse high-effort lobby settings for live matches; test actual response times first.
 
 ## Version and Data
 
 Published version: **[0.1.5](https://github.com/hy123666/Jcc-coach/releases/tag/v0.1.5)**. Included game knowledge: S18 / 18.2a. Ranking statistics date: **2026-09-26**. The current full generations are September 23, 25 and 26. Normal retention is the active generation plus two eligible historical generations, with compact trends covering up to 14 dates, not 14 full snapshots.
 
 Use “更新今日数据” to synchronize data, run semantic maintenance, verify and publish it. Statistics dates come from the upstream source, not the date the app starts. An ongoing match pins its snapshot and must not mix generations.
+
+**Game-patch support and daily Ranking updates are separate.** Automatic updates for game-patch support are not implemented yet. The maintainer publishes compatibility updates on GitHub; follow this repository and Releases, then update according to the relevant release instructions. “更新今日数据” does not automatically adapt the app to a new game patch or upgrade the application.
+
+**Rankings lag behind game patches.** Based on the maintainer's current observations, corresponding data usually arrives about one day after a patch, while strength tiers reflecting the new environment typically lag by around two to three days. These are observed estimates, not guaranteed schedules; check the source statistics date and actual updates. Do not treat tiers based on older samples as final rankings for a newly released patch.
 
 ## Source Development
 

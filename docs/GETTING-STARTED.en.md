@@ -10,6 +10,8 @@ Install and authenticate a supported CLI using the [Codex CLI documentation](htt
 
 Under “宿主 Agent”, choose “扫描本机 CLI Agent”, select the host and click “连接所选 Agent”. Select a model available to your account; low/medium reasoning is a starting point for ordinary strategy questions. Test a complete lobby response first.
 
+**Choose speed for the situation:** lobby chat can use higher reasoning effort for deeper discussion. In Start Match, prioritize a faster model and reasoning settings that return advice in time. Test actual response speed rather than carrying high-effort lobby settings straight into live play, especially for time-limited augment choices.
+
 ## MuMu Setup
 
 1. Launch MuMu and the game.
@@ -30,6 +32,10 @@ Stop the match when it ends before starting another. “开启新对话” start
 ## Updates and Uninstallation
 
 “更新今日数据” requires network access; semantic maintenance also requires a working model host. Wait for completion and check the actual statistics date. Do not relabel older source data as today's data or edit active pointers manually.
+
+**Game-patch updates:** automatic updates for game-patch support are not implemented yet. The maintainer publishes compatibility updates on GitHub; follow the repository and Releases and use the relevant update instructions. “更新今日数据” runs the data pipeline, not an automatic game-patch adaptation or application upgrade.
+
+**Post-patch delay:** based on the maintainer's current observations, data usually lags a game patch by about one day, and strength tiers reflecting the new environment by around two to three days. These are estimates, not fixed promises. Check actual statistics dates and published updates; early tiers may still reflect older samples rather than final new-patch strength.
 
 Install upgrades to the same directory to retain user data. Uninstallation keeps data by default. Select “同时删除用户配置和运行数据” only to remove the application's own data. Silent uninstalls and upgrades preserve data by default.
 
