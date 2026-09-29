@@ -585,6 +585,136 @@
       "notes": "Machine authority for the Windows developer shortcut, visible-window launch success, hidden-window local activation and native fallback, installed player shortcut, icon assets, and packaged smoke-test boundary."
     },
     {
+      "path": "docs/public/GETTING-STARTED.en.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
+      "path": "docs/public/GETTING-STARTED.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
+      "path": "docs/public/MAINTAINING.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
+      "path": "docs/public/NOTICE.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
+      "path": "docs/public/README-MAINTENANCE.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
+      "path": "docs/public/README.en.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
+      "path": "docs/public/README.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
+      "path": "docs/release/2026-09-27-repackage.md",
+      "doc_type": "generated_snapshot",
+      "status": "generated",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
+      "path": "docs/release/DEPENDENCY-AUDIT.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
+      "path": "docs/release/INSTALLER_DEPENDENCIES.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
+      "path": "docs/release/PUBLICATION-CHECKLIST.en.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
+      "path": "docs/release/PUBLICATION-CHECKLIST.md",
+      "doc_type": "runbook",
+      "status": "current",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
+      "path": "docs/release/v0.1.5.md",
+      "doc_type": "generated_snapshot",
+      "status": "generated",
+      "authority_tier": "supporting",
+      "contract_version": "2026-09-29",
+      "last_reviewed": "2026-09-29",
+      "owner": "jcc-runtime",
+      "notes": "Public guidance or release record; not independent product authority."
+    },
+    {
       "path": "docs/release/WINDOWS-RELEASE.md",
       "doc_type": "current_requirement",
       "status": "current",

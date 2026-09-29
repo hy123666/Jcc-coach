@@ -1,0 +1,39 @@
+{
+  "address": "jcc:s17:formula:healing_effective_hp",
+  "source": "generated_heuristic",
+  "inputs": [
+    "healing",
+    "wound_pct",
+    "missing_hp_cap",
+    "resists"
+  ],
+  "outputs": [
+    "effective_healing",
+    "healing_ehp"
+  ],
+  "formulas": {
+    "effective_healing": "min(healing * (1 - wound_pct), missing_hp_cap)",
+    "healing_ehp": "effective_healing * (1 + relevant_resist / 100)"
+  },
+  "dependencies": [
+    "jcc:s17:formula:ehp"
+  ],
+  "use_cases": [
+    "anti-heal need",
+    "lifesteal/sustain value"
+  ],
+  "exactness": "baseline_exact_if_timing_known",
+  "name": "healing_effective_hp",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "defense"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review",
+    "item_craft"
+  ],
+  "dependency_kind": "derived_formula"
+}

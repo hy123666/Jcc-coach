@@ -1,0 +1,44 @@
+{
+  "address": "jcc:s17:formula:defensive_marginal_value",
+  "source": "generated_heuristic",
+  "inputs": [
+    "current_hp",
+    "current_armor",
+    "current_mr",
+    "candidate_stats",
+    "damage_mix"
+  ],
+  "outputs": [
+    "delta_physical_ehp",
+    "delta_magic_ehp",
+    "delta_mixed_ehp",
+    "best_defensive_stat"
+  ],
+  "formulas": {
+    "delta_mixed_ehp": "mixed_ehp_after_candidate - mixed_ehp_before_candidate"
+  },
+  "dependencies": [
+    "jcc:s17:formula:ehp",
+    "jcc:s17:formula:shield_effective_hp",
+    "jcc:s17:formula:healing_effective_hp"
+  ],
+  "use_cases": [
+    "warmog vs dragon claw vs gargoyle",
+    "frontline item choice"
+  ],
+  "exactness": "baseline_exact_for_flat_stats",
+  "name": "defensive_marginal_value",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "defense",
+    "item"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review",
+    "item_craft"
+  ],
+  "dependency_kind": "derived_formula"
+}

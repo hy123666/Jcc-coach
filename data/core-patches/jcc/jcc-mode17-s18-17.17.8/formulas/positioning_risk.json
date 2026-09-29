@@ -1,0 +1,39 @@
+{
+  "address": "jcc:s17:formula:positioning_risk",
+  "source": "generated_heuristic",
+  "inputs": [
+    "enemy_target_logic",
+    "enemy_aoe_tags",
+    "my_carry_position",
+    "my_tank_position"
+  ],
+  "outputs": [
+    "aoe_risk",
+    "line_risk",
+    "backline_risk",
+    "recommended_template"
+  ],
+  "formulas": {
+    "total_risk": "aoe_risk + line_risk + backline_risk + dive_risk"
+  },
+  "dependencies": [
+    "jcc:s17:index:targeting_threat_templates",
+    "jcc:s17:index:positioning_templates"
+  ],
+  "use_cases": [
+    "站位建议",
+    "scouting response"
+  ],
+  "exactness": "heuristic_without_full_simulator",
+  "name": "positioning_risk",
+  "category": "positioning",
+  "domains": [
+    "positioning",
+    "scouting"
+  ],
+  "route_domains": [
+    "positioning",
+    "trait_or_unit_swap"
+  ],
+  "dependency_kind": "derived_formula"
+}

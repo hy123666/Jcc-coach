@@ -1,0 +1,41 @@
+{
+  "address": "jcc:s17:formula:level_timing",
+  "source": "generated_heuristic",
+  "inputs": [
+    "level",
+    "xp",
+    "gold",
+    "target_level",
+    "xp_curve"
+  ],
+  "outputs": [
+    "xp_needed",
+    "gold_needed",
+    "can_level_now",
+    "gold_after_level"
+  ],
+  "formulas": {
+    "gold_needed": "ceil(xp_needed / 4) * 4",
+    "can_level_now": "gold >= gold_needed"
+  },
+  "dependencies": [
+    "jcc:s17:formula:economy"
+  ],
+  "use_cases": [
+    "拉人口",
+    "future level planning"
+  ],
+  "exactness": "exact_baseline",
+  "name": "level_timing",
+  "category": "economy",
+  "domains": [
+    "economy",
+    "tempo"
+  ],
+  "route_domains": [
+    "roll_or_level",
+    "reward_choice",
+    "postgame_review"
+  ],
+  "dependency_kind": "derived_formula"
+}

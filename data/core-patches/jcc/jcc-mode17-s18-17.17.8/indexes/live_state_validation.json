@@ -1,0 +1,472 @@
+[
+  {
+    "address": "jcc:s17:live_state_validation:round",
+    "field_address": "jcc:s17:live_state_field:round",
+    "key": "round",
+    "type": "string",
+    "constraints": {
+      "kind": "string",
+      "allow_unknown": true,
+      "min_length": 1
+    },
+    "stale_after_seconds": 3,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:stage",
+    "field_address": "jcc:s17:live_state_field:stage",
+    "key": "stage",
+    "type": "number",
+    "constraints": {
+      "kind": "number",
+      "allow_unknown": true,
+      "min": 0
+    },
+    "stale_after_seconds": 5,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:gold",
+    "field_address": "jcc:s17:live_state_field:gold",
+    "key": "gold",
+    "type": "number",
+    "constraints": {
+      "kind": "number",
+      "allow_unknown": true,
+      "min": 0
+    },
+    "stale_after_seconds": 3,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:hp",
+    "field_address": "jcc:s17:live_state_field:hp",
+    "key": "hp",
+    "type": "number",
+    "constraints": {
+      "kind": "number",
+      "allow_unknown": true,
+      "min": 0
+    },
+    "stale_after_seconds": 5,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:level",
+    "field_address": "jcc:s17:live_state_field:level",
+    "key": "level",
+    "type": "number",
+    "constraints": {
+      "kind": "number",
+      "allow_unknown": true,
+      "min": 0
+    },
+    "stale_after_seconds": 5,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:xp",
+    "field_address": "jcc:s17:live_state_field:xp",
+    "key": "xp",
+    "type": "number",
+    "constraints": {
+      "kind": "number",
+      "allow_unknown": true,
+      "min": 0
+    },
+    "stale_after_seconds": 5,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:streak",
+    "field_address": "jcc:s17:live_state_field:streak",
+    "key": "streak",
+    "type": "number",
+    "constraints": {
+      "kind": "number",
+      "allow_unknown": true,
+      "min": 0
+    },
+    "stale_after_seconds": 8,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:board_units",
+    "field_address": "jcc:s17:live_state_field:board_units",
+    "key": "board_units",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 3,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:bench_units",
+    "field_address": "jcc:s17:live_state_field:bench_units",
+    "key": "bench_units",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 3,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:shop_units",
+    "field_address": "jcc:s17:live_state_field:shop_units",
+    "key": "shop_units",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 2,
+    "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:components",
+    "field_address": "jcc:s17:live_state_field:components",
+    "key": "components",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 4,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:completed_items",
+    "field_address": "jcc:s17:live_state_field:completed_items",
+    "key": "completed_items",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 4,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:item_holders",
+    "field_address": "jcc:s17:live_state_field:item_holders",
+    "key": "item_holders",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 4,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:active_traits",
+    "field_address": "jcc:s17:live_state_field:active_traits",
+    "key": "active_traits",
+    "type": "object",
+    "constraints": {
+      "kind": "object",
+      "allow_empty": true,
+      "key_policy": "runtime_defined_patch_known_keys_preferred"
+    },
+    "stale_after_seconds": 3,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:augment_options",
+    "field_address": "jcc:s17:live_state_field:augment_options",
+    "key": "augment_options",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 1,
+    "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:reward_options",
+    "field_address": "jcc:s17:live_state_field:reward_options",
+    "key": "reward_options",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 1,
+    "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:user_confirmed_scouting_notes",
+    "field_address": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+    "key": "user_confirmed_scouting_notes",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 15,
+    "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:match_variables",
+    "field_address": "jcc:s17:live_state_field:match_variables",
+    "key": "match_variables",
+    "type": "object",
+    "constraints": {
+      "kind": "object",
+      "allow_empty": true,
+      "key_policy": "runtime_defined_patch_known_keys_preferred"
+    },
+    "stale_after_seconds": 1800,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:time_left",
+    "field_address": "jcc:s17:live_state_field:time_left",
+    "key": "time_left",
+    "type": "number",
+    "constraints": {
+      "kind": "number",
+      "allow_unknown": true,
+      "min": 0
+    },
+    "stale_after_seconds": 1,
+    "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:timeline_events",
+    "field_address": "jcc:s17:live_state_field:timeline_events",
+    "key": "timeline_events",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 5,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:decision_events",
+    "field_address": "jcc:s17:live_state_field:decision_events",
+    "key": "decision_events",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 5,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:postgame_result",
+    "field_address": "jcc:s17:live_state_field:postgame_result",
+    "key": "postgame_result",
+    "type": "object",
+    "constraints": {
+      "kind": "object",
+      "allow_empty": true,
+      "key_policy": "runtime_defined_patch_known_keys_preferred"
+    },
+    "stale_after_seconds": 5,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:recent_matches",
+    "field_address": "jcc:s17:live_state_field:recent_matches",
+    "key": "recent_matches",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 5,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:user_feedback",
+    "field_address": "jcc:s17:live_state_field:user_feedback",
+    "key": "user_feedback",
+    "type": "array",
+    "constraints": {
+      "kind": "array",
+      "allow_empty": true,
+      "item_address_fields": [
+        "champion_address",
+        "item_address",
+        "augment_address",
+        "reward_address"
+      ]
+    },
+    "stale_after_seconds": 5,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:user_speed_profile",
+    "field_address": "jcc:s17:live_state_field:user_speed_profile",
+    "key": "user_speed_profile",
+    "type": "object",
+    "constraints": {
+      "kind": "object",
+      "allow_empty": true,
+      "key_policy": "runtime_defined_patch_known_keys_preferred"
+    },
+    "stale_after_seconds": 5,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:recognized_state",
+    "field_address": "jcc:s17:live_state_field:recognized_state",
+    "key": "recognized_state",
+    "type": "object",
+    "constraints": {
+      "kind": "object",
+      "allow_empty": true,
+      "key_policy": "runtime_defined_patch_known_keys_preferred"
+    },
+    "stale_after_seconds": 5,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  },
+  {
+    "address": "jcc:s17:live_state_validation:action_count",
+    "field_address": "jcc:s17:live_state_field:action_count",
+    "key": "action_count",
+    "type": "number",
+    "constraints": {
+      "kind": "number",
+      "allow_unknown": true,
+      "min": 0
+    },
+    "stale_after_seconds": 5,
+    "missing_policy": "unknown_allowed_with_confidence_penalty",
+    "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled",
+    "normalization_policy": "Prefer exact hard-data addresses from alias lookup; preserve raw OCR/user text separately."
+  }
+]

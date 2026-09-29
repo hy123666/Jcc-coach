@@ -1,0 +1,69 @@
+[
+  {
+    "address": "jcc:s17:event_trigger:key_trait_available",
+    "id": "key_trait_available",
+    "desc": "A candidate unit/emblem activates an important breakpoint.",
+    "deps": [
+      "jcc:s17:index:trait_delta"
+    ]
+  },
+  {
+    "address": "jcc:s17:event_trigger:key_item_available",
+    "id": "key_item_available",
+    "desc": "Current components can build a high-value item or required functional item.",
+    "deps": [
+      "jcc:s17:index:component_to_item_candidates",
+      "jcc:s17:index:functional_item_needs"
+    ]
+  },
+  {
+    "address": "jcc:s17:event_trigger:pair_density_high",
+    "id": "pair_density_high",
+    "desc": "Bench/board contains multiple pairs worth considering a roll-down.",
+    "deps": [
+      "jcc:s17:index:roll_probability"
+    ]
+  },
+  {
+    "address": "jcc:s17:event_trigger:hp_danger",
+    "id": "hp_danger",
+    "desc": "HP and stage damage imply low remaining tolerance.",
+    "deps": [
+      "jcc:s17:index:health_economy_shifts",
+      "jcc:s17:index:rounds"
+    ]
+  },
+  {
+    "address": "jcc:s17:event_trigger:interest_break",
+    "id": "interest_break",
+    "desc": "Planned action crosses an interest threshold.",
+    "deps": [
+      "jcc:s17:index:economy"
+    ]
+  },
+  {
+    "address": "jcc:s17:event_trigger:level_timing",
+    "id": "level_timing",
+    "desc": "Gold/XP supports a common level timing.",
+    "deps": [
+      "jcc:s17:index:economy",
+      "jcc:s17:index:xp"
+    ]
+  },
+  {
+    "address": "jcc:s17:event_trigger:contested_pool",
+    "id": "contested_pool",
+    "desc": "Opponent copies reduce target card availability.",
+    "deps": [
+      "jcc:s17:index:pool_contest"
+    ]
+  },
+  {
+    "address": "jcc:s17:event_trigger:unresolved_match_variable",
+    "id": "unresolved_match_variable",
+    "desc": "Encounter/god/Stargazer/Psionic variable is unknown.",
+    "deps": [
+      "jcc:s17:index:per_match_variables"
+    ]
+  }
+]

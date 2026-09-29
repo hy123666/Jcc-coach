@@ -1,0 +1,95 @@
+{
+  "address": "jcc:s17:index:resource_exchange",
+  "required_live_state_fields": [
+    "jcc:s17:live_state_field:gold",
+    "jcc:s17:live_state_field:hp",
+    "jcc:s17:live_state_field:level",
+    "jcc:s17:live_state_field:xp",
+    "jcc:s17:live_state_field:streak",
+    "jcc:s17:live_state_field:round",
+    "jcc:s17:live_state_field:stage",
+    "jcc:s17:live_state_field:components",
+    "jcc:s17:live_state_field:user_confirmed_scouting_notes"
+  ],
+  "formula_refs": [
+    "jcc:s17:formula:resource_exchange",
+    "jcc:s17:formula:economy",
+    "jcc:s17:formula:interest_break",
+    "jcc:s17:formula:streak_value",
+    "jcc:s17:formula:hp_lethal_tolerance",
+    "jcc:s17:formula:reward_choice_score"
+  ],
+  "baselines": [
+    {
+      "id": "gold_to_xp",
+      "from": "gold",
+      "to": "xp",
+      "rate": "4 gold = 4 XP",
+      "exact": true,
+      "formula_ref": "jcc:s17:formula:level_timing"
+    },
+    {
+      "id": "reroll_to_gold",
+      "from": "reroll",
+      "to": "gold",
+      "rate": "1 reroll ~= 2 gold",
+      "exact": true,
+      "formula_ref": "jcc:s17:formula:roll_down_budget"
+    },
+    {
+      "id": "interest_threshold",
+      "from": "interest",
+      "to": "gold",
+      "rate": "10 gold threshold = +1 interest up to +5",
+      "exact": true,
+      "formula_ref": "jcc:s17:formula:interest_break"
+    },
+    {
+      "id": "win_to_gold",
+      "from": "combat_win",
+      "to": "gold",
+      "rate": "PvP win = +1 gold",
+      "exact": true,
+      "formula_ref": "jcc:s17:formula:streak_value"
+    },
+    {
+      "id": "streak_to_gold",
+      "from": "streak",
+      "to": "gold",
+      "rate": "2/3/4 streak = +1, 5 = +2, 6+ = +3",
+      "exact": true,
+      "formula_ref": "jcc:s17:formula:streak_value"
+    },
+    {
+      "id": "hp_to_economy",
+      "from": "hp",
+      "to": "gold",
+      "rate": "contextual; value rises as lethal risk increases",
+      "exact": false,
+      "formula_ref": "jcc:s17:formula:hp_lethal_tolerance"
+    },
+    {
+      "id": "duplicator_to_copy",
+      "from": "duplicator",
+      "to": "copies",
+      "rate": "1 duplicator = 1 target copy, highest value on scarce/high-cost/key breakpoint units",
+      "exact": true,
+      "formula_ref": "jcc:s17:formula:roll_probability"
+    },
+    {
+      "id": "component_to_completed_item",
+      "from": "component",
+      "to": "completed_item",
+      "rate": "value depends on immediate power, holder fit, future wait cost, and functional gap",
+      "exact": false,
+      "formula_ref": "jcc:s17:formula:item_marginal_value"
+    }
+  ],
+  "output_contract": [
+    "gold_equivalent",
+    "risk_adjusted_value",
+    "exactness",
+    "required_context",
+    "fallback_if_missing_context"
+  ]
+}

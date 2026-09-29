@@ -1,0 +1,1177 @@
+{
+  "address": "jcc:s17:index:runtime_state_confidence_contracts",
+  "entry_count": 8,
+  "lookup_ref_root": "jcc:s17:lookup_ref:state_confidence",
+  "policy": "Route-level live-state confidence doorplates turn field freshness, missing values, stale values, and recognition quality into explicit confidence penalties before final strategy composition.",
+  "related_indexes": [
+    "jcc:s17:index:live_state_schema",
+    "jcc:s17:index:live_state_validation",
+    "jcc:s17:index:live_state_capture_gateway",
+    "jcc:s17:index:runtime_fast_context",
+    "jcc:s17:index:runtime_decision_recipes",
+    "jcc:s17:index:runtime_answer_contracts",
+    "jcc:s17:index:decision_event_schema"
+  ],
+  "entries": [
+    {
+      "address": "jcc:s17:runtime_state_confidence_contract:augment_choice",
+      "route_id": "augment_choice",
+      "route_address": "jcc:s17:runtime_query_route:augment_choice",
+      "lookup_ref": "jcc:s17:lookup_ref:state_confidence_augment_choice",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:augment_options",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:components",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:match_variables"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:augment_options",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:components",
+        "jcc:s17:live_state_field:hp"
+      ],
+      "state_field_contracts": [
+        {
+          "field_key": "round",
+          "field_address": "jcc:s17:live_state_field:round",
+          "validation_address": "jcc:s17:live_state_validation:round",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:round",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_round",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "augment_options",
+          "field_address": "jcc:s17:live_state_field:augment_options",
+          "validation_address": "jcc:s17:live_state_validation:augment_options",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:augment_options",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_augment_options",
+          "stale_after_seconds": 1,
+          "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "board_units",
+          "field_address": "jcc:s17:live_state_field:board_units",
+          "validation_address": "jcc:s17:live_state_validation:board_units",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:board_units",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_board_units",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "components",
+          "field_address": "jcc:s17:live_state_field:components",
+          "validation_address": "jcc:s17:live_state_validation:components",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:components",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_components",
+          "stale_after_seconds": 4,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "hp",
+          "field_address": "jcc:s17:live_state_field:hp",
+          "validation_address": "jcc:s17:live_state_validation:hp",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:hp",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_hp",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "gold",
+          "field_address": "jcc:s17:live_state_field:gold",
+          "validation_address": "jcc:s17:live_state_validation:gold",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:gold",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_gold",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "match_variables",
+          "field_address": "jcc:s17:live_state_field:match_variables",
+          "validation_address": "jcc:s17:live_state_validation:match_variables",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:match_variables",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_match_variables",
+          "stale_after_seconds": 1800,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 22,
+          "stale_penalty_points": 11,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        }
+      ],
+      "base_confidence_points": 100,
+      "confidence_score_contract": {
+        "start_from": 100,
+        "subtract_missing_penalty_points": "sum missing_penalty_points for missing required fields",
+        "subtract_stale_penalty_points": "sum stale_penalty_points for stale fields",
+        "subtract_recognition_penalty_points": "recognized_state.confidence below 0.75 subtracts 15 points when available",
+        "floor": 25,
+        "ask_threshold": 55,
+        "low_confidence_threshold": 70,
+        "high_confidence_threshold": 85
+      },
+      "route_policy": {
+        "can_answer_with_missing_fields": true,
+        "must_ask_when_below_threshold": "Ask only for the smallest missing/stale field set that can change the top decision.",
+        "allow_fast_answer_when": "confidence_after_live_state >= ask_threshold or time_left is too low and action is reversible",
+        "block_policy": "do_not_output_irreversible_action_when_required_choice_or_time_field_missing"
+      },
+      "output_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "answer_contract_citations": [
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "decision_event_required_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "acceptance_contract": [
+        "state_confidence_contract_loaded_before_scoring",
+        "missing_and_stale_fields_recorded_separately",
+        "confidence_after_live_state_computed_before_answer",
+        "ask_or_answer_policy_uses_route_thresholds",
+        "decision_event_records_live_state_confidence_evidence"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_state_confidence_contract:holder_assignment",
+      "route_id": "holder_assignment",
+      "route_address": "jcc:s17:runtime_query_route:holder_assignment",
+      "lookup_ref": "jcc:s17:lookup_ref:state_confidence_holder_assignment",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:round"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units"
+      ],
+      "state_field_contracts": [
+        {
+          "field_key": "completed_items",
+          "field_address": "jcc:s17:live_state_field:completed_items",
+          "validation_address": "jcc:s17:live_state_validation:completed_items",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:completed_items",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_completed_items",
+          "stale_after_seconds": 4,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "board_units",
+          "field_address": "jcc:s17:live_state_field:board_units",
+          "validation_address": "jcc:s17:live_state_validation:board_units",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:board_units",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_board_units",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "bench_units",
+          "field_address": "jcc:s17:live_state_field:bench_units",
+          "validation_address": "jcc:s17:live_state_validation:bench_units",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:bench_units",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_bench_units",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "round",
+          "field_address": "jcc:s17:live_state_field:round",
+          "validation_address": "jcc:s17:live_state_validation:round",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:round",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_round",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        }
+      ],
+      "base_confidence_points": 100,
+      "confidence_score_contract": {
+        "start_from": 100,
+        "subtract_missing_penalty_points": "sum missing_penalty_points for missing required fields",
+        "subtract_stale_penalty_points": "sum stale_penalty_points for stale fields",
+        "subtract_recognition_penalty_points": "recognized_state.confidence below 0.75 subtracts 15 points when available",
+        "floor": 25,
+        "ask_threshold": 55,
+        "low_confidence_threshold": 70,
+        "high_confidence_threshold": 85
+      },
+      "route_policy": {
+        "can_answer_with_missing_fields": true,
+        "must_ask_when_below_threshold": "Ask only for the smallest missing/stale field set that can change the top decision.",
+        "allow_fast_answer_when": "confidence_after_live_state >= ask_threshold or time_left is too low and action is reversible",
+        "block_policy": "do_not_output_irreversible_action_when_required_choice_or_time_field_missing"
+      },
+      "output_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "answer_contract_citations": [
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "decision_event_required_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "acceptance_contract": [
+        "state_confidence_contract_loaded_before_scoring",
+        "missing_and_stale_fields_recorded_separately",
+        "confidence_after_live_state_computed_before_answer",
+        "ask_or_answer_policy_uses_route_thresholds",
+        "decision_event_records_live_state_confidence_evidence"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_state_confidence_contract:item_craft",
+      "route_id": "item_craft",
+      "route_address": "jcc:s17:runtime_query_route:item_craft",
+      "lookup_ref": "jcc:s17:lookup_ref:state_confidence_item_craft",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:components",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:item_holders",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:streak"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:components",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:item_holders",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:round"
+      ],
+      "state_field_contracts": [
+        {
+          "field_key": "components",
+          "field_address": "jcc:s17:live_state_field:components",
+          "validation_address": "jcc:s17:live_state_validation:components",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:components",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_components",
+          "stale_after_seconds": 4,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "board_units",
+          "field_address": "jcc:s17:live_state_field:board_units",
+          "validation_address": "jcc:s17:live_state_validation:board_units",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:board_units",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_board_units",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "item_holders",
+          "field_address": "jcc:s17:live_state_field:item_holders",
+          "validation_address": "jcc:s17:live_state_validation:item_holders",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:item_holders",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_item_holders",
+          "stale_after_seconds": 4,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "user_confirmed_scouting_notes",
+          "field_address": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+          "validation_address": "jcc:s17:live_state_validation:user_confirmed_scouting_notes",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:user_confirmed_scouting_notes",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_user_confirmed_scouting_notes",
+          "stale_after_seconds": 15,
+          "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+          "missing_penalty_points": 18,
+          "stale_penalty_points": 9,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "round",
+          "field_address": "jcc:s17:live_state_field:round",
+          "validation_address": "jcc:s17:live_state_validation:round",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:round",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_round",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "hp",
+          "field_address": "jcc:s17:live_state_field:hp",
+          "validation_address": "jcc:s17:live_state_validation:hp",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:hp",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_hp",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "streak",
+          "field_address": "jcc:s17:live_state_field:streak",
+          "validation_address": "jcc:s17:live_state_validation:streak",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:streak",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_streak",
+          "stale_after_seconds": 8,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        }
+      ],
+      "base_confidence_points": 100,
+      "confidence_score_contract": {
+        "start_from": 100,
+        "subtract_missing_penalty_points": "sum missing_penalty_points for missing required fields",
+        "subtract_stale_penalty_points": "sum stale_penalty_points for stale fields",
+        "subtract_recognition_penalty_points": "recognized_state.confidence below 0.75 subtracts 15 points when available",
+        "floor": 25,
+        "ask_threshold": 55,
+        "low_confidence_threshold": 70,
+        "high_confidence_threshold": 85
+      },
+      "route_policy": {
+        "can_answer_with_missing_fields": true,
+        "must_ask_when_below_threshold": "Ask only for the smallest missing/stale field set that can change the top decision.",
+        "allow_fast_answer_when": "confidence_after_live_state >= ask_threshold or time_left is too low and action is reversible",
+        "block_policy": "do_not_output_irreversible_action_when_required_choice_or_time_field_missing"
+      },
+      "output_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "answer_contract_citations": [
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "decision_event_required_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "acceptance_contract": [
+        "state_confidence_contract_loaded_before_scoring",
+        "missing_and_stale_fields_recorded_separately",
+        "confidence_after_live_state_computed_before_answer",
+        "ask_or_answer_policy_uses_route_thresholds",
+        "decision_event_records_live_state_confidence_evidence"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_state_confidence_contract:positioning",
+      "route_id": "positioning",
+      "route_address": "jcc:s17:runtime_query_route:positioning",
+      "lookup_ref": "jcc:s17:lookup_ref:state_confidence_positioning",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:time_left"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:completed_items"
+      ],
+      "state_field_contracts": [
+        {
+          "field_key": "board_units",
+          "field_address": "jcc:s17:live_state_field:board_units",
+          "validation_address": "jcc:s17:live_state_validation:board_units",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:board_units",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_board_units",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "user_confirmed_scouting_notes",
+          "field_address": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+          "validation_address": "jcc:s17:live_state_validation:user_confirmed_scouting_notes",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:user_confirmed_scouting_notes",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_user_confirmed_scouting_notes",
+          "stale_after_seconds": 15,
+          "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+          "missing_penalty_points": 35,
+          "stale_penalty_points": 18,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "completed_items",
+          "field_address": "jcc:s17:live_state_field:completed_items",
+          "validation_address": "jcc:s17:live_state_validation:completed_items",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:completed_items",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_completed_items",
+          "stale_after_seconds": 4,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "time_left",
+          "field_address": "jcc:s17:live_state_field:time_left",
+          "validation_address": "jcc:s17:live_state_validation:time_left",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:time_left",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_time_left",
+          "stale_after_seconds": 1,
+          "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+          "missing_penalty_points": 25,
+          "stale_penalty_points": 13,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        }
+      ],
+      "base_confidence_points": 100,
+      "confidence_score_contract": {
+        "start_from": 100,
+        "subtract_missing_penalty_points": "sum missing_penalty_points for missing required fields",
+        "subtract_stale_penalty_points": "sum stale_penalty_points for stale fields",
+        "subtract_recognition_penalty_points": "recognized_state.confidence below 0.75 subtracts 15 points when available",
+        "floor": 35,
+        "ask_threshold": 55,
+        "low_confidence_threshold": 70,
+        "high_confidence_threshold": 85
+      },
+      "route_policy": {
+        "can_answer_with_missing_fields": true,
+        "must_ask_when_below_threshold": "Ask only for the smallest missing/stale field set that can change the top decision.",
+        "allow_fast_answer_when": "confidence_after_live_state >= ask_threshold or time_left is too low and action is reversible",
+        "block_policy": "do_not_output_irreversible_action_when_required_choice_or_time_field_missing"
+      },
+      "output_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "answer_contract_citations": [
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "decision_event_required_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "acceptance_contract": [
+        "state_confidence_contract_loaded_before_scoring",
+        "missing_and_stale_fields_recorded_separately",
+        "confidence_after_live_state_computed_before_answer",
+        "ask_or_answer_policy_uses_route_thresholds",
+        "decision_event_records_live_state_confidence_evidence"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_state_confidence_contract:postgame_review",
+      "route_id": "postgame_review",
+      "route_address": "jcc:s17:runtime_query_route:postgame_review",
+      "lookup_ref": "jcc:s17:lookup_ref:state_confidence_postgame_review",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:timeline_events",
+        "jcc:s17:live_state_field:decision_events",
+        "jcc:s17:live_state_field:postgame_result",
+        "jcc:s17:live_state_field:recent_matches",
+        "jcc:s17:live_state_field:user_feedback"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:timeline_events",
+        "jcc:s17:live_state_field:decision_events"
+      ],
+      "state_field_contracts": [
+        {
+          "field_key": "round",
+          "field_address": "jcc:s17:live_state_field:round",
+          "validation_address": "jcc:s17:live_state_validation:round",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:round",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_round",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "hp",
+          "field_address": "jcc:s17:live_state_field:hp",
+          "validation_address": "jcc:s17:live_state_validation:hp",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:hp",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_hp",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "board_units",
+          "field_address": "jcc:s17:live_state_field:board_units",
+          "validation_address": "jcc:s17:live_state_validation:board_units",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:board_units",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_board_units",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "completed_items",
+          "field_address": "jcc:s17:live_state_field:completed_items",
+          "validation_address": "jcc:s17:live_state_validation:completed_items",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:completed_items",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_completed_items",
+          "stale_after_seconds": 4,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "user_confirmed_scouting_notes",
+          "field_address": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+          "validation_address": "jcc:s17:live_state_validation:user_confirmed_scouting_notes",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:user_confirmed_scouting_notes",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_user_confirmed_scouting_notes",
+          "stale_after_seconds": 15,
+          "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+          "missing_penalty_points": 18,
+          "stale_penalty_points": 9,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "timeline_events",
+          "field_address": "jcc:s17:live_state_field:timeline_events",
+          "validation_address": "jcc:s17:live_state_validation:timeline_events",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:timeline_events",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_timeline_events",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "decision_events",
+          "field_address": "jcc:s17:live_state_field:decision_events",
+          "validation_address": "jcc:s17:live_state_validation:decision_events",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:decision_events",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_decision_events",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "postgame_result",
+          "field_address": "jcc:s17:live_state_field:postgame_result",
+          "validation_address": "jcc:s17:live_state_validation:postgame_result",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:postgame_result",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_postgame_result",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "recent_matches",
+          "field_address": "jcc:s17:live_state_field:recent_matches",
+          "validation_address": "jcc:s17:live_state_validation:recent_matches",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:recent_matches",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_recent_matches",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "user_feedback",
+          "field_address": "jcc:s17:live_state_field:user_feedback",
+          "validation_address": "jcc:s17:live_state_validation:user_feedback",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:user_feedback",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_user_feedback",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        }
+      ],
+      "base_confidence_points": 100,
+      "confidence_score_contract": {
+        "start_from": 100,
+        "subtract_missing_penalty_points": "sum missing_penalty_points for missing required fields",
+        "subtract_stale_penalty_points": "sum stale_penalty_points for stale fields",
+        "subtract_recognition_penalty_points": "recognized_state.confidence below 0.75 subtracts 15 points when available",
+        "floor": 25,
+        "ask_threshold": 55,
+        "low_confidence_threshold": 70,
+        "high_confidence_threshold": 85
+      },
+      "route_policy": {
+        "can_answer_with_missing_fields": true,
+        "must_ask_when_below_threshold": "Ask only for the smallest missing/stale field set that can change the top decision.",
+        "allow_fast_answer_when": "confidence_after_live_state >= ask_threshold or time_left is too low and action is reversible",
+        "block_policy": "do_not_block_review; label missing evidence"
+      },
+      "output_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "answer_contract_citations": [
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "decision_event_required_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "acceptance_contract": [
+        "state_confidence_contract_loaded_before_scoring",
+        "missing_and_stale_fields_recorded_separately",
+        "confidence_after_live_state_computed_before_answer",
+        "ask_or_answer_policy_uses_route_thresholds",
+        "decision_event_records_live_state_confidence_evidence"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_state_confidence_contract:reward_choice",
+      "route_id": "reward_choice",
+      "route_address": "jcc:s17:runtime_query_route:reward_choice",
+      "lookup_ref": "jcc:s17:lookup_ref:state_confidence_reward_choice",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:reward_options",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:components",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:match_variables"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:reward_options",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:components",
+        "jcc:s17:live_state_field:hp"
+      ],
+      "state_field_contracts": [
+        {
+          "field_key": "reward_options",
+          "field_address": "jcc:s17:live_state_field:reward_options",
+          "validation_address": "jcc:s17:live_state_validation:reward_options",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:reward_options",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_reward_options",
+          "stale_after_seconds": 1,
+          "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "board_units",
+          "field_address": "jcc:s17:live_state_field:board_units",
+          "validation_address": "jcc:s17:live_state_validation:board_units",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:board_units",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_board_units",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "components",
+          "field_address": "jcc:s17:live_state_field:components",
+          "validation_address": "jcc:s17:live_state_validation:components",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:components",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_components",
+          "stale_after_seconds": 4,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "hp",
+          "field_address": "jcc:s17:live_state_field:hp",
+          "validation_address": "jcc:s17:live_state_validation:hp",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:hp",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_hp",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "gold",
+          "field_address": "jcc:s17:live_state_field:gold",
+          "validation_address": "jcc:s17:live_state_validation:gold",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:gold",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_gold",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "match_variables",
+          "field_address": "jcc:s17:live_state_field:match_variables",
+          "validation_address": "jcc:s17:live_state_validation:match_variables",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:match_variables",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_match_variables",
+          "stale_after_seconds": 1800,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 22,
+          "stale_penalty_points": 11,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        }
+      ],
+      "base_confidence_points": 100,
+      "confidence_score_contract": {
+        "start_from": 100,
+        "subtract_missing_penalty_points": "sum missing_penalty_points for missing required fields",
+        "subtract_stale_penalty_points": "sum stale_penalty_points for stale fields",
+        "subtract_recognition_penalty_points": "recognized_state.confidence below 0.75 subtracts 15 points when available",
+        "floor": 25,
+        "ask_threshold": 55,
+        "low_confidence_threshold": 70,
+        "high_confidence_threshold": 85
+      },
+      "route_policy": {
+        "can_answer_with_missing_fields": true,
+        "must_ask_when_below_threshold": "Ask only for the smallest missing/stale field set that can change the top decision.",
+        "allow_fast_answer_when": "confidence_after_live_state >= ask_threshold or time_left is too low and action is reversible",
+        "block_policy": "do_not_output_irreversible_action_when_required_choice_or_time_field_missing"
+      },
+      "output_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "answer_contract_citations": [
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "decision_event_required_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "acceptance_contract": [
+        "state_confidence_contract_loaded_before_scoring",
+        "missing_and_stale_fields_recorded_separately",
+        "confidence_after_live_state_computed_before_answer",
+        "ask_or_answer_policy_uses_route_thresholds",
+        "decision_event_records_live_state_confidence_evidence"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_state_confidence_contract:roll_or_level",
+      "route_id": "roll_or_level",
+      "route_address": "jcc:s17:runtime_query_route:roll_or_level",
+      "lookup_ref": "jcc:s17:lookup_ref:state_confidence_roll_or_level",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:level",
+        "jcc:s17:live_state_field:xp",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:streak",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:shop_units"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:level",
+        "jcc:s17:live_state_field:xp",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:streak"
+      ],
+      "state_field_contracts": [
+        {
+          "field_key": "gold",
+          "field_address": "jcc:s17:live_state_field:gold",
+          "validation_address": "jcc:s17:live_state_validation:gold",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:gold",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_gold",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "level",
+          "field_address": "jcc:s17:live_state_field:level",
+          "validation_address": "jcc:s17:live_state_validation:level",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:level",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_level",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "xp",
+          "field_address": "jcc:s17:live_state_field:xp",
+          "validation_address": "jcc:s17:live_state_validation:xp",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:xp",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_xp",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "hp",
+          "field_address": "jcc:s17:live_state_field:hp",
+          "validation_address": "jcc:s17:live_state_validation:hp",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:hp",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_hp",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "streak",
+          "field_address": "jcc:s17:live_state_field:streak",
+          "validation_address": "jcc:s17:live_state_validation:streak",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:streak",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_streak",
+          "stale_after_seconds": 8,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "board_units",
+          "field_address": "jcc:s17:live_state_field:board_units",
+          "validation_address": "jcc:s17:live_state_validation:board_units",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:board_units",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_board_units",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        },
+        {
+          "field_key": "shop_units",
+          "field_address": "jcc:s17:live_state_field:shop_units",
+          "validation_address": "jcc:s17:live_state_validation:shop_units",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:shop_units",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_shop_units",
+          "stale_after_seconds": 2,
+          "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        }
+      ],
+      "base_confidence_points": 100,
+      "confidence_score_contract": {
+        "start_from": 100,
+        "subtract_missing_penalty_points": "sum missing_penalty_points for missing required fields",
+        "subtract_stale_penalty_points": "sum stale_penalty_points for stale fields",
+        "subtract_recognition_penalty_points": "recognized_state.confidence below 0.75 subtracts 15 points when available",
+        "floor": 25,
+        "ask_threshold": 55,
+        "low_confidence_threshold": 70,
+        "high_confidence_threshold": 85
+      },
+      "route_policy": {
+        "can_answer_with_missing_fields": true,
+        "must_ask_when_below_threshold": "Ask only for the smallest missing/stale field set that can change the top decision.",
+        "allow_fast_answer_when": "confidence_after_live_state >= ask_threshold or time_left is too low and action is reversible",
+        "block_policy": "do_not_output_irreversible_action_when_required_choice_or_time_field_missing"
+      },
+      "output_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "answer_contract_citations": [
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "decision_event_required_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "acceptance_contract": [
+        "state_confidence_contract_loaded_before_scoring",
+        "missing_and_stale_fields_recorded_separately",
+        "confidence_after_live_state_computed_before_answer",
+        "ask_or_answer_policy_uses_route_thresholds",
+        "decision_event_records_live_state_confidence_evidence"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_state_confidence_contract:trait_or_unit_swap",
+      "route_id": "trait_or_unit_swap",
+      "route_address": "jcc:s17:runtime_query_route:trait_or_unit_swap",
+      "lookup_ref": "jcc:s17:lookup_ref:state_confidence_trait_or_unit_swap",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:active_traits",
+        "jcc:s17:live_state_field:level"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:active_traits"
+      ],
+      "state_field_contracts": [
+        {
+          "field_key": "board_units",
+          "field_address": "jcc:s17:live_state_field:board_units",
+          "validation_address": "jcc:s17:live_state_validation:board_units",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:board_units",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_board_units",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "bench_units",
+          "field_address": "jcc:s17:live_state_field:bench_units",
+          "validation_address": "jcc:s17:live_state_validation:bench_units",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:bench_units",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_bench_units",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "active_traits",
+          "field_address": "jcc:s17:live_state_field:active_traits",
+          "validation_address": "jcc:s17:live_state_validation:active_traits",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:active_traits",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_active_traits",
+          "stale_after_seconds": 3,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 20,
+          "stale_penalty_points": 10,
+          "ask_policy": "ask_if_field_can_change_top_decision"
+        },
+        {
+          "field_key": "level",
+          "field_address": "jcc:s17:live_state_field:level",
+          "validation_address": "jcc:s17:live_state_validation:level",
+          "capture_gateway_address": "jcc:s17:live_state_capture_gateway_entry:level",
+          "capture_lookup_ref": "jcc:s17:lookup_ref:live_state_capture_level",
+          "stale_after_seconds": 5,
+          "missing_policy": "unknown_allowed_with_confidence_penalty",
+          "missing_penalty_points": 10,
+          "stale_penalty_points": 5,
+          "ask_policy": "answer_with_named_confidence_penalty"
+        }
+      ],
+      "base_confidence_points": 100,
+      "confidence_score_contract": {
+        "start_from": 100,
+        "subtract_missing_penalty_points": "sum missing_penalty_points for missing required fields",
+        "subtract_stale_penalty_points": "sum stale_penalty_points for stale fields",
+        "subtract_recognition_penalty_points": "recognized_state.confidence below 0.75 subtracts 15 points when available",
+        "floor": 25,
+        "ask_threshold": 55,
+        "low_confidence_threshold": 70,
+        "high_confidence_threshold": 85
+      },
+      "route_policy": {
+        "can_answer_with_missing_fields": true,
+        "must_ask_when_below_threshold": "Ask only for the smallest missing/stale field set that can change the top decision.",
+        "allow_fast_answer_when": "confidence_after_live_state >= ask_threshold or time_left is too low and action is reversible",
+        "block_policy": "do_not_output_irreversible_action_when_required_choice_or_time_field_missing"
+      },
+      "output_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "answer_contract_citations": [
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "decision_event_required_fields": [
+        "runtime_state_confidence_contract_address",
+        "runtime_state_confidence_contract_lookup_ref",
+        "live_state_freshness",
+        "missing_live_state_fields",
+        "stale_live_state_fields",
+        "live_state_confidence_penalties",
+        "confidence_after_live_state"
+      ],
+      "acceptance_contract": [
+        "state_confidence_contract_loaded_before_scoring",
+        "missing_and_stale_fields_recorded_separately",
+        "confidence_after_live_state_computed_before_answer",
+        "ask_or_answer_policy_uses_route_thresholds",
+        "decision_event_records_live_state_confidence_evidence"
+      ]
+    }
+  ]
+}

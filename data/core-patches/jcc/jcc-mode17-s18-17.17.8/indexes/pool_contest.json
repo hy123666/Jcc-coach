@@ -1,0 +1,43 @@
+{
+  "address": "jcc:s17:index:pool_contest",
+  "cost_pool": [
+    {
+      "cost": 1,
+      "variety": 14,
+      "copiesPerChampion": 30,
+      "totalCopies": 420
+    },
+    {
+      "cost": 2,
+      "variety": 13,
+      "copiesPerChampion": 25,
+      "totalCopies": 325
+    },
+    {
+      "cost": 3,
+      "variety": 13,
+      "copiesPerChampion": 18,
+      "totalCopies": 234
+    },
+    {
+      "cost": 4,
+      "variety": 13,
+      "copiesPerChampion": 10,
+      "totalCopies": 130
+    },
+    {
+      "cost": 5,
+      "variety": 10,
+      "copiesPerChampion": 9,
+      "totalCopies": 90
+    }
+  ],
+  "rules": [
+    "Cards are in a shared pool.",
+    "Opponent-owned copies reduce remaining copies for the target unit.",
+    "Competition can be same carry, same frontline, same cost pool, or same trait shell."
+  ],
+  "formulas": [
+    "specific_unit_slot_odds = cost_odds * remaining_copies / pool_total_for_cost"
+  ]
+}

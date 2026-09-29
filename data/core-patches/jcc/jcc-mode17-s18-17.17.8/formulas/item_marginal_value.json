@@ -1,0 +1,43 @@
+{
+  "address": "jcc:s17:formula:item_marginal_value",
+  "source": "generated_heuristic",
+  "inputs": [
+    "unit_profile",
+    "current_items",
+    "candidate_item",
+    "enemy_damage_mix",
+    "team_gaps",
+    "round_intent"
+  ],
+  "outputs": [
+    "immediate_power_score",
+    "future_fit_score",
+    "defensive_ehp_delta",
+    "offensive_tag_match",
+    "conflict_penalty",
+    "recommendation_score"
+  ],
+  "formulas": {
+    "recommendation_score": "immediate_power_score * tempo_weight + future_fit_score * cap_weight + gap_fill_score - conflict_penalty",
+    "defensive_ehp_delta": "candidate_ehp - current_ehp"
+  },
+  "name": "item_marginal_value",
+  "category": "item",
+  "domains": [
+    "item",
+    "combat"
+  ],
+  "route_domains": [
+    "item_craft",
+    "holder_assignment",
+    "positioning",
+    "postgame_review"
+  ],
+  "dependencies": [],
+  "dependency_kind": "root_formula",
+  "use_cases": [
+    "craft choice",
+    "holder fit",
+    "immediate versus cap item value"
+  ]
+}

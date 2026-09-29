@@ -1,0 +1,1372 @@
+[
+  {
+    "address": "jcc:s17:functional_item_need:wound",
+    "need": "wound",
+    "item_candidates": [
+      {
+        "item_address": "jcc:s17:item:2009",
+        "name": "红霸符",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2020",
+        "name": "莫雷洛秘典",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2029",
+        "name": "日炎斗篷",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2065",
+        "name": "光明版红霸符",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2075",
+        "name": "光明版莫雷洛秘典",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2082",
+        "name": "光明版日炎斗篷",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:6070",
+        "name": "连指手套",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9332",
+        "name": "炽烈短弓",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9346",
+        "name": "进化余烬射击",
+        "type": "特殊装备"
+      }
+    ]
+  },
+  {
+    "address": "jcc:s17:functional_item_need:sunder",
+    "need": "sunder",
+    "item_candidates": [
+      {
+        "item_address": "jcc:s17:item:2032",
+        "name": "薄暮法袍",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2037",
+        "name": "最后的轻语",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2084",
+        "name": "光明版薄暮法袍",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2086",
+        "name": "光明版最后的轻语",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:9252",
+        "name": "恶意软件矩阵",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9339",
+        "name": "旋风切割器",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9350",
+        "name": "不息气旋",
+        "type": "特殊装备"
+      }
+    ]
+  },
+  {
+    "address": "jcc:s17:functional_item_need:shred",
+    "need": "shred",
+    "item_candidates": [
+      {
+        "item_address": "jcc:s17:item:2011",
+        "name": "虚空之杖",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2019",
+        "name": "离子火花",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2067",
+        "name": "光明版虚空之杖",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2074",
+        "name": "光明版离子火花",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:9252",
+        "name": "恶意软件矩阵",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9339",
+        "name": "旋风切割器",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9350",
+        "name": "不息气旋",
+        "type": "特殊装备"
+      }
+    ]
+  },
+  {
+    "address": "jcc:s17:functional_item_need:control",
+    "need": "control",
+    "item_candidates": [
+      {
+        "item_address": "jcc:s17:item:6070",
+        "name": "连指手套",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6072",
+        "name": "密银黎明",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6089",
+        "name": "顽强不屈",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9331",
+        "name": "冰爆护甲",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9345",
+        "name": "深度冻结",
+        "type": "特殊装备"
+      }
+    ]
+  },
+  {
+    "address": "jcc:s17:functional_item_need:magic_resist",
+    "need": "magic_resist",
+    "item_candidates": [
+      {
+        "item_address": "jcc:s17:item:1006",
+        "name": "负极斗篷",
+        "type": "基础装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2006",
+        "name": "汲取剑",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2011",
+        "name": "虚空之杖",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2013",
+        "name": "海妖之怒",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2019",
+        "name": "离子火花",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2023",
+        "name": "圣盾使的誓约",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2024",
+        "name": "适应性头盔",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2028",
+        "name": "石像鬼石板甲",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2031",
+        "name": "巨龙之爪",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2032",
+        "name": "薄暮法袍",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2041",
+        "name": "水银",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2063",
+        "name": "光明版汲取剑",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2067",
+        "name": "光明版虚空之杖",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2069",
+        "name": "光明版海妖之怒",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2074",
+        "name": "光明版离子火花",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2077",
+        "name": "光明版圣盾使的誓约",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2078",
+        "name": "光明版适应性头盔",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2081",
+        "name": "光明版石像鬼石板甲",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2083",
+        "name": "光明版巨龙之爪",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2084",
+        "name": "光明版薄暮法袍",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2090",
+        "name": "光明版水银",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:6052",
+        "name": "大亨之铠",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6060",
+        "name": "中娅悖论",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6061",
+        "name": "碎舰者",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6072",
+        "name": "密银黎明",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6075",
+        "name": "智慧末刃",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6083",
+        "name": "枯萎珠宝",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6084",
+        "name": "探索者的护臂",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6085",
+        "name": "光盾徽章",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6089",
+        "name": "顽强不屈",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6093",
+        "name": "黄昏圣盾",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6106",
+        "name": "锤石的灯笼",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9252",
+        "name": "恶意软件矩阵",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9331",
+        "name": "冰爆护甲",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9339",
+        "name": "旋风切割器",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9341",
+        "name": "雌狮之怨",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9345",
+        "name": "深度冻结",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9350",
+        "name": "不息气旋",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9363",
+        "name": "猛狮之殇",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:41702",
+        "name": "法官纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41703",
+        "name": "木灵族纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41706",
+        "name": "新星特攻队纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41712",
+        "name": "堡垒卫士纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41719",
+        "name": "重装战士纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41720",
+        "name": "旅人纹章",
+        "type": "转职纹章"
+      }
+    ]
+  },
+  {
+    "address": "jcc:s17:functional_item_need:armor",
+    "need": "armor",
+    "item_candidates": [
+      {
+        "item_address": "jcc:s17:item:1005",
+        "name": "锁子甲",
+        "type": "基础装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2005",
+        "name": "夜之锋刃",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2012",
+        "name": "泰坦的坚决",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2018",
+        "name": "冕卫",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2023",
+        "name": "圣盾使的誓约",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2024",
+        "name": "适应性头盔",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2027",
+        "name": "棘刺背心",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2028",
+        "name": "石像鬼石板甲",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2029",
+        "name": "日炎斗篷",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2032",
+        "name": "薄暮法袍",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2037",
+        "name": "最后的轻语",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2040",
+        "name": "坚定之心",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2062",
+        "name": "光明版夜之锋刃",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2068",
+        "name": "光明版泰坦的坚决",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2073",
+        "name": "光明版冕卫",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2077",
+        "name": "光明版圣盾使的誓约",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2078",
+        "name": "光明版适应性头盔",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2080",
+        "name": "光明版棘刺背心",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2081",
+        "name": "光明版石像鬼石板甲",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2082",
+        "name": "光明版日炎斗篷",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2084",
+        "name": "光明版薄暮法袍",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2086",
+        "name": "光明版最后的轻语",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2089",
+        "name": "光明版坚定之心",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:6052",
+        "name": "大亨之铠",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6054",
+        "name": "死亡之蔑",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6060",
+        "name": "中娅悖论",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6061",
+        "name": "碎舰者",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6072",
+        "name": "密银黎明",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6075",
+        "name": "智慧末刃",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6084",
+        "name": "探索者的护臂",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6085",
+        "name": "光盾徽章",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6089",
+        "name": "顽强不屈",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6092",
+        "name": "黎明圣盾",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6106",
+        "name": "锤石的灯笼",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9252",
+        "name": "恶意软件矩阵",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9331",
+        "name": "冰爆护甲",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9339",
+        "name": "旋风切割器",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9341",
+        "name": "雌狮之怨",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9345",
+        "name": "深度冻结",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9350",
+        "name": "不息气旋",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9363",
+        "name": "猛狮之殇",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:41702",
+        "name": "法官纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41703",
+        "name": "木灵族纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41706",
+        "name": "新星特攻队纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41712",
+        "name": "堡垒卫士纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41719",
+        "name": "重装战士纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41720",
+        "name": "旅人纹章",
+        "type": "转职纹章"
+      }
+    ]
+  },
+  {
+    "address": "jcc:s17:functional_item_need:shield",
+    "need": "shield",
+    "item_candidates": [
+      {
+        "item_address": "jcc:s17:item:2006",
+        "name": "汲取剑",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2007",
+        "name": "斯特拉克的挑战护手",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2018",
+        "name": "冕卫",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2023",
+        "name": "圣盾使的誓约",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2063",
+        "name": "光明版汲取剑",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2064",
+        "name": "光明版斯特拉克的挑战护手",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2073",
+        "name": "光明版冕卫",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2077",
+        "name": "光明版圣盾使的誓约",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:6085",
+        "name": "光盾徽章",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6098",
+        "name": "永恒契约",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9331",
+        "name": "冰爆护甲",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9345",
+        "name": "深度冻结",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9355",
+        "name": "破损原型",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:41719",
+        "name": "重装战士纹章",
+        "type": "转职纹章"
+      }
+    ]
+  },
+  {
+    "address": "jcc:s17:functional_item_need:mana",
+    "need": "mana",
+    "item_candidates": [
+      {
+        "item_address": "jcc:s17:item:1004",
+        "name": "女神之泪",
+        "type": "基础装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2003",
+        "name": "海克斯科技枪刃",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2004",
+        "name": "朔极之矛",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2011",
+        "name": "虚空之杖",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2014",
+        "name": "纳什之牙",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2017",
+        "name": "大天使之杖",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2019",
+        "name": "离子火花",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2020",
+        "name": "莫雷洛秘典",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2022",
+        "name": "蓝霸符",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2023",
+        "name": "圣盾使的誓约",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2024",
+        "name": "适应性头盔",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2025",
+        "name": "振奋盔甲",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2039",
+        "name": "正义之手",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2060",
+        "name": "光明版海克斯科技枪刃",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2061",
+        "name": "光明版朔极之矛",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2067",
+        "name": "光明版虚空之杖",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2070",
+        "name": "光明版纳什之牙",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2072",
+        "name": "光明版大天使之杖",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2074",
+        "name": "光明版离子火花",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2075",
+        "name": "光明版莫雷洛秘典",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2076",
+        "name": "光明版蓝霸符",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2077",
+        "name": "光明版圣盾使的誓约",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2078",
+        "name": "光明版适应性头盔",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2079",
+        "name": "光明版振奋盔甲",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2088",
+        "name": "光明版正义之手",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:6063",
+        "name": "狙击手的专注",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6083",
+        "name": "枯萎珠宝",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6086",
+        "name": "巫妖之祸",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6091",
+        "name": "黎明核心",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6098",
+        "name": "永恒契约",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6107",
+        "name": "阿狸的光环",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9255",
+        "name": "共感植入",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9332",
+        "name": "炽烈短弓",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9333",
+        "name": "无情砍削",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9336",
+        "name": "歼灭者",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9337",
+        "name": "战兔十字弩",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9338",
+        "name": "火箭狂潮",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9346",
+        "name": "进化余烬射击",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9348",
+        "name": "幻灵启示录",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9349",
+        "name": "战兔至尊弩炮",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9356",
+        "name": "泄露原型",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:41703",
+        "name": "木灵族纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41709",
+        "name": "太空律动纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41718",
+        "name": "牧羊人纹章",
+        "type": "转职纹章"
+      }
+    ]
+  },
+  {
+    "address": "jcc:s17:functional_item_need:attack_speed",
+    "need": "attack_speed",
+    "item_candidates": [
+      {
+        "item_address": "jcc:s17:item:1002",
+        "name": "反曲之弓",
+        "type": "基础装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2005",
+        "name": "夜之锋刃",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2009",
+        "name": "红霸符",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2010",
+        "name": "鬼索的狂暴之刃",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2011",
+        "name": "虚空之杖",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2012",
+        "name": "泰坦的坚决",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2013",
+        "name": "海妖之怒",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2014",
+        "name": "纳什之牙",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2037",
+        "name": "最后的轻语",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2041",
+        "name": "水银",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2042",
+        "name": "强袭者的链枷",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2046",
+        "name": "巨人捕手",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2062",
+        "name": "光明版夜之锋刃",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2065",
+        "name": "光明版红霸符",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2066",
+        "name": "光明版鬼索的狂暴之刃",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2067",
+        "name": "光明版虚空之杖",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2068",
+        "name": "光明版泰坦的坚决",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2069",
+        "name": "光明版海妖之怒",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2070",
+        "name": "光明版纳什之牙",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2086",
+        "name": "光明版最后的轻语",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2090",
+        "name": "光明版水银",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2091",
+        "name": "光明版强袭者的链枷",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2094",
+        "name": "光明版巨人捕手",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:6054",
+        "name": "死亡之蔑",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6063",
+        "name": "狙击手的专注",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6065",
+        "name": "投机者之刃",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6069",
+        "name": "鱼骨头",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6070",
+        "name": "连指手套",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6072",
+        "name": "密银黎明",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6075",
+        "name": "智慧末刃",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6080",
+        "name": "疾射火炮",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6086",
+        "name": "巫妖之祸",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6087",
+        "name": "烁刃",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6088",
+        "name": "斯塔缇克电刃",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6090",
+        "name": "巨型九头蛇",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6095",
+        "name": "帽子饮品",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6096",
+        "name": "恶火小斧",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6109",
+        "name": "亚索的剑艺",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6112",
+        "name": "伊芙琳的本能",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9167",
+        "name": "德玛西亚王冠",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9252",
+        "name": "恶意软件矩阵",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9255",
+        "name": "共感植入",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9256",
+        "name": "锁敌光学设备",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9335",
+        "name": "UwU魔爆炮",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9337",
+        "name": "战兔十字弩",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9344",
+        "name": "回响蝠刃",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9347",
+        "name": "OwO魔爆炮",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9349",
+        "name": "战兔至尊弩炮",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9352",
+        "name": "薇恩的炫彩战刃",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9354",
+        "name": "闪光原型",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:41702",
+        "name": "法官纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41706",
+        "name": "新星特攻队纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41708",
+        "name": "灵能特工纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41711",
+        "name": "未来战士纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41712",
+        "name": "堡垒卫士纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41714",
+        "name": "挑战者纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41717",
+        "name": "狙神纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41720",
+        "name": "旅人纹章",
+        "type": "转职纹章"
+      }
+    ]
+  },
+  {
+    "address": "jcc:s17:functional_item_need:damage_amp",
+    "need": "damage_amp",
+    "item_candidates": [
+      {
+        "item_address": "jcc:s17:item:2009",
+        "name": "红霸符",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2012",
+        "name": "泰坦的坚决",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2016",
+        "name": "班克斯的魔法帽",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2042",
+        "name": "强袭者的链枷",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2045",
+        "name": "锐利之刃",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2046",
+        "name": "巨人捕手",
+        "type": "成型装备"
+      },
+      {
+        "item_address": "jcc:s17:item:2065",
+        "name": "光明版红霸符",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2068",
+        "name": "光明版泰坦的坚决",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2071",
+        "name": "光明版班克斯的魔法帽",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2091",
+        "name": "光明版强袭者的链枷",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2093",
+        "name": "光明版锐利之刃",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:2094",
+        "name": "光明版巨人捕手",
+        "type": "光明武器"
+      },
+      {
+        "item_address": "jcc:s17:item:6063",
+        "name": "狙击手的专注",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6067",
+        "name": "飞升护符",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6070",
+        "name": "连指手套",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6080",
+        "name": "疾射火炮",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:6111",
+        "name": "韦鲁斯的执念",
+        "type": "神器装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9251",
+        "name": "无人机上行链路",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9252",
+        "name": "恶意软件矩阵",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9255",
+        "name": "共感植入",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9338",
+        "name": "火箭狂潮",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9339",
+        "name": "旋风切割器",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9342",
+        "name": "附灵飞弹",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:9350",
+        "name": "不息气旋",
+        "type": "特殊装备"
+      },
+      {
+        "item_address": "jcc:s17:item:41703",
+        "name": "木灵族纹章",
+        "type": "转职纹章"
+      },
+      {
+        "item_address": "jcc:s17:item:41716",
+        "name": "游侠纹章",
+        "type": "转职纹章"
+      }
+    ]
+  }
+]

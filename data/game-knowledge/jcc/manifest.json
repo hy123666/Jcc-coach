@@ -24,13 +24,18 @@
     "schemas/patch-source-manifest.schema.json"
   ],
   "season_descriptors": {
+    "s17": "seasons/s17/season-descriptor.json",
     "s18": "seasons/s18/season-descriptor.json"
   },
   "patch_manifests": {
+    "s17_8": "seasons/s17/patches/s17_8/source-manifest.json",
     "s18_1": "seasons/s18/patches/s18_1/source-manifest.json",
-    "s18_2": "seasons/s18/patches/s18_2/source-manifest.json"
+    "s18_2": "seasons/s18/patches/s18_2/source-manifest.json",
+    "s18_3": "seasons/s18/patches/s18_3/source-manifest.json"
   },
-  "season_archives": {},
+  "season_archives": {
+    "s17": "seasons/s17/archive-manifest.json"
+  },
   "generation": {
     "bundle_directory": "generated",
     "candidate_profile": "candidates/candidate-profile.json",

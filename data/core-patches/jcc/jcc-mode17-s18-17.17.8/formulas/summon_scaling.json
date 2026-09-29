@@ -1,0 +1,44 @@
+{
+  "address": "jcc:s17:formula:summon_scaling",
+  "source": "generated_heuristic",
+  "inputs": [
+    "summon_base_profile",
+    "trait_breakpoint",
+    "summoner_star_sum",
+    "stage",
+    "item_or_trait_buffs"
+  ],
+  "outputs": [
+    "summon_quality_score",
+    "summon_frontline_value",
+    "summon_damage_value",
+    "scaling_delta"
+  ],
+  "formulas": {
+    "summon_quality_score": "base_summon_value * breakpoint_multiplier + star_sum_scaling + stage_scaling + buff_fit",
+    "scaling_delta": "quality_after_star_or_breakpoint - quality_before"
+  },
+  "dependencies": [
+    "jcc:s17:formula:unit_quality_score",
+    "jcc:s17:formula:star_upgrade_delta",
+    "jcc:s17:formula:trait_breakpoint_distance"
+  ],
+  "use_cases": [
+    "summoned units from traits/augments",
+    "star-sum scaling mechanics",
+    "whether a summon trait is tempo or cap oriented"
+  ],
+  "exactness": "heuristic_until_summon_stat_table_is_available",
+  "name": "summon_scaling",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "summon"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review"
+  ],
+  "dependency_kind": "derived_formula"
+}

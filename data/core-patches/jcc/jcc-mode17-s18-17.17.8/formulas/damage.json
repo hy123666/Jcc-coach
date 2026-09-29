@@ -1,0 +1,56 @@
+{
+  "address": "jcc:s17:formula:damage",
+  "source": "tft_lab_system_rules",
+  "inputs": [
+    "damage_type",
+    "base_damage",
+    "bonus_damage_pct",
+    "flat_pen",
+    "pct_pen",
+    "crit_chance",
+    "crit_multiplier",
+    "armor",
+    "magic_resist",
+    "durability_pct",
+    "shield",
+    "health"
+  ],
+  "outputs": [
+    "raw_damage",
+    "effective_resist",
+    "mitigation_multiplier",
+    "non_crit_damage",
+    "crit_damage",
+    "expected_damage",
+    "hits_to_kill"
+  ],
+  "formulas": {
+    "rawDamage": "base_damage * (1 + bonus_damage_pct / 100)",
+    "effectiveResist": "max(0, resist * (1 - pct_pen / 100) - flat_pen)",
+    "mitigationMultiplier": "100 / (100 + effective_resist)",
+    "durabilityMultiplier": "1 - durability_pct / 100",
+    "nonCritDamage": "raw_damage * mitigation_multiplier * durability_multiplier",
+    "critDamage": "raw_damage * (crit_multiplier / 100) * mitigation_multiplier * durability_multiplier",
+    "expectedDamage": "non_crit_damage * (1 - crit_chance / 100) + crit_damage * (crit_chance / 100)",
+    "trueDamage": "raw_damage; ignores armor, magic resist, and durability according to TFT Lab calculator text."
+  },
+  "exactness": "baseline_exact_from_tft_lab_rules",
+  "use_cases": [
+    "damage comparison",
+    "tank item value",
+    "enemy threat estimate"
+  ],
+  "name": "damage",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "damage"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review"
+  ],
+  "dependencies": [],
+  "dependency_kind": "root_formula"
+}

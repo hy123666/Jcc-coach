@@ -1,0 +1,38 @@
+{
+  "address": "jcc:s17:formula:dps_auto_attack",
+  "source": "generated_heuristic",
+  "inputs": [
+    "ad",
+    "attack_speed",
+    "crit_chance",
+    "crit_multiplier",
+    "damage_amp"
+  ],
+  "outputs": [
+    "expected_auto_dps"
+  ],
+  "formulas": {
+    "expected_auto_dps": "ad * attack_speed * expected_crit_multiplier * (1 + damage_amp)"
+  },
+  "dependencies": [
+    "jcc:s17:formula:attack_speed_scaling",
+    "jcc:s17:formula:crit_expected_damage"
+  ],
+  "use_cases": [
+    "AD carry item fit",
+    "frontline sustained damage"
+  ],
+  "exactness": "baseline_only_without target/pathing/cast downtime",
+  "name": "dps_auto_attack",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "damage"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review"
+  ],
+  "dependency_kind": "derived_formula"
+}

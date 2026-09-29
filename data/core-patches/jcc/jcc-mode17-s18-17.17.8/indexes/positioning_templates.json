@@ -1,0 +1,29 @@
+{
+  "address": "jcc:s17:index:positioning_templates",
+  "entries": [
+    {
+      "id": "tank_face_main_carry",
+      "desc": "Place main tank to absorb or delay enemy main carry/frontline lane."
+    },
+    {
+      "id": "carry_opposite_threat",
+      "desc": "Move carry away from direct line/cone/backline threats."
+    },
+    {
+      "id": "spread_vs_aoe",
+      "desc": "Spread units when enemy has radius/AOE burst."
+    },
+    {
+      "id": "clump_for_aura",
+      "desc": "Group only when aura/shield/heal value exceeds AOE risk."
+    },
+    {
+      "id": "control_align_key_target",
+      "desc": "Align control unit with enemy carry or frontline anchor."
+    },
+    {
+      "id": "anti_dive",
+      "desc": "Use bait/secondary units to protect carry from dive or random targeting."
+    }
+  ]
+}

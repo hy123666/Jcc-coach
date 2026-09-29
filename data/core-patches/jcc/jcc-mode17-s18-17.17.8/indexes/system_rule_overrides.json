@@ -1,0 +1,78 @@
+{
+  "address": "jcc:s17:index:system_rule_overrides",
+  "policy": "TFT Lab rules are the shared baseline; JCC official entity data and verified JCC-only mechanics override baseline math.",
+  "official_jcc_baseline_notes": {
+    "economy": {
+      "reroll_cost_gold": 2,
+      "buy_xp_cost_gold": 4,
+      "buy_xp_amount": 4,
+      "natural_xp_per_round": 2,
+      "win_gold": 1,
+      "interest_gold_step": 10,
+      "max_interest_gold": 5,
+      "coaching_note": "When judging hold/sell/level/roll, compare interest breakpoints, +1 win gold, streak posture, and the value of seeing the next-level shop pool."
+    },
+    "items": {
+      "max_items_per_unit": 3,
+      "equipped_items_locked": true,
+      "sell_unit_returns_items": true,
+      "remover_returns_all_items": true,
+      "reforger_randomizes_items": true,
+      "coaching_note": "Item advice must distinguish final holders from temporary holders and check whether a remover/reforger exists before treating an item slam as reversible."
+    },
+    "player_damage": {
+      "known_rule": "Losing PvP combat deducts player HP.",
+      "pvp_loss_formula": "stage_value + alive_enemy_units",
+      "stage_base_damage_by_stage": {
+        "1": 0,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 6,
+        "6": 8,
+        "7": 10
+      },
+      "stage_value_meaning": "stage_value is the baseline Little Legend/player damage for the current stage; do not add a second Little Legend body-hit term.",
+      "non_damage_round_types": [
+        "pve",
+        "augment",
+        "carousel",
+        "boon",
+        "gods"
+      ],
+      "threshold_formula": "max_alive_enemy_units_to_survive = max(0, hp - stage_value - 1); lethal_alive_enemy_units = max(0, hp - stage_value)",
+      "pre_fight_policy": "Use current HP and stage base damage to tell the user how many enemy units can survive before the loss becomes lethal; do not wait for post-fight survivor capture just to compute this advice.",
+      "estimate_model": "Before combat resolves, do not predict an exact future loss; compute the survival threshold and give a risk range over possible enemy survivor counts.",
+      "jcc_validation": "TFT Lab baseline; override with verified JCC official/live evidence if the mobile game differs.",
+      "coaching_note": "Phrase HP advice as tolerance lines, e.g. at 13 HP with stage base 10, two enemy survivors leaves 1 HP while three survivors is lethal; this is enough for greed/stabilize decisions."
+    }
+  },
+  "baseline_rule_sources": {
+    "shop": "jcc:s17:formula:shop_odds",
+    "economy": "jcc:s17:formula:economy",
+    "xp": "jcc:s17:formula:economy",
+    "damage": "jcc:s17:formula:damage",
+    "rounds": "jcc:s17:index:round_intent"
+  },
+  "known_jcc_authoritative_domains": [
+    "champions",
+    "chess_variants",
+    "items",
+    "traits",
+    "augments",
+    "god_rewards",
+    "galaxy"
+  ],
+  "pending_override_inputs": [
+    "board_geometry_if_jcc_differs",
+    "mobile_mode_specific_round_rewards",
+    "official_player_damage_by_stage_and_survivors",
+    "verified_s17_carousel_or_boon_differences",
+    "future_official_patch_rule_changes"
+  ],
+  "tft_lab_rule_counts": {
+    "shop_levels": 9,
+    "xp_levels": 8,
+    "round_stages": 7
+  }
+}

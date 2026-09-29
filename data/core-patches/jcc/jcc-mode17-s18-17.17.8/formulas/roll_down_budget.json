@@ -1,0 +1,40 @@
+{
+  "address": "jcc:s17:formula:roll_down_budget",
+  "source": "generated_heuristic",
+  "inputs": [
+    "gold",
+    "stop_gold",
+    "free_rerolls",
+    "reroll_cost"
+  ],
+  "outputs": [
+    "shops_seen",
+    "slot_trials",
+    "gold_left"
+  ],
+  "formulas": {
+    "shops_seen": "free_rerolls + floor(max(0, gold - stop_gold) / reroll_cost)"
+  },
+  "dependencies": [
+    "jcc:s17:formula:roll_probability",
+    "jcc:s17:formula:interest_break"
+  ],
+  "use_cases": [
+    "D 到多少",
+    "roll-down scope"
+  ],
+  "exactness": "exact_baseline",
+  "name": "roll_down_budget",
+  "category": "shop",
+  "domains": [
+    "shop",
+    "economy"
+  ],
+  "route_domains": [
+    "roll_or_level",
+    "trait_or_unit_swap",
+    "reward_choice",
+    "postgame_review"
+  ],
+  "dependency_kind": "derived_formula"
+}

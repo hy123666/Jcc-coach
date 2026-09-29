@@ -1,0 +1,34 @@
+{
+  "address": "jcc:s17:formula:item_stat_delta",
+  "source": "generated_heuristic",
+  "inputs": [
+    "current_stats",
+    "item_stats"
+  ],
+  "outputs": [
+    "new_stats",
+    "stat_delta_tags"
+  ],
+  "formulas": {
+    "new_stats": "current_stats + item_stats"
+  },
+  "dependencies": [
+    "jcc:s17:formula:item_marginal_value"
+  ],
+  "use_cases": [
+    "装备带上后数值变化",
+    "stat doorplate"
+  ],
+  "exactness": "exact_for_flat_item_stats",
+  "name": "item_stat_delta",
+  "category": "item",
+  "domains": [
+    "item",
+    "stats"
+  ],
+  "route_domains": [
+    "item_craft",
+    "holder_assignment"
+  ],
+  "dependency_kind": "derived_formula"
+}

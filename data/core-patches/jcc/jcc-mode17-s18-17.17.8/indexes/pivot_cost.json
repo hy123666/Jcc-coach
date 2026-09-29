@@ -1,0 +1,124 @@
+{
+  "address": "jcc:s17:index:pivot_cost",
+  "entries": [
+    {
+      "id": "lost_pairs",
+      "address": "jcc:s17:pivot_cost_factor:lost_pairs",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:time_left"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:pivot_cost",
+        "jcc:s17:formula:trait_delta",
+        "jcc:s17:formula:item_marginal_value",
+        "jcc:s17:formula:operation_time_budget"
+      ]
+    },
+    {
+      "id": "sold_upgrades",
+      "address": "jcc:s17:pivot_cost_factor:sold_upgrades",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:time_left"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:pivot_cost",
+        "jcc:s17:formula:trait_delta",
+        "jcc:s17:formula:item_marginal_value",
+        "jcc:s17:formula:operation_time_budget"
+      ]
+    },
+    {
+      "id": "trait_loss",
+      "address": "jcc:s17:pivot_cost_factor:trait_loss",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:time_left"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:pivot_cost",
+        "jcc:s17:formula:trait_delta",
+        "jcc:s17:formula:item_marginal_value",
+        "jcc:s17:formula:operation_time_budget"
+      ]
+    },
+    {
+      "id": "item_mismatch",
+      "address": "jcc:s17:pivot_cost_factor:item_mismatch",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:time_left"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:pivot_cost",
+        "jcc:s17:formula:trait_delta",
+        "jcc:s17:formula:item_marginal_value",
+        "jcc:s17:formula:operation_time_budget"
+      ]
+    },
+    {
+      "id": "bench_space",
+      "address": "jcc:s17:pivot_cost_factor:bench_space",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:time_left"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:pivot_cost",
+        "jcc:s17:formula:trait_delta",
+        "jcc:s17:formula:item_marginal_value",
+        "jcc:s17:formula:operation_time_budget"
+      ]
+    },
+    {
+      "id": "gold_to_rebuild",
+      "address": "jcc:s17:pivot_cost_factor:gold_to_rebuild",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:time_left"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:pivot_cost",
+        "jcc:s17:formula:trait_delta",
+        "jcc:s17:formula:item_marginal_value",
+        "jcc:s17:formula:operation_time_budget"
+      ]
+    },
+    {
+      "id": "time_to_execute",
+      "address": "jcc:s17:pivot_cost_factor:time_to_execute",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:time_left"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:pivot_cost",
+        "jcc:s17:formula:trait_delta",
+        "jcc:s17:formula:item_marginal_value",
+        "jcc:s17:formula:operation_time_budget"
+      ]
+    }
+  ]
+}

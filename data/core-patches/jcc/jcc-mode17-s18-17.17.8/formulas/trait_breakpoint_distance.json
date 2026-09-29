@@ -1,0 +1,35 @@
+{
+  "address": "jcc:s17:formula:trait_breakpoint_distance",
+  "source": "generated_heuristic",
+  "inputs": [
+    "current_trait_count",
+    "breakpoints"
+  ],
+  "outputs": [
+    "next_count_needed",
+    "active_breakpoint"
+  ],
+  "formulas": {
+    "next_count_needed": "min(breakpoint - current_count where breakpoint > current_count)"
+  },
+  "dependencies": [
+    "jcc:s17:formula:trait_delta"
+  ],
+  "use_cases": [
+    "one more unit/emblem value",
+    "trait gap"
+  ],
+  "exactness": "exact_from_trait_breakpoints",
+  "name": "trait_breakpoint_distance",
+  "category": "composition",
+  "domains": [
+    "composition",
+    "trait"
+  ],
+  "route_domains": [
+    "trait_or_unit_swap",
+    "roll_or_level",
+    "augment_choice"
+  ],
+  "dependency_kind": "derived_formula"
+}

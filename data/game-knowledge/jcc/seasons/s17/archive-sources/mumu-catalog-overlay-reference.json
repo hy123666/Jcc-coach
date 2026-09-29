@@ -1,0 +1,11 @@
+{
+  "schema": "jcc-mumu-catalog-overlay-v1",
+  "scope": "archived_source_reference",
+  "season_id": "s17",
+  "mode_id": "17",
+  "status": "retired_full_payload_not_used_by_runtime",
+  "historical_git_blob": "9e6cdca146f671f7ee5344dd55d3eeea9d7877b0",
+  "historical_path": "data/runtime/jcc/mumu-catalog-overlay.json",
+  "compiled_authority": "data/game-knowledge/jcc/generated/2bc360c85f8a25382370752e4f2fdefced3ac194fd3a1e91cb2f00c96a9a621e/bundle.json",
+  "policy": "The immutable compiled S17 Core bundle is the archive authority. This compact reference prevents archived source metadata from resolving through the mutable current-season Runtime overlay."
+}

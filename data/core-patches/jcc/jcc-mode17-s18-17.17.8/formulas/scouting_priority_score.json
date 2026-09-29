@@ -1,0 +1,36 @@
+{
+  "address": "jcc:s17:formula:scouting_priority_score",
+  "source": "generated_heuristic",
+  "inputs": [
+    "likely_next_opponents",
+    "contestants",
+    "lobby_leader",
+    "time_left"
+  ],
+  "outputs": [
+    "scout_order"
+  ],
+  "formulas": {
+    "priority": "next_opponent_weight + contestant_weight + threat_weight + leaderboard_weight - time_cost"
+  },
+  "dependencies": [
+    "jcc:s17:index:scouting_priority",
+    "jcc:s17:index:pool_contest",
+    "jcc:s17:index:targeting_threat_templates"
+  ],
+  "use_cases": [
+    "时间不够先看谁",
+    "手动侦察模式"
+  ],
+  "exactness": "heuristic_policy",
+  "name": "scouting_priority_score",
+  "category": "scouting",
+  "domains": [
+    "scouting"
+  ],
+  "route_domains": [
+    "positioning",
+    "trait_or_unit_swap"
+  ],
+  "dependency_kind": "derived_formula"
+}

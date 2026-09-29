@@ -1,0 +1,39 @@
+{
+  "address": "jcc:s17:formula:contest_adjusted_pool",
+  "source": "generated_heuristic",
+  "inputs": [
+    "base_pool_copies",
+    "owned_by_player",
+    "owned_by_opponents",
+    "dead_or_unavailable"
+  ],
+  "outputs": [
+    "remaining_copies",
+    "contest_severity"
+  ],
+  "formulas": {
+    "remaining_copies": "base_pool_copies - owned_by_player - owned_by_opponents - dead_or_unavailable"
+  },
+  "dependencies": [
+    "jcc:s17:index:pool_contest",
+    "jcc:s17:formula:shop_specific_unit_odds"
+  ],
+  "use_cases": [
+    "同行判断",
+    "whether to chase 3-star"
+  ],
+  "exactness": "exact_if_scouting_pool_counts_known",
+  "name": "contest_adjusted_pool",
+  "category": "shop",
+  "domains": [
+    "shop",
+    "roll",
+    "scouting"
+  ],
+  "route_domains": [
+    "roll_or_level",
+    "trait_or_unit_swap",
+    "positioning"
+  ],
+  "dependency_kind": "derived_formula"
+}

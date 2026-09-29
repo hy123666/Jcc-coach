@@ -1,0 +1,37 @@
+{
+  "address": "jcc:s17:formula:item_conflict_penalty",
+  "source": "generated_heuristic",
+  "inputs": [
+    "current_items",
+    "candidate_item",
+    "unique_flags",
+    "role_slots"
+  ],
+  "outputs": [
+    "conflict_penalty",
+    "conflict_reasons"
+  ],
+  "formulas": {
+    "conflict_penalty": "sum(conflict_weights for duplicate/slot/role conflicts)"
+  },
+  "dependencies": [
+    "jcc:s17:index:item_conflicts",
+    "jcc:s17:formula:item_marginal_value"
+  ],
+  "use_cases": [
+    "avoid duplicated wound/startup/slot pressure"
+  ],
+  "exactness": "heuristic_policy",
+  "name": "item_conflict_penalty",
+  "category": "item",
+  "domains": [
+    "item",
+    "constraint"
+  ],
+  "route_domains": [
+    "item_craft",
+    "holder_assignment",
+    "action_constraints"
+  ],
+  "dependency_kind": "derived_formula"
+}

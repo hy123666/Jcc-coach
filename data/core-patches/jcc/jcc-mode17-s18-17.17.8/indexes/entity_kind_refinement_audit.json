@@ -1,0 +1,2938 @@
+[
+  {
+    "address": "jcc:s17:entity_kind_refinement_audit:augment",
+    "entity_kind": "augment",
+    "entity_count": 267,
+    "readiness_distribution": {
+      "deep_refine_before_decisive_use": 216,
+      "usable_needs_context": 51
+    },
+    "average_readiness_score": 51,
+    "acceptance_coverage": {
+      "has_structured_terms": 267,
+      "has_formula_doorplates": 267,
+      "has_route_impacts": 267,
+      "has_live_state_contract": 267,
+      "has_strategy_weights": 267,
+      "has_tactical_atoms": 267
+    },
+    "coverage_policy": "Counts must equal entity_count for hard minimum surfaces; lower readiness means use live-state/deep-load guardrails instead of pretending certainty.",
+    "top_formula_refs": [
+      {
+        "key": "jcc:s17:formula:augment_direction_score",
+        "count": 267
+      },
+      {
+        "key": "jcc:s17:formula:effect_block_value",
+        "count": 267
+      },
+      {
+        "key": "jcc:s17:formula:stat_modifier_value",
+        "count": 262
+      },
+      {
+        "key": "jcc:s17:formula:reward_choice_score",
+        "count": 260
+      },
+      {
+        "key": "jcc:s17:formula:resource_exchange",
+        "count": 255
+      },
+      {
+        "key": "jcc:s17:formula:unit_quality_score",
+        "count": 118
+      },
+      {
+        "key": "jcc:s17:formula:action_feasibility",
+        "count": 115
+      },
+      {
+        "key": "jcc:s17:formula:operation_time_budget",
+        "count": 115
+      },
+      {
+        "key": "jcc:s17:formula:economy",
+        "count": 101
+      },
+      {
+        "key": "jcc:s17:formula:damage",
+        "count": 58
+      },
+      {
+        "key": "jcc:s17:formula:damage_mix",
+        "count": 58
+      },
+      {
+        "key": "jcc:s17:formula:positioning_risk",
+        "count": 51
+      },
+      {
+        "key": "jcc:s17:formula:encounter_rule_shift",
+        "count": 23
+      },
+      {
+        "key": "jcc:s17:formula:attack_speed_scaling",
+        "count": 20
+      },
+      {
+        "key": "jcc:s17:formula:defensive_marginal_value",
+        "count": 19
+      },
+      {
+        "key": "jcc:s17:formula:ehp",
+        "count": 19
+      }
+    ],
+    "top_live_state_fields": [
+      {
+        "key": "jcc:s17:live_state_field:round",
+        "count": 267
+      },
+      {
+        "key": "jcc:s17:live_state_field:stage",
+        "count": 267
+      },
+      {
+        "key": "jcc:s17:live_state_field:time_left",
+        "count": 267
+      },
+      {
+        "key": "jcc:s17:live_state_field:board_units",
+        "count": 109
+      },
+      {
+        "key": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "count": 109
+      },
+      {
+        "key": "jcc:s17:live_state_field:gold",
+        "count": 77
+      },
+      {
+        "key": "jcc:s17:live_state_field:components",
+        "count": 56
+      },
+      {
+        "key": "jcc:s17:live_state_field:shop_units",
+        "count": 29
+      },
+      {
+        "key": "jcc:s17:live_state_field:level",
+        "count": 24
+      },
+      {
+        "key": "jcc:s17:live_state_field:xp",
+        "count": 24
+      },
+      {
+        "key": "jcc:s17:live_state_field:active_traits",
+        "count": 22
+      },
+      {
+        "key": "jcc:s17:live_state_field:streak",
+        "count": 5
+      },
+      {
+        "key": "jcc:s17:live_state_field:bench_units",
+        "count": 1
+      }
+    ],
+    "top_route_refs": [
+      {
+        "key": "jcc:s17:runtime_query_route:holder_assignment",
+        "count": 262
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:item_craft",
+        "count": 262
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:trait_or_unit_swap",
+        "count": 255
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:reward_choice",
+        "count": 151
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:roll_or_level",
+        "count": 115
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:augment_choice",
+        "count": 106
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:positioning",
+        "count": 46
+      }
+    ],
+    "top_tactical_categories": [
+      {
+        "key": "runtime_rule_modifier",
+        "count": 269
+      },
+      {
+        "key": "economy_rule",
+        "count": 206
+      },
+      {
+        "key": "survivability",
+        "count": 130
+      },
+      {
+        "key": "reward_choice",
+        "count": 126
+      },
+      {
+        "key": "damage_output",
+        "count": 124
+      },
+      {
+        "key": "positioning_or_targeting",
+        "count": 76
+      },
+      {
+        "key": "semantic_context",
+        "count": 46
+      },
+      {
+        "key": "conditional_gate",
+        "count": 35
+      },
+      {
+        "key": "board_shape_or_pivot",
+        "count": 32
+      }
+    ],
+    "top_guardrails": [
+      {
+        "key": "do_not_fast_answer_without_condition_check",
+        "count": 141
+      },
+      {
+        "key": "load_deep_semantic_profile_if_finalist",
+        "count": 141
+      },
+      {
+        "key": "apply_rule_modifier_before_baseline_formula",
+        "count": 129
+      },
+      {
+        "key": "runtime_rule_modifiers",
+        "count": 128
+      },
+      {
+        "key": "conditional_terms",
+        "count": 30
+      },
+      {
+        "key": "semantic_only_terms_high",
+        "count": 3
+      }
+    ],
+    "top_refinement_tasks": [
+      {
+        "key": "augment_choice_refine",
+        "count": 267
+      },
+      {
+        "key": "calibrate_heuristic_parse_not_high_confidence",
+        "count": 267
+      },
+      {
+        "key": "calibrate_reward_or_rule_choice_entity",
+        "count": 267
+      },
+      {
+        "key": "compare heuristic axis weights against patch truth and later big-data cache",
+        "count": 267
+      },
+      {
+        "key": "calibrate_modifies_runtime_rules",
+        "count": 128
+      },
+      {
+        "key": "runtime_rule_modifier_calibration",
+        "count": 128
+      },
+      {
+        "key": "verify rule modifier timing, duration, condition, and target",
+        "count": 128
+      },
+      {
+        "key": "verify rule modifier timing/condition/duration",
+        "count": 128
+      },
+      {
+        "key": "no immediate parse-quality action",
+        "count": 123
+      },
+      {
+        "key": "calibrate_multi_axis_strategy_weight",
+        "count": 100
+      },
+      {
+        "key": "stat_modifier_calibration",
+        "count": 73
+      },
+      {
+        "key": "calibrate_conditional_effect_terms",
+        "count": 30
+      }
+    ],
+    "representative_entities": [
+      {
+        "entity_address": "jcc:s17:augment:20459",
+        "entity_name": "王冠之重",
+        "readiness": {
+          "score": 31,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:augment_20459",
+        "top_routes": [
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          },
+          {
+            "route_id": "holder_assignment",
+            "score": 16.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 6.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:augment:1158",
+        "entity_name": "节外生枝",
+        "readiness": {
+          "score": 33,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:augment_1158",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 73.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 44.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:augment:10631",
+        "entity_name": "小小福袋",
+        "readiness": {
+          "score": 33,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:augment_10631",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 55.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 26.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:augment:1006",
+        "entity_name": "装备百宝袋 I",
+        "readiness": {
+          "score": 33,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:augment_1006",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 55.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 26.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:augment:3093",
+        "entity_name": "便携锻炉",
+        "readiness": {
+          "score": 34,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:augment_3093",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 55.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 26.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:augment:4158",
+        "entity_name": "节外生枝+",
+        "readiness": {
+          "score": 34,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:augment_4158",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 73.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 44.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:augment:1007",
+        "entity_name": "潘朵拉的装备",
+        "readiness": {
+          "score": 34,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:augment_1007",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 55.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 26.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:augment:2007",
+        "entity_name": "潘朵拉的装备 II",
+        "readiness": {
+          "score": 34,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:augment_2007",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 55.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 26.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      }
+    ],
+    "audit_questions_for_next_pass": [
+      "Do the top formula refs match this entity kind's real gameplay responsibilities?",
+      "Are deep-load guardrails high because the effect is conditional, or because parsing still needs patch-specific manual calibration?",
+      "Which readiness-low representative entities deserve hand calibration before live coaching MVP?"
+    ]
+  },
+  {
+    "address": "jcc:s17:entity_kind_refinement_audit:champion",
+    "entity_kind": "champion",
+    "entity_count": 71,
+    "readiness_distribution": {
+      "usable_needs_context": 63,
+      "runtime_ready": 4,
+      "deep_refine_before_decisive_use": 4
+    },
+    "average_readiness_score": 69,
+    "acceptance_coverage": {
+      "has_structured_terms": 71,
+      "has_formula_doorplates": 71,
+      "has_route_impacts": 71,
+      "has_live_state_contract": 71,
+      "has_strategy_weights": 71,
+      "has_tactical_atoms": 71
+    },
+    "coverage_policy": "Counts must equal entity_count for hard minimum surfaces; lower readiness means use live-state/deep-load guardrails instead of pretending certainty.",
+    "top_formula_refs": [
+      {
+        "key": "jcc:s17:formula:effect_block_value",
+        "count": 71
+      },
+      {
+        "key": "jcc:s17:formula:skill_value_scaling",
+        "count": 71
+      },
+      {
+        "key": "jcc:s17:formula:star_upgrade_delta",
+        "count": 71
+      },
+      {
+        "key": "jcc:s17:formula:stat_modifier_value",
+        "count": 71
+      },
+      {
+        "key": "jcc:s17:formula:unit_quality_score",
+        "count": 71
+      },
+      {
+        "key": "jcc:s17:formula:damage",
+        "count": 70
+      },
+      {
+        "key": "jcc:s17:formula:damage_mix",
+        "count": 70
+      },
+      {
+        "key": "jcc:s17:formula:positioning_risk",
+        "count": 69
+      },
+      {
+        "key": "jcc:s17:formula:reward_choice_score",
+        "count": 42
+      },
+      {
+        "key": "jcc:s17:formula:resource_exchange",
+        "count": 36
+      },
+      {
+        "key": "jcc:s17:formula:shield_effective_hp",
+        "count": 15
+      },
+      {
+        "key": "jcc:s17:formula:summon_scaling",
+        "count": 15
+      },
+      {
+        "key": "jcc:s17:formula:defensive_marginal_value",
+        "count": 13
+      },
+      {
+        "key": "jcc:s17:formula:ehp",
+        "count": 13
+      },
+      {
+        "key": "jcc:s17:formula:healing_effective_hp",
+        "count": 13
+      },
+      {
+        "key": "jcc:s17:formula:attack_speed_scaling",
+        "count": 12
+      }
+    ],
+    "top_live_state_fields": [
+      {
+        "key": "jcc:s17:live_state_field:board_units",
+        "count": 71
+      },
+      {
+        "key": "jcc:s17:live_state_field:round",
+        "count": 71
+      },
+      {
+        "key": "jcc:s17:live_state_field:stage",
+        "count": 71
+      },
+      {
+        "key": "jcc:s17:live_state_field:time_left",
+        "count": 71
+      },
+      {
+        "key": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "count": 71
+      },
+      {
+        "key": "jcc:s17:live_state_field:components",
+        "count": 2
+      },
+      {
+        "key": "jcc:s17:live_state_field:gold",
+        "count": 2
+      }
+    ],
+    "top_route_refs": [
+      {
+        "key": "jcc:s17:runtime_query_route:holder_assignment",
+        "count": 70
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:item_craft",
+        "count": 70
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:trait_or_unit_swap",
+        "count": 70
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:positioning",
+        "count": 69
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:reward_choice",
+        "count": 8
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:augment_choice",
+        "count": 5
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:roll_or_level",
+        "count": 4
+      }
+    ],
+    "top_tactical_categories": [
+      {
+        "key": "damage_output",
+        "count": 393
+      },
+      {
+        "key": "positioning_or_targeting",
+        "count": 388
+      },
+      {
+        "key": "survivability",
+        "count": 208
+      },
+      {
+        "key": "board_shape_or_pivot",
+        "count": 96
+      },
+      {
+        "key": "reward_choice",
+        "count": 34
+      },
+      {
+        "key": "conditional_gate",
+        "count": 11
+      },
+      {
+        "key": "economy_rule",
+        "count": 11
+      }
+    ],
+    "top_guardrails": [
+      {
+        "key": "many_terms_or_numbers",
+        "count": 67
+      },
+      {
+        "key": "conditional_terms",
+        "count": 10
+      },
+      {
+        "key": "do_not_fast_answer_without_condition_check",
+        "count": 10
+      },
+      {
+        "key": "load_deep_semantic_profile_if_finalist",
+        "count": 10
+      },
+      {
+        "key": "low_route_coverage",
+        "count": 1
+      }
+    ],
+    "top_refinement_tasks": [
+      {
+        "key": "calibrate_heuristic_parse_not_high_confidence",
+        "count": 71
+      },
+      {
+        "key": "calibrate_many_numbers_or_terms",
+        "count": 71
+      },
+      {
+        "key": "champion_skill_semantic_refine",
+        "count": 71
+      },
+      {
+        "key": "compare heuristic axis weights against patch truth and later big-data cache",
+        "count": 71
+      },
+      {
+        "key": "spot-check parsing against official raw text",
+        "count": 67
+      },
+      {
+        "key": "calibrate_multi_axis_strategy_weight",
+        "count": 54
+      },
+      {
+        "key": "calibrate_positioning_sensitive",
+        "count": 49
+      },
+      {
+        "key": "calibrate_flat_fit_ranking_needs_tiebreak",
+        "count": 41
+      },
+      {
+        "key": "fit_tiebreak_calibration",
+        "count": 41
+      },
+      {
+        "key": "review holder/item fit tie-breakers",
+        "count": 41
+      },
+      {
+        "key": "calibrate_high_cost_core_unit",
+        "count": 23
+      },
+      {
+        "key": "stat_modifier_calibration",
+        "count": 15
+      }
+    ],
+    "representative_entities": [
+      {
+        "entity_address": "jcc:s17:champion:2451",
+        "entity_name": "格温",
+        "readiness": {
+          "score": 52,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 1,
+            "formula_ready": 3,
+            "needs_live_state_or_deep_read": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:champion_2451",
+        "top_routes": [
+          {
+            "route_id": "positioning",
+            "score": 102.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 90.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 90.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:champion:5428",
+        "entity_name": "劫",
+        "readiness": {
+          "score": 52,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "trusted_structured",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready": 2,
+            "formula_ready_semantic_inputs": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:champion_5428",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 57.8
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:champion:5425",
+        "entity_name": "娑娜",
+        "readiness": {
+          "score": 55,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "trusted_structured",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "formula_ready": 5,
+            "needs_live_state_or_deep_read": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:champion_5425",
+        "top_routes": [
+          {
+            "route_id": "positioning",
+            "score": 103.4
+          },
+          {
+            "route_id": "item_craft",
+            "score": 91.4
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 79.4
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:champion:1463",
+        "entity_name": "贝蕾亚",
+        "readiness": {
+          "score": 56,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "trusted_structured",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "formula_ready": 3,
+            "needs_live_state_or_deep_read": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:champion_1463",
+        "top_routes": [
+          {
+            "route_id": "item_craft",
+            "score": 108
+          },
+          {
+            "route_id": "holder_assignment",
+            "score": 107
+          },
+          {
+            "route_id": "positioning",
+            "score": 84
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:champion:5426",
+        "entity_name": "菲奥娜",
+        "readiness": {
+          "score": 58,
+          "band": "usable_needs_context",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "formula_ready": 5,
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:champion_5426",
+        "top_routes": [
+          {
+            "route_id": "item_craft",
+            "score": 112.4
+          },
+          {
+            "route_id": "holder_assignment",
+            "score": 111.4
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 104.4
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:champion:1459",
+        "entity_name": "科加斯",
+        "readiness": {
+          "score": 58,
+          "band": "usable_needs_context",
+          "parse_quality_band": "trusted_structured",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "formula_ready": 4,
+            "needs_live_state_or_deep_read": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:champion_1459",
+        "top_routes": [
+          {
+            "route_id": "item_craft",
+            "score": 88
+          },
+          {
+            "route_id": "holder_assignment",
+            "score": 87
+          },
+          {
+            "route_id": "positioning",
+            "score": 84
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:champion:1460",
+        "entity_name": "提莫",
+        "readiness": {
+          "score": 58,
+          "band": "usable_needs_context",
+          "parse_quality_band": "trusted_structured",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "formula_ready": 4,
+            "needs_live_state_or_deep_read": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:champion_1460",
+        "top_routes": [
+          {
+            "route_id": "item_craft",
+            "score": 84.2
+          },
+          {
+            "route_id": "holder_assignment",
+            "score": 83.2
+          },
+          {
+            "route_id": "positioning",
+            "score": 60.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:champion:3452",
+        "entity_name": "维克托",
+        "readiness": {
+          "score": 62,
+          "band": "usable_needs_context",
+          "parse_quality_band": "trusted_structured",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready": 3
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:champion_3452",
+        "top_routes": [
+          {
+            "route_id": "positioning",
+            "score": 74.8
+          },
+          {
+            "route_id": "item_craft",
+            "score": 62.8
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 62.8
+          }
+        ]
+      }
+    ],
+    "audit_questions_for_next_pass": [
+      "Do the top formula refs match this entity kind's real gameplay responsibilities?",
+      "Are deep-load guardrails high because the effect is conditional, or because parsing still needs patch-specific manual calibration?",
+      "Which readiness-low representative entities deserve hand calibration before live coaching MVP?"
+    ]
+  },
+  {
+    "address": "jcc:s17:entity_kind_refinement_audit:encounter",
+    "entity_kind": "encounter",
+    "entity_count": 19,
+    "readiness_distribution": {
+      "deep_refine_before_decisive_use": 18,
+      "usable_needs_context": 1
+    },
+    "average_readiness_score": 43,
+    "acceptance_coverage": {
+      "has_structured_terms": 19,
+      "has_formula_doorplates": 19,
+      "has_route_impacts": 19,
+      "has_live_state_contract": 19,
+      "has_strategy_weights": 19,
+      "has_tactical_atoms": 19
+    },
+    "coverage_policy": "Counts must equal entity_count for hard minimum surfaces; lower readiness means use live-state/deep-load guardrails instead of pretending certainty.",
+    "top_formula_refs": [
+      {
+        "key": "jcc:s17:formula:effect_block_value",
+        "count": 19
+      },
+      {
+        "key": "jcc:s17:formula:encounter_rule_shift",
+        "count": 19
+      },
+      {
+        "key": "jcc:s17:formula:reward_choice_score",
+        "count": 16
+      },
+      {
+        "key": "jcc:s17:formula:action_feasibility",
+        "count": 14
+      },
+      {
+        "key": "jcc:s17:formula:operation_time_budget",
+        "count": 14
+      },
+      {
+        "key": "jcc:s17:formula:resource_exchange",
+        "count": 10
+      },
+      {
+        "key": "jcc:s17:formula:stat_modifier_value",
+        "count": 9
+      },
+      {
+        "key": "jcc:s17:formula:economy",
+        "count": 5
+      },
+      {
+        "key": "jcc:s17:formula:unit_quality_score",
+        "count": 5
+      },
+      {
+        "key": "jcc:s17:formula:positioning_risk",
+        "count": 2
+      },
+      {
+        "key": "jcc:s17:formula:cast_frequency",
+        "count": 1
+      }
+    ],
+    "top_live_state_fields": [
+      {
+        "key": "jcc:s17:live_state_field:round",
+        "count": 19
+      },
+      {
+        "key": "jcc:s17:live_state_field:stage",
+        "count": 19
+      },
+      {
+        "key": "jcc:s17:live_state_field:time_left",
+        "count": 19
+      },
+      {
+        "key": "jcc:s17:live_state_field:components",
+        "count": 2
+      },
+      {
+        "key": "jcc:s17:live_state_field:gold",
+        "count": 2
+      },
+      {
+        "key": "jcc:s17:live_state_field:shop_units",
+        "count": 2
+      },
+      {
+        "key": "jcc:s17:live_state_field:active_traits",
+        "count": 1
+      },
+      {
+        "key": "jcc:s17:live_state_field:level",
+        "count": 1
+      },
+      {
+        "key": "jcc:s17:live_state_field:xp",
+        "count": 1
+      }
+    ],
+    "top_route_refs": [
+      {
+        "key": "jcc:s17:runtime_query_route:reward_choice",
+        "count": 14
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:roll_or_level",
+        "count": 14
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:holder_assignment",
+        "count": 9
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:item_craft",
+        "count": 9
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:trait_or_unit_swap",
+        "count": 9
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:augment_choice",
+        "count": 7
+      }
+    ],
+    "top_tactical_categories": [
+      {
+        "key": "reward_choice",
+        "count": 14
+      },
+      {
+        "key": "runtime_rule_modifier",
+        "count": 14
+      },
+      {
+        "key": "board_shape_or_pivot",
+        "count": 5
+      },
+      {
+        "key": "economy_rule",
+        "count": 5
+      },
+      {
+        "key": "positioning_or_targeting",
+        "count": 2
+      },
+      {
+        "key": "semantic_context",
+        "count": 1
+      }
+    ],
+    "top_guardrails": [
+      {
+        "key": "apply_rule_modifier_before_baseline_formula",
+        "count": 12
+      },
+      {
+        "key": "semantic_only_terms_high",
+        "count": 7
+      },
+      {
+        "key": "do_not_fast_answer_without_condition_check",
+        "count": 6
+      },
+      {
+        "key": "load_deep_semantic_profile_if_finalist",
+        "count": 6
+      },
+      {
+        "key": "runtime_rule_modifiers",
+        "count": 6
+      },
+      {
+        "key": "low_route_coverage",
+        "count": 5
+      }
+    ],
+    "top_refinement_tasks": [
+      {
+        "key": "calibrate_heuristic_parse_not_high_confidence",
+        "count": 19
+      },
+      {
+        "key": "calibrate_reward_or_rule_choice_entity",
+        "count": 19
+      },
+      {
+        "key": "compare heuristic axis weights against patch truth and later big-data cache",
+        "count": 19
+      },
+      {
+        "key": "encounter_rule_refine",
+        "count": 19
+      },
+      {
+        "key": "bind prose-only terms to concrete formula/value or mark as explanation-only",
+        "count": 7
+      },
+      {
+        "key": "calibrate_modifies_runtime_rules",
+        "count": 6
+      },
+      {
+        "key": "runtime_rule_modifier_calibration",
+        "count": 6
+      },
+      {
+        "key": "verify rule modifier timing, duration, condition, and target",
+        "count": 6
+      },
+      {
+        "key": "verify rule modifier timing/condition/duration",
+        "count": 6
+      },
+      {
+        "key": "attach entity to route-specific evaluator or mark as non-runtime entity",
+        "count": 5
+      },
+      {
+        "key": "calibrate_multi_axis_strategy_weight",
+        "count": 3
+      },
+      {
+        "key": "no immediate parse-quality action",
+        "count": 3
+      }
+    ],
+    "representative_entities": [
+      {
+        "entity_address": "jcc:s17:encounter:17989",
+        "entity_name": "纹章剧团",
+        "readiness": {
+          "score": 24,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:encounter_17989",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 58.4
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:encounter:17991",
+        "entity_name": "没有奇遇",
+        "readiness": {
+          "score": 33,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:encounter_17991",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 19.8
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:encounter:17995",
+        "entity_name": "双重复制器",
+        "readiness": {
+          "score": 35,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:encounter_17995",
+        "top_routes": [
+          {
+            "route_id": "item_craft",
+            "score": 17.4
+          },
+          {
+            "route_id": "holder_assignment",
+            "score": 15.4
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 13.4
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:encounter:17987",
+        "entity_name": "基础装备锻造器",
+        "readiness": {
+          "score": 36,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:encounter_17987",
+        "top_routes": [
+          {
+            "route_id": "augment_choice",
+            "score": 66.4
+          },
+          {
+            "route_id": "reward_choice",
+            "score": 66.4
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 37.4
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:encounter:17986",
+        "entity_name": "2星开局",
+        "readiness": {
+          "score": 41,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:encounter_17986",
+        "top_routes": [
+          {
+            "route_id": "roll_or_level",
+            "score": 29.8
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:encounter:17980",
+        "entity_name": "金金金之旅",
+        "readiness": {
+          "score": 41,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:encounter_17980",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 42.8
+          },
+          {
+            "route_id": "roll_or_level",
+            "score": 33.8
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:encounter:17983",
+        "entity_name": "棱彩前奏",
+        "readiness": {
+          "score": 41,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:encounter_17983",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 42.8
+          },
+          {
+            "route_id": "roll_or_level",
+            "score": 33.8
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:encounter:17982",
+        "entity_name": "棱彩终章",
+        "readiness": {
+          "score": 41,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:encounter_17982",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 42.8
+          },
+          {
+            "route_id": "roll_or_level",
+            "score": 33.8
+          }
+        ]
+      }
+    ],
+    "audit_questions_for_next_pass": [
+      "Do the top formula refs match this entity kind's real gameplay responsibilities?",
+      "Are deep-load guardrails high because the effect is conditional, or because parsing still needs patch-specific manual calibration?",
+      "Which readiness-low representative entities deserve hand calibration before live coaching MVP?"
+    ]
+  },
+  {
+    "address": "jcc:s17:entity_kind_refinement_audit:god_reward",
+    "entity_kind": "god_reward",
+    "entity_count": 141,
+    "readiness_distribution": {
+      "deep_refine_before_decisive_use": 119,
+      "usable_needs_context": 22
+    },
+    "average_readiness_score": 49,
+    "acceptance_coverage": {
+      "has_structured_terms": 141,
+      "has_formula_doorplates": 141,
+      "has_route_impacts": 141,
+      "has_live_state_contract": 141,
+      "has_strategy_weights": 141,
+      "has_tactical_atoms": 141
+    },
+    "coverage_policy": "Counts must equal entity_count for hard minimum surfaces; lower readiness means use live-state/deep-load guardrails instead of pretending certainty.",
+    "top_formula_refs": [
+      {
+        "key": "jcc:s17:formula:effect_block_value",
+        "count": 141
+      },
+      {
+        "key": "jcc:s17:formula:god_reward_path_bias",
+        "count": 141
+      },
+      {
+        "key": "jcc:s17:formula:resource_exchange",
+        "count": 141
+      },
+      {
+        "key": "jcc:s17:formula:reward_choice_score",
+        "count": 141
+      },
+      {
+        "key": "jcc:s17:formula:stat_modifier_value",
+        "count": 141
+      },
+      {
+        "key": "jcc:s17:formula:action_feasibility",
+        "count": 75
+      },
+      {
+        "key": "jcc:s17:formula:operation_time_budget",
+        "count": 75
+      },
+      {
+        "key": "jcc:s17:formula:unit_quality_score",
+        "count": 62
+      },
+      {
+        "key": "jcc:s17:formula:economy",
+        "count": 56
+      },
+      {
+        "key": "jcc:s17:formula:encounter_rule_shift",
+        "count": 21
+      },
+      {
+        "key": "jcc:s17:formula:positioning_risk",
+        "count": 11
+      },
+      {
+        "key": "jcc:s17:formula:healing_effective_hp",
+        "count": 10
+      },
+      {
+        "key": "jcc:s17:formula:damage",
+        "count": 7
+      },
+      {
+        "key": "jcc:s17:formula:damage_mix",
+        "count": 7
+      },
+      {
+        "key": "jcc:s17:formula:attack_speed_scaling",
+        "count": 5
+      },
+      {
+        "key": "jcc:s17:formula:trait_delta",
+        "count": 5
+      }
+    ],
+    "top_live_state_fields": [
+      {
+        "key": "jcc:s17:live_state_field:round",
+        "count": 141
+      },
+      {
+        "key": "jcc:s17:live_state_field:stage",
+        "count": 141
+      },
+      {
+        "key": "jcc:s17:live_state_field:time_left",
+        "count": 141
+      },
+      {
+        "key": "jcc:s17:live_state_field:components",
+        "count": 50
+      },
+      {
+        "key": "jcc:s17:live_state_field:board_units",
+        "count": 47
+      },
+      {
+        "key": "jcc:s17:live_state_field:gold",
+        "count": 47
+      },
+      {
+        "key": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "count": 47
+      },
+      {
+        "key": "jcc:s17:live_state_field:shop_units",
+        "count": 9
+      },
+      {
+        "key": "jcc:s17:live_state_field:active_traits",
+        "count": 6
+      },
+      {
+        "key": "jcc:s17:live_state_field:level",
+        "count": 4
+      },
+      {
+        "key": "jcc:s17:live_state_field:xp",
+        "count": 4
+      },
+      {
+        "key": "jcc:s17:live_state_field:streak",
+        "count": 3
+      }
+    ],
+    "top_route_refs": [
+      {
+        "key": "jcc:s17:runtime_query_route:holder_assignment",
+        "count": 141
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:item_craft",
+        "count": 141
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:trait_or_unit_swap",
+        "count": 141
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:reward_choice",
+        "count": 108
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:roll_or_level",
+        "count": 75
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:augment_choice",
+        "count": 59
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:positioning",
+        "count": 6
+      }
+    ],
+    "top_tactical_categories": [
+      {
+        "key": "runtime_rule_modifier",
+        "count": 219
+      },
+      {
+        "key": "reward_choice",
+        "count": 141
+      },
+      {
+        "key": "economy_rule",
+        "count": 129
+      },
+      {
+        "key": "survivability",
+        "count": 127
+      },
+      {
+        "key": "semantic_context",
+        "count": 50
+      },
+      {
+        "key": "positioning_or_targeting",
+        "count": 37
+      },
+      {
+        "key": "damage_output",
+        "count": 25
+      },
+      {
+        "key": "conditional_gate",
+        "count": 17
+      },
+      {
+        "key": "board_shape_or_pivot",
+        "count": 12
+      }
+    ],
+    "top_guardrails": [
+      {
+        "key": "do_not_fast_answer_without_condition_check",
+        "count": 80
+      },
+      {
+        "key": "load_deep_semantic_profile_if_finalist",
+        "count": 80
+      },
+      {
+        "key": "apply_rule_modifier_before_baseline_formula",
+        "count": 74
+      },
+      {
+        "key": "runtime_rule_modifiers",
+        "count": 74
+      },
+      {
+        "key": "semantic_only_terms_high",
+        "count": 31
+      },
+      {
+        "key": "conditional_terms",
+        "count": 17
+      }
+    ],
+    "top_refinement_tasks": [
+      {
+        "key": "calibrate_heuristic_parse_not_high_confidence",
+        "count": 141
+      },
+      {
+        "key": "calibrate_reward_or_rule_choice_entity",
+        "count": 141
+      },
+      {
+        "key": "compare heuristic axis weights against patch truth and later big-data cache",
+        "count": 141
+      },
+      {
+        "key": "god_reward_path_refine",
+        "count": 141
+      },
+      {
+        "key": "calibrate_modifies_runtime_rules",
+        "count": 74
+      },
+      {
+        "key": "runtime_rule_modifier_calibration",
+        "count": 74
+      },
+      {
+        "key": "verify rule modifier timing, duration, condition, and target",
+        "count": 74
+      },
+      {
+        "key": "verify rule modifier timing/condition/duration",
+        "count": 74
+      },
+      {
+        "key": "no immediate parse-quality action",
+        "count": 52
+      },
+      {
+        "key": "calibrate_multi_axis_strategy_weight",
+        "count": 41
+      },
+      {
+        "key": "bind prose-only terms to concrete formula/value or mark as explanation-only",
+        "count": 31
+      },
+      {
+        "key": "calibrate_conditional_effect_terms",
+        "count": 17
+      }
+    ],
+    "representative_entities": [
+      {
+        "entity_address": "jcc:s17:god_reward:7_1707090_stage_4",
+        "entity_name": "艾克的恩赐",
+        "readiness": {
+          "score": 34,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 3
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:god_reward_7_1707090_stage_4",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 55.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 26.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:god_reward:9_1709070_stage_3",
+        "entity_name": "神圣共情",
+        "readiness": {
+          "score": 34,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:god_reward_9_1709070_stage_3",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 55.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 51.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 43.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:god_reward:4_1704010_stage_2",
+        "entity_name": "随机基础装备",
+        "readiness": {
+          "score": 34,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:god_reward_4_1704010_stage_2",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 55.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 26.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:god_reward:4_1704010_stage_3",
+        "entity_name": "随机基础装备",
+        "readiness": {
+          "score": 34,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:god_reward_4_1704010_stage_3",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 55.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 26.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:god_reward:4_1704010_stage_4",
+        "entity_name": "随机基础装备",
+        "readiness": {
+          "score": 34,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:god_reward_4_1704010_stage_4",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 55.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 26.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:god_reward:7_1707041_stage_4",
+        "entity_name": "随机神器",
+        "readiness": {
+          "score": 34,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:god_reward_7_1707041_stage_4",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 55.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 26.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:god_reward:7_1707040_stage_2",
+        "entity_name": "随机神器",
+        "readiness": {
+          "score": 34,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:god_reward_7_1707040_stage_2",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 55.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 26.2
+          },
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:god_reward:6_1706012_stage_4",
+        "entity_name": "复制器大礼包",
+        "readiness": {
+          "score": 35,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:god_reward_6_1706012_stage_4",
+        "top_routes": [
+          {
+            "route_id": "item_craft",
+            "score": 18.2
+          },
+          {
+            "route_id": "holder_assignment",
+            "score": 16.2
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 14.2
+          }
+        ]
+      }
+    ],
+    "audit_questions_for_next_pass": [
+      "Do the top formula refs match this entity kind's real gameplay responsibilities?",
+      "Are deep-load guardrails high because the effect is conditional, or because parsing still needs patch-specific manual calibration?",
+      "Which readiness-low representative entities deserve hand calibration before live coaching MVP?"
+    ]
+  },
+  {
+    "address": "jcc:s17:entity_kind_refinement_audit:item",
+    "entity_kind": "item",
+    "entity_count": 178,
+    "readiness_distribution": {
+      "deep_refine_before_decisive_use": 53,
+      "usable_needs_context": 125
+    },
+    "average_readiness_score": 62,
+    "acceptance_coverage": {
+      "has_structured_terms": 178,
+      "has_formula_doorplates": 178,
+      "has_route_impacts": 178,
+      "has_live_state_contract": 178,
+      "has_strategy_weights": 178,
+      "has_tactical_atoms": 178
+    },
+    "coverage_policy": "Counts must equal entity_count for hard minimum surfaces; lower readiness means use live-state/deep-load guardrails instead of pretending certainty.",
+    "top_formula_refs": [
+      {
+        "key": "jcc:s17:formula:effect_block_value",
+        "count": 178
+      },
+      {
+        "key": "jcc:s17:formula:item_conflict_penalty",
+        "count": 178
+      },
+      {
+        "key": "jcc:s17:formula:item_marginal_value",
+        "count": 178
+      },
+      {
+        "key": "jcc:s17:formula:item_stat_delta",
+        "count": 178
+      },
+      {
+        "key": "jcc:s17:formula:reward_choice_score",
+        "count": 178
+      },
+      {
+        "key": "jcc:s17:formula:stat_modifier_value",
+        "count": 171
+      },
+      {
+        "key": "jcc:s17:formula:damage",
+        "count": 131
+      },
+      {
+        "key": "jcc:s17:formula:damage_mix",
+        "count": 131
+      },
+      {
+        "key": "jcc:s17:formula:resource_exchange",
+        "count": 110
+      },
+      {
+        "key": "jcc:s17:formula:positioning_risk",
+        "count": 92
+      },
+      {
+        "key": "jcc:s17:formula:defensive_marginal_value",
+        "count": 68
+      },
+      {
+        "key": "jcc:s17:formula:ehp",
+        "count": 68
+      },
+      {
+        "key": "jcc:s17:formula:healing_effective_hp",
+        "count": 62
+      },
+      {
+        "key": "jcc:s17:formula:attack_speed_scaling",
+        "count": 58
+      },
+      {
+        "key": "jcc:s17:formula:penetration_effective_resist",
+        "count": 25
+      },
+      {
+        "key": "jcc:s17:formula:action_feasibility",
+        "count": 18
+      }
+    ],
+    "top_live_state_fields": [
+      {
+        "key": "jcc:s17:live_state_field:round",
+        "count": 178
+      },
+      {
+        "key": "jcc:s17:live_state_field:stage",
+        "count": 178
+      },
+      {
+        "key": "jcc:s17:live_state_field:time_left",
+        "count": 178
+      },
+      {
+        "key": "jcc:s17:live_state_field:board_units",
+        "count": 150
+      },
+      {
+        "key": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "count": 150
+      },
+      {
+        "key": "jcc:s17:live_state_field:components",
+        "count": 125
+      },
+      {
+        "key": "jcc:s17:live_state_field:active_traits",
+        "count": 19
+      },
+      {
+        "key": "jcc:s17:live_state_field:gold",
+        "count": 7
+      },
+      {
+        "key": "jcc:s17:live_state_field:streak",
+        "count": 2
+      }
+    ],
+    "top_route_refs": [
+      {
+        "key": "jcc:s17:runtime_query_route:reward_choice",
+        "count": 178
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:holder_assignment",
+        "count": 168
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:item_craft",
+        "count": 168
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:trait_or_unit_swap",
+        "count": 168
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:positioning",
+        "count": 85
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:roll_or_level",
+        "count": 18
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:augment_choice",
+        "count": 10
+      }
+    ],
+    "top_tactical_categories": [
+      {
+        "key": "damage_output",
+        "count": 300
+      },
+      {
+        "key": "survivability",
+        "count": 278
+      },
+      {
+        "key": "positioning_or_targeting",
+        "count": 137
+      },
+      {
+        "key": "reward_choice",
+        "count": 39
+      },
+      {
+        "key": "board_shape_or_pivot",
+        "count": 36
+      },
+      {
+        "key": "conditional_gate",
+        "count": 33
+      },
+      {
+        "key": "economy_rule",
+        "count": 21
+      },
+      {
+        "key": "fight_time_scaling",
+        "count": 4
+      },
+      {
+        "key": "semantic_context",
+        "count": 2
+      }
+    ],
+    "top_guardrails": [
+      {
+        "key": "conditional_terms",
+        "count": 29
+      },
+      {
+        "key": "do_not_fast_answer_without_condition_check",
+        "count": 29
+      },
+      {
+        "key": "load_deep_semantic_profile_if_finalist",
+        "count": 29
+      },
+      {
+        "key": "semantic_only_terms_high",
+        "count": 11
+      },
+      {
+        "key": "low_route_coverage",
+        "count": 7
+      },
+      {
+        "key": "separate_immediate_power_from_long_fight_value",
+        "count": 2
+      },
+      {
+        "key": "stack_or_threshold_terms",
+        "count": 2
+      },
+      {
+        "key": "many_terms_or_numbers",
+        "count": 1
+      }
+    ],
+    "top_refinement_tasks": [
+      {
+        "key": "calibrate_heuristic_parse_not_high_confidence",
+        "count": 178
+      },
+      {
+        "key": "compare heuristic axis weights against patch truth and later big-data cache",
+        "count": 178
+      },
+      {
+        "key": "item_mechanism_refine",
+        "count": 178
+      },
+      {
+        "key": "calibrate_flat_fit_ranking_needs_tiebreak",
+        "count": 173
+      },
+      {
+        "key": "fit_tiebreak_calibration",
+        "count": 173
+      },
+      {
+        "key": "review holder/item fit tie-breakers",
+        "count": 173
+      },
+      {
+        "key": "stat_modifier_calibration",
+        "count": 167
+      },
+      {
+        "key": "calibrate_multi_axis_strategy_weight",
+        "count": 151
+      },
+      {
+        "key": "calibrate_item_can_change_immediate_power",
+        "count": 149
+      },
+      {
+        "key": "no immediate parse-quality action",
+        "count": 134
+      },
+      {
+        "key": "calibrate_conditional_effect_terms",
+        "count": 29
+      },
+      {
+        "key": "calibrate_positioning_sensitive",
+        "count": 29
+      }
+    ],
+    "representative_entities": [
+      {
+        "entity_address": "jcc:s17:item:1008",
+        "entity_name": "金铲铲",
+        "readiness": {
+          "score": 39,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:item_1008",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 49
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:item:1010",
+        "entity_name": "金锅锅",
+        "readiness": {
+          "score": 39,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:item_1010",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 49
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:item:9353",
+        "entity_name": "全能武器",
+        "readiness": {
+          "score": 39,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:item_9353",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 40.8
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:item:6057",
+        "entity_name": "三相之力",
+        "readiness": {
+          "score": 39,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:item_6057",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 40.8
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:item:9367",
+        "entity_name": "特攻队员选择器",
+        "readiness": {
+          "score": 43,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:item_9367",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 72.8
+          },
+          {
+            "route_id": "augment_choice",
+            "score": 66.8
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:item:3030",
+        "entity_name": "光明版幸运装备宝箱",
+        "readiness": {
+          "score": 44,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:item_3030",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 72.8
+          },
+          {
+            "route_id": "augment_choice",
+            "score": 66.8
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:item:1009",
+        "entity_name": "拳套",
+        "readiness": {
+          "score": 44,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:item_1009",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 49
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:item:3029",
+        "entity_name": "幸运装备宝箱",
+        "readiness": {
+          "score": 44,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 2
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:item_3029",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 72.8
+          },
+          {
+            "route_id": "augment_choice",
+            "score": 66.8
+          }
+        ]
+      }
+    ],
+    "audit_questions_for_next_pass": [
+      "Do the top formula refs match this entity kind's real gameplay responsibilities?",
+      "Are deep-load guardrails high because the effect is conditional, or because parsing still needs patch-specific manual calibration?",
+      "Which readiness-low representative entities deserve hand calibration before live coaching MVP?"
+    ]
+  },
+  {
+    "address": "jcc:s17:entity_kind_refinement_audit:trait",
+    "entity_kind": "trait",
+    "entity_count": 34,
+    "readiness_distribution": {
+      "deep_refine_before_decisive_use": 11,
+      "usable_needs_context": 22,
+      "runtime_ready": 1
+    },
+    "average_readiness_score": 60,
+    "acceptance_coverage": {
+      "has_structured_terms": 34,
+      "has_formula_doorplates": 34,
+      "has_route_impacts": 34,
+      "has_live_state_contract": 34,
+      "has_strategy_weights": 34,
+      "has_tactical_atoms": 34
+    },
+    "coverage_policy": "Counts must equal entity_count for hard minimum surfaces; lower readiness means use live-state/deep-load guardrails instead of pretending certainty.",
+    "top_formula_refs": [
+      {
+        "key": "jcc:s17:formula:effect_block_value",
+        "count": 34
+      },
+      {
+        "key": "jcc:s17:formula:trait_breakpoint_distance",
+        "count": 34
+      },
+      {
+        "key": "jcc:s17:formula:trait_delta",
+        "count": 34
+      },
+      {
+        "key": "jcc:s17:formula:stat_modifier_value",
+        "count": 31
+      },
+      {
+        "key": "jcc:s17:formula:reward_choice_score",
+        "count": 28
+      },
+      {
+        "key": "jcc:s17:formula:resource_exchange",
+        "count": 26
+      },
+      {
+        "key": "jcc:s17:formula:positioning_risk",
+        "count": 17
+      },
+      {
+        "key": "jcc:s17:formula:damage",
+        "count": 16
+      },
+      {
+        "key": "jcc:s17:formula:damage_mix",
+        "count": 16
+      },
+      {
+        "key": "jcc:s17:formula:attack_speed_scaling",
+        "count": 6
+      },
+      {
+        "key": "jcc:s17:formula:defensive_marginal_value",
+        "count": 6
+      },
+      {
+        "key": "jcc:s17:formula:ehp",
+        "count": 6
+      },
+      {
+        "key": "jcc:s17:formula:healing_effective_hp",
+        "count": 6
+      },
+      {
+        "key": "jcc:s17:formula:shield_effective_hp",
+        "count": 5
+      },
+      {
+        "key": "jcc:s17:formula:summon_scaling",
+        "count": 5
+      },
+      {
+        "key": "jcc:s17:formula:unit_quality_score",
+        "count": 5
+      }
+    ],
+    "top_live_state_fields": [
+      {
+        "key": "jcc:s17:live_state_field:round",
+        "count": 34
+      },
+      {
+        "key": "jcc:s17:live_state_field:stage",
+        "count": 34
+      },
+      {
+        "key": "jcc:s17:live_state_field:time_left",
+        "count": 34
+      },
+      {
+        "key": "jcc:s17:live_state_field:board_units",
+        "count": 26
+      },
+      {
+        "key": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "count": 26
+      },
+      {
+        "key": "jcc:s17:live_state_field:streak",
+        "count": 3
+      },
+      {
+        "key": "jcc:s17:live_state_field:components",
+        "count": 2
+      },
+      {
+        "key": "jcc:s17:live_state_field:gold",
+        "count": 2
+      },
+      {
+        "key": "jcc:s17:live_state_field:level",
+        "count": 2
+      },
+      {
+        "key": "jcc:s17:live_state_field:xp",
+        "count": 2
+      },
+      {
+        "key": "jcc:s17:live_state_field:active_traits",
+        "count": 1
+      },
+      {
+        "key": "jcc:s17:live_state_field:shop_units",
+        "count": 1
+      }
+    ],
+    "top_route_refs": [
+      {
+        "key": "jcc:s17:runtime_query_route:holder_assignment",
+        "count": 30
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:item_craft",
+        "count": 30
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:trait_or_unit_swap",
+        "count": 29
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:positioning",
+        "count": 14
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:reward_choice",
+        "count": 11
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:augment_choice",
+        "count": 10
+      },
+      {
+        "key": "jcc:s17:runtime_query_route:roll_or_level",
+        "count": 4
+      }
+    ],
+    "top_tactical_categories": [
+      {
+        "key": "damage_output",
+        "count": 129
+      },
+      {
+        "key": "survivability",
+        "count": 126
+      },
+      {
+        "key": "reward_choice",
+        "count": 76
+      },
+      {
+        "key": "board_shape_or_pivot",
+        "count": 71
+      },
+      {
+        "key": "positioning_or_targeting",
+        "count": 55
+      },
+      {
+        "key": "economy_rule",
+        "count": 26
+      },
+      {
+        "key": "conditional_gate",
+        "count": 17
+      },
+      {
+        "key": "runtime_rule_modifier",
+        "count": 17
+      },
+      {
+        "key": "semantic_context",
+        "count": 5
+      }
+    ],
+    "top_guardrails": [
+      {
+        "key": "many_terms_or_numbers",
+        "count": 15
+      },
+      {
+        "key": "load_deep_semantic_profile_if_finalist",
+        "count": 10
+      },
+      {
+        "key": "conditional_terms",
+        "count": 5
+      },
+      {
+        "key": "do_not_fast_answer_without_condition_check",
+        "count": 5
+      },
+      {
+        "key": "semantic_only_terms_high",
+        "count": 4
+      },
+      {
+        "key": "apply_rule_modifier_before_baseline_formula",
+        "count": 3
+      }
+    ],
+    "top_refinement_tasks": [
+      {
+        "key": "calibrate_heuristic_parse_not_high_confidence",
+        "count": 34
+      },
+      {
+        "key": "compare heuristic axis weights against patch truth and later big-data cache",
+        "count": 34
+      },
+      {
+        "key": "trait_breakpoint_refine",
+        "count": 34
+      },
+      {
+        "key": "calibrate_many_numbers_or_terms",
+        "count": 30
+      },
+      {
+        "key": "calibrate_multi_axis_strategy_weight",
+        "count": 20
+      },
+      {
+        "key": "no immediate parse-quality action",
+        "count": 16
+      },
+      {
+        "key": "spot-check parsing against official raw text",
+        "count": 15
+      },
+      {
+        "key": "stat_modifier_calibration",
+        "count": 14
+      },
+      {
+        "key": "calibrate_high_breakpoint_trait",
+        "count": 11
+      },
+      {
+        "key": "calibrate_positioning_sensitive",
+        "count": 6
+      },
+      {
+        "key": "calibrate_conditional_effect_terms",
+        "count": 5
+      },
+      {
+        "key": "condition_trigger_calibration",
+        "count": 5
+      }
+    ],
+    "representative_entities": [
+      {
+        "entity_address": "jcc:s17:trait:401",
+        "entity_name": "法官",
+        "readiness": {
+          "score": 30,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "needs_deep_read",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 4,
+            "formula_ready": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:trait_401",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 31
+          },
+          {
+            "route_id": "augment_choice",
+            "score": 25
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:trait:412",
+        "entity_name": "军工1号",
+        "readiness": {
+          "score": 39,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "needs_deep_read",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 6,
+            "formula_ready": 3
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:trait_412",
+        "top_routes": [
+          {
+            "route_id": "reward_choice",
+            "score": 66
+          },
+          {
+            "route_id": "augment_choice",
+            "score": 60
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:trait:407",
+        "entity_name": "灵能特工",
+        "readiness": {
+          "score": 42,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "needs_deep_read",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 4,
+            "formula_ready": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:trait_407",
+        "top_routes": [
+          {
+            "route_id": "augment_choice",
+            "score": 65
+          },
+          {
+            "route_id": "reward_choice",
+            "score": 65
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 36
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:trait:316",
+        "entity_name": "魔术师",
+        "readiness": {
+          "score": 45,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 1,
+            "formula_ready": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:trait_316",
+        "top_routes": [
+          {
+            "route_id": "item_craft",
+            "score": 33
+          },
+          {
+            "route_id": "holder_assignment",
+            "score": 31
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:trait:419",
+        "entity_name": "汪星机器人",
+        "readiness": {
+          "score": 45,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "needs_deep_read",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "formula_ready": 3,
+            "formula_ready_semantic_inputs": 3,
+            "needs_live_state_or_deep_read": 3
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:trait_419",
+        "top_routes": [
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 78.4
+          },
+          {
+            "route_id": "positioning",
+            "score": 50.4
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:trait:400",
+        "entity_name": "幻灵战队",
+        "readiness": {
+          "score": 48,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": true,
+          "exactness_summary": {
+            "needs_live_state_or_deep_read": 1,
+            "formula_ready": 3,
+            "formula_ready_semantic_inputs": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:trait_400",
+        "top_routes": [
+          {
+            "route_id": "augment_choice",
+            "score": 83.6
+          },
+          {
+            "route_id": "reward_choice",
+            "score": 83.6
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 54.6
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:trait:319",
+        "entity_name": "牧羊人",
+        "readiness": {
+          "score": 50,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "usable_with_caution",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready_semantic_inputs": 1,
+            "formula_ready": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:trait_319",
+        "top_routes": [
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 46.8
+          },
+          {
+            "route_id": "item_craft",
+            "score": 40.8
+          },
+          {
+            "route_id": "holder_assignment",
+            "score": 38.8
+          }
+        ]
+      },
+      {
+        "entity_address": "jcc:s17:trait:311",
+        "entity_name": "斗士",
+        "readiness": {
+          "score": 54,
+          "band": "deep_refine_before_decisive_use",
+          "parse_quality_band": "trusted_structured",
+          "parse_confidence": "medium",
+          "must_deep_load": false,
+          "exactness_summary": {
+            "formula_ready": 2,
+            "formula_ready_semantic_inputs": 1
+          }
+        },
+        "matrix_address": "jcc:s17:entity_refinement_matrix:trait_311",
+        "top_routes": [
+          {
+            "route_id": "item_craft",
+            "score": 42.8
+          },
+          {
+            "route_id": "holder_assignment",
+            "score": 40.8
+          },
+          {
+            "route_id": "trait_or_unit_swap",
+            "score": 35.8
+          }
+        ]
+      }
+    ],
+    "audit_questions_for_next_pass": [
+      "Do the top formula refs match this entity kind's real gameplay responsibilities?",
+      "Are deep-load guardrails high because the effect is conditional, or because parsing still needs patch-specific manual calibration?",
+      "Which readiness-low representative entities deserve hand calibration before live coaching MVP?"
+    ]
+  }
+]

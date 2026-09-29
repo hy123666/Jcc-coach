@@ -1,0 +1,44 @@
+{
+  "address": "jcc:s17:formula:ehp",
+  "source": "generated_heuristic",
+  "inputs": [
+    "hp",
+    "armor",
+    "magic_resist",
+    "durability_pct",
+    "damage_mix"
+  ],
+  "outputs": [
+    "physical_ehp",
+    "magic_ehp",
+    "mixed_ehp",
+    "marginal_hp_value",
+    "marginal_armor_value",
+    "marginal_mr_value"
+  ],
+  "formulas": {
+    "physical_ehp": "hp * (1 + armor / 100) / (1 - durability_pct / 100)",
+    "magic_ehp": "hp * (1 + magic_resist / 100) / (1 - durability_pct / 100)",
+    "mixed_ehp": "1 / (physical_share / physical_ehp + magic_share / magic_ehp + true_share / hp)",
+    "marginal_resist_note": "At current HP, +R resist adds roughly hp/100 EHP against that damage type before durability."
+  },
+  "name": "ehp",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "defense"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review",
+    "item_craft"
+  ],
+  "dependencies": [],
+  "dependency_kind": "root_formula",
+  "use_cases": [
+    "defensive item comparison",
+    "frontline survival math",
+    "mixed damage durability"
+  ]
+}

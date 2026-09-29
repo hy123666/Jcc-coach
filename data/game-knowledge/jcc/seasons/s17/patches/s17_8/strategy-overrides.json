@@ -1,0 +1,62 @@
+{
+  "schema": "jcc-patch-strategy-overrides-v1",
+  "scope": "patch_strategy",
+  "season_id": "s17",
+  "patch_id": "s17_8",
+  "relationship_to_game_rules": "Patch strategy overrides tune coaching priors only. They do not define game-rule timing, augment stages, choice pretriggers, base economy math, or leveling thresholds.",
+  "economy_management_overrides": {
+    "schema": "jcc-economy-management-patch-strategy-v1",
+    "scope": "s17_8_patch_strategy",
+    "patch_scope": "S17.8 balance/meta bias; supersede this file when a later patch changes the live tempo or evidence.",
+    "relationship_to_base": "Overrides only patch tempo and decision priors. Base economy compounding, interest math, and leveling thresholds still apply.",
+    "tempo_bias": {
+      "summary": "Treat S17.8 as a tempo-sensitive patch where current board quality, item fit, confirmed choices, HP, economy, and promoted live rankings decide whether to push or greed.",
+      "single_open_risk": "Do not assume the balance patch alone makes an open-loss line safe; require a structured streak plan and a credible stabilizing endpoint.",
+      "preferred_default": "Use strongest-board economy unless current-match facts and live ranking evidence justify preserving a deliberate streak or accelerating a specific cap line."
+    },
+    "early_leveling_bias": {
+      "level_4": "Level only when current units plus components make a real combat board, or when a confirmed tempo, HP-protection, or economy source justifies the spend.",
+      "do_not_level_when": [
+        "the board does not have real pairs or two-star pressure",
+        "components do not fit current holders",
+        "there is no extra economy source and leveling would break important interest without likely wins"
+      ],
+      "recovery_policy": "If an early tempo spend fails to preserve strength, stop compounding it: recover interest, release low-value holds, and reassess at the next material decision point."
+    },
+    "contested_meta_policy": {
+      "summary": "Use promoted live rankings and current-match fit to judge contested lines; balance changes are soft priors, never proof that a composition is forced or uncontested.",
+      "fast_8_timing": {
+        "default_4_cost_line": "4-2 level 8 after the augment is the normal four-cost timing when economy permits.",
+        "4_1_contest": "4-1 level 8 can be correct when rich, low on HP, or racing a contested pool, but the immediate combat gain must justify the lost economy.",
+        "4_5_delay": "Delay to 4-5 only when HP, board strength, and contest evidence make the extra economy safe."
+      }
+    },
+    "host_model_policy": [
+      "S17.8 buffs to Briar, Twisted Fate, Miss Fortune, Riven, and several Psionic Agent equipment effects are soft direction signals only; require live board, item, augment, economy, and ranking fit before recommending commitment.",
+      "S17.8 nerfs to Akali, Samira, Diana, the five-Invoker breakpoint, and several Anima Squad equipment effects do not force an automatic pivot; explain whether the current line still meets its survival and cap conditions.",
+      "When user target and live ranking evidence conflict, explain the decision through current board fit, item fit, confirmed choices, HP/economy, contest evidence, and the next hit that would justify staying or pivoting."
+    ],
+    "event_policy": {
+      "schema": "jcc-economy-event-policy-patch-strategy-v1",
+      "advice_stage_priors": [
+        "2-2",
+        "2-3",
+        "2-4",
+        "2-5",
+        "2-6",
+        "2-7",
+        "3-1",
+        "3-2",
+        "3-4",
+        "3-5",
+        "3-7",
+        "4-1",
+        "4-2",
+        "4-4",
+        "4-5",
+        "5-1"
+      ],
+      "patch_reason": "S17.8 keeps the S17 choice windows while changing combat balance. These are review priors only and never override live HP, confirmed choices, board quality, item fit, user target, or contest facts."
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "strength_status": "available",
+  "recipe_status": "available",
+  "checked_at": "2026-09-29T03:20:58.156Z",
+  "minimums": {
+    "traitCount": 33,
+    "heroCount": 59,
+    "equipCount": 118,
+    "winningRecipeCount": 36
+  },
+  "catalog_compatibility": {
+    "schema": "jcc-live-ranking-catalog-compatibility-v1",
+    "status": "pass",
+    "minimum_match_ratio": 0.8,
+    "allowed_champion_identity_count": 347,
+    "allowed_item_identity_count": 282,
+    "sections": {
+      "hero_strength": {
+        "observed_count": 78,
+        "matched_count": 73,
+        "match_ratio": 0.9358974358974359,
+        "unknown_ids": [
+          "4515",
+          "3513",
+          "1513",
+          "3514",
+          "2516"
+        ]
+      },
+      "lineup_units": {
+        "observed_count": 71,
+        "matched_count": 70,
+        "match_ratio": 0.9859154929577465,
+        "unknown_ids": [
+          "4515"
+        ]
+      },
+      "main_carries": {
+        "observed_count": 24,
+        "matched_count": 24,
+        "match_ratio": 1,
+        "unknown_ids": []
+      },
+      "ranked_items": {
+        "observed_count": 165,
+        "matched_count": 164,
+        "match_ratio": 0.9939393939393939,
+        "unknown_ids": [
+          "6079"
+        ]
+      },
+      "lineup_items": {
+        "observed_count": 64,
+        "matched_count": 64,
+        "match_ratio": 1,
+        "unknown_ids": []
+      },
+      "hero_equipment_items": {
+        "observed_count": 66,
+        "matched_count": 66,
+        "match_ratio": 1,
+        "unknown_ids": []
+      }
+    },
+    "failures": []
+  },
+  "coverage": {
+    "static_basis": {
+      "patch_package": "jcc-s18-s18_3",
+      "version": "18.18.3",
+      "mode": "18",
+      "season": "18",
+      "trait_count": 36,
+      "champion_count": 65,
+      "item_count": 157,
+      "augment_count": 254
+    },
+    "tiers": {
+      "0": {
+        "traitCount": 50,
+        "heroCounts": {
+          "1": 78,
+          "2": 78,
+          "3": 78,
+          "255": 78
+        },
+        "equipCount": 144,
+        "lineupGroupCount": 50,
+        "winningSourceGroupCount": 50,
+        "winningSourceVariantCount": 525,
+        "winningRecipeStatus": "available",
+        "winningRecipeCount": 523,
+        "winningRecipeQuarantineCount": 2,
+        "popularSourceRowCount": null,
+        "popularRecipeCount": 0,
+        "popularRecipeQuarantineCount": 0,
+        "traitDetailCount": 50,
+        "emptyTraitDetailCount": 0,
+        "traitGroupCount": 50,
+        "canonicalRosterCount": 526,
+        "emptyTraitGroupCount": 0,
+        "equipDate": "20260928",
+        "lineupDate": "20260928",
+        "requestIdentityMatches": true,
+        "probeResponseMatches": true,
+        "traitRequestIdentityMismatchCount": 0,
+        "heroEquipExpectedCount": 70,
+        "heroEquipCount": 70,
+        "heroEquipFailureCount": 0,
+        "heroEquipDateMissingCount": 0,
+        "heroEquipDateMismatchCount": 0
+      }
+    }
+  },
+  "failures": [],
+  "warnings": [],
+  "source_identity": {
+    "runtime_season_id": "s18",
+    "active_patch_id": "s18_3",
+    "game_mode_id": "jcc-mode18",
+    "package_id": "jcc-s18-s18_3",
+    "source_package_id": "jcc-s18-s18_3",
+    "core_profile_id": "e849f3cebd901093080c1ba030eb536a13c1fb72dbf3fbf02da2afc805c2d79c",
+    "hard_data_manifest_fingerprint": "8ebf65be230c7cc65da5549013581a8732ff2f96d4f29b12fbd30196390889fd",
+    "catalog_source_fingerprint": "2fc1e2a7e409f09c7df3eb8a3477407f5663adbcfbb5eb585d0f5f22e722ada5",
+    "battle_type": "31",
+    "lineup_version_id": "v6",
+    "ranking_set_id": "18",
+    "patch_package": "jcc-s18-s18_3",
+    "patch_version": "18.18.3",
+    "upstream_season_id": "S19"
+  }
+}

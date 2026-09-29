@@ -1,0 +1,35 @@
+{
+  "address": "jcc:s17:formula:board_trait_count",
+  "source": "generated_heuristic",
+  "inputs": [
+    "board_units",
+    "emblems",
+    "special_trait_rules"
+  ],
+  "outputs": [
+    "trait_counts"
+  ],
+  "formulas": {
+    "trait_counts": "sum unique active trait providers + emblem providers + special rule modifiers"
+  },
+  "dependencies": [
+    "jcc:s17:index:trait_unit_matrix"
+  ],
+  "use_cases": [
+    "trait activation",
+    "comp skeleton fill"
+  ],
+  "exactness": "exact_except_stateful_special_traits",
+  "name": "board_trait_count",
+  "category": "composition",
+  "domains": [
+    "composition",
+    "trait"
+  ],
+  "route_domains": [
+    "trait_or_unit_swap",
+    "roll_or_level",
+    "augment_choice"
+  ],
+  "dependency_kind": "derived_formula"
+}

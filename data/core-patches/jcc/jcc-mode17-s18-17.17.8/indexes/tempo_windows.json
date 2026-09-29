@@ -1,0 +1,178 @@
+{
+  "address": "jcc:s17:index:tempo_windows",
+  "entries": [
+    {
+      "id": "stage_2_foundation",
+      "address": "jcc:s17:tempo_window:stage_2_foundation",
+      "stage_min": 2,
+      "stage_max": 2,
+      "intent": "streak_setup_or_economy_foundation",
+      "default_stance": "preserve_pairs_components_and_direction",
+      "pressure_signals": [
+        "weak_board",
+        "bad_items",
+        "early_pairs"
+      ],
+      "recommended_actions": [
+        "play strongest board if streaking",
+        "hold pairs if economy allows",
+        "avoid deep rolldown"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:stage",
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:streak",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:components"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:economy",
+        "jcc:s17:formula:streak_value",
+        "jcc:s17:formula:item_marginal_value"
+      ]
+    },
+    {
+      "id": "stage_3_direction_lock",
+      "address": "jcc:s17:tempo_window:stage_3_direction_lock",
+      "stage_min": 3,
+      "stage_max": 3,
+      "intent": "stabilize_and_lock_direction",
+      "default_stance": "convert components and pairs into midgame board",
+      "pressure_signals": [
+        "hp_below_70",
+        "loss_streak_without_compensation",
+        "direction_unclear"
+      ],
+      "recommended_actions": [
+        "decide carry item family",
+        "roll only for cheap stabilizers unless pressured",
+        "prepare level timing"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:stage",
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:level",
+        "jcc:s17:live_state_field:xp",
+        "jcc:s17:live_state_field:streak",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:components"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:hp_lethal_tolerance",
+        "jcc:s17:formula:level_timing",
+        "jcc:s17:formula:roll_down_budget",
+        "jcc:s17:formula:item_marginal_value"
+      ]
+    },
+    {
+      "id": "stage_4_power_spike",
+      "address": "jcc:s17:tempo_window:stage_4_power_spike",
+      "stage_min": 4,
+      "stage_max": 4,
+      "intent": "major_power_spike_roll_or_level",
+      "default_stance": "stabilize before lethal pressure compounds",
+      "pressure_signals": [
+        "hp_below_55",
+        "frontline_melting",
+        "carry_not_casting",
+        "contested_core"
+      ],
+      "recommended_actions": [
+        "choose level-or-roll line",
+        "complete functional items",
+        "use user-confirmed scouting notes if available"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:stage",
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:level",
+        "jcc:s17:live_state_field:xp",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:level_timing",
+        "jcc:s17:formula:roll_probability",
+        "jcc:s17:formula:roll_down_budget",
+        "jcc:s17:formula:hp_lethal_tolerance",
+        "jcc:s17:formula:scouting_priority_score"
+      ]
+    },
+    {
+      "id": "stage_5_survival_cap",
+      "address": "jcc:s17:tempo_window:stage_5_survival_cap",
+      "stage_min": 5,
+      "stage_max": 5,
+      "intent": "cap_board_or_survive",
+      "default_stance": "spend resources unless clearly capped and healthy",
+      "pressure_signals": [
+        "hp_below_35",
+        "missing_frontline",
+        "missing_functional_item",
+        "lobby_pace_pressure"
+      ],
+      "recommended_actions": [
+        "roll to stabilize or push cap if healthy",
+        "fix positioning every fight",
+        "prioritize anti-heal/shred/sunder if missing"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:stage",
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:level",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:time_left"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:hp_lethal_tolerance",
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:positioning_risk",
+        "jcc:s17:formula:item_marginal_value"
+      ]
+    },
+    {
+      "id": "stage_6_final",
+      "address": "jcc:s17:tempo_window:stage_6_final",
+      "stage_min": 6,
+      "stage_max": 99,
+      "intent": "final_positioning_and_cap_units",
+      "default_stance": "optimize known threat patterns",
+      "pressure_signals": [
+        "one_loss_lethal",
+        "user_confirmed_threat",
+        "self_positioning_adjust_needed"
+      ],
+      "recommended_actions": [
+        "use user-confirmed scouting notes if available",
+        "move carry/tank/control with minimal steps",
+        "buy legendary upgrades only if actionable"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:stage",
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:time_left"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:positioning_risk",
+        "jcc:s17:formula:scouting_priority_score",
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:operation_time_budget"
+      ]
+    }
+  ]
+}

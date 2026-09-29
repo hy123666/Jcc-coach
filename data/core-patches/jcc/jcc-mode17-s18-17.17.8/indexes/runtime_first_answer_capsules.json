@@ -1,0 +1,2117 @@
+{
+  "address": "jcc:s17:index:runtime_first_answer_capsules",
+  "entry_count": 8,
+  "lookup_ref_root": "jcc:s17:lookup_ref:first_answer_capsule",
+  "max_capsule_bytes": 36000,
+  "policy": "First-answer capsules are tiny route-scoped doorplates for the first response under latency pressure; they point to contracts and next-load lookup entries without carrying full fast-context payloads.",
+  "related_indexes": [
+    "jcc:s17:index:runtime_lookup_manifest",
+    "jcc:s17:index:runtime_lookup_budgets",
+    "jcc:s17:index:runtime_fast_context",
+    "jcc:s17:index:runtime_answer_contracts",
+    "jcc:s17:index:runtime_state_confidence_contracts",
+    "jcc:s17:index:semantic_precision_calibration"
+  ],
+  "entries": [
+    {
+      "address": "jcc:s17:runtime_first_answer_capsule:augment_choice",
+      "route_id": "augment_choice",
+      "route_address": "jcc:s17:runtime_query_route:augment_choice",
+      "lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_augment_choice",
+      "manifest_address": "jcc:s17:runtime_lookup_manifest:augment_choice",
+      "fast_context_address": "jcc:s17:runtime_fast_context:augment_choice",
+      "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:augment_choice",
+      "answer_contract_address": "jcc:s17:runtime_answer_contract:augment_choice",
+      "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:augment_choice",
+      "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:augment_choice",
+      "intents": [
+        "选强化",
+        "强化怎么选",
+        "要不要刷新强化"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:augment_options",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:components",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:match_variables"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:augment_options",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:components"
+      ],
+      "required_lookup_refs": {
+        "lookup_ref_budget": "jcc:s17:lookup_ref:low_latency_lookup_budget_augment_choice",
+        "answer_contract": "jcc:s17:lookup_ref:answer_contract_augment_choice",
+        "state_confidence": "jcc:s17:lookup_ref:state_confidence_augment_choice",
+        "fast_context": "jcc:s17:lookup_ref:fast_context_augment_choice",
+        "semantic_precision_gate": "jcc:s17:lookup_ref:semantic_precision_gate_route_augment_choice"
+      },
+      "semantic_precision_route_kind_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_augment_choice_augment",
+          "row_count": 259
+        },
+        {
+          "entity_kind": "champion",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_augment_choice_champion",
+          "row_count": 42
+        },
+        {
+          "entity_kind": "item",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_augment_choice_item",
+          "row_count": 178
+        },
+        {
+          "entity_kind": "trait",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_augment_choice_trait",
+          "row_count": 28
+        }
+      ],
+      "semantic_precision_route_kind_band_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_augment_runtime_usable_with_guardrails",
+          "row_count": 45
+        },
+        {
+          "entity_kind": "champion",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_champion_runtime_usable_with_guardrails",
+          "row_count": 15
+        },
+        {
+          "entity_kind": "item",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_item_runtime_usable_with_guardrails",
+          "row_count": 123
+        },
+        {
+          "entity_kind": "trait",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_trait_runtime_usable_with_guardrails",
+          "row_count": 15
+        }
+      ],
+      "per_match_variable_lookup_refs": [
+        {
+          "variable_key": "judge_law",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:judge_law",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law"
+        },
+        {
+          "variable_key": "encounter",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:encounter",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter"
+        },
+        {
+          "variable_key": "current_god",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:current_god",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god"
+        }
+      ],
+      "first_answer_budget": {
+        "max_capsule_bytes": 36000,
+        "route_first_hop_cap_bytes": 700000,
+        "route_first_hop_estimated_bytes": null,
+        "policy": "Read this capsule first for route-scoped first answer; open full fast-context and semantic gate only when candidate details or confidence gates are needed."
+      },
+      "answer_shape": {
+        "output_contract": "ranked augment options with keep/reroll advice and 5-second fallback",
+        "sections": [
+          "decision",
+          "hard_data_evidence",
+          "live_state_context",
+          "match_variables",
+          "semantic_precision",
+          "formula_and_combat_uncertainty",
+          "fallback_and_event"
+        ],
+        "must_cite": [
+          "runtime_first_answer_capsule_address",
+          "runtime_answer_contract_address",
+          "confidence_after_live_state",
+          "semantic_precision_gate_address"
+        ]
+      },
+      "top_candidate_hints": [
+        {
+          "card_address": "jcc:s17:runtime_entity_card:30730",
+          "entity_address": "jcc:s17:augment:30730",
+          "entity_kind": "augment",
+          "display_label": "狂潮之心",
+          "fast_rank_hint": [
+            "board_shape_or_pivot",
+            "positioning_or_targeting",
+            "runtime_rule_modifier"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:20721",
+          "entity_address": "jcc:s17:augment:20721",
+          "entity_kind": "augment",
+          "display_label": "黄金赌约",
+          "fast_rank_hint": [
+            "economy_rule",
+            "reward_choice",
+            "runtime_rule_modifier"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:20722",
+          "entity_address": "jcc:s17:augment:20722",
+          "entity_kind": "augment",
+          "display_label": "黄金赌约+",
+          "fast_rank_hint": [
+            "economy_rule",
+            "reward_choice",
+            "runtime_rule_modifier"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:20723",
+          "entity_address": "jcc:s17:augment:20723",
+          "entity_kind": "augment",
+          "display_label": "黄金赌约++",
+          "fast_rank_hint": [
+            "economy_rule",
+            "reward_choice",
+            "runtime_rule_modifier"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:10236",
+          "entity_address": "jcc:s17:augment:10236",
+          "entity_kind": "augment",
+          "display_label": "假人化",
+          "fast_rank_hint": [
+            "positioning_or_targeting",
+            "runtime_rule_modifier",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:10707",
+          "entity_address": "jcc:s17:augment:10707",
+          "entity_kind": "augment",
+          "display_label": "远征",
+          "fast_rank_hint": [
+            "economy_rule",
+            "reward_choice",
+            "runtime_rule_modifier"
+          ]
+        }
+      ],
+      "kind_hints": [
+        {
+          "entity_kind": "encounter",
+          "top_count": 19,
+          "top_labels": [
+            "神器锻造器 / 17996",
+            "刷新开局 / 171003",
+            "《Silver Scrapes》战歌响起 / 17993"
+          ]
+        },
+        {
+          "entity_kind": "god_reward",
+          "top_count": 40,
+          "top_labels": [
+            "财富探险 / 奥瑞利安·索尔 / 2_1702010_stage_2",
+            "伊芙琳的恩赐 / 伊芙琳 / 10_1710070_stage_4",
+            "在一起更好 / 索拉卡 / 9_1709020_stage_2"
+          ]
+        },
+        {
+          "entity_kind": "augment",
+          "top_count": 40,
+          "top_labels": [
+            "狂潮之心",
+            "黄金赌约",
+            "黄金赌约+"
+          ]
+        },
+        {
+          "entity_kind": "trait",
+          "top_count": 34,
+          "top_labels": [
+            "暗星",
+            "观星者",
+            "太空律动"
+          ]
+        }
+      ],
+      "load_next_if_needed": [
+        "jcc:s17:lookup_ref:per_match_variable_judge_law",
+        "jcc:s17:lookup_ref:per_match_variable_encounter",
+        "jcc:s17:lookup_ref:per_match_variable_current_god",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_augment_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_champion_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_item_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_trait_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_augment_choice_augment",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_augment_choice_champion",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_augment_choice_item",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_augment_choice_trait",
+        "jcc:s17:lookup_ref:fast_context_augment_choice",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_augment_choice",
+        "jcc:s17:lookup_ref:route_evaluator_augment_choice"
+      ],
+      "forbidden_first_answer_paths": [
+        "jcc:s17:lookup_ref:semantic_precision_route_augment_choice",
+        "jcc:s17:lookup_ref:manual_calibration_route_augment_choice",
+        "jcc:s17:lookup_ref:route_term_augment_choice",
+        "jcc:s17:lookup_ref:route_playbook_augment_choice"
+      ],
+      "acceptance_contract": [
+        "capsule_lookup_loaded_before_full_fast_context_when_latency_sensitive",
+        "capsule_size_under_36kb",
+        "answer_contract_and_state_confidence_refs_present",
+        "semantic_precision_gate_pointer_present_but_full_precision_route_forbidden_first_answer",
+        "per_match_variable_doorplates_available_as_next_load",
+        "full_fast_context_remains_available_as_next_load"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_first_answer_capsule:holder_assignment",
+      "route_id": "holder_assignment",
+      "route_address": "jcc:s17:runtime_query_route:holder_assignment",
+      "lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_holder_assignment",
+      "manifest_address": "jcc:s17:runtime_lookup_manifest:holder_assignment",
+      "fast_context_address": "jcc:s17:runtime_fast_context:holder_assignment",
+      "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:holder_assignment",
+      "answer_contract_address": "jcc:s17:runtime_answer_contract:holder_assignment",
+      "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:holder_assignment",
+      "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:holder_assignment",
+      "intents": [
+        "装备给谁",
+        "这件装备谁带",
+        "临时给谁打工"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:round"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units"
+      ],
+      "required_lookup_refs": {
+        "lookup_ref_budget": "jcc:s17:lookup_ref:low_latency_lookup_budget_holder_assignment",
+        "answer_contract": "jcc:s17:lookup_ref:answer_contract_holder_assignment",
+        "state_confidence": "jcc:s17:lookup_ref:state_confidence_holder_assignment",
+        "fast_context": "jcc:s17:lookup_ref:fast_context_holder_assignment",
+        "semantic_precision_gate": "jcc:s17:lookup_ref:semantic_precision_gate_route_holder_assignment"
+      },
+      "semantic_precision_route_kind_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_holder_assignment_augment",
+          "row_count": 262
+        },
+        {
+          "entity_kind": "champion",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_holder_assignment_champion",
+          "row_count": 71
+        },
+        {
+          "entity_kind": "item",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_holder_assignment_item",
+          "row_count": 171
+        },
+        {
+          "entity_kind": "trait",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_holder_assignment_trait",
+          "row_count": 31
+        }
+      ],
+      "semantic_precision_route_kind_band_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_augment_runtime_usable_with_guardrails",
+          "row_count": 46
+        },
+        {
+          "entity_kind": "champion",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_champion_runtime_usable_with_guardrails",
+          "row_count": 29
+        },
+        {
+          "entity_kind": "item",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_item_runtime_usable_with_guardrails",
+          "row_count": 123
+        },
+        {
+          "entity_kind": "trait",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_trait_runtime_usable_with_guardrails",
+          "row_count": 16
+        }
+      ],
+      "per_match_variable_lookup_refs": [
+        {
+          "variable_key": "miss_fortune_mode",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode"
+        },
+        {
+          "variable_key": "psionic_weapon",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:psionic_weapon",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon"
+        }
+      ],
+      "first_answer_budget": {
+        "max_capsule_bytes": 36000,
+        "route_first_hop_cap_bytes": 700000,
+        "route_first_hop_estimated_bytes": null,
+        "policy": "Read this capsule first for route-scoped first answer; open full fast-context and semantic gate only when candidate details or confidence gates are needed."
+      },
+      "answer_shape": {
+        "output_contract": "ranked holders with temporary/final holder labels",
+        "sections": [
+          "decision",
+          "hard_data_evidence",
+          "live_state_context",
+          "match_variables",
+          "semantic_precision",
+          "formula_and_combat_uncertainty",
+          "fallback_and_event"
+        ],
+        "must_cite": [
+          "runtime_first_answer_capsule_address",
+          "runtime_answer_contract_address",
+          "confidence_after_live_state",
+          "semantic_precision_gate_address"
+        ]
+      },
+      "top_candidate_hints": [
+        {
+          "card_address": "jcc:s17:runtime_entity_card:9252",
+          "entity_address": "jcc:s17:item:9252",
+          "entity_kind": "item",
+          "display_label": "恶意软件矩阵",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:9253",
+          "entity_address": "jcc:s17:item:9253",
+          "entity_kind": "item",
+          "display_label": "生物质维护器",
+          "fast_rank_hint": [
+            "positioning_or_targeting",
+            "reward_choice",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:2069",
+          "entity_address": "jcc:s17:item:2069",
+          "entity_kind": "item",
+          "display_label": "光明版海妖之怒",
+          "fast_rank_hint": [
+            "damage_output",
+            "fight_time_scaling",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:2013",
+          "entity_address": "jcc:s17:item:2013",
+          "entity_kind": "item",
+          "display_label": "海妖之怒",
+          "fast_rank_hint": [
+            "damage_output",
+            "fight_time_scaling",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:9167",
+          "entity_address": "jcc:s17:item:9167",
+          "entity_kind": "item",
+          "display_label": "德玛西亚王冠",
+          "fast_rank_hint": [
+            "damage_output",
+            "survivability",
+            "conditional_gate"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:9342",
+          "entity_address": "jcc:s17:item:9342",
+          "entity_kind": "item",
+          "display_label": "附灵飞弹",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "conditional_gate"
+          ]
+        }
+      ],
+      "kind_hints": [
+        {
+          "entity_kind": "augment",
+          "top_count": 40,
+          "top_labels": [
+            "狂潮之心",
+            "黄金赌约",
+            "黄金赌约+"
+          ]
+        },
+        {
+          "entity_kind": "encounter",
+          "top_count": 12,
+          "top_labels": [
+            "神器锻造器 / 17996",
+            "刷新开局 / 171003",
+            "《Silver Scrapes》战歌响起 / 17993"
+          ]
+        },
+        {
+          "entity_kind": "god_reward",
+          "top_count": 40,
+          "top_labels": [
+            "财富探险 / 奥瑞利安·索尔 / 2_1702010_stage_2",
+            "伊芙琳的恩赐 / 伊芙琳 / 10_1710070_stage_4",
+            "在一起更好 / 索拉卡 / 9_1709020_stage_2"
+          ]
+        },
+        {
+          "entity_kind": "trait",
+          "top_count": 31,
+          "top_labels": [
+            "暗星",
+            "观星者",
+            "太空律动"
+          ]
+        }
+      ],
+      "load_next_if_needed": [
+        "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+        "jcc:s17:lookup_ref:per_match_variable_psionic_weapon",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_augment_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_champion_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_item_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_trait_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_holder_assignment_augment",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_holder_assignment_champion",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_holder_assignment_item",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_holder_assignment_trait",
+        "jcc:s17:lookup_ref:fast_context_holder_assignment",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_holder_assignment",
+        "jcc:s17:lookup_ref:route_evaluator_holder_assignment"
+      ],
+      "forbidden_first_answer_paths": [
+        "jcc:s17:lookup_ref:semantic_precision_route_holder_assignment",
+        "jcc:s17:lookup_ref:manual_calibration_route_holder_assignment",
+        "jcc:s17:lookup_ref:route_term_holder_assignment",
+        "jcc:s17:lookup_ref:route_playbook_holder_assignment"
+      ],
+      "acceptance_contract": [
+        "capsule_lookup_loaded_before_full_fast_context_when_latency_sensitive",
+        "capsule_size_under_36kb",
+        "answer_contract_and_state_confidence_refs_present",
+        "semantic_precision_gate_pointer_present_but_full_precision_route_forbidden_first_answer",
+        "per_match_variable_doorplates_available_as_next_load",
+        "full_fast_context_remains_available_as_next_load"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_first_answer_capsule:item_craft",
+      "route_id": "item_craft",
+      "route_address": "jcc:s17:runtime_query_route:item_craft",
+      "lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_item_craft",
+      "manifest_address": "jcc:s17:runtime_lookup_manifest:item_craft",
+      "fast_context_address": "jcc:s17:runtime_fast_context:item_craft",
+      "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:item_craft",
+      "answer_contract_address": "jcc:s17:runtime_answer_contract:item_craft",
+      "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:item_craft",
+      "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:item_craft",
+      "intents": [
+        "散件合什么",
+        "现在合装备吗",
+        "优先做哪件"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:components",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:item_holders",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:streak"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:components",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:item_holders",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes"
+      ],
+      "required_lookup_refs": {
+        "lookup_ref_budget": "jcc:s17:lookup_ref:low_latency_lookup_budget_item_craft",
+        "answer_contract": "jcc:s17:lookup_ref:answer_contract_item_craft",
+        "state_confidence": "jcc:s17:lookup_ref:state_confidence_item_craft",
+        "fast_context": "jcc:s17:lookup_ref:fast_context_item_craft",
+        "semantic_precision_gate": "jcc:s17:lookup_ref:semantic_precision_gate_route_item_craft"
+      },
+      "semantic_precision_route_kind_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_item_craft_augment",
+          "row_count": 264
+        },
+        {
+          "entity_kind": "champion",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_item_craft_champion",
+          "row_count": 71
+        },
+        {
+          "entity_kind": "item",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_item_craft_item",
+          "row_count": 178
+        },
+        {
+          "entity_kind": "trait",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_item_craft_trait",
+          "row_count": 34
+        }
+      ],
+      "semantic_precision_route_kind_band_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_augment_runtime_usable_with_guardrails",
+          "row_count": 47
+        },
+        {
+          "entity_kind": "champion",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_champion_runtime_usable_with_guardrails",
+          "row_count": 29
+        },
+        {
+          "entity_kind": "item",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_item_runtime_usable_with_guardrails",
+          "row_count": 123
+        },
+        {
+          "entity_kind": "trait",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_trait_runtime_usable_with_guardrails",
+          "row_count": 16
+        }
+      ],
+      "per_match_variable_lookup_refs": [
+        {
+          "variable_key": "psionic_weapon",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:psionic_weapon",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon"
+        }
+      ],
+      "first_answer_budget": {
+        "max_capsule_bytes": 36000,
+        "route_first_hop_cap_bytes": 700000,
+        "route_first_hop_estimated_bytes": null,
+        "policy": "Read this capsule first for route-scoped first answer; open full fast-context and semantic gate only when candidate details or confidence gates are needed."
+      },
+      "answer_shape": {
+        "output_contract": "ranked craft candidates with immediate tempo, future fit, and wait cost",
+        "sections": [
+          "decision",
+          "hard_data_evidence",
+          "live_state_context",
+          "match_variables",
+          "semantic_precision",
+          "formula_and_combat_uncertainty",
+          "fallback_and_event"
+        ],
+        "must_cite": [
+          "runtime_first_answer_capsule_address",
+          "runtime_answer_contract_address",
+          "confidence_after_live_state",
+          "semantic_precision_gate_address"
+        ]
+      },
+      "top_candidate_hints": [
+        {
+          "card_address": "jcc:s17:runtime_entity_card:9252",
+          "entity_address": "jcc:s17:item:9252",
+          "entity_kind": "item",
+          "display_label": "恶意软件矩阵",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:9253",
+          "entity_address": "jcc:s17:item:9253",
+          "entity_kind": "item",
+          "display_label": "生物质维护器",
+          "fast_rank_hint": [
+            "positioning_or_targeting",
+            "reward_choice",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:2069",
+          "entity_address": "jcc:s17:item:2069",
+          "entity_kind": "item",
+          "display_label": "光明版海妖之怒",
+          "fast_rank_hint": [
+            "damage_output",
+            "fight_time_scaling",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:2013",
+          "entity_address": "jcc:s17:item:2013",
+          "entity_kind": "item",
+          "display_label": "海妖之怒",
+          "fast_rank_hint": [
+            "damage_output",
+            "fight_time_scaling",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:9167",
+          "entity_address": "jcc:s17:item:9167",
+          "entity_kind": "item",
+          "display_label": "德玛西亚王冠",
+          "fast_rank_hint": [
+            "damage_output",
+            "survivability",
+            "conditional_gate"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:9342",
+          "entity_address": "jcc:s17:item:9342",
+          "entity_kind": "item",
+          "display_label": "附灵飞弹",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "conditional_gate"
+          ]
+        }
+      ],
+      "kind_hints": [
+        {
+          "entity_kind": "augment",
+          "top_count": 40,
+          "top_labels": [
+            "狂潮之心",
+            "黄金赌约",
+            "黄金赌约+"
+          ]
+        },
+        {
+          "entity_kind": "encounter",
+          "top_count": 9,
+          "top_labels": [
+            "神器锻造器 / 17996",
+            "刷新开局 / 171003",
+            "《Silver Scrapes》战歌响起 / 17993"
+          ]
+        },
+        {
+          "entity_kind": "god_reward",
+          "top_count": 40,
+          "top_labels": [
+            "财富探险 / 奥瑞利安·索尔 / 2_1702010_stage_2",
+            "伊芙琳的恩赐 / 伊芙琳 / 10_1710070_stage_4",
+            "在一起更好 / 索拉卡 / 9_1709020_stage_2"
+          ]
+        },
+        {
+          "entity_kind": "item",
+          "top_count": 40,
+          "top_labels": [
+            "恶意软件矩阵",
+            "生物质维护器",
+            "光明版海妖之怒"
+          ]
+        }
+      ],
+      "load_next_if_needed": [
+        "jcc:s17:lookup_ref:per_match_variable_psionic_weapon",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_augment_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_champion_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_item_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_trait_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_item_craft_augment",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_item_craft_champion",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_item_craft_item",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_item_craft_trait",
+        "jcc:s17:lookup_ref:fast_context_item_craft",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_item_craft",
+        "jcc:s17:lookup_ref:route_evaluator_item_craft"
+      ],
+      "forbidden_first_answer_paths": [
+        "jcc:s17:lookup_ref:semantic_precision_route_item_craft",
+        "jcc:s17:lookup_ref:manual_calibration_route_item_craft",
+        "jcc:s17:lookup_ref:route_term_item_craft",
+        "jcc:s17:lookup_ref:route_playbook_item_craft"
+      ],
+      "acceptance_contract": [
+        "capsule_lookup_loaded_before_full_fast_context_when_latency_sensitive",
+        "capsule_size_under_36kb",
+        "answer_contract_and_state_confidence_refs_present",
+        "semantic_precision_gate_pointer_present_but_full_precision_route_forbidden_first_answer",
+        "per_match_variable_doorplates_available_as_next_load",
+        "full_fast_context_remains_available_as_next_load"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_first_answer_capsule:positioning",
+      "route_id": "positioning",
+      "route_address": "jcc:s17:runtime_query_route:positioning",
+      "lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_positioning",
+      "manifest_address": "jcc:s17:runtime_lookup_manifest:positioning",
+      "fast_context_address": "jcc:s17:runtime_fast_context:positioning",
+      "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:positioning",
+      "answer_contract_address": "jcc:s17:runtime_answer_contract:positioning",
+      "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:positioning",
+      "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:positioning",
+      "intents": [
+        "怎么站位",
+        "对手站位怎么防",
+        "下一波怎么摆"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:time_left"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:completed_items"
+      ],
+      "required_lookup_refs": {
+        "lookup_ref_budget": "jcc:s17:lookup_ref:low_latency_lookup_budget_positioning",
+        "answer_contract": "jcc:s17:lookup_ref:answer_contract_positioning",
+        "state_confidence": "jcc:s17:lookup_ref:state_confidence_positioning",
+        "fast_context": "jcc:s17:lookup_ref:fast_context_positioning",
+        "semantic_precision_gate": "jcc:s17:lookup_ref:semantic_precision_gate_route_positioning"
+      },
+      "semantic_precision_route_kind_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_positioning_augment",
+          "row_count": 71
+        },
+        {
+          "entity_kind": "champion",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_positioning_champion",
+          "row_count": 70
+        },
+        {
+          "entity_kind": "item",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_positioning_item",
+          "row_count": 113
+        },
+        {
+          "entity_kind": "trait",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_positioning_trait",
+          "row_count": 20
+        }
+      ],
+      "semantic_precision_route_kind_band_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_augment_runtime_usable_with_guardrails",
+          "row_count": 18
+        },
+        {
+          "entity_kind": "champion",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_champion_runtime_usable_with_guardrails",
+          "row_count": 28
+        },
+        {
+          "entity_kind": "item",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_item_runtime_usable_with_guardrails",
+          "row_count": 91
+        },
+        {
+          "entity_kind": "trait",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_trait_runtime_usable_with_guardrails",
+          "row_count": 11
+        }
+      ],
+      "per_match_variable_lookup_refs": [
+        {
+          "variable_key": "miss_fortune_mode",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode"
+        },
+        {
+          "variable_key": "stargazer_constellation",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:stargazer_constellation",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation"
+        }
+      ],
+      "first_answer_budget": {
+        "max_capsule_bytes": 36000,
+        "route_first_hop_cap_bytes": 700000,
+        "route_first_hop_estimated_bytes": null,
+        "policy": "Read this capsule first for route-scoped first answer; open full fast-context and semantic gate only when candidate details or confidence gates are needed."
+      },
+      "answer_shape": {
+        "output_contract": "self-board move instructions plus risk reason",
+        "sections": [
+          "decision",
+          "hard_data_evidence",
+          "live_state_context",
+          "match_variables",
+          "semantic_precision",
+          "formula_and_combat_uncertainty",
+          "fallback_and_event"
+        ],
+        "must_cite": [
+          "runtime_first_answer_capsule_address",
+          "runtime_answer_contract_address",
+          "confidence_after_live_state",
+          "semantic_precision_gate_address"
+        ]
+      },
+      "top_candidate_hints": [
+        {
+          "card_address": "jcc:s17:runtime_entity_card:5420",
+          "entity_address": "jcc:s17:champion:5420",
+          "entity_kind": "champion",
+          "display_label": "巴德",
+          "fast_rank_hint": [
+            "board_shape_or_pivot",
+            "damage_output",
+            "positioning_or_targeting"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:5426",
+          "entity_address": "jcc:s17:champion:5426",
+          "entity_kind": "champion",
+          "display_label": "菲奥娜",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:4374",
+          "entity_address": "jcc:s17:champion:4374",
+          "entity_kind": "champion",
+          "display_label": "千珏",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "conditional_gate"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:5425",
+          "entity_address": "jcc:s17:champion:5425",
+          "entity_kind": "champion",
+          "display_label": "娑娜",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "conditional_gate"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:4372",
+          "entity_address": "jcc:s17:champion:4372",
+          "entity_kind": "champion",
+          "display_label": "库奇",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "reward_choice"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:5424",
+          "entity_address": "jcc:s17:champion:5424",
+          "entity_kind": "champion",
+          "display_label": "慎",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "survivability"
+          ]
+        }
+      ],
+      "kind_hints": [
+        {
+          "entity_kind": "augment",
+          "top_count": 40,
+          "top_labels": [
+            "狂潮之心",
+            "黄金赌约",
+            "黄金赌约+"
+          ]
+        },
+        {
+          "entity_kind": "encounter",
+          "top_count": 14,
+          "top_labels": [
+            "神器锻造器 / 17996",
+            "刷新开局 / 171003",
+            "《Silver Scrapes》战歌响起 / 17993"
+          ]
+        },
+        {
+          "entity_kind": "god_reward",
+          "top_count": 40,
+          "top_labels": [
+            "财富探险 / 奥瑞利安·索尔 / 2_1702010_stage_2",
+            "伊芙琳的恩赐 / 伊芙琳 / 10_1710070_stage_4",
+            "在一起更好 / 索拉卡 / 9_1709020_stage_2"
+          ]
+        },
+        {
+          "entity_kind": "champion",
+          "top_count": 40,
+          "top_labels": [
+            "巴德",
+            "菲奥娜",
+            "千珏"
+          ]
+        }
+      ],
+      "load_next_if_needed": [
+        "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+        "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_augment_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_champion_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_item_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_trait_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_positioning_augment",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_positioning_champion",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_positioning_item",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_positioning_trait",
+        "jcc:s17:lookup_ref:fast_context_positioning",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_positioning",
+        "jcc:s17:lookup_ref:route_evaluator_positioning"
+      ],
+      "forbidden_first_answer_paths": [
+        "jcc:s17:lookup_ref:semantic_precision_route_positioning",
+        "jcc:s17:lookup_ref:manual_calibration_route_positioning",
+        "jcc:s17:lookup_ref:route_term_positioning",
+        "jcc:s17:lookup_ref:route_playbook_positioning"
+      ],
+      "acceptance_contract": [
+        "capsule_lookup_loaded_before_full_fast_context_when_latency_sensitive",
+        "capsule_size_under_36kb",
+        "answer_contract_and_state_confidence_refs_present",
+        "semantic_precision_gate_pointer_present_but_full_precision_route_forbidden_first_answer",
+        "per_match_variable_doorplates_available_as_next_load",
+        "full_fast_context_remains_available_as_next_load"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_first_answer_capsule:postgame_review",
+      "route_id": "postgame_review",
+      "route_address": "jcc:s17:runtime_query_route:postgame_review",
+      "lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_postgame_review",
+      "manifest_address": "jcc:s17:runtime_lookup_manifest:postgame_review",
+      "fast_context_address": "jcc:s17:runtime_fast_context:postgame_review",
+      "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:postgame_review",
+      "answer_contract_address": "jcc:s17:runtime_answer_contract:postgame_review",
+      "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:postgame_review",
+      "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:postgame_review",
+      "intents": [
+        "复盘",
+        "这把哪里错了",
+        "下次怎么改"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:timeline_events",
+        "jcc:s17:live_state_field:decision_events",
+        "jcc:s17:live_state_field:postgame_result"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:completed_items"
+      ],
+      "required_lookup_refs": {
+        "lookup_ref_budget": "jcc:s17:lookup_ref:low_latency_lookup_budget_postgame_review",
+        "answer_contract": "jcc:s17:lookup_ref:answer_contract_postgame_review",
+        "state_confidence": "jcc:s17:lookup_ref:state_confidence_postgame_review",
+        "fast_context": "jcc:s17:lookup_ref:fast_context_postgame_review",
+        "semantic_precision_gate": "jcc:s17:lookup_ref:semantic_precision_gate_route_postgame_review"
+      },
+      "semantic_precision_route_kind_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_postgame_review_augment",
+          "row_count": 267
+        },
+        {
+          "entity_kind": "champion",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_postgame_review_champion",
+          "row_count": 71
+        },
+        {
+          "entity_kind": "item",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_postgame_review_item",
+          "row_count": 178
+        },
+        {
+          "entity_kind": "trait",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_postgame_review_trait",
+          "row_count": 34
+        }
+      ],
+      "semantic_precision_route_kind_band_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_augment_runtime_usable_with_guardrails",
+          "row_count": 47
+        },
+        {
+          "entity_kind": "champion",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_champion_runtime_usable_with_guardrails",
+          "row_count": 29
+        },
+        {
+          "entity_kind": "item",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_item_runtime_usable_with_guardrails",
+          "row_count": 123
+        },
+        {
+          "entity_kind": "trait",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_trait_runtime_usable_with_guardrails",
+          "row_count": 16
+        }
+      ],
+      "per_match_variable_lookup_refs": [
+        {
+          "variable_key": "judge_law",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:judge_law",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law"
+        },
+        {
+          "variable_key": "encounter",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:encounter",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter"
+        },
+        {
+          "variable_key": "current_god",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:current_god",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god"
+        },
+        {
+          "variable_key": "psionic_weapon",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:psionic_weapon",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon"
+        },
+        {
+          "variable_key": "stargazer_constellation",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:stargazer_constellation",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation"
+        }
+      ],
+      "first_answer_budget": {
+        "max_capsule_bytes": 36000,
+        "route_first_hop_cap_bytes": 700000,
+        "route_first_hop_estimated_bytes": null,
+        "policy": "Read this capsule first for route-scoped first answer; open full fast-context and semantic gate only when candidate details or confidence gates are needed."
+      },
+      "answer_shape": {
+        "output_contract": "top causes, repeated habit signals, next-session reminders",
+        "sections": [
+          "decision",
+          "hard_data_evidence",
+          "live_state_context",
+          "match_variables",
+          "semantic_precision",
+          "formula_and_combat_uncertainty",
+          "fallback_and_event"
+        ],
+        "must_cite": [
+          "runtime_first_answer_capsule_address",
+          "runtime_answer_contract_address",
+          "confidence_after_live_state",
+          "semantic_precision_gate_address"
+        ]
+      },
+      "top_candidate_hints": [
+        {
+          "card_address": "jcc:s17:runtime_entity_card:5420",
+          "entity_address": "jcc:s17:champion:5420",
+          "entity_kind": "champion",
+          "display_label": "巴德",
+          "fast_rank_hint": [
+            "board_shape_or_pivot",
+            "damage_output",
+            "positioning_or_targeting"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:5426",
+          "entity_address": "jcc:s17:champion:5426",
+          "entity_kind": "champion",
+          "display_label": "菲奥娜",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:4374",
+          "entity_address": "jcc:s17:champion:4374",
+          "entity_kind": "champion",
+          "display_label": "千珏",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "conditional_gate"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:5425",
+          "entity_address": "jcc:s17:champion:5425",
+          "entity_kind": "champion",
+          "display_label": "娑娜",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "conditional_gate"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:4372",
+          "entity_address": "jcc:s17:champion:4372",
+          "entity_kind": "champion",
+          "display_label": "库奇",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "reward_choice"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:5424",
+          "entity_address": "jcc:s17:champion:5424",
+          "entity_kind": "champion",
+          "display_label": "慎",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "survivability"
+          ]
+        }
+      ],
+      "kind_hints": [
+        {
+          "entity_kind": "champion",
+          "top_count": 40,
+          "top_labels": [
+            "巴德",
+            "菲奥娜",
+            "千珏"
+          ]
+        },
+        {
+          "entity_kind": "item",
+          "top_count": 40,
+          "top_labels": [
+            "恶意软件矩阵",
+            "生物质维护器",
+            "光明版海妖之怒"
+          ]
+        },
+        {
+          "entity_kind": "trait",
+          "top_count": 33,
+          "top_labels": [
+            "暗星",
+            "观星者",
+            "太空律动"
+          ]
+        },
+        {
+          "entity_kind": "augment",
+          "top_count": 40,
+          "top_labels": [
+            "狂潮之心",
+            "黄金赌约",
+            "黄金赌约+"
+          ]
+        }
+      ],
+      "load_next_if_needed": [
+        "jcc:s17:lookup_ref:per_match_variable_judge_law",
+        "jcc:s17:lookup_ref:per_match_variable_encounter",
+        "jcc:s17:lookup_ref:per_match_variable_current_god",
+        "jcc:s17:lookup_ref:per_match_variable_psionic_weapon",
+        "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_augment_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_champion_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_item_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_trait_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_postgame_review_augment",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_postgame_review_champion",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_postgame_review_item",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_postgame_review_trait",
+        "jcc:s17:lookup_ref:fast_context_postgame_review",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_postgame_review",
+        "jcc:s17:lookup_ref:route_evaluator_postgame_review"
+      ],
+      "forbidden_first_answer_paths": [
+        "jcc:s17:lookup_ref:semantic_precision_route_postgame_review",
+        "jcc:s17:lookup_ref:manual_calibration_route_postgame_review",
+        "jcc:s17:lookup_ref:route_term_postgame_review",
+        "jcc:s17:lookup_ref:route_playbook_postgame_review"
+      ],
+      "acceptance_contract": [
+        "capsule_lookup_loaded_before_full_fast_context_when_latency_sensitive",
+        "capsule_size_under_36kb",
+        "answer_contract_and_state_confidence_refs_present",
+        "semantic_precision_gate_pointer_present_but_full_precision_route_forbidden_first_answer",
+        "per_match_variable_doorplates_available_as_next_load",
+        "full_fast_context_remains_available_as_next_load"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_first_answer_capsule:reward_choice",
+      "route_id": "reward_choice",
+      "route_address": "jcc:s17:runtime_query_route:reward_choice",
+      "lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_reward_choice",
+      "manifest_address": "jcc:s17:runtime_lookup_manifest:reward_choice",
+      "fast_context_address": "jcc:s17:runtime_fast_context:reward_choice",
+      "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:reward_choice",
+      "answer_contract_address": "jcc:s17:runtime_answer_contract:reward_choice",
+      "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:reward_choice",
+      "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:reward_choice",
+      "intents": [
+        "星神奖励怎么选",
+        "奇遇奖励怎么选",
+        "锻造器选什么"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:reward_options",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:components",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:match_variables"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:reward_options",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:components",
+        "jcc:s17:live_state_field:hp"
+      ],
+      "required_lookup_refs": {
+        "lookup_ref_budget": "jcc:s17:lookup_ref:low_latency_lookup_budget_reward_choice",
+        "answer_contract": "jcc:s17:lookup_ref:answer_contract_reward_choice",
+        "state_confidence": "jcc:s17:lookup_ref:state_confidence_reward_choice",
+        "fast_context": "jcc:s17:lookup_ref:fast_context_reward_choice",
+        "semantic_precision_gate": "jcc:s17:lookup_ref:semantic_precision_gate_route_reward_choice"
+      },
+      "semantic_precision_route_kind_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_reward_choice_augment",
+          "row_count": 260
+        },
+        {
+          "entity_kind": "champion",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_reward_choice_champion",
+          "row_count": 42
+        },
+        {
+          "entity_kind": "item",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_reward_choice_item",
+          "row_count": 178
+        },
+        {
+          "entity_kind": "trait",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_reward_choice_trait",
+          "row_count": 28
+        }
+      ],
+      "semantic_precision_route_kind_band_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_augment_runtime_usable_with_guardrails",
+          "row_count": 45
+        },
+        {
+          "entity_kind": "champion",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_champion_runtime_usable_with_guardrails",
+          "row_count": 15
+        },
+        {
+          "entity_kind": "item",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_item_runtime_usable_with_guardrails",
+          "row_count": 123
+        },
+        {
+          "entity_kind": "trait",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_trait_runtime_usable_with_guardrails",
+          "row_count": 15
+        }
+      ],
+      "per_match_variable_lookup_refs": [
+        {
+          "variable_key": "judge_law",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:judge_law",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law"
+        },
+        {
+          "variable_key": "miss_fortune_mode",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode"
+        },
+        {
+          "variable_key": "encounter",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:encounter",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter"
+        },
+        {
+          "variable_key": "current_god",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:current_god",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god"
+        },
+        {
+          "variable_key": "psionic_weapon",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:psionic_weapon",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon"
+        },
+        {
+          "variable_key": "stargazer_constellation",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:stargazer_constellation",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation"
+        }
+      ],
+      "first_answer_budget": {
+        "max_capsule_bytes": 36000,
+        "route_first_hop_cap_bytes": 700000,
+        "route_first_hop_estimated_bytes": null,
+        "policy": "Read this capsule first for route-scoped first answer; open full fast-context and semantic gate only when candidate details or confidence gates are needed."
+      },
+      "answer_shape": {
+        "output_contract": "ranked reward options with tempo/cap/economy tags",
+        "sections": [
+          "decision",
+          "hard_data_evidence",
+          "live_state_context",
+          "match_variables",
+          "semantic_precision",
+          "formula_and_combat_uncertainty",
+          "fallback_and_event"
+        ],
+        "must_cite": [
+          "runtime_first_answer_capsule_address",
+          "runtime_answer_contract_address",
+          "confidence_after_live_state",
+          "semantic_precision_gate_address"
+        ]
+      },
+      "top_candidate_hints": [
+        {
+          "card_address": "jcc:s17:runtime_entity_card:2_1702010_stage_2",
+          "entity_address": "jcc:s17:god_reward:2_1702010_stage_2",
+          "entity_kind": "god_reward",
+          "display_label": "财富探险 / 奥瑞利安·索尔 / 2_1702010_stage_2",
+          "fast_rank_hint": [
+            "economy_rule",
+            "reward_choice",
+            "runtime_rule_modifier"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:10_1710070_stage_4",
+          "entity_address": "jcc:s17:god_reward:10_1710070_stage_4",
+          "entity_kind": "god_reward",
+          "display_label": "伊芙琳的恩赐 / 伊芙琳 / 10_1710070_stage_4",
+          "fast_rank_hint": [
+            "damage_output",
+            "runtime_rule_modifier",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:9_1709020_stage_2",
+          "entity_address": "jcc:s17:god_reward:9_1709020_stage_2",
+          "entity_kind": "god_reward",
+          "display_label": "在一起更好 / 索拉卡 / 9_1709020_stage_2",
+          "fast_rank_hint": [
+            "economy_rule",
+            "reward_choice",
+            "runtime_rule_modifier"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:9_1709021_stage_3",
+          "entity_address": "jcc:s17:god_reward:9_1709021_stage_3",
+          "entity_kind": "god_reward",
+          "display_label": "在一起更好+ / 索拉卡 / 9_1709021_stage_3",
+          "fast_rank_hint": [
+            "economy_rule",
+            "reward_choice",
+            "runtime_rule_modifier"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:9_1709022_stage_4",
+          "entity_address": "jcc:s17:god_reward:9_1709022_stage_4",
+          "entity_kind": "god_reward",
+          "display_label": "在一起更好+ / 索拉卡 / 9_1709022_stage_4",
+          "fast_rank_hint": [
+            "economy_rule",
+            "reward_choice",
+            "runtime_rule_modifier"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:3_1703060_stage_2",
+          "entity_address": "jcc:s17:god_reward:3_1703060_stage_2",
+          "entity_kind": "god_reward",
+          "display_label": "冰晶格 / 亚索 / 3_1703060_stage_2",
+          "fast_rank_hint": [
+            "reward_choice",
+            "runtime_rule_modifier",
+            "survivability"
+          ]
+        }
+      ],
+      "kind_hints": [
+        {
+          "entity_kind": "champion",
+          "top_count": 40,
+          "top_labels": [
+            "巴德",
+            "菲奥娜",
+            "千珏"
+          ]
+        },
+        {
+          "entity_kind": "trait",
+          "top_count": 34,
+          "top_labels": [
+            "暗星",
+            "观星者",
+            "太空律动"
+          ]
+        },
+        {
+          "entity_kind": "god_reward",
+          "top_count": 40,
+          "top_labels": [
+            "财富探险 / 奥瑞利安·索尔 / 2_1702010_stage_2",
+            "伊芙琳的恩赐 / 伊芙琳 / 10_1710070_stage_4",
+            "在一起更好 / 索拉卡 / 9_1709020_stage_2"
+          ]
+        },
+        {
+          "entity_kind": "encounter",
+          "top_count": 19,
+          "top_labels": [
+            "神器锻造器 / 17996",
+            "刷新开局 / 171003",
+            "《Silver Scrapes》战歌响起 / 17993"
+          ]
+        }
+      ],
+      "load_next_if_needed": [
+        "jcc:s17:lookup_ref:per_match_variable_judge_law",
+        "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+        "jcc:s17:lookup_ref:per_match_variable_encounter",
+        "jcc:s17:lookup_ref:per_match_variable_current_god",
+        "jcc:s17:lookup_ref:per_match_variable_psionic_weapon",
+        "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_augment_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_champion_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_item_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_trait_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_reward_choice_augment",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_reward_choice_champion",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_reward_choice_item",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_reward_choice_trait",
+        "jcc:s17:lookup_ref:fast_context_reward_choice",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_reward_choice",
+        "jcc:s17:lookup_ref:route_evaluator_reward_choice"
+      ],
+      "forbidden_first_answer_paths": [
+        "jcc:s17:lookup_ref:semantic_precision_route_reward_choice",
+        "jcc:s17:lookup_ref:manual_calibration_route_reward_choice",
+        "jcc:s17:lookup_ref:route_term_reward_choice",
+        "jcc:s17:lookup_ref:route_playbook_reward_choice"
+      ],
+      "acceptance_contract": [
+        "capsule_lookup_loaded_before_full_fast_context_when_latency_sensitive",
+        "capsule_size_under_36kb",
+        "answer_contract_and_state_confidence_refs_present",
+        "semantic_precision_gate_pointer_present_but_full_precision_route_forbidden_first_answer",
+        "per_match_variable_doorplates_available_as_next_load",
+        "full_fast_context_remains_available_as_next_load"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_first_answer_capsule:roll_or_level",
+      "route_id": "roll_or_level",
+      "route_address": "jcc:s17:runtime_query_route:roll_or_level",
+      "lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_roll_or_level",
+      "manifest_address": "jcc:s17:runtime_lookup_manifest:roll_or_level",
+      "fast_context_address": "jcc:s17:runtime_fast_context:roll_or_level",
+      "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:roll_or_level",
+      "answer_contract_address": "jcc:s17:runtime_answer_contract:roll_or_level",
+      "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:roll_or_level",
+      "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:roll_or_level",
+      "intents": [
+        "拉人口还是D",
+        "要不要D牌",
+        "几级D"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:level",
+        "jcc:s17:live_state_field:xp",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:streak",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:shop_units"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:level",
+        "jcc:s17:live_state_field:xp",
+        "jcc:s17:live_state_field:hp"
+      ],
+      "required_lookup_refs": {
+        "lookup_ref_budget": "jcc:s17:lookup_ref:low_latency_lookup_budget_roll_or_level",
+        "answer_contract": "jcc:s17:lookup_ref:answer_contract_roll_or_level",
+        "state_confidence": "jcc:s17:lookup_ref:state_confidence_roll_or_level",
+        "fast_context": "jcc:s17:lookup_ref:fast_context_roll_or_level",
+        "semantic_precision_gate": "jcc:s17:lookup_ref:semantic_precision_gate_route_roll_or_level"
+      },
+      "semantic_precision_route_kind_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_roll_or_level_augment",
+          "row_count": 264
+        },
+        {
+          "entity_kind": "champion",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_roll_or_level_champion",
+          "row_count": 39
+        },
+        {
+          "entity_kind": "item",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_roll_or_level_item",
+          "row_count": 136
+        },
+        {
+          "entity_kind": "trait",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_roll_or_level_trait",
+          "row_count": 29
+        }
+      ],
+      "semantic_precision_route_kind_band_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_augment_runtime_usable_with_guardrails",
+          "row_count": 45
+        },
+        {
+          "entity_kind": "champion",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_champion_runtime_usable_with_guardrails",
+          "row_count": 12
+        },
+        {
+          "entity_kind": "item",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_item_runtime_usable_with_guardrails",
+          "row_count": 88
+        },
+        {
+          "entity_kind": "trait",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_trait_runtime_usable_with_guardrails",
+          "row_count": 16
+        }
+      ],
+      "per_match_variable_lookup_refs": [
+        {
+          "variable_key": "encounter",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:encounter",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter"
+        },
+        {
+          "variable_key": "current_god",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:current_god",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god"
+        }
+      ],
+      "first_answer_budget": {
+        "max_capsule_bytes": 36000,
+        "route_first_hop_cap_bytes": 700000,
+        "route_first_hop_estimated_bytes": null,
+        "policy": "Read this capsule first for route-scoped first answer; open full fast-context and semantic gate only when candidate details or confidence gates are needed."
+      },
+      "answer_shape": {
+        "output_contract": "level/roll/economy recommendation with stop line",
+        "sections": [
+          "decision",
+          "hard_data_evidence",
+          "live_state_context",
+          "match_variables",
+          "semantic_precision",
+          "formula_and_combat_uncertainty",
+          "fallback_and_event"
+        ],
+        "must_cite": [
+          "runtime_first_answer_capsule_address",
+          "runtime_answer_contract_address",
+          "confidence_after_live_state",
+          "semantic_precision_gate_address"
+        ]
+      },
+      "top_candidate_hints": [
+        {
+          "card_address": "jcc:s17:runtime_entity_card:5420",
+          "entity_address": "jcc:s17:champion:5420",
+          "entity_kind": "champion",
+          "display_label": "巴德",
+          "fast_rank_hint": [
+            "board_shape_or_pivot",
+            "damage_output",
+            "positioning_or_targeting"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:4374",
+          "entity_address": "jcc:s17:champion:4374",
+          "entity_kind": "champion",
+          "display_label": "千珏",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "conditional_gate"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:5424",
+          "entity_address": "jcc:s17:champion:5424",
+          "entity_kind": "champion",
+          "display_label": "慎",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:5422",
+          "entity_address": "jcc:s17:champion:5422",
+          "entity_kind": "champion",
+          "display_label": "薇古丝",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "prioritize_damage_holder"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:4381",
+          "entity_address": "jcc:s17:champion:4381",
+          "entity_kind": "champion",
+          "display_label": "霞",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "prioritize_damage_holder"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:5421",
+          "entity_address": "jcc:s17:champion:5421",
+          "entity_kind": "champion",
+          "display_label": "布里茨",
+          "fast_rank_hint": [
+            "board_shape_or_pivot",
+            "damage_output",
+            "positioning_or_targeting"
+          ]
+        }
+      ],
+      "kind_hints": [
+        {
+          "entity_kind": "item",
+          "top_count": 40,
+          "top_labels": [
+            "恶意软件矩阵",
+            "生物质维护器",
+            "光明版海妖之怒"
+          ]
+        },
+        {
+          "entity_kind": "champion",
+          "top_count": 39,
+          "top_labels": [
+            "巴德",
+            "千珏",
+            "慎"
+          ]
+        },
+        {
+          "entity_kind": "augment",
+          "top_count": 40,
+          "top_labels": [
+            "狂潮之心",
+            "黄金赌约",
+            "黄金赌约+"
+          ]
+        },
+        {
+          "entity_kind": "god_reward",
+          "top_count": 40,
+          "top_labels": [
+            "财富探险 / 奥瑞利安·索尔 / 2_1702010_stage_2",
+            "伊芙琳的恩赐 / 伊芙琳 / 10_1710070_stage_4",
+            "在一起更好 / 索拉卡 / 9_1709020_stage_2"
+          ]
+        }
+      ],
+      "load_next_if_needed": [
+        "jcc:s17:lookup_ref:per_match_variable_encounter",
+        "jcc:s17:lookup_ref:per_match_variable_current_god",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_augment_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_champion_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_item_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_trait_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_roll_or_level_augment",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_roll_or_level_champion",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_roll_or_level_item",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_roll_or_level_trait",
+        "jcc:s17:lookup_ref:fast_context_roll_or_level",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_roll_or_level",
+        "jcc:s17:lookup_ref:route_evaluator_roll_or_level"
+      ],
+      "forbidden_first_answer_paths": [
+        "jcc:s17:lookup_ref:semantic_precision_route_roll_or_level",
+        "jcc:s17:lookup_ref:manual_calibration_route_roll_or_level",
+        "jcc:s17:lookup_ref:route_term_roll_or_level",
+        "jcc:s17:lookup_ref:route_playbook_roll_or_level"
+      ],
+      "acceptance_contract": [
+        "capsule_lookup_loaded_before_full_fast_context_when_latency_sensitive",
+        "capsule_size_under_36kb",
+        "answer_contract_and_state_confidence_refs_present",
+        "semantic_precision_gate_pointer_present_but_full_precision_route_forbidden_first_answer",
+        "per_match_variable_doorplates_available_as_next_load",
+        "full_fast_context_remains_available_as_next_load"
+      ]
+    },
+    {
+      "address": "jcc:s17:runtime_first_answer_capsule:trait_or_unit_swap",
+      "route_id": "trait_or_unit_swap",
+      "route_address": "jcc:s17:runtime_query_route:trait_or_unit_swap",
+      "lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_trait_or_unit_swap",
+      "manifest_address": "jcc:s17:runtime_lookup_manifest:trait_or_unit_swap",
+      "fast_context_address": "jcc:s17:runtime_fast_context:trait_or_unit_swap",
+      "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:trait_or_unit_swap",
+      "answer_contract_address": "jcc:s17:runtime_answer_contract:trait_or_unit_swap",
+      "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:trait_or_unit_swap",
+      "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:trait_or_unit_swap",
+      "intents": [
+        "上谁",
+        "开羁绊还是上质量",
+        "这个转职值不值"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:active_traits",
+        "jcc:s17:live_state_field:level"
+      ],
+      "minimum_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:active_traits"
+      ],
+      "required_lookup_refs": {
+        "lookup_ref_budget": "jcc:s17:lookup_ref:low_latency_lookup_budget_trait_or_unit_swap",
+        "answer_contract": "jcc:s17:lookup_ref:answer_contract_trait_or_unit_swap",
+        "state_confidence": "jcc:s17:lookup_ref:state_confidence_trait_or_unit_swap",
+        "fast_context": "jcc:s17:lookup_ref:fast_context_trait_or_unit_swap",
+        "semantic_precision_gate": "jcc:s17:lookup_ref:semantic_precision_gate_route_trait_or_unit_swap"
+      },
+      "semantic_precision_route_kind_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_trait_or_unit_swap_augment",
+          "row_count": 260
+        },
+        {
+          "entity_kind": "champion",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_trait_or_unit_swap_champion",
+          "row_count": 70
+        },
+        {
+          "entity_kind": "item",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_trait_or_unit_swap_item",
+          "row_count": 168
+        },
+        {
+          "entity_kind": "trait",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_trait_or_unit_swap_trait",
+          "row_count": 31
+        }
+      ],
+      "semantic_precision_route_kind_band_gate_lookup_refs": [
+        {
+          "entity_kind": "augment",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_augment_runtime_usable_with_guardrails",
+          "row_count": 46
+        },
+        {
+          "entity_kind": "champion",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_champion_runtime_usable_with_guardrails",
+          "row_count": 28
+        },
+        {
+          "entity_kind": "item",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_item_runtime_usable_with_guardrails",
+          "row_count": 123
+        },
+        {
+          "entity_kind": "trait",
+          "precision_band": "runtime_usable_with_guardrails",
+          "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_trait_runtime_usable_with_guardrails",
+          "row_count": 16
+        }
+      ],
+      "per_match_variable_lookup_refs": [
+        {
+          "variable_key": "judge_law",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:judge_law",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law"
+        },
+        {
+          "variable_key": "miss_fortune_mode",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode"
+        },
+        {
+          "variable_key": "stargazer_constellation",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:stargazer_constellation",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation"
+        }
+      ],
+      "first_answer_budget": {
+        "max_capsule_bytes": 36000,
+        "route_first_hop_cap_bytes": 700000,
+        "route_first_hop_estimated_bytes": null,
+        "policy": "Read this capsule first for route-scoped first answer; open full fast-context and semantic gate only when candidate details or confidence gates are needed."
+      },
+      "answer_shape": {
+        "output_contract": "candidate swap list with trait delta and unit quality delta",
+        "sections": [
+          "decision",
+          "hard_data_evidence",
+          "live_state_context",
+          "match_variables",
+          "semantic_precision",
+          "formula_and_combat_uncertainty",
+          "fallback_and_event"
+        ],
+        "must_cite": [
+          "runtime_first_answer_capsule_address",
+          "runtime_answer_contract_address",
+          "confidence_after_live_state",
+          "semantic_precision_gate_address"
+        ]
+      },
+      "top_candidate_hints": [
+        {
+          "card_address": "jcc:s17:runtime_entity_card:403",
+          "entity_address": "jcc:s17:trait:403",
+          "entity_kind": "trait",
+          "display_label": "暗星",
+          "fast_rank_hint": [
+            "board_shape_or_pivot",
+            "damage_output",
+            "positioning_or_targeting"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:409",
+          "entity_address": "jcc:s17:trait:409",
+          "entity_kind": "trait",
+          "display_label": "观星者",
+          "fast_rank_hint": [
+            "damage_output",
+            "economy_rule",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:408",
+          "entity_address": "jcc:s17:trait:408",
+          "entity_kind": "trait",
+          "display_label": "太空律动",
+          "fast_rank_hint": [
+            "damage_output",
+            "positioning_or_targeting",
+            "survivability"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:404",
+          "entity_address": "jcc:s17:trait:404",
+          "entity_kind": "trait",
+          "display_label": "霸天机甲",
+          "fast_rank_hint": [
+            "damage_output",
+            "survivability",
+            "prioritize_damage_holder"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:315",
+          "entity_address": "jcc:s17:trait:315",
+          "entity_kind": "trait",
+          "display_label": "狂战士",
+          "fast_rank_hint": [
+            "damage_output",
+            "survivability",
+            "prioritize_damage_holder"
+          ]
+        },
+        {
+          "card_address": "jcc:s17:runtime_entity_card:321",
+          "entity_address": "jcc:s17:trait:321",
+          "entity_kind": "trait",
+          "display_label": "旅人",
+          "fast_rank_hint": [
+            "damage_output",
+            "survivability",
+            "prioritize_damage_holder"
+          ]
+        }
+      ],
+      "kind_hints": [
+        {
+          "entity_kind": "augment",
+          "top_count": 40,
+          "top_labels": [
+            "狂潮之心",
+            "黄金赌约",
+            "黄金赌约+"
+          ]
+        },
+        {
+          "entity_kind": "encounter",
+          "top_count": 12,
+          "top_labels": [
+            "神器锻造器 / 17996",
+            "刷新开局 / 171003",
+            "《Silver Scrapes》战歌响起 / 17993"
+          ]
+        },
+        {
+          "entity_kind": "god_reward",
+          "top_count": 40,
+          "top_labels": [
+            "财富探险 / 奥瑞利安·索尔 / 2_1702010_stage_2",
+            "伊芙琳的恩赐 / 伊芙琳 / 10_1710070_stage_4",
+            "在一起更好 / 索拉卡 / 9_1709020_stage_2"
+          ]
+        },
+        {
+          "entity_kind": "trait",
+          "top_count": 34,
+          "top_labels": [
+            "暗星",
+            "观星者",
+            "太空律动"
+          ]
+        }
+      ],
+      "load_next_if_needed": [
+        "jcc:s17:lookup_ref:per_match_variable_judge_law",
+        "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+        "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_augment_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_champion_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_item_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_trait_runtime_usable_with_guardrails",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_trait_or_unit_swap_augment",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_trait_or_unit_swap_champion",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_trait_or_unit_swap_item",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_trait_or_unit_swap_trait",
+        "jcc:s17:lookup_ref:fast_context_trait_or_unit_swap",
+        "jcc:s17:lookup_ref:semantic_precision_gate_route_trait_or_unit_swap",
+        "jcc:s17:lookup_ref:route_evaluator_trait_or_unit_swap"
+      ],
+      "forbidden_first_answer_paths": [
+        "jcc:s17:lookup_ref:semantic_precision_route_trait_or_unit_swap",
+        "jcc:s17:lookup_ref:manual_calibration_route_trait_or_unit_swap",
+        "jcc:s17:lookup_ref:route_term_trait_or_unit_swap",
+        "jcc:s17:lookup_ref:route_playbook_trait_or_unit_swap"
+      ],
+      "acceptance_contract": [
+        "capsule_lookup_loaded_before_full_fast_context_when_latency_sensitive",
+        "capsule_size_under_36kb",
+        "answer_contract_and_state_confidence_refs_present",
+        "semantic_precision_gate_pointer_present_but_full_precision_route_forbidden_first_answer",
+        "per_match_variable_doorplates_available_as_next_load",
+        "full_fast_context_remains_available_as_next_load"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1573 @@
+[
+  {
+    "address": "jcc:s17:formula_runtime_contract:damage",
+    "formula_address": "jcc:s17:formula:damage",
+    "formula_name": "damage",
+    "dependencies": [],
+    "inputs": [
+      "damage_type",
+      "base_damage",
+      "bonus_damage_pct",
+      "flat_pen",
+      "pct_pen",
+      "crit_chance",
+      "crit_multiplier",
+      "armor",
+      "magic_resist",
+      "durability_pct",
+      "shield",
+      "health"
+    ],
+    "outputs": [
+      "raw_damage",
+      "effective_resist",
+      "mitigation_multiplier",
+      "non_crit_damage",
+      "crit_damage",
+      "expected_damage",
+      "hits_to_kill"
+    ],
+    "use_cases": [
+      "damage comparison",
+      "tank item value",
+      "enemy threat estimate"
+    ],
+    "runtime_questions": [
+      "How much effective damage is this unit or enemy threat dealing?"
+    ],
+    "entity_ref_count": 282,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:ehp",
+    "formula_address": "jcc:s17:formula:ehp",
+    "formula_name": "ehp",
+    "dependencies": [],
+    "inputs": [
+      "hp",
+      "armor",
+      "magic_resist",
+      "durability_pct",
+      "damage_mix"
+    ],
+    "outputs": [
+      "physical_ehp",
+      "magic_ehp",
+      "mixed_ehp",
+      "marginal_hp_value",
+      "marginal_armor_value",
+      "marginal_mr_value"
+    ],
+    "use_cases": [
+      "defensive item comparison",
+      "frontline survival math",
+      "mixed damage durability"
+    ],
+    "runtime_questions": [
+      "Which defensive stat gives the next best survival gain?"
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:economy",
+    "formula_address": "jcc:s17:formula:economy",
+    "formula_name": "economy",
+    "dependencies": [],
+    "inputs": [
+      "round",
+      "gold",
+      "streak",
+      "pvp_result",
+      "planned_spend",
+      "planned_xp_buy"
+    ],
+    "outputs": [
+      "base_income",
+      "interest",
+      "streak_bonus",
+      "combat_gold",
+      "next_gold",
+      "interest_break"
+    ],
+    "use_cases": [
+      "interest planning",
+      "level/roll spend planning",
+      "resource projection"
+    ],
+    "runtime_questions": [
+      "Can I spend now without breaking the next economy threshold?"
+    ],
+    "entity_ref_count": 172,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:shop_odds",
+    "formula_address": "jcc:s17:formula:shop_odds",
+    "formula_name": "shop_odds",
+    "dependencies": [],
+    "inputs": [
+      "level",
+      "cost",
+      "shop_slots",
+      "rerolls",
+      "remaining_copies",
+      "pool_total_for_cost"
+    ],
+    "outputs": [
+      "per_slot_cost_odds",
+      "per_shop_cost_hit_odds",
+      "estimated_specific_unit_hit_odds"
+    ],
+    "use_cases": [
+      "cost-band odds",
+      "target unit search",
+      "level timing support"
+    ],
+    "runtime_questions": [
+      "At this level, what cost band and target units are realistic to roll for?"
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:roll_probability",
+    "formula_address": "jcc:s17:formula:roll_probability",
+    "formula_name": "roll_probability",
+    "dependencies": [],
+    "inputs": [
+      "level",
+      "target_cost",
+      "target_remaining_copies",
+      "pool_total_for_cost",
+      "gold_to_roll",
+      "shop_slots"
+    ],
+    "outputs": [
+      "shops_seen",
+      "slot_trials",
+      "hit_probability_1_plus",
+      "expected_copies"
+    ],
+    "use_cases": [
+      "roll-down hit odds",
+      "chase copy planning",
+      "contest adjusted search"
+    ],
+    "runtime_questions": [
+      "If I roll this much gold, how likely am I to hit the target copy?"
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:trait_delta",
+    "formula_address": "jcc:s17:formula:trait_delta",
+    "formula_name": "trait_delta",
+    "dependencies": [],
+    "inputs": [
+      "current_trait_counts",
+      "candidate_unit_traits",
+      "emblems",
+      "trait_breakpoints"
+    ],
+    "outputs": [
+      "new_breakpoints",
+      "next_breakpoint_distance",
+      "trait_value_delta_tags"
+    ],
+    "use_cases": [
+      "breakpoint activation",
+      "emblem value",
+      "candidate unit trait value"
+    ],
+    "runtime_questions": [
+      "Does adding this unit or emblem activate a meaningful breakpoint?"
+    ],
+    "entity_ref_count": 16,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:item_marginal_value",
+    "formula_address": "jcc:s17:formula:item_marginal_value",
+    "formula_name": "item_marginal_value",
+    "dependencies": [],
+    "inputs": [
+      "unit_profile",
+      "current_items",
+      "candidate_item",
+      "enemy_damage_mix",
+      "team_gaps",
+      "round_intent"
+    ],
+    "outputs": [
+      "immediate_power_score",
+      "future_fit_score",
+      "defensive_ehp_delta",
+      "offensive_tag_match",
+      "conflict_penalty",
+      "recommendation_score"
+    ],
+    "use_cases": [
+      "craft choice",
+      "holder fit",
+      "immediate versus cap item value"
+    ],
+    "runtime_questions": [
+      "Which craftable item gives the best immediate plus future value?"
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:resource_exchange",
+    "formula_address": "jcc:s17:formula:resource_exchange",
+    "formula_name": "resource_exchange",
+    "dependencies": [],
+    "inputs": [
+      "gold",
+      "hp",
+      "xp",
+      "rerolls",
+      "items",
+      "duplicators",
+      "round",
+      "risk_level"
+    ],
+    "outputs": [
+      "estimated_gold_equivalent",
+      "risk_adjusted_value",
+      "tempo_value"
+    ],
+    "use_cases": [
+      "gold equivalent comparison",
+      "reward valuation",
+      "risk adjusted resource trade"
+    ],
+    "runtime_questions": [
+      "Evaluate gold equivalent comparison.",
+      "Evaluate reward valuation.",
+      "Evaluate risk adjusted resource trade."
+    ],
+    "entity_ref_count": 577,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:resist_mitigation",
+    "formula_address": "jcc:s17:formula:resist_mitigation",
+    "formula_name": "resist_mitigation",
+    "dependencies": [
+      "jcc:s17:formula:damage"
+    ],
+    "inputs": [
+      "incoming_damage",
+      "resist"
+    ],
+    "outputs": [
+      "mitigation_multiplier",
+      "post_resist_damage"
+    ],
+    "use_cases": [
+      "armor/magic resist value",
+      "tank item comparison"
+    ],
+    "runtime_questions": [
+      "Evaluate armor/magic resist value.",
+      "Evaluate tank item comparison."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:penetration_effective_resist",
+    "formula_address": "jcc:s17:formula:penetration_effective_resist",
+    "formula_name": "penetration_effective_resist",
+    "dependencies": [
+      "jcc:s17:formula:resist_mitigation"
+    ],
+    "inputs": [
+      "base_resist",
+      "shred_pct",
+      "sunder_pct",
+      "flat_pen",
+      "pct_pen"
+    ],
+    "outputs": [
+      "effective_resist"
+    ],
+    "use_cases": [
+      "last whisper vs no armor shred",
+      "ionic spark / shred value"
+    ],
+    "runtime_questions": [
+      "Evaluate last whisper vs no armor shred.",
+      "Evaluate ionic spark / shred value."
+    ],
+    "entity_ref_count": 45,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:crit_expected_damage",
+    "formula_address": "jcc:s17:formula:crit_expected_damage",
+    "formula_name": "crit_expected_damage",
+    "dependencies": [
+      "jcc:s17:formula:damage"
+    ],
+    "inputs": [
+      "base_damage",
+      "crit_chance",
+      "crit_multiplier",
+      "can_skill_crit"
+    ],
+    "outputs": [
+      "expected_crit_multiplier",
+      "expected_damage"
+    ],
+    "use_cases": [
+      "Infinity Edge / Jeweled Gauntlet style comparisons"
+    ],
+    "runtime_questions": [
+      "Evaluate Infinity Edge / Jeweled Gauntlet style comparisons."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:damage_amp_stack",
+    "formula_address": "jcc:s17:formula:damage_amp_stack",
+    "formula_name": "damage_amp_stack",
+    "dependencies": [
+      "jcc:s17:formula:damage"
+    ],
+    "inputs": [
+      "base_damage",
+      "amp_sources",
+      "stacking_policy"
+    ],
+    "outputs": [
+      "amped_damage"
+    ],
+    "use_cases": [
+      "Giant Slayer style value",
+      "trait/item amp stacking"
+    ],
+    "runtime_questions": [
+      "Evaluate Giant Slayer style value.",
+      "Evaluate trait/item amp stacking."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:shield_effective_hp",
+    "formula_address": "jcc:s17:formula:shield_effective_hp",
+    "formula_name": "shield_effective_hp",
+    "dependencies": [
+      "jcc:s17:formula:ehp"
+    ],
+    "inputs": [
+      "shield",
+      "armor",
+      "magic_resist",
+      "damage_mix",
+      "duration"
+    ],
+    "outputs": [
+      "physical_shield_ehp",
+      "magic_shield_ehp",
+      "mixed_shield_ehp"
+    ],
+    "use_cases": [
+      "shield item/skill value",
+      "burst survival"
+    ],
+    "runtime_questions": [
+      "Evaluate shield item/skill value.",
+      "Evaluate burst survival."
+    ],
+    "entity_ref_count": 43,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:healing_effective_hp",
+    "formula_address": "jcc:s17:formula:healing_effective_hp",
+    "formula_name": "healing_effective_hp",
+    "dependencies": [
+      "jcc:s17:formula:ehp"
+    ],
+    "inputs": [
+      "healing",
+      "wound_pct",
+      "missing_hp_cap",
+      "resists"
+    ],
+    "outputs": [
+      "effective_healing",
+      "healing_ehp"
+    ],
+    "use_cases": [
+      "anti-heal need",
+      "lifesteal/sustain value"
+    ],
+    "runtime_questions": [
+      "Evaluate anti-heal need.",
+      "Evaluate lifesteal/sustain value."
+    ],
+    "entity_ref_count": 105,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:dps_auto_attack",
+    "formula_address": "jcc:s17:formula:dps_auto_attack",
+    "formula_name": "dps_auto_attack",
+    "dependencies": [
+      "jcc:s17:formula:attack_speed_scaling",
+      "jcc:s17:formula:crit_expected_damage"
+    ],
+    "inputs": [
+      "ad",
+      "attack_speed",
+      "crit_chance",
+      "crit_multiplier",
+      "damage_amp"
+    ],
+    "outputs": [
+      "expected_auto_dps"
+    ],
+    "use_cases": [
+      "AD carry item fit",
+      "frontline sustained damage"
+    ],
+    "runtime_questions": [
+      "Evaluate AD carry item fit.",
+      "Evaluate frontline sustained damage."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:attack_speed_scaling",
+    "formula_address": "jcc:s17:formula:attack_speed_scaling",
+    "formula_name": "attack_speed_scaling",
+    "dependencies": [],
+    "inputs": [
+      "base_attack_speed",
+      "bonus_attack_speed_pct",
+      "attack_speed_cap"
+    ],
+    "outputs": [
+      "final_attack_speed"
+    ],
+    "use_cases": [
+      "Guinsoo/rageblade style ramp",
+      "AS buff value"
+    ],
+    "runtime_questions": [
+      "Evaluate Guinsoo/rageblade style ramp.",
+      "Evaluate AS buff value."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:mana_cycle",
+    "formula_address": "jcc:s17:formula:mana_cycle",
+    "formula_name": "mana_cycle",
+    "dependencies": [
+      "jcc:s17:formula:cast_frequency"
+    ],
+    "inputs": [
+      "initial_mana",
+      "max_mana",
+      "mana_per_attack",
+      "mana_per_second",
+      "damage_taken_mana"
+    ],
+    "outputs": [
+      "mana_needed_after_start",
+      "estimated_time_to_first_cast"
+    ],
+    "use_cases": [
+      "blue buff/shojin/startup item value"
+    ],
+    "runtime_questions": [
+      "Evaluate blue buff/shojin/startup item value."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:cast_frequency",
+    "formula_address": "jcc:s17:formula:cast_frequency",
+    "formula_name": "cast_frequency",
+    "dependencies": [
+      "jcc:s17:formula:mana_cycle",
+      "jcc:s17:formula:attack_speed_scaling"
+    ],
+    "inputs": [
+      "max_mana",
+      "mana_gain_rate",
+      "cast_time",
+      "fight_duration"
+    ],
+    "outputs": [
+      "estimated_casts"
+    ],
+    "use_cases": [
+      "caster item comparison",
+      "skill uptime estimate"
+    ],
+    "runtime_questions": [
+      "Evaluate caster item comparison.",
+      "Evaluate skill uptime estimate."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:skill_value_scaling",
+    "formula_address": "jcc:s17:formula:skill_value_scaling",
+    "formula_name": "skill_value_scaling",
+    "dependencies": [
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:healing_effective_hp",
+      "jcc:s17:formula:shield_effective_hp",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:star_upgrade_delta"
+    ],
+    "inputs": [
+      "skill_value_blocks",
+      "star",
+      "unit_stats",
+      "ap",
+      "ad",
+      "armor",
+      "magic_resist",
+      "hp",
+      "effect_context"
+    ],
+    "outputs": [
+      "resolved_value_by_star",
+      "value_by_kind",
+      "damage_value",
+      "healing_value",
+      "shield_value",
+      "stat_value_delta",
+      "mitigation_value",
+      "count_value",
+      "duration_value",
+      "effect_value",
+      "fast_path_formula_refs",
+      "primary_formula_refs",
+      "scaling_formula_refs"
+    ],
+    "use_cases": [
+      "champion skill star scaling",
+      "2-star vs 1-star spell delta",
+      "skill-based item fit"
+    ],
+    "runtime_questions": [
+      "Evaluate champion skill star scaling.",
+      "Evaluate 2-star vs 1-star spell delta.",
+      "Evaluate skill-based item fit."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:effect_block_value",
+    "formula_address": "jcc:s17:formula:effect_block_value",
+    "formula_name": "effect_block_value",
+    "dependencies": [
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:resource_exchange",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:item_stat_delta"
+    ],
+    "inputs": [
+      "effect_block",
+      "owner_kind",
+      "live_context",
+      "round_intent",
+      "holder_profile"
+    ],
+    "outputs": [
+      "block_value_score",
+      "block_formula_refs",
+      "stat_delta",
+      "resource_delta",
+      "choice_value",
+      "trait_delta_value"
+    ],
+    "use_cases": [
+      "trait breakpoint effect valuation",
+      "item text effect valuation",
+      "augment/reward block valuation"
+    ],
+    "runtime_questions": [
+      "Evaluate trait breakpoint effect valuation.",
+      "Evaluate item text effect valuation.",
+      "Evaluate augment/reward block valuation."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:double_cast_effectiveness",
+    "formula_address": "jcc:s17:formula:double_cast_effectiveness",
+    "formula_name": "double_cast_effectiveness",
+    "dependencies": [
+      "jcc:s17:formula:cast_frequency",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_amp_stack"
+    ],
+    "inputs": [
+      "base_cast_value",
+      "repeat_efficiency_pct",
+      "estimated_casts",
+      "damage_or_utility_type",
+      "overkill_or_shield_waste"
+    ],
+    "outputs": [
+      "extra_cast_value",
+      "effective_total_cast_value",
+      "repeat_cast_tempo_value"
+    ],
+    "use_cases": [
+      "double-cast traits",
+      "recast augments",
+      "caster item valuation when effects repeat at reduced efficiency"
+    ],
+    "runtime_questions": [
+      "How much extra value does a repeated or reduced-efficiency cast add?"
+    ],
+    "entity_ref_count": 4,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:summon_scaling",
+    "formula_address": "jcc:s17:formula:summon_scaling",
+    "formula_name": "summon_scaling",
+    "dependencies": [
+      "jcc:s17:formula:unit_quality_score",
+      "jcc:s17:formula:star_upgrade_delta",
+      "jcc:s17:formula:trait_breakpoint_distance"
+    ],
+    "inputs": [
+      "summon_base_profile",
+      "trait_breakpoint",
+      "summoner_star_sum",
+      "stage",
+      "item_or_trait_buffs"
+    ],
+    "outputs": [
+      "summon_quality_score",
+      "summon_frontline_value",
+      "summon_damage_value",
+      "scaling_delta"
+    ],
+    "use_cases": [
+      "summoned units from traits/augments",
+      "star-sum scaling mechanics",
+      "whether a summon trait is tempo or cap oriented"
+    ],
+    "runtime_questions": [
+      "How much board value does this summon or star-sum scaling mechanic add?"
+    ],
+    "entity_ref_count": 22,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:damage_mix",
+    "formula_address": "jcc:s17:formula:damage_mix",
+    "formula_name": "damage_mix",
+    "dependencies": [
+      "jcc:s17:index:champion_damage_profile"
+    ],
+    "inputs": [
+      "champion_tags",
+      "item_tags",
+      "trait_tags"
+    ],
+    "outputs": [
+      "physical_share",
+      "magic_share",
+      "true_share",
+      "primary_damage_type"
+    ],
+    "use_cases": [
+      "enemy lobby damage mix",
+      "defensive item choice"
+    ],
+    "runtime_questions": [
+      "Evaluate enemy lobby damage mix.",
+      "Evaluate defensive item choice."
+    ],
+    "entity_ref_count": 282,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:defensive_marginal_value",
+    "formula_address": "jcc:s17:formula:defensive_marginal_value",
+    "formula_name": "defensive_marginal_value",
+    "dependencies": [
+      "jcc:s17:formula:ehp",
+      "jcc:s17:formula:shield_effective_hp",
+      "jcc:s17:formula:healing_effective_hp"
+    ],
+    "inputs": [
+      "current_hp",
+      "current_armor",
+      "current_mr",
+      "candidate_stats",
+      "damage_mix"
+    ],
+    "outputs": [
+      "delta_physical_ehp",
+      "delta_magic_ehp",
+      "delta_mixed_ehp",
+      "best_defensive_stat"
+    ],
+    "use_cases": [
+      "warmog vs dragon claw vs gargoyle",
+      "frontline item choice"
+    ],
+    "runtime_questions": [
+      "Evaluate warmog vs dragon claw vs gargoyle.",
+      "Evaluate frontline item choice."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:interest_break",
+    "formula_address": "jcc:s17:formula:interest_break",
+    "formula_name": "interest_break",
+    "dependencies": [
+      "jcc:s17:formula:economy"
+    ],
+    "inputs": [
+      "gold_before_action",
+      "gold_after_action"
+    ],
+    "outputs": [
+      "interest_before",
+      "interest_after",
+      "interest_lost"
+    ],
+    "use_cases": [
+      "buy/sell/level decision",
+      "3-second operation warnings"
+    ],
+    "runtime_questions": [
+      "Evaluate buy/sell/level decision.",
+      "Evaluate 3-second operation warnings."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:streak_value",
+    "formula_address": "jcc:s17:formula:streak_value",
+    "formula_name": "streak_value",
+    "dependencies": [
+      "jcc:s17:formula:economy"
+    ],
+    "inputs": [
+      "current_streak",
+      "round_result",
+      "streak_bonus_table"
+    ],
+    "outputs": [
+      "current_bonus",
+      "next_bonus",
+      "break_cost"
+    ],
+    "use_cases": [
+      "hold winstreak",
+      "loss-streak economy"
+    ],
+    "runtime_questions": [
+      "Evaluate hold winstreak.",
+      "Evaluate loss-streak economy."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:level_timing",
+    "formula_address": "jcc:s17:formula:level_timing",
+    "formula_name": "level_timing",
+    "dependencies": [
+      "jcc:s17:formula:economy"
+    ],
+    "inputs": [
+      "level",
+      "xp",
+      "gold",
+      "target_level",
+      "xp_curve"
+    ],
+    "outputs": [
+      "xp_needed",
+      "gold_needed",
+      "can_level_now",
+      "gold_after_level"
+    ],
+    "use_cases": [
+      "拉人口",
+      "future level planning"
+    ],
+    "runtime_questions": [
+      "Evaluate 拉人口.",
+      "Evaluate future level planning."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:hp_lethal_tolerance",
+    "formula_address": "jcc:s17:formula:hp_lethal_tolerance",
+    "formula_name": "hp_lethal_tolerance",
+    "dependencies": [
+      "jcc:s17:formula:economy"
+    ],
+    "inputs": [
+      "hp",
+      "stage",
+      "alive_enemy_units",
+      "pvp_loss_stage_damage",
+      "expected_loss_damage",
+      "fight_loss_streak"
+    ],
+    "outputs": [
+      "expected_loss_damage",
+      "max_alive_enemy_units_to_survive",
+      "lethal_alive_enemy_units",
+      "losses_to_elimination",
+      "must_stabilize"
+    ],
+    "use_cases": [
+      "greed vs roll",
+      "risk level"
+    ],
+    "runtime_questions": [
+      "Evaluate greed vs roll.",
+      "Evaluate risk level."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:shop_specific_unit_odds",
+    "formula_address": "jcc:s17:formula:shop_specific_unit_odds",
+    "formula_name": "shop_specific_unit_odds",
+    "dependencies": [
+      "jcc:s17:formula:shop_odds"
+    ],
+    "inputs": [
+      "level",
+      "target_cost",
+      "remaining_target_copies",
+      "pool_total_for_cost"
+    ],
+    "outputs": [
+      "specific_unit_slot_odds"
+    ],
+    "use_cases": [
+      "target unit odds",
+      "chase copies"
+    ],
+    "runtime_questions": [
+      "Evaluate target unit odds.",
+      "Evaluate chase copies."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:contest_adjusted_pool",
+    "formula_address": "jcc:s17:formula:contest_adjusted_pool",
+    "formula_name": "contest_adjusted_pool",
+    "dependencies": [
+      "jcc:s17:index:pool_contest",
+      "jcc:s17:formula:shop_specific_unit_odds"
+    ],
+    "inputs": [
+      "base_pool_copies",
+      "owned_by_player",
+      "owned_by_opponents",
+      "dead_or_unavailable"
+    ],
+    "outputs": [
+      "remaining_copies",
+      "contest_severity"
+    ],
+    "use_cases": [
+      "同行判断",
+      "whether to chase 3-star"
+    ],
+    "runtime_questions": [
+      "Evaluate 同行判断.",
+      "Evaluate whether to chase 3-star."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:roll_down_budget",
+    "formula_address": "jcc:s17:formula:roll_down_budget",
+    "formula_name": "roll_down_budget",
+    "dependencies": [
+      "jcc:s17:formula:roll_probability",
+      "jcc:s17:formula:interest_break"
+    ],
+    "inputs": [
+      "gold",
+      "stop_gold",
+      "free_rerolls",
+      "reroll_cost"
+    ],
+    "outputs": [
+      "shops_seen",
+      "slot_trials",
+      "gold_left"
+    ],
+    "use_cases": [
+      "D 到多少",
+      "roll-down scope"
+    ],
+    "runtime_questions": [
+      "Evaluate D 到多少.",
+      "Evaluate roll-down scope."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:trait_breakpoint_distance",
+    "formula_address": "jcc:s17:formula:trait_breakpoint_distance",
+    "formula_name": "trait_breakpoint_distance",
+    "dependencies": [
+      "jcc:s17:formula:trait_delta"
+    ],
+    "inputs": [
+      "current_trait_count",
+      "breakpoints"
+    ],
+    "outputs": [
+      "next_count_needed",
+      "active_breakpoint"
+    ],
+    "use_cases": [
+      "one more unit/emblem value",
+      "trait gap"
+    ],
+    "runtime_questions": [
+      "Evaluate one more unit/emblem value.",
+      "Evaluate trait gap."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:board_trait_count",
+    "formula_address": "jcc:s17:formula:board_trait_count",
+    "formula_name": "board_trait_count",
+    "dependencies": [
+      "jcc:s17:index:trait_unit_matrix"
+    ],
+    "inputs": [
+      "board_units",
+      "emblems",
+      "special_trait_rules"
+    ],
+    "outputs": [
+      "trait_counts"
+    ],
+    "use_cases": [
+      "trait activation",
+      "comp skeleton fill"
+    ],
+    "runtime_questions": [
+      "Evaluate trait activation.",
+      "Evaluate comp skeleton fill."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:unit_quality_score",
+    "formula_address": "jcc:s17:formula:unit_quality_score",
+    "formula_name": "unit_quality_score",
+    "dependencies": [
+      "jcc:s17:index:champion_role_profile",
+      "jcc:s17:formula:star_upgrade_delta"
+    ],
+    "inputs": [
+      "cost",
+      "star",
+      "role",
+      "stat_vector",
+      "item_fit",
+      "trait_fit"
+    ],
+    "outputs": [
+      "quality_score"
+    ],
+    "use_cases": [
+      "two-star low cost vs one-star high cost",
+      "board upgrade"
+    ],
+    "runtime_questions": [
+      "Evaluate two-star low cost vs one-star high cost.",
+      "Evaluate board upgrade."
+    ],
+    "entity_ref_count": 207,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:star_upgrade_delta",
+    "formula_address": "jcc:s17:formula:star_upgrade_delta",
+    "formula_name": "star_upgrade_delta",
+    "dependencies": [
+      "jcc:s17:index:champion_damage_profile",
+      "jcc:s17:formula:ehp"
+    ],
+    "inputs": [
+      "stats_before",
+      "stats_after",
+      "skill_values_before",
+      "skill_values_after"
+    ],
+    "outputs": [
+      "delta_hp",
+      "delta_ad",
+      "delta_ehp",
+      "delta_skill_values"
+    ],
+    "use_cases": [
+      "pair value",
+      "chase upgrades"
+    ],
+    "runtime_questions": [
+      "Evaluate pair value.",
+      "Evaluate chase upgrades."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:stat_modifier_value",
+    "formula_address": "jcc:s17:formula:stat_modifier_value",
+    "formula_name": "stat_modifier_value",
+    "dependencies": [
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:ehp",
+      "jcc:s17:formula:mana_cycle",
+      "jcc:s17:formula:attack_speed_scaling",
+      "jcc:s17:formula:damage_amp_stack"
+    ],
+    "inputs": [
+      "unit_profile",
+      "stat_modifiers",
+      "damage_mix",
+      "fight_duration",
+      "existing_modifiers"
+    ],
+    "outputs": [
+      "offensive_delta",
+      "defensive_delta",
+      "mana_delta",
+      "effective_stat_value",
+      "overlap_penalty"
+    ],
+    "use_cases": [
+      "trait stat breakpoints",
+      "augment stat buffs",
+      "component/stat item valuation",
+      "whether a generic buff is tempo/cap/frontline/carry oriented"
+    ],
+    "runtime_questions": [
+      "How valuable is this stat buff for the current holder and role?"
+    ],
+    "entity_ref_count": 684,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:item_stat_delta",
+    "formula_address": "jcc:s17:formula:item_stat_delta",
+    "formula_name": "item_stat_delta",
+    "dependencies": [
+      "jcc:s17:formula:item_marginal_value"
+    ],
+    "inputs": [
+      "current_stats",
+      "item_stats"
+    ],
+    "outputs": [
+      "new_stats",
+      "stat_delta_tags"
+    ],
+    "use_cases": [
+      "装备带上后数值变化",
+      "stat doorplate"
+    ],
+    "runtime_questions": [
+      "Evaluate 装备带上后数值变化.",
+      "Evaluate stat doorplate."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:item_conflict_penalty",
+    "formula_address": "jcc:s17:formula:item_conflict_penalty",
+    "formula_name": "item_conflict_penalty",
+    "dependencies": [
+      "jcc:s17:index:item_conflicts",
+      "jcc:s17:formula:item_marginal_value"
+    ],
+    "inputs": [
+      "current_items",
+      "candidate_item",
+      "unique_flags",
+      "role_slots"
+    ],
+    "outputs": [
+      "conflict_penalty",
+      "conflict_reasons"
+    ],
+    "use_cases": [
+      "avoid duplicated wound/startup/slot pressure"
+    ],
+    "runtime_questions": [
+      "Evaluate avoid duplicated wound/startup/slot pressure."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:component_completion",
+    "formula_address": "jcc:s17:formula:component_completion",
+    "formula_name": "component_completion",
+    "dependencies": [
+      "jcc:s17:index:component_to_item_candidates"
+    ],
+    "inputs": [
+      "owned_components",
+      "candidate_recipes"
+    ],
+    "outputs": [
+      "craftable_items",
+      "missing_components",
+      "completion_distance"
+    ],
+    "use_cases": [
+      "散件优先合什么",
+      "wait cost"
+    ],
+    "runtime_questions": [
+      "Evaluate 散件优先合什么.",
+      "Evaluate wait cost."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:comp_gap_score",
+    "formula_address": "jcc:s17:formula:comp_gap_score",
+    "formula_name": "comp_gap_score",
+    "dependencies": [
+      "jcc:s17:index:comp_gaps",
+      "jcc:s17:index:functional_item_needs"
+    ],
+    "inputs": [
+      "board_tags",
+      "item_tags",
+      "enemy_tags"
+    ],
+    "outputs": [
+      "missing_gap_scores"
+    ],
+    "use_cases": [
+      "缺前排/控制/重伤/破甲",
+      "reward selection"
+    ],
+    "runtime_questions": [
+      "Evaluate 缺前排/控制/重伤/破甲.",
+      "Evaluate reward selection."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:pivot_cost",
+    "formula_address": "jcc:s17:formula:pivot_cost",
+    "formula_name": "pivot_cost",
+    "dependencies": [
+      "jcc:s17:index:transition_paths"
+    ],
+    "inputs": [
+      "current_board",
+      "target_skeleton",
+      "shared_units",
+      "lost_upgrades",
+      "item_mismatch"
+    ],
+    "outputs": [
+      "gold_cost",
+      "trait_loss",
+      "upgrade_loss",
+      "pivot_risk"
+    ],
+    "use_cases": [
+      "转阵值不值",
+      "alternative carry chains"
+    ],
+    "runtime_questions": [
+      "Evaluate 转阵值不值.",
+      "Evaluate alternative carry chains."
+    ],
+    "entity_ref_count": 15,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:reward_choice_score",
+    "formula_address": "jcc:s17:formula:reward_choice_score",
+    "formula_name": "reward_choice_score",
+    "dependencies": [
+      "jcc:s17:index:reward_choice_tags",
+      "jcc:s17:index:round_intent"
+    ],
+    "inputs": [
+      "reward_tags",
+      "current_gaps",
+      "round_intent",
+      "risk_level"
+    ],
+    "outputs": [
+      "immediate_score",
+      "cap_score",
+      "economy_score",
+      "final_score"
+    ],
+    "use_cases": [
+      "强化/星神/奇遇/锻造器选择"
+    ],
+    "runtime_questions": [
+      "Which augment, god reward, encounter reward, or armory option fits this state?"
+    ],
+    "entity_ref_count": 653,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:augment_direction_score",
+    "formula_address": "jcc:s17:formula:augment_direction_score",
+    "formula_name": "augment_direction_score",
+    "dependencies": [
+      "jcc:s17:index:augment_compatibility",
+      "jcc:s17:formula:reward_choice_score"
+    ],
+    "inputs": [
+      "augment_tags",
+      "board_direction",
+      "items",
+      "economy_state"
+    ],
+    "outputs": [
+      "direction_alignment",
+      "risk_adjusted_score"
+    ],
+    "use_cases": [
+      "海克斯选择",
+      "是否刷新"
+    ],
+    "runtime_questions": [
+      "Evaluate 海克斯选择.",
+      "Evaluate 是否刷新."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:god_reward_path_bias",
+    "formula_address": "jcc:s17:formula:god_reward_path_bias",
+    "formula_name": "god_reward_path_bias",
+    "dependencies": [
+      "jcc:s17:index:god_reward_paths",
+      "jcc:s17:formula:reward_choice_score"
+    ],
+    "inputs": [
+      "current_god",
+      "reward_history",
+      "stage",
+      "path_tags"
+    ],
+    "outputs": [
+      "path_bias",
+      "next_reward_expectation"
+    ],
+    "use_cases": [
+      "星神路线",
+      "current god asks"
+    ],
+    "runtime_questions": [
+      "Evaluate 星神路线.",
+      "Evaluate current god asks."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:encounter_rule_shift",
+    "formula_address": "jcc:s17:formula:encounter_rule_shift",
+    "formula_name": "encounter_rule_shift",
+    "dependencies": [
+      "jcc:s17:index:encounter_shift",
+      "jcc:s17:index:system_rule_overrides"
+    ],
+    "inputs": [
+      "encounter",
+      "baseline_rules"
+    ],
+    "outputs": [
+      "modified_rules",
+      "affected_formulas"
+    ],
+    "use_cases": [
+      "奇遇改局",
+      "special tempo"
+    ],
+    "runtime_questions": [
+      "Evaluate 奇遇改局.",
+      "Evaluate special tempo."
+    ],
+    "entity_ref_count": 71,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:positioning_risk",
+    "formula_address": "jcc:s17:formula:positioning_risk",
+    "formula_name": "positioning_risk",
+    "dependencies": [
+      "jcc:s17:index:targeting_threat_templates",
+      "jcc:s17:index:positioning_templates"
+    ],
+    "inputs": [
+      "enemy_target_logic",
+      "enemy_aoe_tags",
+      "my_carry_position",
+      "my_tank_position"
+    ],
+    "outputs": [
+      "aoe_risk",
+      "line_risk",
+      "backline_risk",
+      "recommended_template"
+    ],
+    "use_cases": [
+      "站位建议",
+      "scouting response"
+    ],
+    "runtime_questions": [
+      "Which enemy targeting pattern threatens my current board placement?"
+    ],
+    "entity_ref_count": 113,
+    "execution_phase": "live_decision",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:scouting_priority_score",
+    "formula_address": "jcc:s17:formula:scouting_priority_score",
+    "formula_name": "scouting_priority_score",
+    "dependencies": [
+      "jcc:s17:index:scouting_priority",
+      "jcc:s17:index:pool_contest",
+      "jcc:s17:index:targeting_threat_templates"
+    ],
+    "inputs": [
+      "likely_next_opponents",
+      "contestants",
+      "lobby_leader",
+      "time_left"
+    ],
+    "outputs": [
+      "scout_order"
+    ],
+    "use_cases": [
+      "时间不够先看谁",
+      "手动侦察模式"
+    ],
+    "runtime_questions": [
+      "Evaluate 时间不够先看谁.",
+      "Evaluate 手动侦察模式."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:action_feasibility",
+    "formula_address": "jcc:s17:formula:action_feasibility",
+    "formula_name": "action_feasibility",
+    "dependencies": [
+      "jcc:s17:index:action_constraints",
+      "jcc:s17:index:operation_steps"
+    ],
+    "inputs": [
+      "gold",
+      "bench_slots",
+      "item_slots",
+      "time_left",
+      "recognized_state"
+    ],
+    "outputs": [
+      "is_actionable",
+      "blocking_constraints"
+    ],
+    "use_cases": [
+      "avoid impossible advice",
+      "3-second step output"
+    ],
+    "runtime_questions": [
+      "Evaluate avoid impossible advice.",
+      "Evaluate 3-second step output."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:operation_time_budget",
+    "formula_address": "jcc:s17:formula:operation_time_budget",
+    "formula_name": "operation_time_budget",
+    "dependencies": [
+      "jcc:s17:index:operation_steps"
+    ],
+    "inputs": [
+      "user_speed_profile",
+      "time_left",
+      "action_count"
+    ],
+    "outputs": [
+      "max_recommendation_complexity",
+      "brief_or_explain_mode"
+    ],
+    "use_cases": [
+      "5秒结论/15秒解释",
+      "教练模式"
+    ],
+    "runtime_questions": [
+      "Evaluate 5秒结论/15秒解释.",
+      "Evaluate 教练模式."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:review_attribution_score",
+    "formula_address": "jcc:s17:formula:review_attribution_score",
+    "formula_name": "review_attribution_score",
+    "dependencies": [
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:loss_reasons"
+    ],
+    "inputs": [
+      "timeline_events",
+      "decision_events",
+      "postgame_result"
+    ],
+    "outputs": [
+      "attribution_scores",
+      "top_loss_reasons"
+    ],
+    "use_cases": [
+      "赛后复盘",
+      "错误模式识别"
+    ],
+    "runtime_questions": [
+      "Evaluate 赛后复盘.",
+      "Evaluate 错误模式识别."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  },
+  {
+    "address": "jcc:s17:formula_runtime_contract:player_habit_bias",
+    "formula_address": "jcc:s17:formula:player_habit_bias",
+    "formula_name": "player_habit_bias",
+    "dependencies": [
+      "jcc:s17:index:player_habit_bias_schema",
+      "jcc:s17:formula:review_attribution_score"
+    ],
+    "inputs": [
+      "recent_matches",
+      "decision_events",
+      "user_feedback"
+    ],
+    "outputs": [
+      "habit_biases",
+      "coaching_reminders"
+    ],
+    "use_cases": [
+      "玩家习惯分析",
+      "下次同类局面提醒"
+    ],
+    "runtime_questions": [
+      "Evaluate 玩家习惯分析.",
+      "Evaluate 下次同类局面提醒."
+    ],
+    "entity_ref_count": 0,
+    "execution_phase": "review_or_support",
+    "contract": "Runtime should provide only live-state inputs; patch truth and formula metadata come from this hard-data package."
+  }
+]

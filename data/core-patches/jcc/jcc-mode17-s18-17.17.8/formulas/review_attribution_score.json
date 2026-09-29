@@ -1,0 +1,34 @@
+{
+  "address": "jcc:s17:formula:review_attribution_score",
+  "source": "generated_heuristic",
+  "inputs": [
+    "timeline_events",
+    "decision_events",
+    "postgame_result"
+  ],
+  "outputs": [
+    "attribution_scores",
+    "top_loss_reasons"
+  ],
+  "formulas": {
+    "attribution_score": "weighted evidence from decision events and outcome deltas"
+  },
+  "dependencies": [
+    "jcc:s17:index:review_attribution",
+    "jcc:s17:index:loss_reasons"
+  ],
+  "use_cases": [
+    "赛后复盘",
+    "错误模式识别"
+  ],
+  "exactness": "heuristic_review",
+  "name": "review_attribution_score",
+  "category": "review",
+  "domains": [
+    "review"
+  ],
+  "route_domains": [
+    "postgame_review"
+  ],
+  "dependency_kind": "derived_formula"
+}

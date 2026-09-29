@@ -1,0 +1,36 @@
+{
+  "address": "jcc:s17:formula:interest_break",
+  "source": "generated_heuristic",
+  "inputs": [
+    "gold_before_action",
+    "gold_after_action"
+  ],
+  "outputs": [
+    "interest_before",
+    "interest_after",
+    "interest_lost"
+  ],
+  "formulas": {
+    "interest": "min(5, floor(gold / 10))",
+    "interest_lost": "interest_before - interest_after"
+  },
+  "dependencies": [
+    "jcc:s17:formula:economy"
+  ],
+  "use_cases": [
+    "buy/sell/level decision",
+    "3-second operation warnings"
+  ],
+  "exactness": "exact_baseline",
+  "name": "interest_break",
+  "category": "economy",
+  "domains": [
+    "economy"
+  ],
+  "route_domains": [
+    "roll_or_level",
+    "reward_choice",
+    "postgame_review"
+  ],
+  "dependency_kind": "derived_formula"
+}

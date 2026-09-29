@@ -1,0 +1,2062 @@
+{
+  "combined_fingerprint": "2bc360c85f8a25382370752e4f2fdefced3ac194fd3a1e91cb2f00c96a9a621e",
+  "common": {
+    "choice_framework": {
+      "entity_references": [],
+      "entries": [
+        {
+          "candidate_authority": "current_match_user_report",
+          "fail_closed_when": [
+            "candidate identity is ambiguous",
+            "candidate set is stale",
+            "active checkpoint is unknown"
+          ],
+          "id": "choice.rank_reported_candidates",
+          "required_steps": [
+            "validate exact candidate count and identity",
+            "rank each reported candidate exactly once",
+            "state one explicit keep or refresh action when refresh is available",
+            "name the current evidence that changes the ranking"
+          ]
+        },
+        {
+          "id": "choice.confirmation_boundary",
+          "required_steps": [
+            "keep advice separate from canonical confirmation",
+            "persist only explicit structured confirmation",
+            "retain one response owner for the interaction"
+          ]
+        }
+      ],
+      "kind": "choice_framework",
+      "logical_id": "common.choice_framework",
+      "schema": "jcc-game-knowledge-common-document-v1",
+      "scope": "common",
+      "season_neutral": true
+    },
+    "complete_game_doctrine": {
+      "entity_references": [],
+      "entries": [
+        {
+          "content": {
+            "answer_layers": {
+              "ai_native_coach": "The host CLI main model writes the visible natural-language answer from selected structured context.",
+              "fact_loop": "Machine-read facts update continuously and are evidence, not chat by themselves.",
+              "fast_coach": "Deterministic scoring may rank choices or flag obvious economy/bench/HP issues, but it is evidence unless explicitly enabled as emergency UI."
+            },
+            "context_priority": [
+              "current stage_round and live_state facts",
+              "confirmed user choices and latest user intent",
+              "visible choice candidates",
+              "current board, bench, shop, items, HP, gold, level, XP",
+              "current-season hard data and daily big-data priors"
+            ],
+            "fact_contract": {
+              "choice_candidates_are_not_selections": true,
+              "missing_critical_fact_policy": "If a critical fact is missing and the advice depends on it, ask for that fact or state the uncertainty before giving a conditional action.",
+              "must_read_before_strategy": [
+                "stage_round",
+                "hp",
+                "gold",
+                "level",
+                "xp",
+                "board_units",
+                "bench_units",
+                "shop_units",
+                "item_components",
+                "confirmed_choices",
+                "latest_user_intent"
+              ],
+              "newer_state_wins": true,
+              "newer_user_intent_wins": true
+            },
+            "general_stage_tasks": {
+              "choice_window": "Answer the visible choice now. Do not give generic transition advice when the user is asking which choice to pick.",
+              "early_game": "Prefer strongest board, pairs, flexible item components, and economy cleanliness until choice/augment facts create a stronger direction.",
+              "economy": "Use gold, interest thresholds, HP, streak, and stage before recommending buying, selling, leveling, rolling, or greeding.",
+              "post_choice_unknown": "If a choice checkpoint has passed but the final selection is unknown, answer any independently answerable current user action first. Mention the uncertainty and corresponding structured card afterward; block only a question whose requested conclusion directly requires that exact missing selection."
+            }
+          },
+          "id": "doctrine.coach_decision_model",
+          "source_key": "coach_decision_model"
+        },
+        {
+          "content": {
+            "decision_inputs": [
+              "stage, HP, gold, level, streak when structured, and immediate survival risk",
+              "current board strength, bench transitions, target plan, and latest user intent",
+              "owned components, completed items, item holders, removers, reforgers, anvils, artifacts, and radiant choices",
+              "confirmed choices and active-season mechanics that can change item value",
+              "current-season hard-data item fit and daily big-data lineup/item priors"
+            ],
+            "decision_sequence": [
+              "Decide survival and tempo posture first: slam_now or wait_component.",
+              "Protect the main carry and main tank requirements before spreading a second or third item set.",
+              "Check lobby-agnostic utility gaps such as wound, shred, sunder, frontline durability, and reliable damage.",
+              "Check holder quality, transfer cost, remover/reforger protection, and whether the holder will be sold soon.",
+              "Check whether a nearby active-season reward or choice can materially change the item line.",
+              "Use hard data and daily rankings as priors, then reconcile them with the current match facts."
+            ],
+            "host_model_invariants": [
+              "Do not turn a ranking prior into an unconditional perfect-item claim.",
+              "Do not wait for a richer sensing source when the currently reliable field is enough to decide.",
+              "Do not invent a streak, holder, component, or active-season reward that is absent from selected context."
+            ],
+            "missing_information_policy": {
+              "ask_only_when_action_changes": true,
+              "examples": [
+                "Ask which items are on the main carry only if holder assignment changes whether to craft or transfer.",
+                "Ask which components remain only if the bench inventory changes the next craft.",
+                "Do not ask for visual confirmation when current-match user confirmation already supplies the needed fact."
+              ],
+              "never_wait_for_higher_or_lower_source": true,
+              "resolve_by_field": true
+            },
+            "proactive_coach_policy": {
+              "answer_shape": "State the action, the holder or missing field if relevant, and the tempo/opportunity cost in one concise coaching answer.",
+              "do_not_speak_on": [
+                "every component arrival",
+                "every shop refresh",
+                "visual candidate changes without confirmation",
+                "an item fact change that does not alter the recommended action"
+              ],
+              "speak_when": [
+                "a newly available craft changes likely streak preservation or lethal risk",
+                "the target lineup becomes materially under-equipped or a core item requirement is now reachable",
+                "a confirmed choice or active-season reward materially changes the best holder or item posture",
+                "a remover/reforger/anvil creates a time-sensitive correction opportunity"
+              ]
+            },
+            "purpose": "Reusable item decision doctrine for deciding whether to craft now, wait for a component, use a temporary holder, assign completed items, or spend a remover/reforger. Exact item names remain current-season data decisions.",
+            "schema": "jcc-itemization-management-base-v1",
+            "scope": "universal"
+          },
+          "id": "doctrine.itemization_management",
+          "source_key": "itemization_management"
+        },
+        {
+          "content": {
+            "core_principles": [
+              "Stage 2 economy compounds. One early interest gold can turn into several future gold because it changes the next interest threshold.",
+              "Do not treat economy in isolation. Combine gold, HP, streak, stage, board quality, item fit, confirmed choices, user intent, and big-data lineup fit.",
+              "A visible board upgrade is not automatically worth breaking an interest threshold; the upgrade must protect streak/HP or improve a key line.",
+              "If the advice depends on a missing confirmed augment, special choice, HP, gold, level, or XP fact, ask for it or give a conditional action."
+            ],
+            "early_leveling_policy": {
+              "level_4": {
+                "avoid": "Level 4 without real combat strength, item fit, or external economy usually risks no-money/no-HP tempo collapse.",
+                "default": "Level 4 is justified when board quality and item fit can realistically preserve or start a win streak.",
+                "scouting_policy": "Opponent augment/transition quality matters, but early opponents are uncertain; primarily evaluate own quality and whether opponents picked tempo/combat augments."
+              },
+              "level_5": {
+                "default": "If the board did not prove a streak, delaying level 5 and preserving economy is often the stable line.",
+                "win_streak_followup": "If a waterline board naturally wins several rounds, leveling later can still play tempo while banking earlier interest."
+              },
+              "tempo_choice_exception": "Tempo/HP-protection/quality augments may increase the chance of leveling, but they are not an automatic level button."
+            },
+            "event_policy": {
+              "advice_stage_priors": [
+                "2-2",
+                "2-3",
+                "2-5",
+                "2-6",
+                "2-7",
+                "3-1",
+                "3-2",
+                "3-5",
+                "3-7",
+                "4-1",
+                "4-2",
+                "4-5",
+                "5-1"
+              ],
+              "do_not_trigger_on": [
+                "gold bucket change alone",
+                "shop refresh alone without upgrade/bench/intent relevance",
+                "generic stage passage when no decision changes"
+              ],
+              "schema": "jcc-economy-event-policy-v1",
+              "trigger_policy": "These stages are economy review priors, not automatic speak points. Runtime must still require semantic change, HP pressure, confirmed-choice context, user intent, or a missing fact that materially changes the decision."
+            },
+            "host_model_invariants": [
+              "Never recommend leveling, rolling, or selling only because a gold bucket changed; explain the board/HP/streak/item/choice reason.",
+              "Never call a line rich or poor without referencing current gold, stage, and intended timing.",
+              "Treat big-data line strength as a prior; it must be reconciled with live board fit, item fit, confirmed choice and active mechanic fit, and user intent."
+            ],
+            "interest_threshold_math": {
+              "caveat": "If the board can reliably win and preserve a streak, interest loss can be acceptable; the model must state the win-condition.",
+              "interest_cap_gold": 50,
+              "loss_cost_reference": "Rolling/leveling down to 20 can lose about twice as much future interest as stopping around 30 when the next fight is lost.",
+              "reroll_32_gold_reference": "Reroll lines often stop around 32 because 3 interest + 5 base income + 2 saved gold reaches the next 10-gold threshold without streak.",
+              "thresholds": [
+                10,
+                20,
+                30,
+                40,
+                50
+              ]
+            },
+            "level_timing_priors": {
+              "level_6_after_2_7": "Usually only contested by win-streak boards or boards protecting a valuable streak.",
+              "level_7": "30-interest level 7 is mostly for win-streakers under pressure; normal economy tends to use 40 or 50 depending HP and opponent strength.",
+              "level_8": "4-cost plans often use the 4-2 augment timing to level 8 and roll. Rich boards may 4-1 to contest cards, paying roughly an extra level click plus one interest round. 4-5 level 8 is rare and usually needs no contest plus enough HP.",
+              "reroll_level_priors": {
+                "2_cost": "3-1 level 6 and roll is a common timing.",
+                "3_cost": "3-5 or after 3-7 neutrals to level 7 is a common timing.",
+                "4_cost": "4-2 level 8 is a common timing."
+              }
+            },
+            "open_sell_policy": {
+              "consider_when": [
+                "opening units have low transition value",
+                "no clear pairs or two-star path",
+                "components do not fit the current units",
+                "the current season/meta and chosen effects can stabilize later"
+              ],
+              "host_policy": "Only recommend open-sell when the current live_state shows weak utility cards and the season/meta allows recovery; otherwise prefer strongest-board or stable economy language.",
+              "meaning": "Single-open / early sell-down for economy is a high-variance tool, not a default.",
+              "risks": [
+                "another opener can break the loss streak",
+                "the board may lack a later lock-HP mechanism",
+                "bad or economy-only choice outcomes can make recovery late"
+              ]
+            },
+            "opening_drop_models": {
+              "money_start": {
+                "common_shapes": [
+                  "double-equipment opener: about 17 gold by 1-4 board/value state",
+                  "single-equipment money opener: about 23 gold by 1-4 board/value state"
+                ],
+                "description": "A blue equipment orb can become gold instead of an item. Money starts often mean fewer components but more immediate interest pressure.",
+                "minimum_interest_policy": [
+                  "17-gold shape should usually preserve at least one 10-gold interest round unless real board quality says otherwise.",
+                  "23-gold shape should usually preserve at least two 10-gold interest rounds unless HP/streak/augment context justifies spending."
+                ]
+              },
+              "standard_11_gold_start": {
+                "description": "Common neutral opener. 1-2, 1-3, and 1-4 usually create about 6 gold of unit/orb value, plus 2 gold system income on 1-2 and 1-3 and the starting 1-cost unit, reaching about 11 total value.",
+                "interest_implication": "Because 10 gold is the first interest threshold, this opener creates the first sell/hold decision.",
+                "special_case": "A rare white orb small duplicator can raise the 6-value neutral package to about 7 value; treat as a value exception, not a different economy model."
+              }
+            },
+            "purpose": "Reusable economy fundamentals for AI-native coaching. Season files may override meta bias, but these principles should be considered before buying, selling, leveling, rolling, or greeding.",
+            "schema": "jcc-economy-management-base-v1",
+            "scope": "universal",
+            "streak_and_neutral_policy": {
+              "five_loss_stage_2_7_reference": "A 5-loss economy opener entering 2-7 often has around 40-50 gold.",
+              "five_win_stage_2_7_reference": "A 5-win board entering 2-7 often has around 20-30 gold; above that is rich.",
+              "meaning": "A win/loss streak entering neutral rounds can pay after neutrals. Avoid getting streak broken right before neutrals when the streak reward matters.",
+              "six_win_leveling_math": "If leveling to preserve a 6-win streak leaves about 30 gold/3 interest, winning can combine streak reward, 5 base income, and interest to recover toward the next threshold.",
+              "streak_carries_into_neutrals": true
+            }
+          },
+          "id": "doctrine.economy_management",
+          "source_key": "economy_management"
+        },
+        {
+          "content": {
+            "archetypes": {
+              "early_high_cost_pivot": {
+                "actions": [
+                  "validate_early_high_cost_against_hp_equipment_choices_and_rankings",
+                  "use_as_holder_or_transition_when_fit_is_not_yet_proven"
+                ],
+                "host_guardrail": "One early four- or five-cost unit can change the plan, but cannot alone override equipment, choices, economy, and current board strength."
+              },
+              "emblem_conditioned": {
+                "abandon_when": [
+                  "emblem_only_completes_a_low_value_breakpoint",
+                  "holder_fit_is_weak",
+                  "current_data_has_no_support"
+                ],
+                "actions": [
+                  "validate_emblem_condition_with_current_rankings_and_holder_fit",
+                  "distinguish_cap_upgrade_from_generic_trait_completion"
+                ],
+                "host_guardrail": "An emblem is evidence for a line, not an automatic commitment; exact holder and cap value must be checked."
+              },
+              "four_cost_carry": {
+                "abandon_when": [
+                  "hp_cannot_survive_the_leveling_window",
+                  "equipment_and_choices_do_not_fit",
+                  "current_board_has_a_materially_stronger_pivot"
+                ],
+                "actions": [
+                  "push_level_8_on_4_1_then_search",
+                  "push_level_8_on_4_2_then_search",
+                  "save_for_level_9_after_frontline_and_backline_quality"
+                ],
+                "carry_cost": 4,
+                "contested_level_stage": "4-1",
+                "default_roll_level": 8,
+                "host_guardrail": "Level eight is the normal search prior for a four-cost carry, but survival pressure or high-probability immediate board upgrades may justify bounded level-seven repair. Do not describe that repair as the normal way to chase a two-star four-cost carry.",
+                "normal_level_stage": "4-2"
+              },
+              "legendary_cap": {
+                "abandon_when": [
+                  "less_than_two_loss_buffer",
+                  "board_quality_is_below_stabilization_floor",
+                  "economy_cannot_reach_level_9_without_lethal_risk"
+                ],
+                "actions": [
+                  "push_level_9_only_with_loss_buffer_and_stable_board",
+                  "stabilize_before_greeding_level_9"
+                ],
+                "carry_cost": 5,
+                "default_roll_level": 9,
+                "host_guardrail": "Ninety-five is an economy and HP privilege, not a default endpoint. Use observed damage risk and current board quality; do not hardcode a season's exact damage numbers."
+              },
+              "one_cost_reroll": {
+                "abandon_when": [
+                  "insufficient_copies",
+                  "poor_item_fit",
+                  "contested_pool_without_hp_or_economy_to_compete",
+                  "current_rankings_do_not_support_the_line"
+                ],
+                "actions": [
+                  "roll_for_primary_carry_at_level_4",
+                  "preserve_recovery_floor_around_32",
+                  "slow_roll_at_level_5_if_multiple_low_cost_targets"
+                ],
+                "carry_cost": 1,
+                "default_roll_level": 4,
+                "host_guardrail": "Do not call a one-cost line from one early copy or a random shop hit; the first choices, item fit, copy count, and current data must agree.",
+                "secondary_roll_level": 5,
+                "signals": [
+                  "first_two_choice_fit",
+                  "multiple_core_copies",
+                  "matching_items_or_artifact",
+                  "current_meta_support"
+                ]
+              },
+              "three_cost_reroll": {
+                "abandon_when": [
+                  "economy_cannot_reach_the_required_three_star_set",
+                  "multiple_contenders_remove_the_required_pool",
+                  "hp_requires_a_different_stabilization_line"
+                ],
+                "actions": [
+                  "find_primary_carry_two_star_before_greeding",
+                  "reassess_slow_roll_floor_from_contest_and_economy",
+                  "use_3_7_neutral_window_mainly_when_uncontested"
+                ],
+                "carry_cost": 3,
+                "default_roll_level": 7,
+                "host_guardrail": "Level seven is a common search anchor, not a mandate. A mixed structure may level to eight before completing the three-star carry when a required four-cost support, trait breakpoint, contested timing, or board-space upgrade has more immediate value."
+              },
+              "two_cost_reroll": {
+                "abandon_when": [
+                  "core_copies_are_missing",
+                  "equipment_does_not_fit",
+                  "the_line_loses_to_a_stronger_data_backed_pivot"
+                ],
+                "actions": [
+                  "slow_roll_above_interest_floor",
+                  "spend_more_only_when_contested_or_hp_requires_it"
+                ],
+                "carry_cost": 2,
+                "default_roll_level": 6,
+                "host_guardrail": "Level six is the normal search anchor; do not fast-eight while the two-cost core is the explicit plan and still has real copy progress."
+              }
+            },
+            "board_readiness": {
+              "policy": "Fast own-board estimate only. It supports a decision and explains missing evidence; it never claims to know the exact win probability.",
+              "required_dimensions": [
+                "board_quality",
+                "frontline_readiness",
+                "damage_readiness",
+                "core_two_star_count",
+                "item_completion",
+                "population_coverage",
+                "loss_buffer_rounds",
+                "roll_marginal_gain"
+              ]
+            },
+            "candidate_stage_readiness": {
+              "candidate_pool_policy": "Use one current-day Master+ lineup candidate index. Do not create independent one-cost, two-cost, three-cost, four-cost, or legendary candidate pools.",
+              "exit_evidence": [
+                "target_core_is_not_actually_formed",
+                "required_copies_or_timing_window_are_materially_missed",
+                "equipment_or_choices_materially_fail_the_line",
+                "hp_or_economy_cannot_support_the_remaining_plan",
+                "user_selects_an_alternative_with_stronger_live_evidence"
+              ],
+              "formed_core_policy": "Once a durable target has a formed core, continue to evaluate quality, roll timing, level value, support units, and cap additions inside that system. Do not pivot to an unrelated higher-cost lineup merely because its raw meta score is higher.",
+              "season_neutral": true,
+              "stage_2_policy": "A low-cost line may appear as a conditional candidate when current data, choices, items, and meaningful copy or board progress agree. One temporary pair or random shop hit remains observation-only and never becomes a durable target automatically.",
+              "states": [
+                "observe_only",
+                "conditional_start",
+                "future_target",
+                "build_toward",
+                "formed_core_continue",
+                "unknown_stage"
+              ],
+              "weight_boundary": "Stage readiness constrains candidate interpretation and established-target continuity. It is not a sixth weighted fit dimension and does not silently modify the registered meta, augment, item, tempo, and board percentages."
+            },
+            "decision_posture": {
+              "combine_with": [
+                "current patch and rank-bracket big-data strength",
+                "confirmed choices and active-season variables from the compiled descriptor",
+                "current equipment and holder fit",
+                "copy progress and contested pool pressure",
+                "board readiness, HP, economy, XP, and current tempo window",
+                "target structure including required higher-cost support units",
+                "user risk preference and explicit direction"
+              ],
+              "conditional_answer_policy": {
+                "branch_budget": 2,
+                "rule": "Only include a branch when it can change the next action. Lifecycle timings are priors and current patch, rank-bracket tempo, board, items, choices, economy, HP, contest, and user direction may override them.",
+                "shape": [
+                  "current_default_line_and_why",
+                  "up_to_two_material_if_or_exit_conditions",
+                  "immediate_action"
+                ]
+              },
+              "default_levels_are_priors": true,
+              "host_policy": "A prior may be overridden only by current-match evidence. State the evidence and opportunity cost; do not present either the prior or the exception as universally correct. Rank-bracket tempo is contextual evidence, not opponent-board sensing.",
+              "not_fixed_rules": true,
+              "ranking_quality_policy": {
+                "high_ceiling_conditional_evidence": [
+                  "high_top1_rate",
+                  "low_or_special_condition_sample",
+                  "weaker_top4_stability",
+                  "explicit_entry_condition"
+                ],
+                "rank_scope": "Use the current-day Master+ national ranking partition for lineup strength regardless of the user's rank preference; user rank may change coaching style but not the ranking dataset.",
+                "rule": "Do not rank one lineup metric in isolation. Separate stable meta lines, conditional ceiling lines, promising low-sample lines, and insufficient evidence before current-match fit is applied.",
+                "stable_meta_evidence": [
+                  "meaningful_sample_size",
+                  "strong_top4_rate",
+                  "competitive_top1_rate",
+                  "healthy_average_rank",
+                  "current_patch_fit"
+                ]
+              }
+            },
+            "economy_alignment": {
+              "host_guardrail": "The current live HP, structured streak when available, board quality, item fit, contest status, rank-bracket tempo, target structure, and active choices can override these references. Explain the override instead of silently applying a fixed table.",
+              "interest_thresholds": [
+                10,
+                20,
+                30,
+                40,
+                50
+              ],
+              "manual_xp_per_purchase": 4,
+              "natural_xp_per_round": 2,
+              "reference_only": true,
+              "reroll_recovery_floor_reference": 32,
+              "xp_policy": "When the remaining XP gap is smaller than one manual purchase, waiting for natural XP is an economy prior. Buy anyway when the current level timing can secure a material board spike, preserve a valuable streak, avoid lethal damage, or win a contested shop-pool race."
+            },
+            "postgame_feedback": {
+              "active_match_policy": "record existing structured decision and outcome events only; do not open a model task or change current-match hard truth",
+              "postgame_policy": "derive compact decision/outcome evidence in postgame_review and require user approval before durable strategy memory writes"
+            },
+            "purpose": "Map a target plan's cost curve and evidence into conditional roll/level/hold priors without hardcoding season-specific units, traits, or mandatory timing scripts.",
+            "risk_model": {
+              "estimated_loss_damage_by_stage": {
+                "2": 7,
+                "3": 10,
+                "4": 13,
+                "5": 14,
+                "6": 14
+              },
+              "host_guardrail": "Damage bands are bounded heuristics; prefer observed current-match loss evidence when available and never treat them as exact combat simulation.",
+              "reference_only": true
+            },
+            "schema": "jcc-lineup-lifecycle-management-base-v1",
+            "scope": "universal",
+            "season_neutral": true
+          },
+          "id": "doctrine.lineup_lifecycle_management",
+          "source_key": "lineup_lifecycle_management"
+        },
+        {
+          "content": [
+            "Never say to wait for a past choice checkpoint.",
+            "If the current stage is after a season-defined choice checkpoint and the selected choice is unknown, ask what the user selected or state it is unknown.",
+            "Active choice candidates come only from the current-match user report; reported candidates are not confirmed final selections."
+          ],
+          "id": "doctrine.host_model_invariants",
+          "source_key": "host_model_invariants"
+        }
+      ],
+      "kind": "complete_game_doctrine",
+      "logical_id": "common.complete_game_doctrine",
+      "migration_lineage": {
+        "excluded_product_flow_sections": [
+          "selection_fact_policy",
+          "runtime_choice_modes"
+        ],
+        "included_sections": [
+          "coach_decision_model",
+          "itemization_management",
+          "economy_management",
+          "lineup_lifecycle_management",
+          "host_model_invariants"
+        ],
+        "policy": "This file is the new authored Common knowledge copy. The legacy source remains only until runtime cutover and parity verification complete.",
+        "source": "data/runtime/jcc/fixtures/legacy-rules/common/base-game-rules.json"
+      },
+      "schema": "jcc-game-knowledge-common-document-v1",
+      "scope": "common",
+      "season_neutral": true
+    },
+    "concepts": {
+      "entity_references": [],
+      "entries": [
+        {
+          "definition": "Prefer current verified match facts, then current patch evidence, then reusable doctrine. Missing evidence remains explicit.",
+          "id": "concept.evidence_priority",
+          "title": "Evidence priority"
+        },
+        {
+          "definition": "Advice is material only when it can change the player's next bounded action.",
+          "id": "concept.action_materiality",
+          "title": "Action materiality"
+        },
+        {
+          "definition": "A published strategy variant is evaluated as one roster and transition package rather than a union of unrelated variants.",
+          "id": "concept.atomic_strategy",
+          "title": "Atomic strategy"
+        },
+        {
+          "definition": "When a required fact is absent, state the condition that changes the action instead of inventing the fact.",
+          "id": "concept.conditional_uncertainty",
+          "title": "Conditional uncertainty"
+        },
+        {
+          "definition": "The spendable match currency used to buy units, refresh the shop, and purchase XP. Unspent gold can generate bounded interest at registered thresholds.",
+          "id": "concept.gold",
+          "title": "Gold"
+        },
+        {
+          "definition": "Progress toward the next player level. Natural round XP and purchased XP are separate sources, and current season variables may modify either source.",
+          "id": "concept.xp",
+          "title": "Experience"
+        },
+        {
+          "definition": "Controls board capacity and shop cost odds. Increasing level is valuable only when the added slot, trait, unit access, or timing improves the executable plan.",
+          "id": "concept.player_level",
+          "title": "Player level"
+        },
+        {
+          "definition": "Owned units currently deployed for combat. Board evidence is commitment-sensitive: temporary one-star transition units are weak identity evidence, while upgraded carries, tanks, and a formed core are strong evidence.",
+          "id": "concept.board",
+          "title": "Board"
+        },
+        {
+          "definition": "Owned undeployed units. Pairs, copies, cost, role, and stage determine their strategic commitment; an isolated spare unit does not define the lineup.",
+          "id": "concept.bench",
+          "title": "Bench"
+        },
+        {
+          "definition": "The current purchasable offer. Shop units are opportunities, not owned board fit, until purchased.",
+          "id": "concept.shop",
+          "title": "Shop"
+        },
+        {
+          "definition": "Additional round income from holding threshold amounts of gold, normally capped at the registered maximum. Breaking interest is justified by the value and urgency of the resulting action, not by the threshold alone.",
+          "id": "concept.interest",
+          "title": "Interest"
+        },
+        {
+          "definition": "Spending gold to replace the current shop. Its value depends on target cost odds, remaining copies, contest pressure, current pairs, HP, economy, and the expected upgrade.",
+          "id": "concept.reroll",
+          "title": "Shop refresh"
+        },
+        {
+          "definition": "The match survival resource. Advice converts HP into an estimated number of failure rounds with uncertainty rather than pretending to predict exact combat outcomes.",
+          "id": "concept.hp",
+          "title": "Health"
+        },
+        {
+          "definition": "A provisional or durable plan formed from current-day Master+ strength, choices, equipment, tempo, owned commitment, and explicit user intent. A direction is not automatically a locked target.",
+          "id": "concept.lineup_direction",
+          "title": "Lineup direction"
+        }
+      ],
+      "kind": "concepts",
+      "logical_id": "common.concepts",
+      "schema": "jcc-game-knowledge-common-document-v1",
+      "scope": "common",
+      "season_neutral": true
+    },
+    "doctrine": {
+      "entity_references": [],
+      "entries": [
+        {
+          "id": "doctrine.strongest_board_economy",
+          "principles": [
+            "Balance board strength, health preservation, interest, and future upgrade access.",
+            "Do not spend solely because a stage or gold bucket changed.",
+            "Explain the immediate benefit and opportunity cost of spending."
+          ]
+        },
+        {
+          "id": "doctrine.commitment",
+          "principles": [
+            "Keep early direction provisional until board, equipment, choices, economy, and current evidence agree.",
+            "Do not displace an established core with an unrelated higher-scoring plan without explicit exit evidence."
+          ]
+        },
+        {
+          "id": "doctrine.itemization",
+          "principles": [
+            "Resolve ownership and holder facts per field from the highest reliable source.",
+            "Treat published item packages as evidence, not unconditional perfect-item requirements.",
+            "Require an exact current-patch recipe before claiming craftability."
+          ]
+        }
+      ],
+      "kind": "doctrine",
+      "logical_id": "common.doctrine",
+      "schema": "jcc-game-knowledge-common-document-v1",
+      "scope": "common",
+      "season_neutral": true
+    },
+    "formulas": {
+      "entity_references": [],
+      "entries": [
+        {
+          "constraints": [
+            "gold >= 0"
+          ],
+          "expression": "min(floor(gold / 10), 5)",
+          "id": "formula.interest_income",
+          "inputs": [
+            "gold"
+          ],
+          "output": "interest_gold"
+        },
+        {
+          "constraints": [
+            "This is a bounded decision prior, not an exact combat forecast."
+          ],
+          "expression": "floor(max(hp, 0) / max(estimated_loss_damage, 1))",
+          "id": "formula.loss_buffer",
+          "inputs": [
+            "hp",
+            "estimated_loss_damage"
+          ],
+          "output": "estimated_loss_buffer_rounds"
+        },
+        {
+          "constraints": [
+            "Use only registered dimensions.",
+            "Missing dimensions do not become positive evidence."
+          ],
+          "expression": "sum(weight_i * normalized_evidence_i)",
+          "id": "formula.weighted_fit",
+          "inputs": [
+            "registered_weights",
+            "normalized_evidence"
+          ],
+          "output": "candidate_fit_score"
+        },
+        {
+          "constraints": [
+            "Read purchase size and price from the active rules; the normal reference is 4 XP for 4 gold.",
+            "Do not purchase an unusable XP remainder unless the immediate timing benefit justifies it."
+          ],
+          "expression": "ceil(max(target_level_xp - current_xp, 0) / xp_per_purchase) * gold_per_purchase",
+          "id": "formula.xp_purchase_cost",
+          "inputs": [
+            "target_level_xp",
+            "current_xp",
+            "xp_per_purchase",
+            "gold_per_purchase"
+          ],
+          "output": "gold_required"
+        },
+        {
+          "constraints": [
+            "Threshold math is reference evidence, not an automatic hold or sell command."
+          ],
+          "expression": "min(ceil(max(gold, 0) / 10) * 10, interest_cap_gold)",
+          "id": "formula.next_interest_threshold",
+          "inputs": [
+            "gold",
+            "interest_cap_gold"
+          ],
+          "output": "next_threshold"
+        },
+        {
+          "constraints": [
+            "The recovery floor depends on HP, expected upgrades, contest, streak, and next timing."
+          ],
+          "expression": "max(gold - recovery_floor_gold, 0)",
+          "id": "formula.roll_budget_above_floor",
+          "inputs": [
+            "gold",
+            "recovery_floor_gold"
+          ],
+          "output": "bounded_roll_budget"
+        }
+      ],
+      "kind": "formulas",
+      "logical_id": "common.formulas",
+      "schema": "jcc-game-knowledge-common-document-v1",
+      "scope": "common",
+      "season_neutral": true
+    },
+    "retrieval_policy": {
+      "entity_references": [],
+      "entries": [
+        {
+          "id": "retrieval.layer_order",
+          "order": [
+            "current_match_facts",
+            "active_patch_indexes",
+            "active_season_extensions",
+            "common_knowledge"
+          ],
+          "policy": "Retrieve the smallest typed evidence set that can decide the current action."
+        },
+        {
+          "forbidden": [
+            "raw ranking snapshots",
+            "complete entity catalogs",
+            "unbounded diagnostics"
+          ],
+          "id": "retrieval.budget",
+          "policy": "Return identifiers, compact summaries, and bounded evidence references before hydrating exact detail."
+        },
+        {
+          "id": "retrieval.version_fence",
+          "policy": "All season and patch retrieval must match the selected profile fingerprint; mismatches fail closed."
+        }
+      ],
+      "kind": "retrieval_policy",
+      "logical_id": "common.retrieval_policy",
+      "schema": "jcc-game-knowledge-common-document-v1",
+      "scope": "common",
+      "season_neutral": true
+    },
+    "route_definitions": {
+      "entity_references": [],
+      "entries": [
+        {
+          "exit_conditions": [
+            "material core evidence",
+            "health pressure",
+            "explicit user commitment"
+          ],
+          "goal": "Preserve flexible board, economy, equipment, and choice options.",
+          "id": "route.opening",
+          "stages": [
+            "stage_1",
+            "stage_2"
+          ]
+        },
+        {
+          "exit_conditions": [
+            "copy window missed",
+            "pool pressure",
+            "equipment mismatch",
+            "lethal tempo"
+          ],
+          "goal": "Search at the cost-appropriate level while protecting a recovery floor.",
+          "id": "route.reroll",
+          "stages": [
+            "stage_2",
+            "stage_3",
+            "stage_4"
+          ]
+        },
+        {
+          "exit_conditions": [
+            "stabilization required",
+            "insufficient economy",
+            "current board already has higher marginal upgrades"
+          ],
+          "goal": "Convert economy into population and higher-cost access when the board can survive the timing.",
+          "id": "route.leveling",
+          "stages": [
+            "stage_3",
+            "stage_4",
+            "stage_5_plus"
+          ]
+        },
+        {
+          "exit_conditions": [
+            "new direction confirmed",
+            "original direction recovers",
+            "transition cost is no longer affordable"
+          ],
+          "goal": "Change direction only when the alternative has stronger current-match evidence and an executable transition.",
+          "id": "route.pivot",
+          "stages": [
+            "any"
+          ]
+        }
+      ],
+      "kind": "route_definitions",
+      "logical_id": "common.routes",
+      "schema": "jcc-game-knowledge-common-document-v1",
+      "scope": "common",
+      "season_neutral": true
+    },
+    "standard_mechanics": {
+      "entity_references": [],
+      "entries": [
+        {
+          "answer_contract": {
+            "confirmation_is_separate": true,
+            "explicit_keep_or_refresh": true,
+            "rank_each_candidate_once": true
+          },
+          "candidate_authority": "current_match_user_report",
+          "candidate_count": 3,
+          "checkpoints": [
+            "2-1",
+            "3-2",
+            "4-2"
+          ],
+          "id": "mechanic.augment_choice",
+          "inheritance": "default",
+          "mechanic_kind": "augment",
+          "override_policy": "forbid_season_override"
+        }
+      ],
+      "kind": "standard_mechanics",
+      "logical_id": "common.standard_mechanics",
+      "schema": "jcc-game-knowledge-common-document-v1",
+      "scope": "common",
+      "season_neutral": true
+    }
+  },
+  "compiler_schema": "jcc-game-knowledge-compiler-v1",
+  "effective_standard_mechanics": [
+    {
+      "answer_contract": {
+        "confirmation_is_separate": true,
+        "explicit_keep_or_refresh": true,
+        "rank_each_candidate_once": true
+      },
+      "candidate_authority": "current_match_user_report",
+      "candidate_count": 3,
+      "checkpoints": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ],
+      "id": "mechanic.augment_choice",
+      "inheritance": "default",
+      "mechanic_kind": "augment",
+      "override_policy": "forbid_season_override"
+    }
+  ],
+  "immutable": true,
+  "patch": {
+    "logical_id": "patch.s17_8",
+    "patch_id": "s17_8",
+    "schema": "jcc-game-knowledge-patch-source-manifest-v1",
+    "scope": "patch_source_manifest",
+    "season_id": "s17",
+    "source_artifacts": [
+      {
+        "copy_policy": "hash_and_metadata_only",
+        "expected_identity": {
+          "packageId": "jcc-mode17-s18-17.17.8"
+        },
+        "path": "data/core-patches/jcc/jcc-mode17-s18-17.17.8/manifest.json",
+        "required": true,
+        "role": "hard_data_manifest"
+      },
+      {
+        "copy_policy": "hash_and_metadata_only",
+        "path": "data/core-patches/jcc/jcc-mode17-s18-17.17.8/hard-data-manifest.json",
+        "required": true,
+        "role": "hard_data_content_manifest"
+      },
+      {
+        "copy_policy": "hash_and_metadata_only",
+        "expected_identity": {
+          "patch_id": "s17_8",
+          "season_id": "s17"
+        },
+        "path": "data/runtime/jcc/seasons/s17/patches/s17_8/strategy-overrides.json",
+        "required": true,
+        "role": "patch_strategy"
+      },
+      {
+        "copy_policy": "hash_and_metadata_only",
+        "expected_identity": {
+          "schema": "jcc-decision-input-augment-stage-authority-v1"
+        },
+        "path": "data/game-knowledge/jcc/seasons/s17/patches/s17_8/catalogs/augment-stage-authority.json",
+        "required": true,
+        "role": "augment_stage_authority"
+      },
+      {
+        "copy_policy": "hash_and_metadata_only",
+        "expected_identity": {
+          "schema": "jcc-mumu-catalog-overlay-v1"
+        },
+        "path": "data/runtime/jcc/mumu-catalog-overlay.json",
+        "required": true,
+        "role": "runtime_catalog_overlay"
+      }
+    ]
+  },
+  "profile": {
+    "patch_id": "s17_8",
+    "season_id": "s17"
+  },
+  "runtime_identity": {
+    "game_mode_id": "jcc-mode17",
+    "hard_data_manifest": "data/core-patches/jcc/jcc-mode17-s18-17.17.8/manifest.json",
+    "package_id": "jcc-s17-s17_8",
+    "patch_id": "s17_8",
+    "schema": "jcc-game-knowledge-runtime-identity-v1",
+    "season_id": "s17",
+    "source_package_id": "jcc-mode17-s18-17.17.8",
+    "upstream_identity": {
+      "framework_name": "Mode17S18",
+      "mode": "17",
+      "season": "18",
+      "version": "17.17.8"
+    }
+  },
+  "schema": "jcc-game-knowledge-bundle-v1",
+  "schemas": {
+    "jcc-game-knowledge-common-document-v1": {
+      "$id": "jcc-game-knowledge-common-document-v1",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "entity_references": {
+          "maxItems": 0,
+          "type": "array"
+        },
+        "entries": {
+          "items": {
+            "required": [
+              "id"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "kind": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "logical_id": {
+          "pattern": "^common\\.[a-z][a-z0-9_]*$",
+          "type": "string"
+        },
+        "schema": {
+          "const": "jcc-game-knowledge-common-document-v1"
+        },
+        "scope": {
+          "const": "common"
+        },
+        "season_neutral": {
+          "const": true
+        }
+      },
+      "required": [
+        "schema",
+        "logical_id",
+        "scope",
+        "kind",
+        "season_neutral",
+        "entity_references",
+        "entries"
+      ],
+      "type": "object"
+    },
+    "jcc-game-knowledge-patch-source-manifest-v1": {
+      "$id": "jcc-game-knowledge-patch-source-manifest-v1",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "logical_id": {
+          "pattern": "^patch\\.s[0-9]+_[0-9]+$",
+          "type": "string"
+        },
+        "patch_id": {
+          "pattern": "^s[0-9]+_[0-9]+$",
+          "type": "string"
+        },
+        "schema": {
+          "const": "jcc-game-knowledge-patch-source-manifest-v1"
+        },
+        "scope": {
+          "const": "patch_source_manifest"
+        },
+        "season_id": {
+          "pattern": "^s[0-9]+$",
+          "type": "string"
+        },
+        "source_artifacts": {
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema",
+        "logical_id",
+        "scope",
+        "season_id",
+        "patch_id",
+        "source_artifacts"
+      ],
+      "type": "object"
+    },
+    "jcc-game-knowledge-season-descriptor-v1": {
+      "$id": "jcc-game-knowledge-season-descriptor-v1",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "extensions": {
+          "type": "object"
+        },
+        "inherits": {
+          "type": "object"
+        },
+        "logical_id": {
+          "pattern": "^season\\.s[0-9]+$",
+          "type": "string"
+        },
+        "manual_variable_fields": {
+          "type": "array"
+        },
+        "mechanics": {
+          "type": "array"
+        },
+        "runtime_contract": {
+          "additionalProperties": false,
+          "properties": {
+            "normal_rules": {
+              "type": "object"
+            },
+            "schema": {
+              "const": "jcc-season-runtime-contract-v1"
+            },
+            "special_rules": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "schema",
+            "normal_rules",
+            "special_rules"
+          ],
+          "type": "object"
+        },
+        "schema": {
+          "const": "jcc-game-knowledge-season-descriptor-v1"
+        },
+        "scope": {
+          "const": "season"
+        },
+        "season_entity_terms": {
+          "items": {
+            "minLength": 2,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "season_id": {
+          "pattern": "^s[0-9]+$",
+          "type": "string"
+        },
+        "source_references": {
+          "type": "array"
+        },
+        "standard_mechanics_overrides": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema",
+        "logical_id",
+        "scope",
+        "season_id",
+        "inherits",
+        "mechanics",
+        "manual_variable_fields",
+        "extensions",
+        "season_entity_terms"
+      ],
+      "type": "object"
+    }
+  },
+  "season": {
+    "extensions": {
+      "choice_pretriggers": {
+        "2-3": {
+          "mechanic_id": "season_mechanic.star_god_choice",
+          "target_checkpoint": "2-4"
+        },
+        "3-3": {
+          "mechanic_id": "season_mechanic.star_god_choice",
+          "target_checkpoint": "3-4"
+        },
+        "4-3": {
+          "mechanic_id": "season_mechanic.star_god_choice",
+          "target_checkpoint": "4-4"
+        }
+      },
+      "itemization_context_fields": [
+        "confirmed_star_god",
+        "psionic_weapons",
+        "stargazing",
+        "encounter"
+      ],
+      "retrieval_namespaces": [
+        "star_god",
+        "god_reward",
+        "stargazer_constellation",
+        "encounter",
+        "psionic_weapon"
+      ]
+    },
+    "inherits": {
+      "common_manifest": "manifest.json",
+      "standard_mechanics": [
+        "mechanic.augment_choice"
+      ]
+    },
+    "logical_id": "season.s17",
+    "manual_variable_fields": [
+      {
+        "control": "single_select",
+        "key": "encounter",
+        "option_source_key": "encounter",
+        "section": "primary"
+      },
+      {
+        "control": "multi_select",
+        "key": "god_options",
+        "max_items": 2,
+        "option_source_key": "current_god",
+        "section": "primary"
+      },
+      {
+        "control": "single_select",
+        "key": "stargazing",
+        "option_source_key": "stargazer_constellation",
+        "section": "primary"
+      },
+      {
+        "control": "multi_select",
+        "key": "psionic_weapons",
+        "max_items": 2,
+        "option_source_key": "psionic_weapon",
+        "section": "advanced"
+      },
+      {
+        "control": "single_select",
+        "key": "current_god_final",
+        "option_source_key": "current_god",
+        "section": "advanced"
+      }
+    ],
+    "mechanics": [
+      {
+        "candidate_authority": "current_match_user_report",
+        "candidate_count": 2,
+        "checkpoints": [
+          "2-4",
+          "3-4",
+          "4-4"
+        ],
+        "choice_kind": "star_god",
+        "id": "season_mechanic.star_god_choice",
+        "requires_explicit_confirmation": true
+      },
+      {
+        "id": "season_mechanic.stargazing",
+        "kind": "match_variable"
+      },
+      {
+        "id": "season_mechanic.encounter",
+        "kind": "match_variable"
+      },
+      {
+        "id": "season_mechanic.psionic_weapons",
+        "kind": "equipment_extension"
+      }
+    ],
+    "runtime_contract": {
+      "normal_rules": {
+        "choice_mechanics": [
+          {
+            "aliases": [
+              "augment",
+              "hex",
+              "强化选择"
+            ],
+            "intent_terms": [
+              "海克斯",
+              "强化",
+              "海克斯强化",
+              "augment",
+              "hex"
+            ],
+            "kind": "augment",
+            "label": "augment choice",
+            "mechanic_id": "augment_choice",
+            "mode": "augment_choice",
+            "phase": "augment_choice",
+            "stages": [
+              "2-1",
+              "3-2",
+              "4-2"
+            ],
+            "trigger_terms": [
+              "augment_choice",
+              "augment_choice_advice"
+            ]
+          }
+        ],
+        "choice_pretriggers": {
+          "1-4": {
+            "kind": "augment",
+            "mode": "augment_choice",
+            "phase": "augment_choice",
+            "target_stage_round": "2-1"
+          },
+          "3-1": {
+            "kind": "augment",
+            "mode": "augment_choice",
+            "phase": "augment_choice",
+            "target_stage_round": "3-2"
+          },
+          "4-1": {
+            "kind": "augment",
+            "mode": "augment_choice",
+            "phase": "augment_choice",
+            "target_stage_round": "4-2"
+          }
+        },
+        "display_name": "S17 normal rules",
+        "game_mode_id": "jcc-mode17",
+        "host_model_invariants": [
+          "For this active S17 ruleset, normal augment choices are at 2-1, 3-2, and 4-2.",
+          "If future S18 normal timing differs, replace this season_normal file instead of changing base_game_rules."
+        ],
+        "missing_choice_followups": {
+          "2-2": {
+            "choice_stage_round": "2-1",
+            "kind": "augment"
+          },
+          "3-3": {
+            "choice_stage_round": "3-2",
+            "kind": "augment"
+          },
+          "4-3": {
+            "choice_stage_round": "4-2",
+            "kind": "augment"
+          }
+        },
+        "patch_scope": "major_season_rules_not_patch_balance",
+        "schema": "jcc-season-normal-rules-v1",
+        "scope": "season_normal",
+        "season_id": "s17",
+        "stage_decision_tasks": {
+          "1-4": "Opening checkpoint: use current pairs, shop, item components, HP, gold, and match variables to prepare the 2-1 augment decision. Do not over-lock a comp before the augment.",
+          "2-1": "Augment choice is happening now. Rank the three visible augment candidates against current board/items/economy/user intent and answer keep/reroll directly.",
+          "2-2": "2-1 augment is already past. If the final selected augment is unknown, ask the user what they picked instead of saying to wait for 2-1.",
+          "3-2": "Second augment choice is happening now. Re-rank candidates using the confirmed 2-1 augment, current direction, HP, economy, and board strength.",
+          "4-2": "Third augment choice is happening now. Favor immediate combat, cap, and survival/value according to HP and current comp commitment."
+        },
+        "stage_strategy_protocol": {
+          "1-2_to_1-3": {
+            "avoid": [
+              "locking a final comp",
+              "claiming the 2-1 augment is known before it appears"
+            ],
+            "coach_goal": "Read opening drops, pairs, shop hits, and components. Give one compact opener direction when evidence changes.",
+            "must_consider": [
+              "pairs",
+              "two-star chances",
+              "item components",
+              "early board strength",
+              "match variables"
+            ]
+          },
+          "1-4": {
+            "coach_goal": "Prepare the 2-1 augment decision from current board, shop, item components, HP, gold, and match variables.",
+            "must_consider": [
+              "can preserve win streak",
+              "can loss-streak/economy",
+              "component direction",
+              "frontline/backline quality",
+              "user target plan"
+            ],
+            "output_bias": "Say the likely augment preference class, not a final augment pick."
+          },
+          "2-1": {
+            "coach_goal": "Answer augment keep/reroll now.",
+            "must_consider": [
+              "three visible augment candidates",
+              "current board",
+              "bench pairs",
+              "item components",
+              "HP",
+              "gold",
+              "user intent",
+              "daily big-data priors"
+            ],
+            "required_answer": "Pick keep/reroll and explain briefly. Do not give generic transition advice instead."
+          },
+          "2-2_to_2-3": {
+            "avoid": [
+              "saying to wait for 2-1",
+              "pretending observed candidates are the selected augment"
+            ],
+            "coach_goal": "Use the selected 2-1 augment if known. If unknown and relevant, ask what was selected.",
+            "must_consider": [
+              "selected 2-1 augment",
+              "gold/interest threshold",
+              "level/xp",
+              "board strength",
+              "shop pairs"
+            ]
+          },
+          "3-2": {
+            "coach_goal": "Answer second augment keep/reroll using confirmed first augment and current direction.",
+            "must_consider": [
+              "selected 2-1 augment",
+              "visible 3-2 candidates",
+              "HP",
+              "economy",
+              "board commitment",
+              "items",
+              "own HP and lobby pace from public/economy signals"
+            ]
+          },
+          "4-2": {
+            "coach_goal": "Answer third augment keep/reroll for survival, cap, or finishing direction.",
+            "must_consider": [
+              "HP danger",
+              "completed items",
+              "current comp",
+              "user-confirmed scouting notes if available",
+              "cap potential",
+              "reroll/level timing"
+            ]
+          }
+        }
+      },
+      "schema": "jcc-season-runtime-contract-v1",
+      "special_rules": {
+        "display_name": "S17 special rules",
+        "game_mode_id": "jcc-mode17",
+        "host_mode_addons": {
+          "god_sequence": {
+            "instructions": [
+              "Handle the current S17 star-god choice sequence only from selected candidates, reward text, confirmed earlier choices, and active S17 rules.",
+              "Do not infer follow-up rewards or unavailable star-god choice windows unless current selected context supplies them."
+            ],
+            "title": "S17 Star-God Choice Sequence"
+          }
+        },
+        "host_mode_aliases": {
+          "god_choice": "god_sequence"
+        },
+        "host_model_invariants": [
+          "S17 star-god, stargazing, encounter, and psionic-weapon variables are current-match facts.",
+          "Use S17 match variables when present and let newer user intent override older intent.",
+          "Never say to wait for a past S17 star-god choice stage.",
+          "If the final selected star-god is missing after a star-god stage, ask the user instead of guessing."
+        ],
+        "manual_variable_coach": {
+          "missing_options_text": "星神变量还没完整记录，后续我会优先追问关键选择。",
+          "observer_field": "stargazing",
+          "observer_missing_text": "观星/变量方向还没完整记录，先按对子、装备和经济打稳。",
+          "observer_present_template": "{observer} 这条观星/变量先作为候选倾向，我会结合海克斯、装备和牌来判断是否值得继续靠。",
+          "option_field": "god_options",
+          "option_name_field": "god_name",
+          "options_strategy_suffix": "不要一阶段就锁死阵容；2-1 海克斯、前两轮嫖牌和装备会决定是顺着它们走，还是转更强的大数据线。",
+          "recorded_fallback_template": "{option}：已记录，等待后续奖励文字确认具体收益。",
+          "reward_path_index": "indexes/god_reward_paths.json",
+          "signal_prefix": "本局星神信号："
+        },
+        "mechanics": {
+          "choice_mechanics": [
+            {
+              "advice_task_trigger_terms": [
+                "god_sequence_advice"
+              ],
+              "candidate_input_policy": "current_match_user_report",
+              "candidate_paths": [
+                "match_context.reported_choice_sets_by_mode.god_sequence.candidates"
+              ],
+              "catalog_entity_kind": "star_god",
+              "decision_input_kind_aliases": [
+                "star_god",
+                "s17_star_god",
+                "god",
+                "god_choice"
+              ],
+              "default_user_prompt": "这轮星神/星神奖励选哪个？",
+              "fast_hint_label": "star-god choice",
+              "final_confirmation_policy": {
+                "dirty_candidate_atomic_save": true,
+                "exactly_one_followup_owner": true,
+                "final_state_field": "manual_match_variables.current_god_final",
+                "pending_candidates_are_not_final": true,
+                "prior_advice_required": false,
+                "required": true,
+                "state_write_strategy": "replace_latest"
+              },
+              "host_context_choice_field": "god_choices",
+              "host_mode_context": {
+                "allowed_sources": [
+                  "current_match_user_report",
+                  "confirmed_earlier_star_god_choices",
+                  "live_state",
+                  "hard_data",
+                  "cruise_context"
+                ],
+                "allowed_writes": [
+                  "pending_choice",
+                  "manual_match_variables_after_confirmation"
+                ],
+                "must_not_write": [
+                  "final_star_god_without_user_confirmation"
+                ],
+                "purpose": "Visible S17 star-god 2-choice only.",
+                "response_expectation": "Advise the visible 2-choice star-god panel, require user confirmation for the final choice, then return to cruise. Do not handle the removed hero/item reward 3-choice.",
+                "version_boundary": "S17 descriptor only; S18 or later seasons must declare their own choice mechanic before this mode is visible."
+              },
+              "intent_tag": "god_sequence_intent",
+              "intent_terms": [
+                "星神",
+                "观星",
+                "众星",
+                "诱惑之神",
+                "契约之神",
+                "秩序之神",
+                "造物之神",
+                "深渊之神",
+                "财富之神",
+                "爱神"
+              ],
+              "kind": "god",
+              "label": "star-god choice",
+              "mechanic_id": "star_god_choice",
+              "missing_selection_prompt_template": "{stage_round} 星神与本轮奖励尚未确认；请在 S17 星神卡片的最终选择区确认。后续节奏判断会以卡片中的结构化结果为准。",
+              "mode": "god_sequence",
+              "phase": "god_choice",
+              "report_required_before_advice": true,
+              "requires_visual_choice_set": false,
+              "reward_policy": "Star-god reward text may describe the visible 2-choice consequence. Hero/item reward 3-choice sensing is not a product runtime action.",
+              "runtime_ui_mode": {
+                "auto_answer": false,
+                "card_report_policy": {
+                  "advice_optional_fields": [
+                    "reward_text"
+                  ],
+                  "candidate_count": 2,
+                  "candidate_identity_policy": "Star-god and reward are catalog-backed searchable fields. Reward browsing is limited to the current 2-4/3-4/4-4 stage; a normal selected star-god filters to that god's same-stage rewards, while Thresh can search all gods' same-stage rewards. Custom current-match reward text remains allowed.",
+                  "candidate_label": "星神",
+                  "candidate_option_group_terms": [
+                    "god"
+                  ],
+                  "candidate_option_source_key": "star_god",
+                  "candidate_seed_variable_field": "god_options",
+                  "candidate_sync_policy": "replace_exact_candidate_pair_on_report",
+                  "candidate_sync_variable_field": "god_options",
+                  "card_type": "god_card",
+                  "dirty_candidate_policy": "Advice may be requested with an unrevealed reward left blank, including Thresh's random reward. One confirm click first saves the latest two candidates and any known reward text without a model answer, synchronizes the descriptor-owned god_options seed field, then requires the exact revealed reward only for the selected star-god. Start Match variables seed the first card; each later 2-4/3-4/4-4 card inherits the latest canonical pair until the user changes it.",
+                  "final_confirm_required": true,
+                  "final_selection_required_fields": [
+                    "reward_text"
+                  ],
+                  "no_ocr_or_vision_fallback": true,
+                  "prior_advice_required": false,
+                  "refresh_send_policy": "preserve_unchanged_slots_edit_changed_slots_then_submit_from_card",
+                  "required_fields": [
+                    "god_name",
+                    "reward_text"
+                  ],
+                  "reward_option_group_terms": [
+                    "reward",
+                    "god"
+                  ],
+                  "reward_option_source_key": "god_reward",
+                  "reward_search_scope": {
+                    "all_gods_same_stage_candidate_ids": [
+                      "8"
+                    ],
+                    "description": "At 2-4, 3-4, and 4-4, rewards stay within the current stage. A normal selected star-god searches only that god's rewards; the explicitly registered Thresh exception may search every star-god reward from the same stage.",
+                    "god_name_field": "god_name",
+                    "kind": "selected_god_with_all_scope_exceptions",
+                    "stage_num_field": "stage_num"
+                  },
+                  "reward_stage_filter": {
+                    "catalog_stage_num_field": "stage_num",
+                    "filter_policy": "same_stage_num_only",
+                    "source_stage_round_field": "stage_round",
+                    "stage_round_to_stage_num": {
+                      "2-4": 2,
+                      "3-4": 3,
+                      "4-4": 4
+                    }
+                  },
+                  "schema": "jcc-choice-card-report-v1",
+                  "source": "current_match_user_report",
+                  "stage_tabs": [
+                    "2-4",
+                    "3-4",
+                    "4-4"
+                  ]
+                },
+                "choice_kind": "god_sequence",
+                "choice_poll_policy": {
+                  "candidate_input_policy": "current_match_user_report",
+                  "pollution_policy": "Write pending choice candidates only; final match variables require user confirmation.",
+                  "storage_policy": "Structured current-match report only; do not capture or retain OCR/vision frames for this choice intake.",
+                  "substeps": [
+                    {
+                      "id": "god_choice",
+                      "phase": "god_choice",
+                      "stop_on_fields": [
+                        "choices.god_choice_options"
+                      ]
+                    }
+                  ],
+                  "user_report_contract": {
+                    "current_match_only": true,
+                    "no_ocr_or_vision_fallback": true,
+                    "refresh_creates_new_choice_set_revision": true,
+                    "refresh_report_prefix": "直接修改发生变化的星神或奖励，再重新获取建议。",
+                    "report_prompt": "请在星神卡片中搜索并填写当前两个星神；已揭示的奖励一并填写，尚未揭示的随机奖励可以留空。",
+                    "report_required_before_advice": true
+                  },
+                  "worker": "current_match_user_report_with_host_scoring"
+                },
+                "confirmation_required": true,
+                "data_sources": [
+                  "current_match_user_report",
+                  "confirmed_choice_context",
+                  "live_state",
+                  "season_catalog"
+                ],
+                "final_confirmation_policy": {
+                  "exactly_one_followup_owner": true,
+                  "final_state_field": "manual_match_variables.current_god_final",
+                  "pending_candidates_are_not_final": true,
+                  "required": true,
+                  "state_write_strategy": "replace_latest"
+                },
+                "flow_policy": "The visible S17 Star-God UI mode exposes a structured searchable two-choice card with reward fields and a separate exact final-confirm section. Hero/item reward three-choice is not a product sensing path and must not be auto-scanned, auto-opened, or treated as a visible option set.",
+                "label": "星神选择",
+                "prefill": "选哪个",
+                "renderer": {
+                  "availability": {
+                    "active_season_ids": [
+                      "s17"
+                    ],
+                    "kind": "active_season_capability",
+                    "missing_or_future_season_behavior": "hide_and_fail_closed",
+                    "required_option_groups": [
+                      "current_god"
+                    ],
+                    "s18_without_descriptor": "hidden"
+                  },
+                  "icon_key": "gem",
+                  "missing_choice_kinds": [
+                    "god"
+                  ],
+                  "order": 30,
+                  "primary_presets": [],
+                  "prompt": "这两个星神选哪个？",
+                  "secondary": false,
+                  "short_label": "星神",
+                  "ui_mode_key": "god",
+                  "variable_panel_role": "paired_season_choice",
+                  "visible_in_match_rail": true
+                },
+                "return_to_cruise_after": "god_choice_confirmed_or_skipped_or_expired",
+                "substeps": [
+                  {
+                    "choice_kind": "god_choice_2",
+                    "confirmation_event": "god_choice_confirmed",
+                    "id": "god_choice"
+                  }
+                ],
+                "visible_in_ui": true
+              },
+              "stages": [
+                "2-4",
+                "3-4",
+                "4-4"
+              ],
+              "task_candidate_evidence_types": [
+                "choices.god_choice_options",
+                "god.choice_options",
+                "god.reward_options"
+              ],
+              "trigger_terms": [
+                "god"
+              ],
+              "ui_mode_key": "god",
+              "user_card_report_schema": {
+                "advice_optional_fields": [
+                  "reward_text"
+                ],
+                "candidate_count": 2,
+                "card_type": "god_card",
+                "final_confirm_required": true,
+                "final_selection_required_fields": [
+                  "reward_text"
+                ],
+                "no_ocr_or_vision_fallback": true,
+                "refresh_send_policy": "preserve_unchanged_slots_edit_changed_slots_then_submit_from_card",
+                "required_fields": [
+                  "god_name",
+                  "reward_text"
+                ],
+                "schema": "jcc-choice-card-report-v1",
+                "source": "current_match_user_report"
+              },
+              "user_report_contract": {
+                "current_match_only": true,
+                "no_ocr_or_vision_fallback": true,
+                "refresh_creates_new_choice_set_revision": true,
+                "refresh_report_prefix": "直接修改发生变化的星神或奖励，再重新获取建议。",
+                "report_prompt": "请先报出当前看到的两个星神选项和关键奖励文本。",
+                "report_required_before_advice": true
+              },
+              "visible_window_required_answer": "Rank the visible star-god options and answer which one to take now. Do not treat this as an augment reroll."
+            }
+          ],
+          "choice_pretriggers": {
+            "2-3": {
+              "kind": "god",
+              "mode": "god_sequence",
+              "phase": "god_choice",
+              "target_stage_round": "2-4"
+            },
+            "3-3": {
+              "kind": "god",
+              "mode": "god_sequence",
+              "phase": "god_choice",
+              "target_stage_round": "3-4"
+            },
+            "4-3": {
+              "kind": "god",
+              "mode": "god_sequence",
+              "phase": "god_choice",
+              "target_stage_round": "4-4"
+            }
+          },
+          "decision_input_catalog": {
+            "policy": "Source technical rows classified as season-mechanic rewards or internal subchoices must not enter another player-facing choice kind.",
+            "source_kind_exclusions": {
+              "augment": [
+                {
+                  "classified_as": "star_god_reward_internal",
+                  "name": "亚索的恩赐",
+                  "source_id": "170716"
+                },
+                {
+                  "classified_as": "star_god_reward_internal",
+                  "name": "韦鲁斯的恩赐",
+                  "source_id": "170717"
+                },
+                {
+                  "classified_as": "star_god_reward_internal",
+                  "name": "阿狸的恩赐",
+                  "source_id": "170718"
+                },
+                {
+                  "classified_as": "star_god_reward_internal",
+                  "name": "凯尔的恩赐",
+                  "source_id": "170719"
+                },
+                {
+                  "classified_as": "star_god_reward_internal",
+                  "name": "伊芙琳的恩赐",
+                  "source_id": "170720"
+                },
+                {
+                  "classified_as": "star_god_reward_internal",
+                  "name": "阿狸的恩赐",
+                  "source_id": "1170718"
+                },
+                {
+                  "classified_as": "star_god_reward_internal",
+                  "name": "奥瑞利安·索尔的恩赐",
+                  "source_id": "1707100"
+                },
+                {
+                  "classified_as": "star_god_reward_subchoice",
+                  "name": "拒绝",
+                  "source_id": "17071001"
+                },
+                {
+                  "classified_as": "star_god_reward_subchoice",
+                  "name": "次要任务",
+                  "source_id": "17071002"
+                },
+                {
+                  "classified_as": "star_god_reward_subchoice",
+                  "name": "全能任务",
+                  "source_id": "17071003"
+                }
+              ]
+            }
+          },
+          "itemization_interactions": {
+            "after_choice_policy": "After a star-god or other S17 choice is confirmed, recompute item fit, holder priority, slam/wait posture, and target-line alignment from the new reward. Do not require a visual candidate if user confirmation supplies the reward.",
+            "before_choice_policy": "Before the 2-4, 3-4, or 4-4 star-god choice, wait for the visible reward only when it can materially change the item line and current survival pressure permits waiting. Otherwise make the best current item decision and state the opportunity cost.",
+            "current_match_facts": [
+              "confirmed star-god names and reward text",
+              "psionic weapons",
+              "emblems and judge-law effects",
+              "stargazing and encounter variables"
+            ],
+            "scope": "s17_only",
+            "version_boundary": "These interactions extend the universal itemization doctrine only while S17 is active. Future seasons must declare their own mechanic interactions and must not inherit star-god, psionic-weapon, judge-law, or stargazing vocabulary."
+          },
+          "manual_variable_fields": [
+            {
+              "control": "single_select",
+              "include_in_confirmation_summary": true,
+              "key": "encounter",
+              "label": "本局奇遇",
+              "legacy_payload_fields": [
+                "encounter"
+              ],
+              "option_source_key": "encounter",
+              "section": "primary"
+            },
+            {
+              "control": "multi_select",
+              "include_in_confirmation_summary": true,
+              "item_labels": [
+                "星神 1",
+                "星神 2"
+              ],
+              "key": "god_options",
+              "label": "星神",
+              "legacy_payload_fields": [
+                "firstGod",
+                "secondGod"
+              ],
+              "max_items": 2,
+              "option_source_key": "current_god",
+              "section": "primary"
+            },
+            {
+              "control": "single_select",
+              "include_in_confirmation_summary": true,
+              "key": "stargazing",
+              "label": "观星",
+              "legacy_payload_fields": [
+                "observer"
+              ],
+              "option_source_key": "stargazer_constellation",
+              "section": "primary"
+            },
+            {
+              "control": "multi_select",
+              "item_labels": [
+                "灵能武器 1",
+                "灵能武器 2"
+              ],
+              "key": "psionic_weapons",
+              "label": "灵能武器",
+              "legacy_join_separator": "+",
+              "legacy_payload_fields": [
+                "psionicWeapons"
+              ],
+              "max_items": 2,
+              "option_source_key": "psionic_weapon",
+              "section": "advanced"
+            },
+            {
+              "control": "single_select",
+              "key": "current_god_final",
+              "label": "最终星神",
+              "legacy_payload_fields": [
+                "currentGodFinal"
+              ],
+              "option_source_key": "current_god",
+              "section": "advanced"
+            }
+          ],
+          "match_variables": [
+            "encounter",
+            "god_options",
+            "stargazing",
+            "current_god_final",
+            "psionic_weapons",
+            "target_plan"
+          ],
+          "stage_decision_tasks": {
+            "2-4": "Star-god two-choice is happening now. Compare the two god names and reward text against HP, economy, board direction, and match variables; do not answer as if this were an augment three-choice.",
+            "2-5": "2-4 star-god choice is already past. If the final selected god is unknown, ask the user which one they chose before advice that depends on god effects.",
+            "3-4": "Star-god two-choice is happening now. Use confirmed earlier choices, current HP/economy/board, and user intent to choose between the two god options.",
+            "3-5": "3-4 star-god choice is already past. Ask for the selected god if missing and needed.",
+            "4-4": "Star-god two-choice is happening now. Prioritize survival, cap, and current comp fit; do not give generic early-game transition advice.",
+            "4-5": "4-4 star-god choice is already past. Ask for the selected god if missing and needed."
+          },
+          "stage_strategy_protocol": {
+            "2-4": {
+              "coach_goal": "Choose between two visible star-god options, using both god name and reward text.",
+              "must_consider": [
+                "HP cost or HP gain",
+                "current economy",
+                "board strength",
+                "bench space",
+                "current item/components",
+                "match variables",
+                "user target plan"
+              ],
+              "required_answer": "Pick one god option or state the condition that flips the choice. Do not answer as augment reroll."
+            },
+            "2-5_to_3-3": {
+              "coach_goal": "Apply the selected 2-4 god effect to tempo, economy, HP tolerance, and comp direction.",
+              "missing_selection_policy": "If selected 2-4 god is unknown and affects advice, ask which god was chosen.",
+              "must_consider": [
+                "confirmed 2-4 selected god",
+                "HP after choice",
+                "new unit/item reward",
+                "board upgrade path"
+              ]
+            },
+            "3-4": {
+              "coach_goal": "Choose the next star-god option with the existing direction and selected earlier gods in mind.",
+              "must_consider": [
+                "confirmed earlier god choices",
+                "HP",
+                "gold",
+                "level",
+                "board commitment",
+                "items",
+                "lobby tempo / HP pressure / user-confirmed scouting notes"
+              ]
+            },
+            "4-4": {
+              "avoid": [
+                "generic early-game transition advice"
+              ],
+              "coach_goal": "Choose the late star-god option for survival or cap.",
+              "must_consider": [
+                "lethal risk",
+                "current cap",
+                "completed items",
+                "main carry/tank",
+                "lobby tempo / HP pressure / user-confirmed scouting notes"
+              ]
+            }
+          }
+        },
+        "missing_choice_followups": {
+          "2-5": {
+            "choice_stage_round": "2-4",
+            "kind": "god"
+          },
+          "3-5": {
+            "choice_stage_round": "3-4",
+            "kind": "god"
+          },
+          "4-5": {
+            "choice_stage_round": "4-4",
+            "kind": "god"
+          }
+        },
+        "patch_scope": "major_season_rules_not_patch_balance",
+        "schema": "jcc-season-special-rules-v1",
+        "scope": "season_special",
+        "season_id": "s17",
+        "version_layering_policy": {
+          "common_runtime_must_not_embed": [
+            "star_god_choice",
+            "stargazing",
+            "encounter",
+            "psionic_weapons"
+          ],
+          "future_season_without_descriptor": "hide season-only modes and fail closed for missing-choice prompts, including S18 if no equivalent descriptor exists",
+          "ordinary_minor_patch_policy": "update hard-data, rankings, and strategy tuple only unless a real rule timing or mechanic changes",
+          "owns_major_season_mechanics": [
+            "star_god_choice",
+            "stargazing",
+            "encounter",
+            "psionic_weapons"
+          ],
+          "schema": "jcc-season-version-layering-policy-v1",
+          "season_id": "s17"
+        }
+      }
+    },
+    "schema": "jcc-game-knowledge-season-descriptor-v1",
+    "scope": "season",
+    "season_entity_terms": [
+      "star_god",
+      "star-god",
+      "god_options",
+      "current_god",
+      "stargazing",
+      "encounter",
+      "psionic_weapon",
+      "psionic_weapons"
+    ],
+    "season_id": "s17",
+    "source_references": [
+      {
+        "copy_policy": "hash_and_metadata_only",
+        "path": "data/runtime/jcc/fixtures/legacy-rules/s17/normal-rules.json",
+        "role": "legacy_normal_rule_fixture"
+      },
+      {
+        "copy_policy": "hash_and_metadata_only",
+        "path": "data/runtime/jcc/fixtures/legacy-rules/s17/special-rules.json",
+        "role": "legacy_special_rule_fixture"
+      }
+    ],
+    "standard_mechanics_overrides": []
+  },
+  "source_metadata": {
+    "authored_inputs": [
+      {
+        "byte_size": 1007,
+        "logical_id": "common.choice_framework",
+        "path": "common/choice-framework.json",
+        "sha256": "80fd5d5185d330fe0acff4b5023b27e60ac01158a3e1cf740cb1e2977bc092eb"
+      },
+      {
+        "byte_size": 26671,
+        "logical_id": "common.complete_game_doctrine",
+        "path": "common/complete-game-doctrine.json",
+        "sha256": "407d6e05487be2380cbb8c9a2584bc639957a0d33032e654b988e8ec7d40bbbb"
+      },
+      {
+        "byte_size": 3694,
+        "logical_id": "common.concepts",
+        "path": "common/concepts.json",
+        "sha256": "e9fcddd1f35dada546546555b87fa1a838c1f92866c3c8b5bd297be4e9ff861b"
+      },
+      {
+        "byte_size": 1189,
+        "logical_id": "common.doctrine",
+        "path": "common/doctrine.json",
+        "sha256": "3438644ae1435aab02de02ef7d1da2868fd84190e095e6ad52a3db0228ba6b1c"
+      },
+      {
+        "byte_size": 2161,
+        "logical_id": "common.formulas",
+        "path": "common/formulas.json",
+        "sha256": "de109182ec9aca7a54955cd7ed0c02a22aa309dcf0d6bd618b2cf8bd13e4036a"
+      },
+      {
+        "byte_size": 913,
+        "logical_id": "common.retrieval_policy",
+        "path": "common/retrieval-policy.json",
+        "sha256": "dc7a9aea16404858cfcbdab668fd01ba1bc55681cca640250b01fecdbfb8c772"
+      },
+      {
+        "byte_size": 1418,
+        "logical_id": "common.routes",
+        "path": "common/routes.json",
+        "sha256": "a26dabd355bb2a42ab58bfde4feae9f5d0395ac0c4f6238e947777ebaec18ef3"
+      },
+      {
+        "byte_size": 685,
+        "logical_id": "common.standard_mechanics",
+        "path": "common/standard-mechanics.json",
+        "sha256": "23e726f6cf5a74ebf00a6d13c260de1d17bf91cecc96b0fef8c1d1931414a33e"
+      },
+      {
+        "byte_size": 862,
+        "logical_id": "game_knowledge.root",
+        "path": "manifest.json",
+        "sha256": "a1fde27ba4c57a19168f3dbd827f1c7ad93d8c3e27d53216af2bb5a059097530"
+      },
+      {
+        "byte_size": 735,
+        "logical_id": "jcc-game-knowledge-common-document-v1",
+        "path": "schemas/common-document.schema.json",
+        "sha256": "c7b120afabf0df3c69fdeb7a971332eb21ae114a95117cad316cc8bd40f7f62e"
+      },
+      {
+        "byte_size": 685,
+        "logical_id": "jcc-game-knowledge-patch-source-manifest-v1",
+        "path": "schemas/patch-source-manifest.schema.json",
+        "sha256": "83057951e275ed46652036960a1e1fc9475ad044fbc40c05e7331666864973bd"
+      },
+      {
+        "byte_size": 1292,
+        "logical_id": "jcc-game-knowledge-season-descriptor-v1",
+        "path": "schemas/season-descriptor.schema.json",
+        "sha256": "2ff8ecffc4f2aa2001995c4d220cf051379a89db73573bfa443b080caff24428"
+      },
+      {
+        "byte_size": 1590,
+        "logical_id": "patch.s17_8",
+        "path": "seasons/s17/patches/s17_8/source-manifest.json",
+        "sha256": "441e6169957f57732b0330fd06918413dc40088ec892648bfa8ce43ebd8cb838"
+      },
+      {
+        "byte_size": 32940,
+        "logical_id": "season.s17",
+        "path": "seasons/s17/season-descriptor.json",
+        "sha256": "61b265a7dbc50becf1afdb052c67659e3f196140c5063163d065e464f2d4f5ac"
+      }
+    ],
+    "referenced_payloads_embedded": false,
+    "referenced_sources": [
+      {
+        "byte_size": 61290,
+        "copy_policy": "hash_and_metadata_only",
+        "path": "data/game-knowledge/jcc/seasons/s17/patches/s17_8/catalogs/augment-stage-authority.json",
+        "role": "augment_stage_authority",
+        "sha256": "527e1f0b4558a7d97131aa78b16dcf0028a8df2b80848666009921d18c39c34e"
+      },
+      {
+        "byte_size": 1176,
+        "copy_policy": "hash_and_metadata_only",
+        "path": "data/core-patches/jcc/jcc-mode17-s18-17.17.8/hard-data-manifest.json",
+        "role": "hard_data_content_manifest",
+        "sha256": "9ea847ffb6485ad7577aeb4f756aa572521710f8b985317d096b83cc2713aad7"
+      },
+      {
+        "byte_size": 4698,
+        "copy_policy": "hash_and_metadata_only",
+        "path": "data/core-patches/jcc/jcc-mode17-s18-17.17.8/manifest.json",
+        "role": "hard_data_manifest",
+        "sha256": "399713bf602f2a306cd988bda27804d84d9291bb55422887390e52dca7577f80"
+      },
+      {
+        "byte_size": 4983,
+        "copy_policy": "hash_and_metadata_only",
+        "path": "data/runtime/jcc/fixtures/legacy-rules/s17/normal-rules.json",
+        "role": "legacy_normal_rule_fixture",
+        "sha256": "ff8dd4b2628f342f55efec1f8ca21eefcf350a20b526bee6f492cdbb98c0d177"
+      },
+      {
+        "byte_size": 21955,
+        "copy_policy": "hash_and_metadata_only",
+        "path": "data/runtime/jcc/fixtures/legacy-rules/s17/special-rules.json",
+        "role": "legacy_special_rule_fixture",
+        "sha256": "c088a1814fad954b2d8e187d932c0a97754bb0d6c9c81d0325ee3144fb75dbc7"
+      },
+      {
+        "byte_size": 3941,
+        "copy_policy": "hash_and_metadata_only",
+        "path": "data/runtime/jcc/seasons/s17/patches/s17_8/strategy-overrides.json",
+        "role": "patch_strategy",
+        "sha256": "23aee745f60686969a8e33303a651cc1719a4a4656656e8e7d1cae11b0cd0bf6"
+      },
+      {
+        "byte_size": 441036,
+        "copy_policy": "hash_and_metadata_only",
+        "path": "data/runtime/jcc/mumu-catalog-overlay.json",
+        "role": "runtime_catalog_overlay",
+        "sha256": "0ea1834b4783d4a28d37bd86f3ecb3a55748dc49a30e2e72e37adf40e1456c96"
+      }
+    ]
+  }
+}

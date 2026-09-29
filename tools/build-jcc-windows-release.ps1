@@ -34,6 +34,20 @@ if ($LASTEXITCODE -ne 0) { throw 'Development Ranking release verification faile
 node (Join-Path $repoRoot 'tools\jcc-release-source-sync.mjs') $repoRoot $releaseRoot sync
 if ($LASTEXITCODE -ne 0) { throw 'Release source synchronization failed' }
 
+foreach ($relative in @('data\game-knowledge\jcc', 'data\core-patches\jcc')) {
+  $source = Join-Path $repoRoot $relative
+  $target = Join-Path $releaseRoot $relative
+  New-Item -ItemType Directory -Force -Path $target | Out-Null
+  $cursor = Get-Item -LiteralPath $target
+  while ($cursor) {
+    if ($cursor.Attributes -band [IO.FileAttributes]::ReparsePoint) { throw "Core target traverses a reparse point: $($cursor.FullName)" }
+    $cursor = $cursor.Parent
+  }
+  if (-not ([IO.Path]::GetFullPath($target).StartsWith($releaseRoot.TrimEnd('\') + '\', [StringComparison]::OrdinalIgnoreCase))) { throw 'Core target is outside release root' }
+  & robocopy $source $target /E /COPY:DAT /DCOPY:DAT /R:1 /W:1 /NFL /NDL /NJH /NJS
+  if ($LASTEXITCODE -gt 7) { throw "Core sync failed with robocopy exit code $LASTEXITCODE" }
+}
+
 New-Item -ItemType Directory -Force -Path $rankingTarget | Out-Null
 # /MIR may delete retired generations. Reject redirected destinations first.
 $cursor = Get-Item -LiteralPath $rankingTarget
@@ -75,7 +89,7 @@ if (-not $SkipBuild) {
   } finally {
     Pop-Location
   }
-  if (-not $BuildRoot) { $BuildRoot = Join-Path $env:LOCALAPPDATA 'jcc-runtime-builds' }
+  if (-not $BuildRoot) { $BuildRoot = Join-Path (Split-Path $releaseRoot -Parent) 'jcc-runtime-builds' }
   New-Item -ItemType Directory -Force -Path $BuildRoot | Out-Null
   $buildOutput = Join-Path $BuildRoot ("jcc-release-$Version-$([guid]::NewGuid().ToString('N'))")
   $releaseOutput = Join-Path $uiRoot "release-$Version"
@@ -106,7 +120,11 @@ if (-not $SkipBuild) {
       $resolvedBuildOutput = (Resolve-Path -LiteralPath $buildOutput).Path
       $resolvedBuildRoot = (Resolve-Path -LiteralPath $BuildRoot).Path.TrimEnd('\') + '\'
       if (-not $resolvedBuildOutput.StartsWith($resolvedBuildRoot, [StringComparison]::OrdinalIgnoreCase)) { throw 'Build cleanup escaped build root' }
-      Remove-Item -LiteralPath $buildOutput -Recurse -Force -ErrorAction SilentlyContinue
+      try {
+        Remove-Item -LiteralPath $buildOutput -Recurse -Force -ErrorAction Stop
+      } catch {
+        Write-Warning "Build output was not fully removed: $buildOutput. $($_.Exception.Message)"
+      }
     }
   }
 }

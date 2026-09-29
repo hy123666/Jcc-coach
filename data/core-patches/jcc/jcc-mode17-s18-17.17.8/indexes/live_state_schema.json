@@ -1,0 +1,597 @@
+[
+  {
+    "address": "jcc:s17:live_state_field:round",
+    "key": "round",
+    "label": "current_round",
+    "type": "string",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:round_intent",
+      "jcc:s17:index:tempo_windows",
+      "jcc:s17:index:event_triggers"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:hp_lethal_tolerance",
+      "jcc:s17:formula:level_timing",
+      "jcc:s17:formula:reward_choice_score"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:stage",
+    "key": "stage",
+    "label": "current_stage",
+    "type": "number",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:round_intent",
+      "jcc:s17:index:tempo_windows",
+      "jcc:s17:index:health_economy_shifts"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:hp_lethal_tolerance",
+      "jcc:s17:formula:level_timing"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:gold",
+    "key": "gold",
+    "label": "current_gold",
+    "type": "number",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:resource_exchange",
+      "jcc:s17:index:risk_levels"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:economy",
+      "jcc:s17:formula:interest_break",
+      "jcc:s17:formula:level_timing",
+      "jcc:s17:formula:roll_down_budget"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:hp",
+    "key": "hp",
+    "label": "player_hp",
+    "type": "number",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:health_economy_shifts",
+      "jcc:s17:index:risk_levels"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:hp_lethal_tolerance",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:level",
+    "key": "level",
+    "label": "player_level",
+    "type": "number",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:pool_contest"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:shop_odds",
+      "jcc:s17:formula:roll_probability",
+      "jcc:s17:formula:level_timing"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:xp",
+    "key": "xp",
+    "label": "current_xp",
+    "type": "number",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:system_rule_overrides"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:level_timing"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:streak",
+    "key": "streak",
+    "label": "win_loss_streak",
+    "type": "number",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:tempo_windows"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:streak_value",
+      "jcc:s17:formula:economy"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:board_units",
+    "key": "board_units",
+    "label": "active_board_units",
+    "type": "array",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:trait_unit_matrix",
+      "jcc:s17:index:champion_role_profile",
+      "jcc:s17:index:champion_damage_profile"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:board_trait_count",
+      "jcc:s17:formula:unit_quality_score",
+      "jcc:s17:formula:trait_delta"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:bench_units",
+    "key": "bench_units",
+    "label": "bench_units",
+    "type": "array",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:champion_role_profile",
+      "jcc:s17:index:carry_substitution",
+      "jcc:s17:index:frontline_substitution"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:unit_quality_score",
+      "jcc:s17:formula:pivot_cost"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:shop_units",
+    "key": "shop_units",
+    "label": "current_shop_units",
+    "type": "array",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:pool_contest",
+      "jcc:s17:index:champion_role_profile"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:shop_specific_unit_odds",
+      "jcc:s17:formula:action_feasibility"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:components",
+    "key": "components",
+    "label": "owned_components",
+    "type": "array",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:component_to_item_candidates",
+      "jcc:s17:index:item_wait_cost"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:component_completion",
+      "jcc:s17:formula:item_marginal_value"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:completed_items",
+    "key": "completed_items",
+    "label": "owned_completed_items",
+    "type": "array",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:item_tags",
+      "jcc:s17:index:item_conflicts",
+      "jcc:s17:index:item_holder_fit"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:item_conflict_penalty",
+      "jcc:s17:formula:item_marginal_value"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:item_holders",
+    "key": "item_holders",
+    "label": "current_item_holders",
+    "type": "array",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:champion_item_fit",
+      "jcc:s17:index:item_holder_fit"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:item_marginal_value",
+      "jcc:s17:formula:stat_modifier_value"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:active_traits",
+    "key": "active_traits",
+    "label": "current_trait_counts",
+    "type": "object",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:trait_breakpoints",
+      "jcc:s17:index:trait_unit_matrix"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:trait_breakpoint_distance"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:augment_options",
+    "key": "augment_options",
+    "label": "visible_augment_options",
+    "type": "array",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:augment_compatibility",
+      "jcc:s17:index:augment_effect_blocks",
+      "jcc:s17:index:reward_choice_tags"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:augment_direction_score",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:reward_options",
+    "key": "reward_options",
+    "label": "visible_reward_options",
+    "type": "array",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:reward_choice_tags",
+      "jcc:s17:index:god_reward_effect_blocks",
+      "jcc:s17:index:encounter_effect_blocks",
+      "jcc:s17:index:god_reward_paths",
+      "jcc:s17:index:encounter_shift"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:god_reward_path_bias",
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:effect_block_value"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+    "key": "user_confirmed_scouting_notes",
+    "label": "user_confirmed_scouting_notes",
+    "type": "array",
+    "source_priority": [
+      "user_input",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:targeting_threat_templates",
+      "jcc:s17:index:scouting_priority"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:positioning_risk",
+      "jcc:s17:formula:scouting_priority_score",
+      "jcc:s17:formula:damage_mix"
+    ],
+    "runtime_policy": "Only explicit user input may populate this field; current-view tracker/OCR evidence cannot create opponent facts."
+  },
+  {
+    "address": "jcc:s17:live_state_field:match_variables",
+    "key": "match_variables",
+    "label": "encounter_god_stargazer_psionic_judge_mf",
+    "type": "object",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:per_match_variables",
+      "jcc:s17:index:per_match_variable_doorplates",
+      "jcc:s17:index:judge_law_pool",
+      "jcc:s17:index:rule_modifiers"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:god_reward_path_bias",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:trait_delta"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:time_left",
+    "key": "time_left",
+    "label": "decision_time_left_seconds",
+    "type": "number",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:operation_steps",
+      "jcc:s17:index:action_constraints"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:operation_time_budget",
+      "jcc:s17:formula:action_feasibility"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:timeline_events",
+    "key": "timeline_events",
+    "label": "match_timeline_events",
+    "type": "array",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:decision_event_schema",
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:loss_reasons"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:review_attribution_score",
+      "jcc:s17:formula:player_habit_bias"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:decision_events",
+    "key": "decision_events",
+    "label": "key_decision_events",
+    "type": "array",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:decision_event_schema",
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:player_habit_bias_schema"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:review_attribution_score",
+      "jcc:s17:formula:player_habit_bias"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:postgame_result",
+    "key": "postgame_result",
+    "label": "postgame_result_summary",
+    "type": "object",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:loss_reasons"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:review_attribution_score"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:recent_matches",
+    "key": "recent_matches",
+    "label": "recent_match_summaries",
+    "type": "array",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:player_habit_bias_schema",
+      "jcc:s17:index:review_attribution"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:player_habit_bias"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:user_feedback",
+    "key": "user_feedback",
+    "label": "user_feedback_notes",
+    "type": "array",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:player_habit_bias_schema"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:player_habit_bias"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:user_speed_profile",
+    "key": "user_speed_profile",
+    "label": "player_operation_speed_profile",
+    "type": "object",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:operation_steps",
+      "jcc:s17:index:action_constraints"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:operation_time_budget",
+      "jcc:s17:formula:action_feasibility"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:recognized_state",
+    "key": "recognized_state",
+    "label": "tracker_recognized_state_quality",
+    "type": "object",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:live_state_validation",
+      "jcc:s17:index:action_constraints"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:action_feasibility"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  },
+  {
+    "address": "jcc:s17:live_state_field:action_count",
+    "key": "action_count",
+    "label": "planned_action_count",
+    "type": "number",
+    "source_priority": [
+      "tracker_state",
+      "user_input",
+      "ocr_template",
+      "unknown"
+    ],
+    "related_indexes": [
+      "jcc:s17:index:operation_steps",
+      "jcc:s17:index:action_constraints"
+    ],
+    "related_formulas": [
+      "jcc:s17:formula:operation_time_budget",
+      "jcc:s17:formula:action_feasibility"
+    ],
+    "runtime_policy": "Live state supplies values; hard data supplies addresses, formulas, and validation constraints."
+  }
+]

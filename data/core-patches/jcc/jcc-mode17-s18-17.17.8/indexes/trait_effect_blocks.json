@@ -1,0 +1,4465 @@
+[
+  {
+    "address": "jcc:s17:trait_effect_blocks:400",
+    "trait_address": "jcc:s17:trait:400",
+    "trait_name": "幻灵战队",
+    "breakpoints": [
+      {
+        "count": 3,
+        "level": 1,
+        "color": 1,
+        "effect": "研发启动！ ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:400_1",
+          "raw": "研发启动！ ",
+          "values": [],
+          "numeric_values": [],
+          "effect_types": [],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "text_only"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 5,
+        "level": 2,
+        "color": 3,
+        "effect": "在每场玩家对战之后，获得战利品！",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:400_2",
+          "raw": "在每场玩家对战之后，获得战利品！",
+          "values": [],
+          "numeric_values": [],
+          "effect_types": [
+            "stat_buff",
+            "grant",
+            "loot"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:401",
+    "trait_address": "jcc:s17:trait:401",
+    "trait_name": "法官",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "选择一把武器。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:401_1",
+          "raw": "选择一把武器。 ",
+          "values": [],
+          "numeric_values": [],
+          "effect_types": [
+            "choice"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 3,
+        "level": 2,
+        "color": 3,
+        "effect": "效果变得更强。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:401_2",
+          "raw": "效果变得更强。",
+          "values": [],
+          "numeric_values": [],
+          "effect_types": [],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "text_only"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:reward_choice_score"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:402",
+    "trait_address": "jcc:s17:trait:402",
+    "trait_name": "木灵族",
+    "breakpoints": [
+      {
+        "count": 3,
+        "level": 1,
+        "color": 1,
+        "effect": "2，100【生命上限】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:402_1",
+          "raw": "2，100【生命上限】 ",
+          "values": [
+            "2",
+            "100"
+          ],
+          "numeric_values": [
+            {
+              "raw": "2",
+              "value": 2,
+              "unit": "number",
+              "context": "2，100【生命上限】 "
+            },
+            {
+              "raw": "100",
+              "value": 100,
+              "unit": "number",
+              "context": "2，100【生命上限】 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 5,
+        "level": 2,
+        "color": 2,
+        "effect": "3，350【生命上限】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:402_2",
+          "raw": "3，350【生命上限】 ",
+          "values": [
+            "3",
+            "350"
+          ],
+          "numeric_values": [
+            {
+              "raw": "3",
+              "value": 3,
+              "unit": "number",
+              "context": "3，350【生命上限】 "
+            },
+            {
+              "raw": "350",
+              "value": 350,
+              "unit": "number",
+              "context": "3，350【生命上限】 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 7,
+        "level": 3,
+        "color": 3,
+        "effect": "4，450【生命上限】。在你的备战席上生成一个克隆栏位。在克隆完成时，获得放置在该栏位的弈子的一个1星版本以及金币。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:402_3",
+          "raw": "4，450【生命上限】。在你的备战席上生成一个克隆栏位。在克隆完成时，获得放置在该栏位的弈子的一个1星版本以及金币。 ",
+          "values": [
+            "4",
+            "450",
+            "1"
+          ],
+          "numeric_values": [
+            {
+              "raw": "4",
+              "value": 4,
+              "unit": "number",
+              "context": "4，450【生命上限】。在你的"
+            },
+            {
+              "raw": "450",
+              "value": 450,
+              "unit": "number",
+              "context": "4，450【生命上限】。在你的备战席上"
+            },
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "获得放置在该栏位的弈子的一个1星版本以及金币。 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "summon",
+            "grant",
+            "economy"
+          ],
+          "tags": [
+            "economy",
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:economy",
+            "jcc:s17:formula:unit_quality_score",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:economy",
+          "jcc:s17:formula:unit_quality_score",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 10,
+        "level": 4,
+        "color": 4,
+        "effect": "6，550【生命上限】。召唤四大木灵领主！  克隆时间=弈子费用",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:402_4",
+          "raw": "6，550【生命上限】。召唤四大木灵领主！  克隆时间=弈子费用",
+          "values": [
+            "6",
+            "550"
+          ],
+          "numeric_values": [
+            {
+              "raw": "6",
+              "value": 6,
+              "unit": "number",
+              "context": "6，550【生命上限】。召唤四"
+            },
+            {
+              "raw": "550",
+              "value": 550,
+              "unit": "number",
+              "context": "6，550【生命上限】。召唤四大木灵领"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "summon",
+            "summon_scaling"
+          ],
+          "tags": [
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:unit_quality_score",
+            "jcc:s17:formula:summon_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:unit_quality_score",
+          "jcc:s17:formula:summon_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:economy",
+      "jcc:s17:formula:unit_quality_score",
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:summon_scaling",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:403",
+    "trait_address": "jcc:s17:trait:403",
+    "trait_name": "暗星",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "【暗星】创造【黑洞】，【黑洞】会吞噬低于最大生命值8%的敌人。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:403_1",
+          "raw": "【暗星】创造【黑洞】，【黑洞】会吞噬低于最大生命值8%的敌人。 ",
+          "values": [
+            "8%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "8%",
+              "value": 8,
+              "unit": "percent",
+              "context": "【黑洞】会吞噬低于最大生命值8%的敌人。 "
+            }
+          ],
+          "effect_types": [],
+          "tags": [
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 2,
+        "color": 2,
+        "effect": "并且他们获得45%【物理加成】【法术加成】。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:403_2",
+          "raw": "并且他们获得45%【物理加成】【法术加成】。 ",
+          "values": [
+            "45%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "45%",
+              "value": 45,
+              "unit": "percent",
+              "context": "并且他们获得45%【物理加成】【法术加成】。 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "grant"
+          ],
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 6,
+        "level": 3,
+        "color": 3,
+        "effect": "并且最强大的【暗星】单位进入【超大质量】状态，获得70%效能的【暗星】加成，并生成2个小型【黑洞】。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:403_3",
+          "raw": "并且最强大的【暗星】单位进入【超大质量】状态，获得70%效能的【暗星】加成，并生成2个小型【黑洞】。 ",
+          "values": [
+            "70%",
+            "2"
+          ],
+          "numeric_values": [
+            {
+              "raw": "70%",
+              "value": 70,
+              "unit": "percent",
+              "context": "位进入【超大质量】状态，获得70%效能的【暗星】加成，并生成2"
+            },
+            {
+              "raw": "2",
+              "value": 2,
+              "unit": "number",
+              "context": "%效能的【暗星】加成，并生成2个小型【黑洞】。 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "summon",
+            "grant",
+            "double_cast"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:double_cast_effectiveness",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:double_cast_effectiveness",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 9,
+        "level": 4,
+        "color": 4,
+        "effect": "所有的【暗星】进入【超大质量】状态。达到10级后，吞！噬！天！地！万！物！。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:403_4",
+          "raw": "所有的【暗星】进入【超大质量】状态。达到10级后，吞！噬！天！地！万！物！。",
+          "values": [
+            "10"
+          ],
+          "numeric_values": [
+            {
+              "raw": "10",
+              "value": 10,
+              "unit": "number",
+              "context": "】进入【超大质量】状态。达到10级后，吞！噬！天！地！万！物"
+            }
+          ],
+          "effect_types": [],
+          "tags": [
+            "aoe"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:positioning_risk",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:positioning_risk",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:positioning_risk",
+      "jcc:s17:formula:double_cast_effectiveness",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:404",
+    "trait_address": "jcc:s17:trait:404",
+    "trait_name": "霸天机甲",
+    "breakpoints": [
+      {
+        "count": 3,
+        "level": 1,
+        "color": 1,
+        "effect": "能量电芯：【霸天机甲】们获得25%【物理加成】【法术加成】。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:404_1",
+          "raw": "能量电芯：【霸天机甲】们获得25%【物理加成】【法术加成】。 ",
+          "values": [
+            "25%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "25%",
+              "value": 25,
+              "unit": "percent",
+              "context": "能量电芯：【霸天机甲】们获得25%【物理加成】【法术加成】。 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "grant"
+          ],
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 2,
+        "color": 2,
+        "effect": "超频电容：提升至40%【物理加成】【法术加成】。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:404_2",
+          "raw": "超频电容：提升至40%【物理加成】【法术加成】。 ",
+          "values": [
+            "40%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "40%",
+              "value": 40,
+              "unit": "percent",
+              "context": "超频电容：提升至40%【物理加成】【法术加成】。 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 6,
+        "level": 3,
+        "color": 3,
+        "effect": "精密工学：+1最大队伍规模",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:404_3",
+          "raw": "精密工学：+1最大队伍规模",
+          "values": [
+            "1"
+          ],
+          "numeric_values": [
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "精密工学：+1最大队伍规模"
+            }
+          ],
+          "effect_types": [],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:unit_quality_score",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange",
+      "jcc:s17:formula:pivot_cost"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:405",
+    "trait_address": "jcc:s17:trait:405",
+    "trait_name": "新星特攻队",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "对战开始6秒后，【新星特攻队】基于弈子效果，为友军提供一阵【能量激增】。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:405_1",
+          "raw": "对战开始6秒后，【新星特攻队】基于弈子效果，为友军提供一阵【能量激增】。 ",
+          "values": [
+            "6"
+          ],
+          "numeric_values": [
+            {
+              "raw": "6",
+              "value": 6,
+              "unit": "number",
+              "context": "对战开始6秒后，【新星特攻队】基于弈子"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "grant"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:unit_quality_score",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:unit_quality_score",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 5,
+        "level": 2,
+        "color": 3,
+        "effect": "获得1个【特攻队员选择器】。被选择的【新星特攻队】弈子会在【能量激增】期间激活其特攻技能。  【亚托克斯】：友军的伤害对敌人会施加30%魔抗击碎和护甲击碎【亚托克斯】：对敌人施加魔抗击碎和护甲击碎 【凯特琳】：为友军提供20%攻击速度【凯特琳】：提供攻击速度 【阿卡丽】：友军获得技能暴击【阿卡丽】：友军获得技能暴击 【茂凯】：友军治疗12%最大生命值【茂凯】：治疗友军 【千珏】：为你最强大的那个坦克提供800护盾值【千珏】：为1名友军提供护盾 【纹章】：友军造成10%可叠加的额外真实伤害【纹章】：造成额外真实伤害",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:405_2",
+          "raw": "获得1个【特攻队员选择器】。被选择的【新星特攻队】弈子会在【能量激增】期间激活其特攻技能。  【亚托克斯】：友军的伤害对敌人会施加30%魔抗击碎和护甲击碎【亚托克斯】：对敌人施加魔抗击碎和护甲击碎 【凯特琳】：为友军提供20%攻击速度【凯特琳】：提供攻击速度 【阿卡丽】：友军获得技能暴击【阿卡丽】：友军获得技能暴击 【茂凯】：友军治疗12%最大生命值【茂凯】：治疗友军 【千珏】：为你最强大的那个坦克提供800护盾值【千珏】：为1名友军提供护盾 【纹章】：友军造成10%可叠加的额外真实伤害【纹章】：造成额外真实伤害",
+          "values": [
+            "1",
+            "30%",
+            "20%",
+            "12%",
+            "800",
+            "1",
+            "10%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "获得1个【特攻队员选择器】。被选择"
+            },
+            {
+              "raw": "30%",
+              "value": 30,
+              "unit": "percent",
+              "context": "斯】：友军的伤害对敌人会施加30%魔抗击碎和护甲击碎【亚托克斯"
+            },
+            {
+              "raw": "20%",
+              "value": 20,
+              "unit": "percent",
+              "context": "击碎 【凯特琳】：为友军提供20%攻击速度【凯特琳】：提供攻击"
+            },
+            {
+              "raw": "12%",
+              "value": 12,
+              "unit": "percent",
+              "context": "技能暴击 【茂凯】：友军治疗12%最大生命值【茂凯】：治疗友军"
+            },
+            {
+              "raw": "800",
+              "value": 800,
+              "unit": "number",
+              "context": "】：为你最强大的那个坦克提供800护盾值【千珏】：为1名友军提"
+            },
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "提供800护盾值【千珏】：为1名友军提供护盾 【纹章】：友"
+            },
+            {
+              "raw": "10%",
+              "value": 10,
+              "unit": "percent",
+              "context": "提供护盾 【纹章】：友军造成10%可叠加的额外真实伤害【纹章】"
+            }
+          ],
+          "effect_types": [
+            "damage",
+            "heal",
+            "shield",
+            "stat_buff",
+            "stat_debuff",
+            "grant",
+            "choice"
+          ],
+          "tags": [
+            "armor",
+            "attack_speed",
+            "crit",
+            "emblem",
+            "health",
+            "magic_resist",
+            "shield",
+            "shred",
+            "sunder",
+            "true_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:shield_effective_hp",
+            "jcc:s17:formula:healing_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:penetration_effective_resist",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:unit_quality_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:defensive_marginal_value",
+            "jcc:s17:formula:ehp",
+            "jcc:s17:formula:attack_speed_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:shield_effective_hp",
+          "jcc:s17:formula:healing_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:penetration_effective_resist",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:unit_quality_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:defensive_marginal_value",
+          "jcc:s17:formula:ehp",
+          "jcc:s17:formula:attack_speed_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:shield_effective_hp",
+      "jcc:s17:formula:healing_effective_hp",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:penetration_effective_resist",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:unit_quality_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:406",
+    "trait_address": "jcc:s17:trait:406",
+    "trait_name": "海魔人",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "造成伤害时会基于独特【海魔人】的星级召唤【狂潮虫】。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:406_1",
+          "raw": "造成伤害时会基于独特【海魔人】的星级召唤【狂潮虫】。 ",
+          "values": [],
+          "numeric_values": [],
+          "effect_types": [
+            "damage",
+            "summon",
+            "summon_scaling"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:summon_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:summon_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 3,
+        "level": 2,
+        "color": 3,
+        "effect": "召唤额外的45%【狂潮虫】！在每场玩家对战后，获得1个随机的1费或2费弈子。  8%承受伤害会被计算至召唤【狂潮虫】的所需伤害。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:406_2",
+          "raw": "召唤额外的45%【狂潮虫】！在每场玩家对战后，获得1个随机的1费或2费弈子。  8%承受伤害会被计算至召唤【狂潮虫】的所需伤害。",
+          "values": [
+            "45%",
+            "1",
+            "1",
+            "2",
+            "8%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "45%",
+              "value": 45,
+              "unit": "percent",
+              "context": "召唤额外的45%【狂潮虫】！在每场玩家对战后"
+            },
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "虫】！在每场玩家对战后，获得1个随机的1费或2费弈子。  "
+            },
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "场玩家对战后，获得1个随机的1费或2费弈子。  8%承受伤"
+            },
+            {
+              "raw": "2",
+              "value": 2,
+              "unit": "number",
+              "context": "对战后，获得1个随机的1费或2费弈子。  8%承受伤害会被"
+            },
+            {
+              "raw": "8%",
+              "value": 8,
+              "unit": "percent",
+              "context": "个随机的1费或2费弈子。  8%承受伤害会被计算至召唤【狂潮"
+            }
+          ],
+          "effect_types": [
+            "damage",
+            "stat_buff",
+            "summon",
+            "grant",
+            "summon_scaling"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:unit_quality_score",
+            "jcc:s17:formula:summon_scaling",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:unit_quality_score",
+          "jcc:s17:formula:summon_scaling",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:unit_quality_score",
+      "jcc:s17:formula:summon_scaling",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:407",
+    "trait_address": "jcc:s17:trait:407",
+    "trait_name": "灵能特工",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "选择一把武器。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:407_1",
+          "raw": "选择一把武器。 ",
+          "values": [],
+          "numeric_values": [],
+          "effect_types": [
+            "choice"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 2,
+        "color": 3,
+        "effect": "选择一把武器。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:407_2",
+          "raw": "选择一把武器。",
+          "values": [],
+          "numeric_values": [],
+          "effect_types": [
+            "choice"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:408",
+    "trait_address": "jcc:s17:trait:408",
+    "trait_name": "太空律动",
+    "breakpoints": [
+      {
+        "count": 1,
+        "level": 1,
+        "color": 1,
+        "effect": "【太空律动】舞者们能够进入~太~空~律~动~。当进入这种状态时，他们获得攻击速度和最大生命值回复，你的队伍每有1名【太空律动】舞者还会进一步提升该加成。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:408_1",
+          "raw": "【太空律动】舞者们能够进入~太~空~律~动~。当进入这种状态时，他们获得攻击速度和最大生命值回复，你的队伍每有1名【太空律动】舞者还会进一步提升该加成。 ",
+          "values": [
+            "1"
+          ],
+          "numeric_values": [
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "最大生命值回复，你的队伍每有1名【太空律动】舞者还会进一步"
+            }
+          ],
+          "effect_types": [
+            "heal",
+            "stat_buff",
+            "grant"
+          ],
+          "tags": [
+            "attack_speed",
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:healing_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:attack_speed_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:healing_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:attack_speed_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 3,
+        "level": 2,
+        "color": 2,
+        "effect": "所有【太空律动】舞者在对战开始时进入~太~空~律~动~，持续4秒。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:408_2",
+          "raw": "所有【太空律动】舞者在对战开始时进入~太~空~律~动~，持续4秒。 ",
+          "values": [
+            "4"
+          ],
+          "numeric_values": [
+            {
+              "raw": "4",
+              "value": 4,
+              "unit": "number",
+              "context": "进入~太~空~律~动~，持续4秒。 "
+            }
+          ],
+          "effect_types": [],
+          "tags": [
+            "aoe"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:positioning_risk",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:positioning_risk",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 5,
+        "level": 3,
+        "color": 2,
+        "effect": "在~太~空~律~动~状态中每秒会获得5%可叠加的物理加成和法术加成。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:408_3",
+          "raw": "在~太~空~律~动~状态中每秒会获得5%可叠加的物理加成和法术加成。 ",
+          "values": [
+            "5%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "5%",
+              "value": 5,
+              "unit": "percent",
+              "context": "空~律~动~状态中每秒会获得5%可叠加的物理加成和法术加成。"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "grant"
+          ],
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 7,
+        "level": 4,
+        "color": 3,
+        "effect": "提升这些加成10%! ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:408_4",
+          "raw": "提升这些加成10%! ",
+          "values": [
+            "10%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "10%",
+              "value": 10,
+              "unit": "percent",
+              "context": "提升这些加成10%! "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 10,
+        "level": 5,
+        "color": 4,
+        "effect": "~跟~着~节~奏~动~起~来~！  ~太~空~律~动~:0.00%【攻击速度】，0.00%【生命回复】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:408_5",
+          "raw": "~跟~着~节~奏~动~起~来~！  ~太~空~律~动~:0.00%【攻击速度】，0.00%【生命回复】",
+          "values": [
+            "0.00%",
+            "0.00%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "0.00%",
+              "value": 0,
+              "unit": "percent",
+              "context": "~！  ~太~空~律~动~:0.00%【攻击速度】，0.00%【生"
+            },
+            {
+              "raw": "0.00%",
+              "value": 0,
+              "unit": "percent",
+              "context": "~:0.00%【攻击速度】，0.00%【生命回复】"
+            }
+          ],
+          "effect_types": [
+            "heal",
+            "stat_buff"
+          ],
+          "tags": [
+            "attack_speed",
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:healing_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:attack_speed_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:healing_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:attack_speed_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:healing_effective_hp",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:positioning_risk",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:409",
+    "trait_address": "jcc:s17:trait:409",
+    "trait_name": "观星者",
+    "breakpoints": [
+      {
+        "count": 3,
+        "level": 1,
+        "color": 1,
+        "effect": "1金币，2%【生命上限】，10%【物理加成】【法术加成】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:409_1",
+          "raw": "1金币，2%【生命上限】，10%【物理加成】【法术加成】",
+          "values": [
+            "1",
+            "2%",
+            "10%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "1金币，2%【生命上限】，10"
+            },
+            {
+              "raw": "2%",
+              "value": 2,
+              "unit": "percent",
+              "context": "1金币，2%【生命上限】，10%【物理加"
+            },
+            {
+              "raw": "10%",
+              "value": 10,
+              "unit": "percent",
+              "context": "1金币，2%【生命上限】，10%【物理加成】【法术加成】"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "economy"
+          ],
+          "tags": [
+            "economy",
+            "health",
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:economy",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:economy",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 2,
+        "color": 2,
+        "effect": "2金币，8%【生命上限】，15%【物理加成】【法术加成】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:409_2",
+          "raw": "2金币，8%【生命上限】，15%【物理加成】【法术加成】",
+          "values": [
+            "2",
+            "8%",
+            "15%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "2",
+              "value": 2,
+              "unit": "number",
+              "context": "2金币，8%【生命上限】，15"
+            },
+            {
+              "raw": "8%",
+              "value": 8,
+              "unit": "percent",
+              "context": "2金币，8%【生命上限】，15%【物理加"
+            },
+            {
+              "raw": "15%",
+              "value": 15,
+              "unit": "percent",
+              "context": "2金币，8%【生命上限】，15%【物理加成】【法术加成】"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "economy"
+          ],
+          "tags": [
+            "economy",
+            "health",
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:economy",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:economy",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 5,
+        "level": 3,
+        "color": 2,
+        "effect": "4金币，15%【生命上限】，25%【物理加成】【法术加成】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:409_3",
+          "raw": "4金币，15%【生命上限】，25%【物理加成】【法术加成】",
+          "values": [
+            "4",
+            "15%",
+            "25%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "4",
+              "value": 4,
+              "unit": "number",
+              "context": "4金币，15%【生命上限】，2"
+            },
+            {
+              "raw": "15%",
+              "value": 15,
+              "unit": "percent",
+              "context": "4金币，15%【生命上限】，25%【物理加"
+            },
+            {
+              "raw": "25%",
+              "value": 25,
+              "unit": "percent",
+              "context": "4金币，15%【生命上限】，25%【物理加成】【法术加成】"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "economy"
+          ],
+          "tags": [
+            "economy",
+            "health",
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:economy",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:economy",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 6,
+        "level": 4,
+        "color": 3,
+        "effect": "6金币，22%【生命上限】，30%【物理加成】【法术加成】  玩家等级每提升1级，就会有更多格子显露出来",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:409_4",
+          "raw": "6金币，22%【生命上限】，30%【物理加成】【法术加成】  玩家等级每提升1级，就会有更多格子显露出来",
+          "values": [
+            "6",
+            "22%",
+            "30%",
+            "1"
+          ],
+          "numeric_values": [
+            {
+              "raw": "6",
+              "value": 6,
+              "unit": "number",
+              "context": "6金币，22%【生命上限】，3"
+            },
+            {
+              "raw": "22%",
+              "value": 22,
+              "unit": "percent",
+              "context": "6金币，22%【生命上限】，30%【物理加"
+            },
+            {
+              "raw": "30%",
+              "value": 30,
+              "unit": "percent",
+              "context": "6金币，22%【生命上限】，30%【物理加成】【法术加成】  "
+            },
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "法术加成】  玩家等级每提升1级，就会有更多格子显露出来"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "economy"
+          ],
+          "tags": [
+            "economy",
+            "health",
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:economy",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:economy",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:economy",
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:410",
+    "trait_address": "jcc:s17:trait:410",
+    "trait_name": "未来战士",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "友军获得12%攻击速度。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:410_1",
+          "raw": "友军获得12%攻击速度。 ",
+          "values": [
+            "12%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "12%",
+              "value": 12,
+              "unit": "percent",
+              "context": "友军获得12%攻击速度。 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "grant"
+          ],
+          "tags": [
+            "attack_speed"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:attack_speed_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:attack_speed_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 3,
+        "level": 2,
+        "color": 2,
+        "effect": "并且当你输掉对战时，获得免费刷新次数。当你赢下对战时，将经验值储存至【时空核心】中(随阶段提升)。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:410_2",
+          "raw": "并且当你输掉对战时，获得免费刷新次数。当你赢下对战时，将经验值储存至【时空核心】中(随阶段提升)。 ",
+          "values": [],
+          "numeric_values": [],
+          "effect_types": [
+            "stat_buff",
+            "grant",
+            "choice",
+            "economy",
+            "schedule_shift"
+          ],
+          "tags": [
+            "economy"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:economy",
+            "jcc:s17:formula:encounter_rule_shift",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:cast_frequency",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:economy",
+          "jcc:s17:formula:encounter_rule_shift",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:cast_frequency",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 3,
+        "color": 3,
+        "effect": "并且【未来战士】们额外获得40%攻击速度  从失败中获得的刷新次数：0 从胜利中获得的经验值：0",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:410_3",
+          "raw": "并且【未来战士】们额外获得40%攻击速度  从失败中获得的刷新次数：0 从胜利中获得的经验值：0",
+          "values": [
+            "40%",
+            "0",
+            "0"
+          ],
+          "numeric_values": [
+            {
+              "raw": "40%",
+              "value": 40,
+              "unit": "percent",
+              "context": "并且【未来战士】们额外获得40%攻击速度  从失败中获得的刷"
+            },
+            {
+              "raw": "0",
+              "value": 0,
+              "unit": "number",
+              "context": "  从失败中获得的刷新次数：0 从胜利中获得的经验值：0"
+            },
+            {
+              "raw": "0",
+              "value": 0,
+              "unit": "number",
+              "context": "：0 从胜利中获得的经验值：0"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "grant",
+            "choice",
+            "economy"
+          ],
+          "tags": [
+            "attack_speed",
+            "economy"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:economy",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:cast_frequency",
+            "jcc:s17:formula:effect_block_value",
+            "jcc:s17:formula:attack_speed_scaling"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:economy",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:cast_frequency",
+          "jcc:s17:formula:effect_block_value",
+          "jcc:s17:formula:attack_speed_scaling"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:economy",
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:411",
+    "trait_address": "jcc:s17:trait:411",
+    "trait_name": "最高指挥官",
+    "breakpoints": [
+      {
+        "count": 1,
+        "level": 1,
+        "color": 5,
+        "effect": "每2个回合，【娑娜】都会给你一个随机的【指令模块】，它可允许你变更一个友军在战斗期间的行为方式。【指令模块】持续2场玩家对战，即使未被使用也依然如此。  选择一把武器。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:411_1",
+          "raw": "每2个回合，【娑娜】都会给你一个随机的【指令模块】，它可允许你变更一个友军在战斗期间的行为方式。【指令模块】持续2场玩家对战，即使未被使用也依然如此。  选择一把武器。",
+          "values": [
+            "2",
+            "2"
+          ],
+          "numeric_values": [
+            {
+              "raw": "2",
+              "value": 2,
+              "unit": "number",
+              "context": "每2个回合，【娑娜】都会给你一个"
+            },
+            {
+              "raw": "2",
+              "value": 2,
+              "unit": "number",
+              "context": "的行为方式。【指令模块】持续2场玩家对战，即使未被使用也依"
+            }
+          ],
+          "effect_types": [
+            "grant",
+            "choice"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:412",
+    "trait_address": "jcc:s17:trait:412",
+    "trait_name": "军工1号",
+    "breakpoints": [
+      {
+        "count": 1,
+        "level": 1,
+        "color": 5,
+        "effect": "参与对战后，打开一个武器库为你最强大的【格雷福斯】购买永久【升级】。  每有3个【升级】，后续【升级】都将多需要1回合。  下一个【升级】回合。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:412_1",
+          "raw": "参与对战后，打开一个武器库为你最强大的【格雷福斯】购买永久【升级】。  每有3个【升级】，后续【升级】都将多需要1回合。  下一个【升级】回合。",
+          "values": [
+            "3",
+            "1"
+          ],
+          "numeric_values": [
+            {
+              "raw": "3",
+              "value": 3,
+              "unit": "number",
+              "context": "】购买永久【升级】。  每有3个【升级】，后续【升级】都将"
+            },
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "级】，后续【升级】都将多需要1回合。  下一个【升级】回合"
+            }
+          ],
+          "effect_types": [
+            "choice",
+            "transform"
+          ],
+          "tags": [
+            "economy"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:pivot_cost",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:pivot_cost",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:pivot_cost"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:413",
+    "trait_address": "jcc:s17:trait:413",
+    "trait_name": "天煞",
+    "breakpoints": [
+      {
+        "count": 1,
+        "level": 1,
+        "color": 5,
+        "effect": "【劫】仅可通过强化符文【天煞灭影：劫】获得。  当至少有1个影分身存活时，【劫】额外获得40%物理加成。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:413_1",
+          "raw": "【劫】仅可通过强化符文【天煞灭影：劫】获得。  当至少有1个影分身存活时，【劫】额外获得40%物理加成。",
+          "values": [
+            "1",
+            "40%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "灭影：劫】获得。  当至少有1个影分身存活时，【劫】额外获"
+            },
+            {
+              "raw": "40%",
+              "value": 40,
+              "unit": "percent",
+              "context": "影分身存活时，【劫】额外获得40%物理加成。"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "grant",
+            "schedule_shift"
+          ],
+          "tags": [
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:encounter_rule_shift",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:encounter_rule_shift",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:415",
+    "trait_address": "jcc:s17:trait:415",
+    "trait_name": "武装战姬",
+    "breakpoints": [
+      {
+        "count": 1,
+        "level": 1,
+        "color": 5,
+        "effect": "当你登场【厄运小姐】时，需要在【神谕模式】、【挑战者模式】、以及【魔术师模式】中选择一种。【厄运小姐】的每个模式都会为其提供1个独特的技能，同时她获得对应的特质/职业。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:415_1",
+          "raw": "当你登场【厄运小姐】时，需要在【神谕模式】、【挑战者模式】、以及【魔术师模式】中选择一种。【厄运小姐】的每个模式都会为其提供1个独特的技能，同时她获得对应的特质/职业。",
+          "values": [
+            "1"
+          ],
+          "numeric_values": [
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "小姐】的每个模式都会为其提供1个独特的技能，同时她获得对应"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "grant",
+            "choice",
+            "transform"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:pivot_cost",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:pivot_cost",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange",
+      "jcc:s17:formula:pivot_cost"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:416",
+    "trait_address": "jcc:s17:trait:416",
+    "trait_name": "暮光铁壁",
+    "breakpoints": [
+      {
+        "count": 1,
+        "level": 1,
+        "color": 5,
+        "effect": "召唤一个可放置的【圣物】。对战开始时，【圣物】可为邻格友军提供一个10%最大生命值的护盾和10%攻击速度。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:416_1",
+          "raw": "召唤一个可放置的【圣物】。对战开始时，【圣物】可为邻格友军提供一个10%最大生命值的护盾和10%攻击速度。",
+          "values": [
+            "10%",
+            "10%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "10%",
+              "value": 10,
+              "unit": "percent",
+              "context": "【圣物】可为邻格友军提供一个10%最大生命值的护盾和10%攻击"
+            },
+            {
+              "raw": "10%",
+              "value": 10,
+              "unit": "percent",
+              "context": "一个10%最大生命值的护盾和10%攻击速度。"
+            }
+          ],
+          "effect_types": [
+            "shield",
+            "stat_buff",
+            "summon",
+            "grant",
+            "positioning",
+            "summon_scaling"
+          ],
+          "tags": [
+            "attack_speed",
+            "health",
+            "shield"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:shield_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:positioning_risk",
+            "jcc:s17:formula:summon_scaling",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:attack_speed_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:shield_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:positioning_risk",
+          "jcc:s17:formula:summon_scaling",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:attack_speed_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:shield_effective_hp",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:positioning_risk",
+      "jcc:s17:formula:summon_scaling",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:417",
+    "trait_address": "jcc:s17:trait:417",
+    "trait_name": "末日使者",
+    "breakpoints": [
+      {
+        "count": 1,
+        "level": 1,
+        "color": 5,
+        "effect": "对战开始时：将所有敌人刻印上【末日】标记。  每场对战敌人首次受到伤害时，他们的【末日】标记将被消耗，你最强大的【薇古丝】会从他们身上窃取12%物理加成和法术加成。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:417_1",
+          "raw": "对战开始时：将所有敌人刻印上【末日】标记。  每场对战敌人首次受到伤害时，他们的【末日】标记将被消耗，你最强大的【薇古丝】会从他们身上窃取12%物理加成和法术加成。",
+          "values": [
+            "12%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "12%",
+              "value": 12,
+              "unit": "percent",
+              "context": "的【薇古丝】会从他们身上窃取12%物理加成和法术加成。"
+            }
+          ],
+          "effect_types": [
+            "damage",
+            "stat_buff"
+          ],
+          "tags": [
+            "aoe",
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:positioning_risk",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:positioning_risk",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:positioning_risk"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:418",
+    "trait_address": "jcc:s17:trait:418",
+    "trait_name": "救世主",
+    "breakpoints": [
+      {
+        "count": 1,
+        "level": 1,
+        "color": 5,
+        "effect": "每激活一个非单人特质，你的队伍获得2%攻击速度，以及2护甲和魔抗。  队伍获得的攻击速度：0.0%【攻击速度】 队伍获得的双抗：0.0【护甲】【魔法抗性】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:418_1",
+          "raw": "每激活一个非单人特质，你的队伍获得2%攻击速度，以及2护甲和魔抗。  队伍获得的攻击速度：0.0%【攻击速度】 队伍获得的双抗：0.0【护甲】【魔法抗性】",
+          "values": [
+            "2%",
+            "2",
+            "0.0%",
+            "0.0"
+          ],
+          "numeric_values": [
+            {
+              "raw": "2%",
+              "value": 2,
+              "unit": "percent",
+              "context": "一个非单人特质，你的队伍获得2%攻击速度，以及2护甲和魔抗。"
+            },
+            {
+              "raw": "2",
+              "value": 2,
+              "unit": "number",
+              "context": "的队伍获得2%攻击速度，以及2护甲和魔抗。  队伍获得的攻"
+            },
+            {
+              "raw": "0.0%",
+              "value": 0,
+              "unit": "percent",
+              "context": "抗。  队伍获得的攻击速度：0.0%【攻击速度】 队伍获得的双抗"
+            },
+            {
+              "raw": "0.0",
+              "value": 0,
+              "unit": "number",
+              "context": "攻击速度】 队伍获得的双抗：0.0【护甲】【魔法抗性】"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "grant"
+          ],
+          "tags": [
+            "armor",
+            "attack_speed",
+            "magic_resist"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:defensive_marginal_value",
+            "jcc:s17:formula:ehp",
+            "jcc:s17:formula:attack_speed_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:defensive_marginal_value",
+          "jcc:s17:formula:ehp",
+          "jcc:s17:formula:attack_speed_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:419",
+    "trait_address": "jcc:s17:trait:419",
+    "trait_name": "汪星机器人",
+    "breakpoints": [
+      {
+        "count": 1,
+        "level": 1,
+        "color": 5,
+        "effect": "每场战斗仅一次，在生命值降至45%后，变得不可被选取并且每秒回复15%最大生命值。生命值回满或没有其他友军存活时，返回战斗。如果生命值已回满，【布里茨】进入~太~空~律~动~状态，并且【派对破坏王】的被动会以四倍速召唤雷电，持续至战斗结束。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:419_1",
+          "raw": "每场战斗仅一次，在生命值降至45%后，变得不可被选取并且每秒回复15%最大生命值。生命值回满或没有其他友军存活时，返回战斗。如果生命值已回满，【布里茨】进入~太~空~律~动~状态，并且【派对破坏王】的被动会以四倍速召唤雷电，持续至战斗结束。",
+          "values": [
+            "45%",
+            "15%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "45%",
+              "value": 45,
+              "unit": "percent",
+              "context": "每场战斗仅一次，在生命值降至45%后，变得不可被选取并且每秒回"
+            },
+            {
+              "raw": "15%",
+              "value": 15,
+              "unit": "percent",
+              "context": "，变得不可被选取并且每秒回复15%最大生命值。生命值回满或没有"
+            }
+          ],
+          "effect_types": [
+            "heal",
+            "summon",
+            "summon_scaling"
+          ],
+          "tags": [
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:healing_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:summon_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:healing_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:summon_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:healing_effective_hp",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:summon_scaling"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:420",
+    "trait_address": "jcc:s17:trait:420",
+    "trait_name": "黑暗魔女",
+    "breakpoints": [
+      {
+        "count": 1,
+        "level": 1,
+        "color": 5,
+        "effect": "你的队伍获得4%伤害减免，在【莫甘娜】处于她的【黑暗形态】之中时，该数值提升至10%。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:420_1",
+          "raw": "你的队伍获得4%伤害减免，在【莫甘娜】处于她的【黑暗形态】之中时，该数值提升至10%。",
+          "values": [
+            "4%",
+            "10%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "4%",
+              "value": 4,
+              "unit": "percent",
+              "context": "你的队伍获得4%伤害减免，在【莫甘娜】处于她"
+            },
+            {
+              "raw": "10%",
+              "value": 10,
+              "unit": "percent",
+              "context": "暗形态】之中时，该数值提升至10%。"
+            }
+          ],
+          "effect_types": [
+            "damage",
+            "stat_buff",
+            "grant"
+          ],
+          "tags": [
+            "durability"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:defensive_marginal_value",
+            "jcc:s17:formula:ehp",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:defensive_marginal_value",
+          "jcc:s17:formula:ehp",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:421",
+    "trait_address": "jcc:s17:trait:421",
+    "trait_name": "斗神",
+    "breakpoints": [
+      {
+        "count": 1,
+        "level": 1,
+        "color": 5,
+        "effect": "你的小小英雄在获胜时回复相当于15%造成小小英雄伤害的生命值。  【菲奥娜】总会在一对一的对决中胜出。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:421_1",
+          "raw": "你的小小英雄在获胜时回复相当于15%造成小小英雄伤害的生命值。  【菲奥娜】总会在一对一的对决中胜出。",
+          "values": [
+            "15%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "15%",
+              "value": 15,
+              "unit": "percent",
+              "context": "的小小英雄在获胜时回复相当于15%造成小小英雄伤害的生命值。 "
+            }
+          ],
+          "effect_types": [
+            "damage",
+            "heal"
+          ],
+          "tags": [
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:healing_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:unit_quality_score",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:healing_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:unit_quality_score",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:healing_effective_hp",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:unit_quality_score"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:422",
+    "trait_address": "jcc:s17:trait:422",
+    "trait_name": "灭星尊",
+    "breakpoints": [
+      {
+        "count": 1,
+        "level": 1,
+        "color": 5,
+        "effect": "敌人的护甲和魔抗降低10%。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:422_1",
+          "raw": "敌人的护甲和魔抗降低10%。",
+          "values": [
+            "10%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "10%",
+              "value": 10,
+              "unit": "percent",
+              "context": "敌人的护甲和魔抗降低10%。"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "stat_debuff"
+          ],
+          "tags": [
+            "armor",
+            "magic_resist",
+            "shred"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:penetration_effective_resist",
+            "jcc:s17:formula:defensive_marginal_value",
+            "jcc:s17:formula:ehp",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:penetration_effective_resist",
+          "jcc:s17:formula:defensive_marginal_value",
+          "jcc:s17:formula:ehp",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:penetration_effective_resist"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:310",
+    "trait_address": "jcc:s17:trait:310",
+    "trait_name": "堡垒卫士",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "16【护甲】【魔法抗性】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:310_1",
+          "raw": "16【护甲】【魔法抗性】 ",
+          "values": [
+            "16"
+          ],
+          "numeric_values": [
+            {
+              "raw": "16",
+              "value": 16,
+              "unit": "number",
+              "context": "16【护甲】【魔法抗性】 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "armor",
+            "magic_resist"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:defensive_marginal_value",
+            "jcc:s17:formula:ehp",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:defensive_marginal_value",
+          "jcc:s17:formula:ehp",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 2,
+        "color": 2,
+        "effect": "40【护甲】【魔法抗性】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:310_2",
+          "raw": "40【护甲】【魔法抗性】 ",
+          "values": [
+            "40"
+          ],
+          "numeric_values": [
+            {
+              "raw": "40",
+              "value": 40,
+              "unit": "number",
+              "context": "40【护甲】【魔法抗性】 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "armor",
+            "magic_resist"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:defensive_marginal_value",
+            "jcc:s17:formula:ehp",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:defensive_marginal_value",
+          "jcc:s17:formula:ehp",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 6,
+        "level": 3,
+        "color": 3,
+        "effect": "60【护甲】【魔法抗性】；非【堡垒卫士】单位额外获得20【护甲】【魔法抗性】。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:310_3",
+          "raw": "60【护甲】【魔法抗性】；非【堡垒卫士】单位额外获得20【护甲】【魔法抗性】。",
+          "values": [
+            "60",
+            "20"
+          ],
+          "numeric_values": [
+            {
+              "raw": "60",
+              "value": 60,
+              "unit": "number",
+              "context": "60【护甲】【魔法抗性】；非【堡"
+            },
+            {
+              "raw": "20",
+              "value": 20,
+              "unit": "number",
+              "context": "；非【堡垒卫士】单位额外获得20【护甲】【魔法抗性】。"
+            }
+          ],
+          "effect_types": [
+            "stat_buff",
+            "grant"
+          ],
+          "tags": [
+            "armor",
+            "magic_resist"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:defensive_marginal_value",
+            "jcc:s17:formula:ehp",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:defensive_marginal_value",
+          "jcc:s17:formula:ehp",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:311",
+    "trait_address": "jcc:s17:trait:311",
+    "trait_name": "斗士",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "+25%最大生命值",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:311_1",
+          "raw": "+25%最大生命值",
+          "values": [
+            "25%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "25%",
+              "value": 25,
+              "unit": "percent",
+              "context": "+25%最大生命值"
+            }
+          ],
+          "effect_types": [],
+          "tags": [
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 2,
+        "color": 2,
+        "effect": "+45%最大生命值",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:311_2",
+          "raw": "+45%最大生命值",
+          "values": [
+            "45%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "45%",
+              "value": 45,
+              "unit": "percent",
+              "context": "+45%最大生命值"
+            }
+          ],
+          "effect_types": [],
+          "tags": [
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 6,
+        "level": 3,
+        "color": 3,
+        "effect": "+65%最大生命值",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:311_3",
+          "raw": "+65%最大生命值",
+          "values": [
+            "65%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "65%",
+              "value": 65,
+              "unit": "percent",
+              "context": "+65%最大生命值"
+            }
+          ],
+          "effect_types": [],
+          "tags": [
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:312",
+    "trait_address": "jcc:s17:trait:312",
+    "trait_name": "挑战者",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "15%【攻击速度】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:312_1",
+          "raw": "15%【攻击速度】 ",
+          "values": [
+            "15%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "15%",
+              "value": 15,
+              "unit": "percent",
+              "context": "15%【攻击速度】 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "attack_speed"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:attack_speed_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:attack_speed_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 3,
+        "level": 2,
+        "color": 2,
+        "effect": "28%【攻击速度】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:312_2",
+          "raw": "28%【攻击速度】 ",
+          "values": [
+            "28%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "28%",
+              "value": 28,
+              "unit": "percent",
+              "context": "28%【攻击速度】 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "attack_speed"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:attack_speed_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:attack_speed_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 3,
+        "color": 2,
+        "effect": "42%【攻击速度】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:312_3",
+          "raw": "42%【攻击速度】 ",
+          "values": [
+            "42%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "42%",
+              "value": 42,
+              "unit": "percent",
+              "context": "42%【攻击速度】 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "attack_speed"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:attack_speed_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:attack_speed_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 5,
+        "level": 4,
+        "color": 3,
+        "effect": "55%【攻击速度】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:312_4",
+          "raw": "55%【攻击速度】",
+          "values": [
+            "55%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "55%",
+              "value": 55,
+              "unit": "percent",
+              "context": "55%【攻击速度】"
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "attack_speed"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:attack_speed_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:attack_speed_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:313",
+    "trait_address": "jcc:s17:trait:313",
+    "trait_name": "神谕",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "1【法力回复】##3【法力回复】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:313_1",
+          "raw": "1【法力回复】##3【法力回复】",
+          "values": [
+            "1",
+            "3"
+          ],
+          "numeric_values": [
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "1【法力回复】##3【法力回复"
+            },
+            {
+              "raw": "3",
+              "value": 3,
+              "unit": "number",
+              "context": "1【法力回复】##3【法力回复】"
+            }
+          ],
+          "effect_types": [
+            "heal"
+          ],
+          "tags": [
+            "health",
+            "mana"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:healing_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:healing_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 3,
+        "level": 2,
+        "color": 2,
+        "effect": "1【法力回复】##5【法力回复】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:313_2",
+          "raw": "1【法力回复】##5【法力回复】",
+          "values": [
+            "1",
+            "5"
+          ],
+          "numeric_values": [
+            {
+              "raw": "1",
+              "value": 1,
+              "unit": "number",
+              "context": "1【法力回复】##5【法力回复"
+            },
+            {
+              "raw": "5",
+              "value": 5,
+              "unit": "number",
+              "context": "1【法力回复】##5【法力回复】"
+            }
+          ],
+          "effect_types": [
+            "heal"
+          ],
+          "tags": [
+            "health",
+            "mana"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:healing_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:healing_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 3,
+        "color": 2,
+        "effect": "2【法力回复】##7【法力回复】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:313_3",
+          "raw": "2【法力回复】##7【法力回复】",
+          "values": [
+            "2",
+            "7"
+          ],
+          "numeric_values": [
+            {
+              "raw": "2",
+              "value": 2,
+              "unit": "number",
+              "context": "2【法力回复】##7【法力回复"
+            },
+            {
+              "raw": "7",
+              "value": 7,
+              "unit": "number",
+              "context": "2【法力回复】##7【法力回复】"
+            }
+          ],
+          "effect_types": [
+            "heal"
+          ],
+          "tags": [
+            "health",
+            "mana"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:healing_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:healing_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 5,
+        "level": 4,
+        "color": 3,
+        "effect": "2【法力回复】##9【法力回复】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:313_4",
+          "raw": "2【法力回复】##9【法力回复】",
+          "values": [
+            "2",
+            "9"
+          ],
+          "numeric_values": [
+            {
+              "raw": "2",
+              "value": 2,
+              "unit": "number",
+              "context": "2【法力回复】##9【法力回复"
+            },
+            {
+              "raw": "9",
+              "value": 9,
+              "unit": "number",
+              "context": "2【法力回复】##9【法力回复】"
+            }
+          ],
+          "effect_types": [
+            "heal"
+          ],
+          "tags": [
+            "health",
+            "mana"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:healing_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:healing_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "balance_patch": {
+      "version": "17.8",
+      "date": "2026-07-29",
+      "title": "星神·平衡性调整 S17.8",
+      "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+      "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js",
+      "patch_id": "s17_8",
+      "upstream_version": "17.17.8",
+      "changes": [
+        {
+          "id": "five_piece_ally_mana_regen",
+          "label": "(5)友军法力回复",
+          "before": 3,
+          "after": 2,
+          "unit": "mana_regen"
+        }
+      ]
+    },
+    "patch_value_overrides": [
+      {
+        "id": "five_piece_ally_mana_regen",
+        "label": "(5)友军法力回复",
+        "before": 3,
+        "after": 2,
+        "unit": "mana_regen"
+      }
+    ],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:healing_effective_hp",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:positioning_risk",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:314",
+    "trait_address": "jcc:s17:trait:314",
+    "trait_name": "织命人",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "技能中几率触发的效果拥有幸运。 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:314_1",
+          "raw": "技能中几率触发的效果拥有幸运。 ",
+          "values": [],
+          "numeric_values": [],
+          "effect_types": [],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "text_only"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 2,
+        "color": 3,
+        "effect": "获得20%暴击几率和20%暴击伤害。暴击也会拥有幸运。  技能暴击：技能伤害可产生暴击。额外的【技能暴击】提供10%暴击伤害。 幸运：触发时进行两次判定，取最优结果输出。",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:314_2",
+          "raw": "获得20%暴击几率和20%暴击伤害。暴击也会拥有幸运。  技能暴击：技能伤害可产生暴击。额外的【技能暴击】提供10%暴击伤害。 幸运：触发时进行两次判定，取最优结果输出。",
+          "values": [
+            "20%",
+            "20%",
+            "10%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "20%",
+              "value": 20,
+              "unit": "percent",
+              "context": "获得20%暴击几率和20%暴击伤害。暴"
+            },
+            {
+              "raw": "20%",
+              "value": 20,
+              "unit": "percent",
+              "context": "获得20%暴击几率和20%暴击伤害。暴击也会拥有幸运。"
+            },
+            {
+              "raw": "10%",
+              "value": 10,
+              "unit": "percent",
+              "context": "暴击。额外的【技能暴击】提供10%暴击伤害。 幸运：触发时进行"
+            }
+          ],
+          "effect_types": [
+            "damage",
+            "stat_buff",
+            "grant"
+          ],
+          "tags": [
+            "crit",
+            "magic_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:reward_choice_score",
+            "jcc:s17:formula:resource_exchange",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:resource_exchange",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:315",
+    "trait_address": "jcc:s17:trait:315",
+    "trait_name": "狂战士",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "5%【全能吸血】，18%【物理加成】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:315_1",
+          "raw": "5%【全能吸血】，18%【物理加成】 ",
+          "values": [
+            "5%",
+            "18%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "5%",
+              "value": 5,
+              "unit": "percent",
+              "context": "5%【全能吸血】，18%【物理加"
+            },
+            {
+              "raw": "18%",
+              "value": 18,
+              "unit": "percent",
+              "context": "5%【全能吸血】，18%【物理加成】 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "omnivamp",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:healing_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:healing_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 2,
+        "color": 2,
+        "effect": "7%【全能吸血】，35%【物理加成】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:315_2",
+          "raw": "7%【全能吸血】，35%【物理加成】 ",
+          "values": [
+            "7%",
+            "35%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "7%",
+              "value": 7,
+              "unit": "percent",
+              "context": "7%【全能吸血】，35%【物理加"
+            },
+            {
+              "raw": "35%",
+              "value": 35,
+              "unit": "percent",
+              "context": "7%【全能吸血】，35%【物理加成】 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "omnivamp",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:healing_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:healing_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 6,
+        "level": 3,
+        "color": 3,
+        "effect": "10%【全能吸血】，55%【物理加成】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:315_3",
+          "raw": "10%【全能吸血】，55%【物理加成】",
+          "values": [
+            "10%",
+            "55%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "10%",
+              "value": 10,
+              "unit": "percent",
+              "context": "10%【全能吸血】，55%【物理加"
+            },
+            {
+              "raw": "55%",
+              "value": 55,
+              "unit": "percent",
+              "context": "10%【全能吸血】，55%【物理加成】"
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "omnivamp",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:healing_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:healing_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:shield_effective_hp",
+      "jcc:s17:formula:healing_effective_hp",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:316",
+    "trait_address": "jcc:s17:trait:316",
+    "trait_name": "魔术师",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "22%效能",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:316_1",
+          "raw": "22%效能",
+          "values": [
+            "22%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "22%",
+              "value": 22,
+              "unit": "percent",
+              "context": "22%效能"
+            }
+          ],
+          "effect_types": [
+            "double_cast"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:double_cast_effectiveness",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:double_cast_effectiveness",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 2,
+        "color": 3,
+        "effect": "50%效能",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:316_2",
+          "raw": "50%效能",
+          "values": [
+            "50%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "50%",
+              "value": 50,
+              "unit": "percent",
+              "context": "50%效能"
+            }
+          ],
+          "effect_types": [
+            "double_cast"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:double_cast_effectiveness",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:double_cast_effectiveness",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:double_cast_effectiveness"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:317",
+    "trait_address": "jcc:s17:trait:317",
+    "trait_name": "游侠",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "12%【物理加成】【法术加成】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:317_1",
+          "raw": "12%【物理加成】【法术加成】 ",
+          "values": [
+            "12%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "12%",
+              "value": 12,
+              "unit": "percent",
+              "context": "12%【物理加成】【法术加成】 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 3,
+        "level": 2,
+        "color": 2,
+        "effect": "25%【物理加成】【法术加成】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:317_2",
+          "raw": "25%【物理加成】【法术加成】 ",
+          "values": [
+            "25%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "25%",
+              "value": 25,
+              "unit": "percent",
+              "context": "25%【物理加成】【法术加成】 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 3,
+        "color": 3,
+        "effect": "45%【物理加成】【法术加成】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:317_3",
+          "raw": "45%【物理加成】【法术加成】 ",
+          "values": [
+            "45%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "45%",
+              "value": 45,
+              "unit": "percent",
+              "context": "45%【物理加成】【法术加成】 "
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 5,
+        "level": 4,
+        "color": 3,
+        "effect": "60%【物理加成】【法术加成】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:317_4",
+          "raw": "60%【物理加成】【法术加成】",
+          "values": [
+            "60%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "60%",
+              "value": 60,
+              "unit": "percent",
+              "context": "60%【物理加成】【法术加成】"
+            }
+          ],
+          "effect_types": [
+            "stat_buff"
+          ],
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:positioning_risk",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:318",
+    "trait_address": "jcc:s17:trait:318",
+    "trait_name": "狙神",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "18%【伤害加成】；+2%【伤害加成】每格 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:318_1",
+          "raw": "18%【伤害加成】；+2%【伤害加成】每格 ",
+          "values": [
+            "18%",
+            "2%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "18%",
+              "value": 18,
+              "unit": "percent",
+              "context": "18%【伤害加成】；+2%【伤害加"
+            },
+            {
+              "raw": "2%",
+              "value": 2,
+              "unit": "percent",
+              "context": "18%【伤害加成】；+2%【伤害加成】每格 "
+            }
+          ],
+          "effect_types": [
+            "damage"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 3,
+        "level": 2,
+        "color": 2,
+        "effect": "25%【伤害加成】；+3%【伤害加成】每格 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:318_2",
+          "raw": "25%【伤害加成】；+3%【伤害加成】每格 ",
+          "values": [
+            "25%",
+            "3%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "25%",
+              "value": 25,
+              "unit": "percent",
+              "context": "25%【伤害加成】；+3%【伤害加"
+            },
+            {
+              "raw": "3%",
+              "value": 3,
+              "unit": "percent",
+              "context": "25%【伤害加成】；+3%【伤害加成】每格 "
+            }
+          ],
+          "effect_types": [
+            "damage"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 3,
+        "color": 3,
+        "effect": "35%【伤害加成】；+4%【伤害加成】每格",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:318_3",
+          "raw": "35%【伤害加成】；+4%【伤害加成】每格",
+          "values": [
+            "35%",
+            "4%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "35%",
+              "value": 35,
+              "unit": "percent",
+              "context": "35%【伤害加成】；+4%【伤害加"
+            },
+            {
+              "raw": "4%",
+              "value": 4,
+              "unit": "percent",
+              "context": "35%【伤害加成】；+4%【伤害加成】每格"
+            }
+          ],
+          "effect_types": [
+            "damage"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:319",
+    "trait_address": "jcc:s17:trait:319",
+    "trait_name": "牧羊人",
+    "breakpoints": [
+      {
+        "count": 3,
+        "level": 1,
+        "color": 1,
+        "effect": "召唤【羊咩咩】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:319_1",
+          "raw": "召唤【羊咩咩】 ",
+          "values": [],
+          "numeric_values": [],
+          "effect_types": [
+            "summon",
+            "summon_scaling"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:summon_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:summon_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 5,
+        "level": 2,
+        "color": 2,
+        "effect": "召唤【咩咩羊】 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:319_2",
+          "raw": "召唤【咩咩羊】 ",
+          "values": [],
+          "numeric_values": [],
+          "effect_types": [
+            "summon",
+            "summon_scaling"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:summon_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:summon_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 7,
+        "level": 3,
+        "color": 3,
+        "effect": "【羊咩咩】和【咩咩羊】的誓约更加深厚  【羊咩咩】和【咩咩羊】的强度会随【牧羊人】的星级总数而提升",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:319_3",
+          "raw": "【羊咩咩】和【咩咩羊】的誓约更加深厚  【羊咩咩】和【咩咩羊】的强度会随【牧羊人】的星级总数而提升",
+          "values": [],
+          "numeric_values": [],
+          "effect_types": [
+            "stat_buff",
+            "summon_scaling"
+          ],
+          "tags": [],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:summon_scaling",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:summon_scaling",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:summon_scaling"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:320",
+    "trait_address": "jcc:s17:trait:320",
+    "trait_name": "重装战士",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "16%最大生命值 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:320_1",
+          "raw": "16%最大生命值 ",
+          "values": [
+            "16%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "16%",
+              "value": 16,
+              "unit": "percent",
+              "context": "16%最大生命值 "
+            }
+          ],
+          "effect_types": [],
+          "tags": [
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 2,
+        "color": 2,
+        "effect": "30%最大生命值 ",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:320_2",
+          "raw": "30%最大生命值 ",
+          "values": [
+            "30%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "30%",
+              "value": 30,
+              "unit": "percent",
+              "context": "30%最大生命值 "
+            }
+          ],
+          "effect_types": [],
+          "tags": [
+            "health"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 6,
+        "level": 3,
+        "color": 3,
+        "effect": "40%最大生命值； 拥有护盾时：8%【伤害减免】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:320_3",
+          "raw": "40%最大生命值； 拥有护盾时：8%【伤害减免】",
+          "values": [
+            "40%",
+            "8%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "40%",
+              "value": 40,
+              "unit": "percent",
+              "context": "40%最大生命值； 拥有护盾时：8"
+            },
+            {
+              "raw": "8%",
+              "value": 8,
+              "unit": "percent",
+              "context": "%最大生命值； 拥有护盾时：8%【伤害减免】"
+            }
+          ],
+          "effect_types": [
+            "damage",
+            "shield"
+          ],
+          "tags": [
+            "durability",
+            "health",
+            "shield"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:shield_effective_hp",
+            "jcc:s17:formula:stat_modifier_value",
+            "jcc:s17:formula:defensive_marginal_value",
+            "jcc:s17:formula:ehp",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:shield_effective_hp",
+          "jcc:s17:formula:stat_modifier_value",
+          "jcc:s17:formula:defensive_marginal_value",
+          "jcc:s17:formula:ehp",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:shield_effective_hp",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  },
+  {
+    "address": "jcc:s17:trait_effect_blocks:321",
+    "trait_address": "jcc:s17:trait:321",
+    "trait_name": "旅人",
+    "breakpoints": [
+      {
+        "count": 2,
+        "level": 1,
+        "color": 1,
+        "effect": "175护盾；9%【伤害加成】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:321_1",
+          "raw": "175护盾；9%【伤害加成】",
+          "values": [
+            "175",
+            "9%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "175",
+              "value": 175,
+              "unit": "number",
+              "context": "175护盾；9%【伤害加成】"
+            },
+            {
+              "raw": "9%",
+              "value": 9,
+              "unit": "percent",
+              "context": "175护盾；9%【伤害加成】"
+            }
+          ],
+          "effect_types": [
+            "damage",
+            "shield"
+          ],
+          "tags": [
+            "shield"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:shield_effective_hp",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:shield_effective_hp",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 3,
+        "level": 2,
+        "color": 2,
+        "effect": "250护盾；15%【伤害加成】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:321_2",
+          "raw": "250护盾；15%【伤害加成】",
+          "values": [
+            "250",
+            "15%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "250",
+              "value": 250,
+              "unit": "number",
+              "context": "250护盾；15%【伤害加成】"
+            },
+            {
+              "raw": "15%",
+              "value": 15,
+              "unit": "percent",
+              "context": "250护盾；15%【伤害加成】"
+            }
+          ],
+          "effect_types": [
+            "damage",
+            "shield"
+          ],
+          "tags": [
+            "shield"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:shield_effective_hp",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:shield_effective_hp",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 4,
+        "level": 3,
+        "color": 3,
+        "effect": "350护盾；18%【伤害加成】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:321_3",
+          "raw": "350护盾；18%【伤害加成】",
+          "values": [
+            "350",
+            "18%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "350",
+              "value": 350,
+              "unit": "number",
+              "context": "350护盾；18%【伤害加成】"
+            },
+            {
+              "raw": "18%",
+              "value": 18,
+              "unit": "percent",
+              "context": "350护盾；18%【伤害加成】"
+            }
+          ],
+          "effect_types": [
+            "damage",
+            "shield"
+          ],
+          "tags": [
+            "shield"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:shield_effective_hp",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:shield_effective_hp",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 5,
+        "level": 4,
+        "color": 3,
+        "effect": "500护盾；22%【伤害加成】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:321_4",
+          "raw": "500护盾；22%【伤害加成】",
+          "values": [
+            "500",
+            "22%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "500",
+              "value": 500,
+              "unit": "number",
+              "context": "500护盾；22%【伤害加成】"
+            },
+            {
+              "raw": "22%",
+              "value": 22,
+              "unit": "percent",
+              "context": "500护盾；22%【伤害加成】"
+            }
+          ],
+          "effect_types": [
+            "damage",
+            "shield"
+          ],
+          "tags": [
+            "shield"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:shield_effective_hp",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:shield_effective_hp",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      },
+      {
+        "count": 6,
+        "level": 5,
+        "color": 3,
+        "effect": "700护盾；27%【伤害加成】",
+        "effect_block": {
+          "address": "jcc:s17:trait_breakpoint_effect_block:321_5",
+          "raw": "700护盾；27%【伤害加成】",
+          "values": [
+            "700",
+            "27%"
+          ],
+          "numeric_values": [
+            {
+              "raw": "700",
+              "value": 700,
+              "unit": "number",
+              "context": "700护盾；27%【伤害加成】"
+            },
+            {
+              "raw": "27%",
+              "value": 27,
+              "unit": "percent",
+              "context": "700护盾；27%【伤害加成】"
+            }
+          ],
+          "effect_types": [
+            "damage",
+            "shield"
+          ],
+          "tags": [
+            "shield"
+          ],
+          "formula_refs": [
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:shield_effective_hp",
+            "jcc:s17:formula:effect_block_value"
+          ],
+          "parse_status": "effect_block_heuristic"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:trait_breakpoint_distance",
+          "jcc:s17:formula:damage",
+          "jcc:s17:formula:damage_mix",
+          "jcc:s17:formula:shield_effective_hp",
+          "jcc:s17:formula:effect_block_value"
+        ]
+      }
+    ],
+    "patch_value_overrides": [],
+    "formula_refs": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:damage",
+      "jcc:s17:formula:damage_mix",
+      "jcc:s17:formula:shield_effective_hp",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_breakpoint_blocks"
+  }
+]

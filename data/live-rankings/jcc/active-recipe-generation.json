@@ -1,14 +1,13 @@
 {
   "schema": "jcc-live-ranking-active-recipe-generation-v1",
   "status": "active",
-  "core_profile_id": "a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151",
+  "core_profile_id": "e849f3cebd901093080c1ba030eb536a13c1fb72dbf3fbf02da2afc805c2d79c",
   "season_id": "s18",
-  "patch_id": "s18_2",
-  "generation_id": "38a4d0d8ac941d45ae0f5ab71ff58ce9ee8b137aaca1ddf868eadebb64588b4f",
-  "generation_path": "recipe-generations/38a4d0d8ac941d45ae0f5ab71ff58ce9ee8b137aaca1ddf868eadebb64588b4f/recipes.json",
+  "patch_id": "s18_3",
+  "generation_id": "ba1861f0f813aa6cf0ce547a60343be45277391463ccd1f25901463d69bb2ab1",
+  "generation_path": "recipe-generations/ba1861f0f813aa6cf0ce547a60343be45277391463ccd1f25901463d69bb2ab1/recipes.json",
   "source_roles": [
-    "popular_recipe",
     "winning_recipe"
   ],
-  "accepted_recipe_count": 574
+  "accepted_recipe_count": 523
 }

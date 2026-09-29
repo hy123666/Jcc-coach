@@ -1,0 +1,1238 @@
+{
+  "address": "jcc:s17:index:per_match_variable_doorplates",
+  "source_index": "jcc:s17:index:per_match_variables",
+  "live_state_field": "jcc:s17:live_state_field:match_variables",
+  "variable_count": 6,
+  "lookup_ref_root": "jcc:s17:lookup_ref:per_match_variable",
+  "variables": [
+    {
+      "address": "jcc:s17:per_match_variable_doorplate:encounter",
+      "variable_key": "encounter",
+      "label": "本局奇遇",
+      "default": "unknown",
+      "options_source": "jcc_official_galaxy",
+      "option_count": 19,
+      "option_refs": [
+        "jcc:s17:encounter:17980",
+        "jcc:s17:encounter:17981",
+        "jcc:s17:encounter:17982",
+        "jcc:s17:encounter:17983",
+        "jcc:s17:encounter:17984",
+        "jcc:s17:encounter:17985",
+        "jcc:s17:encounter:17986",
+        "jcc:s17:encounter:17987",
+        "jcc:s17:encounter:17988",
+        "jcc:s17:encounter:17989",
+        "jcc:s17:encounter:17990",
+        "jcc:s17:encounter:17991",
+        "jcc:s17:encounter:17992",
+        "jcc:s17:encounter:17993",
+        "jcc:s17:encounter:17994",
+        "jcc:s17:encounter:17995",
+        "jcc:s17:encounter:17996",
+        "jcc:s17:encounter:171002",
+        "jcc:s17:encounter:171003"
+      ],
+      "options_preview": [
+        {
+          "id": "17980",
+          "name": "金金金之旅",
+          "address": "jcc:s17:encounter:17980",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": []
+        },
+        {
+          "id": "17981",
+          "name": "彩彩彩之旅",
+          "address": "jcc:s17:encounter:17981",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "aoe"
+          ]
+        },
+        {
+          "id": "17982",
+          "name": "棱彩终章",
+          "address": "jcc:s17:encounter:17982",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": []
+        },
+        {
+          "id": "17983",
+          "name": "棱彩前奏",
+          "address": "jcc:s17:encounter:17983",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": []
+        },
+        {
+          "id": "17984",
+          "name": "3费开局",
+          "address": "jcc:s17:encounter:17984",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": []
+        },
+        {
+          "id": "17985",
+          "name": "2费开局",
+          "address": "jcc:s17:encounter:17985",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": []
+        },
+        {
+          "id": "17986",
+          "name": "2星开局",
+          "address": "jcc:s17:encounter:17986",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": []
+        },
+        {
+          "id": "17987",
+          "name": "基础装备锻造器",
+          "address": "jcc:s17:encounter:17987",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "item_reward"
+          ]
+        },
+        {
+          "id": "17988",
+          "name": "战利品订阅",
+          "address": "jcc:s17:encounter:17988",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": []
+        },
+        {
+          "id": "17989",
+          "name": "纹章剧团",
+          "address": "jcc:s17:encounter:17989",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "emblem"
+          ]
+        },
+        {
+          "id": "17990",
+          "name": "金币订阅",
+          "address": "jcc:s17:encounter:17990",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "economy"
+          ]
+        },
+        {
+          "id": "17991",
+          "name": "没有奇遇",
+          "address": "jcc:s17:encounter:17991",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": []
+        },
+        {
+          "id": "17992",
+          "name": "嚎哭深渊",
+          "address": "jcc:s17:encounter:17992",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": []
+        },
+        {
+          "id": "17993",
+          "name": "《Silver Scrapes》战歌响起",
+          "address": "jcc:s17:encounter:17993",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "economy"
+          ]
+        },
+        {
+          "id": "17994",
+          "name": "强化符文刷新",
+          "address": "jcc:s17:encounter:17994",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": []
+        },
+        {
+          "id": "17995",
+          "name": "双重复制器",
+          "address": "jcc:s17:encounter:17995",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "duplicator"
+          ]
+        },
+        {
+          "id": "17996",
+          "name": "神器锻造器",
+          "address": "jcc:s17:encounter:17996",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "aoe",
+            "item_reward"
+          ]
+        },
+        {
+          "id": "171002",
+          "name": "更便宜的等级",
+          "address": "jcc:s17:encounter:171002",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "economy"
+          ]
+        },
+        {
+          "id": "171003",
+          "name": "刷新开局",
+          "address": "jcc:s17:encounter:171003",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "economy"
+          ]
+        }
+      ],
+      "activation_gate": null,
+      "value_shape": null,
+      "pool_index": "jcc:s17:index:encounter_shift",
+      "patch_value_overrides": null,
+      "related_pool_address": null,
+      "related_pool_lookup_ref": null,
+      "visible_subset_contract": null,
+      "runtime_capture_schema": null,
+      "scoring_contract": null,
+      "second_effect_modifier": null,
+      "route_refs": [
+        "jcc:s17:runtime_query_route:reward_choice",
+        "jcc:s17:runtime_query_route:augment_choice",
+        "jcc:s17:runtime_query_route:roll_or_level",
+        "jcc:s17:runtime_query_route:postgame_review"
+      ],
+      "live_state_fields": [
+        "jcc:s17:live_state_field:match_variables"
+      ],
+      "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter",
+      "capture_policy": {
+        "activation_required": false,
+        "activation_gate": null,
+        "runtime_visible_only": false,
+        "capture_fields": [
+          "selected_value"
+        ],
+        "source_priority": [
+          "user_input",
+          "ocr_future",
+          "unknown"
+        ],
+        "unknown_policy": "Unknown is allowed with confidence penalty; ask only if the variable changes the current route decision.",
+        "patch_truth_policy": "Options are official when options_source is present; selected value is match-scoped."
+      },
+      "runtime_contract": {
+        "read_before_routes": [
+          "jcc:s17:runtime_query_route:reward_choice",
+          "jcc:s17:runtime_query_route:augment_choice",
+          "jcc:s17:runtime_query_route:roll_or_level",
+          "jcc:s17:runtime_query_route:postgame_review"
+        ],
+        "can_be_unknown": true,
+        "must_not_global_scan": true,
+        "use_lookup_doorplate_first": true
+      }
+    },
+    {
+      "address": "jcc:s17:per_match_variable_doorplate:current_god",
+      "variable_key": "current_god",
+      "label": "本局星神",
+      "default": "unknown",
+      "options_source": "jcc_official_god_reward_paths",
+      "option_count": 9,
+      "option_refs": [
+        "jcc:s17:god_reward_path:奥瑞利安_索尔_造物之神",
+        "jcc:s17:god_reward_path:亚索_深渊之神",
+        "jcc:s17:god_reward_path:凯尔_秩序之神",
+        "jcc:s17:god_reward_path:阿狸_财富之神",
+        "jcc:s17:god_reward_path:韦鲁斯_爱神",
+        "jcc:s17:god_reward_path:艾克_时间之神",
+        "jcc:s17:god_reward_path:锤石_契约之神",
+        "jcc:s17:god_reward_path:索拉卡_众星之神",
+        "jcc:s17:god_reward_path:伊芙琳_诱惑之神"
+      ],
+      "options_preview": [
+        {
+          "id": "2",
+          "name": "奥瑞利安·索尔 造物之神",
+          "address": "jcc:s17:god_reward_path:奥瑞利安_索尔_造物之神",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "亚索 深渊之神",
+          "address": "jcc:s17:god_reward_path:亚索_深渊之神",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "4",
+          "name": "凯尔 秩序之神",
+          "address": "jcc:s17:god_reward_path:凯尔_秩序之神",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "5",
+          "name": "阿狸 财富之神",
+          "address": "jcc:s17:god_reward_path:阿狸_财富之神",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "6",
+          "name": "韦鲁斯 爱神",
+          "address": "jcc:s17:god_reward_path:韦鲁斯_爱神",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "7",
+          "name": "艾克 时间之神",
+          "address": "jcc:s17:god_reward_path:艾克_时间之神",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "8",
+          "name": "锤石 契约之神",
+          "address": "jcc:s17:god_reward_path:锤石_契约之神",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "9",
+          "name": "索拉卡 众星之神",
+          "address": "jcc:s17:god_reward_path:索拉卡_众星之神",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "10",
+          "name": "伊芙琳 诱惑之神",
+          "address": "jcc:s17:god_reward_path:伊芙琳_诱惑之神",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "god_reward_path"
+          ]
+        }
+      ],
+      "activation_gate": null,
+      "value_shape": null,
+      "pool_index": "jcc:s17:index:god_reward_paths",
+      "patch_value_overrides": null,
+      "related_pool_address": null,
+      "related_pool_lookup_ref": null,
+      "visible_subset_contract": null,
+      "runtime_capture_schema": null,
+      "scoring_contract": null,
+      "second_effect_modifier": null,
+      "route_refs": [
+        "jcc:s17:runtime_query_route:reward_choice",
+        "jcc:s17:runtime_query_route:augment_choice",
+        "jcc:s17:runtime_query_route:roll_or_level",
+        "jcc:s17:runtime_query_route:postgame_review"
+      ],
+      "live_state_fields": [
+        "jcc:s17:live_state_field:match_variables"
+      ],
+      "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god",
+      "capture_policy": {
+        "activation_required": false,
+        "activation_gate": null,
+        "runtime_visible_only": false,
+        "capture_fields": [
+          "selected_value"
+        ],
+        "source_priority": [
+          "user_input",
+          "ocr_future",
+          "unknown"
+        ],
+        "unknown_policy": "Unknown is allowed with confidence penalty; ask only if the variable changes the current route decision.",
+        "patch_truth_policy": "Options are official when options_source is present; selected value is match-scoped."
+      },
+      "runtime_contract": {
+        "read_before_routes": [
+          "jcc:s17:runtime_query_route:reward_choice",
+          "jcc:s17:runtime_query_route:augment_choice",
+          "jcc:s17:runtime_query_route:roll_or_level",
+          "jcc:s17:runtime_query_route:postgame_review"
+        ],
+        "can_be_unknown": true,
+        "must_not_global_scan": true,
+        "use_lookup_doorplate_first": true
+      }
+    },
+    {
+      "address": "jcc:s17:per_match_variable_doorplate:stargazer_constellation",
+      "variable_key": "stargazer_constellation",
+      "label": "观星者星座/效果",
+      "default": "unknown",
+      "options_source": "jcc_official_stargazer_constellation",
+      "option_count": 7,
+      "option_refs": [
+        "jcc:s17:stargazer_constellation:huntress",
+        "jcc:s17:stargazer_constellation:medal",
+        "jcc:s17:stargazer_constellation:viper",
+        "jcc:s17:stargazer_constellation:xiushan",
+        "jcc:s17:stargazer_constellation:boar",
+        "jcc:s17:stargazer_constellation:altar",
+        "jcc:s17:stargazer_constellation:spring"
+      ],
+      "options_preview": [
+        {
+          "id": "huntress",
+          "name": "女猎手",
+          "address": "jcc:s17:stargazer_constellation:huntress",
+          "granted_trait_address": null,
+          "balance_patch": {
+            "version": "17.8",
+            "date": "2026-07-29",
+            "title": "星神·平衡性调整 S17.8",
+            "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+            "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js",
+            "runtime_variable": "stargazer_constellation",
+            "changes": [
+              {
+                "id": "huntress_team_attack_speed_pct",
+                "label": "基础全队攻速",
+                "before": 12,
+                "after": 15,
+                "unit": "percent"
+              }
+            ]
+          },
+          "tags": [
+            "stargazer",
+            "attack_speed",
+            "team_buff"
+          ]
+        },
+        {
+          "id": "medal",
+          "name": "勋章",
+          "address": "jcc:s17:stargazer_constellation:medal",
+          "granted_trait_address": null,
+          "balance_patch": {
+            "version": "17.8",
+            "date": "2026-07-29",
+            "title": "星神·平衡性调整 S17.8",
+            "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+            "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js",
+            "runtime_variable": "stargazer_constellation",
+            "changes": [
+              {
+                "id": "medal_damage_amp_pct",
+                "label": "基础伤害提升",
+                "before": 12,
+                "after": 15,
+                "unit": "percent"
+              }
+            ]
+          },
+          "tags": [
+            "stargazer",
+            "damage_amp"
+          ]
+        },
+        {
+          "id": "viper",
+          "name": "蝰蛇",
+          "address": "jcc:s17:stargazer_constellation:viper",
+          "granted_trait_address": null,
+          "balance_patch": {
+            "version": "17.8",
+            "date": "2026-07-29",
+            "title": "星神·平衡性调整 S17.8",
+            "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+            "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js",
+            "runtime_variable": "stargazer_constellation",
+            "changes": [
+              {
+                "id": "viper_magic_damage_pct",
+                "label": "剧毒伤害",
+                "before": [
+                  18,
+                  35,
+                  50
+                ],
+                "after": [
+                  25,
+                  45,
+                  60
+                ],
+                "unit": "percent",
+                "calculation_timing": "before_damage_reduction"
+              }
+            ]
+          },
+          "tags": [
+            "stargazer",
+            "poison",
+            "magic_damage"
+          ]
+        },
+        {
+          "id": "xiushan",
+          "name": "秀山",
+          "address": "jcc:s17:stargazer_constellation:xiushan",
+          "granted_trait_address": null,
+          "balance_patch": {
+            "version": "17.8",
+            "date": "2026-07-29",
+            "title": "星神·平衡性调整 S17.8",
+            "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+            "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js",
+            "runtime_variable": "stargazer_constellation",
+            "changes": [
+              {
+                "id": "xiushan_attack_speed_pct",
+                "label": "攻击速度",
+                "before": 10,
+                "after": 8,
+                "unit": "percent"
+              },
+              {
+                "id": "xiushan_damage_reduction_pct",
+                "label": "伤害减免",
+                "before": 6,
+                "after": 5,
+                "unit": "percent"
+              }
+            ]
+          },
+          "tags": [
+            "stargazer",
+            "attack_speed",
+            "damage_reduction"
+          ]
+        },
+        {
+          "id": "boar",
+          "name": "野猪",
+          "address": "jcc:s17:stargazer_constellation:boar",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "stargazer",
+            "economy",
+            "health",
+            "physical_damage",
+            "magic_damage"
+          ]
+        },
+        {
+          "id": "altar",
+          "name": "圣坛",
+          "address": "jcc:s17:stargazer_constellation:altar",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "stargazer",
+            "utility"
+          ]
+        },
+        {
+          "id": "spring",
+          "name": "泉水",
+          "address": "jcc:s17:stargazer_constellation:spring",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "stargazer",
+            "sustain",
+            "utility"
+          ]
+        }
+      ],
+      "activation_gate": null,
+      "value_shape": null,
+      "pool_index": null,
+      "patch_value_overrides": {
+        "version": "17.8",
+        "date": "2026-07-29",
+        "title": "星神·平衡性调整 S17.8",
+        "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+        "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js",
+        "runtime_variable": "stargazer_constellation",
+        "changes": [
+          {
+            "id": "huntress_team_attack_speed_pct",
+            "label": "基础全队攻速",
+            "before": 12,
+            "after": 15,
+            "unit": "percent"
+          },
+          {
+            "id": "medal_damage_amp_pct",
+            "label": "基础伤害提升",
+            "before": 12,
+            "after": 15,
+            "unit": "percent"
+          },
+          {
+            "id": "viper_magic_damage_pct",
+            "label": "剧毒伤害",
+            "before": [
+              18,
+              35,
+              50
+            ],
+            "after": [
+              25,
+              45,
+              60
+            ],
+            "unit": "percent",
+            "calculation_timing": "before_damage_reduction"
+          },
+          {
+            "id": "xiushan_attack_speed_pct",
+            "label": "攻击速度",
+            "before": 10,
+            "after": 8,
+            "unit": "percent"
+          },
+          {
+            "id": "xiushan_damage_reduction_pct",
+            "label": "伤害减免",
+            "before": 6,
+            "after": 5,
+            "unit": "percent"
+          }
+        ]
+      },
+      "related_pool_address": null,
+      "related_pool_lookup_ref": null,
+      "visible_subset_contract": null,
+      "runtime_capture_schema": null,
+      "scoring_contract": null,
+      "second_effect_modifier": null,
+      "route_refs": [
+        "jcc:s17:runtime_query_route:reward_choice",
+        "jcc:s17:runtime_query_route:trait_or_unit_swap",
+        "jcc:s17:runtime_query_route:positioning",
+        "jcc:s17:runtime_query_route:postgame_review"
+      ],
+      "live_state_fields": [
+        "jcc:s17:live_state_field:match_variables"
+      ],
+      "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation",
+      "capture_policy": {
+        "activation_required": false,
+        "activation_gate": null,
+        "runtime_visible_only": false,
+        "capture_fields": [
+          "selected_value"
+        ],
+        "source_priority": [
+          "user_input",
+          "ocr_future",
+          "unknown"
+        ],
+        "unknown_policy": "Unknown is allowed with confidence penalty; ask only if the variable changes the current route decision.",
+        "patch_truth_policy": "Options are official when options_source is present; selected value is match-scoped."
+      },
+      "runtime_contract": {
+        "read_before_routes": [
+          "jcc:s17:runtime_query_route:reward_choice",
+          "jcc:s17:runtime_query_route:trait_or_unit_swap",
+          "jcc:s17:runtime_query_route:positioning",
+          "jcc:s17:runtime_query_route:postgame_review"
+        ],
+        "can_be_unknown": true,
+        "must_not_global_scan": true,
+        "use_lookup_doorplate_first": true
+      }
+    },
+    {
+      "address": "jcc:s17:per_match_variable_doorplate:psionic_weapon",
+      "variable_key": "psionic_weapon",
+      "label": "灵能特工武器",
+      "default": "unknown",
+      "options_source": "jcc_official_equip",
+      "option_count": 5,
+      "option_refs": [
+        "jcc:s17:item:9251",
+        "jcc:s17:item:9252",
+        "jcc:s17:item:9253",
+        "jcc:s17:item:9255",
+        "jcc:s17:item:9256"
+      ],
+      "options_preview": [
+        {
+          "id": "9251",
+          "name": "无人机上行链路",
+          "address": "jcc:s17:item:9251",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "damage_amp",
+            "persistent_effect",
+            "recommended_holder_text",
+            "single_target"
+          ]
+        },
+        {
+          "id": "9252",
+          "name": "恶意软件矩阵",
+          "address": "jcc:s17:item:9252",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "aoe",
+            "armor",
+            "attack_speed",
+            "damage_amp",
+            "magic_damage",
+            "magic_resist",
+            "omnivamp",
+            "persistent_effect",
+            "physical_damage",
+            "recommended_holder_text",
+            "shred",
+            "single_target",
+            "sunder"
+          ]
+        },
+        {
+          "id": "9253",
+          "name": "生物质维护器",
+          "address": "jcc:s17:item:9253",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "aoe",
+            "health",
+            "persistent_effect",
+            "recommended_holder_text"
+          ]
+        },
+        {
+          "id": "9255",
+          "name": "共感植入",
+          "address": "jcc:s17:item:9255",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "attack_speed",
+            "damage_amp",
+            "health",
+            "magic_damage",
+            "mana",
+            "persistent_effect",
+            "physical_damage",
+            "recommended_holder_text",
+            "true_damage"
+          ]
+        },
+        {
+          "id": "9256",
+          "name": "锁敌光学设备",
+          "address": "jcc:s17:item:9256",
+          "granted_trait_address": null,
+          "balance_patch": null,
+          "tags": [
+            "attack_speed",
+            "health",
+            "magic_damage",
+            "physical_damage",
+            "recommended_holder_text",
+            "single_target"
+          ]
+        }
+      ],
+      "activation_gate": null,
+      "value_shape": null,
+      "pool_index": null,
+      "patch_value_overrides": null,
+      "related_pool_address": null,
+      "related_pool_lookup_ref": null,
+      "visible_subset_contract": null,
+      "runtime_capture_schema": null,
+      "scoring_contract": null,
+      "second_effect_modifier": null,
+      "route_refs": [
+        "jcc:s17:runtime_query_route:reward_choice",
+        "jcc:s17:runtime_query_route:item_craft",
+        "jcc:s17:runtime_query_route:holder_assignment",
+        "jcc:s17:runtime_query_route:postgame_review"
+      ],
+      "live_state_fields": [
+        "jcc:s17:live_state_field:match_variables"
+      ],
+      "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon",
+      "capture_policy": {
+        "activation_required": false,
+        "activation_gate": null,
+        "runtime_visible_only": false,
+        "capture_fields": [
+          "selected_value"
+        ],
+        "source_priority": [
+          "user_input",
+          "ocr_future",
+          "unknown"
+        ],
+        "unknown_policy": "Unknown is allowed with confidence penalty; ask only if the variable changes the current route decision.",
+        "patch_truth_policy": "Options are official when options_source is present; selected value is match-scoped."
+      },
+      "runtime_contract": {
+        "read_before_routes": [
+          "jcc:s17:runtime_query_route:reward_choice",
+          "jcc:s17:runtime_query_route:item_craft",
+          "jcc:s17:runtime_query_route:holder_assignment",
+          "jcc:s17:runtime_query_route:postgame_review"
+        ],
+        "can_be_unknown": true,
+        "must_not_global_scan": true,
+        "use_lookup_doorplate_first": true
+      }
+    },
+    {
+      "address": "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+      "variable_key": "miss_fortune_mode",
+      "label": "厄运小姐模式",
+      "default": "unknown",
+      "options_source": "jcc_official_trait_text",
+      "option_count": 3,
+      "option_refs": [
+        "jcc:s17:per_match_variable_option:miss_fortune_mode_神谕模式",
+        "jcc:s17:per_match_variable_option:miss_fortune_mode_挑战者模式",
+        "jcc:s17:per_match_variable_option:miss_fortune_mode_魔术师模式"
+      ],
+      "options_preview": [
+        {
+          "id": "神谕模式",
+          "name": "神谕模式",
+          "address": "jcc:s17:per_match_variable_option:miss_fortune_mode_神谕模式",
+          "granted_trait_name": "神谕",
+          "granted_trait_address": "jcc:s17:trait_name:神谕",
+          "balance_patch": null,
+          "tags": [
+            "mode_choice",
+            "trait_grant",
+            "skill_variant"
+          ]
+        },
+        {
+          "id": "挑战者模式",
+          "name": "挑战者模式",
+          "address": "jcc:s17:per_match_variable_option:miss_fortune_mode_挑战者模式",
+          "granted_trait_name": "挑战者",
+          "granted_trait_address": "jcc:s17:trait_name:挑战者",
+          "balance_patch": null,
+          "tags": [
+            "mode_choice",
+            "trait_grant",
+            "skill_variant"
+          ]
+        },
+        {
+          "id": "魔术师模式",
+          "name": "魔术师模式",
+          "address": "jcc:s17:per_match_variable_option:miss_fortune_mode_魔术师模式",
+          "granted_trait_name": "魔术师",
+          "granted_trait_address": "jcc:s17:trait_name:魔术师",
+          "balance_patch": null,
+          "tags": [
+            "mode_choice",
+            "trait_grant",
+            "skill_variant"
+          ]
+        }
+      ],
+      "activation_gate": {
+        "champion_name": "厄运小姐",
+        "event": "field_or_acquire_unit"
+      },
+      "value_shape": null,
+      "pool_index": null,
+      "patch_value_overrides": null,
+      "related_pool_address": null,
+      "related_pool_lookup_ref": null,
+      "visible_subset_contract": null,
+      "runtime_capture_schema": null,
+      "scoring_contract": null,
+      "second_effect_modifier": null,
+      "route_refs": [
+        "jcc:s17:runtime_query_route:trait_or_unit_swap",
+        "jcc:s17:runtime_query_route:positioning",
+        "jcc:s17:runtime_query_route:holder_assignment",
+        "jcc:s17:runtime_query_route:reward_choice"
+      ],
+      "live_state_fields": [
+        "jcc:s17:live_state_field:match_variables"
+      ],
+      "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+      "capture_policy": {
+        "activation_required": true,
+        "activation_gate": {
+          "champion_name": "厄运小姐",
+          "event": "field_or_acquire_unit"
+        },
+        "runtime_visible_only": false,
+        "capture_fields": [
+          "selected_mode",
+          "granted_trait_name"
+        ],
+        "source_priority": [
+          "unit_trait_panel",
+          "ocr_unit_tooltip",
+          "user_input",
+          "unknown"
+        ],
+        "unknown_policy": "If Miss Fortune mode is unknown, score her base champion card with lower confidence and avoid assuming a granted trait.",
+        "patch_truth_policy": "Mode options and granted traits come from official trait text; selected mode is a per-match/runtime value."
+      },
+      "runtime_contract": {
+        "read_before_routes": [
+          "jcc:s17:runtime_query_route:trait_or_unit_swap",
+          "jcc:s17:runtime_query_route:positioning",
+          "jcc:s17:runtime_query_route:holder_assignment",
+          "jcc:s17:runtime_query_route:reward_choice"
+        ],
+        "can_be_unknown": true,
+        "must_not_global_scan": true,
+        "use_lookup_doorplate_first": true
+      }
+    },
+    {
+      "address": "jcc:s17:per_match_variable_doorplate:judge_law",
+      "variable_key": "judge_law",
+      "label": "法官律法",
+      "default": "unknown",
+      "options_source": "jcc_official_trait_runtime_variable",
+      "option_count": 0,
+      "option_refs": [],
+      "options_preview": [],
+      "activation_gate": {
+        "trait_name": "法官",
+        "min_active_count": 2
+      },
+      "value_shape": {
+        "cause": "runtime_visible_choice",
+        "effect": "runtime_visible_choice",
+        "visible_subset": "per_match",
+        "upgraded_at_trait_count": 3
+      },
+      "pool_index": "jcc:s17:index:judge_law_pool",
+      "patch_value_overrides": null,
+      "related_pool_address": "jcc:s17:index:judge_law_pool",
+      "related_pool_lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law",
+      "visible_subset_contract": {
+        "active_only_when_trait_enabled": true,
+        "trait_gate_live_field": "jcc:s17:live_state_field:active_traits",
+        "match_variable_key": "judge_law",
+        "per_match_subset_only": true,
+        "player_can_choose_from_visible_subset": true,
+        "required_capture_fields": [
+          "visible_cause_options",
+          "visible_effect_options",
+          "selected_cause",
+          "selected_effect",
+          "selected_second_effect",
+          "source_panel_ref",
+          "ocr_confidence",
+          "capture_round"
+        ],
+        "selected_effect_count": {
+          "default": 1,
+          "with_second_effect_modifier": 2,
+          "modifier_augment_address": "jcc:s17:augment:20736"
+        },
+        "unknown_policy": "If Judge is inactive or the choice panel is not visible, keep judge_law unknown and apply confidence penalty instead of inventing options."
+      },
+      "runtime_capture_schema": {
+        "address": "jcc:s17:match_variable_schema:judge_law_capture",
+        "live_state_field": "jcc:s17:live_state_field:match_variables",
+        "storage_key": "match_variables.judge_law",
+        "fields": [
+          {
+            "key": "trait_active",
+            "type": "boolean",
+            "required": true,
+            "source": "active_traits",
+            "rule": "true only when 法官 count >= 2"
+          },
+          {
+            "key": "trait_count",
+            "type": "integer",
+            "required": true,
+            "source": "active_traits",
+            "min": 0
+          },
+          {
+            "key": "visible_cause_options",
+            "type": "array<string>",
+            "required": false,
+            "source": "ocr_runtime_choice_panel|user_input"
+          },
+          {
+            "key": "visible_effect_options",
+            "type": "array<string>",
+            "required": false,
+            "source": "ocr_runtime_choice_panel|user_input"
+          },
+          {
+            "key": "selected_cause",
+            "type": "string|null",
+            "required": false,
+            "source": "ocr_runtime_choice_panel|user_input"
+          },
+          {
+            "key": "selected_effect",
+            "type": "string|null",
+            "required": false,
+            "source": "ocr_runtime_choice_panel|user_input"
+          },
+          {
+            "key": "selected_second_effect",
+            "type": "string|null",
+            "required": false,
+            "source": "ocr_runtime_choice_panel|user_input",
+            "enabled_by": "jcc:s17:augment:20736"
+          },
+          {
+            "key": "source_panel_ref",
+            "type": "string|null",
+            "required": false,
+            "source": "ocr_runtime_choice_panel"
+          },
+          {
+            "key": "ocr_confidence",
+            "type": "number|null",
+            "required": false,
+            "source": "ocr_runtime_choice_panel"
+          },
+          {
+            "key": "capture_round",
+            "type": "string|null",
+            "required": false,
+            "source": "round"
+          }
+        ],
+        "validation_rules": [
+          "trait_active requires active_traits 法官 >= 2",
+          "selected_cause must be one of visible_cause_options when visible_cause_options is known",
+          "selected_effect must be one of visible_effect_options when visible_effect_options is known",
+          "selected_second_effect is allowed only when 神律新令 is active/picked",
+          "do not score judge_law effects unless selected_cause and at least one selected effect are known"
+        ]
+      },
+      "scoring_contract": {
+        "address": "jcc:s17:match_variable_scoring_contract:judge_law",
+        "input_fields": [
+          "trait_count",
+          "selected_cause",
+          "selected_effect",
+          "selected_second_effect",
+          "visible_cause_options",
+          "visible_effect_options"
+        ],
+        "patch_value_overrides": {
+          "version": "17.8",
+          "visible_effect_values": {
+            "leona_attack_3": {
+              "label": "获得蕾欧娜，每3次攻击",
+              "values_by_trait_count": {
+                "2": 5,
+                "3": 8
+              },
+              "unit": "percent",
+              "before_values_by_trait_count": {
+                "2": 8,
+                "3": 12
+              }
+            },
+            "armor_attack_3": {
+              "label": "获得护甲，每3次攻击",
+              "values_by_trait_count": {
+                "2": 10,
+                "3": 16
+              },
+              "unit": "armor",
+              "before_values_by_trait_count": {
+                "2": 12,
+                "3": 18
+              }
+            },
+            "leona_spend_50_mana": {
+              "label": "获得蕾欧娜，消耗50法力值",
+              "values_by_trait_count": {
+                "2": 9,
+                "3": 12
+              },
+              "unit": "percent",
+              "before_values_by_trait_count": {
+                "2": 10,
+                "3": 15
+              }
+            },
+            "leona_every_4_seconds": {
+              "label": "获得蕾欧娜，每4秒",
+              "values_by_trait_count": {
+                "2": 14,
+                "3": 18
+              },
+              "unit": "percent",
+              "before_values_by_trait_count": {
+                "2": 15,
+                "3": 22
+              }
+            },
+            "leona_interest": {
+              "label": "获得蕾欧娜，每点利息",
+              "values_by_trait_count": {
+                "2": 20,
+                "3": 25
+              },
+              "unit": "percent",
+              "before_values_by_trait_count": {
+                "2": 20,
+                "3": 30
+              }
+            }
+          },
+          "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note"
+        },
+        "formula_refs": [
+          "jcc:s17:formula:reward_choice_score",
+          "jcc:s17:formula:trait_delta",
+          "jcc:s17:formula:effect_block_value",
+          "jcc:s17:formula:action_feasibility"
+        ],
+        "strategy_axes": [
+          "utility",
+          "tempo",
+          "cap_power",
+          "frontline",
+          "backline_damage",
+          "sustain",
+          "control",
+          "risk"
+        ],
+        "output_fields": [
+          "law_value_score",
+          "law_axis_weights",
+          "law_confidence",
+          "unknown_penalty",
+          "source_citation"
+        ],
+        "confidence_policy": {
+          "full_runtime_panel_capture": 0.92,
+          "selected_only_user_input": 0.82,
+          "trait_shell_only_no_selection": 0.2
+        },
+        "route_refs": [
+          "jcc:s17:runtime_query_route:reward_choice",
+          "jcc:s17:runtime_query_route:trait_or_unit_swap",
+          "jcc:s17:runtime_query_route:augment_choice",
+          "jcc:s17:runtime_query_route:postgame_review"
+        ]
+      },
+      "second_effect_modifier": {
+        "augment_address": "jcc:s17:augment:20736",
+        "augment_name": "神律新令",
+        "operation": "add_second_effect_to_judge_law",
+        "target": "match_variables.judge_law.selected_second_effect",
+        "required_capture_delta": [
+          "selected_second_effect"
+        ],
+        "scoring_delta": "score both selected effects against the same selected cause; prevent duplicate-effect double count unless runtime panel explicitly allows it"
+      },
+      "route_refs": [
+        "jcc:s17:runtime_query_route:reward_choice",
+        "jcc:s17:runtime_query_route:trait_or_unit_swap",
+        "jcc:s17:runtime_query_route:augment_choice",
+        "jcc:s17:runtime_query_route:postgame_review"
+      ],
+      "live_state_fields": [
+        "jcc:s17:live_state_field:match_variables",
+        "jcc:s17:live_state_field:active_traits",
+        "jcc:s17:live_state_field:decision_events"
+      ],
+      "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law",
+      "capture_policy": {
+        "activation_required": true,
+        "activation_gate": {
+          "trait_name": "法官",
+          "min_active_count": 2
+        },
+        "runtime_visible_only": true,
+        "capture_fields": [
+          "cause",
+          "effect",
+          "visible_subset",
+          "trait_count"
+        ],
+        "source_priority": [
+          "ocr_runtime_choice_panel",
+          "user_input",
+          "unknown"
+        ],
+        "unknown_policy": "If Judge is inactive or law choices are not visible, keep unknown and do not score law effects.",
+        "patch_truth_policy": "Official payload currently exposes only the Judge trait shell; never hallucinate the full law option pool."
+      },
+      "runtime_contract": {
+        "read_before_routes": [
+          "jcc:s17:runtime_query_route:reward_choice",
+          "jcc:s17:runtime_query_route:trait_or_unit_swap",
+          "jcc:s17:runtime_query_route:augment_choice",
+          "jcc:s17:runtime_query_route:postgame_review"
+        ],
+        "can_be_unknown": true,
+        "must_not_global_scan": true,
+        "use_lookup_doorplate_first": true
+      }
+    }
+  ],
+  "policy": "Per-match variables are match-scoped runtime truths. Read the variable lookup doorplate by key, then capture only the visible/activated variable value needed for the current route."
+}

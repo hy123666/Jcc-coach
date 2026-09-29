@@ -1,0 +1,37 @@
+{
+  "address": "jcc:s17:formula:resist_mitigation",
+  "source": "generated_heuristic",
+  "inputs": [
+    "incoming_damage",
+    "resist"
+  ],
+  "outputs": [
+    "mitigation_multiplier",
+    "post_resist_damage"
+  ],
+  "formulas": {
+    "mitigation_multiplier": "100 / (100 + max(resist, -99))",
+    "post_resist_damage": "incoming_damage * mitigation_multiplier"
+  },
+  "dependencies": [
+    "jcc:s17:formula:damage"
+  ],
+  "use_cases": [
+    "armor/magic resist value",
+    "tank item comparison"
+  ],
+  "exactness": "baseline_exact_before_special_modifiers",
+  "name": "resist_mitigation",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "defense"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review",
+    "item_craft"
+  ],
+  "dependency_kind": "derived_formula"
+}

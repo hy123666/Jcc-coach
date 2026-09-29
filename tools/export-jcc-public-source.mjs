@@ -16,7 +16,7 @@ if (parent.toLowerCase() !== path.dirname(target).toLowerCase()) throw new Error
 if (target.toLowerCase().startsWith(source.toLowerCase() + path.sep)) throw new Error('Target cannot be inside source');
 const files = [...new Set(execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z'],
   { cwd: source, encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }).split('\0').filter(Boolean))].sort();
-const excluded = /^(resources\/ocr\/(python|models)\/|tools\/bin\/|\.omx\/|\.jcc-runtime-data\/|\.git\/|\.tools\/|ui\/(node_modules|dist|release[^/]*)\/|node_modules\/|docs\/superpowers\/|docs\/release\/(source-export\.json|TEST-BASELINE\.md)|release-source-manifest\.json)/;
+const excluded = /^(resources\/ocr\/(python|models)\/|tools\/bin\/|\.omx\/|\.jcc-runtime-data\/|\.git\/|\.tools\/|ui\/(node_modules|dist|release[^/]*)\/|node_modules\/|docs\/(public|superpowers)\/|docs\/release\/(source-export\.json|TEST-BASELINE\.md)|(?:release|public)-source-manifest\.json)/;
 const manifest = {}, findings = [];
 let bytes = 0;
 for (const file of files) {

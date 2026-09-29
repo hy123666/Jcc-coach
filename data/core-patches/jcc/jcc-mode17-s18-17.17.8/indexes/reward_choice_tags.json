@@ -1,0 +1,7266 @@
+[
+  {
+    "address": "jcc:s17:reward_choice:1002",
+    "source_address": "jcc:s17:augment:1002",
+    "name": "存心失利",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1003",
+    "source_address": "jcc:s17:augment:1003",
+    "name": "花到上头",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1004",
+    "source_address": "jcc:s17:augment:1004",
+    "name": "明智消费",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1006",
+    "source_address": "jcc:s17:augment:1006",
+    "name": "装备百宝袋 I",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1007",
+    "source_address": "jcc:s17:augment:1007",
+    "name": "潘朵拉的装备",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1008",
+    "source_address": "jcc:s17:augment:1008",
+    "name": "打捞桶",
+    "tags": [
+      "emblem",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1011",
+    "source_address": "jcc:s17:augment:1011",
+    "name": "清晰头脑",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1012",
+    "source_address": "jcc:s17:augment:1012",
+    "name": "浪人 I",
+    "tags": [
+      "health",
+      "shield"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1019",
+    "source_address": "jcc:s17:augment:1019",
+    "name": "并肩作战 I",
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1021",
+    "source_address": "jcc:s17:augment:1021",
+    "name": "部分飞升",
+    "tags": [
+      "damage_amp"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1023",
+    "source_address": "jcc:s17:augment:1023",
+    "name": "应急护甲 I",
+    "tags": [
+      "armor",
+      "item_reward",
+      "magic_resist"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1068",
+    "source_address": "jcc:s17:augment:1068",
+    "name": "秘法帮派",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1093",
+    "source_address": "jcc:s17:augment:1093",
+    "name": "休眠锻炉",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1116",
+    "source_address": "jcc:s17:augment:1116",
+    "name": "复苏之风",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1134",
+    "source_address": "jcc:s17:augment:1134",
+    "name": "D个痛快！ I",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1147",
+    "source_address": "jcc:s17:augment:1147",
+    "name": "后期专家",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1148",
+    "source_address": "jcc:s17:augment:1148",
+    "name": "潘朵拉的备战席",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1149",
+    "source_address": "jcc:s17:augment:1149",
+    "name": "开摆",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1152",
+    "source_address": "jcc:s17:augment:1152",
+    "name": "最佳好友I",
+    "tags": [
+      "armor",
+      "attack_speed",
+      "magic_resist"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1158",
+    "source_address": "jcc:s17:augment:1158",
+    "name": "节外生枝",
+    "tags": [
+      "emblem"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1476",
+    "source_address": "jcc:s17:augment:1476",
+    "name": "成群结队",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1478",
+    "source_address": "jcc:s17:augment:1478",
+    "name": "游神的盟友",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1479",
+    "source_address": "jcc:s17:augment:1479",
+    "name": "一，二，三",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1625",
+    "source_address": "jcc:s17:augment:1625",
+    "name": "别再错过",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1634",
+    "source_address": "jcc:s17:augment:1634",
+    "name": "治疗法球 I",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1646",
+    "source_address": "jcc:s17:augment:1646",
+    "name": "团队建设",
+    "tags": [
+      "duplicator"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1647",
+    "source_address": "jcc:s17:augment:1647",
+    "name": "冒险举动",
+    "tags": [
+      "economy",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1650",
+    "source_address": "jcc:s17:augment:1650",
+    "name": "一，二，五！",
+    "tags": [
+      "economy",
+      "item_reward",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1701",
+    "source_address": "jcc:s17:augment:1701",
+    "name": "黑铁资产",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1713",
+    "source_address": "jcc:s17:augment:1713",
+    "name": "对冲基金",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1714",
+    "source_address": "jcc:s17:augment:1714",
+    "name": "银汤匙",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1789",
+    "source_address": "jcc:s17:augment:1789",
+    "name": "有用之材 I",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1895",
+    "source_address": "jcc:s17:augment:1895",
+    "name": "四费增援",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:1900",
+    "source_address": "jcc:s17:augment:1900",
+    "name": "午餐钱",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2007",
+    "source_address": "jcc:s17:augment:2007",
+    "name": "潘朵拉的装备 II",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2008",
+    "source_address": "jcc:s17:augment:2008",
+    "name": "打捞桶+",
+    "tags": [
+      "emblem",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2012",
+    "source_address": "jcc:s17:augment:2012",
+    "name": "浪人 II",
+    "tags": [
+      "health",
+      "shield"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2018",
+    "source_address": "jcc:s17:augment:2018",
+    "name": "源计划植入",
+    "tags": [
+      "health",
+      "item_reward",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2021",
+    "source_address": "jcc:s17:augment:2021",
+    "name": "飞升",
+    "tags": [
+      "damage_amp"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2023",
+    "source_address": "jcc:s17:augment:2023",
+    "name": "应急护甲 II",
+    "tags": [
+      "armor",
+      "item_reward",
+      "magic_resist"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2069",
+    "source_address": "jcc:s17:augment:2069",
+    "name": "DD街区",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2087",
+    "source_address": "jcc:s17:augment:2087",
+    "name": "日炎棋盘",
+    "tags": [
+      "aoe",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2110",
+    "source_address": "jcc:s17:augment:2110",
+    "name": "源计划上行链路",
+    "tags": [
+      "health",
+      "item_reward",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2116",
+    "source_address": "jcc:s17:augment:2116",
+    "name": "复苏之风 II",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2127",
+    "source_address": "jcc:s17:augment:2127",
+    "name": "变形重组器",
+    "tags": [
+      "economy",
+      "item_reward",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2128",
+    "source_address": "jcc:s17:augment:2128",
+    "name": "珠光莲花 I",
+    "tags": [
+      "crit",
+      "magic_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2133",
+    "source_address": "jcc:s17:augment:2133",
+    "name": "好事成双 II",
+    "tags": [
+      "armor",
+      "magic_damage",
+      "magic_resist",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2152",
+    "source_address": "jcc:s17:augment:2152",
+    "name": "最佳好友II",
+    "tags": [
+      "armor",
+      "attack_speed",
+      "magic_resist"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2184",
+    "source_address": "jcc:s17:augment:2184",
+    "name": "大百宝袋",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2189",
+    "source_address": "jcc:s17:augment:2189",
+    "name": "纷乱头脑",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2276",
+    "source_address": "jcc:s17:augment:2276",
+    "name": "幸运手套",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2480",
+    "source_address": "jcc:s17:augment:2480",
+    "name": "天生二星",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2634",
+    "source_address": "jcc:s17:augment:2634",
+    "name": "治疗法球 II",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2640",
+    "source_address": "jcc:s17:augment:2640",
+    "name": "了解你的敌人",
+    "tags": [
+      "damage_amp"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2662",
+    "source_address": "jcc:s17:augment:2662",
+    "name": "吾弓听命于您",
+    "tags": [
+      "attack_speed"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2705",
+    "source_address": "jcc:s17:augment:2705",
+    "name": "成吨的属性！",
+    "tags": [
+      "armor",
+      "attack_speed",
+      "health",
+      "magic_damage",
+      "magic_resist",
+      "mana",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2764",
+    "source_address": "jcc:s17:augment:2764",
+    "name": "碰撞测试假人",
+    "tags": [
+      "control",
+      "single_target"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2781",
+    "source_address": "jcc:s17:augment:2781",
+    "name": "小伙伴",
+    "tags": [
+      "attack_speed",
+      "health",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2804",
+    "source_address": "jcc:s17:augment:2804",
+    "name": "英勇福袋",
+    "tags": [
+      "duplicator",
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2896",
+    "source_address": "jcc:s17:augment:2896",
+    "name": "新纪元",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2916",
+    "source_address": "jcc:s17:augment:2916",
+    "name": "赏金战士",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2917",
+    "source_address": "jcc:s17:augment:2917",
+    "name": "物尽其用",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2993",
+    "source_address": "jcc:s17:augment:2993",
+    "name": "高压电",
+    "tags": [
+      "aoe",
+      "damage_amp"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3007",
+    "source_address": "jcc:s17:augment:3007",
+    "name": "潘朵拉的装备 III",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3008",
+    "source_address": "jcc:s17:augment:3008",
+    "name": "升级咯！",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3012",
+    "source_address": "jcc:s17:augment:3012",
+    "name": "浪人 III",
+    "tags": [
+      "health",
+      "shield"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3065",
+    "source_address": "jcc:s17:augment:3065",
+    "name": "棱彩门票",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3066",
+    "source_address": "jcc:s17:augment:3066",
+    "name": "新人入队",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3068",
+    "source_address": "jcc:s17:augment:3068",
+    "name": "秘法帮派 II",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3069",
+    "source_address": "jcc:s17:augment:3069",
+    "name": "DD街区加强版",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3093",
+    "source_address": "jcc:s17:augment:3093",
+    "name": "便携锻炉",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3128",
+    "source_address": "jcc:s17:augment:3128",
+    "name": "珠光莲花 II",
+    "tags": [
+      "crit",
+      "magic_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3136",
+    "source_address": "jcc:s17:augment:3136",
+    "name": "小巨人",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3137",
+    "source_address": "jcc:s17:augment:3137",
+    "name": "金蛋",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3158",
+    "source_address": "jcc:s17:augment:3158",
+    "name": "耐心学习",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3185",
+    "source_address": "jcc:s17:augment:3185",
+    "name": "阿福的百宝袋",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3269",
+    "source_address": "jcc:s17:augment:3269",
+    "name": "诅咒冠冕",
+    "tags": [
+      "durability"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3270",
+    "source_address": "jcc:s17:augment:3270",
+    "name": "活体锻炉",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3276",
+    "source_address": "jcc:s17:augment:3276",
+    "name": "幸运手套+",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3486",
+    "source_address": "jcc:s17:augment:3486",
+    "name": "珍藏财宝",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3627",
+    "source_address": "jcc:s17:augment:3627",
+    "name": "交给运气",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3804",
+    "source_address": "jcc:s17:augment:3804",
+    "name": "英勇福袋+",
+    "tags": [
+      "duplicator",
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3809",
+    "source_address": "jcc:s17:augment:3809",
+    "name": "遥遥领先",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3851",
+    "source_address": "jcc:s17:augment:3851",
+    "name": "混沌召唤",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3852",
+    "source_address": "jcc:s17:augment:3852",
+    "name": "来个好伙计！",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3896",
+    "source_address": "jcc:s17:augment:3896",
+    "name": "新纪元+",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3899",
+    "source_address": "jcc:s17:augment:3899",
+    "name": "小而致命",
+    "tags": [
+      "attack_speed"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3904",
+    "source_address": "jcc:s17:augment:3904",
+    "name": "不计代价",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3917",
+    "source_address": "jcc:s17:augment:3917",
+    "name": "物尽其用+",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4009",
+    "source_address": "jcc:s17:augment:4009",
+    "name": "最小巨人",
+    "tags": [
+      "economy",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4069",
+    "source_address": "jcc:s17:augment:4069",
+    "name": "大买特买",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4158",
+    "source_address": "jcc:s17:augment:4158",
+    "name": "节外生枝+",
+    "tags": [
+      "emblem",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4713",
+    "source_address": "jcc:s17:augment:4713",
+    "name": "对冲基金+",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4804",
+    "source_address": "jcc:s17:augment:4804",
+    "name": "英勇福袋++",
+    "tags": [
+      "duplicator",
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10011",
+    "source_address": "jcc:s17:augment:10011",
+    "name": "耐心是一种美德",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10016",
+    "source_address": "jcc:s17:augment:10016",
+    "name": "重启任务",
+    "tags": [
+      "aoe"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10048",
+    "source_address": "jcc:s17:augment:10048",
+    "name": "C位的觉悟",
+    "tags": [
+      "damage_amp",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10203",
+    "source_address": "jcc:s17:augment:10203",
+    "name": "汲取生命力 I",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10212",
+    "source_address": "jcc:s17:augment:10212",
+    "name": "幸存者",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10214",
+    "source_address": "jcc:s17:augment:10214",
+    "name": "精心打造",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10236",
+    "source_address": "jcc:s17:augment:10236",
+    "name": "假人化",
+    "tags": [
+      "aoe",
+      "health",
+      "health_cost"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10242",
+    "source_address": "jcc:s17:augment:10242",
+    "name": "终身黄铜 I",
+    "tags": [
+      "damage_amp"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10252",
+    "source_address": "jcc:s17:augment:10252",
+    "name": "腐蚀",
+    "tags": [
+      "armor",
+      "magic_resist"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10253",
+    "source_address": "jcc:s17:augment:10253",
+    "name": "玻璃大炮 I",
+    "tags": [
+      "backline_threat",
+      "damage_amp",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10255",
+    "source_address": "jcc:s17:augment:10255",
+    "name": "攀登天梯 I",
+    "tags": [
+      "armor",
+      "magic_damage",
+      "magic_resist",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10264",
+    "source_address": "jcc:s17:augment:10264",
+    "name": "列队",
+    "tags": [
+      "armor",
+      "magic_resist"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10495",
+    "source_address": "jcc:s17:augment:10495",
+    "name": "人生切片",
+    "tags": [
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10559",
+    "source_address": "jcc:s17:augment:10559",
+    "name": "轻量魔法投掷",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10561",
+    "source_address": "jcc:s17:augment:10561",
+    "name": "战时补给：拳套",
+    "tags": [
+      "crit"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10570",
+    "source_address": "jcc:s17:augment:10570",
+    "name": "升星之运",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10573",
+    "source_address": "jcc:s17:augment:10573",
+    "name": "拳击课程",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10579",
+    "source_address": "jcc:s17:augment:10579",
+    "name": "战时补给：巨人腰带",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10580",
+    "source_address": "jcc:s17:augment:10580",
+    "name": "战时补给：无用大棒",
+    "tags": [
+      "magic_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10581",
+    "source_address": "jcc:s17:augment:10581",
+    "name": "战时补给：女神之泪",
+    "tags": [
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10582",
+    "source_address": "jcc:s17:augment:10582",
+    "name": "战时补给：暴风大剑",
+    "tags": [
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10583",
+    "source_address": "jcc:s17:augment:10583",
+    "name": "战时补给：反曲之弓",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10584",
+    "source_address": "jcc:s17:augment:10584",
+    "name": "认知税",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10585",
+    "source_address": "jcc:s17:augment:10585",
+    "name": "认知税+",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10586",
+    "source_address": "jcc:s17:augment:10586",
+    "name": "博弈开启",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10587",
+    "source_address": "jcc:s17:augment:10587",
+    "name": "高塔",
+    "tags": [
+      "health",
+      "single_target",
+      "true_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10588",
+    "source_address": "jcc:s17:augment:10588",
+    "name": "充能转移 I",
+    "tags": [
+      "damage_amp",
+      "magic_damage",
+      "single_target"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10589",
+    "source_address": "jcc:s17:augment:10589",
+    "name": "充能转移 II",
+    "tags": [
+      "damage_amp",
+      "magic_damage",
+      "single_target"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10611",
+    "source_address": "jcc:s17:augment:10611",
+    "name": "邦！",
+    "tags": [
+      "physical_damage",
+      "single_target"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10614",
+    "source_address": "jcc:s17:augment:10614",
+    "name": "手气不错",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10615",
+    "source_address": "jcc:s17:augment:10615",
+    "name": "拥抱 I",
+    "tags": [
+      "armor",
+      "magic_resist"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10616",
+    "source_address": "jcc:s17:augment:10616",
+    "name": "拥抱 II",
+    "tags": [
+      "armor",
+      "magic_resist"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10631",
+    "source_address": "jcc:s17:augment:10631",
+    "name": "小小福袋",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10632",
+    "source_address": "jcc:s17:augment:10632",
+    "name": "双子守护神",
+    "tags": [
+      "armor",
+      "health",
+      "magic_resist"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10707",
+    "source_address": "jcc:s17:augment:10707",
+    "name": "远征",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10708",
+    "source_address": "jcc:s17:augment:10708",
+    "name": "电火花 I",
+    "tags": [
+      "aoe",
+      "magic_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10724",
+    "source_address": "jcc:s17:augment:10724",
+    "name": "星界连招",
+    "tags": [
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10726",
+    "source_address": "jcc:s17:augment:10726",
+    "name": "飙速木灵",
+    "tags": [
+      "physical_damage",
+      "single_target"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10731",
+    "source_address": "jcc:s17:augment:10731",
+    "name": "扩展包",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10738",
+    "source_address": "jcc:s17:augment:10738",
+    "name": "盾女",
+    "tags": [
+      "control",
+      "physical_damage",
+      "single_target"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20009",
+    "source_address": "jcc:s17:augment:20009",
+    "name": "投资+",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20013",
+    "source_address": "jcc:s17:augment:20013",
+    "name": "挖角",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20015",
+    "source_address": "jcc:s17:augment:20015",
+    "name": "反响",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20021",
+    "source_address": "jcc:s17:augment:20021",
+    "name": "值得等待",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20027",
+    "source_address": "jcc:s17:augment:20027",
+    "name": "爆炸式增长",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20031",
+    "source_address": "jcc:s17:augment:20031",
+    "name": "发条增速器",
+    "tags": [
+      "attack_speed"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20039",
+    "source_address": "jcc:s17:augment:20039",
+    "name": "坦度成双",
+    "tags": [
+      "health",
+      "shield"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20041",
+    "source_address": "jcc:s17:augment:20041",
+    "name": "双排",
+    "tags": [
+      "item_reward",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20141",
+    "source_address": "jcc:s17:augment:20141",
+    "name": "专属定制",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20201",
+    "source_address": "jcc:s17:augment:20201",
+    "name": "火爆甩卖",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20203",
+    "source_address": "jcc:s17:augment:20203",
+    "name": "汲取生命力 II",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20205",
+    "source_address": "jcc:s17:augment:20205",
+    "name": "魔法投掷",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20208",
+    "source_address": "jcc:s17:augment:20208",
+    "name": "征战之路",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20209",
+    "source_address": "jcc:s17:augment:20209",
+    "name": "崇高冒险",
+    "tags": [
+      "duplicator"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20213",
+    "source_address": "jcc:s17:augment:20213",
+    "name": "前瞻思维",
+    "tags": [
+      "aoe",
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20216",
+    "source_address": "jcc:s17:augment:20216",
+    "name": "不侦察，不变阵",
+    "tags": [
+      "health",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20224",
+    "source_address": "jcc:s17:augment:20224",
+    "name": "强化之能量",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20233",
+    "source_address": "jcc:s17:augment:20233",
+    "name": "权杖意志",
+    "tags": [
+      "crit"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20234",
+    "source_address": "jcc:s17:augment:20234",
+    "name": "三项赛 I",
+    "tags": [
+      "attack_speed",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20235",
+    "source_address": "jcc:s17:augment:20235",
+    "name": "由二生D",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20242",
+    "source_address": "jcc:s17:augment:20242",
+    "name": "终身黄铜 II",
+    "tags": [
+      "armor",
+      "damage_amp",
+      "magic_resist"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20253",
+    "source_address": "jcc:s17:augment:20253",
+    "name": "玻璃大炮 II",
+    "tags": [
+      "damage_amp",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20255",
+    "source_address": "jcc:s17:augment:20255",
+    "name": "攀登天梯 II",
+    "tags": [
+      "armor",
+      "magic_damage",
+      "magic_resist",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20258",
+    "source_address": "jcc:s17:augment:20258",
+    "name": "恶意货币化",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20459",
+    "source_address": "jcc:s17:augment:20459",
+    "name": "王冠之重",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20471",
+    "source_address": "jcc:s17:augment:20471",
+    "name": "泪流成河",
+    "tags": [
+      "health",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20475",
+    "source_address": "jcc:s17:augment:20475",
+    "name": "低调炫耀",
+    "tags": [
+      "item_reward",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20489",
+    "source_address": "jcc:s17:augment:20489",
+    "name": "应急护盾",
+    "tags": [
+      "armor",
+      "health",
+      "magic_resist",
+      "shield"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20496",
+    "source_address": "jcc:s17:augment:20496",
+    "name": "独自升级",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20502",
+    "source_address": "jcc:s17:augment:20502",
+    "name": "更要命的帽子",
+    "tags": [
+      "health",
+      "magic_damage",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20503",
+    "source_address": "jcc:s17:augment:20503",
+    "name": "更要命的战刃",
+    "tags": [
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20508",
+    "source_address": "jcc:s17:augment:20508",
+    "name": "关爱包裹",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20517",
+    "source_address": "jcc:s17:augment:20517",
+    "name": "寻宝",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20560",
+    "source_address": "jcc:s17:augment:20560",
+    "name": "储蓄账户",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20563",
+    "source_address": "jcc:s17:augment:20563",
+    "name": "秘传奥义",
+    "tags": [
+      "physical_damage",
+      "true_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20568",
+    "source_address": "jcc:s17:augment:20568",
+    "name": "鲜血祭品",
+    "tags": [
+      "health",
+      "health_cost",
+      "magic_damage",
+      "physical_damage",
+      "shield"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20569",
+    "source_address": "jcc:s17:augment:20569",
+    "name": "火上浇油",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20575",
+    "source_address": "jcc:s17:augment:20575",
+    "name": "救赎盔甲",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20577",
+    "source_address": "jcc:s17:augment:20577",
+    "name": "承诺之护",
+    "tags": [
+      "aoe",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20578",
+    "source_address": "jcc:s17:augment:20578",
+    "name": "心之钢",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20584",
+    "source_address": "jcc:s17:augment:20584",
+    "name": "高级贷款+",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20586",
+    "source_address": "jcc:s17:augment:20586",
+    "name": "炽天使之拥",
+    "tags": [
+      "health",
+      "magic_damage",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20593",
+    "source_address": "jcc:s17:augment:20593",
+    "name": "单身板甲",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20610",
+    "source_address": "jcc:s17:augment:20610",
+    "name": "职业杀手",
+    "tags": [
+      "economy",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20611",
+    "source_address": "jcc:s17:augment:20611",
+    "name": "无差别攻击",
+    "tags": [
+      "aoe",
+      "damage_amp"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20612",
+    "source_address": "jcc:s17:augment:20612",
+    "name": "三相庇护",
+    "tags": [
+      "economy",
+      "health",
+      "shield"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20613",
+    "source_address": "jcc:s17:augment:20613",
+    "name": "认知过载",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20616",
+    "source_address": "jcc:s17:augment:20616",
+    "name": "利落保镖",
+    "tags": [
+      "armor",
+      "economy",
+      "magic_resist"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20619",
+    "source_address": "jcc:s17:augment:20619",
+    "name": "双城赢家",
+    "tags": [
+      "aoe",
+      "control"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20621",
+    "source_address": "jcc:s17:augment:20621",
+    "name": "愿四费与你同在",
+    "tags": [
+      "attack_speed",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20624",
+    "source_address": "jcc:s17:augment:20624",
+    "name": "生日聚会",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20625",
+    "source_address": "jcc:s17:augment:20625",
+    "name": "宝宝学院",
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20626",
+    "source_address": "jcc:s17:augment:20626",
+    "name": "8级D干的传说",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20628",
+    "source_address": "jcc:s17:augment:20628",
+    "name": "三幻神",
+    "tags": [
+      "attack_speed",
+      "emblem",
+      "health",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": true,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20629",
+    "source_address": "jcc:s17:augment:20629",
+    "name": "杖之工匠",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20630",
+    "source_address": "jcc:s17:augment:20630",
+    "name": "剑之工匠",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20633",
+    "source_address": "jcc:s17:augment:20633",
+    "name": "蔓延之根",
+    "tags": [
+      "economy",
+      "emblem"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20642",
+    "source_address": "jcc:s17:augment:20642",
+    "name": "摇钱树",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20643",
+    "source_address": "jcc:s17:augment:20643",
+    "name": "绝境反击",
+    "tags": [
+      "attack_speed",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20649",
+    "source_address": "jcc:s17:augment:20649",
+    "name": "精准而优雅",
+    "tags": [
+      "attack_speed",
+      "single_target"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20651",
+    "source_address": "jcc:s17:augment:20651",
+    "name": "金霖龙",
+    "tags": [
+      "durability",
+      "economy",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20654",
+    "source_address": "jcc:s17:augment:20654",
+    "name": "获得21金币",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20661",
+    "source_address": "jcc:s17:augment:20661",
+    "name": "后期收益",
+    "tags": [
+      "attack_speed",
+      "economy",
+      "health",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20673",
+    "source_address": "jcc:s17:augment:20673",
+    "name": "纺织魔法",
+    "tags": [
+      "item_reward",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20675",
+    "source_address": "jcc:s17:augment:20675",
+    "name": "一波带走俩",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20676",
+    "source_address": "jcc:s17:augment:20676",
+    "name": "海牛阿福的锅铲战术",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20681",
+    "source_address": "jcc:s17:augment:20681",
+    "name": "蔓延之根+",
+    "tags": [
+      "economy",
+      "emblem",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20683",
+    "source_address": "jcc:s17:augment:20683",
+    "name": "猛将的荣耀",
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20686",
+    "source_address": "jcc:s17:augment:20686",
+    "name": "顶尖构筑",
+    "tags": [
+      "duplicator",
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20698",
+    "source_address": "jcc:s17:augment:20698",
+    "name": "镀金钢铁",
+    "tags": [
+      "durability",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20700",
+    "source_address": "jcc:s17:augment:20700",
+    "name": "自我毁灭",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20701",
+    "source_address": "jcc:s17:augment:20701",
+    "name": "贪财",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20702",
+    "source_address": "jcc:s17:augment:20702",
+    "name": "尺寸至上",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20703",
+    "source_address": "jcc:s17:augment:20703",
+    "name": "幻灵指挥官",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20705",
+    "source_address": "jcc:s17:augment:20705",
+    "name": "后排蓝图",
+    "tags": [
+      "backline_threat",
+      "emblem",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20706",
+    "source_address": "jcc:s17:augment:20706",
+    "name": "前线地基",
+    "tags": [
+      "emblem"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20708",
+    "source_address": "jcc:s17:augment:20708",
+    "name": "电火花 II",
+    "tags": [
+      "aoe",
+      "magic_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20709",
+    "source_address": "jcc:s17:augment:20709",
+    "name": "异类",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20720",
+    "source_address": "jcc:s17:augment:20720",
+    "name": "副作用",
+    "tags": [
+      "health",
+      "magic_damage",
+      "single_target"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20721",
+    "source_address": "jcc:s17:augment:20721",
+    "name": "黄金赌约",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20722",
+    "source_address": "jcc:s17:augment:20722",
+    "name": "黄金赌约+",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20723",
+    "source_address": "jcc:s17:augment:20723",
+    "name": "黄金赌约++",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20725",
+    "source_address": "jcc:s17:augment:20725",
+    "name": "神赐锻炉",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20727",
+    "source_address": "jcc:s17:augment:20727",
+    "name": "摘星之志",
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20728",
+    "source_address": "jcc:s17:augment:20728",
+    "name": "宇宙大爆炸",
+    "tags": [
+      "aoe"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20729",
+    "source_address": "jcc:s17:augment:20729",
+    "name": "热寂",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20731",
+    "source_address": "jcc:s17:augment:20731",
+    "name": "扩展包+",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20732",
+    "source_address": "jcc:s17:augment:20732",
+    "name": "天煞灭影：劫",
+    "tags": [
+      "physical_damage",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20733",
+    "source_address": "jcc:s17:augment:20733",
+    "name": "水乳交融",
+    "tags": [
+      "attack_speed",
+      "emblem",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20734",
+    "source_address": "jcc:s17:augment:20734",
+    "name": "时间流",
+    "tags": [
+      "attack_speed",
+      "economy",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20736",
+    "source_address": "jcc:s17:augment:20736",
+    "name": "神律新令",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20737",
+    "source_address": "jcc:s17:augment:20737",
+    "name": "聚精会神",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20739",
+    "source_address": "jcc:s17:augment:20739",
+    "name": "战利品奇点",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:20740",
+    "source_address": "jcc:s17:augment:20740",
+    "name": "银河巡旅",
+    "tags": [
+      "health",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30006",
+    "source_address": "jcc:s17:augment:30006",
+    "name": "灵活摇摆",
+    "tags": [
+      "emblem",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": true,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30007",
+    "source_address": "jcc:s17:augment:30007",
+    "name": "硬性承诺",
+    "tags": [
+      "economy",
+      "emblem"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30009",
+    "source_address": "jcc:s17:augment:30009",
+    "name": "投资++",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30018",
+    "source_address": "jcc:s17:augment:30018",
+    "name": "订阅服务",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30021",
+    "source_address": "jcc:s17:augment:30021",
+    "name": "值得等待 II",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30027",
+    "source_address": "jcc:s17:augment:30027",
+    "name": "爆炸式增长+",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30028",
+    "source_address": "jcc:s17:augment:30028",
+    "name": "上进心",
+    "tags": [
+      "economy",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30034",
+    "source_address": "jcc:s17:augment:30034",
+    "name": "大而有力",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30045",
+    "source_address": "jcc:s17:augment:30045",
+    "name": "金鳞精粹",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30141",
+    "source_address": "jcc:s17:augment:30141",
+    "name": "专属定制 II",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30180",
+    "source_address": "jcc:s17:augment:30180",
+    "name": "腰带溢流",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30181",
+    "source_address": "jcc:s17:augment:30181",
+    "name": "法杖溢流",
+    "tags": [
+      "attack_speed"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30182",
+    "source_address": "jcc:s17:augment:30182",
+    "name": "大剑溢流",
+    "tags": [
+      "attack_speed"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30186",
+    "source_address": "jcc:s17:augment:30186",
+    "name": "1个霸符，2个霸符",
+    "tags": [
+      "duplicator",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30187",
+    "source_address": "jcc:s17:augment:30187",
+    "name": "锅铲厨房",
+    "tags": [
+      "emblem"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30205",
+    "source_address": "jcc:s17:augment:30205",
+    "name": "意料之中的意外",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30234",
+    "source_address": "jcc:s17:augment:30234",
+    "name": "三项赛 II",
+    "tags": [
+      "attack_speed",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30521",
+    "source_address": "jcc:s17:augment:30521",
+    "name": "坚守防线",
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30571",
+    "source_address": "jcc:s17:augment:30571",
+    "name": "挑个好伙计！",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30584",
+    "source_address": "jcc:s17:augment:30584",
+    "name": "高级贷款",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30599",
+    "source_address": "jcc:s17:augment:30599",
+    "name": "灵魂唤醒",
+    "tags": [
+      "magic_damage",
+      "physical_damage",
+      "true_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30613",
+    "source_address": "jcc:s17:augment:30613",
+    "name": "正义报复",
+    "tags": [
+      "crit",
+      "item_reward",
+      "magic_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30617",
+    "source_address": "jcc:s17:augment:30617",
+    "name": "男爵幻域",
+    "tags": [
+      "item_reward",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30621",
+    "source_address": "jcc:s17:augment:30621",
+    "name": "四费小组",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30622",
+    "source_address": "jcc:s17:augment:30622",
+    "name": "登上最高峰",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30623",
+    "source_address": "jcc:s17:augment:30623",
+    "name": "点击即送",
+    "tags": [
+      "duplicator",
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30627",
+    "source_address": "jcc:s17:augment:30627",
+    "name": "神力天铸",
+    "tags": [
+      "health",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30634",
+    "source_address": "jcc:s17:augment:30634",
+    "name": "羁绊树",
+    "tags": [
+      "economy",
+      "emblem",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30637",
+    "source_address": "jcc:s17:augment:30637",
+    "name": "可大可小",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30647",
+    "source_address": "jcc:s17:augment:30647",
+    "name": "散件丰收日",
+    "tags": [
+      "aoe",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30656",
+    "source_address": "jcc:s17:augment:30656",
+    "name": "贸易中心",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30665",
+    "source_address": "jcc:s17:augment:30665",
+    "name": "甜点",
+    "tags": [
+      "health",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30668",
+    "source_address": "jcc:s17:augment:30668",
+    "name": "厨神阿福",
+    "tags": [
+      "attack_speed",
+      "health",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30678",
+    "source_address": "jcc:s17:augment:30678",
+    "name": "秘法帮派 II+",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30679",
+    "source_address": "jcc:s17:augment:30679",
+    "name": "秘法帮派 II++",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30680",
+    "source_address": "jcc:s17:augment:30680",
+    "name": "奢侈品订购",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30682",
+    "source_address": "jcc:s17:augment:30682",
+    "name": "羁绊树+",
+    "tags": [
+      "economy",
+      "emblem",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30730",
+    "source_address": "jcc:s17:augment:30730",
+    "name": "狂潮之心",
+    "tags": [
+      "aoe",
+      "duplicator"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:30731",
+    "source_address": "jcc:s17:augment:30731",
+    "name": "扩展包++",
+    "tags": [
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2_1702010_stage_2",
+    "source_address": "jcc:s17:god_reward:2_1702010_stage_2",
+    "name": "财富探险",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2_1702040_stage_2",
+    "source_address": "jcc:s17:god_reward:2_1702040_stage_2",
+    "name": "羁绊探险",
+    "tags": [
+      "emblem",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2_1702020_stage_3",
+    "source_address": "jcc:s17:god_reward:2_1702020_stage_3",
+    "name": "星空探险",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2_1702040_stage_3",
+    "source_address": "jcc:s17:god_reward:2_1702040_stage_3",
+    "name": "羁绊探险",
+    "tags": [
+      "emblem",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2_1702030_stage_4",
+    "source_address": "jcc:s17:god_reward:2_1702030_stage_4",
+    "name": "等级探险",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2_1702050_stage_4",
+    "source_address": "jcc:s17:god_reward:2_1702050_stage_4",
+    "name": "奥瑞利安·索尔的恩赐",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2_1702060_stage_4",
+    "source_address": "jcc:s17:god_reward:2_1702060_stage_4",
+    "name": "低生命值探险",
+    "tags": [
+      "economy",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:2_1702070_stage_4",
+    "source_address": "jcc:s17:god_reward:2_1702070_stage_4",
+    "name": "刷新探险",
+    "tags": [
+      "item_reward",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703010_stage_2",
+    "source_address": "jcc:s17:god_reward:3_1703010_stage_2",
+    "name": "烈阳格",
+    "tags": [
+      "health",
+      "item_reward",
+      "magic_damage",
+      "single_target",
+      "true_damage",
+      "wound"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703020_stage_2",
+    "source_address": "jcc:s17:god_reward:3_1703020_stage_2",
+    "name": "宇宙格",
+    "tags": [
+      "health",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703030_stage_2",
+    "source_address": "jcc:s17:god_reward:3_1703030_stage_2",
+    "name": "增速格",
+    "tags": [
+      "attack_speed",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703040_stage_2",
+    "source_address": "jcc:s17:god_reward:3_1703040_stage_2",
+    "name": "星光格",
+    "tags": [
+      "health",
+      "item_reward",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703050_stage_2",
+    "source_address": "jcc:s17:god_reward:3_1703050_stage_2",
+    "name": "风暴格",
+    "tags": [
+      "control",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703060_stage_2",
+    "source_address": "jcc:s17:god_reward:3_1703060_stage_2",
+    "name": "冰晶格",
+    "tags": [
+      "health",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703010_stage_3",
+    "source_address": "jcc:s17:god_reward:3_1703010_stage_3",
+    "name": "烈阳格",
+    "tags": [
+      "health",
+      "item_reward",
+      "magic_damage",
+      "single_target",
+      "true_damage",
+      "wound"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703030_stage_3",
+    "source_address": "jcc:s17:god_reward:3_1703030_stage_3",
+    "name": "增速格",
+    "tags": [
+      "attack_speed",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703040_stage_3",
+    "source_address": "jcc:s17:god_reward:3_1703040_stage_3",
+    "name": "星光格",
+    "tags": [
+      "health",
+      "item_reward",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703050_stage_3",
+    "source_address": "jcc:s17:god_reward:3_1703050_stage_3",
+    "name": "风暴格",
+    "tags": [
+      "control",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703060_stage_3",
+    "source_address": "jcc:s17:god_reward:3_1703060_stage_3",
+    "name": "冰晶格",
+    "tags": [
+      "health",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703010_stage_4",
+    "source_address": "jcc:s17:god_reward:3_1703010_stage_4",
+    "name": "烈阳格",
+    "tags": [
+      "health",
+      "item_reward",
+      "magic_damage",
+      "single_target",
+      "true_damage",
+      "wound"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703030_stage_4",
+    "source_address": "jcc:s17:god_reward:3_1703030_stage_4",
+    "name": "增速格",
+    "tags": [
+      "attack_speed",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703040_stage_4",
+    "source_address": "jcc:s17:god_reward:3_1703040_stage_4",
+    "name": "星光格",
+    "tags": [
+      "health",
+      "item_reward",
+      "mana"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703050_stage_4",
+    "source_address": "jcc:s17:god_reward:3_1703050_stage_4",
+    "name": "风暴格",
+    "tags": [
+      "control",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703060_stage_4",
+    "source_address": "jcc:s17:god_reward:3_1703060_stage_4",
+    "name": "冰晶格",
+    "tags": [
+      "health",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:3_1703070_stage_4",
+    "source_address": "jcc:s17:god_reward:3_1703070_stage_4",
+    "name": "亚索的恩赐",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704010_stage_2",
+    "source_address": "jcc:s17:god_reward:4_1704010_stage_2",
+    "name": "随机基础装备",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704020_stage_2",
+    "source_address": "jcc:s17:god_reward:4_1704020_stage_2",
+    "name": "拳套",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704021_stage_2",
+    "source_address": "jcc:s17:god_reward:4_1704021_stage_2",
+    "name": "反曲之弓",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704022_stage_2",
+    "source_address": "jcc:s17:god_reward:4_1704022_stage_2",
+    "name": "女神之泪",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704040_stage_2",
+    "source_address": "jcc:s17:god_reward:4_1704040_stage_2",
+    "name": "精工细作",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704050_stage_2",
+    "source_address": "jcc:s17:god_reward:4_1704050_stage_2",
+    "name": "锻造器转变",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704010_stage_3",
+    "source_address": "jcc:s17:god_reward:4_1704010_stage_3",
+    "name": "随机基础装备",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704023_stage_3",
+    "source_address": "jcc:s17:god_reward:4_1704023_stage_3",
+    "name": "无用大棒",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704024_stage_3",
+    "source_address": "jcc:s17:god_reward:4_1704024_stage_3",
+    "name": "锁子甲",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704025_stage_3",
+    "source_address": "jcc:s17:god_reward:4_1704025_stage_3",
+    "name": "负极斗篷",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704026_stage_3",
+    "source_address": "jcc:s17:god_reward:4_1704026_stage_3",
+    "name": "暴风大剑",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704030_stage_3",
+    "source_address": "jcc:s17:god_reward:4_1704030_stage_3",
+    "name": "神圣返还",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704010_stage_4",
+    "source_address": "jcc:s17:god_reward:4_1704010_stage_4",
+    "name": "随机基础装备",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704011_stage_4",
+    "source_address": "jcc:s17:god_reward:4_1704011_stage_4",
+    "name": "凯尔的恩赐",
+    "tags": [
+      "health",
+      "item_reward",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704020_stage_4",
+    "source_address": "jcc:s17:god_reward:4_1704020_stage_4",
+    "name": "拳套",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704021_stage_4",
+    "source_address": "jcc:s17:god_reward:4_1704021_stage_4",
+    "name": "反曲之弓",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704022_stage_4",
+    "source_address": "jcc:s17:god_reward:4_1704022_stage_4",
+    "name": "女神之泪",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704023_stage_4",
+    "source_address": "jcc:s17:god_reward:4_1704023_stage_4",
+    "name": "无用大棒",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704024_stage_4",
+    "source_address": "jcc:s17:god_reward:4_1704024_stage_4",
+    "name": "锁子甲",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704025_stage_4",
+    "source_address": "jcc:s17:god_reward:4_1704025_stage_4",
+    "name": "负极斗篷",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:4_1704026_stage_4",
+    "source_address": "jcc:s17:god_reward:4_1704026_stage_4",
+    "name": "暴风大剑",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705010_stage_2",
+    "source_address": "jcc:s17:god_reward:5_1705010_stage_2",
+    "name": "6金币",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705020_stage_2",
+    "source_address": "jcc:s17:god_reward:5_1705020_stage_2",
+    "name": "6经验",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705030_stage_2",
+    "source_address": "jcc:s17:god_reward:5_1705030_stage_2",
+    "name": "4次刷新",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705040_stage_2",
+    "source_address": "jcc:s17:god_reward:5_1705040_stage_2",
+    "name": "联手致富",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705070_stage_2",
+    "source_address": "jcc:s17:god_reward:5_1705070_stage_2",
+    "name": "神圣投资",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705080_stage_2",
+    "source_address": "jcc:s17:god_reward:5_1705080_stage_2",
+    "name": "贪婪之宝箱",
+    "tags": [
+      "aoe",
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705011_stage_3",
+    "source_address": "jcc:s17:god_reward:5_1705011_stage_3",
+    "name": "8金币",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705021_stage_3",
+    "source_address": "jcc:s17:god_reward:5_1705021_stage_3",
+    "name": "8经验",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705031_stage_3",
+    "source_address": "jcc:s17:god_reward:5_1705031_stage_3",
+    "name": "5次刷新",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705041_stage_3",
+    "source_address": "jcc:s17:god_reward:5_1705041_stage_3",
+    "name": "联手致富+",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705060_stage_3",
+    "source_address": "jcc:s17:god_reward:5_1705060_stage_3",
+    "name": "每回合金币?",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705071_stage_3",
+    "source_address": "jcc:s17:god_reward:5_1705071_stage_3",
+    "name": "神圣投资+",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705081_stage_3",
+    "source_address": "jcc:s17:god_reward:5_1705081_stage_3",
+    "name": "贪婪之宝箱+",
+    "tags": [
+      "aoe",
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705090_stage_3",
+    "source_address": "jcc:s17:god_reward:5_1705090_stage_3",
+    "name": "赐福：财富",
+    "tags": [
+      "economy",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705012_stage_4",
+    "source_address": "jcc:s17:god_reward:5_1705012_stage_4",
+    "name": "10金币",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705032_stage_4",
+    "source_address": "jcc:s17:god_reward:5_1705032_stage_4",
+    "name": "7次刷新",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705042_stage_4",
+    "source_address": "jcc:s17:god_reward:5_1705042_stage_4",
+    "name": "联手致富++",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705050_stage_4",
+    "source_address": "jcc:s17:god_reward:5_1705050_stage_4",
+    "name": "阿狸的恩赐",
+    "tags": [
+      "economy",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:5_1705082_stage_4",
+    "source_address": "jcc:s17:god_reward:5_1705082_stage_4",
+    "name": "贪婪之宝箱++",
+    "tags": [
+      "aoe",
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706010_stage_3",
+    "source_address": "jcc:s17:god_reward:6_1706010_stage_3",
+    "name": "次级英雄复制器",
+    "tags": [
+      "duplicator",
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706020_stage_3",
+    "source_address": "jcc:s17:god_reward:6_1706020_stage_3",
+    "name": "现有的3费弈子",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706041_stage_3",
+    "source_address": "jcc:s17:god_reward:6_1706041_stage_3",
+    "name": "恋人+",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706080_stage_3",
+    "source_address": "jcc:s17:god_reward:6_1706080_stage_3",
+    "name": "4费商店",
+    "tags": [
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706100_stage_3",
+    "source_address": "jcc:s17:god_reward:6_1706100_stage_3",
+    "name": "短生刷新",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706110_stage_3",
+    "source_address": "jcc:s17:god_reward:6_1706110_stage_3",
+    "name": "升星缘分",
+    "tags": [
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706120_stage_3",
+    "source_address": "jcc:s17:god_reward:6_1706120_stage_3",
+    "name": "超级临别赠礼",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706011_stage_4",
+    "source_address": "jcc:s17:god_reward:6_1706011_stage_4",
+    "name": "次级英雄复制器",
+    "tags": [
+      "duplicator",
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706012_stage_4",
+    "source_address": "jcc:s17:god_reward:6_1706012_stage_4",
+    "name": "复制器大礼包",
+    "tags": [
+      "duplicator"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706021_stage_4",
+    "source_address": "jcc:s17:god_reward:6_1706021_stage_4",
+    "name": "现有的4费弈子",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706042_stage_4",
+    "source_address": "jcc:s17:god_reward:6_1706042_stage_4",
+    "name": "恋人++",
+    "tags": [
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706090_stage_4",
+    "source_address": "jcc:s17:god_reward:6_1706090_stage_4",
+    "name": "韦鲁斯的恩赐",
+    "tags": [
+      "health",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706120_stage_4",
+    "source_address": "jcc:s17:god_reward:6_1706120_stage_4",
+    "name": "超级临别赠礼",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706020_stage_2",
+    "source_address": "jcc:s17:god_reward:6_1706020_stage_2",
+    "name": "现有的3费弈子",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706040_stage_2",
+    "source_address": "jcc:s17:god_reward:6_1706040_stage_2",
+    "name": "恋人",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706050_stage_2",
+    "source_address": "jcc:s17:god_reward:6_1706050_stage_2",
+    "name": "2个微型复制器",
+    "tags": [
+      "duplicator"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706070_stage_2",
+    "source_address": "jcc:s17:god_reward:6_1706070_stage_2",
+    "name": "3费商店",
+    "tags": [
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:6_1706120_stage_2",
+    "source_address": "jcc:s17:god_reward:6_1706120_stage_2",
+    "name": "超级临别赠礼",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707000_stage_3",
+    "source_address": "jcc:s17:god_reward:7_1707000_stage_3",
+    "name": "赐福：速度",
+    "tags": [
+      "attack_speed",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707011_stage_3",
+    "source_address": "jcc:s17:god_reward:7_1707011_stage_3",
+    "name": "迅捷蟹派对",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707051_stage_3",
+    "source_address": "jcc:s17:god_reward:7_1707051_stage_3",
+    "name": "2个5费弈子",
+    "tags": [
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707060_stage_3",
+    "source_address": "jcc:s17:god_reward:7_1707060_stage_3",
+    "name": "基础装备锻造器",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707000_stage_4",
+    "source_address": "jcc:s17:god_reward:7_1707000_stage_4",
+    "name": "赐福：速度",
+    "tags": [
+      "attack_speed",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707041_stage_4",
+    "source_address": "jcc:s17:god_reward:7_1707041_stage_4",
+    "name": "随机神器",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707061_stage_4",
+    "source_address": "jcc:s17:god_reward:7_1707061_stage_4",
+    "name": "成装锻造器",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707070_stage_4",
+    "source_address": "jcc:s17:god_reward:7_1707070_stage_4",
+    "name": "5费商店",
+    "tags": [
+      "aoe",
+      "economy",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707080_stage_4",
+    "source_address": "jcc:s17:god_reward:7_1707080_stage_4",
+    "name": "现金流",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707090_stage_4",
+    "source_address": "jcc:s17:god_reward:7_1707090_stage_4",
+    "name": "艾克的恩赐",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707010_stage_2",
+    "source_address": "jcc:s17:god_reward:7_1707010_stage_2",
+    "name": "迅捷蟹派对",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707020_stage_2",
+    "source_address": "jcc:s17:god_reward:7_1707020_stage_2",
+    "name": "神圣干预",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707040_stage_2",
+    "source_address": "jcc:s17:god_reward:7_1707040_stage_2",
+    "name": "随机神器",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:7_1707050_stage_2",
+    "source_address": "jcc:s17:god_reward:7_1707050_stage_2",
+    "name": "4费弈子",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:8_1708010_stage_2",
+    "source_address": "jcc:s17:god_reward:8_1708010_stage_2",
+    "name": "随机恩赐",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:8_1708020_stage_2",
+    "source_address": "jcc:s17:god_reward:8_1708020_stage_2",
+    "name": "神秘战利品",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:8_1708060_stage_2",
+    "source_address": "jcc:s17:god_reward:8_1708060_stage_2",
+    "name": "迷你变形重组器",
+    "tags": [
+      "aoe"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:8_1708011_stage_3",
+    "source_address": "jcc:s17:god_reward:8_1708011_stage_3",
+    "name": "随机恩赐",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:8_1708021_stage_3",
+    "source_address": "jcc:s17:god_reward:8_1708021_stage_3",
+    "name": "神秘战利品",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:8_1708012_stage_4",
+    "source_address": "jcc:s17:god_reward:8_1708012_stage_4",
+    "name": "随机恩赐",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:8_1708022_stage_4",
+    "source_address": "jcc:s17:god_reward:8_1708022_stage_4",
+    "name": "神秘战利品",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:8_1708030_stage_4",
+    "source_address": "jcc:s17:god_reward:8_1708030_stage_4",
+    "name": "掷骰子",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:8_1708040_stage_4",
+    "source_address": "jcc:s17:god_reward:8_1708040_stage_4",
+    "name": "锤石的恩赐",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709010_stage_2",
+    "source_address": "jcc:s17:god_reward:9_1709010_stage_2",
+    "name": "12小小英雄生命值",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709020_stage_2",
+    "source_address": "jcc:s17:god_reward:9_1709020_stage_2",
+    "name": "在一起更好",
+    "tags": [
+      "economy",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709040_stage_2",
+    "source_address": "jcc:s17:god_reward:9_1709040_stage_2",
+    "name": "巨人腰带",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709060_stage_2",
+    "source_address": "jcc:s17:god_reward:9_1709060_stage_2",
+    "name": "索拉卡的拥抱",
+    "tags": [
+      "shield"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709080_stage_2",
+    "source_address": "jcc:s17:god_reward:9_1709080_stage_2",
+    "name": "赐福：兴盛",
+    "tags": [
+      "economy",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709010_stage_3",
+    "source_address": "jcc:s17:god_reward:9_1709010_stage_3",
+    "name": "12小小英雄生命值",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709021_stage_3",
+    "source_address": "jcc:s17:god_reward:9_1709021_stage_3",
+    "name": "在一起更好+",
+    "tags": [
+      "economy",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709030_stage_3",
+    "source_address": "jcc:s17:god_reward:9_1709030_stage_3",
+    "name": "赐福：体型",
+    "tags": [
+      "health",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709040_stage_3",
+    "source_address": "jcc:s17:god_reward:9_1709040_stage_3",
+    "name": "巨人腰带",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709060_stage_3",
+    "source_address": "jcc:s17:god_reward:9_1709060_stage_3",
+    "name": "索拉卡的拥抱",
+    "tags": [
+      "shield"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709070_stage_3",
+    "source_address": "jcc:s17:god_reward:9_1709070_stage_3",
+    "name": "神圣共情",
+    "tags": [
+      "health",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709081_stage_3",
+    "source_address": "jcc:s17:god_reward:9_1709081_stage_3",
+    "name": "赐福：兴盛+",
+    "tags": [
+      "economy",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709010_stage_4",
+    "source_address": "jcc:s17:god_reward:9_1709010_stage_4",
+    "name": "12小小英雄生命值",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709022_stage_4",
+    "source_address": "jcc:s17:god_reward:9_1709022_stage_4",
+    "name": "在一起更好+",
+    "tags": [
+      "economy",
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709030_stage_4",
+    "source_address": "jcc:s17:god_reward:9_1709030_stage_4",
+    "name": "赐福：体型",
+    "tags": [
+      "health",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709040_stage_4",
+    "source_address": "jcc:s17:god_reward:9_1709040_stage_4",
+    "name": "巨人腰带",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709050_stage_4",
+    "source_address": "jcc:s17:god_reward:9_1709050_stage_4",
+    "name": "索拉卡的恩赐",
+    "tags": [
+      "health"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:9_1709060_stage_4",
+    "source_address": "jcc:s17:god_reward:9_1709060_stage_4",
+    "name": "索拉卡的拥抱",
+    "tags": [
+      "shield"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710010_stage_2",
+    "source_address": "jcc:s17:god_reward:10_1710010_stage_2",
+    "name": "2星2费",
+    "tags": [
+      "health",
+      "health_cost"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710014_stage_2",
+    "source_address": "jcc:s17:god_reward:10_1710014_stage_2",
+    "name": "1星4费",
+    "tags": [
+      "health",
+      "health_cost"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710040_stage_2",
+    "source_address": "jcc:s17:god_reward:10_1710040_stage_2",
+    "name": "猩红契约",
+    "tags": [
+      "economy",
+      "health",
+      "health_cost"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710050_stage_2",
+    "source_address": "jcc:s17:god_reward:10_1710050_stage_2",
+    "name": "碾压之势",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710080_stage_2",
+    "source_address": "jcc:s17:god_reward:10_1710080_stage_2",
+    "name": "决赛圈胜负手",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710011_stage_3",
+    "source_address": "jcc:s17:god_reward:10_1710011_stage_3",
+    "name": "2星3费",
+    "tags": [
+      "health",
+      "health_cost"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710012_stage_3",
+    "source_address": "jcc:s17:god_reward:10_1710012_stage_3",
+    "name": "3星1费",
+    "tags": [
+      "health",
+      "health_cost"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710020_stage_3",
+    "source_address": "jcc:s17:god_reward:10_1710020_stage_3",
+    "name": "随机纹章",
+    "tags": [
+      "emblem",
+      "health",
+      "health_cost"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": true,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710041_stage_3",
+    "source_address": "jcc:s17:god_reward:10_1710041_stage_3",
+    "name": "猩红契约+",
+    "tags": [
+      "economy",
+      "health",
+      "health_cost"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710051_stage_3",
+    "source_address": "jcc:s17:god_reward:10_1710051_stage_3",
+    "name": "碾压之势+",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710060_stage_3",
+    "source_address": "jcc:s17:god_reward:10_1710060_stage_3",
+    "name": "12金币",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710013_stage_4",
+    "source_address": "jcc:s17:god_reward:10_1710013_stage_4",
+    "name": "2星4费",
+    "tags": [
+      "health",
+      "health_cost"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710015_stage_4",
+    "source_address": "jcc:s17:god_reward:10_1710015_stage_4",
+    "name": "2个1星5费",
+    "tags": [
+      "health",
+      "health_cost",
+      "shop_odds"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710030_stage_4",
+    "source_address": "jcc:s17:god_reward:10_1710030_stage_4",
+    "name": "随机成装",
+    "tags": [
+      "health",
+      "health_cost",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710042_stage_4",
+    "source_address": "jcc:s17:god_reward:10_1710042_stage_4",
+    "name": "猩红契约++",
+    "tags": [
+      "economy",
+      "health",
+      "health_cost"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710061_stage_4",
+    "source_address": "jcc:s17:god_reward:10_1710061_stage_4",
+    "name": "18金币",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:10_1710070_stage_4",
+    "source_address": "jcc:s17:god_reward:10_1710070_stage_4",
+    "name": "伊芙琳的恩赐",
+    "tags": [
+      "durability",
+      "health",
+      "health_cost"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": true,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17980",
+    "source_address": "jcc:s17:encounter:17980",
+    "name": "金金金之旅",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17981",
+    "source_address": "jcc:s17:encounter:17981",
+    "name": "彩彩彩之旅",
+    "tags": [
+      "aoe"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17982",
+    "source_address": "jcc:s17:encounter:17982",
+    "name": "棱彩终章",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17983",
+    "source_address": "jcc:s17:encounter:17983",
+    "name": "棱彩前奏",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17984",
+    "source_address": "jcc:s17:encounter:17984",
+    "name": "3费开局",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17985",
+    "source_address": "jcc:s17:encounter:17985",
+    "name": "2费开局",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17986",
+    "source_address": "jcc:s17:encounter:17986",
+    "name": "2星开局",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17987",
+    "source_address": "jcc:s17:encounter:17987",
+    "name": "基础装备锻造器",
+    "tags": [
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17988",
+    "source_address": "jcc:s17:encounter:17988",
+    "name": "战利品订阅",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17989",
+    "source_address": "jcc:s17:encounter:17989",
+    "name": "纹章剧团",
+    "tags": [
+      "emblem"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17990",
+    "source_address": "jcc:s17:encounter:17990",
+    "name": "金币订阅",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17991",
+    "source_address": "jcc:s17:encounter:17991",
+    "name": "没有奇遇",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17992",
+    "source_address": "jcc:s17:encounter:17992",
+    "name": "嚎哭深渊",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17993",
+    "source_address": "jcc:s17:encounter:17993",
+    "name": "《Silver Scrapes》战歌响起",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17994",
+    "source_address": "jcc:s17:encounter:17994",
+    "name": "强化符文刷新",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17995",
+    "source_address": "jcc:s17:encounter:17995",
+    "name": "双重复制器",
+    "tags": [
+      "duplicator"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": true,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:17996",
+    "source_address": "jcc:s17:encounter:17996",
+    "name": "神器锻造器",
+    "tags": [
+      "aoe",
+      "item_reward"
+    ],
+    "choice_bias": {
+      "immediate_power": true,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": true
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:171002",
+    "source_address": "jcc:s17:encounter:171002",
+    "name": "更便宜的等级",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:171003",
+    "source_address": "jcc:s17:encounter:171003",
+    "name": "刷新开局",
+    "tags": [
+      "economy"
+    ],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_cheaper_levels",
+    "source_address": "jcc:s17:tft_encounter:cheaper_levels",
+    "name": "Cheaper Levels",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_reroll_start",
+    "source_address": "jcc:s17:tft_encounter:reroll_start",
+    "name": "Reroll Start",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_stage3_augments",
+    "source_address": "jcc:s17:tft_encounter:stage3_augments",
+    "name": "Stage Three Augments",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_artifact_anvil",
+    "source_address": "jcc:s17:tft_encounter:artifact_anvil",
+    "name": "Artifact Anvil",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_double_duplicators",
+    "source_address": "jcc:s17:tft_encounter:double_duplicators",
+    "name": "Double Duplicators",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_golden_gala",
+    "source_address": "jcc:s17:tft_encounter:golden_gala",
+    "name": "Golden Gala",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_prismatic_party",
+    "source_address": "jcc:s17:tft_encounter:prismatic_party",
+    "name": "Prismatic Party",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_prismatic_finale",
+    "source_address": "jcc:s17:tft_encounter:prismatic_finale",
+    "name": "Prismatic Finale",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_prismatic_opener",
+    "source_address": "jcc:s17:tft_encounter:prismatic_opener",
+    "name": "Prismatic Opener",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_three_cost_start",
+    "source_address": "jcc:s17:tft_encounter:three_cost_start",
+    "name": "3-cost Start",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_two_cost_start",
+    "source_address": "jcc:s17:tft_encounter:two_cost_start",
+    "name": "2-cost Start",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_upgraded_start",
+    "source_address": "jcc:s17:tft_encounter:upgraded_start",
+    "name": "Upgraded Start",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_component_anvils",
+    "source_address": "jcc:s17:tft_encounter:component_anvils",
+    "name": "Component Anvils",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_loot_subscription",
+    "source_address": "jcc:s17:tft_encounter:loot_subscription",
+    "name": "Loot Subscription",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_emblem_ensemble",
+    "source_address": "jcc:s17:tft_encounter:emblem_ensemble",
+    "name": "Emblem Ensemble",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_gold_subscription",
+    "source_address": "jcc:s17:tft_encounter:gold_subscription",
+    "name": "Gold Subscription",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_no_encounter",
+    "source_address": "jcc:s17:tft_encounter:no_encounter",
+    "name": "No Encounter",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_howling_abyss",
+    "source_address": "jcc:s17:tft_encounter:howling_abyss",
+    "name": "Howling Abyss",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_silver_scrapes",
+    "source_address": "jcc:s17:tft_encounter:silver_scrapes",
+    "name": "Silver Scrapes",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  },
+  {
+    "address": "jcc:s17:reward_choice:tft_scouting_party",
+    "source_address": "jcc:s17:tft_encounter:scouting_party",
+    "name": "Scouting Party",
+    "tags": [],
+    "choice_bias": {
+      "immediate_power": false,
+      "economy": false,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    },
+    "confidence": "tft_lab_reference"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "address": "jcc:s17:index:player_habit_bias_schema",
+  "tracked_biases": [
+    "over_greed",
+    "late_leveling",
+    "under_scouting",
+    "late_item_commit",
+    "over_roll",
+    "pivot_hesitation",
+    "positioning_static"
+  ],
+  "update_sources": [
+    "match_thread",
+    "decision_event",
+    "postgame_review",
+    "user_feedback"
+  ],
+  "policy": "Player habit bias informs coaching style and reminders, but does not override hard data or current patch truth."
+}

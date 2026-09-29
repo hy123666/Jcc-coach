@@ -1,0 +1,39 @@
+{
+  "address": "jcc:s17:formula:pivot_cost",
+  "source": "generated_heuristic",
+  "inputs": [
+    "current_board",
+    "target_skeleton",
+    "shared_units",
+    "lost_upgrades",
+    "item_mismatch"
+  ],
+  "outputs": [
+    "gold_cost",
+    "trait_loss",
+    "upgrade_loss",
+    "pivot_risk"
+  ],
+  "formulas": {
+    "pivot_risk": "lost_upgrade_weight + item_mismatch_weight + missing_core_units_weight"
+  },
+  "dependencies": [
+    "jcc:s17:index:transition_paths"
+  ],
+  "use_cases": [
+    "转阵值不值",
+    "alternative carry chains"
+  ],
+  "exactness": "heuristic_until_live_board_known",
+  "name": "pivot_cost",
+  "category": "composition",
+  "domains": [
+    "composition",
+    "pivot"
+  ],
+  "route_domains": [
+    "trait_or_unit_swap",
+    "roll_or_level"
+  ],
+  "dependency_kind": "derived_formula"
+}

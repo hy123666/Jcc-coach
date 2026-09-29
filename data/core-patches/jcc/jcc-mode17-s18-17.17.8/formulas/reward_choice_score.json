@@ -1,0 +1,38 @@
+{
+  "address": "jcc:s17:formula:reward_choice_score",
+  "source": "generated_heuristic",
+  "inputs": [
+    "reward_tags",
+    "current_gaps",
+    "round_intent",
+    "risk_level"
+  ],
+  "outputs": [
+    "immediate_score",
+    "cap_score",
+    "economy_score",
+    "final_score"
+  ],
+  "formulas": {
+    "final_score": "immediate_score * tempo_weight + cap_score * cap_weight + economy_score * economy_weight + gap_fill_score"
+  },
+  "dependencies": [
+    "jcc:s17:index:reward_choice_tags",
+    "jcc:s17:index:round_intent"
+  ],
+  "use_cases": [
+    "强化/星神/奇遇/锻造器选择"
+  ],
+  "exactness": "heuristic_policy",
+  "name": "reward_choice_score",
+  "category": "reward",
+  "domains": [
+    "reward",
+    "choice"
+  ],
+  "route_domains": [
+    "reward_choice",
+    "augment_choice"
+  ],
+  "dependency_kind": "derived_formula"
+}

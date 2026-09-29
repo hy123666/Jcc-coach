@@ -1,0 +1,860 @@
+[
+  {
+    "address": "jcc:s17:runtime_loading_plan:augment_choice",
+    "route_id": "augment_choice",
+    "route_address": "jcc:s17:runtime_query_route:augment_choice",
+    "preferred_entity_kinds": [
+      "augment",
+      "trait",
+      "item",
+      "champion"
+    ],
+    "lookup_load_order": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks"
+    ],
+    "candidate_load_order": [
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:semantic_precision_calibration"
+    ],
+    "filter_steps": [
+      {
+        "step": "load_route_entries",
+        "uses": [
+          "jcc:s17:index:runtime_lookup_budgets",
+          "jcc:s17:index:runtime_first_answer_capsules",
+          "jcc:s17:index:runtime_answer_contracts",
+          "jcc:s17:index:runtime_state_confidence_contracts",
+          "jcc:s17:index:runtime_route_bundles",
+          "jcc:s17:index:route_context_packs"
+        ],
+        "rule": "open only low-latency lookup-budget, first-answer-capsule, answer-contract, state-confidence, route-bundle, and context-pack lookup records first; full fast-context is a candidate next-load, not a first-hop lookup entry"
+      },
+      {
+        "step": "candidate_next_load_fast_context",
+        "uses": [
+          "jcc:s17:index:runtime_fast_context"
+        ],
+        "rule": "open full fast-context only when the first-answer capsule is insufficient or candidate details are needed"
+      },
+      {
+        "step": "resolve_live_state_addresses",
+        "uses": [
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:live_state_validation"
+        ]
+      },
+      {
+        "step": "choose_route_kind_lookup",
+        "uses": [
+          "jcc:s17:index:route_kind_entity_lookup"
+        ],
+        "rule": "if visible options have a known entity kind, use route_id + kind first"
+      },
+      {
+        "step": "intersect_tags_and_formulas",
+        "uses": [
+          "jcc:s17:index:tag_entity_lookup",
+          "jcc:s17:index:formula_entity_lookup"
+        ],
+        "rule": "apply current board gaps, item tags, reward tags, and formula needs"
+      },
+      {
+        "step": "rank_candidate_cards",
+        "uses": [
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:route_strategy_playbook_lookup",
+          "jcc:s17:index:semantic_precision_calibration"
+        ],
+        "rule": "rank by route-specific kind bias, live-state feasibility, calibration score, route playbook score order, semantic precision gate first, then full precision route lookup only when needed; runtime_lookup_budgets marks full precision/manual/term/playbook lookup entries as candidate or deep-load only"
+      },
+      {
+        "step": "deep_load_only_finalists",
+        "uses": [
+          "jcc:s17:index:route_term_refinement_lookup",
+          "jcc:s17:index:effect_term_refinement_queue",
+          "jcc:s17:index:effect_term_formula_bindings",
+          "jcc:s17:index:entity_strategy_playbooks",
+          "jcc:s17:index:entity_tactical_semantics",
+          "jcc:s17:index:entity_semantic_calibration",
+          "jcc:s17:index:entity_mechanic_profiles",
+          "jcc:s17:index:entity_parse_quality",
+          "jcc:s17:index:strategy_weight_calibration",
+          "jcc:s17:index:skill_value_blocks"
+        ],
+        "rule": "load route-term lookup doorplates first, then formula bindings/playbooks/full term/entity deep calibration for top 3-8 candidates or when explanation/condition details are required; champion skill numeric truth comes from skill_value_blocks scoring_use when present"
+      }
+    ],
+    "max_lookup_candidates": 40,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 5000,
+    "fallback_policy": "If route+kind lookup is missing, fall back to route_entity_lookup then tag/formula lookup; never load entity_semantic_calibration for all entities in a live decision."
+  },
+  {
+    "address": "jcc:s17:runtime_loading_plan:item_craft",
+    "route_id": "item_craft",
+    "route_address": "jcc:s17:runtime_query_route:item_craft",
+    "preferred_entity_kinds": [
+      "item",
+      "champion",
+      "trait"
+    ],
+    "lookup_load_order": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks"
+    ],
+    "candidate_load_order": [
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:semantic_precision_calibration"
+    ],
+    "filter_steps": [
+      {
+        "step": "load_route_entries",
+        "uses": [
+          "jcc:s17:index:runtime_lookup_budgets",
+          "jcc:s17:index:runtime_first_answer_capsules",
+          "jcc:s17:index:runtime_answer_contracts",
+          "jcc:s17:index:runtime_state_confidence_contracts",
+          "jcc:s17:index:runtime_route_bundles",
+          "jcc:s17:index:route_context_packs"
+        ],
+        "rule": "open only low-latency lookup-budget, first-answer-capsule, answer-contract, state-confidence, route-bundle, and context-pack lookup records first; full fast-context is a candidate next-load, not a first-hop lookup entry"
+      },
+      {
+        "step": "candidate_next_load_fast_context",
+        "uses": [
+          "jcc:s17:index:runtime_fast_context"
+        ],
+        "rule": "open full fast-context only when the first-answer capsule is insufficient or candidate details are needed"
+      },
+      {
+        "step": "resolve_live_state_addresses",
+        "uses": [
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:live_state_validation"
+        ]
+      },
+      {
+        "step": "choose_route_kind_lookup",
+        "uses": [
+          "jcc:s17:index:route_kind_entity_lookup"
+        ],
+        "rule": "if visible options have a known entity kind, use route_id + kind first"
+      },
+      {
+        "step": "intersect_tags_and_formulas",
+        "uses": [
+          "jcc:s17:index:tag_entity_lookup",
+          "jcc:s17:index:formula_entity_lookup"
+        ],
+        "rule": "apply current board gaps, item tags, reward tags, and formula needs"
+      },
+      {
+        "step": "rank_candidate_cards",
+        "uses": [
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:route_strategy_playbook_lookup",
+          "jcc:s17:index:semantic_precision_calibration"
+        ],
+        "rule": "rank by route-specific kind bias, live-state feasibility, calibration score, route playbook score order, semantic precision gate first, then full precision route lookup only when needed; runtime_lookup_budgets marks full precision/manual/term/playbook lookup entries as candidate or deep-load only"
+      },
+      {
+        "step": "deep_load_only_finalists",
+        "uses": [
+          "jcc:s17:index:route_term_refinement_lookup",
+          "jcc:s17:index:effect_term_refinement_queue",
+          "jcc:s17:index:effect_term_formula_bindings",
+          "jcc:s17:index:entity_strategy_playbooks",
+          "jcc:s17:index:entity_tactical_semantics",
+          "jcc:s17:index:entity_semantic_calibration",
+          "jcc:s17:index:entity_mechanic_profiles",
+          "jcc:s17:index:entity_parse_quality",
+          "jcc:s17:index:strategy_weight_calibration",
+          "jcc:s17:index:skill_value_blocks"
+        ],
+        "rule": "load route-term lookup doorplates first, then formula bindings/playbooks/full term/entity deep calibration for top 3-8 candidates or when explanation/condition details are required; champion skill numeric truth comes from skill_value_blocks scoring_use when present"
+      }
+    ],
+    "max_lookup_candidates": 60,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 8000,
+    "fallback_policy": "If route+kind lookup is missing, fall back to route_entity_lookup then tag/formula lookup; never load entity_semantic_calibration for all entities in a live decision."
+  },
+  {
+    "address": "jcc:s17:runtime_loading_plan:holder_assignment",
+    "route_id": "holder_assignment",
+    "route_address": "jcc:s17:runtime_query_route:holder_assignment",
+    "preferred_entity_kinds": [
+      "item",
+      "champion"
+    ],
+    "lookup_load_order": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks"
+    ],
+    "candidate_load_order": [
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:semantic_precision_calibration"
+    ],
+    "filter_steps": [
+      {
+        "step": "load_route_entries",
+        "uses": [
+          "jcc:s17:index:runtime_lookup_budgets",
+          "jcc:s17:index:runtime_first_answer_capsules",
+          "jcc:s17:index:runtime_answer_contracts",
+          "jcc:s17:index:runtime_state_confidence_contracts",
+          "jcc:s17:index:runtime_route_bundles",
+          "jcc:s17:index:route_context_packs"
+        ],
+        "rule": "open only low-latency lookup-budget, first-answer-capsule, answer-contract, state-confidence, route-bundle, and context-pack lookup records first; full fast-context is a candidate next-load, not a first-hop lookup entry"
+      },
+      {
+        "step": "candidate_next_load_fast_context",
+        "uses": [
+          "jcc:s17:index:runtime_fast_context"
+        ],
+        "rule": "open full fast-context only when the first-answer capsule is insufficient or candidate details are needed"
+      },
+      {
+        "step": "resolve_live_state_addresses",
+        "uses": [
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:live_state_validation"
+        ]
+      },
+      {
+        "step": "choose_route_kind_lookup",
+        "uses": [
+          "jcc:s17:index:route_kind_entity_lookup"
+        ],
+        "rule": "if visible options have a known entity kind, use route_id + kind first"
+      },
+      {
+        "step": "intersect_tags_and_formulas",
+        "uses": [
+          "jcc:s17:index:tag_entity_lookup",
+          "jcc:s17:index:formula_entity_lookup"
+        ],
+        "rule": "apply current board gaps, item tags, reward tags, and formula needs"
+      },
+      {
+        "step": "rank_candidate_cards",
+        "uses": [
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:route_strategy_playbook_lookup",
+          "jcc:s17:index:semantic_precision_calibration"
+        ],
+        "rule": "rank by route-specific kind bias, live-state feasibility, calibration score, route playbook score order, semantic precision gate first, then full precision route lookup only when needed; runtime_lookup_budgets marks full precision/manual/term/playbook lookup entries as candidate or deep-load only"
+      },
+      {
+        "step": "deep_load_only_finalists",
+        "uses": [
+          "jcc:s17:index:route_term_refinement_lookup",
+          "jcc:s17:index:effect_term_refinement_queue",
+          "jcc:s17:index:effect_term_formula_bindings",
+          "jcc:s17:index:entity_strategy_playbooks",
+          "jcc:s17:index:entity_tactical_semantics",
+          "jcc:s17:index:entity_semantic_calibration",
+          "jcc:s17:index:entity_mechanic_profiles",
+          "jcc:s17:index:entity_parse_quality",
+          "jcc:s17:index:strategy_weight_calibration",
+          "jcc:s17:index:skill_value_blocks"
+        ],
+        "rule": "load route-term lookup doorplates first, then formula bindings/playbooks/full term/entity deep calibration for top 3-8 candidates or when explanation/condition details are required; champion skill numeric truth comes from skill_value_blocks scoring_use when present"
+      }
+    ],
+    "max_lookup_candidates": 60,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 8000,
+    "fallback_policy": "If route+kind lookup is missing, fall back to route_entity_lookup then tag/formula lookup; never load entity_semantic_calibration for all entities in a live decision."
+  },
+  {
+    "address": "jcc:s17:runtime_loading_plan:roll_or_level",
+    "route_id": "roll_or_level",
+    "route_address": "jcc:s17:runtime_query_route:roll_or_level",
+    "preferred_entity_kinds": [
+      "champion",
+      "augment",
+      "god_reward",
+      "encounter",
+      "trait"
+    ],
+    "lookup_load_order": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest"
+    ],
+    "candidate_load_order": [
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:semantic_precision_calibration"
+    ],
+    "filter_steps": [
+      {
+        "step": "load_route_entries",
+        "uses": [
+          "jcc:s17:index:runtime_lookup_budgets",
+          "jcc:s17:index:runtime_first_answer_capsules",
+          "jcc:s17:index:runtime_answer_contracts",
+          "jcc:s17:index:runtime_state_confidence_contracts",
+          "jcc:s17:index:runtime_route_bundles",
+          "jcc:s17:index:route_context_packs"
+        ],
+        "rule": "open only low-latency lookup-budget, first-answer-capsule, answer-contract, state-confidence, route-bundle, and context-pack lookup records first; full fast-context is a candidate next-load, not a first-hop lookup entry"
+      },
+      {
+        "step": "candidate_next_load_fast_context",
+        "uses": [
+          "jcc:s17:index:runtime_fast_context"
+        ],
+        "rule": "open full fast-context only when the first-answer capsule is insufficient or candidate details are needed"
+      },
+      {
+        "step": "resolve_live_state_addresses",
+        "uses": [
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:live_state_validation"
+        ]
+      },
+      {
+        "step": "choose_route_kind_lookup",
+        "uses": [
+          "jcc:s17:index:route_kind_entity_lookup"
+        ],
+        "rule": "if visible options have a known entity kind, use route_id + kind first"
+      },
+      {
+        "step": "intersect_tags_and_formulas",
+        "uses": [
+          "jcc:s17:index:tag_entity_lookup",
+          "jcc:s17:index:formula_entity_lookup"
+        ],
+        "rule": "apply current board gaps, item tags, reward tags, and formula needs"
+      },
+      {
+        "step": "rank_candidate_cards",
+        "uses": [
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:route_strategy_playbook_lookup",
+          "jcc:s17:index:semantic_precision_calibration"
+        ],
+        "rule": "rank by route-specific kind bias, live-state feasibility, calibration score, route playbook score order, semantic precision gate first, then full precision route lookup only when needed; runtime_lookup_budgets marks full precision/manual/term/playbook lookup entries as candidate or deep-load only"
+      },
+      {
+        "step": "deep_load_only_finalists",
+        "uses": [
+          "jcc:s17:index:route_term_refinement_lookup",
+          "jcc:s17:index:effect_term_refinement_queue",
+          "jcc:s17:index:effect_term_formula_bindings",
+          "jcc:s17:index:entity_strategy_playbooks",
+          "jcc:s17:index:entity_tactical_semantics",
+          "jcc:s17:index:entity_semantic_calibration",
+          "jcc:s17:index:entity_mechanic_profiles",
+          "jcc:s17:index:entity_parse_quality",
+          "jcc:s17:index:strategy_weight_calibration"
+        ],
+        "rule": "load route-term lookup doorplates first, then formula bindings/playbooks/full term/entity deep calibration for top 3-8 candidates or when explanation/condition details are required; champion skill numeric truth comes from skill_value_blocks scoring_use when present"
+      }
+    ],
+    "max_lookup_candidates": 60,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 8000,
+    "fallback_policy": "If route+kind lookup is missing, fall back to route_entity_lookup then tag/formula lookup; never load entity_semantic_calibration for all entities in a live decision."
+  },
+  {
+    "address": "jcc:s17:runtime_loading_plan:trait_or_unit_swap",
+    "route_id": "trait_or_unit_swap",
+    "route_address": "jcc:s17:runtime_query_route:trait_or_unit_swap",
+    "preferred_entity_kinds": [
+      "trait",
+      "champion",
+      "item"
+    ],
+    "lookup_load_order": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks"
+    ],
+    "candidate_load_order": [
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:semantic_precision_calibration"
+    ],
+    "filter_steps": [
+      {
+        "step": "load_route_entries",
+        "uses": [
+          "jcc:s17:index:runtime_lookup_budgets",
+          "jcc:s17:index:runtime_first_answer_capsules",
+          "jcc:s17:index:runtime_answer_contracts",
+          "jcc:s17:index:runtime_state_confidence_contracts",
+          "jcc:s17:index:runtime_route_bundles",
+          "jcc:s17:index:route_context_packs"
+        ],
+        "rule": "open only low-latency lookup-budget, first-answer-capsule, answer-contract, state-confidence, route-bundle, and context-pack lookup records first; full fast-context is a candidate next-load, not a first-hop lookup entry"
+      },
+      {
+        "step": "candidate_next_load_fast_context",
+        "uses": [
+          "jcc:s17:index:runtime_fast_context"
+        ],
+        "rule": "open full fast-context only when the first-answer capsule is insufficient or candidate details are needed"
+      },
+      {
+        "step": "resolve_live_state_addresses",
+        "uses": [
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:live_state_validation"
+        ]
+      },
+      {
+        "step": "choose_route_kind_lookup",
+        "uses": [
+          "jcc:s17:index:route_kind_entity_lookup"
+        ],
+        "rule": "if visible options have a known entity kind, use route_id + kind first"
+      },
+      {
+        "step": "intersect_tags_and_formulas",
+        "uses": [
+          "jcc:s17:index:tag_entity_lookup",
+          "jcc:s17:index:formula_entity_lookup"
+        ],
+        "rule": "apply current board gaps, item tags, reward tags, and formula needs"
+      },
+      {
+        "step": "rank_candidate_cards",
+        "uses": [
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:route_strategy_playbook_lookup",
+          "jcc:s17:index:semantic_precision_calibration"
+        ],
+        "rule": "rank by route-specific kind bias, live-state feasibility, calibration score, route playbook score order, semantic precision gate first, then full precision route lookup only when needed; runtime_lookup_budgets marks full precision/manual/term/playbook lookup entries as candidate or deep-load only"
+      },
+      {
+        "step": "deep_load_only_finalists",
+        "uses": [
+          "jcc:s17:index:route_term_refinement_lookup",
+          "jcc:s17:index:effect_term_refinement_queue",
+          "jcc:s17:index:effect_term_formula_bindings",
+          "jcc:s17:index:entity_strategy_playbooks",
+          "jcc:s17:index:entity_tactical_semantics",
+          "jcc:s17:index:entity_semantic_calibration",
+          "jcc:s17:index:entity_mechanic_profiles",
+          "jcc:s17:index:entity_parse_quality",
+          "jcc:s17:index:strategy_weight_calibration",
+          "jcc:s17:index:skill_value_blocks"
+        ],
+        "rule": "load route-term lookup doorplates first, then formula bindings/playbooks/full term/entity deep calibration for top 3-8 candidates or when explanation/condition details are required; champion skill numeric truth comes from skill_value_blocks scoring_use when present"
+      }
+    ],
+    "max_lookup_candidates": 60,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 8000,
+    "fallback_policy": "If route+kind lookup is missing, fall back to route_entity_lookup then tag/formula lookup; never load entity_semantic_calibration for all entities in a live decision."
+  },
+  {
+    "address": "jcc:s17:runtime_loading_plan:positioning",
+    "route_id": "positioning",
+    "route_address": "jcc:s17:runtime_query_route:positioning",
+    "preferred_entity_kinds": [
+      "champion",
+      "item",
+      "trait"
+    ],
+    "lookup_load_order": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks"
+    ],
+    "candidate_load_order": [
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:semantic_precision_calibration"
+    ],
+    "filter_steps": [
+      {
+        "step": "load_route_entries",
+        "uses": [
+          "jcc:s17:index:runtime_lookup_budgets",
+          "jcc:s17:index:runtime_first_answer_capsules",
+          "jcc:s17:index:runtime_answer_contracts",
+          "jcc:s17:index:runtime_state_confidence_contracts",
+          "jcc:s17:index:runtime_route_bundles",
+          "jcc:s17:index:route_context_packs"
+        ],
+        "rule": "open only low-latency lookup-budget, first-answer-capsule, answer-contract, state-confidence, route-bundle, and context-pack lookup records first; full fast-context is a candidate next-load, not a first-hop lookup entry"
+      },
+      {
+        "step": "candidate_next_load_fast_context",
+        "uses": [
+          "jcc:s17:index:runtime_fast_context"
+        ],
+        "rule": "open full fast-context only when the first-answer capsule is insufficient or candidate details are needed"
+      },
+      {
+        "step": "resolve_live_state_addresses",
+        "uses": [
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:live_state_validation"
+        ]
+      },
+      {
+        "step": "choose_route_kind_lookup",
+        "uses": [
+          "jcc:s17:index:route_kind_entity_lookup"
+        ],
+        "rule": "if visible options have a known entity kind, use route_id + kind first"
+      },
+      {
+        "step": "intersect_tags_and_formulas",
+        "uses": [
+          "jcc:s17:index:tag_entity_lookup",
+          "jcc:s17:index:formula_entity_lookup"
+        ],
+        "rule": "apply current board gaps, item tags, reward tags, and formula needs"
+      },
+      {
+        "step": "rank_candidate_cards",
+        "uses": [
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:route_strategy_playbook_lookup",
+          "jcc:s17:index:semantic_precision_calibration"
+        ],
+        "rule": "rank by route-specific kind bias, live-state feasibility, calibration score, route playbook score order, semantic precision gate first, then full precision route lookup only when needed; runtime_lookup_budgets marks full precision/manual/term/playbook lookup entries as candidate or deep-load only"
+      },
+      {
+        "step": "deep_load_only_finalists",
+        "uses": [
+          "jcc:s17:index:route_term_refinement_lookup",
+          "jcc:s17:index:effect_term_refinement_queue",
+          "jcc:s17:index:effect_term_formula_bindings",
+          "jcc:s17:index:entity_strategy_playbooks",
+          "jcc:s17:index:entity_tactical_semantics",
+          "jcc:s17:index:entity_semantic_calibration",
+          "jcc:s17:index:entity_mechanic_profiles",
+          "jcc:s17:index:entity_parse_quality",
+          "jcc:s17:index:strategy_weight_calibration",
+          "jcc:s17:index:skill_value_blocks"
+        ],
+        "rule": "load route-term lookup doorplates first, then formula bindings/playbooks/full term/entity deep calibration for top 3-8 candidates or when explanation/condition details are required; champion skill numeric truth comes from skill_value_blocks scoring_use when present"
+      }
+    ],
+    "max_lookup_candidates": 60,
+    "max_deep_candidates": 8,
+    "latency_budget_ms": 3000,
+    "fallback_policy": "If route+kind lookup is missing, fall back to route_entity_lookup then tag/formula lookup; never load entity_semantic_calibration for all entities in a live decision."
+  },
+  {
+    "address": "jcc:s17:runtime_loading_plan:reward_choice",
+    "route_id": "reward_choice",
+    "route_address": "jcc:s17:runtime_query_route:reward_choice",
+    "preferred_entity_kinds": [
+      "god_reward",
+      "encounter",
+      "augment",
+      "item"
+    ],
+    "lookup_load_order": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks"
+    ],
+    "candidate_load_order": [
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:semantic_precision_calibration"
+    ],
+    "filter_steps": [
+      {
+        "step": "load_route_entries",
+        "uses": [
+          "jcc:s17:index:runtime_lookup_budgets",
+          "jcc:s17:index:runtime_first_answer_capsules",
+          "jcc:s17:index:runtime_answer_contracts",
+          "jcc:s17:index:runtime_state_confidence_contracts",
+          "jcc:s17:index:runtime_route_bundles",
+          "jcc:s17:index:route_context_packs"
+        ],
+        "rule": "open only low-latency lookup-budget, first-answer-capsule, answer-contract, state-confidence, route-bundle, and context-pack lookup records first; full fast-context is a candidate next-load, not a first-hop lookup entry"
+      },
+      {
+        "step": "candidate_next_load_fast_context",
+        "uses": [
+          "jcc:s17:index:runtime_fast_context"
+        ],
+        "rule": "open full fast-context only when the first-answer capsule is insufficient or candidate details are needed"
+      },
+      {
+        "step": "resolve_live_state_addresses",
+        "uses": [
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:live_state_validation"
+        ]
+      },
+      {
+        "step": "choose_route_kind_lookup",
+        "uses": [
+          "jcc:s17:index:route_kind_entity_lookup"
+        ],
+        "rule": "if visible options have a known entity kind, use route_id + kind first"
+      },
+      {
+        "step": "intersect_tags_and_formulas",
+        "uses": [
+          "jcc:s17:index:tag_entity_lookup",
+          "jcc:s17:index:formula_entity_lookup"
+        ],
+        "rule": "apply current board gaps, item tags, reward tags, and formula needs"
+      },
+      {
+        "step": "rank_candidate_cards",
+        "uses": [
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:route_strategy_playbook_lookup",
+          "jcc:s17:index:semantic_precision_calibration"
+        ],
+        "rule": "rank by route-specific kind bias, live-state feasibility, calibration score, route playbook score order, semantic precision gate first, then full precision route lookup only when needed; runtime_lookup_budgets marks full precision/manual/term/playbook lookup entries as candidate or deep-load only"
+      },
+      {
+        "step": "deep_load_only_finalists",
+        "uses": [
+          "jcc:s17:index:route_term_refinement_lookup",
+          "jcc:s17:index:effect_term_refinement_queue",
+          "jcc:s17:index:effect_term_formula_bindings",
+          "jcc:s17:index:entity_strategy_playbooks",
+          "jcc:s17:index:entity_tactical_semantics",
+          "jcc:s17:index:entity_semantic_calibration",
+          "jcc:s17:index:entity_mechanic_profiles",
+          "jcc:s17:index:entity_parse_quality",
+          "jcc:s17:index:strategy_weight_calibration",
+          "jcc:s17:index:skill_value_blocks"
+        ],
+        "rule": "load route-term lookup doorplates first, then formula bindings/playbooks/full term/entity deep calibration for top 3-8 candidates or when explanation/condition details are required; champion skill numeric truth comes from skill_value_blocks scoring_use when present"
+      }
+    ],
+    "max_lookup_candidates": 40,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 5000,
+    "fallback_policy": "If route+kind lookup is missing, fall back to route_entity_lookup then tag/formula lookup; never load entity_semantic_calibration for all entities in a live decision."
+  },
+  {
+    "address": "jcc:s17:runtime_loading_plan:postgame_review",
+    "route_id": "postgame_review",
+    "route_address": "jcc:s17:runtime_query_route:postgame_review",
+    "preferred_entity_kinds": [
+      "champion",
+      "item",
+      "trait",
+      "augment",
+      "god_reward",
+      "encounter"
+    ],
+    "lookup_load_order": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest"
+    ],
+    "candidate_load_order": [
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:semantic_precision_calibration"
+    ],
+    "filter_steps": [
+      {
+        "step": "load_route_entries",
+        "uses": [
+          "jcc:s17:index:runtime_lookup_budgets",
+          "jcc:s17:index:runtime_first_answer_capsules",
+          "jcc:s17:index:runtime_answer_contracts",
+          "jcc:s17:index:runtime_state_confidence_contracts",
+          "jcc:s17:index:runtime_route_bundles",
+          "jcc:s17:index:route_context_packs"
+        ],
+        "rule": "open only low-latency lookup-budget, first-answer-capsule, answer-contract, state-confidence, route-bundle, and context-pack lookup records first; full fast-context is a candidate next-load, not a first-hop lookup entry"
+      },
+      {
+        "step": "candidate_next_load_fast_context",
+        "uses": [
+          "jcc:s17:index:runtime_fast_context"
+        ],
+        "rule": "open full fast-context only when the first-answer capsule is insufficient or candidate details are needed"
+      },
+      {
+        "step": "resolve_live_state_addresses",
+        "uses": [
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:live_state_validation"
+        ]
+      },
+      {
+        "step": "choose_route_kind_lookup",
+        "uses": [
+          "jcc:s17:index:route_kind_entity_lookup"
+        ],
+        "rule": "if visible options have a known entity kind, use route_id + kind first"
+      },
+      {
+        "step": "intersect_tags_and_formulas",
+        "uses": [
+          "jcc:s17:index:tag_entity_lookup",
+          "jcc:s17:index:formula_entity_lookup"
+        ],
+        "rule": "apply current board gaps, item tags, reward tags, and formula needs"
+      },
+      {
+        "step": "rank_candidate_cards",
+        "uses": [
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:route_strategy_playbook_lookup",
+          "jcc:s17:index:semantic_precision_calibration"
+        ],
+        "rule": "rank by route-specific kind bias, live-state feasibility, calibration score, route playbook score order, semantic precision gate first, then full precision route lookup only when needed; runtime_lookup_budgets marks full precision/manual/term/playbook lookup entries as candidate or deep-load only"
+      },
+      {
+        "step": "deep_load_only_finalists",
+        "uses": [
+          "jcc:s17:index:route_term_refinement_lookup",
+          "jcc:s17:index:effect_term_refinement_queue",
+          "jcc:s17:index:effect_term_formula_bindings",
+          "jcc:s17:index:entity_strategy_playbooks",
+          "jcc:s17:index:entity_tactical_semantics",
+          "jcc:s17:index:entity_semantic_calibration",
+          "jcc:s17:index:entity_mechanic_profiles",
+          "jcc:s17:index:entity_parse_quality",
+          "jcc:s17:index:strategy_weight_calibration"
+        ],
+        "rule": "load route-term lookup doorplates first, then formula bindings/playbooks/full term/entity deep calibration for top 3-8 candidates or when explanation/condition details are required; champion skill numeric truth comes from skill_value_blocks scoring_use when present"
+      }
+    ],
+    "max_lookup_candidates": 60,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 8000,
+    "fallback_policy": "If route+kind lookup is missing, fall back to route_entity_lookup then tag/formula lookup; never load entity_semantic_calibration for all entities in a live decision."
+  }
+]

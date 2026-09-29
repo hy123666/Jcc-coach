@@ -1,0 +1,35 @@
+{
+  "address": "jcc:s17:formula:component_completion",
+  "source": "generated_heuristic",
+  "inputs": [
+    "owned_components",
+    "candidate_recipes"
+  ],
+  "outputs": [
+    "craftable_items",
+    "missing_components",
+    "completion_distance"
+  ],
+  "formulas": {
+    "completion_distance": "sum(max(0, required_count - owned_count))"
+  },
+  "dependencies": [
+    "jcc:s17:index:component_to_item_candidates"
+  ],
+  "use_cases": [
+    "散件优先合什么",
+    "wait cost"
+  ],
+  "exactness": "exact_from_official_recipes",
+  "name": "component_completion",
+  "category": "item",
+  "domains": [
+    "item",
+    "craft"
+  ],
+  "route_domains": [
+    "item_craft",
+    "holder_assignment"
+  ],
+  "dependency_kind": "derived_formula"
+}

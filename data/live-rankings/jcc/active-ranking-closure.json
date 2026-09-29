@@ -1,13 +1,13 @@
 {
   "schema": "jcc-live-ranking-active-closure-v1",
   "status": "active",
-  "core_profile_id": "a9ae6238c720d2d1546da4bbeec8c5fac53116a323147030158ebc64550cb151",
+  "core_profile_id": "e849f3cebd901093080c1ba030eb536a13c1fb72dbf3fbf02da2afc805c2d79c",
   "season_id": "s18",
-  "patch_id": "s18_2",
-  "catalog_fingerprint": "bd6921b1397a47e07e0728cf7c87df8eca84c2299e4952676cc4b897fbd56a92",
-  "hard_data_manifest_fingerprint": "86a9fcbf0d0f5bf6766c6e68718aa68e5f5c2c2a0662bf84cd49853a1b2bc549",
-  "stat_date": "20260926",
-  "ranking_generation_id": "20260926-182e365774f065a7e8bac4e0",
-  "recipe_generation_id": "38a4d0d8ac941d45ae0f5ab71ff58ce9ee8b137aaca1ddf868eadebb64588b4f",
-  "published_at": "2026-09-26T23:13:22.061Z"
+  "patch_id": "s18_3",
+  "catalog_fingerprint": "2fc1e2a7e409f09c7df3eb8a3477407f5663adbcfbb5eb585d0f5f22e722ada5",
+  "hard_data_manifest_fingerprint": "8ebf65be230c7cc65da5549013581a8732ff2f96d4f29b12fbd30196390889fd",
+  "stat_date": "20260928",
+  "ranking_generation_id": "20260928-22c9ddfe17a449180fc48f48",
+  "recipe_generation_id": "ba1861f0f813aa6cf0ce547a60343be45277391463ccd1f25901463d69bb2ab1",
+  "published_at": "2026-09-29T05:50:21.934Z"
 }

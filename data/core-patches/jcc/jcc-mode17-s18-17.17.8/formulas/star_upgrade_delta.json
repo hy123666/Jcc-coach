@@ -1,0 +1,39 @@
+{
+  "address": "jcc:s17:formula:star_upgrade_delta",
+  "source": "generated_heuristic",
+  "inputs": [
+    "stats_before",
+    "stats_after",
+    "skill_values_before",
+    "skill_values_after"
+  ],
+  "outputs": [
+    "delta_hp",
+    "delta_ad",
+    "delta_ehp",
+    "delta_skill_values"
+  ],
+  "formulas": {
+    "stat_delta": "stat_after - stat_before"
+  },
+  "dependencies": [
+    "jcc:s17:index:champion_damage_profile",
+    "jcc:s17:formula:ehp"
+  ],
+  "use_cases": [
+    "pair value",
+    "chase upgrades"
+  ],
+  "exactness": "exact_for_base_stats",
+  "name": "star_upgrade_delta",
+  "category": "composition",
+  "domains": [
+    "composition",
+    "unit"
+  ],
+  "route_domains": [
+    "trait_or_unit_swap",
+    "roll_or_level"
+  ],
+  "dependency_kind": "derived_formula"
+}

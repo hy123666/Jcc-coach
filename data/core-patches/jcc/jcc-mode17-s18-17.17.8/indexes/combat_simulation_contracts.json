@@ -1,0 +1,382 @@
+{
+  "address": "jcc:s17:index:combat_simulation_contracts",
+  "contract_count": 4,
+  "implementation_status": "contract_plus_formula_evaluators_not_full_physics_engine",
+  "no_fake_precision_policy": "Use these contracts for fast, explainable combat estimates; do not claim full deterministic fight simulation unless a future simulator supplies pathing, targeting, cast timing, and RNG state.",
+  "shared_live_state_fields": [
+    "jcc:s17:live_state_field:board_units",
+    "jcc:s17:live_state_field:completed_items",
+    "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+    "jcc:s17:live_state_field:recognized_state"
+  ],
+  "shared_deep_indexes": [
+    "jcc:s17:index:runtime_entity_cards",
+    "jcc:s17:index:skill_value_blocks",
+    "jcc:s17:index:entity_tactical_semantics",
+    "jcc:s17:index:effect_term_formula_bindings",
+    "jcc:s17:index:route_evaluator_manifest",
+    "jcc:s17:index:live_state_capture_gateway"
+  ],
+  "contracts": [
+    {
+      "address": "jcc:s17:combat_simulation_contract:fast_board_estimate",
+      "id": "fast_board_estimate",
+      "route_refs": [
+        "jcc:s17:runtime_query_route:roll_or_level",
+        "jcc:s17:runtime_query_route:trait_or_unit_swap",
+        "jcc:s17:runtime_query_route:postgame_review"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:active_traits",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:recognized_state"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:action_feasibility",
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:damage_mix",
+        "jcc:s17:formula:ehp",
+        "jcc:s17:formula:dps_auto_attack",
+        "jcc:s17:formula:mana_cycle",
+        "jcc:s17:formula:cast_frequency",
+        "jcc:s17:formula:skill_value_scaling",
+        "jcc:s17:formula:damage"
+      ],
+      "stages": [
+        {
+          "address": "jcc:s17:combat_simulation_stage:fast_board_estimate_validate_state",
+          "id": "validate_state",
+          "order": 1,
+          "formula_refs": [
+            "jcc:s17:formula:action_feasibility"
+          ],
+          "purpose": "drop stale or impossible board facts before scoring",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        },
+        {
+          "address": "jcc:s17:combat_simulation_stage:fast_board_estimate_score_unit_quality",
+          "id": "score_unit_quality",
+          "order": 2,
+          "formula_refs": [
+            "jcc:s17:formula:unit_quality_score",
+            "jcc:s17:formula:star_upgrade_delta"
+          ],
+          "purpose": "estimate board material quality by cost/star/role/items/traits",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        },
+        {
+          "address": "jcc:s17:combat_simulation_stage:fast_board_estimate_estimate_output",
+          "id": "estimate_output",
+          "order": 3,
+          "formula_refs": [
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:dps_auto_attack",
+            "jcc:s17:formula:mana_cycle",
+            "jcc:s17:formula:cast_frequency",
+            "jcc:s17:formula:skill_value_scaling",
+            "jcc:s17:formula:damage"
+          ],
+          "purpose": "estimate output type, autos, casts, and skill value",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        },
+        {
+          "address": "jcc:s17:combat_simulation_stage:fast_board_estimate_estimate_survival",
+          "id": "estimate_survival",
+          "order": 4,
+          "formula_refs": [
+            "jcc:s17:formula:ehp",
+            "jcc:s17:formula:defensive_marginal_value"
+          ],
+          "purpose": "estimate frontline survival against current or default damage mix",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        },
+        {
+          "address": "jcc:s17:combat_simulation_stage:fast_board_estimate_aggregate_board_score",
+          "id": "aggregate_board_score",
+          "order": 5,
+          "formula_refs": [
+            "jcc:s17:formula:unit_quality_score",
+            "jcc:s17:formula:damage",
+            "jcc:s17:formula:ehp"
+          ],
+          "purpose": "combine output, survival, and uncertainty into a board score",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        }
+      ],
+      "outputs": [
+        "board_power_score",
+        "expected_damage_profile",
+        "frontline_ehp_profile",
+        "cast_uptime_estimate",
+        "uncertainty_flags"
+      ],
+      "lookup_ref": "jcc:s17:lookup_ref:combat_simulation_contract_fast_board_estimate",
+      "confidence_contract": {
+        "exact_when": "all required live fields fresh and formula inputs resolved to hard-data addresses",
+        "heuristic_when": "opponent snapshot, cast timing, targeting, or RNG state is missing",
+        "must_cite": [
+          "required_live_state_fields",
+          "formula_refs",
+          "uncertainty_flags",
+          "no_fake_precision_policy"
+        ]
+      }
+    },
+    {
+      "address": "jcc:s17:combat_simulation_contract:positioning_duel_estimate",
+      "id": "positioning_duel_estimate",
+      "route_refs": [
+        "jcc:s17:runtime_query_route:positioning",
+        "jcc:s17:runtime_query_route:postgame_review"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:time_left",
+        "jcc:s17:live_state_field:recognized_state"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:action_feasibility",
+        "jcc:s17:formula:scouting_priority_score",
+        "jcc:s17:formula:positioning_risk",
+        "jcc:s17:formula:damage_mix",
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:operation_time_budget"
+      ],
+      "stages": [
+        {
+          "address": "jcc:s17:combat_simulation_stage:positioning_duel_estimate_validate_scout",
+          "id": "validate_scout",
+          "order": 1,
+          "formula_refs": [
+            "jcc:s17:formula:action_feasibility",
+            "jcc:s17:formula:operation_time_budget"
+          ],
+          "purpose": "verify scout freshness and available move count",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        },
+        {
+          "address": "jcc:s17:combat_simulation_stage:positioning_duel_estimate_rank_scout_targets",
+          "id": "rank_scout_targets",
+          "order": 2,
+          "formula_refs": [
+            "jcc:s17:formula:scouting_priority_score"
+          ],
+          "purpose": "choose likely or most dangerous opponent snapshot",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        },
+        {
+          "address": "jcc:s17:combat_simulation_stage:positioning_duel_estimate_score_threat_alignment",
+          "id": "score_threat_alignment",
+          "order": 3,
+          "formula_refs": [
+            "jcc:s17:formula:positioning_risk",
+            "jcc:s17:formula:damage_mix"
+          ],
+          "purpose": "score AOE, line, backline, and targeting risk",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        },
+        {
+          "address": "jcc:s17:combat_simulation_stage:positioning_duel_estimate_propose_moves",
+          "id": "propose_moves",
+          "order": 4,
+          "formula_refs": [
+            "jcc:s17:formula:operation_time_budget",
+            "jcc:s17:formula:positioning_risk"
+          ],
+          "purpose": "emit minimal moves under time budget",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        }
+      ],
+      "outputs": [
+        "positioning_risk_score",
+        "recommended_template",
+        "minimal_move_list",
+        "scout_priority",
+        "time_budget_fit"
+      ],
+      "lookup_ref": "jcc:s17:lookup_ref:combat_simulation_contract_positioning_duel_estimate",
+      "confidence_contract": {
+        "exact_when": "all required live fields fresh and formula inputs resolved to hard-data addresses",
+        "heuristic_when": "opponent snapshot, cast timing, targeting, or RNG state is missing",
+        "must_cite": [
+          "required_live_state_fields",
+          "formula_refs",
+          "uncertainty_flags",
+          "no_fake_precision_policy"
+        ]
+      }
+    },
+    {
+      "address": "jcc:s17:combat_simulation_contract:item_or_holder_delta",
+      "id": "item_or_holder_delta",
+      "route_refs": [
+        "jcc:s17:runtime_query_route:item_craft",
+        "jcc:s17:runtime_query_route:holder_assignment",
+        "jcc:s17:runtime_query_route:trait_or_unit_swap"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:components",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:item_holders",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:round"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:component_completion",
+        "jcc:s17:formula:item_marginal_value",
+        "jcc:s17:formula:item_conflict_penalty",
+        "jcc:s17:formula:stat_modifier_value",
+        "jcc:s17:formula:defensive_marginal_value",
+        "jcc:s17:formula:damage_mix",
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:skill_value_scaling"
+      ],
+      "stages": [
+        {
+          "address": "jcc:s17:combat_simulation_stage:item_or_holder_delta_enumerate_candidates",
+          "id": "enumerate_candidates",
+          "order": 1,
+          "formula_refs": [
+            "jcc:s17:formula:component_completion"
+          ],
+          "purpose": "list craftable or transferable item candidates",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        },
+        {
+          "address": "jcc:s17:combat_simulation_stage:item_or_holder_delta_score_holder_fit",
+          "id": "score_holder_fit",
+          "order": 2,
+          "formula_refs": [
+            "jcc:s17:formula:item_marginal_value",
+            "jcc:s17:formula:unit_quality_score",
+            "jcc:s17:formula:skill_value_scaling"
+          ],
+          "purpose": "score candidate item on current and future holders",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        },
+        {
+          "address": "jcc:s17:combat_simulation_stage:item_or_holder_delta_score_conflicts",
+          "id": "score_conflicts",
+          "order": 3,
+          "formula_refs": [
+            "jcc:s17:formula:item_conflict_penalty",
+            "jcc:s17:formula:stat_modifier_value"
+          ],
+          "purpose": "penalize unique/effect conflicts and redundant stats",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        },
+        {
+          "address": "jcc:s17:combat_simulation_stage:item_or_holder_delta_score_defense_or_output_delta",
+          "id": "score_defense_or_output_delta",
+          "order": 4,
+          "formula_refs": [
+            "jcc:s17:formula:defensive_marginal_value",
+            "jcc:s17:formula:damage_mix"
+          ],
+          "purpose": "estimate marginal EHP or output delta",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        }
+      ],
+      "outputs": [
+        "item_delta_score",
+        "best_holder",
+        "temporary_holder",
+        "future_fit_score",
+        "conflict_penalty"
+      ],
+      "lookup_ref": "jcc:s17:lookup_ref:combat_simulation_contract_item_or_holder_delta",
+      "confidence_contract": {
+        "exact_when": "all required live fields fresh and formula inputs resolved to hard-data addresses",
+        "heuristic_when": "opponent snapshot, cast timing, targeting, or RNG state is missing",
+        "must_cite": [
+          "required_live_state_fields",
+          "formula_refs",
+          "uncertainty_flags",
+          "no_fake_precision_policy"
+        ]
+      }
+    },
+    {
+      "address": "jcc:s17:combat_simulation_contract:postgame_combat_attribution",
+      "id": "postgame_combat_attribution",
+      "route_refs": [
+        "jcc:s17:runtime_query_route:postgame_review"
+      ],
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:timeline_events",
+        "jcc:s17:live_state_field:decision_events",
+        "jcc:s17:live_state_field:postgame_result",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:review_attribution_score",
+        "jcc:s17:formula:player_habit_bias",
+        "jcc:s17:formula:damage_mix",
+        "jcc:s17:formula:positioning_risk",
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:item_marginal_value"
+      ],
+      "stages": [
+        {
+          "address": "jcc:s17:combat_simulation_stage:postgame_combat_attribution_load_events",
+          "id": "load_events",
+          "order": 1,
+          "formula_refs": [
+            "jcc:s17:formula:review_attribution_score"
+          ],
+          "purpose": "read compact decision and fight outcome events",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        },
+        {
+          "address": "jcc:s17:combat_simulation_stage:postgame_combat_attribution_classify_loss_surface",
+          "id": "classify_loss_surface",
+          "order": 2,
+          "formula_refs": [
+            "jcc:s17:formula:damage_mix",
+            "jcc:s17:formula:positioning_risk",
+            "jcc:s17:formula:unit_quality_score"
+          ],
+          "purpose": "separate damage mix, positioning, unit quality, and item causes",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        },
+        {
+          "address": "jcc:s17:combat_simulation_stage:postgame_combat_attribution_score_habit_signal",
+          "id": "score_habit_signal",
+          "order": 3,
+          "formula_refs": [
+            "jcc:s17:formula:player_habit_bias"
+          ],
+          "purpose": "update player habit bias only as coaching memory",
+          "failure_policy": "lower_confidence_and_record_missing_inputs"
+        }
+      ],
+      "outputs": [
+        "top_loss_causes",
+        "combat_mistake_surface",
+        "habit_signal",
+        "next_game_reminder"
+      ],
+      "lookup_ref": "jcc:s17:lookup_ref:combat_simulation_contract_postgame_combat_attribution",
+      "confidence_contract": {
+        "exact_when": "all required live fields fresh and formula inputs resolved to hard-data addresses",
+        "heuristic_when": "opponent snapshot, cast timing, targeting, or RNG state is missing",
+        "must_cite": [
+          "required_live_state_fields",
+          "formula_refs",
+          "uncertainty_flags",
+          "no_fake_precision_policy"
+        ]
+      }
+    }
+  ]
+}

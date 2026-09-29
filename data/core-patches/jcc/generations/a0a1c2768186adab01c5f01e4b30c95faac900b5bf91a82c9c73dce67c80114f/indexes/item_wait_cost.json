@@ -1,0 +1,1192 @@
+[
+  {
+    "address": "jcc:s18:item_wait_cost:1001",
+    "component_address": "jcc:s18:item:1001",
+    "component_name": "暴风之剑",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s18:item:2001",
+        "name": "无尽之刃",
+        "tags": [
+          "critical_strike",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2003",
+        "name": "海克斯科技枪刃",
+        "tags": [
+          "healing",
+          "magic_damage",
+          "mana",
+          "omnivamp",
+          "physical_damage",
+          "sustain"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2004",
+        "name": "朔极之矛",
+        "tags": [
+          "magic_damage",
+          "mana",
+          "physical_damage",
+          "trigger_basic_attack"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2005",
+        "name": "夜之锋刃",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "frontline",
+          "healing",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2006",
+        "name": "汲取剑",
+        "tags": [
+          "frontline",
+          "magic_damage",
+          "magic_resist",
+          "omnivamp",
+          "physical_damage",
+          "shield",
+          "sustain"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2007",
+        "name": "斯特拉克的挑战护手",
+        "tags": [
+          "frontline",
+          "health",
+          "physical_damage",
+          "shield"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2045",
+        "name": "锐利之刃",
+        "tags": [
+          "damage_amp",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2046",
+        "name": "巨人捕手",
+        "tags": [
+          "attack_speed",
+          "damage_amp",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41804",
+        "name": "花仙子纹章",
+        "tags": [
+          "emblem",
+          "frontline",
+          "health",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41816",
+        "name": "猎人纹章",
+        "tags": [
+          "emblem",
+          "physical_damage",
+          "trigger_kill"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_wait_cost:1002",
+    "component_address": "jcc:s18:item:1002",
+    "component_name": "反曲之弓",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s18:item:2009",
+        "name": "红霸符",
+        "tags": [
+          "attack_speed",
+          "damage_amp",
+          "healing",
+          "true_damage",
+          "wound"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2010",
+        "name": "鬼索的狂暴之刃",
+        "tags": [
+          "attack_speed",
+          "magic_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2011",
+        "name": "虚空之杖",
+        "tags": [
+          "attack_speed",
+          "magic_damage",
+          "magic_resist_shred",
+          "mana"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2012",
+        "name": "泰坦的坚决",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "control",
+          "frontline",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2013",
+        "name": "海妖之怒",
+        "tags": [
+          "attack_speed",
+          "frontline",
+          "magic_resist",
+          "physical_damage",
+          "trigger_basic_attack"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2014",
+        "name": "纳什之牙",
+        "tags": [
+          "attack_speed",
+          "critical_strike",
+          "frontline",
+          "health",
+          "magic_damage",
+          "mana",
+          "trigger_basic_attack"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2037",
+        "name": "最后的轻语",
+        "tags": [
+          "armor_shred",
+          "attack_speed",
+          "critical_strike",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2046",
+        "name": "巨人捕手",
+        "tags": [
+          "attack_speed",
+          "damage_amp",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41806",
+        "name": "地狱火纹章",
+        "tags": [
+          "attack_speed",
+          "emblem"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41815",
+        "name": "迅捷射手纹章",
+        "tags": [
+          "attack_speed",
+          "emblem",
+          "trigger_basic_attack",
+          "true_damage"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_wait_cost:1003",
+    "component_address": "jcc:s18:item:1003",
+    "component_name": "无用大棒",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s18:item:2003",
+        "name": "海克斯科技枪刃",
+        "tags": [
+          "healing",
+          "magic_damage",
+          "mana",
+          "omnivamp",
+          "physical_damage",
+          "sustain"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2010",
+        "name": "鬼索的狂暴之刃",
+        "tags": [
+          "attack_speed",
+          "magic_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2016",
+        "name": "班克斯的魔法帽",
+        "tags": [
+          "damage_amp",
+          "magic_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2017",
+        "name": "大天使之杖",
+        "tags": [
+          "magic_damage",
+          "mana",
+          "trigger_combat_start"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2018",
+        "name": "冕卫",
+        "tags": [
+          "armor",
+          "frontline",
+          "health",
+          "magic_damage",
+          "shield",
+          "trigger_combat_start"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2019",
+        "name": "离子火花",
+        "tags": [
+          "frontline",
+          "health",
+          "magic_damage",
+          "magic_resist",
+          "magic_resist_shred",
+          "mana",
+          "trigger_cast"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2020",
+        "name": "莫雷洛秘典",
+        "tags": [
+          "frontline",
+          "healing",
+          "health",
+          "magic_damage",
+          "mana",
+          "true_damage",
+          "wound"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2038",
+        "name": "珠光护手",
+        "tags": [
+          "critical_strike",
+          "magic_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41809",
+        "name": "灵魂莲华纹章",
+        "tags": [
+          "emblem",
+          "frontline",
+          "health",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41819",
+        "name": "法师纹章",
+        "tags": [
+          "emblem",
+          "magic_damage",
+          "mana",
+          "trigger_cast"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_wait_cost:1004",
+    "component_address": "jcc:s18:item:1004",
+    "component_name": "女神之泪",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s18:item:2004",
+        "name": "朔极之矛",
+        "tags": [
+          "magic_damage",
+          "mana",
+          "physical_damage",
+          "trigger_basic_attack"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2011",
+        "name": "虚空之杖",
+        "tags": [
+          "attack_speed",
+          "magic_damage",
+          "magic_resist_shred",
+          "mana"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2017",
+        "name": "大天使之杖",
+        "tags": [
+          "magic_damage",
+          "mana",
+          "trigger_combat_start"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2022",
+        "name": "蓝霸符",
+        "tags": [
+          "magic_damage",
+          "mana",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2023",
+        "name": "圣盾使的誓约",
+        "tags": [
+          "armor",
+          "frontline",
+          "healing",
+          "magic_resist",
+          "mana",
+          "shield",
+          "trigger_combat_start"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2024",
+        "name": "适应性头盔",
+        "tags": [
+          "frontline",
+          "magic_damage",
+          "magic_resist",
+          "mana",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2025",
+        "name": "振奋盔甲",
+        "tags": [
+          "damage_reduction",
+          "frontline",
+          "healing",
+          "health",
+          "mana"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2039",
+        "name": "正义之手",
+        "tags": [
+          "condition_low_health",
+          "critical_strike",
+          "healing",
+          "magic_damage",
+          "mana",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41808",
+        "name": "月蚀骑士纹章",
+        "tags": [
+          "attack_speed",
+          "emblem",
+          "mana"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41820",
+        "name": "神谕纹章",
+        "tags": [
+          "emblem",
+          "magic_damage",
+          "mana",
+          "trigger_cast"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_wait_cost:1005",
+    "component_address": "jcc:s18:item:1005",
+    "component_name": "锁子甲",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s18:item:2005",
+        "name": "夜之锋刃",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "frontline",
+          "healing",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2012",
+        "name": "泰坦的坚决",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "control",
+          "frontline",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2018",
+        "name": "冕卫",
+        "tags": [
+          "armor",
+          "frontline",
+          "health",
+          "magic_damage",
+          "shield",
+          "trigger_combat_start"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2023",
+        "name": "圣盾使的誓约",
+        "tags": [
+          "armor",
+          "frontline",
+          "healing",
+          "magic_resist",
+          "mana",
+          "shield",
+          "trigger_combat_start"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2027",
+        "name": "棘刺背心",
+        "tags": [
+          "aoe",
+          "armor",
+          "frontline",
+          "magic_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2028",
+        "name": "石像鬼石板甲",
+        "tags": [
+          "armor",
+          "frontline",
+          "health",
+          "magic_resist"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2029",
+        "name": "日炎斗篷",
+        "tags": [
+          "armor",
+          "frontline",
+          "healing",
+          "health",
+          "true_damage",
+          "wound"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2040",
+        "name": "坚定之心",
+        "tags": [
+          "armor",
+          "critical_strike",
+          "frontline",
+          "health"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41801",
+        "name": "永恒之森纹章",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "emblem",
+          "frontline",
+          "magic_resist"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41813",
+        "name": "重装战士纹章",
+        "tags": [
+          "armor",
+          "emblem",
+          "frontline",
+          "magic_resist",
+          "trigger_combat_start"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_wait_cost:1006",
+    "component_address": "jcc:s18:item:1006",
+    "component_name": "负极斗篷",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s18:item:2006",
+        "name": "汲取剑",
+        "tags": [
+          "frontline",
+          "magic_damage",
+          "magic_resist",
+          "omnivamp",
+          "physical_damage",
+          "shield",
+          "sustain"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2013",
+        "name": "海妖之怒",
+        "tags": [
+          "attack_speed",
+          "frontline",
+          "magic_resist",
+          "physical_damage",
+          "trigger_basic_attack"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2019",
+        "name": "离子火花",
+        "tags": [
+          "frontline",
+          "health",
+          "magic_damage",
+          "magic_resist",
+          "magic_resist_shred",
+          "mana",
+          "trigger_cast"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2024",
+        "name": "适应性头盔",
+        "tags": [
+          "frontline",
+          "magic_damage",
+          "magic_resist",
+          "mana",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2028",
+        "name": "石像鬼石板甲",
+        "tags": [
+          "armor",
+          "frontline",
+          "health",
+          "magic_resist"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2031",
+        "name": "巨龙之爪",
+        "tags": [
+          "frontline",
+          "healing",
+          "magic_resist"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2032",
+        "name": "薄暮法袍",
+        "tags": [
+          "armor_shred",
+          "frontline",
+          "health",
+          "magic_resist",
+          "magic_resist_shred",
+          "shred",
+          "sunder"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2041",
+        "name": "水银",
+        "tags": [
+          "attack_speed",
+          "control",
+          "critical_strike",
+          "frontline",
+          "magic_resist",
+          "trigger_combat_start"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41805",
+        "name": "约德尔人和朋友纹章",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "emblem",
+          "frontline",
+          "magic_resist"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41817",
+        "name": "狂战士纹章",
+        "tags": [
+          "armor",
+          "emblem",
+          "frontline",
+          "healing",
+          "magic_damage",
+          "magic_resist",
+          "physical_damage"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_wait_cost:1007",
+    "component_address": "jcc:s18:item:1007",
+    "component_name": "巨人腰带",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s18:item:2007",
+        "name": "斯特拉克的挑战护手",
+        "tags": [
+          "frontline",
+          "health",
+          "physical_damage",
+          "shield"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2014",
+        "name": "纳什之牙",
+        "tags": [
+          "attack_speed",
+          "critical_strike",
+          "frontline",
+          "health",
+          "magic_damage",
+          "mana",
+          "trigger_basic_attack"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2020",
+        "name": "莫雷洛秘典",
+        "tags": [
+          "frontline",
+          "healing",
+          "health",
+          "magic_damage",
+          "mana",
+          "true_damage",
+          "wound"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2025",
+        "name": "振奋盔甲",
+        "tags": [
+          "damage_reduction",
+          "frontline",
+          "healing",
+          "health",
+          "mana"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2029",
+        "name": "日炎斗篷",
+        "tags": [
+          "armor",
+          "frontline",
+          "healing",
+          "health",
+          "true_damage",
+          "wound"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2032",
+        "name": "薄暮法袍",
+        "tags": [
+          "armor_shred",
+          "frontline",
+          "health",
+          "magic_resist",
+          "magic_resist_shred",
+          "shred",
+          "sunder"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2034",
+        "name": "狂徒铠甲",
+        "tags": [
+          "frontline",
+          "health"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2042",
+        "name": "强袭者的链枷",
+        "tags": [
+          "attack_speed",
+          "critical_strike",
+          "damage_amp",
+          "frontline",
+          "health"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41802",
+        "name": "黑荆棘纹章",
+        "tags": [
+          "emblem",
+          "frontline",
+          "health",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41811",
+        "name": "斗士纹章",
+        "tags": [
+          "emblem",
+          "frontline",
+          "health",
+          "magic_damage",
+          "trigger_basic_attack"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_wait_cost:1008",
+    "component_address": "jcc:s18:item:1008",
+    "component_name": "金铲铲",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s18:item:2036",
+        "name": "金铲铲冠冕",
+        "tags": [
+          "economy"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2048",
+        "name": "金锅铲冠冕",
+        "tags": [
+          "economy"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41801",
+        "name": "永恒之森纹章",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "emblem",
+          "frontline",
+          "magic_resist"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41802",
+        "name": "黑荆棘纹章",
+        "tags": [
+          "emblem",
+          "frontline",
+          "health",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41804",
+        "name": "花仙子纹章",
+        "tags": [
+          "emblem",
+          "frontline",
+          "health",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41805",
+        "name": "约德尔人和朋友纹章",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "emblem",
+          "frontline",
+          "magic_resist"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41806",
+        "name": "地狱火纹章",
+        "tags": [
+          "attack_speed",
+          "emblem"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41807",
+        "name": "野兽之灵纹章",
+        "tags": [
+          "attack_speed",
+          "critical_strike",
+          "emblem",
+          "frontline",
+          "health"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41808",
+        "name": "月蚀骑士纹章",
+        "tags": [
+          "attack_speed",
+          "emblem",
+          "mana"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41809",
+        "name": "灵魂莲华纹章",
+        "tags": [
+          "emblem",
+          "frontline",
+          "health",
+          "magic_damage",
+          "physical_damage"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_wait_cost:1009",
+    "component_address": "jcc:s18:item:1009",
+    "component_name": "拳套",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s18:item:2001",
+        "name": "无尽之刃",
+        "tags": [
+          "critical_strike",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2037",
+        "name": "最后的轻语",
+        "tags": [
+          "armor_shred",
+          "attack_speed",
+          "critical_strike",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2038",
+        "name": "珠光护手",
+        "tags": [
+          "critical_strike",
+          "magic_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2039",
+        "name": "正义之手",
+        "tags": [
+          "condition_low_health",
+          "critical_strike",
+          "healing",
+          "magic_damage",
+          "mana",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2040",
+        "name": "坚定之心",
+        "tags": [
+          "armor",
+          "critical_strike",
+          "frontline",
+          "health"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2041",
+        "name": "水银",
+        "tags": [
+          "attack_speed",
+          "control",
+          "critical_strike",
+          "frontline",
+          "magic_resist",
+          "trigger_combat_start"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2042",
+        "name": "强袭者的链枷",
+        "tags": [
+          "attack_speed",
+          "critical_strike",
+          "damage_amp",
+          "frontline",
+          "health"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2044",
+        "name": "秘法手套",
+        "tags": [
+          "critical_strike",
+          "frontline",
+          "health"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41807",
+        "name": "野兽之灵纹章",
+        "tags": [
+          "attack_speed",
+          "critical_strike",
+          "emblem",
+          "frontline",
+          "health"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41818",
+        "name": "裁决使纹章",
+        "tags": [
+          "condition_low_health",
+          "critical_strike",
+          "emblem"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s18:item_wait_cost:1010",
+    "component_address": "jcc:s18:item:1010",
+    "component_name": "金锅锅",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s18:item:2047",
+        "name": "金锅锅冠冕",
+        "tags": [
+          "economy"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:2048",
+        "name": "金锅铲冠冕",
+        "tags": [
+          "economy"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41811",
+        "name": "斗士纹章",
+        "tags": [
+          "emblem",
+          "frontline",
+          "health",
+          "magic_damage",
+          "trigger_basic_attack"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41813",
+        "name": "重装战士纹章",
+        "tags": [
+          "armor",
+          "emblem",
+          "frontline",
+          "magic_resist",
+          "trigger_combat_start"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41815",
+        "name": "迅捷射手纹章",
+        "tags": [
+          "attack_speed",
+          "emblem",
+          "trigger_basic_attack",
+          "true_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41816",
+        "name": "猎人纹章",
+        "tags": [
+          "emblem",
+          "physical_damage",
+          "trigger_kill"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41817",
+        "name": "狂战士纹章",
+        "tags": [
+          "armor",
+          "emblem",
+          "frontline",
+          "healing",
+          "magic_damage",
+          "magic_resist",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41818",
+        "name": "裁决使纹章",
+        "tags": [
+          "condition_low_health",
+          "critical_strike",
+          "emblem"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41819",
+        "name": "法师纹章",
+        "tags": [
+          "emblem",
+          "magic_damage",
+          "mana",
+          "trigger_cast"
+        ]
+      },
+      {
+        "item_address": "jcc:s18:item:41820",
+        "name": "神谕纹章",
+        "tags": [
+          "emblem",
+          "magic_damage",
+          "mana",
+          "trigger_cast"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  }
+]

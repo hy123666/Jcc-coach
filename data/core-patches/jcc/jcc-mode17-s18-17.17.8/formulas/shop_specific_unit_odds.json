@@ -1,0 +1,143 @@
+{
+  "address": "jcc:s17:formula:shop_specific_unit_odds",
+  "source": "generated_heuristic",
+  "inputs": [
+    "level",
+    "target_cost",
+    "remaining_target_copies",
+    "pool_total_for_cost"
+  ],
+  "outputs": [
+    "specific_unit_slot_odds"
+  ],
+  "formulas": {
+    "specific_unit_slot_odds": "cost_odds_at_level * remaining_target_copies / pool_total_for_cost"
+  },
+  "dependencies": [
+    "jcc:s17:formula:shop_odds"
+  ],
+  "use_cases": [
+    "target unit odds",
+    "chase copies"
+  ],
+  "exactness": "exact_if_pool_state_known",
+  "tables": {
+    "odds_by_level": [
+      {
+        "level": 2,
+        "cost1": 100,
+        "cost2": 0,
+        "cost3": 0,
+        "cost4": 0,
+        "cost5": 0
+      },
+      {
+        "level": 3,
+        "cost1": 75,
+        "cost2": 25,
+        "cost3": 0,
+        "cost4": 0,
+        "cost5": 0
+      },
+      {
+        "level": 4,
+        "cost1": 55,
+        "cost2": 30,
+        "cost3": 15,
+        "cost4": 0,
+        "cost5": 0
+      },
+      {
+        "level": 5,
+        "cost1": 45,
+        "cost2": 33,
+        "cost3": 20,
+        "cost4": 2,
+        "cost5": 0
+      },
+      {
+        "level": 6,
+        "cost1": 30,
+        "cost2": 40,
+        "cost3": 25,
+        "cost4": 5,
+        "cost5": 0
+      },
+      {
+        "level": 7,
+        "cost1": 19,
+        "cost2": 30,
+        "cost3": 40,
+        "cost4": 10,
+        "cost5": 1
+      },
+      {
+        "level": 8,
+        "cost1": 15,
+        "cost2": 20,
+        "cost3": 32,
+        "cost4": 30,
+        "cost5": 3
+      },
+      {
+        "level": 9,
+        "cost1": 10,
+        "cost2": 17,
+        "cost3": 25,
+        "cost4": 33,
+        "cost5": 15
+      },
+      {
+        "level": 10,
+        "cost1": 5,
+        "cost2": 10,
+        "cost3": 20,
+        "cost4": 40,
+        "cost5": 25
+      }
+    ],
+    "pool_by_cost": [
+      {
+        "cost": 1,
+        "variety": 14,
+        "copiesPerChampion": 30,
+        "totalCopies": 420
+      },
+      {
+        "cost": 2,
+        "variety": 13,
+        "copiesPerChampion": 25,
+        "totalCopies": 325
+      },
+      {
+        "cost": 3,
+        "variety": 13,
+        "copiesPerChampion": 18,
+        "totalCopies": 234
+      },
+      {
+        "cost": 4,
+        "variety": 13,
+        "copiesPerChampion": 10,
+        "totalCopies": 130
+      },
+      {
+        "cost": 5,
+        "variety": 10,
+        "copiesPerChampion": 9,
+        "totalCopies": 90
+      }
+    ]
+  },
+  "name": "shop_specific_unit_odds",
+  "category": "shop",
+  "domains": [
+    "shop",
+    "roll"
+  ],
+  "route_domains": [
+    "roll_or_level",
+    "trait_or_unit_swap"
+  ],
+  "dependency_kind": "derived_formula"
+}

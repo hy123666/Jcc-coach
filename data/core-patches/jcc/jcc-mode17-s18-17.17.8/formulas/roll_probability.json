@@ -1,0 +1,41 @@
+{
+  "address": "jcc:s17:formula:roll_probability",
+  "source": "generated_heuristic",
+  "inputs": [
+    "level",
+    "target_cost",
+    "target_remaining_copies",
+    "pool_total_for_cost",
+    "gold_to_roll",
+    "shop_slots"
+  ],
+  "outputs": [
+    "shops_seen",
+    "slot_trials",
+    "hit_probability_1_plus",
+    "expected_copies"
+  ],
+  "formulas": {
+    "shops_seen": "floor(gold_to_roll / 2)",
+    "slot_trials": "shops_seen * shop_slots",
+    "expected_copies": "slot_trials * target_slot_probability",
+    "hit_probability_1_plus": "1 - (1 - target_slot_probability) ^ slot_trials"
+  },
+  "name": "roll_probability",
+  "category": "shop",
+  "domains": [
+    "shop",
+    "roll"
+  ],
+  "route_domains": [
+    "roll_or_level",
+    "trait_or_unit_swap"
+  ],
+  "dependencies": [],
+  "dependency_kind": "root_formula",
+  "use_cases": [
+    "roll-down hit odds",
+    "chase copy planning",
+    "contest adjusted search"
+  ]
+}

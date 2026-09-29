@@ -1,0 +1,46 @@
+{
+  "address": "jcc:s17:formula:hp_lethal_tolerance",
+  "source": "generated_heuristic",
+  "inputs": [
+    "hp",
+    "stage",
+    "alive_enemy_units",
+    "pvp_loss_stage_damage",
+    "expected_loss_damage",
+    "fight_loss_streak"
+  ],
+  "outputs": [
+    "expected_loss_damage",
+    "max_alive_enemy_units_to_survive",
+    "lethal_alive_enemy_units",
+    "losses_to_elimination",
+    "must_stabilize"
+  ],
+  "formulas": {
+    "expected_loss_damage": "pvp_loss_stage_damage_by_stage[stage] + alive_enemy_units",
+    "max_alive_enemy_units_to_survive": "max(0, hp - pvp_loss_stage_damage_by_stage[stage] - 1)",
+    "lethal_alive_enemy_units": "max(0, hp - pvp_loss_stage_damage_by_stage[stage])",
+    "losses_to_elimination": "floor(hp / expected_loss_damage)",
+    "must_stabilize": "losses_to_elimination <= threshold"
+  },
+  "dependencies": [
+    "jcc:s17:formula:economy"
+  ],
+  "use_cases": [
+    "greed vs roll",
+    "risk level"
+  ],
+  "exactness": "threshold_exact_for_given_stage_and_hp; future_alive_enemy_units_remain_estimate",
+  "name": "hp_lethal_tolerance",
+  "category": "tempo",
+  "domains": [
+    "tempo",
+    "survival"
+  ],
+  "route_domains": [
+    "roll_or_level",
+    "reward_choice",
+    "positioning"
+  ],
+  "dependency_kind": "derived_formula"
+}

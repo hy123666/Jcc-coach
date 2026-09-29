@@ -1,0 +1,36 @@
+{
+  "current_balance_patch": {
+    "version": "17.8",
+    "date": "2026-07-29",
+    "title": "星神·平衡性调整 S17.8",
+    "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+    "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js"
+  },
+  "runtime_patch_id": "s17_8",
+  "upstream_version": "17.17.8",
+  "source_package": {
+    "package_id": "jcc-mode17-s18-17.17.8",
+    "source_includes_balance_patch": true,
+    "collection_method": "Mode17S18.getModeGameData output from the official JCC framework; official fields preserved without replaying earlier runtime patch transforms."
+  },
+  "source_policy": {
+    "jcc_official": "authoritative for entities and per-match variants",
+    "tft_lab_system_rules": "authoritative reference for shared system rules unless JCC override is verified"
+  },
+  "directories": {
+    "normalized": "normalized",
+    "formulas": "formulas",
+    "indexes": "indexes"
+  },
+  "counts": {
+    "champions": 71,
+    "chess_variants": 123,
+    "traits": 34,
+    "items": 178,
+    "augments": 267,
+    "god_rewards": 141,
+    "encounters": 19,
+    "formulas": 51,
+    "indexes": 106
+  }
+}

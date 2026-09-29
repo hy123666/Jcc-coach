@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-26T13:25:31.361Z",
+  "generated_at": "2026-09-26T22:50:06.780Z",
   "source_identity": {
     "runtime_season_id": "s18",
     "active_patch_id": "s18_2",
@@ -18,7 +18,7 @@
     "upstream_season_id": "S19"
   },
   "current": {
-    "stat_date": "20260925",
+    "stat_date": "20260926",
     "files": [
       "snapshot.json",
       "rank-signal.json",
@@ -35,11 +35,11 @@
     "status": "ready",
     "annotation_count": 50,
     "reused_annotation_count": 0,
-    "input_hash": "7e618e7eae99452280820903f895f5d62698d4c9d9fe0e3e0b443db0fe07bf21",
-    "output_hash": "cb651d3b9ec36442f2153f401f6cbea6da9a491e5259128a986893637f20b4c5",
+    "input_hash": "2a84af97f09b3962eda4bbe3951874636bf7b296504eef9426a49308301caa64",
+    "output_hash": "28973fdb19ef2aec4fe6f21e954ab656d77ca11c5702494bcf6ad21aa353ff23",
     "provider": "version-pipeline",
     "model": "runtime-selected",
-    "duration_ms": 662787,
+    "duration_ms": 1300178,
     "failure_code": null,
     "failure_reason": null,
     "authority": "non_authoritative_semantic_annotation_only",

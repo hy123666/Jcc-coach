@@ -1,0 +1,2637 @@
+{
+  "schema": "jcc-decision-input-augment-stage-authority-v1",
+  "generated_at": "2026-07-29T06:55:02.469Z",
+  "authority_source": "generated_runtime_stage_authority_not_visual_icon_manifest",
+  "notes": [
+    "Authoritative stage availability for decision input dropdown/search.",
+    "Visual icon manifest round_hints are not consumed by catalog generation.",
+    "Rows not listed here remain unknown_round and are emitted in unknown_round_audit."
+  ],
+  "augment_stage_bindings": [
+    {
+      "address": "jcc:s17:augment:1002",
+      "id": "1002",
+      "name": "存心失利",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1003",
+      "id": "1003",
+      "name": "花到上头",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1004",
+      "id": "1004",
+      "name": "明智消费",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1006",
+      "id": "1006",
+      "name": "装备百宝袋 I",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1007",
+      "id": "1007",
+      "name": "潘朵拉的装备",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1008",
+      "id": "1008",
+      "name": "打捞桶",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1011",
+      "id": "1011",
+      "name": "清晰头脑",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1012",
+      "id": "1012",
+      "name": "浪人 I",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1021",
+      "id": "1021",
+      "name": "部分飞升",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1023",
+      "id": "1023",
+      "name": "应急护甲 I",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1093",
+      "id": "1093",
+      "name": "休眠锻炉",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1116",
+      "id": "1116",
+      "name": "复苏之风",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1134",
+      "id": "1134",
+      "name": "D个痛快！ I",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1147",
+      "id": "1147",
+      "name": "后期专家",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1148",
+      "id": "1148",
+      "name": "潘朵拉的备战席",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1149",
+      "id": "1149",
+      "name": "开摆",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1158",
+      "id": "1158",
+      "name": "节外生枝",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1478",
+      "id": "1478",
+      "name": "游神的盟友",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1479",
+      "id": "1479",
+      "name": "一，二，三",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1625",
+      "id": "1625",
+      "name": "别再错过",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1634",
+      "id": "1634",
+      "name": "治疗法球 I",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1646",
+      "id": "1646",
+      "name": "团队建设",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1647",
+      "id": "1647",
+      "name": "冒险举动",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1650",
+      "id": "1650",
+      "name": "一，二，五！",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1701",
+      "id": "1701",
+      "name": "黑铁资产",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1713",
+      "id": "1713",
+      "name": "对冲基金",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1714",
+      "id": "1714",
+      "name": "银汤匙",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1789",
+      "id": "1789",
+      "name": "有用之材 I",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1895",
+      "id": "1895",
+      "name": "四费增援",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:1900",
+      "id": "1900",
+      "name": "午餐钱",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2007",
+      "id": "2007",
+      "name": "潘朵拉的装备 II",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2008",
+      "id": "2008",
+      "name": "打捞桶+",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2012",
+      "id": "2012",
+      "name": "浪人 II",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2018",
+      "id": "2018",
+      "name": "源计划植入",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2021",
+      "id": "2021",
+      "name": "飞升",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2023",
+      "id": "2023",
+      "name": "应急护甲 II",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2069",
+      "id": "2069",
+      "name": "DD街区",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2110",
+      "id": "2110",
+      "name": "源计划上行链路",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2116",
+      "id": "2116",
+      "name": "复苏之风 II",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2127",
+      "id": "2127",
+      "name": "变形重组器",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2128",
+      "id": "2128",
+      "name": "珠光莲花 I",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2184",
+      "id": "2184",
+      "name": "大百宝袋",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2189",
+      "id": "2189",
+      "name": "纷乱头脑",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2276",
+      "id": "2276",
+      "name": "幸运手套",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2634",
+      "id": "2634",
+      "name": "治疗法球 II",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2705",
+      "id": "2705",
+      "name": "成吨的属性！",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2764",
+      "id": "2764",
+      "name": "碰撞测试假人",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2781",
+      "id": "2781",
+      "name": "小伙伴",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2804",
+      "id": "2804",
+      "name": "英勇福袋",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2896",
+      "id": "2896",
+      "name": "新纪元",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2916",
+      "id": "2916",
+      "name": "赏金战士",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:2917",
+      "id": "2917",
+      "name": "物尽其用",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3007",
+      "id": "3007",
+      "name": "潘朵拉的装备 III",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3008",
+      "id": "3008",
+      "name": "升级咯！",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3065",
+      "id": "3065",
+      "name": "棱彩门票",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3066",
+      "id": "3066",
+      "name": "新人入队",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3093",
+      "id": "3093",
+      "name": "便携锻炉",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3128",
+      "id": "3128",
+      "name": "珠光莲花 II",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3137",
+      "id": "3137",
+      "name": "金蛋",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3158",
+      "id": "3158",
+      "name": "耐心学习",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3269",
+      "id": "3269",
+      "name": "诅咒冠冕",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3270",
+      "id": "3270",
+      "name": "活体锻炉",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3276",
+      "id": "3276",
+      "name": "幸运手套+",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3486",
+      "id": "3486",
+      "name": "珍藏财宝",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3804",
+      "id": "3804",
+      "name": "英勇福袋+",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3809",
+      "id": "3809",
+      "name": "遥遥领先",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3851",
+      "id": "3851",
+      "name": "混沌召唤",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3896",
+      "id": "3896",
+      "name": "新纪元+",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3899",
+      "id": "3899",
+      "name": "小而致命",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3904",
+      "id": "3904",
+      "name": "不计代价",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:3917",
+      "id": "3917",
+      "name": "物尽其用+",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:4009",
+      "id": "4009",
+      "name": "最小巨人",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:4069",
+      "id": "4069",
+      "name": "大买特买",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:4158",
+      "id": "4158",
+      "name": "节外生枝+",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:4713",
+      "id": "4713",
+      "name": "对冲基金+",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:4804",
+      "id": "4804",
+      "name": "英勇福袋++",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10011",
+      "id": "10011",
+      "name": "耐心是一种美德",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10016",
+      "id": "10016",
+      "name": "重启任务",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10048",
+      "id": "10048",
+      "name": "C位的觉悟",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10203",
+      "id": "10203",
+      "name": "汲取生命力 I",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10212",
+      "id": "10212",
+      "name": "幸存者",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10214",
+      "id": "10214",
+      "name": "精心打造",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10236",
+      "id": "10236",
+      "name": "假人化",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10242",
+      "id": "10242",
+      "name": "终身黄铜 I",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10252",
+      "id": "10252",
+      "name": "腐蚀",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10253",
+      "id": "10253",
+      "name": "玻璃大炮 I",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10255",
+      "id": "10255",
+      "name": "攀登天梯 I",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10264",
+      "id": "10264",
+      "name": "列队",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10495",
+      "id": "10495",
+      "name": "人生切片",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10559",
+      "id": "10559",
+      "name": "轻量魔法投掷",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10561",
+      "id": "10561",
+      "name": "战时补给：拳套",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10570",
+      "id": "10570",
+      "name": "升星之运",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10573",
+      "id": "10573",
+      "name": "拳击课程",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10580",
+      "id": "10580",
+      "name": "战时补给：无用大棒",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10581",
+      "id": "10581",
+      "name": "战时补给：女神之泪",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10582",
+      "id": "10582",
+      "name": "战时补给：暴风大剑",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10583",
+      "id": "10583",
+      "name": "战时补给：反曲之弓",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10584",
+      "id": "10584",
+      "name": "认知税",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10585",
+      "id": "10585",
+      "name": "认知税+",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10586",
+      "id": "10586",
+      "name": "博弈开启",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10587",
+      "id": "10587",
+      "name": "高塔",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10588",
+      "id": "10588",
+      "name": "充能转移 I",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10589",
+      "id": "10589",
+      "name": "充能转移 II",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10611",
+      "id": "10611",
+      "name": "邦！",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10614",
+      "id": "10614",
+      "name": "手气不错",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10615",
+      "id": "10615",
+      "name": "拥抱 I",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10616",
+      "id": "10616",
+      "name": "拥抱 II",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10631",
+      "id": "10631",
+      "name": "小小福袋",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10632",
+      "id": "10632",
+      "name": "双子守护神",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10707",
+      "id": "10707",
+      "name": "远征",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10708",
+      "id": "10708",
+      "name": "电火花 I",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10724",
+      "id": "10724",
+      "name": "星界连招",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:10726",
+      "id": "10726",
+      "name": "飙速木灵",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20009",
+      "id": "20009",
+      "name": "投资+",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20013",
+      "id": "20013",
+      "name": "挖角",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20015",
+      "id": "20015",
+      "name": "反响",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20021",
+      "id": "20021",
+      "name": "值得等待",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20027",
+      "id": "20027",
+      "name": "爆炸式增长",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20031",
+      "id": "20031",
+      "name": "发条增速器",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20041",
+      "id": "20041",
+      "name": "双排",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20141",
+      "id": "20141",
+      "name": "专属定制",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20201",
+      "id": "20201",
+      "name": "火爆甩卖",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20203",
+      "id": "20203",
+      "name": "汲取生命力 II",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20205",
+      "id": "20205",
+      "name": "魔法投掷",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20208",
+      "id": "20208",
+      "name": "征战之路",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20209",
+      "id": "20209",
+      "name": "崇高冒险",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20213",
+      "id": "20213",
+      "name": "前瞻思维",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20216",
+      "id": "20216",
+      "name": "不侦察，不变阵",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20224",
+      "id": "20224",
+      "name": "强化之能量",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20233",
+      "id": "20233",
+      "name": "权杖意志",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20234",
+      "id": "20234",
+      "name": "三项赛 I",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20235",
+      "id": "20235",
+      "name": "由二生D",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20242",
+      "id": "20242",
+      "name": "终身黄铜 II",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20253",
+      "id": "20253",
+      "name": "玻璃大炮 II",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20255",
+      "id": "20255",
+      "name": "攀登天梯 II",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20258",
+      "id": "20258",
+      "name": "恶意货币化",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20459",
+      "id": "20459",
+      "name": "王冠之重",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20471",
+      "id": "20471",
+      "name": "泪流成河",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20475",
+      "id": "20475",
+      "name": "低调炫耀",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20489",
+      "id": "20489",
+      "name": "应急护盾",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20496",
+      "id": "20496",
+      "name": "独自升级",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20502",
+      "id": "20502",
+      "name": "更要命的帽子",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20503",
+      "id": "20503",
+      "name": "更要命的战刃",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20508",
+      "id": "20508",
+      "name": "关爱包裹",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20517",
+      "id": "20517",
+      "name": "寻宝",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20560",
+      "id": "20560",
+      "name": "储蓄账户",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20563",
+      "id": "20563",
+      "name": "秘传奥义",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20568",
+      "id": "20568",
+      "name": "鲜血祭品",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20569",
+      "id": "20569",
+      "name": "火上浇油",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20575",
+      "id": "20575",
+      "name": "救赎盔甲",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20578",
+      "id": "20578",
+      "name": "心之钢",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20584",
+      "id": "20584",
+      "name": "高级贷款+",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20586",
+      "id": "20586",
+      "name": "炽天使之拥",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20593",
+      "id": "20593",
+      "name": "单身板甲",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20610",
+      "id": "20610",
+      "name": "职业杀手",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20611",
+      "id": "20611",
+      "name": "无差别攻击",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20612",
+      "id": "20612",
+      "name": "三相庇护",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20613",
+      "id": "20613",
+      "name": "认知过载",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20616",
+      "id": "20616",
+      "name": "利落保镖",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20619",
+      "id": "20619",
+      "name": "双城赢家",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20621",
+      "id": "20621",
+      "name": "愿四费与你同在",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20624",
+      "id": "20624",
+      "name": "生日聚会",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20625",
+      "id": "20625",
+      "name": "宝宝学院",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20626",
+      "id": "20626",
+      "name": "8级D干的传说",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20628",
+      "id": "20628",
+      "name": "三幻神",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20629",
+      "id": "20629",
+      "name": "杖之工匠",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20630",
+      "id": "20630",
+      "name": "剑之工匠",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20633",
+      "id": "20633",
+      "name": "蔓延之根",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20642",
+      "id": "20642",
+      "name": "摇钱树",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20643",
+      "id": "20643",
+      "name": "绝境反击",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20651",
+      "id": "20651",
+      "name": "金霖龙",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20654",
+      "id": "20654",
+      "name": "获得21金币",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20661",
+      "id": "20661",
+      "name": "后期收益",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20673",
+      "id": "20673",
+      "name": "纺织魔法",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20675",
+      "id": "20675",
+      "name": "一波带走俩",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20676",
+      "id": "20676",
+      "name": "海牛阿福的锅铲战术",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20681",
+      "id": "20681",
+      "name": "蔓延之根+",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20683",
+      "id": "20683",
+      "name": "猛将的荣耀",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20686",
+      "id": "20686",
+      "name": "顶尖构筑",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20698",
+      "id": "20698",
+      "name": "镀金钢铁",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20701",
+      "id": "20701",
+      "name": "贪财",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20702",
+      "id": "20702",
+      "name": "尺寸至上",
+      "tier": "1",
+      "tier_color": "silver",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20703",
+      "id": "20703",
+      "name": "幻灵指挥官",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20705",
+      "id": "20705",
+      "name": "后排蓝图",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20706",
+      "id": "20706",
+      "name": "前线地基",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20708",
+      "id": "20708",
+      "name": "电火花 II",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20709",
+      "id": "20709",
+      "name": "异类",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20720",
+      "id": "20720",
+      "name": "副作用",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20721",
+      "id": "20721",
+      "name": "黄金赌约",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20725",
+      "id": "20725",
+      "name": "神赐锻炉",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20727",
+      "id": "20727",
+      "name": "摘星之志",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20728",
+      "id": "20728",
+      "name": "宇宙大爆炸",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:20736",
+      "id": "20736",
+      "name": "神律新令",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "manual_current_patch_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30006",
+      "id": "30006",
+      "name": "灵活摇摆",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30007",
+      "id": "30007",
+      "name": "硬性承诺",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30009",
+      "id": "30009",
+      "name": "投资++",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30018",
+      "id": "30018",
+      "name": "订阅服务",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30021",
+      "id": "30021",
+      "name": "值得等待 II",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30027",
+      "id": "30027",
+      "name": "爆炸式增长+",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30028",
+      "id": "30028",
+      "name": "上进心",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30034",
+      "id": "30034",
+      "name": "大而有力",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30045",
+      "id": "30045",
+      "name": "金鳞精粹",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30141",
+      "id": "30141",
+      "name": "专属定制 II",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30180",
+      "id": "30180",
+      "name": "腰带溢流",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30181",
+      "id": "30181",
+      "name": "法杖溢流",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30182",
+      "id": "30182",
+      "name": "大剑溢流",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30186",
+      "id": "30186",
+      "name": "1个霸符，2个霸符",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30187",
+      "id": "30187",
+      "name": "锅铲厨房",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30205",
+      "id": "30205",
+      "name": "意料之中的意外",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30234",
+      "id": "30234",
+      "name": "三项赛 II",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30521",
+      "id": "30521",
+      "name": "坚守防线",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30571",
+      "id": "30571",
+      "name": "挑个好伙计！",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30584",
+      "id": "30584",
+      "name": "高级贷款",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30599",
+      "id": "30599",
+      "name": "灵魂唤醒",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30613",
+      "id": "30613",
+      "name": "正义报复",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30617",
+      "id": "30617",
+      "name": "男爵幻域",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30622",
+      "id": "30622",
+      "name": "登上最高峰",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30623",
+      "id": "30623",
+      "name": "点击即送",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30627",
+      "id": "30627",
+      "name": "神力天铸",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30634",
+      "id": "30634",
+      "name": "羁绊树",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30637",
+      "id": "30637",
+      "name": "可大可小",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30647",
+      "id": "30647",
+      "name": "散件丰收日",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30656",
+      "id": "30656",
+      "name": "贸易中心",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30665",
+      "id": "30665",
+      "name": "甜点",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30668",
+      "id": "30668",
+      "name": "厨神阿福",
+      "tier": "2",
+      "tier_color": "gold",
+      "rounds": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ],
+      "authority": "promoted_current_patch_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30680",
+      "id": "30680",
+      "name": "奢侈品订购",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    },
+    {
+      "address": "jcc:s17:augment:30682",
+      "id": "30682",
+      "name": "羁绊树+",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "3-2"
+      ],
+      "authority": "generated_decision_input_stage_authority"
+    }
+  ],
+  "generated_augments": [
+    {
+      "id": "10009",
+      "address": "jcc:s17:augment:10009",
+      "name": "投资",
+      "tier": "3",
+      "tier_color": "prismatic",
+      "rounds": [
+        "2-1"
+      ],
+      "authority": "manual_current_patch_stage_authority",
+      "source": "generated_stage_authority",
+      "tags": [
+        "economy"
+      ],
+      "desc": "Generated decision-input authority row preserving the distinct 2-1 investment entity while promoted hard data only exposes later investment variants."
+    }
+  ],
+  "audit_expectations": {
+    "unknown_round_count": 44,
+    "manually_bound": [
+      "jcc:s17:augment:20736"
+    ],
+    "generated_only": [
+      "jcc:s17:augment:10009"
+    ],
+    "intentionally_unbound": []
+  }
+}

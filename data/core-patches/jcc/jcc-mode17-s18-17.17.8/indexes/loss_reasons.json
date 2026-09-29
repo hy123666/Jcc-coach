@@ -1,0 +1,63 @@
+{
+  "address": "jcc:s17:index:loss_reasons",
+  "entries": [
+    {
+      "id": "frontline_melted",
+      "deps": [
+        "frontline",
+        "ehp",
+        "item_marginal_value"
+      ],
+      "address": "jcc:s17:loss_reason:frontline_melted"
+    },
+    {
+      "id": "carry_did_not_cast",
+      "deps": [
+        "mana",
+        "startup",
+        "positioning"
+      ],
+      "address": "jcc:s17:loss_reason:carry_did_not_cast"
+    },
+    {
+      "id": "carry_got_dove",
+      "deps": [
+        "backline_threat",
+        "positioning"
+      ],
+      "address": "jcc:s17:loss_reason:carry_got_dove"
+    },
+    {
+      "id": "missing_wound",
+      "deps": [
+        "wound",
+        "functional_item_needs"
+      ],
+      "address": "jcc:s17:loss_reason:missing_wound"
+    },
+    {
+      "id": "damage_type_countered",
+      "deps": [
+        "damage_profile",
+        "enemy_resists"
+      ],
+      "address": "jcc:s17:loss_reason:damage_type_countered"
+    },
+    {
+      "id": "bad_positioning_into_aoe",
+      "deps": [
+        "aoe",
+        "positioning"
+      ],
+      "address": "jcc:s17:loss_reason:bad_positioning_into_aoe"
+    },
+    {
+      "id": "economy_too_greedy",
+      "deps": [
+        "economy",
+        "health_pressure"
+      ],
+      "address": "jcc:s17:loss_reason:economy_too_greedy"
+    }
+  ]
+}

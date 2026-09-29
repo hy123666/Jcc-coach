@@ -1,0 +1,37 @@
+{
+  "address": "jcc:s17:formula:crit_expected_damage",
+  "source": "generated_heuristic",
+  "inputs": [
+    "base_damage",
+    "crit_chance",
+    "crit_multiplier",
+    "can_skill_crit"
+  ],
+  "outputs": [
+    "expected_crit_multiplier",
+    "expected_damage"
+  ],
+  "formulas": {
+    "expected_crit_multiplier": "1 + crit_chance * (crit_multiplier - 1)",
+    "expected_damage": "base_damage * expected_crit_multiplier"
+  },
+  "dependencies": [
+    "jcc:s17:formula:damage"
+  ],
+  "use_cases": [
+    "Infinity Edge / Jeweled Gauntlet style comparisons"
+  ],
+  "exactness": "baseline_exact_when crit flags are known",
+  "name": "crit_expected_damage",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "damage"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review"
+  ],
+  "dependency_kind": "derived_formula"
+}

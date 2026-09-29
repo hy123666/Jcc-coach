@@ -1,0 +1,240 @@
+{
+  "address": "jcc:s17:index:encounter_shift",
+  "tft_lab_encounters": [
+    {
+      "id": "cheaper_levels",
+      "name": "Cheaper Levels",
+      "effect": "Each level costs 2 XP less."
+    },
+    {
+      "id": "reroll_start",
+      "name": "Reroll Start",
+      "effect": "Gain 8 free rerolls on 2-1."
+    },
+    {
+      "id": "stage3_augments",
+      "name": "Stage Three Augments",
+      "effect": "Augments roll on 3-1, 3-2 and 3-3 instead of the usual rounds."
+    },
+    {
+      "id": "artifact_anvil",
+      "name": "Artifact Anvil",
+      "effect": "All players gain an Artifact Anvil on 3-3."
+    },
+    {
+      "id": "double_duplicators",
+      "name": "Double Duplicators",
+      "effect": "Receive a Lesser Champion Duplicator immediately and another on 3-3."
+    },
+    {
+      "id": "golden_gala",
+      "name": "Golden Gala",
+      "effect": "All three augment rounds offer Gold-tier augments."
+    },
+    {
+      "id": "prismatic_party",
+      "name": "Prismatic Party",
+      "effect": "All three augment rounds offer Prismatic-tier augments."
+    },
+    {
+      "id": "prismatic_finale",
+      "name": "Prismatic Finale",
+      "effect": "The last augment round is guaranteed Prismatic."
+    },
+    {
+      "id": "prismatic_opener",
+      "name": "Prismatic Opener",
+      "effect": "The first augment round is guaranteed Prismatic."
+    },
+    {
+      "id": "three_cost_start",
+      "name": "3-cost Start",
+      "effect": "Begin with a free 3-cost champion."
+    },
+    {
+      "id": "two_cost_start",
+      "name": "2-cost Start",
+      "effect": "Begin with a free 2-cost champion."
+    },
+    {
+      "id": "upgraded_start",
+      "name": "Upgraded Start",
+      "effect": "Your starting champion arrives at 2-star."
+    },
+    {
+      "id": "component_anvils",
+      "name": "Component Anvils",
+      "effect": "PvE rounds drop Component Anvils in place of some component rewards."
+    },
+    {
+      "id": "loot_subscription",
+      "name": "Loot Subscription",
+      "effect": "Steady stream of loot; 17.2 reduced both gold reward and Spatula odds."
+    },
+    {
+      "id": "emblem_ensemble",
+      "name": "Emblem Ensemble",
+      "effect": "Receive a curated emblem at a fixed round."
+    },
+    {
+      "id": "gold_subscription",
+      "name": "Gold Subscription",
+      "effect": "Bonus gold each turn for the duration of the subscription; 17.2 reduced the per-turn gold."
+    },
+    {
+      "id": "no_encounter",
+      "name": "No Encounter",
+      "effect": "Standard lobby; no opening encounter applied."
+    },
+    {
+      "id": "howling_abyss",
+      "name": "Howling Abyss",
+      "effect": "Howling Abyss-themed encounter."
+    },
+    {
+      "id": "silver_scrapes",
+      "name": "Silver Scrapes",
+      "effect": "Combat-themed encounter."
+    },
+    {
+      "id": "scouting_party",
+      "name": "Scouting Party",
+      "effect": "Bench expanded so you can scout more shop options."
+    }
+  ],
+  "jcc_official_galaxy": [
+    {
+      "encounter_address": "jcc:s17:encounter:17980",
+      "name": "金金金之旅",
+      "tags": [],
+      "desc": "带着三个黄金阶强化符文前去夺金！"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17981",
+      "name": "彩彩彩之旅",
+      "tags": [
+        "aoe"
+      ],
+      "desc": "莫甘娜将这局游戏的所有强化符文都变为棱彩阶。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17982",
+      "name": "棱彩终章",
+      "tags": [],
+      "desc": "格雷福斯将本局游戏的最后一个强化符文变为棱彩阶。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17983",
+      "name": "棱彩前奏",
+      "tags": [],
+      "desc": "慎的时间裂隙将本局游戏的第一个强化符文换成棱彩阶。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17984",
+      "name": "3费开局",
+      "tags": [],
+      "desc": "这局在开局时自带1个随机的3费弈子！"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17985",
+      "name": "2费开局",
+      "tags": [],
+      "desc": "这局在开局时自带1个随机的2费弈子！"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17986",
+      "name": "2星开局",
+      "tags": [],
+      "desc": "维克托将你的初始弈子升至2星。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17987",
+      "name": "基础装备锻造器",
+      "tags": [
+        "item_reward"
+      ],
+      "desc": "获得2个【基础装备锻造器】。选择你的武器！"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17988",
+      "name": "战利品订阅",
+      "tags": [],
+      "desc": "塔姆每阶段从一个包罗万象的奖池中为你提供战利品！"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17989",
+      "name": "纹章剧团",
+      "tags": [
+        "emblem"
+      ],
+      "desc": "拉亚斯特用3个随机纹章开启你的旅程。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17990",
+      "name": "金币订阅",
+      "tags": [
+        "economy"
+      ],
+      "desc": "佐伊在每个阶段开始时为你提供金币。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17991",
+      "name": "没有奇遇",
+      "tags": [],
+      "desc": "本局游戏不会出现奇遇。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17992",
+      "name": "嚎哭深渊",
+      "tags": [],
+      "desc": "获得5个随机的1费弈子组成的队伍。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17993",
+      "name": "《Silver Scrapes》战歌响起",
+      "tags": [
+        "economy"
+      ],
+      "desc": "最终的两个玩家获得70金币，以迎接一场史诗级的决战。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17994",
+      "name": "强化符文刷新",
+      "tags": [],
+      "desc": "这局游戏获得+1强化符文刷新次数。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17995",
+      "name": "双重复制器",
+      "tags": [
+        "duplicator"
+      ],
+      "desc": "获得一个【微型英雄复制器】。在3-5时，获得【次级英雄复制器】。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:17996",
+      "name": "神器锻造器",
+      "tags": [
+        "aoe",
+        "item_reward"
+      ],
+      "desc": "在阶段3-3时，所有玩家获得1个【神器锻造器】。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:171002",
+      "name": "更便宜的等级",
+      "tags": [
+        "economy"
+      ],
+      "desc": "娑娜使每一级所需的经验值减少2。"
+    },
+    {
+      "encounter_address": "jcc:s17:encounter:171003",
+      "name": "刷新开局",
+      "tags": [
+        "economy"
+      ],
+      "desc": "在阶段2-1时，获得5次免费刷新。"
+    }
+  ]
+}

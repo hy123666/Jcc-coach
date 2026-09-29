@@ -2,6 +2,10 @@
 
 [简体中文](PUBLICATION-CHECKLIST.md) | **English**
 
+## 0.1.6 Update
+
+September 29, 2026: S18 / 18.3 Core and Ranking statistics dated September 28, 2026 have been synchronized. The 0.1.6 installer passed local build and packaged checks; a real match and first installation on another PC remain unverified. See the [0.1.6 release record](2026-09-29-v0.1.6.en.md). The 0.1.5 text below is retained as a historical record.
+
 Reviewed September 27, 2026. App version 0.1.5; Ranking statistics dated September 26, 2026.
 
 ## Distribution Boundaries

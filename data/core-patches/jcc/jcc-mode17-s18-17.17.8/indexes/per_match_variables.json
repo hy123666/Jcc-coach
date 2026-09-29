@@ -1,0 +1,686 @@
+{
+  "address": "jcc:s17:index:per_match_variables",
+  "source": "jcc_official",
+  "prompt_at_match_start": [
+    "这局奇遇是什么？不知道可以先空着。",
+    "这局选的是哪个星神？不知道可以先空着。",
+    "这局观星者是什么星座/效果？不知道可以先空着。",
+    "这局灵能特工给的是哪把武器？不知道可以先空着。",
+    "如果这局开了法官：当前可见的法官律法成因和效果是什么？不知道可以先空着。"
+  ],
+  "variables": [
+    {
+      "key": "encounter",
+      "label": "本局奇遇",
+      "default": "unknown",
+      "options_source": "jcc_official_galaxy",
+      "options": [
+        {
+          "id": "17980",
+          "name": "金金金之旅",
+          "desc": "带着三个黄金阶强化符文前去夺金！",
+          "short_note": null,
+          "user_hint": "带着三个黄金阶强化符文前去夺金！",
+          "address": "jcc:s17:encounter:17980",
+          "tags": []
+        },
+        {
+          "id": "17981",
+          "name": "彩彩彩之旅",
+          "desc": "莫甘娜将这局游戏的所有强化符文都变为棱彩阶。",
+          "short_note": null,
+          "user_hint": "莫甘娜将这局游戏的所有强化符文都变为棱彩阶。",
+          "address": "jcc:s17:encounter:17981",
+          "tags": [
+            "aoe"
+          ]
+        },
+        {
+          "id": "17982",
+          "name": "棱彩终章",
+          "desc": "格雷福斯将本局游戏的最后一个强化符文变为棱彩阶。",
+          "short_note": null,
+          "user_hint": "格雷福斯将本局游戏的最后一个强化符文变为棱彩阶。",
+          "address": "jcc:s17:encounter:17982",
+          "tags": []
+        },
+        {
+          "id": "17983",
+          "name": "棱彩前奏",
+          "desc": "慎的时间裂隙将本局游戏的第一个强化符文换成棱彩阶。",
+          "short_note": null,
+          "user_hint": "慎的时间裂隙将本局游戏的第一个强化符文换成棱彩阶。",
+          "address": "jcc:s17:encounter:17983",
+          "tags": []
+        },
+        {
+          "id": "17984",
+          "name": "3费开局",
+          "desc": "这局在开局时自带1个随机的3费弈子！",
+          "short_note": null,
+          "user_hint": "这局在开局时自带1个随机的3费弈子！",
+          "address": "jcc:s17:encounter:17984",
+          "tags": []
+        },
+        {
+          "id": "17985",
+          "name": "2费开局",
+          "desc": "这局在开局时自带1个随机的2费弈子！",
+          "short_note": null,
+          "user_hint": "这局在开局时自带1个随机的2费弈子！",
+          "address": "jcc:s17:encounter:17985",
+          "tags": []
+        },
+        {
+          "id": "17986",
+          "name": "2星开局",
+          "desc": "维克托将你的初始弈子升至2星。",
+          "short_note": null,
+          "user_hint": "维克托将你的初始弈子升至2星。",
+          "address": "jcc:s17:encounter:17986",
+          "tags": []
+        },
+        {
+          "id": "17987",
+          "name": "基础装备锻造器",
+          "desc": "获得2个【基础装备锻造器】。选择你的武器！",
+          "short_note": null,
+          "user_hint": "获得2个【基础装备锻造器】。选择你的武器！",
+          "address": "jcc:s17:encounter:17987",
+          "tags": [
+            "item_reward"
+          ]
+        },
+        {
+          "id": "17988",
+          "name": "战利品订阅",
+          "desc": "塔姆每阶段从一个包罗万象的奖池中为你提供战利品！",
+          "short_note": null,
+          "user_hint": "塔姆每阶段从一个包罗万象的奖池中为你提供战利品！",
+          "address": "jcc:s17:encounter:17988",
+          "tags": []
+        },
+        {
+          "id": "17989",
+          "name": "纹章剧团",
+          "desc": "拉亚斯特用3个随机纹章开启你的旅程。",
+          "short_note": null,
+          "user_hint": "拉亚斯特用3个随机纹章开启你的旅程。",
+          "address": "jcc:s17:encounter:17989",
+          "tags": [
+            "emblem"
+          ]
+        },
+        {
+          "id": "17990",
+          "name": "金币订阅",
+          "desc": "佐伊在每个阶段开始时为你提供金币。",
+          "short_note": null,
+          "user_hint": "佐伊在每个阶段开始时为你提供金币。",
+          "address": "jcc:s17:encounter:17990",
+          "tags": [
+            "economy"
+          ]
+        },
+        {
+          "id": "17991",
+          "name": "没有奇遇",
+          "desc": "本局游戏不会出现奇遇。",
+          "short_note": null,
+          "user_hint": "本局游戏不会出现奇遇。",
+          "address": "jcc:s17:encounter:17991",
+          "tags": []
+        },
+        {
+          "id": "17992",
+          "name": "嚎哭深渊",
+          "desc": "获得5个随机的1费弈子组成的队伍。",
+          "short_note": "开局获得5个随机1费弈子组成的队伍，用来直接定前期过渡。",
+          "user_hint": "开局获得5个随机1费弈子组成的队伍，用来直接定前期过渡。",
+          "address": "jcc:s17:encounter:17992",
+          "tags": []
+        },
+        {
+          "id": "17993",
+          "name": "《Silver Scrapes》战歌响起",
+          "desc": "最终的两个玩家获得70金币，以迎接一场史诗级的决战。",
+          "short_note": "决赛圈奇遇：最终两名玩家各获得70金币，进入高经济决战。",
+          "user_hint": "决赛圈奇遇：最终两名玩家各获得70金币，进入高经济决战。",
+          "address": "jcc:s17:encounter:17993",
+          "tags": [
+            "economy"
+          ]
+        },
+        {
+          "id": "17994",
+          "name": "强化符文刷新",
+          "desc": "这局游戏获得+1强化符文刷新次数。",
+          "short_note": "本局额外获得1次强化符文刷新次数；旧名/别名是侦察小队。",
+          "user_hint": "本局额外获得1次强化符文刷新次数；旧名/别名是侦察小队。",
+          "address": "jcc:s17:encounter:17994",
+          "tags": []
+        },
+        {
+          "id": "17995",
+          "name": "双重复制器",
+          "desc": "获得一个【微型英雄复制器】。在3-5时，获得【次级英雄复制器】。",
+          "short_note": null,
+          "user_hint": "获得一个【微型英雄复制器】。在3-5时，获得【次级英雄复制器】。",
+          "address": "jcc:s17:encounter:17995",
+          "tags": [
+            "duplicator"
+          ]
+        },
+        {
+          "id": "17996",
+          "name": "神器锻造器",
+          "desc": "在阶段3-3时，所有玩家获得1个【神器锻造器】。",
+          "short_note": null,
+          "user_hint": "在阶段3-3时，所有玩家获得1个【神器锻造器】。",
+          "address": "jcc:s17:encounter:17996",
+          "tags": [
+            "aoe",
+            "item_reward"
+          ]
+        },
+        {
+          "id": "171002",
+          "name": "更便宜的等级",
+          "desc": "娑娜使每一级所需的经验值减少2。",
+          "short_note": null,
+          "user_hint": "娑娜使每一级所需的经验值减少2。",
+          "address": "jcc:s17:encounter:171002",
+          "tags": [
+            "economy"
+          ]
+        },
+        {
+          "id": "171003",
+          "name": "刷新开局",
+          "desc": "在阶段2-1时，获得5次免费刷新。",
+          "short_note": null,
+          "user_hint": "在阶段2-1时，获得5次免费刷新。",
+          "address": "jcc:s17:encounter:171003",
+          "tags": [
+            "economy"
+          ]
+        }
+      ],
+      "pool_index": "jcc:s17:index:encounter_shift",
+      "source_priority": [
+        "user_input",
+        "ocr_future",
+        "unknown"
+      ]
+    },
+    {
+      "key": "current_god",
+      "label": "本局星神",
+      "default": "unknown",
+      "options_source": "jcc_official_god_reward_paths",
+      "options": [
+        {
+          "id": "2",
+          "name": "奥瑞利安·索尔 造物之神",
+          "address": "jcc:s17:god_reward_path:奥瑞利安_索尔_造物之神",
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "亚索 深渊之神",
+          "address": "jcc:s17:god_reward_path:亚索_深渊之神",
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "4",
+          "name": "凯尔 秩序之神",
+          "address": "jcc:s17:god_reward_path:凯尔_秩序之神",
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "5",
+          "name": "阿狸 财富之神",
+          "address": "jcc:s17:god_reward_path:阿狸_财富之神",
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "6",
+          "name": "韦鲁斯 爱神",
+          "address": "jcc:s17:god_reward_path:韦鲁斯_爱神",
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "7",
+          "name": "艾克 时间之神",
+          "address": "jcc:s17:god_reward_path:艾克_时间之神",
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "8",
+          "name": "锤石 契约之神",
+          "address": "jcc:s17:god_reward_path:锤石_契约之神",
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "9",
+          "name": "索拉卡 众星之神",
+          "address": "jcc:s17:god_reward_path:索拉卡_众星之神",
+          "tags": [
+            "god_reward_path"
+          ]
+        },
+        {
+          "id": "10",
+          "name": "伊芙琳 诱惑之神",
+          "address": "jcc:s17:god_reward_path:伊芙琳_诱惑之神",
+          "tags": [
+            "god_reward_path"
+          ]
+        }
+      ],
+      "pool_index": "jcc:s17:index:god_reward_paths",
+      "source_priority": [
+        "user_input",
+        "ocr_future",
+        "unknown"
+      ]
+    },
+    {
+      "key": "stargazer_constellation",
+      "label": "观星者星座/效果",
+      "default": "unknown",
+      "options_source": "jcc_official_stargazer_constellation",
+      "options": [
+        {
+          "id": "huntress",
+          "name": "女猎手",
+          "desc": "观星者本局星座效果：女猎手。具体局内数值以官方文本/当前补丁门牌为准。",
+          "address": "jcc:s17:stargazer_constellation:huntress",
+          "tags": [
+            "stargazer",
+            "attack_speed",
+            "team_buff"
+          ],
+          "balance_patch": {
+            "version": "17.8",
+            "date": "2026-07-29",
+            "title": "星神·平衡性调整 S17.8",
+            "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+            "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js",
+            "runtime_variable": "stargazer_constellation",
+            "changes": [
+              {
+                "id": "huntress_team_attack_speed_pct",
+                "label": "基础全队攻速",
+                "before": 12,
+                "after": 15,
+                "unit": "percent"
+              }
+            ]
+          }
+        },
+        {
+          "id": "medal",
+          "name": "勋章",
+          "desc": "观星者本局星座效果：勋章。具体局内数值以官方文本/当前补丁门牌为准。",
+          "address": "jcc:s17:stargazer_constellation:medal",
+          "tags": [
+            "stargazer",
+            "damage_amp"
+          ],
+          "balance_patch": {
+            "version": "17.8",
+            "date": "2026-07-29",
+            "title": "星神·平衡性调整 S17.8",
+            "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+            "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js",
+            "runtime_variable": "stargazer_constellation",
+            "changes": [
+              {
+                "id": "medal_damage_amp_pct",
+                "label": "基础伤害提升",
+                "before": 12,
+                "after": 15,
+                "unit": "percent"
+              }
+            ]
+          }
+        },
+        {
+          "id": "viper",
+          "name": "蝰蛇",
+          "desc": "观星者本局星座效果：蝰蛇。S17.5b 中毒伤害为 25/45/60%，且在伤害减免之前计算。",
+          "address": "jcc:s17:stargazer_constellation:viper",
+          "tags": [
+            "stargazer",
+            "poison",
+            "magic_damage"
+          ],
+          "balance_patch": {
+            "version": "17.8",
+            "date": "2026-07-29",
+            "title": "星神·平衡性调整 S17.8",
+            "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+            "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js",
+            "runtime_variable": "stargazer_constellation",
+            "changes": [
+              {
+                "id": "viper_magic_damage_pct",
+                "label": "剧毒伤害",
+                "before": [
+                  18,
+                  35,
+                  50
+                ],
+                "after": [
+                  25,
+                  45,
+                  60
+                ],
+                "unit": "percent",
+                "calculation_timing": "before_damage_reduction"
+              }
+            ]
+          }
+        },
+        {
+          "id": "xiushan",
+          "name": "秀山",
+          "desc": "观星者本局星座效果：秀山。具体局内数值以官方文本/当前补丁门牌为准。",
+          "address": "jcc:s17:stargazer_constellation:xiushan",
+          "tags": [
+            "stargazer",
+            "attack_speed",
+            "damage_reduction"
+          ],
+          "balance_patch": {
+            "version": "17.8",
+            "date": "2026-07-29",
+            "title": "星神·平衡性调整 S17.8",
+            "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+            "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js",
+            "runtime_variable": "stargazer_constellation",
+            "changes": [
+              {
+                "id": "xiushan_attack_speed_pct",
+                "label": "攻击速度",
+                "before": 10,
+                "after": 8,
+                "unit": "percent"
+              },
+              {
+                "id": "xiushan_damage_reduction_pct",
+                "label": "伤害减免",
+                "before": 6,
+                "after": 5,
+                "unit": "percent"
+              }
+            ]
+          }
+        },
+        {
+          "id": "boar",
+          "name": "野猪",
+          "desc": "观星者本局星座效果：野猪。通常偏经济与属性格收益，具体数值以局内可见文本为准。",
+          "address": "jcc:s17:stargazer_constellation:boar",
+          "tags": [
+            "stargazer",
+            "economy",
+            "health",
+            "physical_damage",
+            "magic_damage"
+          ]
+        },
+        {
+          "id": "altar",
+          "name": "圣坛",
+          "desc": "观星者本局星座效果：圣坛。具体局内数值以官方文本/当前补丁门牌为准。",
+          "address": "jcc:s17:stargazer_constellation:altar",
+          "tags": [
+            "stargazer",
+            "utility"
+          ]
+        },
+        {
+          "id": "spring",
+          "name": "泉水",
+          "desc": "观星者本局星座效果：泉水。具体局内数值以官方文本/当前补丁门牌为准。",
+          "address": "jcc:s17:stargazer_constellation:spring",
+          "tags": [
+            "stargazer",
+            "sustain",
+            "utility"
+          ]
+        }
+      ],
+      "patch_value_overrides": {
+        "version": "17.8",
+        "date": "2026-07-29",
+        "title": "星神·平衡性调整 S17.8",
+        "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+        "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js",
+        "runtime_variable": "stargazer_constellation",
+        "changes": [
+          {
+            "id": "huntress_team_attack_speed_pct",
+            "label": "基础全队攻速",
+            "before": 12,
+            "after": 15,
+            "unit": "percent"
+          },
+          {
+            "id": "medal_damage_amp_pct",
+            "label": "基础伤害提升",
+            "before": 12,
+            "after": 15,
+            "unit": "percent"
+          },
+          {
+            "id": "viper_magic_damage_pct",
+            "label": "剧毒伤害",
+            "before": [
+              18,
+              35,
+              50
+            ],
+            "after": [
+              25,
+              45,
+              60
+            ],
+            "unit": "percent",
+            "calculation_timing": "before_damage_reduction"
+          },
+          {
+            "id": "xiushan_attack_speed_pct",
+            "label": "攻击速度",
+            "before": 10,
+            "after": 8,
+            "unit": "percent"
+          },
+          {
+            "id": "xiushan_damage_reduction_pct",
+            "label": "伤害减免",
+            "before": 6,
+            "after": 5,
+            "unit": "percent"
+          }
+        ]
+      }
+    },
+    {
+      "key": "psionic_weapon",
+      "label": "灵能特工武器",
+      "default": "unknown",
+      "options_source": "jcc_official_equip",
+      "options": [
+        {
+          "id": "9251",
+          "name": "无人机上行链路",
+          "desc": "每3秒，一个无人机将来自携带者攻击和技能的25%伤害重复至相同目标。  在(4)层级时：如果携带者是【灵能特工】，获得一个额外的小型无人机，重复30%伤害。  推荐使用者：【娑娜】和【维克托】。",
+          "address": "jcc:s17:item:9251",
+          "tags": [
+            "damage_amp",
+            "persistent_effect",
+            "recommended_holder_text",
+            "single_target"
+          ]
+        },
+        {
+          "id": "9252",
+          "name": "恶意软件矩阵",
+          "desc": "物理弈子：对一个敌人造成物理伤害时会将该目标的护甲降低2。 魔法弈子：对一个敌人造成魔法伤害时会将该目标的魔抗降低2。  在(4)层级时：如果携带者是【灵能特工】，则每第3次攻击发动顺劈，对附近敌人造成100(【物理加成】)物理伤害。  推荐使用者：【易】和【派克】。 技能伤害冷却时间：0.75秒。",
+          "address": "jcc:s17:item:9252",
+          "tags": [
+            "aoe",
+            "armor",
+            "attack_speed",
+            "damage_amp",
+            "magic_damage",
+            "magic_resist",
+            "omnivamp",
+            "persistent_effect",
+            "physical_damage",
+            "recommended_holder_text",
+            "shred",
+            "single_target",
+            "sunder"
+          ]
+        },
+        {
+          "id": "9253",
+          "name": "生物质维护器",
+          "desc": "获得5%最大生命值，并部署3个【生命法球】。战斗中每经过8秒，1个【生命法球】就会掉落以治疗携带者18%的已损失生命值。  在(4)层级时：如果携带者是【灵能特工】，其可以从所有来源获得的治疗提升30%。  推荐使用者：【古拉加斯】。",
+          "address": "jcc:s17:item:9253",
+          "tags": [
+            "aoe",
+            "health",
+            "persistent_effect",
+            "recommended_holder_text"
+          ]
+        },
+        {
+          "id": "9255",
+          "name": "共感植入",
+          "desc": "每5秒，获得：  魔法弈子：1法力回复。 物理弈子：15%攻击速度。  在(4)层级时：如果携带者是【灵能特工】，其技能会转而造成25%原本技能伤害的真实伤害。  推荐使用者：【娑娜】和【维克托】。",
+          "address": "jcc:s17:item:9255",
+          "tags": [
+            "attack_speed",
+            "damage_amp",
+            "health",
+            "magic_damage",
+            "mana",
+            "persistent_effect",
+            "physical_damage",
+            "recommended_holder_text",
+            "true_damage"
+          ]
+        },
+        {
+          "id": "9256",
+          "name": "锁敌光学设备",
+          "desc": "当携带者在每场战斗中对每个敌人第一次造成伤害时，获得：  物理弈子：9%物理加成 魔法弈子：7%法术加成  在(4)层级时：如果携带者是【灵能特工】，会在其目标倒下时回复自身30%最大生命值。  推荐使用者：【派克】和【易】。",
+          "address": "jcc:s17:item:9256",
+          "tags": [
+            "attack_speed",
+            "health",
+            "magic_damage",
+            "physical_damage",
+            "recommended_holder_text",
+            "single_target"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "miss_fortune_mode",
+      "label": "厄运小姐模式",
+      "default": "unknown",
+      "activation_gate": {
+        "champion_name": "厄运小姐",
+        "event": "field_or_acquire_unit"
+      },
+      "options_source": "jcc_official_trait_text",
+      "options": [
+        {
+          "id": "神谕模式",
+          "name": "神谕模式",
+          "granted_trait_name": "神谕",
+          "source_trait_name": "武装战姬",
+          "source_trait_address": "jcc:s17:trait:415",
+          "source_excerpt": "武装战姬 当你登场【厄运小姐】时，需要在【神谕模式】、【挑战者模式】、以及【魔术师模式】中选择一种。【厄运小姐】的每个模式都会为其提供1个独特的技能，同时她获得对应的特质/职业。 当你登场【厄运小姐】时，需要在【神谕模式】、【挑战者模式】、以及【魔术师模式】中选择一种。【厄运小姐】的每个模式都会为其提供1个独特的技能，同时她获得对应的特质/职业。",
+          "address": "jcc:s17:per_match_variable_option:miss_fortune_mode_神谕模式",
+          "tags": [
+            "mode_choice",
+            "trait_grant",
+            "skill_variant"
+          ]
+        },
+        {
+          "id": "挑战者模式",
+          "name": "挑战者模式",
+          "granted_trait_name": "挑战者",
+          "source_trait_name": "武装战姬",
+          "source_trait_address": "jcc:s17:trait:415",
+          "source_excerpt": "武装战姬 当你登场【厄运小姐】时，需要在【神谕模式】、【挑战者模式】、以及【魔术师模式】中选择一种。【厄运小姐】的每个模式都会为其提供1个独特的技能，同时她获得对应的特质/职业。 当你登场【厄运小姐】时，需要在【神谕模式】、【挑战者模式】、以及【魔术师模式】中选择一种。【厄运小姐】的每个模式都会为其提供1个独特的技能，同时她获得对应的特质/职业。",
+          "address": "jcc:s17:per_match_variable_option:miss_fortune_mode_挑战者模式",
+          "tags": [
+            "mode_choice",
+            "trait_grant",
+            "skill_variant"
+          ]
+        },
+        {
+          "id": "魔术师模式",
+          "name": "魔术师模式",
+          "granted_trait_name": "魔术师",
+          "source_trait_name": "武装战姬",
+          "source_trait_address": "jcc:s17:trait:415",
+          "source_excerpt": "武装战姬 当你登场【厄运小姐】时，需要在【神谕模式】、【挑战者模式】、以及【魔术师模式】中选择一种。【厄运小姐】的每个模式都会为其提供1个独特的技能，同时她获得对应的特质/职业。 当你登场【厄运小姐】时，需要在【神谕模式】、【挑战者模式】、以及【魔术师模式】中选择一种。【厄运小姐】的每个模式都会为其提供1个独特的技能，同时她获得对应的特质/职业。",
+          "address": "jcc:s17:per_match_variable_option:miss_fortune_mode_魔术师模式",
+          "tags": [
+            "mode_choice",
+            "trait_grant",
+            "skill_variant"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "judge_law",
+      "label": "法官律法",
+      "default": "unknown",
+      "activation_gate": {
+        "trait_name": "法官",
+        "min_active_count": 2
+      },
+      "options_source": "jcc_official_trait_runtime_variable",
+      "pool_index": "jcc:s17:index:judge_law_pool",
+      "value_shape": {
+        "cause": "runtime_visible_choice",
+        "effect": "runtime_visible_choice",
+        "visible_subset": "per_match",
+        "upgraded_at_trait_count": 3
+      },
+      "source_priority": [
+        "ocr_runtime_choice_panel",
+        "user_input",
+        "unknown"
+      ]
+    }
+  ]
+}

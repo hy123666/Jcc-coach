@@ -1,0 +1,29 @@
+{
+  "address": "jcc:s17:index:review_attribution",
+  "entries": [
+    {
+      "id": "economy"
+    },
+    {
+      "id": "items"
+    },
+    {
+      "id": "composition"
+    },
+    {
+      "id": "positioning"
+    },
+    {
+      "id": "tempo"
+    },
+    {
+      "id": "scouting"
+    },
+    {
+      "id": "operation_time"
+    },
+    {
+      "id": "match_variables"
+    }
+  ]
+}

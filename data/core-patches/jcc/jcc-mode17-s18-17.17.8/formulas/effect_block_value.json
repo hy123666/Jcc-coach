@@ -1,0 +1,49 @@
+{
+  "address": "jcc:s17:formula:effect_block_value",
+  "source": "generated_heuristic",
+  "inputs": [
+    "effect_block",
+    "owner_kind",
+    "live_context",
+    "round_intent",
+    "holder_profile"
+  ],
+  "outputs": [
+    "block_value_score",
+    "block_formula_refs",
+    "stat_delta",
+    "resource_delta",
+    "choice_value",
+    "trait_delta_value"
+  ],
+  "formulas": {
+    "block_value_score": "weighted sum of structured values routed by value_kind/effect_types/formula_refs",
+    "stat_delta": "route numeric stat blocks to stat_modifier_value",
+    "resource_delta": "route gold/xp/reroll/item blocks to resource_exchange or reward_choice_score"
+  },
+  "dependencies": [
+    "jcc:s17:formula:stat_modifier_value",
+    "jcc:s17:formula:resource_exchange",
+    "jcc:s17:formula:reward_choice_score",
+    "jcc:s17:formula:trait_delta",
+    "jcc:s17:formula:item_stat_delta"
+  ],
+  "use_cases": [
+    "trait breakpoint effect valuation",
+    "item text effect valuation",
+    "augment/reward block valuation"
+  ],
+  "exactness": "heuristic_routing_exact_when_block_values_are_structured",
+  "name": "effect_block_value",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "effect_parse"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review"
+  ],
+  "dependency_kind": "derived_formula"
+}

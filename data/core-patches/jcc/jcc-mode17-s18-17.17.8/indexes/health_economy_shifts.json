@@ -1,0 +1,98 @@
+{
+  "address": "jcc:s17:index:health_economy_shifts",
+  "entries": [
+    {
+      "id": "healthy_greed",
+      "address": "jcc:s17:health_economy_shift:healthy_greed",
+      "hp_min": 80,
+      "hp_max": 100,
+      "stage_multiplier": "low_until_stage4",
+      "stance": "can_greed_if_board_ok",
+      "spend_bias": "preserve_interest",
+      "roll_bias": "avoid_deep_roll",
+      "level_bias": "follow_standard_timing",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:stage",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:streak"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:hp_lethal_tolerance",
+        "jcc:s17:formula:economy",
+        "jcc:s17:formula:interest_break"
+      ]
+    },
+    {
+      "id": "balanced_mid_hp",
+      "address": "jcc:s17:health_economy_shift:balanced_mid_hp",
+      "hp_min": 50,
+      "hp_max": 79,
+      "stage_multiplier": "medium",
+      "stance": "balance_economy_and_stability",
+      "spend_bias": "spend_if_board_losing_badly",
+      "roll_bias": "small_roll_for_pairs_or_frontline",
+      "level_bias": "level_if_board_upgrade_available",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:stage",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:level",
+        "jcc:s17:live_state_field:xp",
+        "jcc:s17:live_state_field:board_units"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:hp_lethal_tolerance",
+        "jcc:s17:formula:roll_down_budget",
+        "jcc:s17:formula:level_timing"
+      ]
+    },
+    {
+      "id": "danger_stabilize",
+      "address": "jcc:s17:health_economy_shift:danger_stabilize",
+      "hp_min": 30,
+      "hp_max": 49,
+      "stage_multiplier": "high_after_stage4",
+      "stance": "prioritize_stabilize",
+      "spend_bias": "convert_gold_to_board_power",
+      "roll_bias": "roll_to_stop_bleeding_with_stop_line",
+      "level_bias": "level_only_if_immediate_board_slot_matters",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:stage",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:completed_items"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:hp_lethal_tolerance",
+        "jcc:s17:formula:item_marginal_value",
+        "jcc:s17:formula:unit_quality_score"
+      ]
+    },
+    {
+      "id": "lethal_pressure",
+      "address": "jcc:s17:health_economy_shift:lethal_pressure",
+      "hp_min": 0,
+      "hp_max": 29,
+      "stage_multiplier": "critical",
+      "stance": "low_tolerance_roll_or_cap_now",
+      "spend_bias": "survival_over_interest",
+      "roll_bias": "roll_until_stable_or_gold_floor",
+      "level_bias": "only if strongest-board upgrade is immediate",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:stage",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:level",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:hp_lethal_tolerance",
+        "jcc:s17:formula:roll_down_budget",
+        "jcc:s17:formula:positioning_risk"
+      ]
+    }
+  ]
+}

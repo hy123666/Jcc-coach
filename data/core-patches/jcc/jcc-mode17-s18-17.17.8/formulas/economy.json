@@ -1,0 +1,177 @@
+{
+  "address": "jcc:s17:formula:economy",
+  "source": "tft_lab_system_rules",
+  "inputs": [
+    "round",
+    "gold",
+    "streak",
+    "pvp_result",
+    "planned_spend",
+    "planned_xp_buy"
+  ],
+  "outputs": [
+    "base_income",
+    "interest",
+    "streak_bonus",
+    "combat_gold",
+    "next_gold",
+    "interest_break"
+  ],
+  "tables": {
+    "round_income": [
+      {
+        "round": "1-2",
+        "gold": 2
+      },
+      {
+        "round": "1-3",
+        "gold": 2
+      },
+      {
+        "round": "1-4",
+        "gold": 3
+      },
+      {
+        "round": "2-1",
+        "gold": 4
+      },
+      {
+        "round": "2-2+",
+        "gold": 5
+      }
+    ],
+    "interest": [
+      {
+        "minGold": 0,
+        "maxGold": 9,
+        "gold": 0
+      },
+      {
+        "minGold": 10,
+        "maxGold": 19,
+        "gold": 1
+      },
+      {
+        "minGold": 20,
+        "maxGold": 29,
+        "gold": 2
+      },
+      {
+        "minGold": 30,
+        "maxGold": 39,
+        "gold": 3
+      },
+      {
+        "minGold": 40,
+        "maxGold": 49,
+        "gold": 4
+      },
+      {
+        "minGold": 50,
+        "maxGold": null,
+        "gold": 5
+      }
+    ],
+    "streak_bonus": [
+      {
+        "streak": 2,
+        "gold": 1
+      },
+      {
+        "streak": 3,
+        "gold": 1
+      },
+      {
+        "streak": 4,
+        "gold": 1
+      },
+      {
+        "streak": 5,
+        "gold": 2
+      },
+      {
+        "streak": "6+",
+        "gold": 3
+      }
+    ],
+    "pvp_combat_gold": {
+      "win": 1,
+      "loss": 0
+    },
+    "xp_curve": [
+      {
+        "from": 2,
+        "to": 3,
+        "xpToNext": 2,
+        "cumulativeXp": 2,
+        "buyUpCostGold": 0
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "xpToNext": 6,
+        "cumulativeXp": 8,
+        "buyUpCostGold": 4
+      },
+      {
+        "from": 4,
+        "to": 5,
+        "xpToNext": 10,
+        "cumulativeXp": 18,
+        "buyUpCostGold": 8
+      },
+      {
+        "from": 5,
+        "to": 6,
+        "xpToNext": 20,
+        "cumulativeXp": 38,
+        "buyUpCostGold": 20
+      },
+      {
+        "from": 6,
+        "to": 7,
+        "xpToNext": 36,
+        "cumulativeXp": 74,
+        "buyUpCostGold": 36
+      },
+      {
+        "from": 7,
+        "to": 8,
+        "xpToNext": 60,
+        "cumulativeXp": 134,
+        "buyUpCostGold": 60
+      },
+      {
+        "from": 8,
+        "to": 9,
+        "xpToNext": 68,
+        "cumulativeXp": 202,
+        "buyUpCostGold": 68
+      },
+      {
+        "from": 9,
+        "to": 10,
+        "xpToNext": 68,
+        "cumulativeXp": 270,
+        "buyUpCostGold": 68
+      }
+    ]
+  },
+  "name": "economy",
+  "category": "economy",
+  "domains": [
+    "economy"
+  ],
+  "route_domains": [
+    "roll_or_level",
+    "reward_choice",
+    "postgame_review"
+  ],
+  "dependencies": [],
+  "dependency_kind": "root_formula",
+  "use_cases": [
+    "interest planning",
+    "level/roll spend planning",
+    "resource projection"
+  ]
+}

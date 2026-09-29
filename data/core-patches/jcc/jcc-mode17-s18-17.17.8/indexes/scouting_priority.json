@@ -1,0 +1,82 @@
+{
+  "address": "jcc:s17:index:scouting_priority",
+  "entries": [
+    {
+      "id": "likely_next_opponent",
+      "address": "jcc:s17:scouting_priority_rule:likely_next_opponent",
+      "priority": 1,
+      "score_formula": "base 100 if next opponent known, else 50 if not fought recently",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:round"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:scouting_priority_score",
+        "jcc:s17:formula:positioning_risk"
+      ],
+      "action": "snapshot first when time_left >= 6"
+    },
+    {
+      "id": "same_comp_contestant",
+      "address": "jcc:s17:scouting_priority_rule:same_comp_contestant",
+      "priority": 2,
+      "score_formula": "+35 if same carry or same cost pool; +20 if holding target copies",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:board_units"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:contest_adjusted_pool",
+        "jcc:s17:formula:roll_probability"
+      ],
+      "action": "check before committing chase or rolldown"
+    },
+    {
+      "id": "lobby_leader",
+      "address": "jcc:s17:scouting_priority_rule:lobby_leader",
+      "priority": 3,
+      "score_formula": "+25 for top HP/streak board; +15 if likely to face soon",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:streak"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:scouting_priority_score",
+        "jcc:s17:formula:damage_mix"
+      ],
+      "action": "use to decide defensive item and positioning risk"
+    },
+    {
+      "id": "counter_to_my_carry",
+      "address": "jcc:s17:scouting_priority_rule:counter_to_my_carry",
+      "priority": 4,
+      "score_formula": "+30 if enemy targeting/profile threatens my carry",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:completed_items"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:positioning_risk",
+        "jcc:s17:formula:damage_mix"
+      ],
+      "action": "prioritize positioning route"
+    },
+    {
+      "id": "low_hp_rival",
+      "address": "jcc:s17:scouting_priority_rule:low_hp_rival",
+      "priority": 5,
+      "score_formula": "+15 if same placement band and one fight can swing rank",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "jcc:s17:live_state_field:hp"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:hp_lethal_tolerance",
+        "jcc:s17:formula:scouting_priority_score"
+      ],
+      "action": "scout when preserving top-four placement"
+    }
+  ]
+}

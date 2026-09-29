@@ -1,0 +1,148 @@
+{
+  "schema": "jcc-season-normal-rules-v1",
+  "scope": "season_normal",
+  "season_id": "s17",
+  "patch_scope": "major_season_rules_not_patch_balance",
+  "game_mode_id": "jcc-mode17",
+  "display_name": "S17 normal rules",
+  "choice_mechanics": [
+    {
+      "mechanic_id": "augment_choice",
+      "kind": "augment",
+      "mode": "augment_choice",
+      "phase": "augment_choice",
+      "label": "augment choice",
+      "intent_terms": ["海克斯", "强化", "海克斯强化", "augment", "hex"],
+      "trigger_terms": ["augment_choice", "augment_choice_advice"],
+      "aliases": ["augment", "hex", "强化选择"],
+      "stages": [
+        "2-1",
+        "3-2",
+        "4-2"
+      ]
+    }
+  ],
+  "choice_pretriggers": {
+    "1-4": {
+      "target_stage_round": "2-1",
+      "kind": "augment",
+      "mode": "augment_choice",
+      "phase": "augment_choice"
+    },
+    "3-1": {
+      "target_stage_round": "3-2",
+      "kind": "augment",
+      "mode": "augment_choice",
+      "phase": "augment_choice"
+    },
+    "4-1": {
+      "target_stage_round": "4-2",
+      "kind": "augment",
+      "mode": "augment_choice",
+      "phase": "augment_choice"
+    }
+  },
+  "stage_decision_tasks": {
+    "1-4": "Opening checkpoint: use current pairs, shop, item components, HP, gold, and match variables to prepare the 2-1 augment decision. Do not over-lock a comp before the augment.",
+    "2-1": "Augment choice is happening now. Rank the three visible augment candidates against current board/items/economy/user intent and answer keep/reroll directly.",
+    "2-2": "2-1 augment is already past. If the final selected augment is unknown, ask the user what they picked instead of saying to wait for 2-1.",
+    "3-2": "Second augment choice is happening now. Re-rank candidates using the confirmed 2-1 augment, current direction, HP, economy, and board strength.",
+    "4-2": "Third augment choice is happening now. Favor immediate combat, cap, and survival/value according to HP and current comp commitment."
+  },
+  "stage_strategy_protocol": {
+    "1-2_to_1-3": {
+      "coach_goal": "Read opening drops, pairs, shop hits, and components. Give one compact opener direction when evidence changes.",
+      "must_consider": [
+        "pairs",
+        "two-star chances",
+        "item components",
+        "early board strength",
+        "match variables"
+      ],
+      "avoid": [
+        "locking a final comp",
+        "claiming the 2-1 augment is known before it appears"
+      ]
+    },
+    "1-4": {
+      "coach_goal": "Prepare the 2-1 augment decision from current board, shop, item components, HP, gold, and match variables.",
+      "must_consider": [
+        "can preserve win streak",
+        "can loss-streak/economy",
+        "component direction",
+        "frontline/backline quality",
+        "user target plan"
+      ],
+      "output_bias": "Say the likely augment preference class, not a final augment pick."
+    },
+    "2-1": {
+      "coach_goal": "Answer augment keep/reroll now.",
+      "must_consider": [
+        "three visible augment candidates",
+        "current board",
+        "bench pairs",
+        "item components",
+        "HP",
+        "gold",
+        "user intent",
+        "daily big-data priors"
+      ],
+      "required_answer": "Pick keep/reroll and explain briefly. Do not give generic transition advice instead."
+    },
+    "2-2_to_2-3": {
+      "coach_goal": "Use the selected 2-1 augment if known. If unknown and relevant, ask what was selected.",
+      "must_consider": [
+        "selected 2-1 augment",
+        "gold/interest threshold",
+        "level/xp",
+        "board strength",
+        "shop pairs"
+      ],
+      "avoid": [
+        "saying to wait for 2-1",
+        "pretending observed candidates are the selected augment"
+      ]
+    },
+    "3-2": {
+      "coach_goal": "Answer second augment keep/reroll using confirmed first augment and current direction.",
+      "must_consider": [
+        "selected 2-1 augment",
+        "visible 3-2 candidates",
+        "HP",
+        "economy",
+        "board commitment",
+        "items",
+        "own HP and lobby pace from public/economy signals"
+      ]
+    },
+    "4-2": {
+      "coach_goal": "Answer third augment keep/reroll for survival, cap, or finishing direction.",
+      "must_consider": [
+        "HP danger",
+        "completed items",
+        "current comp",
+        "user-confirmed scouting notes if available",
+        "cap potential",
+        "reroll/level timing"
+      ]
+    }
+  },
+  "host_model_invariants": [
+    "For this active S17 ruleset, normal augment choices are at 2-1, 3-2, and 4-2.",
+    "If future S18 normal timing differs, replace this season_normal file instead of changing base_game_rules."
+  ],
+  "missing_choice_followups": {
+    "2-2": {
+      "choice_stage_round": "2-1",
+      "kind": "augment"
+    },
+    "3-3": {
+      "choice_stage_round": "3-2",
+      "kind": "augment"
+    },
+    "4-3": {
+      "choice_stage_round": "4-2",
+      "kind": "augment"
+    }
+  }
+}

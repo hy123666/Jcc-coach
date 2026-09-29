@@ -1,0 +1,37 @@
+{
+  "address": "jcc:s17:formula:streak_value",
+  "source": "generated_heuristic",
+  "inputs": [
+    "current_streak",
+    "round_result",
+    "streak_bonus_table"
+  ],
+  "outputs": [
+    "current_bonus",
+    "next_bonus",
+    "break_cost"
+  ],
+  "formulas": {
+    "break_cost": "current_bonus + future_expected_streak_bonus"
+  },
+  "dependencies": [
+    "jcc:s17:formula:economy"
+  ],
+  "use_cases": [
+    "hold winstreak",
+    "loss-streak economy"
+  ],
+  "exactness": "exact_table_plus_policy_estimate",
+  "name": "streak_value",
+  "category": "economy",
+  "domains": [
+    "economy",
+    "tempo"
+  ],
+  "route_domains": [
+    "roll_or_level",
+    "reward_choice",
+    "postgame_review"
+  ],
+  "dependency_kind": "derived_formula"
+}

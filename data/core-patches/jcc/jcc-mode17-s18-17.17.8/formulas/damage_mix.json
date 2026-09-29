@@ -1,0 +1,39 @@
+{
+  "address": "jcc:s17:formula:damage_mix",
+  "source": "generated_heuristic",
+  "inputs": [
+    "champion_tags",
+    "item_tags",
+    "trait_tags"
+  ],
+  "outputs": [
+    "physical_share",
+    "magic_share",
+    "true_share",
+    "primary_damage_type"
+  ],
+  "formulas": {
+    "primary_damage_type": "highest weighted damage tag from unit + items + trait context"
+  },
+  "dependencies": [
+    "jcc:s17:index:champion_damage_profile"
+  ],
+  "use_cases": [
+    "enemy lobby damage mix",
+    "defensive item choice"
+  ],
+  "exactness": "heuristic_tag_based",
+  "name": "damage_mix",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "scouting"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review",
+    "trait_or_unit_swap"
+  ],
+  "dependency_kind": "derived_formula"
+}

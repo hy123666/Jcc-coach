@@ -1,0 +1,40 @@
+{
+  "address": "jcc:s17:formula:shield_effective_hp",
+  "source": "generated_heuristic",
+  "inputs": [
+    "shield",
+    "armor",
+    "magic_resist",
+    "damage_mix",
+    "duration"
+  ],
+  "outputs": [
+    "physical_shield_ehp",
+    "magic_shield_ehp",
+    "mixed_shield_ehp"
+  ],
+  "formulas": {
+    "shield_ehp": "shield * (1 + relevant_resist / 100)"
+  },
+  "dependencies": [
+    "jcc:s17:formula:ehp"
+  ],
+  "use_cases": [
+    "shield item/skill value",
+    "burst survival"
+  ],
+  "exactness": "baseline_exact_if_shield_timing_known",
+  "name": "shield_effective_hp",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "defense"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review",
+    "item_craft"
+  ],
+  "dependency_kind": "derived_formula"
+}

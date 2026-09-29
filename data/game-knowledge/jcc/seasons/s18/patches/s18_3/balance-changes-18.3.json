@@ -1,0 +1,50 @@
+{
+  "schema": "jcc-core-balance-patch-v1",
+  "release_version": "18.3",
+  "source_note": "data/game-knowledge/jcc/seasons/s18/patches/s18_3/balance-notes-18.3.md",
+  "baseline": {
+    "season_id": "s18",
+    "patch_id": "s18_3",
+    "mode_id": "mode18",
+    "hard_data_generation_id": "9ea24a3a5606e2aa3850bb7f7e8c08bcf0c5faaa88f1188fe0e66cc7aa9c24b7"
+  },
+  "mapping_audit": {
+    "source_note": "data/game-knowledge/jcc/seasons/s18/patches/s18_3/balance-notes-18.3.md",
+    "scope": "18.3 official source refresh plus explicit semantic delta",
+    "baseline_policy": "Use the 18.3 official source documents as the numeric catalog authority. Do not replay 18.2 or 18.2a operations.",
+    "duplicate_input_policy": "The user supplied the 18.3 announcement twice; it was deduplicated before normalization.",
+    "special_rule": "灵魂莲华·自然仙灵 means the enhanced Wisps offered by the Soul Lotus trait and is tracked separately from ordinary Wisps.",
+    "unquantified_items": [
+      "小装置: probability reduction has no published numeric value.",
+      "手气不错: behavioral correction has no catalog numeric field.",
+      "水乳交融: offer filtering rules require semantic runtime enforcement in addition to source text."
+    ]
+  },
+  "operations": [
+    {
+      "kind": "merge_fields",
+      "catalog": "augments",
+      "id": "20612",
+      "name": "三相庇护",
+      "fields": {
+        "availability_status": "disabled",
+        "disabled": true,
+        "disabled_reason": "18.3 暂时禁用"
+      }
+    },
+    {
+      "kind": "merge_fields",
+      "catalog": "augments",
+      "id": "20733",
+      "name": "水乳交融",
+      "fields": {
+        "offer_rules": {
+          "minimum_trait_units": 5,
+          "avoid_duplicate_emblem_offers": true,
+          "avoid_too_small_trait_emblems": true,
+          "excluded_traits": ["主宰", "斗士", "护卫"]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "archive_policy": {
+    "excluded_from_new_default_compilation": true,
+    "physical_relocation_allowed": false,
+    "retained_for_active_last_known_good_and_rollback": true,
+    "source_updates_allowed": false
+  },
+  "core_packages": [
+    {
+      "hard_data_manifest": {
+        "byte_size": 1176,
+        "path": "data/core-patches/jcc/jcc-mode17-s18-17.17.8/hard-data-manifest.json",
+        "role": "hard_data_manifest",
+        "sha256": "9ea847ffb6485ad7577aeb4f756aa572521710f8b985317d096b83cc2713aad7"
+      },
+      "manifest": {
+        "byte_size": 4698,
+        "path": "data/core-patches/jcc/jcc-mode17-s18-17.17.8/manifest.json",
+        "role": "core_package_manifest",
+        "sha256": "399713bf602f2a306cd988bda27804d84d9291bb55422887390e52dca7577f80"
+      },
+      "package_id": "jcc-mode17-s18-17.17.8",
+      "physical_tree": {
+        "file_count": 179,
+        "path": "data/core-patches/jcc/jcc-mode17-s18-17.17.8",
+        "total_bytes": 316997442,
+        "tree_sha256": "57d1a903f900833bcf731b7ffa0c115d4371e0372b11904739c27f219c40510b"
+      }
+    }
+  ],
+  "descriptor": {
+    "logical_id": "season.s17",
+    "path": "data/game-knowledge/jcc/seasons/s17/season-descriptor.json"
+  },
+  "final_core_profile_id": "2bc360c85f8a25382370752e4f2fdefced3ac194fd3a1e91cb2f00c96a9a621e",
+  "generated_core_profiles": [
+    {
+      "bundle_path": "data/game-knowledge/jcc/generated/2bc360c85f8a25382370752e4f2fdefced3ac194fd3a1e91cb2f00c96a9a621e/bundle.json",
+      "core_profile_id": "2bc360c85f8a25382370752e4f2fdefced3ac194fd3a1e91cb2f00c96a9a621e",
+      "patch_id": "s17_8",
+      "physical_tree": {
+        "file_count": 4,
+        "path": "data/game-knowledge/jcc/generated/2bc360c85f8a25382370752e4f2fdefced3ac194fd3a1e91cb2f00c96a9a621e",
+        "total_bytes": 2709645,
+        "tree_sha256": "b615e01d83f543ae97418f14e1b347057fc71c0d9485ad3b162da6a6adf022bc"
+      }
+    }
+  ],
+  "identity_policy": {
+    "local_season_id": "s17",
+    "upstream_identity_is_provenance_only": true
+  },
+  "patches": [
+    {
+      "patch_id": "s17_8",
+      "path": "data/game-knowledge/jcc/seasons/s17/patches/s17_8/source-manifest.json"
+    }
+  ],
+  "ranking_generations": [],
+  "retention_reference_policy": [
+    "active Core Profile",
+    "candidate Core Profile",
+    "active ranking generation",
+    "retained previous generation",
+    "generation lease"
+  ],
+  "schema": "jcc-season-in-place-archive-v1",
+  "season_id": "s17",
+  "source_assets": [
+    {
+      "byte_size": 3425,
+      "path": "data/game-knowledge/jcc/seasons/s17/patches/s17_7/strategy-overrides.json",
+      "role": "season_patch_asset",
+      "sha256": "78795366e46248c0d278fe95cb749c4cba467d41bdbff8941d8ae0afae4cdaeb"
+    },
+    {
+      "byte_size": 8008,
+      "path": "data/game-knowledge/jcc/seasons/s17/patches/s17_8/balance-changes.json",
+      "role": "season_patch_asset",
+      "sha256": "32b7c7d02d202b72875c222057a20a93bfd91a351c981dd94f1399a3c1c8e45d"
+    },
+    {
+      "byte_size": 61290,
+      "path": "data/game-knowledge/jcc/seasons/s17/patches/s17_8/catalogs/augment-stage-authority.json",
+      "role": "season_patch_asset",
+      "sha256": "527e1f0b4558a7d97131aa78b16dcf0028a8df2b80848666009921d18c39c34e"
+    },
+    {
+      "byte_size": 1642,
+      "path": "data/game-knowledge/jcc/seasons/s17/patches/s17_8/source-manifest.json",
+      "role": "patch_source_manifest",
+      "sha256": "d3198948bf777eb64ab71e6d0996b99a14820a6af7c810aa1a75bf8c13a11160"
+    },
+    {
+      "byte_size": 3941,
+      "path": "data/game-knowledge/jcc/seasons/s17/patches/s17_8/strategy-overrides.json",
+      "role": "season_patch_asset",
+      "sha256": "23aee745f60686969a8e33303a651cc1719a4a4656656e8e7d1cae11b0cd0bf6"
+    },
+    {
+      "byte_size": 33010,
+      "path": "data/game-knowledge/jcc/seasons/s17/season-descriptor.json",
+      "role": "season_descriptor",
+      "sha256": "1ca7371dd4c74f04ab6d9fcc9d8bb4a317c2811acb848970ac42fd6ac2c072a9"
+    }
+  ],
+  "status": "frozen_read_only_in_place"
+}

@@ -1,0 +1,238 @@
+[
+  {
+    "address": "jcc:s17:control_chain:1454",
+    "champion_address": "jcc:s17:champion:1454",
+    "name": "蕾欧娜",
+    "target_profile": [
+      "current_target"
+    ],
+    "tags": [
+      "armor",
+      "control",
+      "magic_damage",
+      "magic_resist",
+      "shield",
+      "single_target"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:1455",
+    "champion_address": "jcc:s17:champion:1455",
+    "name": "雷克塞",
+    "target_profile": [
+      "current_target"
+    ],
+    "tags": [
+      "control",
+      "health",
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:1458",
+    "champion_address": "jcc:s17:champion:1458",
+    "name": "亚托克斯",
+    "target_profile": [
+      "current_target",
+      "multi_target"
+    ],
+    "tags": [
+      "aoe",
+      "armor",
+      "control",
+      "health",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:2455",
+    "champion_address": "jcc:s17:champion:2455",
+    "name": "古拉加斯",
+    "target_profile": [
+      "current_target"
+    ],
+    "tags": [
+      "attack_speed",
+      "control",
+      "health",
+      "magic_damage",
+      "single_target"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:2460",
+    "champion_address": "jcc:s17:champion:2460",
+    "name": "小木灵",
+    "target_profile": [
+      "current_target",
+      "multi_target"
+    ],
+    "tags": [
+      "aoe",
+      "control",
+      "health",
+      "magic_damage",
+      "shield",
+      "single_target"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:2462",
+    "champion_address": "jcc:s17:champion:2462",
+    "name": "贾克斯",
+    "target_profile": [
+      "aoe_radius",
+      "multi_target"
+    ],
+    "tags": [
+      "aoe",
+      "armor",
+      "control",
+      "magic_damage",
+      "magic_resist",
+      "shield"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:3455",
+    "champion_address": "jcc:s17:champion:3455",
+    "name": "菲兹",
+    "target_profile": [
+      "current_target"
+    ],
+    "tags": [
+      "control",
+      "magic_damage",
+      "mana",
+      "single_target"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:3457",
+    "champion_address": "jcc:s17:champion:3457",
+    "name": "茂凯",
+    "target_profile": [
+      "current_target",
+      "multi_target"
+    ],
+    "tags": [
+      "aoe",
+      "control",
+      "health",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:3459",
+    "champion_address": "jcc:s17:champion:3459",
+    "name": "拉亚斯特",
+    "target_profile": [
+      "aoe_radius",
+      "line"
+    ],
+    "tags": [
+      "aoe",
+      "control",
+      "durability",
+      "health",
+      "magic_damage",
+      "physical_damage"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:3461",
+    "champion_address": "jcc:s17:champion:3461",
+    "name": "莎弥拉",
+    "target_profile": [
+      "current_target"
+    ],
+    "tags": [
+      "control",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:3468",
+    "champion_address": "jcc:s17:champion:3468",
+    "name": "璐璐",
+    "target_profile": [
+      "aoe_radius",
+      "multi_target"
+    ],
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "control",
+      "magic_damage"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:3470",
+    "champion_address": "jcc:s17:champion:3470",
+    "name": "璐璐",
+    "target_profile": [
+      "aoe_radius",
+      "multi_target"
+    ],
+    "tags": [
+      "aoe",
+      "control",
+      "magic_damage",
+      "true_damage"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:4371",
+    "champion_address": "jcc:s17:champion:4371",
+    "name": "努努和威朗普",
+    "target_profile": [
+      "aoe_radius",
+      "multi_target"
+    ],
+    "tags": [
+      "aoe",
+      "control",
+      "magic_damage",
+      "shield"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:5421",
+    "champion_address": "jcc:s17:champion:5421",
+    "name": "布里茨",
+    "target_profile": [
+      "current_target",
+      "aoe_radius"
+    ],
+    "tags": [
+      "aoe",
+      "control",
+      "health",
+      "magic_damage",
+      "single_target"
+    ]
+  },
+  {
+    "address": "jcc:s17:control_chain:5425",
+    "champion_address": "jcc:s17:champion:5425",
+    "name": "娑娜",
+    "target_profile": [
+      "nearest",
+      "current_target",
+      "multi_target"
+    ],
+    "tags": [
+      "aoe",
+      "control",
+      "magic_damage",
+      "mana",
+      "single_target"
+    ]
+  }
+]

@@ -181,7 +181,6 @@ function assertDynamicPlaceholders(catalogs) {
     '已转化',
     '护甲与魔抗',
     '已获得的法术加成',
-    '锻造之力',
   ];
   for (const label of expectedLabels) {
     const matchingEffects = effects.filter((effect) => new RegExp(`${label}\\s*[：:]\\s*0`).test(effect.source_text));
@@ -189,6 +188,11 @@ function assertDynamicPlaceholders(catalogs) {
     assert.ok(matchingEffects.every((effect) => (
       effect.dynamic_placeholders.some((placeholder) => placeholder.source_text.includes(label))
     )), `Every ${label} runtime counter must be isolated as a dynamic placeholder`);
+  }
+  // Later upstream patches omit this rendered runtime counter.
+  for (const effect of effects.filter((effect) => /锻造之力\s*[：:]\s*0/.test(effect.source_text))) {
+    assert.ok(effect.dynamic_placeholders.some((placeholder) => placeholder.source_text.includes('锻造之力')),
+      'Every rendered forging runtime counter must be isolated as a dynamic placeholder');
   }
 }
 

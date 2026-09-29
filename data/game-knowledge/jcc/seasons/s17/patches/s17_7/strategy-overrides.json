@@ -1,0 +1,61 @@
+{
+  "schema": "jcc-patch-strategy-overrides-v1",
+  "scope": "patch_strategy",
+  "season_id": "s17",
+  "patch_id": "s17_7",
+  "relationship_to_game_rules": "Patch strategy overrides tune coaching priors only. They do not define game-rule timing, augment stages, choice pretriggers, base economy math, or leveling thresholds.",
+  "economy_management_overrides": {
+    "schema": "jcc-economy-management-patch-strategy-v1",
+    "scope": "s17_7_patch_strategy",
+    "patch_scope": "S17.7 tempo/meta bias; replace or supersede this patch file when patch balance changes.",
+    "relationship_to_base": "Overrides only patch tempo bias. Base economy compounding, interest math, and leveling thresholds still apply.",
+    "tempo_bias": {
+      "summary": "Current S17 is treated as a transition/tempo-oriented season where open loss-streak lines are riskier than in seasons with obvious overpowered lock-HP units.",
+      "single_open_risk": "Higher than seasons where one overpowered carry package can stabilize from low board value.",
+      "preferred_default": "Stable economy plus real strongest-board transition unless live_state proves the user can preserve a streak or safely greed."
+    },
+    "early_leveling_bias": {
+      "level_4": "Level only when current units plus components make a real combat board, or when a confirmed tempo/HP-protection/economy source justifies the spend.",
+      "do_not_level_when": [
+        "the board does not have real pairs/two-star pressure",
+        "components do not fit current holders",
+        "there is no extra economy source and leveling would break important interest without likely wins"
+      ],
+      "recovery_policy": "If early level 4 fails to streak, stop compounding the mistake: skip level 5, sell low-value holds, and recover normal economy when possible."
+    },
+    "contested_meta_policy": {
+      "summary": "This season is assumed to be contested/involuted enough that waiting too long for a perfect uncontested 4-5 level-8 line is often unsafe.",
+      "fast_8_timing": {
+        "default_4_cost_line": "4-2 level 8 after augment is the normal 4-cost timing when economy permits.",
+        "4_1_contest": "4-1 level 8 can be correct to contest cards when rich or when opponents are poor, but it roughly costs an extra level click plus one interest round.",
+        "4_5_delay": "4-5 level 8 is rare; require no serious contest and enough HP."
+      }
+    },
+    "host_model_policy": [
+      "When user target and big-data line conflict, do not force-pivot immediately. Explain evidence: live board fit, item fit, augment fit, HP/economy, and what future hit would justify staying.",
+      "Because this S17 bias is less loss-streak friendly, be cautious about recommending open-sell or long greeding unless HP/economy/stabilizer facts support it."
+    ],
+    "event_policy": {
+      "schema": "jcc-economy-event-policy-patch-strategy-v1",
+      "advice_stage_priors": [
+        "2-2",
+        "2-3",
+        "2-4",
+        "2-5",
+        "2-6",
+        "2-7",
+        "3-1",
+        "3-2",
+        "3-4",
+        "3-5",
+        "3-7",
+        "4-1",
+        "4-2",
+        "4-4",
+        "4-5",
+        "5-1"
+      ],
+      "patch_reason": "S17.7 has special choice windows and tempo-sensitive midgame checkpoints; these are review priors only and must not override live HP, confirmed choices, board quality, item fit, user target, or contest facts."
+    }
+  }
+}

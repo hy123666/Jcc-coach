@@ -1,0 +1,49 @@
+{
+  "address": "jcc:s17:formula:stat_modifier_value",
+  "source": "generated_heuristic",
+  "inputs": [
+    "unit_profile",
+    "stat_modifiers",
+    "damage_mix",
+    "fight_duration",
+    "existing_modifiers"
+  ],
+  "outputs": [
+    "offensive_delta",
+    "defensive_delta",
+    "mana_delta",
+    "effective_stat_value",
+    "overlap_penalty"
+  ],
+  "formulas": {
+    "offensive_delta": "damage_delta + attack_speed_delta + crit_delta + amp_delta",
+    "defensive_delta": "ehp_after_stat_modifiers - ehp_before_stat_modifiers",
+    "effective_stat_value": "offensive_delta * role_damage_weight + defensive_delta * role_tank_weight + mana_delta * cast_weight - overlap_penalty"
+  },
+  "dependencies": [
+    "jcc:s17:formula:damage",
+    "jcc:s17:formula:ehp",
+    "jcc:s17:formula:mana_cycle",
+    "jcc:s17:formula:attack_speed_scaling",
+    "jcc:s17:formula:damage_amp_stack"
+  ],
+  "use_cases": [
+    "trait stat breakpoints",
+    "augment stat buffs",
+    "component/stat item valuation",
+    "whether a generic buff is tempo/cap/frontline/carry oriented"
+  ],
+  "exactness": "formula_entry_exact_when_modifier_values_are_structured",
+  "name": "stat_modifier_value",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "stats"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review"
+  ],
+  "dependency_kind": "derived_formula"
+}

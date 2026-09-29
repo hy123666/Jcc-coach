@@ -1,0 +1,35 @@
+{
+  "address": "jcc:s17:formula:encounter_rule_shift",
+  "source": "generated_heuristic",
+  "inputs": [
+    "encounter",
+    "baseline_rules"
+  ],
+  "outputs": [
+    "modified_rules",
+    "affected_formulas"
+  ],
+  "formulas": {
+    "modified_rules": "baseline_rules patched by encounter modifiers"
+  },
+  "dependencies": [
+    "jcc:s17:index:encounter_shift",
+    "jcc:s17:index:system_rule_overrides"
+  ],
+  "use_cases": [
+    "奇遇改局",
+    "special tempo"
+  ],
+  "exactness": "exact_when_encounter_modifier_structured",
+  "name": "encounter_rule_shift",
+  "category": "rule_modifier",
+  "domains": [
+    "rule_modifier",
+    "encounter"
+  ],
+  "route_domains": [
+    "reward_choice",
+    "roll_or_level"
+  ],
+  "dependency_kind": "derived_formula"
+}

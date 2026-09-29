@@ -3,7 +3,7 @@
   "status": "pass",
   "strength_status": "available",
   "recipe_status": "available",
-  "checked_at": "2026-09-26T13:24:51.550Z",
+  "checked_at": "2026-09-26T22:49:33.582Z",
   "minimums": {
     "traitCount": 33,
     "heroCount": 59,
@@ -38,8 +38,8 @@
         ]
       },
       "main_carries": {
-        "observed_count": 24,
-        "matched_count": 24,
+        "observed_count": 25,
+        "matched_count": 25,
         "match_ratio": 1,
         "unknown_ids": []
       },
@@ -50,14 +50,14 @@
         "unknown_ids": []
       },
       "lineup_items": {
-        "observed_count": 60,
-        "matched_count": 60,
+        "observed_count": 56,
+        "matched_count": 56,
         "match_ratio": 1,
         "unknown_ids": []
       },
       "hero_equipment_items": {
-        "observed_count": 65,
-        "matched_count": 65,
+        "observed_count": 66,
+        "matched_count": 66,
         "match_ratio": 1,
         "unknown_ids": []
       }
@@ -85,11 +85,11 @@
           "255": 78
         },
         "equipCount": 144,
-        "lineupGroupCount": 48,
-        "winningSourceGroupCount": 48,
-        "winningSourceVariantCount": 513,
+        "lineupGroupCount": 49,
+        "winningSourceGroupCount": 49,
+        "winningSourceVariantCount": 518,
         "winningRecipeStatus": "available",
-        "winningRecipeCount": 511,
+        "winningRecipeCount": 516,
         "winningRecipeQuarantineCount": 2,
         "popularSourceRowCount": 58,
         "popularRecipeCount": 58,
@@ -97,15 +97,15 @@
         "traitDetailCount": 50,
         "emptyTraitDetailCount": 0,
         "traitGroupCount": 50,
-        "canonicalRosterCount": 545,
+        "canonicalRosterCount": 521,
         "emptyTraitGroupCount": 0,
-        "equipDate": "20260925",
-        "lineupDate": "20260925",
+        "equipDate": "20260926",
+        "lineupDate": "20260926",
         "requestIdentityMatches": true,
         "probeResponseMatches": true,
         "traitRequestIdentityMismatchCount": 0,
-        "heroEquipExpectedCount": 70,
-        "heroEquipCount": 70,
+        "heroEquipExpectedCount": 71,
+        "heroEquipCount": 71,
         "heroEquipFailureCount": 0,
         "heroEquipDateMissingCount": 0,
         "heroEquipDateMismatchCount": 0
@@ -135,11 +135,11 @@
     "status": "ready",
     "annotation_count": 50,
     "reused_annotation_count": 0,
-    "input_hash": "7e618e7eae99452280820903f895f5d62698d4c9d9fe0e3e0b443db0fe07bf21",
-    "output_hash": "cb651d3b9ec36442f2153f401f6cbea6da9a491e5259128a986893637f20b4c5",
+    "input_hash": "2a84af97f09b3962eda4bbe3951874636bf7b296504eef9426a49308301caa64",
+    "output_hash": "28973fdb19ef2aec4fe6f21e954ab656d77ca11c5702494bcf6ad21aa353ff23",
     "provider": "version-pipeline",
     "model": "runtime-selected",
-    "duration_ms": 662787,
+    "duration_ms": 1300178,
     "failure_code": null,
     "failure_reason": null,
     "authority": "non_authoritative_semantic_annotation_only",

@@ -1,0 +1,38 @@
+{
+  "address": "jcc:s17:formula:cast_frequency",
+  "source": "generated_heuristic",
+  "inputs": [
+    "max_mana",
+    "mana_gain_rate",
+    "cast_time",
+    "fight_duration"
+  ],
+  "outputs": [
+    "estimated_casts"
+  ],
+  "formulas": {
+    "estimated_casts": "floor(max(0, fight_duration - first_cast_time) / cast_cycle_time) + first_cast_possible"
+  },
+  "dependencies": [
+    "jcc:s17:formula:mana_cycle",
+    "jcc:s17:formula:attack_speed_scaling"
+  ],
+  "use_cases": [
+    "caster item comparison",
+    "skill uptime estimate"
+  ],
+  "exactness": "heuristic_timeline_estimate",
+  "name": "cast_frequency",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "cast"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review",
+    "augment_choice"
+  ],
+  "dependency_kind": "derived_formula"
+}

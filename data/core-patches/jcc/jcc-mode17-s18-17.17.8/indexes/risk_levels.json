@@ -1,0 +1,17 @@
+{
+  "address": "jcc:s17:index:risk_levels",
+  "entries": [
+    {
+      "id": "low",
+      "desc": "Stable, reversible, preserves economy or HP."
+    },
+    {
+      "id": "medium",
+      "desc": "Commits resources but leaves pivot options."
+    },
+    {
+      "id": "high",
+      "desc": "Large roll-down, hard pivot, or greed under low HP tolerance."
+    }
+  ]
+}

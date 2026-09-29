@@ -1,0 +1,34 @@
+{
+  "address": "jcc:s17:formula:operation_time_budget",
+  "source": "generated_heuristic",
+  "inputs": [
+    "user_speed_profile",
+    "time_left",
+    "action_count"
+  ],
+  "outputs": [
+    "max_recommendation_complexity",
+    "brief_or_explain_mode"
+  ],
+  "formulas": {
+    "available_actions": "floor(time_left / seconds_per_action_for_user)"
+  },
+  "dependencies": [
+    "jcc:s17:index:operation_steps"
+  ],
+  "use_cases": [
+    "5秒结论/15秒解释",
+    "教练模式"
+  ],
+  "exactness": "profile_based_estimate",
+  "name": "operation_time_budget",
+  "category": "runtime",
+  "domains": [
+    "runtime",
+    "time"
+  ],
+  "route_domains": [
+    "operation_steps"
+  ],
+  "dependency_kind": "derived_formula"
+}

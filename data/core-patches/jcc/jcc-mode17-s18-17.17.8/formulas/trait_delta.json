@@ -1,0 +1,37 @@
+{
+  "address": "jcc:s17:formula:trait_delta",
+  "source": "generated_heuristic",
+  "inputs": [
+    "current_trait_counts",
+    "candidate_unit_traits",
+    "emblems",
+    "trait_breakpoints"
+  ],
+  "outputs": [
+    "new_breakpoints",
+    "next_breakpoint_distance",
+    "trait_value_delta_tags"
+  ],
+  "formulas": {
+    "next_breakpoint_distance": "min(breakpoint.count - current_count where breakpoint.count > current_count)",
+    "activates_if": "current_count + candidate_trait_count >= breakpoint.count"
+  },
+  "name": "trait_delta",
+  "category": "composition",
+  "domains": [
+    "composition",
+    "trait"
+  ],
+  "route_domains": [
+    "trait_or_unit_swap",
+    "roll_or_level",
+    "augment_choice"
+  ],
+  "dependencies": [],
+  "dependency_kind": "root_formula",
+  "use_cases": [
+    "breakpoint activation",
+    "emblem value",
+    "candidate unit trait value"
+  ]
+}

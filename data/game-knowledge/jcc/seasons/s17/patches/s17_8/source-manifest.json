@@ -1,0 +1,52 @@
+{
+  "schema": "jcc-game-knowledge-patch-source-manifest-v1",
+  "logical_id": "patch.s17_8",
+  "scope": "patch_source_manifest",
+  "season_id": "s17",
+  "patch_id": "s17_8",
+  "source_artifacts": [
+    {
+      "role": "hard_data_manifest",
+      "path": "data/core-patches/jcc/jcc-mode17-s18-17.17.8/manifest.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "packageId": "jcc-mode17-s18-17.17.8"
+      }
+    },
+    {
+      "role": "hard_data_content_manifest",
+      "path": "data/core-patches/jcc/jcc-mode17-s18-17.17.8/hard-data-manifest.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true
+    },
+    {
+      "role": "patch_strategy",
+      "path": "data/game-knowledge/jcc/seasons/s17/patches/s17_8/strategy-overrides.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "season_id": "s17",
+        "patch_id": "s17_8"
+      }
+    },
+    {
+      "role": "augment_stage_authority",
+      "path": "data/game-knowledge/jcc/seasons/s17/patches/s17_8/catalogs/augment-stage-authority.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-decision-input-augment-stage-authority-v1"
+      }
+    },
+    {
+      "role": "runtime_catalog_overlay",
+      "path": "data/game-knowledge/jcc/seasons/s17/archive-sources/mumu-catalog-overlay-reference.json",
+      "copy_policy": "hash_and_metadata_only",
+      "required": true,
+      "expected_identity": {
+        "schema": "jcc-mumu-catalog-overlay-v1"
+      }
+    }
+  ]
+}

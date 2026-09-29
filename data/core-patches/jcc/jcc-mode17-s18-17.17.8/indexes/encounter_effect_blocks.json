@@ -1,0 +1,1002 @@
+[
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17980",
+    "encounter_address": "jcc:s17:encounter:17980",
+    "encounter_name": "金金金之旅",
+    "tags": [],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17980",
+      "raw": "金金金之旅 带着三个黄金阶强化符文前去夺金！",
+      "values": [],
+      "numeric_values": [],
+      "effect_types": [
+        "schedule_shift"
+      ],
+      "tags": [],
+      "formula_refs": [
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17981",
+    "encounter_address": "jcc:s17:encounter:17981",
+    "encounter_name": "彩彩彩之旅",
+    "tags": [
+      "aoe"
+    ],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17981",
+      "raw": "彩彩彩之旅 莫甘娜将这局游戏的所有强化符文都变为棱彩阶。",
+      "values": [],
+      "numeric_values": [],
+      "effect_types": [
+        "schedule_shift"
+      ],
+      "tags": [
+        "aoe"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:positioning_risk",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:positioning_risk"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17982",
+    "encounter_address": "jcc:s17:encounter:17982",
+    "encounter_name": "棱彩终章",
+    "tags": [],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17982",
+      "raw": "棱彩终章 格雷福斯将本局游戏的最后一个强化符文变为棱彩阶。",
+      "values": [],
+      "numeric_values": [],
+      "effect_types": [
+        "schedule_shift"
+      ],
+      "tags": [],
+      "formula_refs": [
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17983",
+    "encounter_address": "jcc:s17:encounter:17983",
+    "encounter_name": "棱彩前奏",
+    "tags": [],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17983",
+      "raw": "棱彩前奏 慎的时间裂隙将本局游戏的第一个强化符文换成棱彩阶。",
+      "values": [],
+      "numeric_values": [],
+      "effect_types": [
+        "schedule_shift"
+      ],
+      "tags": [],
+      "formula_refs": [
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17984",
+    "encounter_address": "jcc:s17:encounter:17984",
+    "encounter_name": "3费开局",
+    "tags": [],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17984",
+      "raw": "3费开局 这局在开局时自带1个随机的3费弈子！",
+      "values": [
+        "3",
+        "1",
+        "3"
+      ],
+      "numeric_values": [
+        {
+          "raw": "3",
+          "value": 3,
+          "unit": "number",
+          "context": "3费开局 这局在开局时自带1个"
+        },
+        {
+          "raw": "1",
+          "value": 1,
+          "unit": "number",
+          "context": "3费开局 这局在开局时自带1个随机的3费弈子！"
+        },
+        {
+          "raw": "3",
+          "value": 3,
+          "unit": "number",
+          "context": " 这局在开局时自带1个随机的3费弈子！"
+        }
+      ],
+      "effect_types": [],
+      "tags": [],
+      "formula_refs": [
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:unit_quality_score"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17985",
+    "encounter_address": "jcc:s17:encounter:17985",
+    "encounter_name": "2费开局",
+    "tags": [],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17985",
+      "raw": "2费开局 这局在开局时自带1个随机的2费弈子！",
+      "values": [
+        "2",
+        "1",
+        "2"
+      ],
+      "numeric_values": [
+        {
+          "raw": "2",
+          "value": 2,
+          "unit": "number",
+          "context": "2费开局 这局在开局时自带1个"
+        },
+        {
+          "raw": "1",
+          "value": 1,
+          "unit": "number",
+          "context": "2费开局 这局在开局时自带1个随机的2费弈子！"
+        },
+        {
+          "raw": "2",
+          "value": 2,
+          "unit": "number",
+          "context": " 这局在开局时自带1个随机的2费弈子！"
+        }
+      ],
+      "effect_types": [],
+      "tags": [],
+      "formula_refs": [
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:unit_quality_score"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17986",
+    "encounter_address": "jcc:s17:encounter:17986",
+    "encounter_name": "2星开局",
+    "tags": [],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17986",
+      "raw": "2星开局 维克托将你的初始弈子升至2星。",
+      "values": [
+        "2",
+        "2"
+      ],
+      "numeric_values": [
+        {
+          "raw": "2",
+          "value": 2,
+          "unit": "number",
+          "context": "2星开局 维克托将你的初始弈子"
+        },
+        {
+          "raw": "2",
+          "value": 2,
+          "unit": "number",
+          "context": "局 维克托将你的初始弈子升至2星。"
+        }
+      ],
+      "effect_types": [],
+      "tags": [],
+      "formula_refs": [
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:unit_quality_score"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17987",
+    "encounter_address": "jcc:s17:encounter:17987",
+    "encounter_name": "基础装备锻造器",
+    "tags": [
+      "item_reward"
+    ],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17987",
+      "raw": "基础装备锻造器 获得2个【基础装备锻造器】。选择你的武器！",
+      "values": [
+        "2"
+      ],
+      "numeric_values": [
+        {
+          "raw": "2",
+          "value": 2,
+          "unit": "number",
+          "context": "基础装备锻造器 获得2个【基础装备锻造器】。选择你"
+        }
+      ],
+      "effect_types": [
+        "stat_buff",
+        "grant",
+        "choice"
+      ],
+      "tags": [
+        "item_reward"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:stat_modifier_value",
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:resource_exchange",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [
+      {
+        "source_kind": "encounter",
+        "source_address": "jcc:s17:encounter:17987",
+        "target": "inventory.item_reward",
+        "operation": "grant_or_choice",
+        "value": null,
+        "unit": "item",
+        "confidence": "heuristic_text",
+        "timing": {
+          "trigger": "on_pickup_or_rule_enabled",
+          "cadence": "one_time",
+          "duration": "permanent_or_until_rule_removed",
+          "delay_rounds": null,
+          "phase": "planning"
+        },
+        "condition": [
+          {
+            "kind": "none",
+            "operator": "always",
+            "value": true
+          }
+        ],
+        "duration": {
+          "kind": "one_time_effect",
+          "until": "resolved"
+        }
+      }
+    ],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17988",
+    "encounter_address": "jcc:s17:encounter:17988",
+    "encounter_name": "战利品订阅",
+    "tags": [],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17988",
+      "raw": "战利品订阅 塔姆每阶段从一个包罗万象的奖池中为你提供战利品！",
+      "values": [],
+      "numeric_values": [],
+      "effect_types": [
+        "stat_buff",
+        "grant",
+        "loot",
+        "schedule_shift"
+      ],
+      "tags": [],
+      "formula_refs": [
+        "jcc:s17:formula:stat_modifier_value",
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:resource_exchange",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17989",
+    "encounter_address": "jcc:s17:encounter:17989",
+    "encounter_name": "纹章剧团",
+    "tags": [
+      "emblem"
+    ],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17989",
+      "raw": "纹章剧团 拉亚斯特用3个随机纹章开启你的旅程。",
+      "values": [
+        "3"
+      ],
+      "numeric_values": [
+        {
+          "raw": "3",
+          "value": 3,
+          "unit": "number",
+          "context": "纹章剧团 拉亚斯特用3个随机纹章开启你的旅程。"
+        }
+      ],
+      "effect_types": [],
+      "tags": [
+        "emblem"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [
+      {
+        "source_kind": "encounter",
+        "source_address": "jcc:s17:encounter:17989",
+        "target": "inventory.item_reward",
+        "operation": "grant_or_choice",
+        "value": null,
+        "unit": "item",
+        "confidence": "heuristic_text",
+        "timing": {
+          "trigger": "on_pickup_or_rule_enabled",
+          "cadence": "one_time",
+          "duration": "permanent_or_until_rule_removed",
+          "delay_rounds": null,
+          "phase": "planning"
+        },
+        "condition": [
+          {
+            "kind": "none",
+            "operator": "always",
+            "value": true
+          }
+        ],
+        "duration": {
+          "kind": "one_time_effect",
+          "until": "resolved"
+        }
+      }
+    ],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17990",
+    "encounter_address": "jcc:s17:encounter:17990",
+    "encounter_name": "金币订阅",
+    "tags": [
+      "economy"
+    ],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17990",
+      "raw": "金币订阅 佐伊在每个阶段开始时为你提供金币。",
+      "values": [],
+      "numeric_values": [],
+      "effect_types": [
+        "stat_buff",
+        "grant",
+        "economy",
+        "schedule_shift"
+      ],
+      "tags": [
+        "economy"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:stat_modifier_value",
+        "jcc:s17:formula:economy",
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:resource_exchange",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:economy",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17991",
+    "encounter_address": "jcc:s17:encounter:17991",
+    "encounter_name": "没有奇遇",
+    "tags": [],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17991",
+      "raw": "没有奇遇 本局游戏不会出现奇遇。",
+      "values": [],
+      "numeric_values": [],
+      "effect_types": [
+        "noop"
+      ],
+      "tags": [],
+      "formula_refs": [
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17992",
+    "encounter_address": "jcc:s17:encounter:17992",
+    "encounter_name": "嚎哭深渊",
+    "tags": [],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17992",
+      "raw": "嚎哭深渊 获得5个随机的1费弈子组成的队伍。",
+      "values": [
+        "5",
+        "1"
+      ],
+      "numeric_values": [
+        {
+          "raw": "5",
+          "value": 5,
+          "unit": "number",
+          "context": "嚎哭深渊 获得5个随机的1费弈子组成的队伍。"
+        },
+        {
+          "raw": "1",
+          "value": 1,
+          "unit": "number",
+          "context": "嚎哭深渊 获得5个随机的1费弈子组成的队伍。"
+        }
+      ],
+      "effect_types": [
+        "stat_buff",
+        "grant"
+      ],
+      "tags": [],
+      "formula_refs": [
+        "jcc:s17:formula:stat_modifier_value",
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:resource_exchange",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:unit_quality_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17993",
+    "encounter_address": "jcc:s17:encounter:17993",
+    "encounter_name": "《Silver Scrapes》战歌响起",
+    "tags": [
+      "economy"
+    ],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17993",
+      "raw": "《Silver Scrapes》战歌响起 最终的两个玩家获得70金币，以迎接一场史诗级的决战。",
+      "values": [
+        "70"
+      ],
+      "numeric_values": [
+        {
+          "raw": "70",
+          "value": 70,
+          "unit": "number",
+          "context": "战歌响起 最终的两个玩家获得70金币，以迎接一场史诗级的决战"
+        }
+      ],
+      "effect_types": [
+        "stat_buff",
+        "grant",
+        "economy"
+      ],
+      "tags": [
+        "economy"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:stat_modifier_value",
+        "jcc:s17:formula:economy",
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:resource_exchange",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [
+      {
+        "source_kind": "encounter",
+        "source_address": "jcc:s17:encounter:17993",
+        "target": "economy.gold",
+        "operation": "add",
+        "value": 70,
+        "unit": "gold",
+        "confidence": "heuristic_text",
+        "timing": {
+          "trigger": "on_pickup_or_rule_enabled",
+          "cadence": "one_time",
+          "duration": "permanent_or_until_rule_removed",
+          "delay_rounds": null,
+          "phase": "planning"
+        },
+        "condition": [
+          {
+            "kind": "none",
+            "operator": "always",
+            "value": true
+          }
+        ],
+        "duration": {
+          "kind": "one_time_effect",
+          "until": "resolved"
+        }
+      }
+    ],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:economy",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17994",
+    "encounter_address": "jcc:s17:encounter:17994",
+    "encounter_name": "强化符文刷新",
+    "tags": [],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17994",
+      "raw": "强化符文刷新 这局游戏获得+1强化符文刷新次数。",
+      "values": [
+        "1"
+      ],
+      "numeric_values": [
+        {
+          "raw": "1",
+          "value": 1,
+          "unit": "number",
+          "context": "强化符文刷新 这局游戏获得+1强化符文刷新次数。"
+        }
+      ],
+      "effect_types": [
+        "stat_buff",
+        "grant",
+        "choice",
+        "economy",
+        "schedule_shift"
+      ],
+      "tags": [],
+      "formula_refs": [
+        "jcc:s17:formula:stat_modifier_value",
+        "jcc:s17:formula:economy",
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:resource_exchange",
+        "jcc:s17:formula:cast_frequency",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:economy",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17995",
+    "encounter_address": "jcc:s17:encounter:17995",
+    "encounter_name": "双重复制器",
+    "tags": [
+      "duplicator"
+    ],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17995",
+      "raw": "双重复制器 获得一个【微型英雄复制器】。在3-5时，获得【次级英雄复制器】。",
+      "values": [
+        "3",
+        "-5"
+      ],
+      "numeric_values": [
+        {
+          "raw": "3",
+          "value": 3,
+          "unit": "number",
+          "context": "得一个【微型英雄复制器】。在3-5时，获得【次级英雄复制器"
+        },
+        {
+          "raw": "-5",
+          "value": -5,
+          "unit": "number",
+          "context": "一个【微型英雄复制器】。在3-5时，获得【次级英雄复制器】。"
+        }
+      ],
+      "effect_types": [
+        "stat_buff",
+        "grant"
+      ],
+      "tags": [
+        "duplicator"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:stat_modifier_value",
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:resource_exchange",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [
+      {
+        "source_kind": "encounter",
+        "source_address": "jcc:s17:encounter:17995",
+        "target": "inventory.duplicator",
+        "operation": "grant",
+        "value": null,
+        "unit": "duplicator",
+        "confidence": "heuristic_text",
+        "timing": {
+          "trigger": "on_pickup_or_rule_enabled",
+          "cadence": "one_time",
+          "duration": "permanent_or_until_rule_removed",
+          "delay_rounds": null,
+          "phase": "planning"
+        },
+        "condition": [
+          {
+            "kind": "none",
+            "operator": "always",
+            "value": true
+          }
+        ],
+        "duration": {
+          "kind": "one_time_effect",
+          "until": "resolved"
+        }
+      }
+    ],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:unit_quality_score",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:17996",
+    "encounter_address": "jcc:s17:encounter:17996",
+    "encounter_name": "神器锻造器",
+    "tags": [
+      "aoe",
+      "item_reward"
+    ],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:17996",
+      "raw": "神器锻造器 在阶段3-3时，所有玩家获得1个【神器锻造器】。",
+      "values": [
+        "3",
+        "-3",
+        "1"
+      ],
+      "numeric_values": [
+        {
+          "raw": "3",
+          "value": 3,
+          "unit": "number",
+          "context": "神器锻造器 在阶段3-3时，所有玩家获得1个【神"
+        },
+        {
+          "raw": "-3",
+          "value": -3,
+          "unit": "number",
+          "context": "神器锻造器 在阶段3-3时，所有玩家获得1个【神器锻"
+        },
+        {
+          "raw": "1",
+          "value": 1,
+          "unit": "number",
+          "context": "在阶段3-3时，所有玩家获得1个【神器锻造器】。"
+        }
+      ],
+      "effect_types": [
+        "stat_buff",
+        "grant",
+        "choice",
+        "schedule_shift"
+      ],
+      "tags": [
+        "aoe",
+        "item_reward"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:stat_modifier_value",
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:positioning_risk",
+        "jcc:s17:formula:resource_exchange",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [
+      {
+        "source_kind": "encounter",
+        "source_address": "jcc:s17:encounter:17996",
+        "target": "inventory.item_reward",
+        "operation": "grant_or_choice",
+        "value": null,
+        "unit": "item",
+        "confidence": "heuristic_text",
+        "timing": {
+          "trigger": "on_pickup_or_rule_enabled",
+          "cadence": "one_time",
+          "duration": "permanent_or_until_rule_removed",
+          "delay_rounds": null,
+          "phase": "planning"
+        },
+        "condition": [
+          {
+            "kind": "none",
+            "operator": "always",
+            "value": true
+          }
+        ],
+        "duration": {
+          "kind": "one_time_effect",
+          "until": "resolved"
+        }
+      }
+    ],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:positioning_risk",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:171002",
+    "encounter_address": "jcc:s17:encounter:171002",
+    "encounter_name": "更便宜的等级",
+    "tags": [
+      "economy"
+    ],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:171002",
+      "raw": "更便宜的等级 娑娜使每一级所需的经验值减少2。",
+      "values": [
+        "2"
+      ],
+      "numeric_values": [
+        {
+          "raw": "2",
+          "value": 2,
+          "unit": "number",
+          "context": "娑娜使每一级所需的经验值减少2。"
+        }
+      ],
+      "effect_types": [
+        "economy"
+      ],
+      "tags": [
+        "economy"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:economy",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:economy"
+    ],
+    "parse_status": "structured_reward_block"
+  },
+  {
+    "address": "jcc:s17:encounter_effect_blocks:171003",
+    "encounter_address": "jcc:s17:encounter:171003",
+    "encounter_name": "刷新开局",
+    "tags": [
+      "economy"
+    ],
+    "effect_block": {
+      "address": "jcc:s17:encounter_effect_block:171003",
+      "raw": "刷新开局 在阶段2-1时，获得5次免费刷新。",
+      "values": [
+        "2",
+        "-1",
+        "5"
+      ],
+      "numeric_values": [
+        {
+          "raw": "2",
+          "value": 2,
+          "unit": "number",
+          "context": "刷新开局 在阶段2-1时，获得5次免费刷新。"
+        },
+        {
+          "raw": "-1",
+          "value": -1,
+          "unit": "number",
+          "context": "刷新开局 在阶段2-1时，获得5次免费刷新。"
+        },
+        {
+          "raw": "5",
+          "value": 5,
+          "unit": "number",
+          "context": "新开局 在阶段2-1时，获得5次免费刷新。"
+        }
+      ],
+      "effect_types": [
+        "stat_buff",
+        "grant",
+        "choice",
+        "economy",
+        "schedule_shift"
+      ],
+      "tags": [
+        "economy"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:stat_modifier_value",
+        "jcc:s17:formula:economy",
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:resource_exchange",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "parse_status": "effect_block_heuristic"
+    },
+    "rule_modifiers": [
+      {
+        "source_kind": "encounter",
+        "source_address": "jcc:s17:encounter:171003",
+        "target": "shop.free_rerolls",
+        "operation": "add",
+        "value": 5,
+        "unit": "reroll",
+        "confidence": "heuristic_text",
+        "timing": {
+          "trigger": "game_start",
+          "cadence": "one_time",
+          "duration": "permanent_or_until_rule_removed",
+          "delay_rounds": null,
+          "phase": "game_start"
+        },
+        "condition": [
+          {
+            "kind": "none",
+            "operator": "always",
+            "value": true
+          }
+        ],
+        "duration": {
+          "kind": "one_time_effect",
+          "until": "resolved"
+        }
+      }
+    ],
+    "formula_refs": [
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:economy",
+      "jcc:s17:formula:resource_exchange"
+    ],
+    "parse_status": "structured_reward_block"
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "address": "jcc:s17:formula:unit_quality_score",
+  "source": "generated_heuristic",
+  "inputs": [
+    "cost",
+    "star",
+    "role",
+    "stat_vector",
+    "item_fit",
+    "trait_fit"
+  ],
+  "outputs": [
+    "quality_score"
+  ],
+  "formulas": {
+    "quality_score": "cost_weight + star_weight + role_fit + item_fit + trait_fit"
+  },
+  "dependencies": [
+    "jcc:s17:index:champion_role_profile",
+    "jcc:s17:formula:star_upgrade_delta"
+  ],
+  "use_cases": [
+    "two-star low cost vs one-star high cost",
+    "board upgrade"
+  ],
+  "exactness": "heuristic_score",
+  "name": "unit_quality_score",
+  "category": "composition",
+  "domains": [
+    "composition",
+    "unit"
+  ],
+  "route_domains": [
+    "trait_or_unit_swap",
+    "roll_or_level"
+  ],
+  "dependency_kind": "derived_formula"
+}

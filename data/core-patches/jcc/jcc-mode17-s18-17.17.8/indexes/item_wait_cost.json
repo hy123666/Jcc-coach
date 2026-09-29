@@ -1,0 +1,909 @@
+[
+  {
+    "address": "jcc:s17:item_wait_cost:1001",
+    "component_address": "jcc:s17:item:1001",
+    "component_name": "暴风之剑",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s17:item:2001",
+        "name": "无尽之刃",
+        "tags": [
+          "completed",
+          "crit",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2003",
+        "name": "海克斯科技枪刃",
+        "tags": [
+          "completed",
+          "health",
+          "magic_damage",
+          "mana",
+          "omnivamp",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2004",
+        "name": "朔极之矛",
+        "tags": [
+          "completed",
+          "health",
+          "magic_damage",
+          "mana",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2005",
+        "name": "夜之锋刃",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "completed",
+          "health",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2006",
+        "name": "汲取剑",
+        "tags": [
+          "completed",
+          "health",
+          "magic_damage",
+          "magic_resist",
+          "omnivamp",
+          "persistent_effect",
+          "physical_damage",
+          "shield"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2007",
+        "name": "斯特拉克的挑战护手",
+        "tags": [
+          "completed",
+          "health",
+          "physical_damage",
+          "shield"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2045",
+        "name": "锐利之刃",
+        "tags": [
+          "aoe",
+          "completed",
+          "damage_amp",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2046",
+        "name": "巨人捕手",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "damage_amp",
+          "magic_damage",
+          "physical_damage"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s17:item_wait_cost:1002",
+    "component_address": "jcc:s17:item:1002",
+    "component_name": "反曲之弓",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s17:item:2009",
+        "name": "红霸符",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "damage_amp",
+          "health",
+          "persistent_effect",
+          "single_target",
+          "true_damage",
+          "wound"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2010",
+        "name": "鬼索的狂暴之刃",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "magic_damage",
+          "persistent_effect"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2011",
+        "name": "虚空之杖",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "health",
+          "magic_damage",
+          "magic_resist",
+          "mana",
+          "shred",
+          "single_target"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2012",
+        "name": "泰坦的坚决",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "completed",
+          "damage_amp",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2013",
+        "name": "海妖之怒",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "magic_resist",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2014",
+        "name": "纳什之牙",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "crit",
+          "health",
+          "magic_damage",
+          "mana"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2037",
+        "name": "最后的轻语",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "completed",
+          "crit",
+          "physical_damage",
+          "single_target",
+          "sunder"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2046",
+        "name": "巨人捕手",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "damage_amp",
+          "magic_damage",
+          "physical_damage"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s17:item_wait_cost:1003",
+    "component_address": "jcc:s17:item:1003",
+    "component_name": "无用大棒",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s17:item:2003",
+        "name": "海克斯科技枪刃",
+        "tags": [
+          "completed",
+          "health",
+          "magic_damage",
+          "mana",
+          "omnivamp",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2010",
+        "name": "鬼索的狂暴之刃",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "magic_damage",
+          "persistent_effect"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2016",
+        "name": "班克斯的魔法帽",
+        "tags": [
+          "completed",
+          "damage_amp",
+          "magic_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2017",
+        "name": "大天使之杖",
+        "tags": [
+          "completed",
+          "health",
+          "magic_damage",
+          "mana",
+          "persistent_effect"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2018",
+        "name": "冕卫",
+        "tags": [
+          "armor",
+          "completed",
+          "health",
+          "magic_damage",
+          "shield"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2019",
+        "name": "离子火花",
+        "tags": [
+          "completed",
+          "health",
+          "magic_damage",
+          "magic_resist",
+          "mana",
+          "shred"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2020",
+        "name": "莫雷洛秘典",
+        "tags": [
+          "completed",
+          "health",
+          "magic_damage",
+          "mana",
+          "persistent_effect",
+          "single_target",
+          "true_damage",
+          "wound"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2038",
+        "name": "珠光护手",
+        "tags": [
+          "completed",
+          "crit",
+          "magic_damage"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s17:item_wait_cost:1004",
+    "component_address": "jcc:s17:item:1004",
+    "component_name": "女神之泪",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s17:item:2004",
+        "name": "朔极之矛",
+        "tags": [
+          "completed",
+          "health",
+          "magic_damage",
+          "mana",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2011",
+        "name": "虚空之杖",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "health",
+          "magic_damage",
+          "magic_resist",
+          "mana",
+          "shred",
+          "single_target"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2017",
+        "name": "大天使之杖",
+        "tags": [
+          "completed",
+          "health",
+          "magic_damage",
+          "mana",
+          "persistent_effect"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2022",
+        "name": "蓝霸符",
+        "tags": [
+          "aoe",
+          "completed",
+          "health",
+          "magic_damage",
+          "mana",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2023",
+        "name": "圣盾使的誓约",
+        "tags": [
+          "armor",
+          "completed",
+          "health",
+          "magic_resist",
+          "mana",
+          "shield"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2024",
+        "name": "适应性头盔",
+        "tags": [
+          "aoe",
+          "armor",
+          "completed",
+          "health",
+          "magic_damage",
+          "magic_resist",
+          "mana",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2025",
+        "name": "振奋盔甲",
+        "tags": [
+          "completed",
+          "durability",
+          "health",
+          "mana",
+          "persistent_effect"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2039",
+        "name": "正义之手",
+        "tags": [
+          "completed",
+          "crit",
+          "health",
+          "magic_damage",
+          "mana",
+          "physical_damage"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s17:item_wait_cost:1005",
+    "component_address": "jcc:s17:item:1005",
+    "component_name": "锁子甲",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s17:item:2005",
+        "name": "夜之锋刃",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "completed",
+          "health",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2012",
+        "name": "泰坦的坚决",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "completed",
+          "damage_amp",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2018",
+        "name": "冕卫",
+        "tags": [
+          "armor",
+          "completed",
+          "health",
+          "magic_damage",
+          "shield"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2023",
+        "name": "圣盾使的誓约",
+        "tags": [
+          "armor",
+          "completed",
+          "health",
+          "magic_resist",
+          "mana",
+          "shield"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2027",
+        "name": "棘刺背心",
+        "tags": [
+          "aoe",
+          "armor",
+          "completed",
+          "health",
+          "magic_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2028",
+        "name": "石像鬼石板甲",
+        "tags": [
+          "armor",
+          "completed",
+          "health",
+          "magic_resist",
+          "single_target"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2029",
+        "name": "日炎斗篷",
+        "tags": [
+          "armor",
+          "completed",
+          "health",
+          "persistent_effect",
+          "single_target",
+          "true_damage",
+          "wound"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2040",
+        "name": "坚定之心",
+        "tags": [
+          "armor",
+          "completed",
+          "crit",
+          "durability",
+          "health"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s17:item_wait_cost:1006",
+    "component_address": "jcc:s17:item:1006",
+    "component_name": "负极斗篷",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s17:item:2006",
+        "name": "汲取剑",
+        "tags": [
+          "completed",
+          "health",
+          "magic_damage",
+          "magic_resist",
+          "omnivamp",
+          "persistent_effect",
+          "physical_damage",
+          "shield"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2013",
+        "name": "海妖之怒",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "magic_resist",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2019",
+        "name": "离子火花",
+        "tags": [
+          "completed",
+          "health",
+          "magic_damage",
+          "magic_resist",
+          "mana",
+          "shred"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2024",
+        "name": "适应性头盔",
+        "tags": [
+          "aoe",
+          "armor",
+          "completed",
+          "health",
+          "magic_damage",
+          "magic_resist",
+          "mana",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2028",
+        "name": "石像鬼石板甲",
+        "tags": [
+          "armor",
+          "completed",
+          "health",
+          "magic_resist",
+          "single_target"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2031",
+        "name": "巨龙之爪",
+        "tags": [
+          "completed",
+          "health",
+          "magic_resist",
+          "persistent_effect"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2032",
+        "name": "薄暮法袍",
+        "tags": [
+          "armor",
+          "completed",
+          "health",
+          "magic_resist",
+          "sunder"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2041",
+        "name": "水银",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "crit",
+          "magic_resist",
+          "persistent_effect"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s17:item_wait_cost:1007",
+    "component_address": "jcc:s17:item:1007",
+    "component_name": "巨人腰带",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s17:item:2007",
+        "name": "斯特拉克的挑战护手",
+        "tags": [
+          "completed",
+          "health",
+          "physical_damage",
+          "shield"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2014",
+        "name": "纳什之牙",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "crit",
+          "health",
+          "magic_damage",
+          "mana"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2020",
+        "name": "莫雷洛秘典",
+        "tags": [
+          "completed",
+          "health",
+          "magic_damage",
+          "mana",
+          "persistent_effect",
+          "single_target",
+          "true_damage",
+          "wound"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2025",
+        "name": "振奋盔甲",
+        "tags": [
+          "completed",
+          "durability",
+          "health",
+          "mana",
+          "persistent_effect"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2029",
+        "name": "日炎斗篷",
+        "tags": [
+          "armor",
+          "completed",
+          "health",
+          "persistent_effect",
+          "single_target",
+          "true_damage",
+          "wound"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2032",
+        "name": "薄暮法袍",
+        "tags": [
+          "armor",
+          "completed",
+          "health",
+          "magic_resist",
+          "sunder"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2034",
+        "name": "狂徒铠甲",
+        "tags": [
+          "completed",
+          "health"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2042",
+        "name": "强袭者的链枷",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "crit",
+          "damage_amp",
+          "health"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s17:item_wait_cost:1008",
+    "component_address": "jcc:s17:item:1008",
+    "component_name": "金铲铲",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s17:item:2036",
+        "name": "金铲铲冠冕",
+        "tags": [
+          "completed",
+          "economy"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2048",
+        "name": "金锅铲冠冕",
+        "tags": [
+          "completed",
+          "economy"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s17:item_wait_cost:1009",
+    "component_address": "jcc:s17:item:1009",
+    "component_name": "拳套",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s17:item:2001",
+        "name": "无尽之刃",
+        "tags": [
+          "completed",
+          "crit",
+          "magic_damage",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2037",
+        "name": "最后的轻语",
+        "tags": [
+          "armor",
+          "attack_speed",
+          "completed",
+          "crit",
+          "physical_damage",
+          "single_target",
+          "sunder"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2038",
+        "name": "珠光护手",
+        "tags": [
+          "completed",
+          "crit",
+          "magic_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2039",
+        "name": "正义之手",
+        "tags": [
+          "completed",
+          "crit",
+          "health",
+          "magic_damage",
+          "mana",
+          "physical_damage"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2040",
+        "name": "坚定之心",
+        "tags": [
+          "armor",
+          "completed",
+          "crit",
+          "durability",
+          "health"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2041",
+        "name": "水银",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "crit",
+          "magic_resist",
+          "persistent_effect"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2042",
+        "name": "强袭者的链枷",
+        "tags": [
+          "attack_speed",
+          "completed",
+          "crit",
+          "damage_amp",
+          "health"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2044",
+        "name": "秘法手套",
+        "tags": [
+          "completed",
+          "crit",
+          "health",
+          "item_reward",
+          "slot_pressure"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  },
+  {
+    "address": "jcc:s17:item_wait_cost:1010",
+    "component_address": "jcc:s17:item:1010",
+    "component_name": "金锅锅",
+    "possible_completed_items": [
+      {
+        "item_address": "jcc:s17:item:2047",
+        "name": "金锅锅冠冕",
+        "tags": [
+          "completed",
+          "economy"
+        ]
+      },
+      {
+        "item_address": "jcc:s17:item:2048",
+        "name": "金锅铲冠冕",
+        "tags": [
+          "completed",
+          "economy"
+        ]
+      }
+    ],
+    "wait_cost_inputs": [
+      "current_streak",
+      "hp",
+      "round",
+      "component_probability_future",
+      "immediate_power_delta"
+    ]
+  }
+]

@@ -1,0 +1,1068 @@
+[
+  {
+    "address": "jcc:s17:champion_damage_profile:1450",
+    "champion_address": "jcc:s17:champion:1450",
+    "name": "崔斯特",
+    "cost": 1,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "economy",
+      "magic_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1451",
+    "champion_address": "jcc:s17:champion:1451",
+    "name": "伊泽瑞尔",
+    "cost": 1,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "magic_damage",
+      "mana",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1452",
+    "champion_address": "jcc:s17:champion:1452",
+    "name": "泰隆",
+    "cost": 1,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "health",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1453",
+    "champion_address": "jcc:s17:champion:1453",
+    "name": "内瑟斯",
+    "cost": 1,
+    "output_type": "magic",
+    "cadence": "slow_cast",
+    "tags": [
+      "health",
+      "magic_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1454",
+    "champion_address": "jcc:s17:champion:1454",
+    "name": "蕾欧娜",
+    "cost": 1,
+    "output_type": "magic",
+    "cadence": "slow_cast",
+    "tags": [
+      "armor",
+      "control",
+      "magic_damage",
+      "magic_resist",
+      "shield",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1455",
+    "champion_address": "jcc:s17:champion:1455",
+    "name": "雷克塞",
+    "cost": 1,
+    "output_type": "magic",
+    "cadence": "slow_cast",
+    "tags": [
+      "control",
+      "health",
+      "magic_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1456",
+    "champion_address": "jcc:s17:champion:1456",
+    "name": "凯特琳",
+    "cost": 1,
+    "output_type": "mixed",
+    "cadence": "basic_attack_or_passive",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1457",
+    "champion_address": "jcc:s17:champion:1457",
+    "name": "丽桑卓",
+    "cost": 1,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1458",
+    "champion_address": "jcc:s17:champion:1458",
+    "name": "亚托克斯",
+    "cost": 1,
+    "output_type": "mixed",
+    "cadence": "slow_cast",
+    "tags": [
+      "aoe",
+      "armor",
+      "control",
+      "health",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1459",
+    "champion_address": "jcc:s17:champion:1459",
+    "name": "科加斯",
+    "cost": 1,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "health",
+      "magic_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1460",
+    "champion_address": "jcc:s17:champion:1460",
+    "name": "提莫",
+    "cost": 1,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "attack_speed",
+      "magic_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1461",
+    "champion_address": "jcc:s17:champion:1461",
+    "name": "维迦",
+    "cost": 1,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1462",
+    "champion_address": "jcc:s17:champion:1462",
+    "name": "波比",
+    "cost": 1,
+    "output_type": "magic",
+    "cadence": "slow_cast",
+    "tags": [
+      "armor",
+      "magic_damage",
+      "magic_resist",
+      "shield"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:1463",
+    "champion_address": "jcc:s17:champion:1463",
+    "name": "贝蕾亚",
+    "cost": 1,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "attack_speed",
+      "health",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2450",
+    "champion_address": "jcc:s17:champion:2450",
+    "name": "纳尔",
+    "cost": 2,
+    "output_type": "mixed",
+    "cadence": "basic_attack_or_passive",
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2451",
+    "champion_address": "jcc:s17:champion:2451",
+    "name": "格温",
+    "cost": 2,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2452",
+    "champion_address": "jcc:s17:champion:2452",
+    "name": "派克",
+    "cost": 2,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2453",
+    "champion_address": "jcc:s17:champion:2453",
+    "name": "佐伊",
+    "cost": 2,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "magic_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2454",
+    "champion_address": "jcc:s17:champion:2454",
+    "name": "卑尔维斯",
+    "cost": 2,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2455",
+    "champion_address": "jcc:s17:champion:2455",
+    "name": "古拉加斯",
+    "cost": 2,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "attack_speed",
+      "control",
+      "health",
+      "magic_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2456",
+    "champion_address": "jcc:s17:champion:2456",
+    "name": "米利欧",
+    "cost": 2,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "damage_amp",
+      "magic_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2457",
+    "champion_address": "jcc:s17:champion:2457",
+    "name": "莫德凯撒",
+    "cost": 2,
+    "output_type": "magic",
+    "cadence": "slow_cast",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2458",
+    "champion_address": "jcc:s17:champion:2458",
+    "name": "金克丝",
+    "cost": 2,
+    "output_type": "physical",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2459",
+    "champion_address": "jcc:s17:champion:2459",
+    "name": "潘森",
+    "cost": 2,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "durability",
+      "health",
+      "magic_damage",
+      "physical_damage",
+      "shield"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2460",
+    "champion_address": "jcc:s17:champion:2460",
+    "name": "小木灵",
+    "cost": 2,
+    "output_type": "magic",
+    "cadence": "slow_cast",
+    "tags": [
+      "aoe",
+      "control",
+      "health",
+      "magic_damage",
+      "shield",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2461",
+    "champion_address": "jcc:s17:champion:2461",
+    "name": "阿卡丽",
+    "cost": 2,
+    "output_type": "physical",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "armor",
+      "crit",
+      "physical_damage",
+      "single_target",
+      "wound"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:2462",
+    "champion_address": "jcc:s17:champion:2462",
+    "name": "贾克斯",
+    "cost": 2,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "armor",
+      "control",
+      "magic_damage",
+      "magic_resist",
+      "shield"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3450",
+    "champion_address": "jcc:s17:champion:3450",
+    "name": "卡莎",
+    "cost": 3,
+    "output_type": "physical",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "mana",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3451",
+    "champion_address": "jcc:s17:champion:3451",
+    "name": "厄加特",
+    "cost": 3,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "physical_damage",
+      "shield",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3452",
+    "champion_address": "jcc:s17:champion:3452",
+    "name": "维克托",
+    "cost": 3,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "magic_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3453",
+    "champion_address": "jcc:s17:champion:3453",
+    "name": "奥恩",
+    "cost": 3,
+    "output_type": "magic",
+    "cadence": "slow_cast",
+    "tags": [
+      "aoe",
+      "item_reward",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3455",
+    "champion_address": "jcc:s17:champion:3455",
+    "name": "菲兹",
+    "cost": 3,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "control",
+      "magic_damage",
+      "mana",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3457",
+    "champion_address": "jcc:s17:champion:3457",
+    "name": "茂凯",
+    "cost": 3,
+    "output_type": "mixed",
+    "cadence": "slow_cast",
+    "tags": [
+      "aoe",
+      "control",
+      "health",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3458",
+    "champion_address": "jcc:s17:champion:3458",
+    "name": "黛安娜",
+    "cost": 3,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3459",
+    "champion_address": "jcc:s17:champion:3459",
+    "name": "拉亚斯特",
+    "cost": 3,
+    "output_type": "mixed",
+    "cadence": "slow_cast",
+    "tags": [
+      "aoe",
+      "control",
+      "durability",
+      "health",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3460",
+    "champion_address": "jcc:s17:champion:3460",
+    "name": "俄洛伊",
+    "cost": 3,
+    "output_type": "magic",
+    "cadence": "slow_cast",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3461",
+    "champion_address": "jcc:s17:champion:3461",
+    "name": "莎弥拉",
+    "cost": 3,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "control",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3462",
+    "champion_address": "jcc:s17:champion:3462",
+    "name": "阿萝拉",
+    "cost": 3,
+    "output_type": "true_or_mixed",
+    "cadence": "caster",
+    "tags": [
+      "magic_damage",
+      "single_target",
+      "true_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3465",
+    "champion_address": "jcc:s17:champion:3465",
+    "name": "厄运小姐",
+    "cost": 3,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3466",
+    "champion_address": "jcc:s17:champion:3466",
+    "name": "厄运小姐",
+    "cost": 3,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3467",
+    "champion_address": "jcc:s17:champion:3467",
+    "name": "厄运小姐",
+    "cost": 3,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3468",
+    "champion_address": "jcc:s17:champion:3468",
+    "name": "璐璐",
+    "cost": 3,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "control",
+      "magic_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3469",
+    "champion_address": "jcc:s17:champion:3469",
+    "name": "璐璐",
+    "cost": 3,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "economy",
+      "magic_damage",
+      "mana"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3470",
+    "champion_address": "jcc:s17:champion:3470",
+    "name": "璐璐",
+    "cost": 3,
+    "output_type": "true_or_mixed",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "control",
+      "magic_damage",
+      "true_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3471",
+    "champion_address": "jcc:s17:champion:3471",
+    "name": "璐璐",
+    "cost": 3,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "magic_resist",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3472",
+    "champion_address": "jcc:s17:champion:3472",
+    "name": "璐璐",
+    "cost": 3,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "damage_amp",
+      "health",
+      "magic_damage",
+      "wound"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3473",
+    "champion_address": "jcc:s17:champion:3473",
+    "name": "璐璐",
+    "cost": 3,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "magic_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:3474",
+    "champion_address": "jcc:s17:champion:3474",
+    "name": "璐璐",
+    "cost": 3,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4370",
+    "champion_address": "jcc:s17:champion:4370",
+    "name": "易",
+    "cost": 4,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "backline_threat",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4371",
+    "champion_address": "jcc:s17:champion:4371",
+    "name": "努努和威朗普",
+    "cost": 4,
+    "output_type": "magic",
+    "cadence": "slow_cast",
+    "tags": [
+      "aoe",
+      "control",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4372",
+    "champion_address": "jcc:s17:champion:4372",
+    "name": "库奇",
+    "cost": 4,
+    "output_type": "physical",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4373",
+    "champion_address": "jcc:s17:champion:4373",
+    "name": "卡尔玛",
+    "cost": 4,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "magic_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4374",
+    "champion_address": "jcc:s17:champion:4374",
+    "name": "千珏",
+    "cost": 4,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "damage_amp",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4375",
+    "champion_address": "jcc:s17:champion:4375",
+    "name": "锐雯",
+    "cost": 4,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "mana",
+      "physical_damage",
+      "shield"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4376",
+    "champion_address": "jcc:s17:champion:4376",
+    "name": "拉莫斯",
+    "cost": 4,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "armor",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4377",
+    "champion_address": "jcc:s17:champion:4377",
+    "name": "娜美",
+    "cost": 4,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "mana",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4378",
+    "champion_address": "jcc:s17:champion:4378",
+    "name": "塔姆",
+    "cost": 4,
+    "output_type": "magic",
+    "cadence": "slow_cast",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage",
+      "shield"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4379",
+    "champion_address": "jcc:s17:champion:4379",
+    "name": "超级机甲",
+    "cost": 4,
+    "output_type": "mixed",
+    "cadence": "slow_cast",
+    "tags": [
+      "aoe",
+      "armor",
+      "durability",
+      "health",
+      "magic_damage",
+      "magic_resist",
+      "physical_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4380",
+    "champion_address": "jcc:s17:champion:4380",
+    "name": "乐芙兰",
+    "cost": 4,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "magic_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4381",
+    "champion_address": "jcc:s17:champion:4381",
+    "name": "霞",
+    "cost": 4,
+    "output_type": "physical",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:4382",
+    "champion_address": "jcc:s17:champion:4382",
+    "name": "奥瑞利安·索尔",
+    "cost": 4,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "magic_damage",
+      "magic_resist",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:5434",
+    "champion_address": "jcc:s17:champion:5434",
+    "name": "莫甘娜",
+    "cost": 4,
+    "output_type": "magic",
+    "cadence": "slow_cast",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:5420",
+    "champion_address": "jcc:s17:champion:5420",
+    "name": "巴德",
+    "cost": 5,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "damage_amp",
+      "magic_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:5421",
+    "champion_address": "jcc:s17:champion:5421",
+    "name": "布里茨",
+    "cost": 5,
+    "output_type": "magic",
+    "cadence": "slow_cast",
+    "tags": [
+      "aoe",
+      "control",
+      "health",
+      "magic_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:5422",
+    "champion_address": "jcc:s17:champion:5422",
+    "name": "薇古丝",
+    "cost": 5,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "magic_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:5423",
+    "champion_address": "jcc:s17:champion:5423",
+    "name": "格雷福斯",
+    "cost": 5,
+    "output_type": "mixed",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:5424",
+    "champion_address": "jcc:s17:champion:5424",
+    "name": "慎",
+    "cost": 5,
+    "output_type": "true_or_mixed",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "damage_amp",
+      "health",
+      "magic_damage",
+      "mana",
+      "shield",
+      "true_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:5425",
+    "champion_address": "jcc:s17:champion:5425",
+    "name": "娑娜",
+    "cost": 5,
+    "output_type": "magic",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "control",
+      "magic_damage",
+      "mana",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:5426",
+    "champion_address": "jcc:s17:champion:5426",
+    "name": "菲奥娜",
+    "cost": 5,
+    "output_type": "true_or_mixed",
+    "cadence": "caster",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage",
+      "physical_damage",
+      "single_target",
+      "true_damage"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:5427",
+    "champion_address": "jcc:s17:champion:5427",
+    "name": "烬",
+    "cost": 5,
+    "output_type": "physical",
+    "cadence": "caster",
+    "tags": [
+      "attack_speed",
+      "damage_amp",
+      "physical_damage",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_damage_profile:5428",
+    "champion_address": "jcc:s17:champion:5428",
+    "name": "劫",
+    "cost": 5,
+    "output_type": "physical",
+    "cadence": "slow_cast",
+    "tags": [
+      "health",
+      "item_reward",
+      "mana",
+      "single_target"
+    ],
+    "confidence": "heuristic_text"
+  }
+]

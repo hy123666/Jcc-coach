@@ -1,0 +1,10 @@
+{
+  "identity": {
+    "mode_id": "mode18",
+    "patch_id": "s18_3",
+    "season_id": "s18"
+  },
+  "prompt_at_match_start": [],
+  "schema": "jcc-per-match-variables-v1",
+  "variables": []
+}

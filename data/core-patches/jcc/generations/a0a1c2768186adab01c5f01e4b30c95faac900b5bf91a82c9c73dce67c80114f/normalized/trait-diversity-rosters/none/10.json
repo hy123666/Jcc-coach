@@ -1,0 +1,2317 @@
+{
+  "objective_views": {
+    "bronze_trait_scaling": {
+      "accessibility_fallback_roster_ids": [
+        "2c8d2612ee00964283dc2fb0cb5ef0e689f1e7dfac4feec4096bc7cc3e19c938",
+        "85b118c5d722add375b14fa9288af463dbd75e0a68c162bb651d77b5e17b6c90"
+      ],
+      "common_champion_ids": [
+        "1501",
+        "1506",
+        "3502",
+        "3506",
+        "3512",
+        "4500",
+        "4502",
+        "4503",
+        "5456",
+        "5458"
+      ],
+      "frequent_champions": [
+        {
+          "champion_id": "1501",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "1506",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "3502",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "3506",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "3512",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "4500",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "4502",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "4503",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "5456",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "5458",
+          "count": 1,
+          "share": 1
+        }
+      ],
+      "high_cost_frontier_roster_ids": [
+        "49df0a1bbfa736dc60b6955dfb007743c834383dc69cc1c1535a8f92ea6e8baa"
+      ],
+      "maximum_high_cost_unit_count": 5,
+      "maximum_objective_value": 12,
+      "objective_id": "bronze_trait_scaling",
+      "primary_metric": "bronze_trait_count",
+      "primary_roster_ids": [
+        "49df0a1bbfa736dc60b6955dfb007743c834383dc69cc1c1535a8f92ea6e8baa",
+        "3e273588e677b185e2b9680bc3a5a5bed99e44e6725ae5a84263d5ef4176765e",
+        "c02a89a5a16de28c18d05693536224f8d2c87ecd49fedb37cedd54a6c3a52db2",
+        "215b65492d13b9a4720721550d45137c5474cd558dfc6132d9d80aa9ac711680",
+        "cb785a3c68e012f67e82443e25fba9723785dfd00148347910545de48b836df0",
+        "fb79c1f8faa07452ace1ed4920a1b957d97e4898c999f13c5e65c901da55ae36",
+        "0c96ec330473381adfd31150fed4e641105c3b065d64f62351a5633878488b5b",
+        "1ed326a0dcebbef48dafafc01ac42020b03f309ce76465f68f2e21715433ab39",
+        "e1320b2d20f4c93881f1260c460f8435d44c506fdc5453eff4c1b9bcbf9223e6",
+        "f4293ee40b91cf6230363b5437ced89969adb718a40aef901013e3c25e441fc2"
+      ]
+    },
+    "trait_ladder_reward_progress": {
+      "accessibility_fallback_roster_ids": [
+        "d424b14c8023258ed0096c8460c9b45ce4f006c216fe1c8c0d918af6a3fcdb01",
+        "e86cd4c691756346f7eb7cf9ff2ec4a56c0c5333a2a74fc6162d5aa293618bc9"
+      ],
+      "common_champion_ids": [
+        "1501",
+        "1506",
+        "3502",
+        "3506",
+        "3512",
+        "4500",
+        "4502",
+        "4503",
+        "5456",
+        "5458"
+      ],
+      "frequent_champions": [
+        {
+          "champion_id": "1501",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "1506",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "3502",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "3506",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "3512",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "4500",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "4502",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "4503",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "5456",
+          "count": 1,
+          "share": 1
+        },
+        {
+          "champion_id": "5458",
+          "count": 1,
+          "share": 1
+        }
+      ],
+      "high_cost_frontier_roster_ids": [
+        "49df0a1bbfa736dc60b6955dfb007743c834383dc69cc1c1535a8f92ea6e8baa"
+      ],
+      "maximum_high_cost_unit_count": 5,
+      "maximum_objective_value": 12,
+      "objective_id": "trait_ladder_reward_progress",
+      "primary_metric": "non_unique_active_trait_count",
+      "primary_roster_ids": [
+        "49df0a1bbfa736dc60b6955dfb007743c834383dc69cc1c1535a8f92ea6e8baa",
+        "2c8d2612ee00964283dc2fb0cb5ef0e689f1e7dfac4feec4096bc7cc3e19c938",
+        "3e273588e677b185e2b9680bc3a5a5bed99e44e6725ae5a84263d5ef4176765e",
+        "85b118c5d722add375b14fa9288af463dbd75e0a68c162bb651d77b5e17b6c90",
+        "c02a89a5a16de28c18d05693536224f8d2c87ecd49fedb37cedd54a6c3a52db2",
+        "215b65492d13b9a4720721550d45137c5474cd558dfc6132d9d80aa9ac711680",
+        "cb785a3c68e012f67e82443e25fba9723785dfd00148347910545de48b836df0",
+        "fb79c1f8faa07452ace1ed4920a1b957d97e4898c999f13c5e65c901da55ae36",
+        "0c96ec330473381adfd31150fed4e641105c3b065d64f62351a5633878488b5b",
+        "1ed326a0dcebbef48dafafc01ac42020b03f309ce76465f68f2e21715433ab39",
+        "e1320b2d20f4c93881f1260c460f8435d44c506fdc5453eff4c1b9bcbf9223e6",
+        "f4293ee40b91cf6230363b5437ced89969adb718a40aef901013e3c25e441fc2"
+      ]
+    }
+  },
+  "population": 10,
+  "provider_traits": [],
+  "role_constraint_status": "satisfied",
+  "roster_support_id": "s18_3:trait_diversity_rosters",
+  "rosters": [
+    {
+      "champion_ids": [
+        "1512",
+        "1501",
+        "1509",
+        "2503",
+        "2500",
+        "3502",
+        "3510",
+        "3509",
+        "4500",
+        "5453"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 12,
+        "five_cost_unit_count": 1,
+        "four_cost_unit_count": 1,
+        "high_cost_unit_count": 2,
+        "non_unique_active_trait_count": 12,
+        "source_quality": 1224,
+        "total_unit_cost": 25,
+        "tracker_high_cost_carry_count": 1,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 6,
+      "population": 10,
+      "roster_id": "f4293ee40b91cf6230363b5437ced89969adb718a40aef901013e3c25e441fc2",
+      "source_champion_ids": [
+        "918045",
+        "918497",
+        "918498",
+        "918098",
+        "918994",
+        "918009",
+        "918268",
+        "918995",
+        "918997",
+        "918085"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918045,918085,918098,918268,918497,918498,918994,918995,918997",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "344",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "347",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "351",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "召唤使",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "343",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "451",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "黑色荆棘",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 3,
+          "id": "454",
+          "identity_match_confidence": 0.583333,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "峡谷怪物",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1506",
+        "1507",
+        "1501",
+        "2513",
+        "2500",
+        "3502",
+        "3506",
+        "3509",
+        "4502",
+        "5456"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 12,
+        "five_cost_unit_count": 1,
+        "four_cost_unit_count": 1,
+        "high_cost_unit_count": 2,
+        "non_unique_active_trait_count": 12,
+        "source_quality": 1224,
+        "total_unit_cost": 25,
+        "tracker_high_cost_carry_count": 1,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 7,
+      "population": 10,
+      "roster_id": "e1320b2d20f4c93881f1260c460f8435d44c506fdc5453eff4c1b9bcbf9223e6",
+      "source_champion_ids": [
+        "918084",
+        "918110",
+        "918497",
+        "918991",
+        "918994",
+        "918009",
+        "918131",
+        "918995",
+        "918876",
+        "918955"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918084,918110,918131,918497,918876,918955,918991,918994,918995",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "344",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "343",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 3,
+          "id": "454",
+          "identity_match_confidence": 0.583333,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "峡谷怪物",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1512",
+        "1506",
+        "2503",
+        "2513",
+        "3502",
+        "3506",
+        "3510",
+        "3509",
+        "4509",
+        "4500"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 12,
+        "five_cost_unit_count": 0,
+        "four_cost_unit_count": 2,
+        "high_cost_unit_count": 2,
+        "non_unique_active_trait_count": 12,
+        "source_quality": 1224,
+        "total_unit_cost": 26,
+        "tracker_high_cost_carry_count": 1,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 10,
+      "population": 10,
+      "roster_id": "0c96ec330473381adfd31150fed4e641105c3b065d64f62351a5633878488b5b",
+      "source_champion_ids": [
+        "918045",
+        "918084",
+        "918098",
+        "918991",
+        "918009",
+        "918131",
+        "918268",
+        "918995",
+        "918523",
+        "918997"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918045,918084,918098,918131,918268,918523,918991,918995,918997",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "344",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "351",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "召唤使",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "451",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "黑色荆棘",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 3,
+          "id": "454",
+          "identity_match_confidence": 0.583333,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "峡谷怪物",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1512",
+        "2505",
+        "1501",
+        "2508",
+        "3502",
+        "3506",
+        "3509",
+        "4509",
+        "4502",
+        "5458"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 12,
+        "five_cost_unit_count": 1,
+        "four_cost_unit_count": 2,
+        "high_cost_unit_count": 3,
+        "non_unique_active_trait_count": 12,
+        "source_quality": 1224,
+        "total_unit_cost": 27,
+        "tracker_high_cost_carry_count": 2,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 13,
+      "population": 10,
+      "roster_id": "fb79c1f8faa07452ace1ed4920a1b957d97e4898c999f13c5e65c901da55ae36",
+      "source_champion_ids": [
+        "918045",
+        "918083",
+        "918497",
+        "918019",
+        "918009",
+        "918131",
+        "918995",
+        "918523",
+        "918876",
+        "918998"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918019,918045,918083,918131,918497,918523,918876,918995,918998",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "344",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "351",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "召唤使",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "343",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "451",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "黑色荆棘",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 3,
+          "id": "454",
+          "identity_match_confidence": 0.583333,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "峡谷怪物",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1512",
+        "1506",
+        "2503",
+        "3502",
+        "3512",
+        "3506",
+        "3510",
+        "3509",
+        "4509",
+        "4500"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 12,
+        "five_cost_unit_count": 0,
+        "four_cost_unit_count": 2,
+        "high_cost_unit_count": 2,
+        "non_unique_active_trait_count": 12,
+        "source_quality": 1223,
+        "total_unit_cost": 27,
+        "tracker_high_cost_carry_count": 1,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 14,
+      "population": 10,
+      "roster_id": "1ed326a0dcebbef48dafafc01ac42020b03f309ce76465f68f2e21715433ab39",
+      "source_champion_ids": [
+        "918045",
+        "918084",
+        "918098",
+        "918009",
+        "918096",
+        "918131",
+        "918268",
+        "918995",
+        "918523",
+        "918997"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918045,918084,918096,918098,918131,918268,918523,918995,918997",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "344",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "351",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "召唤使",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "350",
+          "identity_match_kind": "unique_official_name_prefix",
+          "source_name": "神谕者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "451",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "黑色荆棘",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1506",
+        "1501",
+        "1511",
+        "2513",
+        "3502",
+        "3506",
+        "4503",
+        "4502",
+        "4500",
+        "5456"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 12,
+        "five_cost_unit_count": 1,
+        "four_cost_unit_count": 3,
+        "high_cost_unit_count": 4,
+        "non_unique_active_trait_count": 12,
+        "source_quality": 1225,
+        "total_unit_cost": 28,
+        "tracker_high_cost_carry_count": 1,
+        "tracker_high_cost_tank_count": 3
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 15,
+      "population": 10,
+      "roster_id": "3e273588e677b185e2b9680bc3a5a5bed99e44e6725ae5a84263d5ef4176765e",
+      "source_champion_ids": [
+        "918084",
+        "918497",
+        "918989",
+        "918991",
+        "918009",
+        "918131",
+        "918032",
+        "918876",
+        "918997",
+        "918955"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918032,918084,918131,918497,918876,918955,918989,918991,918997",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "343",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "350",
+          "identity_match_kind": "unique_official_name_prefix",
+          "source_name": "神谕者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 3,
+          "id": "454",
+          "identity_match_confidence": 0.583333,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "峡谷怪物",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1512",
+        "1506",
+        "1501",
+        "3502",
+        "3506",
+        "3510",
+        "3509",
+        "4509",
+        "4502",
+        "5453"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 12,
+        "five_cost_unit_count": 1,
+        "four_cost_unit_count": 2,
+        "high_cost_unit_count": 3,
+        "non_unique_active_trait_count": 12,
+        "source_quality": 1223,
+        "total_unit_cost": 28,
+        "tracker_high_cost_carry_count": 2,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 16,
+      "population": 10,
+      "roster_id": "cb785a3c68e012f67e82443e25fba9723785dfd00148347910545de48b836df0",
+      "source_champion_ids": [
+        "918045",
+        "918084",
+        "918497",
+        "918009",
+        "918131",
+        "918268",
+        "918995",
+        "918523",
+        "918876",
+        "918085"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918045,918084,918085,918131,918268,918497,918523,918876,918995",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "344",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "347",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "351",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "召唤使",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "451",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "黑色荆棘",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1506",
+        "1501",
+        "2503",
+        "3502",
+        "3504",
+        "3506",
+        "3501",
+        "4507",
+        "4502",
+        "5456"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 10,
+        "five_cost_unit_count": 1,
+        "four_cost_unit_count": 2,
+        "high_cost_unit_count": 3,
+        "non_unique_active_trait_count": 11,
+        "source_quality": 1423,
+        "total_unit_cost": 29,
+        "tracker_high_cost_carry_count": 2,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 17,
+      "population": 10,
+      "roster_id": "d424b14c8023258ed0096c8460c9b45ce4f006c216fe1c8c0d918af6a3fcdb01",
+      "source_champion_ids": [
+        "918084",
+        "918497",
+        "918098",
+        "918009",
+        "918107",
+        "918131",
+        "918254",
+        "918076",
+        "918876",
+        "918955"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918076,918084,918098,918107,918131,918254,918497,918876,918955",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "343",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 3,
+          "bronze_tier": false,
+          "count": 1,
+          "id": "463",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 5,
+          "bronze_tier": false,
+          "count": 2,
+          "id": "464",
+          "identity_match_kind": "unique_official_name_prefix",
+          "source_name": "远古",
+          "unique_trait": true
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1506",
+        "1501",
+        "2503",
+        "3502",
+        "3505",
+        "3506",
+        "3501",
+        "4507",
+        "4502",
+        "5456"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 10,
+        "five_cost_unit_count": 1,
+        "four_cost_unit_count": 2,
+        "high_cost_unit_count": 3,
+        "non_unique_active_trait_count": 11,
+        "source_quality": 1423,
+        "total_unit_cost": 29,
+        "tracker_high_cost_carry_count": 2,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 18,
+      "population": 10,
+      "roster_id": "e86cd4c691756346f7eb7cf9ff2ec4a56c0c5333a2a74fc6162d5aa293618bc9",
+      "source_champion_ids": [
+        "918084",
+        "918497",
+        "918098",
+        "918009",
+        "918121",
+        "918131",
+        "918254",
+        "918076",
+        "918876",
+        "918955"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918076,918084,918098,918121,918131,918254,918497,918876,918955",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "343",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 3,
+          "bronze_tier": false,
+          "count": 1,
+          "id": "463",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 5,
+          "bronze_tier": false,
+          "count": 2,
+          "id": "464",
+          "identity_match_kind": "unique_official_name_prefix",
+          "source_name": "远古",
+          "unique_trait": true
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1512",
+        "1506",
+        "2513",
+        "3502",
+        "3506",
+        "3510",
+        "3509",
+        "4509",
+        "4500",
+        "5453"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 12,
+        "five_cost_unit_count": 1,
+        "four_cost_unit_count": 2,
+        "high_cost_unit_count": 3,
+        "non_unique_active_trait_count": 12,
+        "source_quality": 1224,
+        "total_unit_cost": 29,
+        "tracker_high_cost_carry_count": 2,
+        "tracker_high_cost_tank_count": 1
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 19,
+      "population": 10,
+      "roster_id": "215b65492d13b9a4720721550d45137c5474cd558dfc6132d9d80aa9ac711680",
+      "source_champion_ids": [
+        "918045",
+        "918084",
+        "918991",
+        "918009",
+        "918131",
+        "918268",
+        "918995",
+        "918523",
+        "918997",
+        "918085"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918045,918084,918085,918131,918268,918523,918991,918995,918997",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "344",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "347",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "351",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "召唤使",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "451",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "黑色荆棘",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 3,
+          "id": "454",
+          "identity_match_confidence": 0.583333,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "峡谷怪物",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1506",
+        "1501",
+        "1511",
+        "3502",
+        "3512",
+        "3506",
+        "4503",
+        "4502",
+        "5456",
+        "5458"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 12,
+        "five_cost_unit_count": 2,
+        "four_cost_unit_count": 2,
+        "high_cost_unit_count": 4,
+        "non_unique_active_trait_count": 12,
+        "source_quality": 1224,
+        "total_unit_cost": 30,
+        "tracker_high_cost_carry_count": 2,
+        "tracker_high_cost_tank_count": 2
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 20,
+      "population": 10,
+      "roster_id": "c02a89a5a16de28c18d05693536224f8d2c87ecd49fedb37cedd54a6c3a52db2",
+      "source_champion_ids": [
+        "918084",
+        "918497",
+        "918989",
+        "918009",
+        "918096",
+        "918131",
+        "918032",
+        "918876",
+        "918955",
+        "918998"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918032,918084,918096,918131,918497,918876,918955,918989,918998",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "343",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "350",
+          "identity_match_kind": "unique_official_name_prefix",
+          "source_name": "神谕者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 3,
+          "id": "454",
+          "identity_match_confidence": 0.583333,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "峡谷怪物",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1506",
+        "1501",
+        "2513",
+        "3502",
+        "3504",
+        "3506",
+        "4503",
+        "4502",
+        "5456",
+        "5458"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 11,
+        "five_cost_unit_count": 2,
+        "four_cost_unit_count": 2,
+        "high_cost_unit_count": 4,
+        "non_unique_active_trait_count": 12,
+        "source_quality": 1423,
+        "total_unit_cost": 31,
+        "tracker_high_cost_carry_count": 2,
+        "tracker_high_cost_tank_count": 2
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 21,
+      "population": 10,
+      "roster_id": "2c8d2612ee00964283dc2fb0cb5ef0e689f1e7dfac4feec4096bc7cc3e19c938",
+      "source_champion_ids": [
+        "918084",
+        "918497",
+        "918991",
+        "918009",
+        "918107",
+        "918131",
+        "918032",
+        "918876",
+        "918955",
+        "918998"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918032,918084,918107,918131,918497,918876,918955,918991,918998",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "343",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 3,
+          "id": "454",
+          "identity_match_confidence": 0.583333,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "峡谷怪物",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 3,
+          "bronze_tier": false,
+          "count": 1,
+          "id": "463",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1506",
+        "1501",
+        "2513",
+        "3502",
+        "3505",
+        "3506",
+        "4503",
+        "4502",
+        "5456",
+        "5458"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 11,
+        "five_cost_unit_count": 2,
+        "four_cost_unit_count": 2,
+        "high_cost_unit_count": 4,
+        "non_unique_active_trait_count": 12,
+        "source_quality": 1423,
+        "total_unit_cost": 31,
+        "tracker_high_cost_carry_count": 2,
+        "tracker_high_cost_tank_count": 2
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 22,
+      "population": 10,
+      "roster_id": "85b118c5d722add375b14fa9288af463dbd75e0a68c162bb651d77b5e17b6c90",
+      "source_champion_ids": [
+        "918084",
+        "918497",
+        "918991",
+        "918009",
+        "918121",
+        "918131",
+        "918032",
+        "918876",
+        "918955",
+        "918998"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918032,918084,918121,918131,918497,918876,918955,918991,918998",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "343",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 3,
+          "id": "454",
+          "identity_match_confidence": 0.583333,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "峡谷怪物",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 3,
+          "bronze_tier": false,
+          "count": 1,
+          "id": "463",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    },
+    {
+      "champion_ids": [
+        "1506",
+        "1501",
+        "3502",
+        "3512",
+        "3506",
+        "4503",
+        "4502",
+        "4500",
+        "5456",
+        "5458"
+      ],
+      "metrics": {
+        "active_trait_count": 12,
+        "bronze_trait_count": 12,
+        "five_cost_unit_count": 2,
+        "four_cost_unit_count": 3,
+        "high_cost_unit_count": 5,
+        "non_unique_active_trait_count": 12,
+        "source_quality": 1225,
+        "total_unit_cost": 33,
+        "tracker_high_cost_carry_count": 2,
+        "tracker_high_cost_tank_count": 3
+      },
+      "next_population_transitions_by_objective": {
+        "bronze_trait_scaling": [],
+        "trait_ladder_reward_progress": []
+      },
+      "ordinal": 23,
+      "population": 10,
+      "roster_id": "49df0a1bbfa736dc60b6955dfb007743c834383dc69cc1c1535a8f92ea6e8baa",
+      "source_champion_ids": [
+        "918084",
+        "918497",
+        "918009",
+        "918096",
+        "918131",
+        "918032",
+        "918876",
+        "918997",
+        "918955",
+        "918998"
+      ],
+      "support_key": "none",
+      "team_key": "918009,918032,918084,918096,918131,918497,918876,918955,918997,918998",
+      "trait_activations": [
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "349",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "348",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "适应者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "346",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "劫掠梦魇",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "342",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "341",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "343",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "350",
+          "identity_match_kind": "unique_official_name_prefix",
+          "source_name": "神谕者",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "458",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "炼狱",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 3,
+          "id": "454",
+          "identity_match_confidence": 0.583333,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "峡谷怪物",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "455",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "仙灵",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 1,
+          "id": "462",
+          "unique_trait": false
+        },
+        {
+          "breakpoint_color": 1,
+          "bronze_tier": true,
+          "count": 2,
+          "id": "460",
+          "identity_match_confidence": 1,
+          "identity_match_kind": "dominant_roster_count_and_breakpoint_match",
+          "source_name": "月光射线",
+          "unique_trait": false
+        }
+      ]
+    }
+  ],
+  "schema": "jcc-trait-diversity-roster-shard-v2",
+  "source_candidate_rows": 14,
+  "source_maximum_active_trait_count": 12,
+  "support_key": "none"
+}

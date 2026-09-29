@@ -1,0 +1,21 @@
+{
+  "address": "jcc:s17:index:explanation_templates",
+  "entries": [
+    {
+      "id": "defensive_item",
+      "template": "Because enemy damage is {damage_mix} and your tank already has {current_item_tags}, {candidate_item} gives higher marginal EHP than {alternative}."
+    },
+    {
+      "id": "roll_timing",
+      "template": "At level {level}, {target_cost}-cost odds are {odds}; with {gold} gold you see about {shops} shops, so rolling now is {risk_level}."
+    },
+    {
+      "id": "trait_delta",
+      "template": "Adding {unit} changes {trait} from {from_count} to {to_count}, activating {breakpoint} and adding {effect_tags}."
+    },
+    {
+      "id": "positioning",
+      "template": "Targeting threat is {threat_type}; move {unit} to {position} to reduce {risk}."
+    }
+  ]
+}

@@ -20,7 +20,7 @@ Lobby chat can use models with higher reasoning effort for deeper discussion. Fo
 
 ## Version and Data
 
-Published version: **[0.1.5](https://github.com/hy123666/Jcc-coach/releases/tag/v0.1.5)**. Included game knowledge: S18 / 18.2a. Ranking statistics date: **2026-09-26**. The current full generations are September 23, 25 and 26. Normal retention is the active generation plus two eligible historical generations, with compact trends covering up to 14 dates, not 14 full snapshots.
+Current source and pending installer version: **0.1.6**. Included game knowledge: S18 / 18.3. Ranking statistics date: **2026-09-28**. Download the installer from [Releases](https://github.com/hy123666/Jcc-coach/releases) once published. Normal retention is the active generation plus two eligible historical generations, with compact trends covering up to 14 dates, not 14 full snapshots.
 
 Use “更新今日数据” to synchronize data, run semantic maintenance, verify and publish it. Statistics dates come from the upstream source, not the date the app starts. An ongoing match pins its snapshot and must not mix generations.
 

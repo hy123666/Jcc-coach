@@ -1,0 +1,281 @@
+[
+  {
+    "address": "jcc:s17:item_rework_tool:1093",
+    "source_address": "jcc:s17:augment:1093",
+    "name": "休眠锻炉",
+    "tags": [
+      "item_reward"
+    ],
+    "desc": "在8个玩家对战后，获得1个【神器锻造器】。  这个锻造器提供4个选项。神器是可以提供独特效果的强力装备。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:1701",
+    "source_address": "jcc:s17:augment:1701",
+    "name": "黑铁资产",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "desc": "获得1个【基础装备锻造器】和3金币。  这个锻造器提供4个选项。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:2127",
+    "source_address": "jcc:s17:augment:2127",
+    "name": "变形重组器",
+    "tags": [
+      "economy",
+      "item_reward",
+      "shop_odds"
+    ],
+    "desc": "你棋盘上的弈子们会永久变形为一个比自身高1费的随机弈子（最大5费）。获得2个【装备拆卸器】和3次免费刷新。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:2184",
+    "source_address": "jcc:s17:augment:2184",
+    "name": "大百宝袋",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "desc": "获得3件随机基础装备、2金币和1个【装备重铸器】。  【装备重铸器】允许你将任一装备随机成另一件装备。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:3270",
+    "source_address": "jcc:s17:augment:3270",
+    "name": "活体锻炉",
+    "tags": [
+      "item_reward"
+    ],
+    "desc": "立刻以及之后的每9个玩家对战回合后获得1个【神器锻造器】。  神器是可以提供独特效果的强力装备。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:3851",
+    "source_address": "jcc:s17:augment:3851",
+    "name": "混沌召唤",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "desc": "获得一个强大的随机奖励。(52金币，58经验值，1件成装锻造器和金蛋，36次免费刷新，3件幸运装备推荐器和1件装备拆卸器，金铲铲和金锅锅和2件基础装备锻造器，光明版幸运装备宝箱和8金币和1件装备拆卸器，3个秘法手套和1个拆卸器，6件不同的基础装备，带1件光明装备、神器装备、成装的魔像)"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:4158",
+    "source_address": "jcc:s17:augment:4158",
+    "name": "节外生枝+",
+    "tags": [
+      "emblem",
+      "item_reward"
+    ],
+    "desc": "获得1个随机【纹章】和1个【装备重铸器】。  【装备重铸器】允许你将任一装备随机成另一件装备。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:20141",
+    "source_address": "jcc:s17:augment:20141",
+    "name": "专属定制",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "desc": "获得1个【幸运装备宝箱】和1个【装备拆卸器】和10金币。  对一个英雄使用【幸运装备宝箱】，即可从一个推荐装备武器库中进行选择！"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:20676",
+    "source_address": "jcc:s17:augment:20676",
+    "name": "海牛阿福的锅铲战术",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "desc": "如果你赢了你的下一个玩家对战回合，获得1个【金铲铲】。如果你输了，获得1个【金锅锅】。立刻获得1个【基础装备锻造器】和3金币。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:20681",
+    "source_address": "jcc:s17:augment:20681",
+    "name": "蔓延之根+",
+    "tags": [
+      "economy",
+      "emblem",
+      "item_reward"
+    ],
+    "desc": "获得2个随机纹章、一个【装备重铸器】和2金币。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:20721",
+    "source_address": "jcc:s17:augment:20721",
+    "name": "黄金赌约",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "desc": "获得2金币，并抛一枚硬币。如果硬币正面朝上，获得1个光明版幸运装备宝箱。如果硬币反面朝上，获得2个成装锻造器。  结果：正面朝上！结果：反面朝上！"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:20722",
+    "source_address": "jcc:s17:augment:20722",
+    "name": "黄金赌约+",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "desc": "获得3金币，并抛一枚硬币。如果硬币正面朝上，获得1个光明版幸运装备宝箱。如果硬币反面朝上，获得2个成装锻造器。  结果：正面朝上！结果：反面朝上！"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:20723",
+    "source_address": "jcc:s17:augment:20723",
+    "name": "黄金赌约++",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "desc": "获得6金币，并抛一枚硬币。如果硬币正面朝上，获得1个光明版幸运装备宝箱。如果硬币反面朝上，获得2个成装锻造器。  结果：正面朝上！结果：反面朝上！"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:20733",
+    "source_address": "jcc:s17:augment:20733",
+    "name": "水乳交融",
+    "tags": [
+      "attack_speed",
+      "emblem",
+      "item_reward"
+    ],
+    "desc": "获得1个随机纹章和1个【成装锻造器】。与该纹章有同一羁绊的己方弈子们获得30%攻击速度。  2025【双城之战2】全球总决赛"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:30141",
+    "source_address": "jcc:s17:augment:30141",
+    "name": "专属定制 II",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "desc": "获得2个【幸运装备宝箱】、1个【装备拆卸器】和10金币。  对一个英雄使用【幸运装备宝箱】，即可从一个推荐装备武器库中进行选择！"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:30634",
+    "source_address": "jcc:s17:augment:30634",
+    "name": "羁绊树",
+    "tags": [
+      "economy",
+      "emblem",
+      "item_reward"
+    ],
+    "desc": "获得3个随机纹章和2金币，以及1个装备重铸器。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:30637",
+    "source_address": "jcc:s17:augment:30637",
+    "name": "可大可小",
+    "tags": [
+      "item_reward"
+    ],
+    "desc": "获得1个【金制拆卸器】和4个随机基础装备。  【金制拆卸器】是一个拥有无限使用次数的【装备拆卸器】。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:30665",
+    "source_address": "jcc:s17:augment:30665",
+    "name": "甜点",
+    "tags": [
+      "health",
+      "item_reward"
+    ],
+    "desc": "获得1个【神器锻造器】。弈子每携带1个装备，你的队伍就获得16生命值。  已获得的生命值：0  2024【魔法大乱斗】全球总决赛"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:30682",
+    "source_address": "jcc:s17:augment:30682",
+    "name": "羁绊树+",
+    "tags": [
+      "economy",
+      "emblem",
+      "item_reward"
+    ],
+    "desc": "获得3个随机纹章、一个【装备重铸器】和4金币。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:2_1702010_stage_2",
+    "source_address": "jcc:s17:god_reward:2_1702010_stage_2",
+    "name": "财富探险",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "desc": "当你积攒到50金币时，获得一个基础装备锻造器和4金币。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:2_1702040_stage_2",
+    "source_address": "jcc:s17:god_reward:2_1702040_stage_2",
+    "name": "羁绊探险",
+    "tags": [
+      "emblem",
+      "item_reward"
+    ],
+    "desc": "在一场玩家对战中登场6个非唯一羁绊后，获得1个随机【纹章】和1个【装备重铸器】。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:2_1702040_stage_3",
+    "source_address": "jcc:s17:god_reward:2_1702040_stage_3",
+    "name": "羁绊探险",
+    "tags": [
+      "emblem",
+      "item_reward"
+    ],
+    "desc": "在一场玩家对战中登场6个非唯一羁绊后，获得1个随机【纹章】和1个【装备重铸器】。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:2_1702070_stage_4",
+    "source_address": "jcc:s17:god_reward:2_1702070_stage_4",
+    "name": "刷新探险",
+    "tags": [
+      "item_reward",
+      "shop_odds"
+    ],
+    "desc": "在刷新商店15次之后，获得2个【基础装备锻造器】。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:4_1704040_stage_2",
+    "source_address": "jcc:s17:god_reward:4_1704040_stage_2",
+    "name": "精工细作",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "desc": "立刻获得1个【装备重铸器】，并且在每个阶段开始时再获得一个。每当你使用一个【装备重铸器】时，获得2金币。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:4_1704050_stage_2",
+    "source_address": "jcc:s17:god_reward:4_1704050_stage_2",
+    "name": "锻造器转变",
+    "tags": [
+      "economy",
+      "item_reward"
+    ],
+    "desc": "每当你将要获得一个基础装备时，转而获得1个【基础装备锻造器】。获得2金币。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:7_1707060_stage_3",
+    "source_address": "jcc:s17:god_reward:7_1707060_stage_3",
+    "name": "基础装备锻造器",
+    "tags": [
+      "item_reward"
+    ],
+    "desc": "在3个回合后，获得1个【基础装备锻造器】。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:7_1707061_stage_4",
+    "source_address": "jcc:s17:god_reward:7_1707061_stage_4",
+    "name": "成装锻造器",
+    "tags": [
+      "item_reward"
+    ],
+    "desc": "在5回合后，获得1个【成装锻造器】。"
+  },
+  {
+    "address": "jcc:s17:item_rework_tool:7_1707090_stage_4",
+    "source_address": "jcc:s17:god_reward:7_1707090_stage_4",
+    "name": "艾克的恩赐",
+    "tags": [
+      "item_reward"
+    ],
+    "desc": "获得【突变】，一个基于单位的定位为其提供强力进化的装备。获得2个【装备拆卸器】。"
+  }
+]

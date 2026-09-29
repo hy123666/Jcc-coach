@@ -1,0 +1,2151 @@
+[
+  {
+    "address": "jcc:s17:runtime_lookup_manifest:augment_choice",
+    "route_id": "augment_choice",
+    "route_address": "jcc:s17:runtime_query_route:augment_choice",
+    "loading_plan_address": "jcc:s17:runtime_loading_plan:augment_choice",
+    "loading_plan_lookup_ref": "jcc:s17:lookup_ref:loading_plan_augment_choice",
+    "runtime_strategy_orchestrator_address": "jcc:s17:runtime_strategy_orchestrator_route:augment_choice",
+    "runtime_strategy_orchestrator_lookup_ref": "jcc:s17:lookup_ref:strategy_orchestrator_augment_choice",
+    "runtime_lookup_budget_address": "jcc:s17:runtime_lookup_budget:augment_choice",
+    "runtime_lookup_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_augment_choice",
+    "runtime_first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:augment_choice",
+    "runtime_first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_augment_choice",
+    "runtime_answer_contract_address": "jcc:s17:runtime_answer_contract:augment_choice",
+    "runtime_answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_augment_choice",
+    "runtime_state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:augment_choice",
+    "runtime_state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_augment_choice",
+    "runtime_feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:augment_choice",
+    "runtime_feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_augment_choice",
+    "runtime_route_bundle_address": "jcc:s17:runtime_route_bundle:augment_choice",
+    "runtime_route_bundle_lookup_ref": "jcc:s17:lookup_ref:route_bundle_augment_choice",
+    "route_context_pack_address": "jcc:s17:route_context_pack:augment_choice",
+    "route_context_pack_lookup_ref": "jcc:s17:lookup_ref:context_pack_augment_choice",
+    "route_evaluator_manifest_address": "jcc:s17:route_evaluator_manifest:augment_choice",
+    "route_evaluator_manifest_lookup_ref": "jcc:s17:lookup_ref:route_evaluator_augment_choice",
+    "fast_context_address": "jcc:s17:runtime_fast_context:augment_choice",
+    "fast_context_lookup_ref": "jcc:s17:lookup_ref:fast_context_augment_choice",
+    "decision_recipe_address": "jcc:s17:runtime_decision_recipe:augment_choice",
+    "decision_recipe_lookup_ref": "jcc:s17:lookup_ref:decision_recipe_augment_choice",
+    "route_term_refinement_lookup_address": "jcc:s17:route_term_refinement_lookup:augment_choice",
+    "route_term_refinement_lookup_ref": "jcc:s17:lookup_ref:route_term_augment_choice",
+    "route_strategy_playbook_lookup_address": "jcc:s17:route_strategy_playbook_lookup:augment_choice",
+    "route_strategy_playbook_lookup_ref": "jcc:s17:lookup_ref:route_playbook_augment_choice",
+    "manual_calibration_route_queue_address": "jcc:s17:manual_semantic_calibration_route_queue:augment_choice",
+    "manual_calibration_route_lookup_ref": "jcc:s17:lookup_ref:manual_calibration_route_augment_choice",
+    "semantic_precision_route_worklist_address": "jcc:s17:semantic_precision_route_worklist:augment_choice",
+    "semantic_precision_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_augment_choice",
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:augment_choice",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_augment_choice",
+    "semantic_precision_route_kind_gate_lookup_refs": [
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:augment_choice_augment",
+        "entity_kind": "augment",
+        "row_count": 259,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_augment_choice_augment"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:augment_choice_champion",
+        "entity_kind": "champion",
+        "row_count": 42,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_augment_choice_champion"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:augment_choice_item",
+        "entity_kind": "item",
+        "row_count": 178,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_augment_choice_item"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:augment_choice_trait",
+        "entity_kind": "trait",
+        "row_count": 28,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_augment_choice_trait"
+      }
+    ],
+    "semantic_precision_route_kind_band_gate_lookup_refs": [
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:augment_choice_augment_deep_load_if_finalist",
+        "entity_kind": "augment",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 126,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_augment_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:augment_choice_augment_manual_precision_refine",
+        "entity_kind": "augment",
+        "precision_band": "manual_precision_refine",
+        "row_count": 88,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_augment_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:augment_choice_augment_runtime_usable_with_guardrails",
+        "entity_kind": "augment",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 45,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_augment_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:augment_choice_champion_deep_load_if_finalist",
+        "entity_kind": "champion",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 26,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_champion_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:augment_choice_champion_manual_precision_refine",
+        "entity_kind": "champion",
+        "precision_band": "manual_precision_refine",
+        "row_count": 1,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_champion_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:augment_choice_champion_runtime_usable_with_guardrails",
+        "entity_kind": "champion",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 15,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_champion_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:augment_choice_item_deep_load_if_finalist",
+        "entity_kind": "item",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 50,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_item_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:augment_choice_item_manual_precision_refine",
+        "entity_kind": "item",
+        "precision_band": "manual_precision_refine",
+        "row_count": 5,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_item_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:augment_choice_item_runtime_usable_with_guardrails",
+        "entity_kind": "item",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 123,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_item_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:augment_choice_trait_deep_load_if_finalist",
+        "entity_kind": "trait",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 5,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_trait_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:augment_choice_trait_manual_precision_refine",
+        "entity_kind": "trait",
+        "precision_band": "manual_precision_refine",
+        "row_count": 8,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_trait_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:augment_choice_trait_runtime_usable_with_guardrails",
+        "entity_kind": "trait",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 15,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_augment_choice_trait_runtime_usable_with_guardrails"
+      }
+    ],
+    "per_match_variable_doorplate_index_address": "jcc:s17:index:per_match_variable_doorplates",
+    "per_match_variable_lookup_refs": [
+      {
+        "variable_key": "judge_law",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:judge_law",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law",
+        "activation_gate": {
+          "trait_name": "法官",
+          "min_active_count": 2
+        },
+        "option_count": 0
+      },
+      {
+        "variable_key": "encounter",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:encounter",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter",
+        "activation_gate": null,
+        "option_count": 19
+      },
+      {
+        "variable_key": "current_god",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:current_god",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god",
+        "activation_gate": null,
+        "option_count": 9
+      }
+    ],
+    "route_lookup_address": "jcc:s17:route_entity_lookup:augment_choice",
+    "route_lookup_lookup_ref": "jcc:s17:lookup_ref:route_augment_choice",
+    "route_kind_lookup_refs": [
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:augment_choice_augment",
+        "entity_kind": "augment",
+        "entity_count": 267,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_augment_choice_augment"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:augment_choice_trait",
+        "entity_kind": "trait",
+        "entity_count": 34,
+        "top_count": 34,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_augment_choice_trait"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:augment_choice_item",
+        "entity_kind": "item",
+        "entity_count": 178,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_augment_choice_item"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:augment_choice_champion",
+        "entity_kind": "champion",
+        "entity_count": 71,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_augment_choice_champion"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:augment_choice_encounter",
+        "entity_kind": "encounter",
+        "entity_count": 19,
+        "top_count": 19,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_augment_choice_encounter"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:augment_choice_god_reward",
+        "entity_kind": "god_reward",
+        "entity_count": 141,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_augment_choice_god_reward"
+      }
+    ],
+    "max_lookup_candidates": 40,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 5000,
+    "required_lookup_indexes": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:per_match_variable_doorplates"
+    ],
+    "deep_load_refs": [
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:entity_tactical_semantics",
+      "jcc:s17:index:entity_semantic_calibration",
+      "jcc:s17:index:entity_mechanic_profiles",
+      "jcc:s17:index:entity_parse_quality",
+      "jcc:s17:index:strategy_weight_calibration",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:player_habit_bias_schema",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks"
+    ],
+    "policy": "Runtime should read the loading-plan lookup entry, then route-kind lookup entry when entity kind is known, then route lookup fallback. Deep tables are finalist-only."
+  },
+  {
+    "address": "jcc:s17:runtime_lookup_manifest:item_craft",
+    "route_id": "item_craft",
+    "route_address": "jcc:s17:runtime_query_route:item_craft",
+    "loading_plan_address": "jcc:s17:runtime_loading_plan:item_craft",
+    "loading_plan_lookup_ref": "jcc:s17:lookup_ref:loading_plan_item_craft",
+    "runtime_strategy_orchestrator_address": "jcc:s17:runtime_strategy_orchestrator_route:item_craft",
+    "runtime_strategy_orchestrator_lookup_ref": "jcc:s17:lookup_ref:strategy_orchestrator_item_craft",
+    "runtime_lookup_budget_address": "jcc:s17:runtime_lookup_budget:item_craft",
+    "runtime_lookup_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_item_craft",
+    "runtime_first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:item_craft",
+    "runtime_first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_item_craft",
+    "runtime_answer_contract_address": "jcc:s17:runtime_answer_contract:item_craft",
+    "runtime_answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_item_craft",
+    "runtime_state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:item_craft",
+    "runtime_state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_item_craft",
+    "runtime_feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:item_craft",
+    "runtime_feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_item_craft",
+    "runtime_route_bundle_address": "jcc:s17:runtime_route_bundle:item_craft",
+    "runtime_route_bundle_lookup_ref": "jcc:s17:lookup_ref:route_bundle_item_craft",
+    "route_context_pack_address": "jcc:s17:route_context_pack:item_craft",
+    "route_context_pack_lookup_ref": "jcc:s17:lookup_ref:context_pack_item_craft",
+    "route_evaluator_manifest_address": "jcc:s17:route_evaluator_manifest:item_craft",
+    "route_evaluator_manifest_lookup_ref": "jcc:s17:lookup_ref:route_evaluator_item_craft",
+    "fast_context_address": "jcc:s17:runtime_fast_context:item_craft",
+    "fast_context_lookup_ref": "jcc:s17:lookup_ref:fast_context_item_craft",
+    "decision_recipe_address": "jcc:s17:runtime_decision_recipe:item_craft",
+    "decision_recipe_lookup_ref": "jcc:s17:lookup_ref:decision_recipe_item_craft",
+    "route_term_refinement_lookup_address": "jcc:s17:route_term_refinement_lookup:item_craft",
+    "route_term_refinement_lookup_ref": "jcc:s17:lookup_ref:route_term_item_craft",
+    "route_strategy_playbook_lookup_address": "jcc:s17:route_strategy_playbook_lookup:item_craft",
+    "route_strategy_playbook_lookup_ref": "jcc:s17:lookup_ref:route_playbook_item_craft",
+    "manual_calibration_route_queue_address": "jcc:s17:manual_semantic_calibration_route_queue:item_craft",
+    "manual_calibration_route_lookup_ref": "jcc:s17:lookup_ref:manual_calibration_route_item_craft",
+    "semantic_precision_route_worklist_address": "jcc:s17:semantic_precision_route_worklist:item_craft",
+    "semantic_precision_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_item_craft",
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:item_craft",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_item_craft",
+    "semantic_precision_route_kind_gate_lookup_refs": [
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:item_craft_augment",
+        "entity_kind": "augment",
+        "row_count": 264,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_item_craft_augment"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:item_craft_champion",
+        "entity_kind": "champion",
+        "row_count": 71,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_item_craft_champion"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:item_craft_item",
+        "entity_kind": "item",
+        "row_count": 178,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_item_craft_item"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:item_craft_trait",
+        "entity_kind": "trait",
+        "row_count": 34,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_item_craft_trait"
+      }
+    ],
+    "semantic_precision_route_kind_band_gate_lookup_refs": [
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:item_craft_augment_deep_load_if_finalist",
+        "entity_kind": "augment",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 129,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_augment_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:item_craft_augment_manual_precision_refine",
+        "entity_kind": "augment",
+        "precision_band": "manual_precision_refine",
+        "row_count": 88,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_augment_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:item_craft_augment_runtime_usable_with_guardrails",
+        "entity_kind": "augment",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 47,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_augment_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:item_craft_champion_deep_load_if_finalist",
+        "entity_kind": "champion",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_champion_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:item_craft_champion_manual_precision_refine",
+        "entity_kind": "champion",
+        "precision_band": "manual_precision_refine",
+        "row_count": 2,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_champion_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:item_craft_champion_runtime_usable_with_guardrails",
+        "entity_kind": "champion",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 29,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_champion_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:item_craft_item_deep_load_if_finalist",
+        "entity_kind": "item",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 50,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_item_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:item_craft_item_manual_precision_refine",
+        "entity_kind": "item",
+        "precision_band": "manual_precision_refine",
+        "row_count": 5,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_item_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:item_craft_item_runtime_usable_with_guardrails",
+        "entity_kind": "item",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 123,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_item_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:item_craft_trait_deep_load_if_finalist",
+        "entity_kind": "trait",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 9,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_trait_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:item_craft_trait_manual_precision_refine",
+        "entity_kind": "trait",
+        "precision_band": "manual_precision_refine",
+        "row_count": 9,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_trait_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:item_craft_trait_runtime_usable_with_guardrails",
+        "entity_kind": "trait",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 16,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_item_craft_trait_runtime_usable_with_guardrails"
+      }
+    ],
+    "per_match_variable_doorplate_index_address": "jcc:s17:index:per_match_variable_doorplates",
+    "per_match_variable_lookup_refs": [
+      {
+        "variable_key": "psionic_weapon",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:psionic_weapon",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon",
+        "activation_gate": null,
+        "option_count": 5
+      }
+    ],
+    "route_lookup_address": "jcc:s17:route_entity_lookup:item_craft",
+    "route_lookup_lookup_ref": "jcc:s17:lookup_ref:route_item_craft",
+    "route_kind_lookup_refs": [
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:item_craft_item",
+        "entity_kind": "item",
+        "entity_count": 178,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_item_craft_item"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:item_craft_champion",
+        "entity_kind": "champion",
+        "entity_count": 71,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_item_craft_champion"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:item_craft_trait",
+        "entity_kind": "trait",
+        "entity_count": 31,
+        "top_count": 31,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_item_craft_trait"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:item_craft_augment",
+        "entity_kind": "augment",
+        "entity_count": 262,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_item_craft_augment"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:item_craft_encounter",
+        "entity_kind": "encounter",
+        "entity_count": 9,
+        "top_count": 9,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_item_craft_encounter"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:item_craft_god_reward",
+        "entity_kind": "god_reward",
+        "entity_count": 141,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_item_craft_god_reward"
+      }
+    ],
+    "max_lookup_candidates": 60,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 8000,
+    "required_lookup_indexes": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:per_match_variable_doorplates"
+    ],
+    "deep_load_refs": [
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:entity_tactical_semantics",
+      "jcc:s17:index:entity_semantic_calibration",
+      "jcc:s17:index:entity_mechanic_profiles",
+      "jcc:s17:index:entity_parse_quality",
+      "jcc:s17:index:strategy_weight_calibration",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:player_habit_bias_schema",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks"
+    ],
+    "policy": "Runtime should read the loading-plan lookup entry, then route-kind lookup entry when entity kind is known, then route lookup fallback. Deep tables are finalist-only."
+  },
+  {
+    "address": "jcc:s17:runtime_lookup_manifest:holder_assignment",
+    "route_id": "holder_assignment",
+    "route_address": "jcc:s17:runtime_query_route:holder_assignment",
+    "loading_plan_address": "jcc:s17:runtime_loading_plan:holder_assignment",
+    "loading_plan_lookup_ref": "jcc:s17:lookup_ref:loading_plan_holder_assignment",
+    "runtime_strategy_orchestrator_address": "jcc:s17:runtime_strategy_orchestrator_route:holder_assignment",
+    "runtime_strategy_orchestrator_lookup_ref": "jcc:s17:lookup_ref:strategy_orchestrator_holder_assignment",
+    "runtime_lookup_budget_address": "jcc:s17:runtime_lookup_budget:holder_assignment",
+    "runtime_lookup_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_holder_assignment",
+    "runtime_first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:holder_assignment",
+    "runtime_first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_holder_assignment",
+    "runtime_answer_contract_address": "jcc:s17:runtime_answer_contract:holder_assignment",
+    "runtime_answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_holder_assignment",
+    "runtime_state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:holder_assignment",
+    "runtime_state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_holder_assignment",
+    "runtime_feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:holder_assignment",
+    "runtime_feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_holder_assignment",
+    "runtime_route_bundle_address": "jcc:s17:runtime_route_bundle:holder_assignment",
+    "runtime_route_bundle_lookup_ref": "jcc:s17:lookup_ref:route_bundle_holder_assignment",
+    "route_context_pack_address": "jcc:s17:route_context_pack:holder_assignment",
+    "route_context_pack_lookup_ref": "jcc:s17:lookup_ref:context_pack_holder_assignment",
+    "route_evaluator_manifest_address": "jcc:s17:route_evaluator_manifest:holder_assignment",
+    "route_evaluator_manifest_lookup_ref": "jcc:s17:lookup_ref:route_evaluator_holder_assignment",
+    "fast_context_address": "jcc:s17:runtime_fast_context:holder_assignment",
+    "fast_context_lookup_ref": "jcc:s17:lookup_ref:fast_context_holder_assignment",
+    "decision_recipe_address": "jcc:s17:runtime_decision_recipe:holder_assignment",
+    "decision_recipe_lookup_ref": "jcc:s17:lookup_ref:decision_recipe_holder_assignment",
+    "route_term_refinement_lookup_address": "jcc:s17:route_term_refinement_lookup:holder_assignment",
+    "route_term_refinement_lookup_ref": "jcc:s17:lookup_ref:route_term_holder_assignment",
+    "route_strategy_playbook_lookup_address": "jcc:s17:route_strategy_playbook_lookup:holder_assignment",
+    "route_strategy_playbook_lookup_ref": "jcc:s17:lookup_ref:route_playbook_holder_assignment",
+    "manual_calibration_route_queue_address": "jcc:s17:manual_semantic_calibration_route_queue:holder_assignment",
+    "manual_calibration_route_lookup_ref": "jcc:s17:lookup_ref:manual_calibration_route_holder_assignment",
+    "semantic_precision_route_worklist_address": "jcc:s17:semantic_precision_route_worklist:holder_assignment",
+    "semantic_precision_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_holder_assignment",
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:holder_assignment",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_holder_assignment",
+    "semantic_precision_route_kind_gate_lookup_refs": [
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:holder_assignment_augment",
+        "entity_kind": "augment",
+        "row_count": 262,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_holder_assignment_augment"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:holder_assignment_champion",
+        "entity_kind": "champion",
+        "row_count": 71,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_holder_assignment_champion"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:holder_assignment_item",
+        "entity_kind": "item",
+        "row_count": 171,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_holder_assignment_item"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:holder_assignment_trait",
+        "entity_kind": "trait",
+        "row_count": 31,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_holder_assignment_trait"
+      }
+    ],
+    "semantic_precision_route_kind_band_gate_lookup_refs": [
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:holder_assignment_augment_deep_load_if_finalist",
+        "entity_kind": "augment",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 128,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_augment_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:holder_assignment_augment_manual_precision_refine",
+        "entity_kind": "augment",
+        "precision_band": "manual_precision_refine",
+        "row_count": 88,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_augment_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:holder_assignment_augment_runtime_usable_with_guardrails",
+        "entity_kind": "augment",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 46,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_augment_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:holder_assignment_champion_deep_load_if_finalist",
+        "entity_kind": "champion",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_champion_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:holder_assignment_champion_manual_precision_refine",
+        "entity_kind": "champion",
+        "precision_band": "manual_precision_refine",
+        "row_count": 2,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_champion_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:holder_assignment_champion_runtime_usable_with_guardrails",
+        "entity_kind": "champion",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 29,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_champion_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:holder_assignment_item_deep_load_if_finalist",
+        "entity_kind": "item",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 47,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_item_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:holder_assignment_item_manual_precision_refine",
+        "entity_kind": "item",
+        "precision_band": "manual_precision_refine",
+        "row_count": 1,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_item_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:holder_assignment_item_runtime_usable_with_guardrails",
+        "entity_kind": "item",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 123,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_item_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:holder_assignment_trait_deep_load_if_finalist",
+        "entity_kind": "trait",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 8,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_trait_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:holder_assignment_trait_manual_precision_refine",
+        "entity_kind": "trait",
+        "precision_band": "manual_precision_refine",
+        "row_count": 7,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_trait_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:holder_assignment_trait_runtime_usable_with_guardrails",
+        "entity_kind": "trait",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 16,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_holder_assignment_trait_runtime_usable_with_guardrails"
+      }
+    ],
+    "per_match_variable_doorplate_index_address": "jcc:s17:index:per_match_variable_doorplates",
+    "per_match_variable_lookup_refs": [
+      {
+        "variable_key": "miss_fortune_mode",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+        "activation_gate": {
+          "champion_name": "厄运小姐",
+          "event": "field_or_acquire_unit"
+        },
+        "option_count": 3
+      },
+      {
+        "variable_key": "psionic_weapon",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:psionic_weapon",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon",
+        "activation_gate": null,
+        "option_count": 5
+      }
+    ],
+    "route_lookup_address": "jcc:s17:route_entity_lookup:holder_assignment",
+    "route_lookup_lookup_ref": "jcc:s17:lookup_ref:route_holder_assignment",
+    "route_kind_lookup_refs": [
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:holder_assignment_item",
+        "entity_kind": "item",
+        "entity_count": 178,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_holder_assignment_item"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:holder_assignment_champion",
+        "entity_kind": "champion",
+        "entity_count": 71,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_holder_assignment_champion"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:holder_assignment_augment",
+        "entity_kind": "augment",
+        "entity_count": 264,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_holder_assignment_augment"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:holder_assignment_encounter",
+        "entity_kind": "encounter",
+        "entity_count": 12,
+        "top_count": 12,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_holder_assignment_encounter"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:holder_assignment_god_reward",
+        "entity_kind": "god_reward",
+        "entity_count": 141,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_holder_assignment_god_reward"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:holder_assignment_trait",
+        "entity_kind": "trait",
+        "entity_count": 31,
+        "top_count": 31,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_holder_assignment_trait"
+      }
+    ],
+    "max_lookup_candidates": 60,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 8000,
+    "required_lookup_indexes": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:per_match_variable_doorplates"
+    ],
+    "deep_load_refs": [
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:entity_tactical_semantics",
+      "jcc:s17:index:entity_semantic_calibration",
+      "jcc:s17:index:entity_mechanic_profiles",
+      "jcc:s17:index:entity_parse_quality",
+      "jcc:s17:index:strategy_weight_calibration",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:player_habit_bias_schema",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks"
+    ],
+    "policy": "Runtime should read the loading-plan lookup entry, then route-kind lookup entry when entity kind is known, then route lookup fallback. Deep tables are finalist-only."
+  },
+  {
+    "address": "jcc:s17:runtime_lookup_manifest:roll_or_level",
+    "route_id": "roll_or_level",
+    "route_address": "jcc:s17:runtime_query_route:roll_or_level",
+    "loading_plan_address": "jcc:s17:runtime_loading_plan:roll_or_level",
+    "loading_plan_lookup_ref": "jcc:s17:lookup_ref:loading_plan_roll_or_level",
+    "runtime_strategy_orchestrator_address": "jcc:s17:runtime_strategy_orchestrator_route:roll_or_level",
+    "runtime_strategy_orchestrator_lookup_ref": "jcc:s17:lookup_ref:strategy_orchestrator_roll_or_level",
+    "runtime_lookup_budget_address": "jcc:s17:runtime_lookup_budget:roll_or_level",
+    "runtime_lookup_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_roll_or_level",
+    "runtime_first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:roll_or_level",
+    "runtime_first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_roll_or_level",
+    "runtime_answer_contract_address": "jcc:s17:runtime_answer_contract:roll_or_level",
+    "runtime_answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_roll_or_level",
+    "runtime_state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:roll_or_level",
+    "runtime_state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_roll_or_level",
+    "runtime_feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:roll_or_level",
+    "runtime_feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_roll_or_level",
+    "runtime_route_bundle_address": "jcc:s17:runtime_route_bundle:roll_or_level",
+    "runtime_route_bundle_lookup_ref": "jcc:s17:lookup_ref:route_bundle_roll_or_level",
+    "route_context_pack_address": "jcc:s17:route_context_pack:roll_or_level",
+    "route_context_pack_lookup_ref": "jcc:s17:lookup_ref:context_pack_roll_or_level",
+    "route_evaluator_manifest_address": "jcc:s17:route_evaluator_manifest:roll_or_level",
+    "route_evaluator_manifest_lookup_ref": "jcc:s17:lookup_ref:route_evaluator_roll_or_level",
+    "fast_context_address": "jcc:s17:runtime_fast_context:roll_or_level",
+    "fast_context_lookup_ref": "jcc:s17:lookup_ref:fast_context_roll_or_level",
+    "decision_recipe_address": "jcc:s17:runtime_decision_recipe:roll_or_level",
+    "decision_recipe_lookup_ref": "jcc:s17:lookup_ref:decision_recipe_roll_or_level",
+    "route_term_refinement_lookup_address": "jcc:s17:route_term_refinement_lookup:roll_or_level",
+    "route_term_refinement_lookup_ref": "jcc:s17:lookup_ref:route_term_roll_or_level",
+    "route_strategy_playbook_lookup_address": "jcc:s17:route_strategy_playbook_lookup:roll_or_level",
+    "route_strategy_playbook_lookup_ref": "jcc:s17:lookup_ref:route_playbook_roll_or_level",
+    "manual_calibration_route_queue_address": "jcc:s17:manual_semantic_calibration_route_queue:roll_or_level",
+    "manual_calibration_route_lookup_ref": "jcc:s17:lookup_ref:manual_calibration_route_roll_or_level",
+    "semantic_precision_route_worklist_address": "jcc:s17:semantic_precision_route_worklist:roll_or_level",
+    "semantic_precision_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_roll_or_level",
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:roll_or_level",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_roll_or_level",
+    "semantic_precision_route_kind_gate_lookup_refs": [
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:roll_or_level_augment",
+        "entity_kind": "augment",
+        "row_count": 264,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_roll_or_level_augment"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:roll_or_level_champion",
+        "entity_kind": "champion",
+        "row_count": 39,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_roll_or_level_champion"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:roll_or_level_item",
+        "entity_kind": "item",
+        "row_count": 136,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_roll_or_level_item"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:roll_or_level_trait",
+        "entity_kind": "trait",
+        "row_count": 29,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_roll_or_level_trait"
+      }
+    ],
+    "semantic_precision_route_kind_band_gate_lookup_refs": [
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:roll_or_level_augment_deep_load_if_finalist",
+        "entity_kind": "augment",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 131,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_augment_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:roll_or_level_augment_manual_precision_refine",
+        "entity_kind": "augment",
+        "precision_band": "manual_precision_refine",
+        "row_count": 88,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_augment_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:roll_or_level_augment_runtime_usable_with_guardrails",
+        "entity_kind": "augment",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 45,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_augment_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:roll_or_level_champion_deep_load_if_finalist",
+        "entity_kind": "champion",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 26,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_champion_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:roll_or_level_champion_manual_precision_refine",
+        "entity_kind": "champion",
+        "precision_band": "manual_precision_refine",
+        "row_count": 1,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_champion_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:roll_or_level_champion_runtime_usable_with_guardrails",
+        "entity_kind": "champion",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 12,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_champion_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:roll_or_level_item_deep_load_if_finalist",
+        "entity_kind": "item",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 45,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_item_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:roll_or_level_item_manual_precision_refine",
+        "entity_kind": "item",
+        "precision_band": "manual_precision_refine",
+        "row_count": 3,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_item_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:roll_or_level_item_runtime_usable_with_guardrails",
+        "entity_kind": "item",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 88,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_item_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:roll_or_level_trait_deep_load_if_finalist",
+        "entity_kind": "trait",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 6,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_trait_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:roll_or_level_trait_manual_precision_refine",
+        "entity_kind": "trait",
+        "precision_band": "manual_precision_refine",
+        "row_count": 7,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_trait_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:roll_or_level_trait_runtime_usable_with_guardrails",
+        "entity_kind": "trait",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 16,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_roll_or_level_trait_runtime_usable_with_guardrails"
+      }
+    ],
+    "per_match_variable_doorplate_index_address": "jcc:s17:index:per_match_variable_doorplates",
+    "per_match_variable_lookup_refs": [
+      {
+        "variable_key": "encounter",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:encounter",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter",
+        "activation_gate": null,
+        "option_count": 19
+      },
+      {
+        "variable_key": "current_god",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:current_god",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god",
+        "activation_gate": null,
+        "option_count": 9
+      }
+    ],
+    "route_lookup_address": "jcc:s17:route_entity_lookup:roll_or_level",
+    "route_lookup_lookup_ref": "jcc:s17:lookup_ref:route_roll_or_level",
+    "route_kind_lookup_refs": [
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:roll_or_level_champion",
+        "entity_kind": "champion",
+        "entity_count": 39,
+        "top_count": 39,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_roll_or_level_champion"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:roll_or_level_augment",
+        "entity_kind": "augment",
+        "entity_count": 264,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_roll_or_level_augment"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:roll_or_level_god_reward",
+        "entity_kind": "god_reward",
+        "entity_count": 141,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_roll_or_level_god_reward"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:roll_or_level_encounter",
+        "entity_kind": "encounter",
+        "entity_count": 17,
+        "top_count": 17,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_roll_or_level_encounter"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:roll_or_level_trait",
+        "entity_kind": "trait",
+        "entity_count": 29,
+        "top_count": 29,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_roll_or_level_trait"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:roll_or_level_item",
+        "entity_kind": "item",
+        "entity_count": 126,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_roll_or_level_item"
+      }
+    ],
+    "max_lookup_candidates": 60,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 8000,
+    "required_lookup_indexes": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:per_match_variable_doorplates"
+    ],
+    "deep_load_refs": [
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:entity_tactical_semantics",
+      "jcc:s17:index:entity_semantic_calibration",
+      "jcc:s17:index:entity_mechanic_profiles",
+      "jcc:s17:index:entity_parse_quality",
+      "jcc:s17:index:strategy_weight_calibration",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:player_habit_bias_schema",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest"
+    ],
+    "policy": "Runtime should read the loading-plan lookup entry, then route-kind lookup entry when entity kind is known, then route lookup fallback. Deep tables are finalist-only."
+  },
+  {
+    "address": "jcc:s17:runtime_lookup_manifest:trait_or_unit_swap",
+    "route_id": "trait_or_unit_swap",
+    "route_address": "jcc:s17:runtime_query_route:trait_or_unit_swap",
+    "loading_plan_address": "jcc:s17:runtime_loading_plan:trait_or_unit_swap",
+    "loading_plan_lookup_ref": "jcc:s17:lookup_ref:loading_plan_trait_or_unit_swap",
+    "runtime_strategy_orchestrator_address": "jcc:s17:runtime_strategy_orchestrator_route:trait_or_unit_swap",
+    "runtime_strategy_orchestrator_lookup_ref": "jcc:s17:lookup_ref:strategy_orchestrator_trait_or_unit_swap",
+    "runtime_lookup_budget_address": "jcc:s17:runtime_lookup_budget:trait_or_unit_swap",
+    "runtime_lookup_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_trait_or_unit_swap",
+    "runtime_first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:trait_or_unit_swap",
+    "runtime_first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_trait_or_unit_swap",
+    "runtime_answer_contract_address": "jcc:s17:runtime_answer_contract:trait_or_unit_swap",
+    "runtime_answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_trait_or_unit_swap",
+    "runtime_state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:trait_or_unit_swap",
+    "runtime_state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_trait_or_unit_swap",
+    "runtime_feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:trait_or_unit_swap",
+    "runtime_feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_trait_or_unit_swap",
+    "runtime_route_bundle_address": "jcc:s17:runtime_route_bundle:trait_or_unit_swap",
+    "runtime_route_bundle_lookup_ref": "jcc:s17:lookup_ref:route_bundle_trait_or_unit_swap",
+    "route_context_pack_address": "jcc:s17:route_context_pack:trait_or_unit_swap",
+    "route_context_pack_lookup_ref": "jcc:s17:lookup_ref:context_pack_trait_or_unit_swap",
+    "route_evaluator_manifest_address": "jcc:s17:route_evaluator_manifest:trait_or_unit_swap",
+    "route_evaluator_manifest_lookup_ref": "jcc:s17:lookup_ref:route_evaluator_trait_or_unit_swap",
+    "fast_context_address": "jcc:s17:runtime_fast_context:trait_or_unit_swap",
+    "fast_context_lookup_ref": "jcc:s17:lookup_ref:fast_context_trait_or_unit_swap",
+    "decision_recipe_address": "jcc:s17:runtime_decision_recipe:trait_or_unit_swap",
+    "decision_recipe_lookup_ref": "jcc:s17:lookup_ref:decision_recipe_trait_or_unit_swap",
+    "route_term_refinement_lookup_address": "jcc:s17:route_term_refinement_lookup:trait_or_unit_swap",
+    "route_term_refinement_lookup_ref": "jcc:s17:lookup_ref:route_term_trait_or_unit_swap",
+    "route_strategy_playbook_lookup_address": "jcc:s17:route_strategy_playbook_lookup:trait_or_unit_swap",
+    "route_strategy_playbook_lookup_ref": "jcc:s17:lookup_ref:route_playbook_trait_or_unit_swap",
+    "manual_calibration_route_queue_address": "jcc:s17:manual_semantic_calibration_route_queue:trait_or_unit_swap",
+    "manual_calibration_route_lookup_ref": "jcc:s17:lookup_ref:manual_calibration_route_trait_or_unit_swap",
+    "semantic_precision_route_worklist_address": "jcc:s17:semantic_precision_route_worklist:trait_or_unit_swap",
+    "semantic_precision_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_trait_or_unit_swap",
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:trait_or_unit_swap",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_trait_or_unit_swap",
+    "semantic_precision_route_kind_gate_lookup_refs": [
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:trait_or_unit_swap_augment",
+        "entity_kind": "augment",
+        "row_count": 260,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_trait_or_unit_swap_augment"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:trait_or_unit_swap_champion",
+        "entity_kind": "champion",
+        "row_count": 70,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_trait_or_unit_swap_champion"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:trait_or_unit_swap_item",
+        "entity_kind": "item",
+        "row_count": 168,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_trait_or_unit_swap_item"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:trait_or_unit_swap_trait",
+        "entity_kind": "trait",
+        "row_count": 31,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_trait_or_unit_swap_trait"
+      }
+    ],
+    "semantic_precision_route_kind_band_gate_lookup_refs": [
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:trait_or_unit_swap_augment_deep_load_if_finalist",
+        "entity_kind": "augment",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 126,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_augment_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:trait_or_unit_swap_augment_manual_precision_refine",
+        "entity_kind": "augment",
+        "precision_band": "manual_precision_refine",
+        "row_count": 88,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_augment_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:trait_or_unit_swap_augment_runtime_usable_with_guardrails",
+        "entity_kind": "augment",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 46,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_augment_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:trait_or_unit_swap_champion_deep_load_if_finalist",
+        "entity_kind": "champion",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_champion_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:trait_or_unit_swap_champion_manual_precision_refine",
+        "entity_kind": "champion",
+        "precision_band": "manual_precision_refine",
+        "row_count": 2,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_champion_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:trait_or_unit_swap_champion_runtime_usable_with_guardrails",
+        "entity_kind": "champion",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 28,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_champion_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:trait_or_unit_swap_item_deep_load_if_finalist",
+        "entity_kind": "item",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 44,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_item_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:trait_or_unit_swap_item_manual_precision_refine",
+        "entity_kind": "item",
+        "precision_band": "manual_precision_refine",
+        "row_count": 1,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_item_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:trait_or_unit_swap_item_runtime_usable_with_guardrails",
+        "entity_kind": "item",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 123,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_item_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:trait_or_unit_swap_trait_deep_load_if_finalist",
+        "entity_kind": "trait",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 7,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_trait_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:trait_or_unit_swap_trait_manual_precision_refine",
+        "entity_kind": "trait",
+        "precision_band": "manual_precision_refine",
+        "row_count": 8,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_trait_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:trait_or_unit_swap_trait_runtime_usable_with_guardrails",
+        "entity_kind": "trait",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 16,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_trait_or_unit_swap_trait_runtime_usable_with_guardrails"
+      }
+    ],
+    "per_match_variable_doorplate_index_address": "jcc:s17:index:per_match_variable_doorplates",
+    "per_match_variable_lookup_refs": [
+      {
+        "variable_key": "judge_law",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:judge_law",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law",
+        "activation_gate": {
+          "trait_name": "法官",
+          "min_active_count": 2
+        },
+        "option_count": 0
+      },
+      {
+        "variable_key": "miss_fortune_mode",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+        "activation_gate": {
+          "champion_name": "厄运小姐",
+          "event": "field_or_acquire_unit"
+        },
+        "option_count": 3
+      },
+      {
+        "variable_key": "stargazer_constellation",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:stargazer_constellation",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation",
+        "activation_gate": null,
+        "option_count": 7
+      }
+    ],
+    "route_lookup_address": "jcc:s17:route_entity_lookup:trait_or_unit_swap",
+    "route_lookup_lookup_ref": "jcc:s17:lookup_ref:route_trait_or_unit_swap",
+    "route_kind_lookup_refs": [
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:trait_or_unit_swap_trait",
+        "entity_kind": "trait",
+        "entity_count": 34,
+        "top_count": 34,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_trait_or_unit_swap_trait"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:trait_or_unit_swap_champion",
+        "entity_kind": "champion",
+        "entity_count": 71,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_trait_or_unit_swap_champion"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:trait_or_unit_swap_item",
+        "entity_kind": "item",
+        "entity_count": 171,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_trait_or_unit_swap_item"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:trait_or_unit_swap_augment",
+        "entity_kind": "augment",
+        "entity_count": 259,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_trait_or_unit_swap_augment"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:trait_or_unit_swap_encounter",
+        "entity_kind": "encounter",
+        "entity_count": 12,
+        "top_count": 12,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_trait_or_unit_swap_encounter"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:trait_or_unit_swap_god_reward",
+        "entity_kind": "god_reward",
+        "entity_count": 141,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_trait_or_unit_swap_god_reward"
+      }
+    ],
+    "max_lookup_candidates": 60,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 8000,
+    "required_lookup_indexes": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:per_match_variable_doorplates"
+    ],
+    "deep_load_refs": [
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:entity_tactical_semantics",
+      "jcc:s17:index:entity_semantic_calibration",
+      "jcc:s17:index:entity_mechanic_profiles",
+      "jcc:s17:index:entity_parse_quality",
+      "jcc:s17:index:strategy_weight_calibration",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:player_habit_bias_schema",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks"
+    ],
+    "policy": "Runtime should read the loading-plan lookup entry, then route-kind lookup entry when entity kind is known, then route lookup fallback. Deep tables are finalist-only."
+  },
+  {
+    "address": "jcc:s17:runtime_lookup_manifest:positioning",
+    "route_id": "positioning",
+    "route_address": "jcc:s17:runtime_query_route:positioning",
+    "loading_plan_address": "jcc:s17:runtime_loading_plan:positioning",
+    "loading_plan_lookup_ref": "jcc:s17:lookup_ref:loading_plan_positioning",
+    "runtime_strategy_orchestrator_address": "jcc:s17:runtime_strategy_orchestrator_route:positioning",
+    "runtime_strategy_orchestrator_lookup_ref": "jcc:s17:lookup_ref:strategy_orchestrator_positioning",
+    "runtime_lookup_budget_address": "jcc:s17:runtime_lookup_budget:positioning",
+    "runtime_lookup_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_positioning",
+    "runtime_first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:positioning",
+    "runtime_first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_positioning",
+    "runtime_answer_contract_address": "jcc:s17:runtime_answer_contract:positioning",
+    "runtime_answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_positioning",
+    "runtime_state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:positioning",
+    "runtime_state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_positioning",
+    "runtime_feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:positioning",
+    "runtime_feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_positioning",
+    "runtime_route_bundle_address": "jcc:s17:runtime_route_bundle:positioning",
+    "runtime_route_bundle_lookup_ref": "jcc:s17:lookup_ref:route_bundle_positioning",
+    "route_context_pack_address": "jcc:s17:route_context_pack:positioning",
+    "route_context_pack_lookup_ref": "jcc:s17:lookup_ref:context_pack_positioning",
+    "route_evaluator_manifest_address": "jcc:s17:route_evaluator_manifest:positioning",
+    "route_evaluator_manifest_lookup_ref": "jcc:s17:lookup_ref:route_evaluator_positioning",
+    "fast_context_address": "jcc:s17:runtime_fast_context:positioning",
+    "fast_context_lookup_ref": "jcc:s17:lookup_ref:fast_context_positioning",
+    "decision_recipe_address": "jcc:s17:runtime_decision_recipe:positioning",
+    "decision_recipe_lookup_ref": "jcc:s17:lookup_ref:decision_recipe_positioning",
+    "route_term_refinement_lookup_address": "jcc:s17:route_term_refinement_lookup:positioning",
+    "route_term_refinement_lookup_ref": "jcc:s17:lookup_ref:route_term_positioning",
+    "route_strategy_playbook_lookup_address": "jcc:s17:route_strategy_playbook_lookup:positioning",
+    "route_strategy_playbook_lookup_ref": "jcc:s17:lookup_ref:route_playbook_positioning",
+    "manual_calibration_route_queue_address": "jcc:s17:manual_semantic_calibration_route_queue:positioning",
+    "manual_calibration_route_lookup_ref": "jcc:s17:lookup_ref:manual_calibration_route_positioning",
+    "semantic_precision_route_worklist_address": "jcc:s17:semantic_precision_route_worklist:positioning",
+    "semantic_precision_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_positioning",
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:positioning",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_positioning",
+    "semantic_precision_route_kind_gate_lookup_refs": [
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:positioning_augment",
+        "entity_kind": "augment",
+        "row_count": 71,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_positioning_augment"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:positioning_champion",
+        "entity_kind": "champion",
+        "row_count": 70,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_positioning_champion"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:positioning_item",
+        "entity_kind": "item",
+        "row_count": 113,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_positioning_item"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:positioning_trait",
+        "entity_kind": "trait",
+        "row_count": 20,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_positioning_trait"
+      }
+    ],
+    "semantic_precision_route_kind_band_gate_lookup_refs": [
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:positioning_augment_deep_load_if_finalist",
+        "entity_kind": "augment",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 48,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_augment_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:positioning_augment_manual_precision_refine",
+        "entity_kind": "augment",
+        "precision_band": "manual_precision_refine",
+        "row_count": 5,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_augment_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:positioning_augment_runtime_usable_with_guardrails",
+        "entity_kind": "augment",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 18,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_augment_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:positioning_champion_deep_load_if_finalist",
+        "entity_kind": "champion",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_champion_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:positioning_champion_manual_precision_refine",
+        "entity_kind": "champion",
+        "precision_band": "manual_precision_refine",
+        "row_count": 2,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_champion_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:positioning_champion_runtime_usable_with_guardrails",
+        "entity_kind": "champion",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 28,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_champion_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:positioning_item_deep_load_if_finalist",
+        "entity_kind": "item",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 22,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_item_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:positioning_item_runtime_usable_with_guardrails",
+        "entity_kind": "item",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 91,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_item_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:positioning_trait_deep_load_if_finalist",
+        "entity_kind": "trait",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 6,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_trait_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:positioning_trait_manual_precision_refine",
+        "entity_kind": "trait",
+        "precision_band": "manual_precision_refine",
+        "row_count": 3,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_trait_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:positioning_trait_runtime_usable_with_guardrails",
+        "entity_kind": "trait",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 11,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_positioning_trait_runtime_usable_with_guardrails"
+      }
+    ],
+    "per_match_variable_doorplate_index_address": "jcc:s17:index:per_match_variable_doorplates",
+    "per_match_variable_lookup_refs": [
+      {
+        "variable_key": "miss_fortune_mode",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+        "activation_gate": {
+          "champion_name": "厄运小姐",
+          "event": "field_or_acquire_unit"
+        },
+        "option_count": 3
+      },
+      {
+        "variable_key": "stargazer_constellation",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:stargazer_constellation",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation",
+        "activation_gate": null,
+        "option_count": 7
+      }
+    ],
+    "route_lookup_address": "jcc:s17:route_entity_lookup:positioning",
+    "route_lookup_lookup_ref": "jcc:s17:lookup_ref:route_positioning",
+    "route_kind_lookup_refs": [
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:positioning_champion",
+        "entity_kind": "champion",
+        "entity_count": 69,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_positioning_champion"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:positioning_item",
+        "entity_kind": "item",
+        "entity_count": 95,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_positioning_item"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:positioning_trait",
+        "entity_kind": "trait",
+        "entity_count": 17,
+        "top_count": 17,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_positioning_trait"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:positioning_augment",
+        "entity_kind": "augment",
+        "entity_count": 149,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_positioning_augment"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:positioning_encounter",
+        "entity_kind": "encounter",
+        "entity_count": 14,
+        "top_count": 14,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_positioning_encounter"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:positioning_god_reward",
+        "entity_kind": "god_reward",
+        "entity_count": 71,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_positioning_god_reward"
+      }
+    ],
+    "max_lookup_candidates": 60,
+    "max_deep_candidates": 8,
+    "latency_budget_ms": 3000,
+    "required_lookup_indexes": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:per_match_variable_doorplates"
+    ],
+    "deep_load_refs": [
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:entity_tactical_semantics",
+      "jcc:s17:index:entity_semantic_calibration",
+      "jcc:s17:index:entity_mechanic_profiles",
+      "jcc:s17:index:entity_parse_quality",
+      "jcc:s17:index:strategy_weight_calibration",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:player_habit_bias_schema",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks"
+    ],
+    "policy": "Runtime should read the loading-plan lookup entry, then route-kind lookup entry when entity kind is known, then route lookup fallback. Deep tables are finalist-only."
+  },
+  {
+    "address": "jcc:s17:runtime_lookup_manifest:reward_choice",
+    "route_id": "reward_choice",
+    "route_address": "jcc:s17:runtime_query_route:reward_choice",
+    "loading_plan_address": "jcc:s17:runtime_loading_plan:reward_choice",
+    "loading_plan_lookup_ref": "jcc:s17:lookup_ref:loading_plan_reward_choice",
+    "runtime_strategy_orchestrator_address": "jcc:s17:runtime_strategy_orchestrator_route:reward_choice",
+    "runtime_strategy_orchestrator_lookup_ref": "jcc:s17:lookup_ref:strategy_orchestrator_reward_choice",
+    "runtime_lookup_budget_address": "jcc:s17:runtime_lookup_budget:reward_choice",
+    "runtime_lookup_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_reward_choice",
+    "runtime_first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:reward_choice",
+    "runtime_first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_reward_choice",
+    "runtime_answer_contract_address": "jcc:s17:runtime_answer_contract:reward_choice",
+    "runtime_answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_reward_choice",
+    "runtime_state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:reward_choice",
+    "runtime_state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_reward_choice",
+    "runtime_feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:reward_choice",
+    "runtime_feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_reward_choice",
+    "runtime_route_bundle_address": "jcc:s17:runtime_route_bundle:reward_choice",
+    "runtime_route_bundle_lookup_ref": "jcc:s17:lookup_ref:route_bundle_reward_choice",
+    "route_context_pack_address": "jcc:s17:route_context_pack:reward_choice",
+    "route_context_pack_lookup_ref": "jcc:s17:lookup_ref:context_pack_reward_choice",
+    "route_evaluator_manifest_address": "jcc:s17:route_evaluator_manifest:reward_choice",
+    "route_evaluator_manifest_lookup_ref": "jcc:s17:lookup_ref:route_evaluator_reward_choice",
+    "fast_context_address": "jcc:s17:runtime_fast_context:reward_choice",
+    "fast_context_lookup_ref": "jcc:s17:lookup_ref:fast_context_reward_choice",
+    "decision_recipe_address": "jcc:s17:runtime_decision_recipe:reward_choice",
+    "decision_recipe_lookup_ref": "jcc:s17:lookup_ref:decision_recipe_reward_choice",
+    "route_term_refinement_lookup_address": "jcc:s17:route_term_refinement_lookup:reward_choice",
+    "route_term_refinement_lookup_ref": "jcc:s17:lookup_ref:route_term_reward_choice",
+    "route_strategy_playbook_lookup_address": "jcc:s17:route_strategy_playbook_lookup:reward_choice",
+    "route_strategy_playbook_lookup_ref": "jcc:s17:lookup_ref:route_playbook_reward_choice",
+    "manual_calibration_route_queue_address": "jcc:s17:manual_semantic_calibration_route_queue:reward_choice",
+    "manual_calibration_route_lookup_ref": "jcc:s17:lookup_ref:manual_calibration_route_reward_choice",
+    "semantic_precision_route_worklist_address": "jcc:s17:semantic_precision_route_worklist:reward_choice",
+    "semantic_precision_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_reward_choice",
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:reward_choice",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_reward_choice",
+    "semantic_precision_route_kind_gate_lookup_refs": [
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:reward_choice_augment",
+        "entity_kind": "augment",
+        "row_count": 260,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_reward_choice_augment"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:reward_choice_champion",
+        "entity_kind": "champion",
+        "row_count": 42,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_reward_choice_champion"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:reward_choice_item",
+        "entity_kind": "item",
+        "row_count": 178,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_reward_choice_item"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:reward_choice_trait",
+        "entity_kind": "trait",
+        "row_count": 28,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_reward_choice_trait"
+      }
+    ],
+    "semantic_precision_route_kind_band_gate_lookup_refs": [
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:reward_choice_augment_deep_load_if_finalist",
+        "entity_kind": "augment",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 127,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_augment_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:reward_choice_augment_manual_precision_refine",
+        "entity_kind": "augment",
+        "precision_band": "manual_precision_refine",
+        "row_count": 88,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_augment_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:reward_choice_augment_runtime_usable_with_guardrails",
+        "entity_kind": "augment",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 45,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_augment_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:reward_choice_champion_deep_load_if_finalist",
+        "entity_kind": "champion",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 26,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_champion_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:reward_choice_champion_manual_precision_refine",
+        "entity_kind": "champion",
+        "precision_band": "manual_precision_refine",
+        "row_count": 1,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_champion_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:reward_choice_champion_runtime_usable_with_guardrails",
+        "entity_kind": "champion",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 15,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_champion_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:reward_choice_item_deep_load_if_finalist",
+        "entity_kind": "item",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 50,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_item_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:reward_choice_item_manual_precision_refine",
+        "entity_kind": "item",
+        "precision_band": "manual_precision_refine",
+        "row_count": 5,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_item_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:reward_choice_item_runtime_usable_with_guardrails",
+        "entity_kind": "item",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 123,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_item_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:reward_choice_trait_deep_load_if_finalist",
+        "entity_kind": "trait",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 5,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_trait_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:reward_choice_trait_manual_precision_refine",
+        "entity_kind": "trait",
+        "precision_band": "manual_precision_refine",
+        "row_count": 8,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_trait_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:reward_choice_trait_runtime_usable_with_guardrails",
+        "entity_kind": "trait",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 15,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_reward_choice_trait_runtime_usable_with_guardrails"
+      }
+    ],
+    "per_match_variable_doorplate_index_address": "jcc:s17:index:per_match_variable_doorplates",
+    "per_match_variable_lookup_refs": [
+      {
+        "variable_key": "judge_law",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:judge_law",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law",
+        "activation_gate": {
+          "trait_name": "法官",
+          "min_active_count": 2
+        },
+        "option_count": 0
+      },
+      {
+        "variable_key": "miss_fortune_mode",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+        "activation_gate": {
+          "champion_name": "厄运小姐",
+          "event": "field_or_acquire_unit"
+        },
+        "option_count": 3
+      },
+      {
+        "variable_key": "encounter",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:encounter",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter",
+        "activation_gate": null,
+        "option_count": 19
+      },
+      {
+        "variable_key": "current_god",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:current_god",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god",
+        "activation_gate": null,
+        "option_count": 9
+      },
+      {
+        "variable_key": "psionic_weapon",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:psionic_weapon",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon",
+        "activation_gate": null,
+        "option_count": 5
+      },
+      {
+        "variable_key": "stargazer_constellation",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:stargazer_constellation",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation",
+        "activation_gate": null,
+        "option_count": 7
+      }
+    ],
+    "route_lookup_address": "jcc:s17:route_entity_lookup:reward_choice",
+    "route_lookup_lookup_ref": "jcc:s17:lookup_ref:route_reward_choice",
+    "route_kind_lookup_refs": [
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:reward_choice_god_reward",
+        "entity_kind": "god_reward",
+        "entity_count": 141,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_reward_choice_god_reward"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:reward_choice_encounter",
+        "entity_kind": "encounter",
+        "entity_count": 19,
+        "top_count": 19,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_reward_choice_encounter"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:reward_choice_augment",
+        "entity_kind": "augment",
+        "entity_count": 267,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_reward_choice_augment"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:reward_choice_item",
+        "entity_kind": "item",
+        "entity_count": 178,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_reward_choice_item"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:reward_choice_champion",
+        "entity_kind": "champion",
+        "entity_count": 71,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_reward_choice_champion"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:reward_choice_trait",
+        "entity_kind": "trait",
+        "entity_count": 34,
+        "top_count": 34,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_reward_choice_trait"
+      }
+    ],
+    "max_lookup_candidates": 40,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 5000,
+    "required_lookup_indexes": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:per_match_variable_doorplates"
+    ],
+    "deep_load_refs": [
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:entity_tactical_semantics",
+      "jcc:s17:index:entity_semantic_calibration",
+      "jcc:s17:index:entity_mechanic_profiles",
+      "jcc:s17:index:entity_parse_quality",
+      "jcc:s17:index:strategy_weight_calibration",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:player_habit_bias_schema",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:skill_value_blocks"
+    ],
+    "policy": "Runtime should read the loading-plan lookup entry, then route-kind lookup entry when entity kind is known, then route lookup fallback. Deep tables are finalist-only."
+  },
+  {
+    "address": "jcc:s17:runtime_lookup_manifest:postgame_review",
+    "route_id": "postgame_review",
+    "route_address": "jcc:s17:runtime_query_route:postgame_review",
+    "loading_plan_address": "jcc:s17:runtime_loading_plan:postgame_review",
+    "loading_plan_lookup_ref": "jcc:s17:lookup_ref:loading_plan_postgame_review",
+    "runtime_strategy_orchestrator_address": "jcc:s17:runtime_strategy_orchestrator_route:postgame_review",
+    "runtime_strategy_orchestrator_lookup_ref": "jcc:s17:lookup_ref:strategy_orchestrator_postgame_review",
+    "runtime_lookup_budget_address": "jcc:s17:runtime_lookup_budget:postgame_review",
+    "runtime_lookup_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_postgame_review",
+    "runtime_first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:postgame_review",
+    "runtime_first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_postgame_review",
+    "runtime_answer_contract_address": "jcc:s17:runtime_answer_contract:postgame_review",
+    "runtime_answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_postgame_review",
+    "runtime_state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:postgame_review",
+    "runtime_state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_postgame_review",
+    "runtime_feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:postgame_review",
+    "runtime_feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_postgame_review",
+    "runtime_route_bundle_address": "jcc:s17:runtime_route_bundle:postgame_review",
+    "runtime_route_bundle_lookup_ref": "jcc:s17:lookup_ref:route_bundle_postgame_review",
+    "route_context_pack_address": "jcc:s17:route_context_pack:postgame_review",
+    "route_context_pack_lookup_ref": "jcc:s17:lookup_ref:context_pack_postgame_review",
+    "route_evaluator_manifest_address": "jcc:s17:route_evaluator_manifest:postgame_review",
+    "route_evaluator_manifest_lookup_ref": "jcc:s17:lookup_ref:route_evaluator_postgame_review",
+    "fast_context_address": "jcc:s17:runtime_fast_context:postgame_review",
+    "fast_context_lookup_ref": "jcc:s17:lookup_ref:fast_context_postgame_review",
+    "decision_recipe_address": "jcc:s17:runtime_decision_recipe:postgame_review",
+    "decision_recipe_lookup_ref": "jcc:s17:lookup_ref:decision_recipe_postgame_review",
+    "route_term_refinement_lookup_address": "jcc:s17:route_term_refinement_lookup:postgame_review",
+    "route_term_refinement_lookup_ref": "jcc:s17:lookup_ref:route_term_postgame_review",
+    "route_strategy_playbook_lookup_address": "jcc:s17:route_strategy_playbook_lookup:postgame_review",
+    "route_strategy_playbook_lookup_ref": "jcc:s17:lookup_ref:route_playbook_postgame_review",
+    "manual_calibration_route_queue_address": "jcc:s17:manual_semantic_calibration_route_queue:postgame_review",
+    "manual_calibration_route_lookup_ref": "jcc:s17:lookup_ref:manual_calibration_route_postgame_review",
+    "semantic_precision_route_worklist_address": "jcc:s17:semantic_precision_route_worklist:postgame_review",
+    "semantic_precision_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_postgame_review",
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:postgame_review",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_postgame_review",
+    "semantic_precision_route_kind_gate_lookup_refs": [
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:postgame_review_augment",
+        "entity_kind": "augment",
+        "row_count": 267,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_postgame_review_augment"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:postgame_review_champion",
+        "entity_kind": "champion",
+        "row_count": 71,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_postgame_review_champion"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:postgame_review_item",
+        "entity_kind": "item",
+        "row_count": 178,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_postgame_review_item"
+      },
+      {
+        "route_kind_gate_address": "jcc:s17:semantic_precision_gate_route_kind:postgame_review_trait",
+        "entity_kind": "trait",
+        "row_count": 34,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_postgame_review_trait"
+      }
+    ],
+    "semantic_precision_route_kind_band_gate_lookup_refs": [
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:postgame_review_augment_deep_load_if_finalist",
+        "entity_kind": "augment",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 132,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_augment_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:postgame_review_augment_manual_precision_refine",
+        "entity_kind": "augment",
+        "precision_band": "manual_precision_refine",
+        "row_count": 88,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_augment_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:postgame_review_augment_runtime_usable_with_guardrails",
+        "entity_kind": "augment",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 47,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_augment_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:postgame_review_champion_deep_load_if_finalist",
+        "entity_kind": "champion",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_champion_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:postgame_review_champion_manual_precision_refine",
+        "entity_kind": "champion",
+        "precision_band": "manual_precision_refine",
+        "row_count": 2,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_champion_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:postgame_review_champion_runtime_usable_with_guardrails",
+        "entity_kind": "champion",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 29,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_champion_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:postgame_review_item_deep_load_if_finalist",
+        "entity_kind": "item",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 50,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_item_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:postgame_review_item_manual_precision_refine",
+        "entity_kind": "item",
+        "precision_band": "manual_precision_refine",
+        "row_count": 5,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_item_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:postgame_review_item_runtime_usable_with_guardrails",
+        "entity_kind": "item",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 123,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_item_runtime_usable_with_guardrails"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:postgame_review_trait_deep_load_if_finalist",
+        "entity_kind": "trait",
+        "precision_band": "deep_load_if_finalist",
+        "row_count": 9,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_trait_deep_load_if_finalist"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:postgame_review_trait_manual_precision_refine",
+        "entity_kind": "trait",
+        "precision_band": "manual_precision_refine",
+        "row_count": 9,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_trait_manual_precision_refine"
+      },
+      {
+        "route_kind_band_gate_address": "jcc:s17:semantic_precision_gate_route_kind_band:postgame_review_trait_runtime_usable_with_guardrails",
+        "entity_kind": "trait",
+        "precision_band": "runtime_usable_with_guardrails",
+        "row_count": 16,
+        "lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_kind_band_postgame_review_trait_runtime_usable_with_guardrails"
+      }
+    ],
+    "per_match_variable_doorplate_index_address": "jcc:s17:index:per_match_variable_doorplates",
+    "per_match_variable_lookup_refs": [
+      {
+        "variable_key": "judge_law",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:judge_law",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law",
+        "activation_gate": {
+          "trait_name": "法官",
+          "min_active_count": 2
+        },
+        "option_count": 0
+      },
+      {
+        "variable_key": "encounter",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:encounter",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter",
+        "activation_gate": null,
+        "option_count": 19
+      },
+      {
+        "variable_key": "current_god",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:current_god",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god",
+        "activation_gate": null,
+        "option_count": 9
+      },
+      {
+        "variable_key": "psionic_weapon",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:psionic_weapon",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon",
+        "activation_gate": null,
+        "option_count": 5
+      },
+      {
+        "variable_key": "stargazer_constellation",
+        "doorplate_address": "jcc:s17:per_match_variable_doorplate:stargazer_constellation",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation",
+        "activation_gate": null,
+        "option_count": 7
+      }
+    ],
+    "route_lookup_address": "jcc:s17:route_entity_lookup:postgame_review",
+    "route_lookup_lookup_ref": "jcc:s17:lookup_ref:route_postgame_review",
+    "route_kind_lookup_refs": [
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:postgame_review_champion",
+        "entity_kind": "champion",
+        "entity_count": 71,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_postgame_review_champion"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:postgame_review_item",
+        "entity_kind": "item",
+        "entity_count": 172,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_postgame_review_item"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:postgame_review_trait",
+        "entity_kind": "trait",
+        "entity_count": 33,
+        "top_count": 33,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_postgame_review_trait"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:postgame_review_augment",
+        "entity_kind": "augment",
+        "entity_count": 267,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_postgame_review_augment"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:postgame_review_god_reward",
+        "entity_kind": "god_reward",
+        "entity_count": 141,
+        "top_count": 40,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_postgame_review_god_reward"
+      },
+      {
+        "route_kind_lookup_address": "jcc:s17:route_kind_entity_lookup:postgame_review_encounter",
+        "entity_kind": "encounter",
+        "entity_count": 17,
+        "top_count": 17,
+        "lookup_ref": "jcc:s17:lookup_ref:route_kind_postgame_review_encounter"
+      }
+    ],
+    "max_lookup_candidates": 60,
+    "max_deep_candidates": 5,
+    "latency_budget_ms": 8000,
+    "required_lookup_indexes": [
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_route_bundles",
+      "jcc:s17:index:route_context_packs",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:per_match_variable_doorplates"
+    ],
+    "deep_load_refs": [
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:entity_tactical_semantics",
+      "jcc:s17:index:entity_semantic_calibration",
+      "jcc:s17:index:entity_mechanic_profiles",
+      "jcc:s17:index:entity_parse_quality",
+      "jcc:s17:index:strategy_weight_calibration",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:player_habit_bias_schema",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest"
+    ],
+    "policy": "Runtime should read the loading-plan lookup entry, then route-kind lookup entry when entity kind is known, then route lookup fallback. Deep tables are finalist-only."
+  }
+]

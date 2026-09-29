@@ -1,0 +1,381 @@
+{
+  "address": "jcc:s17:index:frontline_substitution",
+  "candidates": [
+    {
+      "champion_address": "jcc:s17:champion:1452",
+      "name": "泰隆",
+      "cost": 1,
+      "tags": [
+        "health",
+        "magic_damage",
+        "physical_damage",
+        "single_target"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:1453",
+      "name": "内瑟斯",
+      "cost": 1,
+      "tags": [
+        "health",
+        "magic_damage"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:1454",
+      "name": "蕾欧娜",
+      "cost": 1,
+      "tags": [
+        "armor",
+        "control",
+        "magic_damage",
+        "magic_resist",
+        "shield",
+        "single_target"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:1455",
+      "name": "雷克塞",
+      "cost": 1,
+      "tags": [
+        "control",
+        "health",
+        "magic_damage"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:1458",
+      "name": "亚托克斯",
+      "cost": 1,
+      "tags": [
+        "aoe",
+        "armor",
+        "control",
+        "health",
+        "magic_damage",
+        "physical_damage",
+        "single_target"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:1459",
+      "name": "科加斯",
+      "cost": 1,
+      "tags": [
+        "health",
+        "magic_damage"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:1462",
+      "name": "波比",
+      "cost": 1,
+      "tags": [
+        "armor",
+        "magic_damage",
+        "magic_resist",
+        "shield"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:1463",
+      "name": "贝蕾亚",
+      "cost": 1,
+      "tags": [
+        "attack_speed",
+        "health",
+        "magic_damage",
+        "physical_damage",
+        "single_target"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:2452",
+      "name": "派克",
+      "cost": 2,
+      "tags": [
+        "aoe",
+        "magic_damage",
+        "physical_damage",
+        "single_target"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:2455",
+      "name": "古拉加斯",
+      "cost": 2,
+      "tags": [
+        "attack_speed",
+        "control",
+        "health",
+        "magic_damage",
+        "single_target"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:2457",
+      "name": "莫德凯撒",
+      "cost": 2,
+      "tags": [
+        "aoe",
+        "health",
+        "magic_damage",
+        "shield"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:2459",
+      "name": "潘森",
+      "cost": 2,
+      "tags": [
+        "aoe",
+        "durability",
+        "health",
+        "magic_damage",
+        "physical_damage",
+        "shield"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:2460",
+      "name": "小木灵",
+      "cost": 2,
+      "tags": [
+        "aoe",
+        "control",
+        "health",
+        "magic_damage",
+        "shield",
+        "single_target"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:2461",
+      "name": "阿卡丽",
+      "cost": 2,
+      "tags": [
+        "aoe",
+        "armor",
+        "crit",
+        "physical_damage",
+        "single_target",
+        "wound"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:2462",
+      "name": "贾克斯",
+      "cost": 2,
+      "tags": [
+        "aoe",
+        "armor",
+        "control",
+        "magic_damage",
+        "magic_resist",
+        "shield"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:3453",
+      "name": "奥恩",
+      "cost": 3,
+      "tags": [
+        "aoe",
+        "item_reward",
+        "magic_damage",
+        "shield"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:3455",
+      "name": "菲兹",
+      "cost": 3,
+      "tags": [
+        "control",
+        "magic_damage",
+        "mana",
+        "single_target"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:3457",
+      "name": "茂凯",
+      "cost": 3,
+      "tags": [
+        "aoe",
+        "control",
+        "health",
+        "magic_damage",
+        "physical_damage",
+        "single_target"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:3458",
+      "name": "黛安娜",
+      "cost": 3,
+      "tags": [
+        "attack_speed",
+        "magic_damage",
+        "shield"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:3459",
+      "name": "拉亚斯特",
+      "cost": 3,
+      "tags": [
+        "aoe",
+        "control",
+        "durability",
+        "health",
+        "magic_damage",
+        "physical_damage"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:3460",
+      "name": "俄洛伊",
+      "cost": 3,
+      "tags": [
+        "aoe",
+        "health",
+        "magic_damage",
+        "shield"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:4370",
+      "name": "易",
+      "cost": 4,
+      "tags": [
+        "aoe",
+        "attack_speed",
+        "backline_threat",
+        "magic_damage",
+        "physical_damage"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:4371",
+      "name": "努努和威朗普",
+      "cost": 4,
+      "tags": [
+        "aoe",
+        "control",
+        "magic_damage",
+        "shield"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:4375",
+      "name": "锐雯",
+      "cost": 4,
+      "tags": [
+        "aoe",
+        "magic_damage",
+        "mana",
+        "physical_damage",
+        "shield"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:4376",
+      "name": "拉莫斯",
+      "cost": 4,
+      "tags": [
+        "aoe",
+        "armor",
+        "magic_damage",
+        "shield"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:4378",
+      "name": "塔姆",
+      "cost": 4,
+      "tags": [
+        "aoe",
+        "health",
+        "magic_damage",
+        "shield"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:4379",
+      "name": "超级机甲",
+      "cost": 4,
+      "tags": [
+        "aoe",
+        "armor",
+        "durability",
+        "health",
+        "magic_damage",
+        "magic_resist",
+        "physical_damage"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:5434",
+      "name": "莫甘娜",
+      "cost": 4,
+      "tags": [
+        "aoe",
+        "health",
+        "magic_damage"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:5421",
+      "name": "布里茨",
+      "cost": 5,
+      "tags": [
+        "aoe",
+        "control",
+        "health",
+        "magic_damage",
+        "single_target"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:5424",
+      "name": "慎",
+      "cost": 5,
+      "tags": [
+        "aoe",
+        "attack_speed",
+        "damage_amp",
+        "health",
+        "magic_damage",
+        "mana",
+        "shield",
+        "true_damage"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:5426",
+      "name": "菲奥娜",
+      "cost": 5,
+      "tags": [
+        "aoe",
+        "health",
+        "magic_damage",
+        "physical_damage",
+        "single_target",
+        "true_damage"
+      ]
+    },
+    {
+      "champion_address": "jcc:s17:champion:5428",
+      "name": "劫",
+      "cost": 5,
+      "tags": [
+        "health",
+        "item_reward",
+        "mana",
+        "single_target"
+      ]
+    }
+  ]
+}

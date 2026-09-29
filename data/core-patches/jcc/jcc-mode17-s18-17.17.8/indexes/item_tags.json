@@ -1,0 +1,3227 @@
+[
+  {
+    "address": "jcc:s17:item_tag_profile:1001",
+    "item_address": "jcc:s17:item:1001",
+    "name": "暴风之剑",
+    "type": "基础装备",
+    "tags": [
+      "component",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:1002",
+    "item_address": "jcc:s17:item:1002",
+    "name": "反曲之弓",
+    "type": "基础装备",
+    "tags": [
+      "attack_speed",
+      "component"
+    ],
+    "stats": {
+      "attack_speed_pct": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:1003",
+    "item_address": "jcc:s17:item:1003",
+    "name": "无用大棒",
+    "type": "基础装备",
+    "tags": [
+      "component",
+      "magic_damage"
+    ],
+    "stats": {
+      "ap": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:1004",
+    "item_address": "jcc:s17:item:1004",
+    "name": "女神之泪",
+    "type": "基础装备",
+    "tags": [
+      "component",
+      "health",
+      "mana"
+    ],
+    "stats": {
+      "mana_regen": 1
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:1005",
+    "item_address": "jcc:s17:item:1005",
+    "name": "锁子甲",
+    "type": "基础装备",
+    "tags": [
+      "armor",
+      "component"
+    ],
+    "stats": {
+      "armor": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:1006",
+    "item_address": "jcc:s17:item:1006",
+    "name": "负极斗篷",
+    "type": "基础装备",
+    "tags": [
+      "component",
+      "magic_resist"
+    ],
+    "stats": {
+      "magic_resist": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:1007",
+    "item_address": "jcc:s17:item:1007",
+    "name": "巨人腰带",
+    "type": "基础装备",
+    "tags": [
+      "component",
+      "health"
+    ],
+    "stats": {
+      "health": 150
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:1008",
+    "item_address": "jcc:s17:item:1008",
+    "name": "金铲铲",
+    "type": "基础装备",
+    "tags": [
+      "component"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:1009",
+    "item_address": "jcc:s17:item:1009",
+    "name": "拳套",
+    "type": "基础装备",
+    "tags": [
+      "component",
+      "crit"
+    ],
+    "stats": {
+      "crit_chance_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:1010",
+    "item_address": "jcc:s17:item:1010",
+    "name": "金锅锅",
+    "type": "基础装备",
+    "tags": [
+      "component"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2001",
+    "item_address": "jcc:s17:item:2001",
+    "name": "无尽之刃",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "crit",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 35,
+      "crit_chance_pct": 35
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2003",
+    "item_address": "jcc:s17:item:2003",
+    "name": "海克斯科技枪刃",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "health",
+      "magic_damage",
+      "mana",
+      "omnivamp",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 20,
+      "ap": 20,
+      "mana_regen": 1,
+      "omnivamp_pct": 15
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2004",
+    "item_address": "jcc:s17:item:2004",
+    "name": "朔极之矛",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "health",
+      "magic_damage",
+      "mana",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 15,
+      "ap": 15,
+      "mana_regen": 1
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2005",
+    "item_address": "jcc:s17:item:2005",
+    "name": "夜之锋刃",
+    "type": "成型装备",
+    "tags": [
+      "armor",
+      "attack_speed",
+      "completed",
+      "health",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 10,
+      "ap": 10,
+      "attack_speed_pct": 15,
+      "armor": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2006",
+    "item_address": "jcc:s17:item:2006",
+    "name": "汲取剑",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "health",
+      "magic_damage",
+      "magic_resist",
+      "omnivamp",
+      "persistent_effect",
+      "physical_damage",
+      "shield"
+    ],
+    "stats": {
+      "ad": 15,
+      "ap": 15,
+      "magic_resist": 20,
+      "omnivamp_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2007",
+    "item_address": "jcc:s17:item:2007",
+    "name": "斯特拉克的挑战护手",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "health",
+      "physical_damage",
+      "shield"
+    ],
+    "stats": {
+      "ad": 45,
+      "health": 300
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2009",
+    "item_address": "jcc:s17:item:2009",
+    "name": "红霸符",
+    "type": "成型装备",
+    "tags": [
+      "attack_speed",
+      "completed",
+      "damage_amp",
+      "health",
+      "persistent_effect",
+      "single_target",
+      "true_damage",
+      "wound"
+    ],
+    "stats": {
+      "attack_speed_pct": 45,
+      "damage_amp_pct": 3
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2010",
+    "item_address": "jcc:s17:item:2010",
+    "name": "鬼索的狂暴之刃",
+    "type": "成型装备",
+    "tags": [
+      "attack_speed",
+      "completed",
+      "magic_damage",
+      "persistent_effect"
+    ],
+    "stats": {
+      "ap": 10,
+      "attack_speed_pct": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2011",
+    "item_address": "jcc:s17:item:2011",
+    "name": "虚空之杖",
+    "type": "成型装备",
+    "tags": [
+      "attack_speed",
+      "completed",
+      "health",
+      "magic_damage",
+      "magic_resist",
+      "mana",
+      "shred",
+      "single_target"
+    ],
+    "stats": {
+      "ap": 35,
+      "attack_speed_pct": 15,
+      "mana_regen": 1
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2012",
+    "item_address": "jcc:s17:item:2012",
+    "name": "泰坦的坚决",
+    "type": "成型装备",
+    "tags": [
+      "armor",
+      "attack_speed",
+      "completed",
+      "damage_amp",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "stats": {
+      "attack_speed_pct": 10,
+      "armor": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2013",
+    "item_address": "jcc:s17:item:2013",
+    "name": "海妖之怒",
+    "type": "成型装备",
+    "tags": [
+      "attack_speed",
+      "completed",
+      "magic_resist",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 10,
+      "attack_speed_pct": 10,
+      "magic_resist": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2014",
+    "item_address": "jcc:s17:item:2014",
+    "name": "纳什之牙",
+    "type": "成型装备",
+    "tags": [
+      "attack_speed",
+      "completed",
+      "crit",
+      "health",
+      "magic_damage",
+      "mana"
+    ],
+    "stats": {
+      "ap": 15,
+      "attack_speed_pct": 10,
+      "health": 150,
+      "crit_chance_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2016",
+    "item_address": "jcc:s17:item:2016",
+    "name": "班克斯的魔法帽",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "damage_amp",
+      "magic_damage"
+    ],
+    "stats": {
+      "ap": 55,
+      "damage_amp_pct": 15
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2017",
+    "item_address": "jcc:s17:item:2017",
+    "name": "大天使之杖",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "health",
+      "magic_damage",
+      "mana",
+      "persistent_effect"
+    ],
+    "stats": {
+      "ap": 30,
+      "mana_regen": 1
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2018",
+    "item_address": "jcc:s17:item:2018",
+    "name": "冕卫",
+    "type": "成型装备",
+    "tags": [
+      "armor",
+      "completed",
+      "health",
+      "magic_damage",
+      "shield"
+    ],
+    "stats": {
+      "ap": 20,
+      "health": 100,
+      "armor": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2019",
+    "item_address": "jcc:s17:item:2019",
+    "name": "离子火花",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "health",
+      "magic_damage",
+      "magic_resist",
+      "mana",
+      "shred"
+    ],
+    "stats": {
+      "ap": 15,
+      "health": 250,
+      "magic_resist": 35
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2020",
+    "item_address": "jcc:s17:item:2020",
+    "name": "莫雷洛秘典",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "health",
+      "magic_damage",
+      "mana",
+      "persistent_effect",
+      "single_target",
+      "true_damage",
+      "wound"
+    ],
+    "stats": {
+      "ap": 20,
+      "health": 150,
+      "mana_regen": 1
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2022",
+    "item_address": "jcc:s17:item:2022",
+    "name": "蓝霸符",
+    "type": "成型装备",
+    "tags": [
+      "aoe",
+      "completed",
+      "health",
+      "magic_damage",
+      "mana",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 15,
+      "ap": 15,
+      "mana_regen": 5
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2023",
+    "item_address": "jcc:s17:item:2023",
+    "name": "圣盾使的誓约",
+    "type": "成型装备",
+    "tags": [
+      "armor",
+      "completed",
+      "health",
+      "magic_resist",
+      "mana",
+      "shield"
+    ],
+    "stats": {
+      "armor": 25,
+      "magic_resist": 25,
+      "mana_regen": 1
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2024",
+    "item_address": "jcc:s17:item:2024",
+    "name": "适应性头盔",
+    "type": "成型装备",
+    "tags": [
+      "aoe",
+      "armor",
+      "completed",
+      "health",
+      "magic_damage",
+      "magic_resist",
+      "mana",
+      "physical_damage"
+    ],
+    "stats": {
+      "magic_resist": 20,
+      "mana_regen": 3
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2025",
+    "item_address": "jcc:s17:item:2025",
+    "name": "振奋盔甲",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "durability",
+      "health",
+      "mana",
+      "persistent_effect"
+    ],
+    "stats": {
+      "health": 300,
+      "mana_regen": 2
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2027",
+    "item_address": "jcc:s17:item:2027",
+    "name": "棘刺背心",
+    "type": "成型装备",
+    "tags": [
+      "aoe",
+      "armor",
+      "completed",
+      "health",
+      "magic_damage"
+    ],
+    "stats": {
+      "armor": 50
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2028",
+    "item_address": "jcc:s17:item:2028",
+    "name": "石像鬼石板甲",
+    "type": "成型装备",
+    "tags": [
+      "armor",
+      "completed",
+      "health",
+      "magic_resist",
+      "single_target"
+    ],
+    "stats": {
+      "health": 100,
+      "armor": 25,
+      "magic_resist": 25
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2029",
+    "item_address": "jcc:s17:item:2029",
+    "name": "日炎斗篷",
+    "type": "成型装备",
+    "tags": [
+      "armor",
+      "completed",
+      "health",
+      "persistent_effect",
+      "single_target",
+      "true_damage",
+      "wound"
+    ],
+    "stats": {
+      "health": 150,
+      "armor": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2031",
+    "item_address": "jcc:s17:item:2031",
+    "name": "巨龙之爪",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "health",
+      "magic_resist",
+      "persistent_effect"
+    ],
+    "stats": {
+      "magic_resist": 60
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2032",
+    "item_address": "jcc:s17:item:2032",
+    "name": "薄暮法袍",
+    "type": "成型装备",
+    "tags": [
+      "armor",
+      "completed",
+      "health",
+      "magic_resist",
+      "sunder"
+    ],
+    "stats": {
+      "health": 250,
+      "magic_resist": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2034",
+    "item_address": "jcc:s17:item:2034",
+    "name": "狂徒铠甲",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "health"
+    ],
+    "stats": {
+      "health": 500
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2036",
+    "item_address": "jcc:s17:item:2036",
+    "name": "金铲铲冠冕",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "economy"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2037",
+    "item_address": "jcc:s17:item:2037",
+    "name": "最后的轻语",
+    "type": "成型装备",
+    "tags": [
+      "armor",
+      "attack_speed",
+      "completed",
+      "crit",
+      "physical_damage",
+      "single_target",
+      "sunder"
+    ],
+    "stats": {
+      "ad": 15,
+      "attack_speed_pct": 20,
+      "crit_chance_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2038",
+    "item_address": "jcc:s17:item:2038",
+    "name": "珠光护手",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "crit",
+      "magic_damage"
+    ],
+    "stats": {
+      "ap": 35,
+      "crit_chance_pct": 35
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2039",
+    "item_address": "jcc:s17:item:2039",
+    "name": "正义之手",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "crit",
+      "health",
+      "magic_damage",
+      "mana",
+      "physical_damage"
+    ],
+    "stats": {
+      "crit_chance_pct": 20,
+      "mana_regen": 1
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2040",
+    "item_address": "jcc:s17:item:2040",
+    "name": "坚定之心",
+    "type": "成型装备",
+    "tags": [
+      "armor",
+      "completed",
+      "crit",
+      "durability",
+      "health"
+    ],
+    "stats": {
+      "health": 250,
+      "armor": 20,
+      "crit_chance_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2041",
+    "item_address": "jcc:s17:item:2041",
+    "name": "水银",
+    "type": "成型装备",
+    "tags": [
+      "attack_speed",
+      "completed",
+      "crit",
+      "magic_resist",
+      "persistent_effect"
+    ],
+    "stats": {
+      "attack_speed_pct": 15,
+      "magic_resist": 20,
+      "crit_chance_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2042",
+    "item_address": "jcc:s17:item:2042",
+    "name": "强袭者的链枷",
+    "type": "成型装备",
+    "tags": [
+      "attack_speed",
+      "completed",
+      "crit",
+      "damage_amp",
+      "health"
+    ],
+    "stats": {
+      "attack_speed_pct": 10,
+      "health": 150,
+      "crit_chance_pct": 20,
+      "damage_amp_pct": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2044",
+    "item_address": "jcc:s17:item:2044",
+    "name": "秘法手套",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "crit",
+      "health",
+      "item_reward",
+      "slot_pressure"
+    ],
+    "stats": {
+      "health": 150,
+      "crit_chance_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2045",
+    "item_address": "jcc:s17:item:2045",
+    "name": "锐利之刃",
+    "type": "成型装备",
+    "tags": [
+      "aoe",
+      "completed",
+      "damage_amp",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 55,
+      "damage_amp_pct": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2046",
+    "item_address": "jcc:s17:item:2046",
+    "name": "巨人捕手",
+    "type": "成型装备",
+    "tags": [
+      "attack_speed",
+      "completed",
+      "damage_amp",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 15,
+      "ap": 15,
+      "attack_speed_pct": 15,
+      "damage_amp_pct": 15
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2047",
+    "item_address": "jcc:s17:item:2047",
+    "name": "金锅锅冠冕",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "economy"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2048",
+    "item_address": "jcc:s17:item:2048",
+    "name": "金锅铲冠冕",
+    "type": "成型装备",
+    "tags": [
+      "completed",
+      "economy"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2059",
+    "item_address": "jcc:s17:item:2059",
+    "name": "光明版无尽之刃",
+    "type": "光明武器",
+    "tags": [
+      "crit",
+      "item_reward",
+      "magic_damage",
+      "physical_damage",
+      "radiant"
+    ],
+    "stats": {
+      "ad": 75,
+      "crit_chance_pct": 75
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2060",
+    "item_address": "jcc:s17:item:2060",
+    "name": "光明版海克斯科技枪刃",
+    "type": "光明武器",
+    "tags": [
+      "health",
+      "item_reward",
+      "magic_damage",
+      "mana",
+      "omnivamp",
+      "physical_damage",
+      "radiant"
+    ],
+    "stats": {
+      "ad": 40,
+      "ap": 40,
+      "mana_regen": 2,
+      "omnivamp_pct": 30
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2061",
+    "item_address": "jcc:s17:item:2061",
+    "name": "光明版朔极之矛",
+    "type": "光明武器",
+    "tags": [
+      "health",
+      "item_reward",
+      "magic_damage",
+      "mana",
+      "physical_damage",
+      "radiant"
+    ],
+    "stats": {
+      "ad": 30,
+      "ap": 30,
+      "mana_regen": 2
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2062",
+    "item_address": "jcc:s17:item:2062",
+    "name": "光明版夜之锋刃",
+    "type": "光明武器",
+    "tags": [
+      "aoe",
+      "armor",
+      "attack_speed",
+      "health",
+      "item_reward",
+      "magic_damage",
+      "physical_damage",
+      "radiant"
+    ],
+    "stats": {
+      "ad": 30,
+      "ap": 30,
+      "attack_speed_pct": 30,
+      "armor": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2063",
+    "item_address": "jcc:s17:item:2063",
+    "name": "光明版汲取剑",
+    "type": "光明武器",
+    "tags": [
+      "health",
+      "item_reward",
+      "magic_damage",
+      "magic_resist",
+      "omnivamp",
+      "persistent_effect",
+      "physical_damage",
+      "radiant",
+      "shield"
+    ],
+    "stats": {
+      "ad": 30,
+      "ap": 30,
+      "magic_resist": 40,
+      "omnivamp_pct": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2064",
+    "item_address": "jcc:s17:item:2064",
+    "name": "光明版斯特拉克的挑战护手",
+    "type": "光明武器",
+    "tags": [
+      "health",
+      "item_reward",
+      "physical_damage",
+      "radiant",
+      "shield"
+    ],
+    "stats": {
+      "ad": 90,
+      "health": 600
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2065",
+    "item_address": "jcc:s17:item:2065",
+    "name": "光明版红霸符",
+    "type": "光明武器",
+    "tags": [
+      "attack_speed",
+      "damage_amp",
+      "health",
+      "item_reward",
+      "persistent_effect",
+      "radiant",
+      "single_target",
+      "true_damage",
+      "wound"
+    ],
+    "stats": {
+      "attack_speed_pct": 80,
+      "damage_amp_pct": 6
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2066",
+    "item_address": "jcc:s17:item:2066",
+    "name": "光明版鬼索的狂暴之刃",
+    "type": "光明武器",
+    "tags": [
+      "attack_speed",
+      "item_reward",
+      "magic_damage",
+      "persistent_effect",
+      "radiant"
+    ],
+    "stats": {
+      "ap": 20,
+      "attack_speed_pct": 25
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2067",
+    "item_address": "jcc:s17:item:2067",
+    "name": "光明版虚空之杖",
+    "type": "光明武器",
+    "tags": [
+      "attack_speed",
+      "health",
+      "item_reward",
+      "magic_damage",
+      "magic_resist",
+      "mana",
+      "radiant",
+      "shred",
+      "single_target"
+    ],
+    "stats": {
+      "ap": 75,
+      "attack_speed_pct": 30,
+      "mana_regen": 2
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2068",
+    "item_address": "jcc:s17:item:2068",
+    "name": "光明版泰坦的坚决",
+    "type": "光明武器",
+    "tags": [
+      "armor",
+      "attack_speed",
+      "damage_amp",
+      "item_reward",
+      "magic_damage",
+      "physical_damage",
+      "radiant"
+    ],
+    "stats": {
+      "attack_speed_pct": 20,
+      "armor": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2069",
+    "item_address": "jcc:s17:item:2069",
+    "name": "光明版海妖之怒",
+    "type": "光明武器",
+    "tags": [
+      "attack_speed",
+      "item_reward",
+      "magic_resist",
+      "physical_damage",
+      "radiant"
+    ],
+    "stats": {
+      "ad": 20,
+      "attack_speed_pct": 20,
+      "magic_resist": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2070",
+    "item_address": "jcc:s17:item:2070",
+    "name": "光明版纳什之牙",
+    "type": "光明武器",
+    "tags": [
+      "attack_speed",
+      "crit",
+      "health",
+      "item_reward",
+      "magic_damage",
+      "mana",
+      "radiant"
+    ],
+    "stats": {
+      "ap": 30,
+      "attack_speed_pct": 20,
+      "health": 300,
+      "crit_chance_pct": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2071",
+    "item_address": "jcc:s17:item:2071",
+    "name": "光明版班克斯的魔法帽",
+    "type": "光明武器",
+    "tags": [
+      "damage_amp",
+      "item_reward",
+      "magic_damage",
+      "radiant"
+    ],
+    "stats": {
+      "ap": 100,
+      "damage_amp_pct": 30
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2072",
+    "item_address": "jcc:s17:item:2072",
+    "name": "光明版大天使之杖",
+    "type": "光明武器",
+    "tags": [
+      "health",
+      "item_reward",
+      "magic_damage",
+      "mana",
+      "persistent_effect",
+      "radiant"
+    ],
+    "stats": {
+      "ap": 60,
+      "mana_regen": 2
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2073",
+    "item_address": "jcc:s17:item:2073",
+    "name": "光明版冕卫",
+    "type": "光明武器",
+    "tags": [
+      "armor",
+      "health",
+      "item_reward",
+      "magic_damage",
+      "radiant",
+      "shield"
+    ],
+    "stats": {
+      "ap": 40,
+      "health": 200,
+      "armor": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2074",
+    "item_address": "jcc:s17:item:2074",
+    "name": "光明版离子火花",
+    "type": "光明武器",
+    "tags": [
+      "health",
+      "item_reward",
+      "magic_damage",
+      "magic_resist",
+      "mana",
+      "radiant",
+      "shred"
+    ],
+    "stats": {
+      "ap": 30,
+      "health": 500,
+      "magic_resist": 70
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2075",
+    "item_address": "jcc:s17:item:2075",
+    "name": "光明版莫雷洛秘典",
+    "type": "光明武器",
+    "tags": [
+      "health",
+      "item_reward",
+      "magic_damage",
+      "mana",
+      "persistent_effect",
+      "radiant",
+      "single_target",
+      "true_damage",
+      "wound"
+    ],
+    "stats": {
+      "ap": 35,
+      "health": 300,
+      "mana_regen": 2
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2076",
+    "item_address": "jcc:s17:item:2076",
+    "name": "光明版蓝霸符",
+    "type": "光明武器",
+    "tags": [
+      "aoe",
+      "health",
+      "item_reward",
+      "magic_damage",
+      "mana",
+      "physical_damage",
+      "radiant"
+    ],
+    "stats": {
+      "ad": 30,
+      "ap": 30,
+      "mana_regen": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2077",
+    "item_address": "jcc:s17:item:2077",
+    "name": "光明版圣盾使的誓约",
+    "type": "光明武器",
+    "tags": [
+      "armor",
+      "health",
+      "item_reward",
+      "magic_resist",
+      "mana",
+      "radiant",
+      "shield"
+    ],
+    "stats": {
+      "armor": 50,
+      "magic_resist": 50,
+      "mana_regen": 2
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2078",
+    "item_address": "jcc:s17:item:2078",
+    "name": "光明版适应性头盔",
+    "type": "光明武器",
+    "tags": [
+      "aoe",
+      "armor",
+      "health",
+      "item_reward",
+      "magic_damage",
+      "magic_resist",
+      "mana",
+      "physical_damage",
+      "radiant"
+    ],
+    "stats": {
+      "magic_resist": 40,
+      "mana_regen": 7
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2079",
+    "item_address": "jcc:s17:item:2079",
+    "name": "光明版振奋盔甲",
+    "type": "光明武器",
+    "tags": [
+      "durability",
+      "health",
+      "item_reward",
+      "mana",
+      "persistent_effect",
+      "radiant"
+    ],
+    "stats": {
+      "health": 700,
+      "mana_regen": 4
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2080",
+    "item_address": "jcc:s17:item:2080",
+    "name": "光明版棘刺背心",
+    "type": "光明武器",
+    "tags": [
+      "aoe",
+      "armor",
+      "health",
+      "item_reward",
+      "magic_damage",
+      "radiant"
+    ],
+    "stats": {
+      "armor": 100
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2081",
+    "item_address": "jcc:s17:item:2081",
+    "name": "光明版石像鬼石板甲",
+    "type": "光明武器",
+    "tags": [
+      "armor",
+      "health",
+      "item_reward",
+      "magic_resist",
+      "radiant",
+      "single_target"
+    ],
+    "stats": {
+      "health": 300,
+      "armor": 50,
+      "magic_resist": 50
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2082",
+    "item_address": "jcc:s17:item:2082",
+    "name": "光明版日炎斗篷",
+    "type": "光明武器",
+    "tags": [
+      "armor",
+      "health",
+      "item_reward",
+      "persistent_effect",
+      "radiant",
+      "single_target",
+      "true_damage",
+      "wound"
+    ],
+    "stats": {
+      "health": 300,
+      "armor": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2083",
+    "item_address": "jcc:s17:item:2083",
+    "name": "光明版巨龙之爪",
+    "type": "光明武器",
+    "tags": [
+      "health",
+      "item_reward",
+      "magic_resist",
+      "persistent_effect",
+      "radiant"
+    ],
+    "stats": {
+      "magic_resist": 120
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2084",
+    "item_address": "jcc:s17:item:2084",
+    "name": "光明版薄暮法袍",
+    "type": "光明武器",
+    "tags": [
+      "armor",
+      "health",
+      "item_reward",
+      "magic_resist",
+      "radiant",
+      "sunder"
+    ],
+    "stats": {
+      "health": 500,
+      "magic_resist": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2085",
+    "item_address": "jcc:s17:item:2085",
+    "name": "光明版狂徒铠甲",
+    "type": "光明武器",
+    "tags": [
+      "health",
+      "item_reward",
+      "radiant"
+    ],
+    "stats": {
+      "health": 1200
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2086",
+    "item_address": "jcc:s17:item:2086",
+    "name": "光明版最后的轻语",
+    "type": "光明武器",
+    "tags": [
+      "armor",
+      "attack_speed",
+      "crit",
+      "item_reward",
+      "physical_damage",
+      "radiant",
+      "single_target",
+      "sunder"
+    ],
+    "stats": {
+      "ad": 45,
+      "attack_speed_pct": 40,
+      "crit_chance_pct": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2087",
+    "item_address": "jcc:s17:item:2087",
+    "name": "光明版珠光护手",
+    "type": "光明武器",
+    "tags": [
+      "crit",
+      "item_reward",
+      "magic_damage",
+      "radiant"
+    ],
+    "stats": {
+      "ap": 75,
+      "crit_chance_pct": 75
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2088",
+    "item_address": "jcc:s17:item:2088",
+    "name": "光明版正义之手",
+    "type": "光明武器",
+    "tags": [
+      "crit",
+      "health",
+      "item_reward",
+      "magic_damage",
+      "mana",
+      "physical_damage",
+      "radiant"
+    ],
+    "stats": {
+      "crit_chance_pct": 40,
+      "mana_regen": 2
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2089",
+    "item_address": "jcc:s17:item:2089",
+    "name": "光明版坚定之心",
+    "type": "光明武器",
+    "tags": [
+      "armor",
+      "crit",
+      "durability",
+      "health",
+      "item_reward",
+      "radiant"
+    ],
+    "stats": {
+      "health": 600,
+      "armor": 40,
+      "crit_chance_pct": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2090",
+    "item_address": "jcc:s17:item:2090",
+    "name": "光明版水银",
+    "type": "光明武器",
+    "tags": [
+      "attack_speed",
+      "crit",
+      "item_reward",
+      "magic_resist",
+      "persistent_effect",
+      "radiant"
+    ],
+    "stats": {
+      "attack_speed_pct": 40,
+      "magic_resist": 40,
+      "crit_chance_pct": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2091",
+    "item_address": "jcc:s17:item:2091",
+    "name": "光明版强袭者的链枷",
+    "type": "光明武器",
+    "tags": [
+      "attack_speed",
+      "crit",
+      "damage_amp",
+      "health",
+      "item_reward",
+      "radiant"
+    ],
+    "stats": {
+      "attack_speed_pct": 20,
+      "health": 300,
+      "crit_chance_pct": 40,
+      "damage_amp_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2092",
+    "item_address": "jcc:s17:item:2092",
+    "name": "光明版秘法手套",
+    "type": "光明武器",
+    "tags": [
+      "crit",
+      "health",
+      "item_reward",
+      "radiant",
+      "slot_pressure"
+    ],
+    "stats": {
+      "health": 150,
+      "crit_chance_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2093",
+    "item_address": "jcc:s17:item:2093",
+    "name": "光明版锐利之刃",
+    "type": "光明武器",
+    "tags": [
+      "damage_amp",
+      "item_reward",
+      "physical_damage",
+      "radiant"
+    ],
+    "stats": {
+      "ad": 100,
+      "damage_amp_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:2094",
+    "item_address": "jcc:s17:item:2094",
+    "name": "光明版巨人捕手",
+    "type": "光明武器",
+    "tags": [
+      "attack_speed",
+      "damage_amp",
+      "item_reward",
+      "magic_damage",
+      "physical_damage",
+      "radiant"
+    ],
+    "stats": {
+      "ad": 30,
+      "ap": 30,
+      "attack_speed_pct": 30,
+      "damage_amp_pct": 30
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:3029",
+    "item_address": "jcc:s17:item:3029",
+    "name": "幸运装备宝箱",
+    "type": "特殊装备",
+    "tags": [
+      "item_reward"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:3030",
+    "item_address": "jcc:s17:item:3030",
+    "name": "光明版幸运装备宝箱",
+    "type": "特殊装备",
+    "tags": [
+      "item_reward"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6052",
+    "item_address": "jcc:s17:item:6052",
+    "name": "大亨之铠",
+    "type": "神器装备",
+    "tags": [
+      "armor",
+      "artifact",
+      "economy",
+      "health",
+      "magic_resist",
+      "persistent_effect",
+      "unique_or_limited"
+    ],
+    "stats": {
+      "health": 300
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6054",
+    "item_address": "jcc:s17:item:6054",
+    "name": "死亡之蔑",
+    "type": "神器装备",
+    "tags": [
+      "armor",
+      "artifact",
+      "attack_speed",
+      "omnivamp",
+      "physical_damage",
+      "unique_or_limited"
+    ],
+    "stats": {
+      "ad": 25,
+      "attack_speed_pct": 15,
+      "armor": 40,
+      "omnivamp_pct": 25
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6057",
+    "item_address": "jcc:s17:item:6057",
+    "name": "三相之力",
+    "type": "神器装备",
+    "tags": [
+      "artifact"
+    ],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6059",
+    "item_address": "jcc:s17:item:6059",
+    "name": "金币收集者",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "crit",
+      "economy",
+      "health",
+      "item_reward",
+      "physical_damage",
+      "single_target",
+      "unique_or_limited"
+    ],
+    "stats": {
+      "ad": 35,
+      "crit_chance_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6060",
+    "item_address": "jcc:s17:item:6060",
+    "name": "中娅悖论",
+    "type": "神器装备",
+    "tags": [
+      "armor",
+      "artifact",
+      "health",
+      "magic_damage",
+      "magic_resist",
+      "persistent_effect",
+      "unique_or_limited"
+    ],
+    "stats": {
+      "ap": 25,
+      "armor": 25,
+      "magic_resist": 25
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6061",
+    "item_address": "jcc:s17:item:6061",
+    "name": "碎舰者",
+    "type": "神器装备",
+    "tags": [
+      "armor",
+      "artifact",
+      "health",
+      "magic_damage",
+      "magic_resist",
+      "physical_damage"
+    ],
+    "stats": {
+      "armor": 60,
+      "magic_resist": 60
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6063",
+    "item_address": "jcc:s17:item:6063",
+    "name": "狙击手的专注",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "damage_amp",
+      "health",
+      "magic_damage",
+      "mana",
+      "physical_damage",
+      "single_target"
+    ],
+    "stats": {
+      "ad": 20,
+      "ap": 20,
+      "attack_speed_pct": 20,
+      "mana_regen": 3
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6065",
+    "item_address": "jcc:s17:item:6065",
+    "name": "投机者之刃",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "economy",
+      "persistent_effect",
+      "unique_or_limited"
+    ],
+    "stats": {
+      "attack_speed_pct": 55
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6067",
+    "item_address": "jcc:s17:item:6067",
+    "name": "飞升护符",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "damage_amp",
+      "health",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 20,
+      "ap": 20,
+      "health": 450
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6069",
+    "item_address": "jcc:s17:item:6069",
+    "name": "鱼骨头",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 50,
+      "attack_speed_pct": 50
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6070",
+    "item_address": "jcc:s17:item:6070",
+    "name": "连指手套",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "control",
+      "damage_amp",
+      "health",
+      "persistent_effect",
+      "single_target",
+      "true_damage",
+      "wound"
+    ],
+    "stats": {
+      "attack_speed_pct": 65,
+      "damage_amp_pct": 15
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6071",
+    "item_address": "jcc:s17:item:6071",
+    "name": "卢登的激荡",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "magic_damage",
+      "physical_damage",
+      "single_target"
+    ],
+    "stats": {
+      "ad": 60,
+      "ap": 60
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6072",
+    "item_address": "jcc:s17:item:6072",
+    "name": "密银黎明",
+    "type": "神器装备",
+    "tags": [
+      "armor",
+      "artifact",
+      "attack_speed",
+      "control",
+      "magic_resist",
+      "physical_damage",
+      "single_target"
+    ],
+    "stats": {
+      "ad": 140,
+      "armor": 80,
+      "magic_resist": 80
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6073",
+    "item_address": "jcc:s17:item:6073",
+    "name": "暗行者之爪",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "crit",
+      "health",
+      "physical_damage",
+      "single_target"
+    ],
+    "stats": {
+      "ad": 35,
+      "health": 300,
+      "crit_chance_pct": 45
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6075",
+    "item_address": "jcc:s17:item:6075",
+    "name": "智慧末刃",
+    "type": "神器装备",
+    "tags": [
+      "aoe",
+      "armor",
+      "artifact",
+      "attack_speed",
+      "health",
+      "magic_damage",
+      "magic_resist"
+    ],
+    "stats": {
+      "attack_speed_pct": 25,
+      "health": 400,
+      "armor": 20,
+      "magic_resist": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6080",
+    "item_address": "jcc:s17:item:6080",
+    "name": "疾射火炮",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "damage_amp"
+    ],
+    "stats": {
+      "attack_speed_pct": 65,
+      "damage_amp_pct": 5
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6083",
+    "item_address": "jcc:s17:item:6083",
+    "name": "枯萎珠宝",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "health",
+      "magic_damage",
+      "magic_resist",
+      "mana",
+      "persistent_effect",
+      "single_target"
+    ],
+    "stats": {
+      "ap": 60,
+      "mana_regen": 2
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6084",
+    "item_address": "jcc:s17:item:6084",
+    "name": "探索者的护臂",
+    "type": "神器装备",
+    "tags": [
+      "armor",
+      "artifact",
+      "magic_damage",
+      "magic_resist",
+      "omnivamp"
+    ],
+    "stats": {
+      "ap": 25,
+      "armor": 10,
+      "magic_resist": 10,
+      "omnivamp_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6085",
+    "item_address": "jcc:s17:item:6085",
+    "name": "光盾徽章",
+    "type": "神器装备",
+    "tags": [
+      "aoe",
+      "armor",
+      "artifact",
+      "health",
+      "magic_resist",
+      "persistent_effect",
+      "shield"
+    ],
+    "stats": {
+      "armor": 55,
+      "magic_resist": 55
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6086",
+    "item_address": "jcc:s17:item:6086",
+    "name": "巫妖之祸",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "magic_damage",
+      "mana"
+    ],
+    "stats": {
+      "ap": 55,
+      "attack_speed_pct": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6087",
+    "item_address": "jcc:s17:item:6087",
+    "name": "烁刃",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "stats": {
+      "ap": 10,
+      "attack_speed_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6088",
+    "item_address": "jcc:s17:item:6088",
+    "name": "斯塔缇克电刃",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "magic_damage"
+    ],
+    "stats": {
+      "ap": 15,
+      "attack_speed_pct": 50
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6089",
+    "item_address": "jcc:s17:item:6089",
+    "name": "顽强不屈",
+    "type": "神器装备",
+    "tags": [
+      "armor",
+      "artifact",
+      "control",
+      "health",
+      "magic_resist",
+      "single_target"
+    ],
+    "stats": {
+      "health": 500,
+      "armor": 20,
+      "magic_resist": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6090",
+    "item_address": "jcc:s17:item:6090",
+    "name": "巨型九头蛇",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "health",
+      "physical_damage",
+      "single_target"
+    ],
+    "stats": {
+      "ad": 20,
+      "attack_speed_pct": 20,
+      "health": 300
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6091",
+    "item_address": "jcc:s17:item:6091",
+    "name": "黎明核心",
+    "type": "特殊装备",
+    "tags": [
+      "health",
+      "magic_damage",
+      "mana",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 15,
+      "ap": 15,
+      "mana_regen": 2
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6092",
+    "item_address": "jcc:s17:item:6092",
+    "name": "黎明圣盾",
+    "type": "神器装备",
+    "tags": [
+      "armor",
+      "artifact",
+      "health",
+      "item_reward",
+      "persistent_effect"
+    ],
+    "stats": {
+      "health": 400,
+      "armor": 50
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6093",
+    "item_address": "jcc:s17:item:6093",
+    "name": "黄昏圣盾",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "health",
+      "item_reward",
+      "magic_damage",
+      "magic_resist",
+      "persistent_effect"
+    ],
+    "stats": {
+      "health": 400,
+      "magic_resist": 70
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6094",
+    "item_address": "jcc:s17:item:6094",
+    "name": "虚空护手",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "durability",
+      "health",
+      "magic_damage",
+      "persistent_effect",
+      "unique_or_limited"
+    ],
+    "stats": {
+      "health": 300
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6095",
+    "item_address": "jcc:s17:item:6095",
+    "name": "帽子饮品",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 25,
+      "ap": 25,
+      "attack_speed_pct": 25
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6096",
+    "item_address": "jcc:s17:item:6096",
+    "name": "恶火小斧",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "health",
+      "omnivamp",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 20,
+      "health": 150,
+      "omnivamp_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6098",
+    "item_address": "jcc:s17:item:6098",
+    "name": "永恒契约",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "health",
+      "magic_damage",
+      "mana",
+      "persistent_effect",
+      "shield"
+    ],
+    "stats": {
+      "ap": 40,
+      "mana_regen": 1
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6106",
+    "item_address": "jcc:s17:item:6106",
+    "name": "锤石的灯笼",
+    "type": "神器装备",
+    "tags": [
+      "armor",
+      "artifact",
+      "health",
+      "magic_resist"
+    ],
+    "stats": {
+      "health": 400,
+      "armor": 35,
+      "magic_resist": 35
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6107",
+    "item_address": "jcc:s17:item:6107",
+    "name": "阿狸的光环",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "health",
+      "magic_damage",
+      "mana",
+      "single_target"
+    ],
+    "stats": {
+      "ap": 20,
+      "mana_regen": 4
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6108",
+    "item_address": "jcc:s17:item:6108",
+    "name": "艾克的耐心",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 25,
+      "ap": 25
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6109",
+    "item_address": "jcc:s17:item:6109",
+    "name": "亚索的剑艺",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "persistent_effect",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 30,
+      "attack_speed_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6110",
+    "item_address": "jcc:s17:item:6110",
+    "name": "索拉卡的奇迹",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "durability",
+      "health"
+    ],
+    "stats": {
+      "health": 100
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6111",
+    "item_address": "jcc:s17:item:6111",
+    "name": "韦鲁斯的执念",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "damage_amp",
+      "health",
+      "magic_damage",
+      "persistent_effect",
+      "physical_damage"
+    ],
+    "stats": {
+      "damage_amp_pct": 15
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:6112",
+    "item_address": "jcc:s17:item:6112",
+    "name": "伊芙琳的本能",
+    "type": "神器装备",
+    "tags": [
+      "artifact",
+      "attack_speed",
+      "health",
+      "magic_damage",
+      "omnivamp",
+      "physical_damage",
+      "single_target"
+    ],
+    "stats": {
+      "ad": 10,
+      "ap": 10,
+      "attack_speed_pct": 40,
+      "omnivamp_pct": 15
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9167",
+    "item_address": "jcc:s17:item:9167",
+    "name": "德玛西亚王冠",
+    "type": "特殊装备",
+    "tags": [
+      "attack_speed",
+      "health",
+      "item_reward",
+      "magic_damage",
+      "persistent_effect",
+      "physical_damage"
+    ],
+    "stats": {
+      "attack_speed_pct": 30,
+      "health": 300
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9251",
+    "item_address": "jcc:s17:item:9251",
+    "name": "无人机上行链路",
+    "type": "特殊装备",
+    "tags": [
+      "damage_amp",
+      "persistent_effect",
+      "recommended_holder_text",
+      "single_target"
+    ],
+    "stats": {
+      "damage_amp_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9252",
+    "item_address": "jcc:s17:item:9252",
+    "name": "恶意软件矩阵",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "armor",
+      "attack_speed",
+      "damage_amp",
+      "magic_damage",
+      "magic_resist",
+      "omnivamp",
+      "persistent_effect",
+      "physical_damage",
+      "recommended_holder_text",
+      "shred",
+      "single_target",
+      "sunder"
+    ],
+    "stats": {
+      "attack_speed_pct": 15,
+      "damage_amp_pct": 15,
+      "omnivamp_pct": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9253",
+    "item_address": "jcc:s17:item:9253",
+    "name": "生物质维护器",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "health",
+      "persistent_effect",
+      "recommended_holder_text"
+    ],
+    "stats": {
+      "health": 650
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9255",
+    "item_address": "jcc:s17:item:9255",
+    "name": "共感植入",
+    "type": "特殊装备",
+    "tags": [
+      "attack_speed",
+      "damage_amp",
+      "health",
+      "magic_damage",
+      "mana",
+      "persistent_effect",
+      "physical_damage",
+      "recommended_holder_text",
+      "true_damage"
+    ],
+    "stats": {
+      "attack_speed_pct": 20,
+      "mana_regen": 4,
+      "damage_amp_pct": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9256",
+    "item_address": "jcc:s17:item:9256",
+    "name": "锁敌光学设备",
+    "type": "特殊装备",
+    "tags": [
+      "attack_speed",
+      "health",
+      "magic_damage",
+      "physical_damage",
+      "recommended_holder_text",
+      "single_target"
+    ],
+    "stats": {
+      "ad": 30,
+      "ap": 30,
+      "attack_speed_pct": 30
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9329",
+    "item_address": "jcc:s17:item:9329",
+    "name": "霸天机甲变形器",
+    "type": "特殊装备",
+    "tags": [],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9331",
+    "item_address": "jcc:s17:item:9331",
+    "name": "冰爆护甲",
+    "type": "特殊装备",
+    "tags": [
+      "armor",
+      "control",
+      "health",
+      "magic_resist",
+      "physical_damage",
+      "shield"
+    ],
+    "stats": {
+      "health": 250,
+      "armor": 30,
+      "magic_resist": 30
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9332",
+    "item_address": "jcc:s17:item:9332",
+    "name": "炽烈短弓",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage",
+      "mana",
+      "persistent_effect",
+      "physical_damage",
+      "single_target",
+      "true_damage",
+      "wound"
+    ],
+    "stats": {
+      "ad": 15,
+      "ap": 45,
+      "mana_regen": 4
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9333",
+    "item_address": "jcc:s17:item:9333",
+    "name": "无情砍削",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "item_reward",
+      "mana",
+      "omnivamp",
+      "physical_damage",
+      "single_target"
+    ],
+    "stats": {
+      "ad": 10,
+      "omnivamp_pct": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9335",
+    "item_address": "jcc:s17:item:9335",
+    "name": "UwU魔爆炮",
+    "type": "特殊装备",
+    "tags": [
+      "attack_speed",
+      "backline_threat",
+      "persistent_effect",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 30,
+      "attack_speed_pct": 45
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9336",
+    "item_address": "jcc:s17:item:9336",
+    "name": "歼灭者",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage",
+      "mana",
+      "physical_damage",
+      "true_damage"
+    ],
+    "stats": {
+      "ad": 20,
+      "ap": 25,
+      "mana_regen": 4
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9337",
+    "item_address": "jcc:s17:item:9337",
+    "name": "战兔十字弩",
+    "type": "特殊装备",
+    "tags": [
+      "attack_speed",
+      "crit",
+      "magic_damage",
+      "mana",
+      "physical_damage",
+      "single_target"
+    ],
+    "stats": {
+      "ad": 20,
+      "attack_speed_pct": 25,
+      "crit_chance_pct": 35
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9338",
+    "item_address": "jcc:s17:item:9338",
+    "name": "火箭狂潮",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "damage_amp",
+      "health",
+      "item_reward",
+      "mana",
+      "physical_damage",
+      "single_target"
+    ],
+    "stats": {
+      "ad": 15,
+      "mana_regen": 3
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9339",
+    "item_address": "jcc:s17:item:9339",
+    "name": "旋风切割器",
+    "type": "特殊装备",
+    "tags": [
+      "armor",
+      "damage_amp",
+      "magic_damage",
+      "magic_resist",
+      "physical_damage",
+      "shred",
+      "sunder"
+    ],
+    "stats": {
+      "ad": 20,
+      "ap": 20,
+      "armor": 15,
+      "magic_resist": 15
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9340",
+    "item_address": "jcc:s17:item:9340",
+    "name": "耀光力场",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage",
+      "persistent_effect",
+      "physical_damage"
+    ],
+    "stats": {
+      "health": 400
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9341",
+    "item_address": "jcc:s17:item:9341",
+    "name": "雌狮之怨",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "armor",
+      "health",
+      "health_cost",
+      "magic_resist",
+      "physical_damage"
+    ],
+    "stats": {
+      "health": 200,
+      "armor": 25,
+      "magic_resist": 25
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9342",
+    "item_address": "jcc:s17:item:9342",
+    "name": "附灵飞弹",
+    "type": "特殊装备",
+    "tags": [
+      "backline_threat",
+      "damage_amp",
+      "item_reward",
+      "magic_damage",
+      "persistent_effect"
+    ],
+    "stats": {
+      "ap": 15,
+      "damage_amp_pct": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9343",
+    "item_address": "jcc:s17:item:9343",
+    "name": "触手重击",
+    "type": "特殊装备",
+    "tags": [
+      "health",
+      "item_reward",
+      "persistent_effect",
+      "physical_damage",
+      "single_target"
+    ],
+    "stats": {
+      "health": 150
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9344",
+    "item_address": "jcc:s17:item:9344",
+    "name": "回响蝠刃",
+    "type": "特殊装备",
+    "tags": [
+      "attack_speed",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 20,
+      "attack_speed_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9345",
+    "item_address": "jcc:s17:item:9345",
+    "name": "深度冻结",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "armor",
+      "control",
+      "health",
+      "magic_damage",
+      "magic_resist",
+      "physical_damage",
+      "shield"
+    ],
+    "stats": {
+      "health": 550,
+      "armor": 30,
+      "magic_resist": 30
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9346",
+    "item_address": "jcc:s17:item:9346",
+    "name": "进化余烬射击",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage",
+      "mana",
+      "persistent_effect",
+      "physical_damage",
+      "single_target",
+      "true_damage",
+      "wound"
+    ],
+    "stats": {
+      "ad": 40,
+      "ap": 45,
+      "mana_regen": 3
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9347",
+    "item_address": "jcc:s17:item:9347",
+    "name": "OwO魔爆炮",
+    "type": "特殊装备",
+    "tags": [
+      "attack_speed",
+      "backline_threat",
+      "persistent_effect",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 35,
+      "attack_speed_pct": 75
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9348",
+    "item_address": "jcc:s17:item:9348",
+    "name": "幻灵启示录",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage",
+      "mana",
+      "persistent_effect",
+      "physical_damage",
+      "true_damage"
+    ],
+    "stats": {
+      "ad": 30,
+      "ap": 30,
+      "mana_regen": 5
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9349",
+    "item_address": "jcc:s17:item:9349",
+    "name": "战兔至尊弩炮",
+    "type": "特殊装备",
+    "tags": [
+      "attack_speed",
+      "crit",
+      "magic_damage",
+      "mana",
+      "physical_damage",
+      "single_target"
+    ],
+    "stats": {
+      "ad": 30,
+      "attack_speed_pct": 50,
+      "crit_chance_pct": 50
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9350",
+    "item_address": "jcc:s17:item:9350",
+    "name": "不息气旋",
+    "type": "特殊装备",
+    "tags": [
+      "armor",
+      "damage_amp",
+      "magic_damage",
+      "magic_resist",
+      "physical_damage",
+      "shred",
+      "sunder",
+      "true_damage"
+    ],
+    "stats": {
+      "ad": 30,
+      "ap": 30,
+      "armor": 40,
+      "magic_resist": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9351",
+    "item_address": "jcc:s17:item:9351",
+    "name": "日蚀之刻",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "health",
+      "magic_damage",
+      "persistent_effect",
+      "physical_damage"
+    ],
+    "stats": {
+      "health": 800
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9352",
+    "item_address": "jcc:s17:item:9352",
+    "name": "薇恩的炫彩战刃",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 30,
+      "attack_speed_pct": 50
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9353",
+    "item_address": "jcc:s17:item:9353",
+    "name": "全能武器",
+    "type": "特殊装备",
+    "tags": [],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9354",
+    "item_address": "jcc:s17:item:9354",
+    "name": "闪光原型",
+    "type": "特殊装备",
+    "tags": [
+      "attack_speed",
+      "persistent_effect",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9355",
+    "item_address": "jcc:s17:item:9355",
+    "name": "破损原型",
+    "type": "特殊装备",
+    "tags": [
+      "health",
+      "shield"
+    ],
+    "stats": {
+      "health": 100
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9356",
+    "item_address": "jcc:s17:item:9356",
+    "name": "泄露原型",
+    "type": "特殊装备",
+    "tags": [
+      "health",
+      "item_reward",
+      "magic_damage",
+      "mana",
+      "persistent_effect"
+    ],
+    "stats": {
+      "ap": 15
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9363",
+    "item_address": "jcc:s17:item:9363",
+    "name": "猛狮之殇",
+    "type": "特殊装备",
+    "tags": [
+      "aoe",
+      "armor",
+      "health",
+      "health_cost",
+      "magic_resist",
+      "physical_damage"
+    ],
+    "stats": {
+      "health": 400,
+      "armor": 40,
+      "magic_resist": 40
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:9367",
+    "item_address": "jcc:s17:item:9367",
+    "name": "特攻队员选择器",
+    "type": "特殊装备",
+    "tags": [],
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41701",
+    "item_address": "jcc:s17:item:41701",
+    "name": "幻灵战队纹章",
+    "type": "转职纹章",
+    "tags": [
+      "emblem",
+      "health"
+    ],
+    "stats": {
+      "health": 250
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41702",
+    "item_address": "jcc:s17:item:41702",
+    "name": "法官纹章",
+    "type": "转职纹章",
+    "tags": [
+      "armor",
+      "attack_speed",
+      "emblem",
+      "magic_resist"
+    ],
+    "stats": {
+      "attack_speed_pct": 30,
+      "armor": 20,
+      "magic_resist": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41703",
+    "item_address": "jcc:s17:item:41703",
+    "name": "木灵族纹章",
+    "type": "转职纹章",
+    "tags": [
+      "armor",
+      "damage_amp",
+      "emblem",
+      "health",
+      "magic_resist",
+      "mana"
+    ],
+    "stats": {
+      "armor": 20,
+      "magic_resist": 20,
+      "mana_regen": 2
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41704",
+    "item_address": "jcc:s17:item:41704",
+    "name": "暗星纹章",
+    "type": "转职纹章",
+    "tags": [
+      "emblem",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 18,
+      "ap": 18
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41706",
+    "item_address": "jcc:s17:item:41706",
+    "name": "新星特攻队纹章",
+    "type": "转职纹章",
+    "tags": [
+      "armor",
+      "attack_speed",
+      "crit",
+      "emblem",
+      "health",
+      "magic_resist"
+    ],
+    "stats": {
+      "health": 200,
+      "crit_chance_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41707",
+    "item_address": "jcc:s17:item:41707",
+    "name": "海魔人纹章",
+    "type": "转职纹章",
+    "tags": [
+      "emblem",
+      "health"
+    ],
+    "stats": {
+      "health": 450
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41708",
+    "item_address": "jcc:s17:item:41708",
+    "name": "灵能特工纹章",
+    "type": "转职纹章",
+    "tags": [
+      "attack_speed",
+      "emblem",
+      "health",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 20,
+      "ap": 20,
+      "attack_speed_pct": 20,
+      "health": 300
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41709",
+    "item_address": "jcc:s17:item:41709",
+    "name": "太空律动纹章",
+    "type": "转职纹章",
+    "tags": [
+      "emblem",
+      "health",
+      "mana"
+    ],
+    "stats": {
+      "health": 200
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41710",
+    "item_address": "jcc:s17:item:41710",
+    "name": "观星者纹章",
+    "type": "转职纹章",
+    "tags": [
+      "emblem",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 15,
+      "ap": 15
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41711",
+    "item_address": "jcc:s17:item:41711",
+    "name": "未来战士纹章",
+    "type": "转职纹章",
+    "tags": [
+      "attack_speed",
+      "emblem",
+      "health"
+    ],
+    "stats": {
+      "attack_speed_pct": 15,
+      "health": 200
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41712",
+    "item_address": "jcc:s17:item:41712",
+    "name": "堡垒卫士纹章",
+    "type": "转职纹章",
+    "tags": [
+      "armor",
+      "attack_speed",
+      "emblem",
+      "magic_resist"
+    ],
+    "stats": {
+      "armor": 30,
+      "magic_resist": 30
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41713",
+    "item_address": "jcc:s17:item:41713",
+    "name": "斗士纹章",
+    "type": "转职纹章",
+    "tags": [
+      "emblem",
+      "health",
+      "magic_damage"
+    ],
+    "stats": {
+      "health": 250
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41714",
+    "item_address": "jcc:s17:item:41714",
+    "name": "挑战者纹章",
+    "type": "转职纹章",
+    "tags": [
+      "attack_speed",
+      "emblem",
+      "health"
+    ],
+    "stats": {
+      "attack_speed_pct": 30
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41715",
+    "item_address": "jcc:s17:item:41715",
+    "name": "狂战士纹章",
+    "type": "转职纹章",
+    "tags": [
+      "economy",
+      "emblem",
+      "omnivamp",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 20,
+      "omnivamp_pct": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41716",
+    "item_address": "jcc:s17:item:41716",
+    "name": "游侠纹章",
+    "type": "转职纹章",
+    "tags": [
+      "crit",
+      "damage_amp",
+      "emblem",
+      "health"
+    ],
+    "stats": {
+      "crit_chance_pct": 20,
+      "damage_amp_pct": 10
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41717",
+    "item_address": "jcc:s17:item:41717",
+    "name": "狙神纹章",
+    "type": "转职纹章",
+    "tags": [
+      "attack_speed",
+      "emblem"
+    ],
+    "stats": {
+      "attack_speed_pct": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41718",
+    "item_address": "jcc:s17:item:41718",
+    "name": "牧羊人纹章",
+    "type": "转职纹章",
+    "tags": [
+      "emblem",
+      "health",
+      "mana"
+    ],
+    "stats": {
+      "mana_regen": 2
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41719",
+    "item_address": "jcc:s17:item:41719",
+    "name": "重装战士纹章",
+    "type": "转职纹章",
+    "tags": [
+      "armor",
+      "emblem",
+      "magic_damage",
+      "magic_resist",
+      "shield"
+    ],
+    "stats": {
+      "armor": 20,
+      "magic_resist": 20
+    },
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:item_tag_profile:41720",
+    "item_address": "jcc:s17:item:41720",
+    "name": "旅人纹章",
+    "type": "转职纹章",
+    "tags": [
+      "armor",
+      "attack_speed",
+      "emblem",
+      "magic_damage",
+      "magic_resist",
+      "physical_damage"
+    ],
+    "stats": {
+      "ad": 20,
+      "ap": 20
+    },
+    "confidence": "heuristic_text"
+  }
+]

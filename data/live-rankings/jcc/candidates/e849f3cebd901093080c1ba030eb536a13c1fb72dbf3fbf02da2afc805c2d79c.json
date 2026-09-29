@@ -1,0 +1,14 @@
+{
+  "schema": "jcc-live-ranking-candidate-pointer-v1",
+  "season_id": "s18",
+  "patch_id": "s18_3",
+  "game_mode_id": "jcc-mode18",
+  "core_profile_id": "e849f3cebd901093080c1ba030eb536a13c1fb72dbf3fbf02da2afc805c2d79c",
+  "generation_id": "20260928-22c9ddfe17a449180fc48f48",
+  "recipe_generation_id": "ba1861f0f813aa6cf0ce547a60343be45277391463ccd1f25901463d69bb2ab1",
+  "stat_date": "20260928",
+  "content_sha256": "22c9ddfe17a449180fc48f48eae54fc017adcd7bff52b6db6f98e4d7525bb31f",
+  "catalog_fingerprint": "2fc1e2a7e409f09c7df3eb8a3477407f5663adbcfbb5eb585d0f5f22e722ada5",
+  "hard_data_manifest_fingerprint": "8ebf65be230c7cc65da5549013581a8732ff2f96d4f29b12fbd30196390889fd",
+  "status": "ready"
+}

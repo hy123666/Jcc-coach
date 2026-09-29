@@ -1,0 +1,36 @@
+{
+  "address": "jcc:s17:formula:comp_gap_score",
+  "source": "generated_heuristic",
+  "inputs": [
+    "board_tags",
+    "item_tags",
+    "enemy_tags"
+  ],
+  "outputs": [
+    "missing_gap_scores"
+  ],
+  "formulas": {
+    "gap_score": "required_gap_weight - covered_sources_weight"
+  },
+  "dependencies": [
+    "jcc:s17:index:comp_gaps",
+    "jcc:s17:index:functional_item_needs"
+  ],
+  "use_cases": [
+    "缺前排/控制/重伤/破甲",
+    "reward selection"
+  ],
+  "exactness": "heuristic_tags",
+  "name": "comp_gap_score",
+  "category": "composition",
+  "domains": [
+    "composition",
+    "gap"
+  ],
+  "route_domains": [
+    "trait_or_unit_swap",
+    "roll_or_level",
+    "item_craft"
+  ],
+  "dependency_kind": "derived_formula"
+}

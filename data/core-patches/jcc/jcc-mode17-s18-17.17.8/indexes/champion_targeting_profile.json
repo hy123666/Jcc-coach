@@ -1,0 +1,701 @@
+[
+  {
+    "address": "jcc:s17:champion_targeting_profile:1450",
+    "champion_address": "jcc:s17:champion:1450",
+    "target_logic": [
+      "nearest",
+      "current_target",
+      "random"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1451",
+    "champion_address": "jcc:s17:champion:1451",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1452",
+    "champion_address": "jcc:s17:champion:1452",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1453",
+    "champion_address": "jcc:s17:champion:1453",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "low_default"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1454",
+    "champion_address": "jcc:s17:champion:1454",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1455",
+    "champion_address": "jcc:s17:champion:1455",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "low_default"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1456",
+    "champion_address": "jcc:s17:champion:1456",
+    "target_logic": [
+      "current_target",
+      "multi_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1457",
+    "champion_address": "jcc:s17:champion:1457",
+    "target_logic": [
+      "current_target",
+      "aoe_radius"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1458",
+    "champion_address": "jcc:s17:champion:1458",
+    "target_logic": [
+      "current_target",
+      "multi_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1459",
+    "champion_address": "jcc:s17:champion:1459",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "low_default"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1460",
+    "champion_address": "jcc:s17:champion:1460",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "low_default"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1461",
+    "champion_address": "jcc:s17:champion:1461",
+    "target_logic": [
+      "current_target",
+      "aoe_radius"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1462",
+    "champion_address": "jcc:s17:champion:1462",
+    "target_logic": [
+      "nearest"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:1463",
+    "champion_address": "jcc:s17:champion:1463",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2450",
+    "champion_address": "jcc:s17:champion:2450",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2451",
+    "champion_address": "jcc:s17:champion:2451",
+    "target_logic": [
+      "aoe_radius",
+      "cone"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2452",
+    "champion_address": "jcc:s17:champion:2452",
+    "target_logic": [
+      "current_target",
+      "aoe_radius"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2453",
+    "champion_address": "jcc:s17:champion:2453",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2454",
+    "champion_address": "jcc:s17:champion:2454",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2455",
+    "champion_address": "jcc:s17:champion:2455",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2456",
+    "champion_address": "jcc:s17:champion:2456",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2457",
+    "champion_address": "jcc:s17:champion:2457",
+    "target_logic": [
+      "multi_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2458",
+    "champion_address": "jcc:s17:champion:2458",
+    "target_logic": [
+      "current_target",
+      "aoe_radius",
+      "cone"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2459",
+    "champion_address": "jcc:s17:champion:2459",
+    "target_logic": [
+      "aoe_radius",
+      "cone"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2460",
+    "champion_address": "jcc:s17:champion:2460",
+    "target_logic": [
+      "current_target",
+      "multi_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2461",
+    "champion_address": "jcc:s17:champion:2461",
+    "target_logic": [
+      "current_target",
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:2462",
+    "champion_address": "jcc:s17:champion:2462",
+    "target_logic": [
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3450",
+    "champion_address": "jcc:s17:champion:3450",
+    "target_logic": [
+      "current_target",
+      "aoe_radius"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3451",
+    "champion_address": "jcc:s17:champion:3451",
+    "target_logic": [
+      "nearest",
+      "current_target",
+      "aoe_radius",
+      "cone"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3452",
+    "champion_address": "jcc:s17:champion:3452",
+    "target_logic": [
+      "aoe_radius"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3453",
+    "champion_address": "jcc:s17:champion:3453",
+    "target_logic": [
+      "random",
+      "cone"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3455",
+    "champion_address": "jcc:s17:champion:3455",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3457",
+    "champion_address": "jcc:s17:champion:3457",
+    "target_logic": [
+      "current_target",
+      "multi_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3458",
+    "champion_address": "jcc:s17:champion:3458",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "low_default"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3459",
+    "champion_address": "jcc:s17:champion:3459",
+    "target_logic": [
+      "aoe_radius",
+      "line"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3460",
+    "champion_address": "jcc:s17:champion:3460",
+    "target_logic": [
+      "nearest",
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3461",
+    "champion_address": "jcc:s17:champion:3461",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3462",
+    "champion_address": "jcc:s17:champion:3462",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3465",
+    "champion_address": "jcc:s17:champion:3465",
+    "target_logic": [
+      "nearest"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3466",
+    "champion_address": "jcc:s17:champion:3466",
+    "target_logic": [
+      "current_target",
+      "aoe_radius"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3467",
+    "champion_address": "jcc:s17:champion:3467",
+    "target_logic": [
+      "line"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3468",
+    "champion_address": "jcc:s17:champion:3468",
+    "target_logic": [
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3469",
+    "champion_address": "jcc:s17:champion:3469",
+    "target_logic": [
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3470",
+    "champion_address": "jcc:s17:champion:3470",
+    "target_logic": [
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3471",
+    "champion_address": "jcc:s17:champion:3471",
+    "target_logic": [
+      "current_target",
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3472",
+    "champion_address": "jcc:s17:champion:3472",
+    "target_logic": [
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3473",
+    "champion_address": "jcc:s17:champion:3473",
+    "target_logic": [
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:3474",
+    "champion_address": "jcc:s17:champion:3474",
+    "target_logic": [
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4370",
+    "champion_address": "jcc:s17:champion:4370",
+    "target_logic": [
+      "random",
+      "aoe_radius"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4371",
+    "champion_address": "jcc:s17:champion:4371",
+    "target_logic": [
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4372",
+    "champion_address": "jcc:s17:champion:4372",
+    "target_logic": [
+      "current_target",
+      "aoe_radius"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4373",
+    "champion_address": "jcc:s17:champion:4373",
+    "target_logic": [
+      "nearest",
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4374",
+    "champion_address": "jcc:s17:champion:4374",
+    "target_logic": [
+      "nearest",
+      "current_target",
+      "multi_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4375",
+    "champion_address": "jcc:s17:champion:4375",
+    "target_logic": [
+      "aoe_radius",
+      "line"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4376",
+    "champion_address": "jcc:s17:champion:4376",
+    "target_logic": [
+      "aoe_radius",
+      "line"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4377",
+    "champion_address": "jcc:s17:champion:4377",
+    "target_logic": [
+      "current_target",
+      "aoe_radius"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4378",
+    "champion_address": "jcc:s17:champion:4378",
+    "target_logic": [
+      "multi_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4379",
+    "champion_address": "jcc:s17:champion:4379",
+    "target_logic": [
+      "aoe_radius"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4380",
+    "champion_address": "jcc:s17:champion:4380",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "low_default"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4381",
+    "champion_address": "jcc:s17:champion:4381",
+    "target_logic": [
+      "nearest",
+      "current_target",
+      "multi_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:4382",
+    "champion_address": "jcc:s17:champion:4382",
+    "target_logic": [
+      "current_target",
+      "line"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:5434",
+    "champion_address": "jcc:s17:champion:5434",
+    "target_logic": [
+      "nearest",
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:5420",
+    "champion_address": "jcc:s17:champion:5420",
+    "target_logic": [
+      "nearest",
+      "current_target",
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:5421",
+    "champion_address": "jcc:s17:champion:5421",
+    "target_logic": [
+      "current_target",
+      "aoe_radius"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:5422",
+    "champion_address": "jcc:s17:champion:5422",
+    "target_logic": [
+      "aoe_radius"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:5423",
+    "champion_address": "jcc:s17:champion:5423",
+    "target_logic": [
+      "current_target",
+      "aoe_radius",
+      "cone",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:5424",
+    "champion_address": "jcc:s17:champion:5424",
+    "target_logic": [
+      "multi_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:5425",
+    "champion_address": "jcc:s17:champion:5425",
+    "target_logic": [
+      "nearest",
+      "current_target",
+      "multi_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:5426",
+    "champion_address": "jcc:s17:champion:5426",
+    "target_logic": [
+      "nearest",
+      "current_target",
+      "aoe_radius",
+      "multi_target"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:5427",
+    "champion_address": "jcc:s17:champion:5427",
+    "target_logic": [
+      "current_target",
+      "line"
+    ],
+    "positioning_relevance": "high",
+    "confidence": "heuristic_text"
+  },
+  {
+    "address": "jcc:s17:champion_targeting_profile:5428",
+    "champion_address": "jcc:s17:champion:5428",
+    "target_logic": [
+      "current_target"
+    ],
+    "positioning_relevance": "medium",
+    "confidence": "heuristic_text"
+  }
+]

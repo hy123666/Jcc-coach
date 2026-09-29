@@ -1,0 +1,2067 @@
+[
+  {
+    "address": "jcc:s18:trait_unit_matrix:340",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 6,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41811",
+        "name": "斗士纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1503",
+        "cost": 1,
+        "name": "可酷伯",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:1504",
+        "cost": 1,
+        "name": "雷克塞",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2501",
+        "cost": 2,
+        "name": "阿利斯塔",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3503",
+        "cost": 3,
+        "name": "远古石甲虫",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4505",
+        "cost": 4,
+        "name": "瑟提",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:5452",
+        "cost": 5,
+        "name": "纳尔",
+        "output_type": "mixed",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:340",
+    "trait_name": "斗士"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:341",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 6,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41812",
+        "name": "护卫纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1500",
+        "cost": 1,
+        "name": "奥恩",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:1502",
+        "cost": 1,
+        "name": "蕾欧娜",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2503",
+        "cost": 2,
+        "name": "慎",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3502",
+        "cost": 3,
+        "name": "费德提克",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3515",
+        "cost": 3,
+        "name": "拉莫斯",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4502",
+        "cost": 4,
+        "name": "莉莉娅",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:341",
+    "trait_name": "护卫"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:342",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 6,
+        "tags": [
+          "shield"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41813",
+        "name": "重装战士纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1501",
+        "cost": 1,
+        "name": "洛",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2504",
+        "cost": 2,
+        "name": "伊莉丝",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3500",
+        "cost": 3,
+        "name": "赫卡里姆",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3506",
+        "cost": 3,
+        "name": "黛安娜",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4500",
+        "cost": 4,
+        "name": "苍蓝雕纹魔像",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:5451",
+        "cost": 5,
+        "name": "塔里克",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:342",
+    "trait_name": "重装战士"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:343",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 6,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41814",
+        "name": "主宰纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1501",
+        "cost": 1,
+        "name": "洛",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2500",
+        "cost": 2,
+        "name": "峡谷迅捷蟹",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2502",
+        "cost": 2,
+        "name": "瑟庄妮",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2505",
+        "cost": 1,
+        "name": "约里克",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3501",
+        "cost": 3,
+        "name": "蔚",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4503",
+        "cost": 4,
+        "name": "阿木木",
+        "output_type": "true_or_mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:5450",
+        "cost": 5,
+        "name": "茂凯",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:343",
+    "trait_name": "主宰"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:344",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [
+          "attack_speed",
+          "trigger_basic_attack"
+        ],
+        "values": []
+      },
+      {
+        "count": 3,
+        "tags": [
+          "attack_speed",
+          "trigger_basic_attack"
+        ],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [
+          "attack_speed",
+          "trigger_basic_attack"
+        ],
+        "values": []
+      },
+      {
+        "count": 5,
+        "tags": [
+          "attack_speed",
+          "trigger_basic_attack"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41815",
+        "name": "迅捷射手纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1507",
+        "cost": 1,
+        "name": "韦鲁斯",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:1509",
+        "cost": 1,
+        "name": "霞",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2512",
+        "cost": 2,
+        "name": "凯尔",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3509",
+        "cost": 3,
+        "name": "深红锋喙鸟",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4509",
+        "cost": 4,
+        "name": "厄斐琉斯",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:344",
+    "trait_name": "迅捷射手"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:345",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 3,
+        "tags": [
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 5,
+        "tags": [
+          "physical_damage"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41816",
+        "name": "猎人纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1508",
+        "cost": 1,
+        "name": "绯红树怪",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2510",
+        "cost": 2,
+        "name": "凯特琳",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3508",
+        "cost": 3,
+        "name": "崔丝塔娜",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4510",
+        "cost": 4,
+        "name": "希维尔",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:5454",
+        "cost": 5,
+        "name": "艾希",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:345",
+    "trait_name": "猎人"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:346",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 6,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41817",
+        "name": "狂战士纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1505",
+        "cost": 1,
+        "name": "卡蜜尔",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:1506",
+        "cost": 1,
+        "name": "阿卡丽",
+        "output_type": "mixed",
+        "role": "melee"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2507",
+        "cost": 2,
+        "name": "暗影狼",
+        "output_type": "mixed",
+        "role": "melee"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2508",
+        "cost": 2,
+        "name": "沃里克",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3506",
+        "cost": 3,
+        "name": "黛安娜",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4506",
+        "cost": 4,
+        "name": "绯红印记树怪",
+        "output_type": "mixed",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:346",
+    "trait_name": "狂战士"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:347",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [
+          "critical_strike"
+        ],
+        "values": []
+      },
+      {
+        "count": 3,
+        "tags": [
+          "true_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [
+          "true_damage"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41818",
+        "name": "裁决使纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:2509",
+        "cost": 2,
+        "name": "芸阿娜",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3510",
+        "cost": 3,
+        "name": "阿兹尔",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4508",
+        "cost": 4,
+        "name": "伊泽瑞尔",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4513",
+        "cost": 4,
+        "name": "索拉卡",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:5453",
+        "cost": 5,
+        "name": "凯南",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:347",
+    "trait_name": "裁决使"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:348",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 3,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1506",
+        "cost": 1,
+        "name": "阿卡丽",
+        "output_type": "mixed",
+        "role": "melee"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2513",
+        "cost": 2,
+        "name": "魔沼蛙",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3507",
+        "cost": 3,
+        "name": "易",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3512",
+        "cost": 3,
+        "name": "克格莫",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4507",
+        "cost": 4,
+        "name": "奈德丽",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:348",
+    "trait_name": "魔战士"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:349",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [
+          "magic_damage",
+          "trigger_cast"
+        ],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [
+          "magic_damage",
+          "trigger_cast"
+        ],
+        "values": []
+      },
+      {
+        "count": 6,
+        "tags": [
+          "magic_damage",
+          "trigger_cast"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41819",
+        "name": "法师纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1510",
+        "cost": 1,
+        "name": "卡尔玛",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:1512",
+        "cost": 1,
+        "name": "维迦",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2511",
+        "cost": 2,
+        "name": "乐芙兰",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3502",
+        "cost": 3,
+        "name": "费德提克",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3511",
+        "cost": 3,
+        "name": "卡西奥佩娅",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4511",
+        "cost": 4,
+        "name": "阿狸",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:5456",
+        "cost": 5,
+        "name": "拉露恩",
+        "output_type": "magic",
+        "role": "ap_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:349",
+    "trait_name": "法师"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:350",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [
+          "mana"
+        ],
+        "values": []
+      },
+      {
+        "count": 3,
+        "tags": [
+          "mana"
+        ],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [
+          "mana"
+        ],
+        "values": []
+      },
+      {
+        "count": 5,
+        "tags": [
+          "mana"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41820",
+        "name": "神谕纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1511",
+        "cost": 1,
+        "name": "苍蓝哨戒",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2514",
+        "cost": 2,
+        "name": "提莫",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3512",
+        "cost": 3,
+        "name": "克格莫",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4500",
+        "cost": 4,
+        "name": "苍蓝雕纹魔像",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4501",
+        "cost": 4,
+        "name": "莫甘娜",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:350",
+    "trait_name": "神谕"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:351",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 3,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:2505",
+        "cost": 1,
+        "name": "约里克",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3509",
+        "cost": 3,
+        "name": "深红锋喙鸟",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3510",
+        "cost": 3,
+        "name": "阿兹尔",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4512",
+        "cost": 4,
+        "name": "婕拉",
+        "output_type": "magic",
+        "role": "ap_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:351",
+    "trait_name": "召唤师"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:450",
+    "breakpoints": [
+      {
+        "count": 3,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 5,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 7,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 9,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 11,
+        "tags": [
+          "magic_damage"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41801",
+        "name": "永恒之森纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1500",
+        "cost": 1,
+        "name": "奥恩",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:1509",
+        "cost": 1,
+        "name": "霞",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2501",
+        "cost": 2,
+        "name": "阿利斯塔",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2511",
+        "cost": 2,
+        "name": "乐芙兰",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3500",
+        "cost": 3,
+        "name": "赫卡里姆",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4508",
+        "cost": 4,
+        "name": "伊泽瑞尔",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:5452",
+        "cost": 5,
+        "name": "纳尔",
+        "output_type": "mixed",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:450",
+    "trait_name": "永恒之森"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:451",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 6,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41802",
+        "name": "黑荆棘纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1504",
+        "cost": 1,
+        "name": "雷克塞",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:1512",
+        "cost": 1,
+        "name": "维迦",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2508",
+        "cost": 2,
+        "name": "沃里克",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3510",
+        "cost": 3,
+        "name": "阿兹尔",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4504",
+        "cost": 4,
+        "name": "墨菲特",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:451",
+    "trait_name": "黑荆棘"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:452",
+    "breakpoints": [
+      {
+        "count": 3,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 5,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 7,
+        "tags": [
+          "economy",
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 9,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 11,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41809",
+        "name": "灵魂莲华纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1510",
+        "cost": 1,
+        "name": "卡尔玛",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2505",
+        "cost": 1,
+        "name": "约里克",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2509",
+        "cost": 2,
+        "name": "芸阿娜",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3507",
+        "cost": 3,
+        "name": "易",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4505",
+        "cost": 4,
+        "name": "瑟提",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4511",
+        "cost": 4,
+        "name": "阿狸",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:5454",
+        "cost": 5,
+        "name": "艾希",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:452",
+    "trait_name": "灵魂莲华"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:453",
+    "breakpoints": [
+      {
+        "count": 3,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 5,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 7,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41803",
+        "name": "魔女纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1505",
+        "cost": 1,
+        "name": "卡蜜尔",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2504",
+        "cost": 2,
+        "name": "伊莉丝",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2510",
+        "cost": 2,
+        "name": "凯特琳",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3511",
+        "cost": 3,
+        "name": "卡西奥佩娅",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4501",
+        "cost": 4,
+        "name": "莫甘娜",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:453",
+    "trait_name": "魔女"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:454",
+    "breakpoints": [
+      {
+        "count": 3,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 5,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 7,
+        "tags": [
+          "attack_speed",
+          "magic_damage",
+          "mana",
+          "physical_damage",
+          "trigger_combat_start"
+        ],
+        "values": []
+      },
+      {
+        "count": 10,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1508",
+        "cost": 1,
+        "name": "绯红树怪",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:1511",
+        "cost": 1,
+        "name": "苍蓝哨戒",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2500",
+        "cost": 2,
+        "name": "峡谷迅捷蟹",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2507",
+        "cost": 2,
+        "name": "暗影狼",
+        "output_type": "mixed",
+        "role": "melee"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2513",
+        "cost": 2,
+        "name": "魔沼蛙",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3503",
+        "cost": 3,
+        "name": "远古石甲虫",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3509",
+        "cost": 3,
+        "name": "深红锋喙鸟",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4500",
+        "cost": 4,
+        "name": "苍蓝雕纹魔像",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4506",
+        "cost": 4,
+        "name": "绯红印记树怪",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:5458",
+        "cost": 5,
+        "name": "远古巨龙",
+        "output_type": "physical",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:454",
+    "trait_name": "峡谷野怪"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:455",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [
+          "healing",
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [
+          "economy",
+          "healing",
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41804",
+        "name": "花仙子纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1501",
+        "cost": 1,
+        "name": "洛",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:1509",
+        "cost": 1,
+        "name": "霞",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3508",
+        "cost": 3,
+        "name": "崔丝塔娜",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4502",
+        "cost": 4,
+        "name": "莉莉娅",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:455",
+    "trait_name": "花仙子"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:456",
+    "breakpoints": [
+      {
+        "count": 3,
+        "tags": [
+          "attack_speed"
+        ],
+        "values": []
+      },
+      {
+        "count": 5,
+        "tags": [
+          "attack_speed"
+        ],
+        "values": []
+      },
+      {
+        "count": 7,
+        "tags": [
+          "attack_speed"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41805",
+        "name": "约德尔人和朋友纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1503",
+        "cost": 1,
+        "name": "可酷伯",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:1512",
+        "cost": 1,
+        "name": "维迦",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2514",
+        "cost": 2,
+        "name": "提莫",
+        "output_type": "magic",
+        "role": "ap_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3508",
+        "cost": 3,
+        "name": "崔丝塔娜",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3515",
+        "cost": 3,
+        "name": "拉莫斯",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:5452",
+        "cost": 5,
+        "name": "纳尔",
+        "output_type": "mixed",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:456",
+    "trait_name": "约德尔人"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:457",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [
+          "attack_speed",
+          "condition_low_health",
+          "healing"
+        ],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [
+          "attack_speed",
+          "condition_low_health",
+          "healing"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41807",
+        "name": "野兽之灵纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:3501",
+        "cost": 3,
+        "name": "蔚",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4507",
+        "cost": 4,
+        "name": "奈德丽",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4510",
+        "cost": 4,
+        "name": "希维尔",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:457",
+    "trait_name": "野兽之灵"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:458",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [
+          "wound"
+        ],
+        "values": []
+      },
+      {
+        "count": 3,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 5,
+        "tags": [],
+        "values": []
+      },
+      {
+        "count": 7,
+        "tags": [
+          "healing",
+          "true_damage",
+          "wound"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41806",
+        "name": "地狱火纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1506",
+        "cost": 1,
+        "name": "阿卡丽",
+        "output_type": "mixed",
+        "role": "melee"
+      },
+      {
+        "champion_address": "jcc:s18:champion:1507",
+        "cost": 1,
+        "name": "韦鲁斯",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2503",
+        "cost": 2,
+        "name": "慎",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4503",
+        "cost": 4,
+        "name": "阿木木",
+        "output_type": "true_or_mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:5453",
+        "cost": 5,
+        "name": "凯南",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:458",
+    "trait_name": "地狱火"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:459",
+    "breakpoints": [
+      {
+        "count": 3,
+        "tags": [
+          "attack_speed",
+          "magic_damage",
+          "shield",
+          "true_damage"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:1502",
+        "cost": 1,
+        "name": "蕾欧娜",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2502",
+        "cost": 2,
+        "name": "瑟庄妮",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:2512",
+        "cost": 2,
+        "name": "凯尔",
+        "output_type": "magic",
+        "role": "ap_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:459",
+    "trait_name": "日蚀骑士"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:460",
+    "breakpoints": [
+      {
+        "count": 2,
+        "tags": [
+          "attack_speed",
+          "magic_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 3,
+        "tags": [
+          "attack_speed",
+          "magic_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 4,
+        "tags": [
+          "attack_speed",
+          "magic_damage"
+        ],
+        "values": []
+      },
+      {
+        "count": 5,
+        "tags": [
+          "attack_speed",
+          "magic_damage"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41808",
+        "name": "月蚀骑士纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:3506",
+        "cost": 3,
+        "name": "黛安娜",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4509",
+        "cost": 4,
+        "name": "厄斐琉斯",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      },
+      {
+        "champion_address": "jcc:s18:champion:5456",
+        "cost": 5,
+        "name": "拉露恩",
+        "output_type": "magic",
+        "role": "ap_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:460",
+    "trait_name": "月蚀骑士"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:461",
+    "breakpoints": [
+      {
+        "count": 0,
+        "tags": [
+          "trigger_combat_start"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [],
+    "trait_address": "jcc:s18:trait:461",
+    "trait_name": "日月双蚀"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:462",
+    "breakpoints": [
+      {
+        "count": 1,
+        "tags": [
+          "mana"
+        ],
+        "values": []
+      },
+      {
+        "count": 2,
+        "tags": [
+          "healing"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [
+      {
+        "item_address": "jcc:s18:item:41810",
+        "name": "绝命花妖纹章"
+      },
+      {
+        "item_address": "jcc:s18:item:41821",
+        "name": "绝命花妖纹章"
+      }
+    ],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:3502",
+        "cost": 3,
+        "name": "费德提克",
+        "output_type": "magic",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:4513",
+        "cost": 4,
+        "name": "索拉卡",
+        "output_type": "magic",
+        "role": "ap_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:462",
+    "trait_name": "绝命花妖"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:463",
+    "breakpoints": [
+      {
+        "count": 1,
+        "tags": [
+          "economy",
+          "healing",
+          "mana",
+          "physical_damage",
+          "trigger_kill"
+        ],
+        "values": []
+      },
+      {
+        "count": 2,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:3504",
+        "cost": 3,
+        "name": "雷恩加尔",
+        "output_type": "mixed",
+        "role": "frontline"
+      },
+      {
+        "champion_address": "jcc:s18:champion:3505",
+        "cost": 3,
+        "name": "卡兹克",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:463",
+    "trait_name": "宿敌"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:464",
+    "breakpoints": [
+      {
+        "count": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:5450",
+        "cost": 5,
+        "name": "茂凯",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:464",
+    "trait_name": "远古树精"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:465",
+    "breakpoints": [
+      {
+        "count": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:5455",
+        "cost": 5,
+        "name": "德莱文",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:465",
+    "trait_name": "赏金猎人"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:466",
+    "breakpoints": [
+      {
+        "count": 1,
+        "tags": [
+          "trigger_cast"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:5457",
+        "cost": 5,
+        "name": "艾翁",
+        "output_type": "magic",
+        "role": "ap_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:466",
+    "trait_name": "翠神"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:467",
+    "breakpoints": [
+      {
+        "count": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:5451",
+        "cost": 5,
+        "name": "塔里克",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:467",
+    "trait_name": "宝石骑士"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:468",
+    "breakpoints": [
+      {
+        "count": 1,
+        "tags": [
+          "trigger_cast"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:5456",
+        "cost": 5,
+        "name": "拉露恩",
+        "output_type": "magic",
+        "role": "ap_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:468",
+    "trait_name": "月华神女"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:469",
+    "breakpoints": [
+      {
+        "count": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:5459",
+        "cost": 5,
+        "name": "拉克丝",
+        "output_type": "magic",
+        "role": "ap_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:469",
+    "trait_name": "大元素使"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:471",
+    "breakpoints": [
+      {
+        "count": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:5458",
+        "cost": 5,
+        "name": "远古巨龙",
+        "output_type": "physical",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:471",
+    "trait_name": "顶级掠食者"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:472",
+    "breakpoints": [
+      {
+        "count": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:4504",
+        "cost": 4,
+        "name": "墨菲特",
+        "output_type": "magic",
+        "role": "frontline"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:472",
+    "trait_name": "魔岩巨兽"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:473",
+    "breakpoints": [
+      {
+        "count": 1,
+        "tags": [
+          "armor_shred",
+          "magic_resist_shred"
+        ],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:3512",
+        "cost": 3,
+        "name": "克格莫",
+        "output_type": "mixed",
+        "role": "ranged_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:473",
+    "trait_name": "帝王斑蝶"
+  },
+  {
+    "address": "jcc:s18:trait_unit_matrix:486",
+    "breakpoints": [
+      {
+        "count": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "emblem_candidates": [],
+    "exactness": "official_membership_plus_deterministic_semantic_roles",
+    "members": [
+      {
+        "champion_address": "jcc:s18:champion:4512",
+        "cost": 4,
+        "name": "婕拉",
+        "output_type": "magic",
+        "role": "ap_carry"
+      }
+    ],
+    "trait_address": "jcc:s18:trait:486",
+    "trait_name": "荆棘之兴"
+  }
+]

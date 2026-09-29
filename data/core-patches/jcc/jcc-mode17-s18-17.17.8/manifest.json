@@ -1,0 +1,117 @@
+{
+  "packageId": "jcc-mode17-s18-17.17.8",
+  "game": "金铲铲之战",
+  "mode": "17",
+  "season": "18",
+  "modeName": "Mode17S18",
+  "displayName": "星神",
+  "version": "17.17.8",
+  "runtime_patch_id": "s17_8",
+  "source_includes_balance_patch": true,
+  "capturedAt": "2026-08-02T07:58:14.970Z",
+  "source": {
+    "officialSite": "https://jcc.qq.com/",
+    "versionStartTime": "2026-07-29 16:02:59",
+    "isNewestVersionAtCapture": true,
+    "versionConfig": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js",
+    "framework": "https://jcc.qq.com/act/JCCFramework/JCCFrameworkChina.umd.js",
+    "urls": {
+      "hero": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/chess.js",
+      "chess": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/chess.js",
+      "simulatorchess": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/chess.js",
+      "equip": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/equip.js",
+      "trait": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/trait.js",
+      "race": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/trait.js",
+      "job": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/trait.js",
+      "buff": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/hex.js",
+      "galaxy": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/galaxy.js",
+      "godreward": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/god.js",
+      "config": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/config.js"
+    }
+  },
+  "collectionMethod": "Mode17S18.getModeGameData output from the official JCC framework; official fields preserved without replaying earlier runtime patch transforms.",
+  "files": {
+    "hero": {
+      "file": "hero.json",
+      "count": 71,
+      "sha256": "1a0d0a02e79bc994c370676e5241ae6861caa2b28b214129ba43df9820642f9a",
+      "bytes": 2130759,
+      "sourceUrl": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/chess.js"
+    },
+    "chess": {
+      "file": "chess.json",
+      "count": 123,
+      "sha256": "9e8f71f895860f8c54efbedc124a66264f9060c19e9f764df24169031fd08c44",
+      "bytes": 2758907,
+      "sourceUrl": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/chess.js"
+    },
+    "simulatorchess": {
+      "file": "simulatorchess.json",
+      "count": 71,
+      "sha256": "1a0d0a02e79bc994c370676e5241ae6861caa2b28b214129ba43df9820642f9a",
+      "bytes": 2130759,
+      "sourceUrl": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/chess.js"
+    },
+    "equip": {
+      "file": "equip.json",
+      "count": 178,
+      "sha256": "48591eb2445f4541624bf9153ad622d329bf4059e8fb8ad530f5e9820557deb5",
+      "bytes": 204905,
+      "sourceUrl": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/equip.js"
+    },
+    "trait": {
+      "file": "trait.json",
+      "count": 34,
+      "sha256": "c92c34afcdcf7972e28614d9527ab36356951c5567e37082358e48c77a4fd25c",
+      "bytes": 172238,
+      "sourceUrl": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/trait.js"
+    },
+    "race": {
+      "file": "race.json",
+      "count": 22,
+      "sha256": "debe00dd51cecb9d90efdbabfbdb7a13ff95f1e6280d795f8afc0f6662580cfa",
+      "bytes": 110920,
+      "sourceUrl": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/trait.js"
+    },
+    "job": {
+      "file": "job.json",
+      "count": 12,
+      "sha256": "6393fcba01f7be8be8733b381dc9bb85abd62d779519711227df484f98418e1f",
+      "bytes": 61321,
+      "sourceUrl": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/trait.js"
+    },
+    "buff": {
+      "file": "buff.json",
+      "count": 277,
+      "sha256": "989971bceeeec0886da05fb678557dca7798e9795aa6e339e3ac0fee360c2ebf",
+      "bytes": 153779,
+      "sourceUrl": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/hex.js"
+    },
+    "galaxy": {
+      "file": "galaxy.json",
+      "count": 20,
+      "sha256": "2afbd90364c2cc0a81e63fc158374b0e1604c67f2105486468e7bce098de0bd3",
+      "bytes": 6801,
+      "sourceUrl": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/galaxy.js"
+    },
+    "godreward": {
+      "file": "godreward.json",
+      "count": 141,
+      "sha256": "1822a24f70229aad9c9d5dc410cfa73d9e315911dfba82386d1822fd03fc4944",
+      "bytes": 99556,
+      "sourceUrl": "https://game.gtimg.cn/images/lol/act/jkzlk/js/17/17.17.8-S18/god.js"
+    }
+  },
+  "summary": {
+    "hero": 71,
+    "chess": 123,
+    "simulatorchess": 71,
+    "equip": 178,
+    "trait": 34,
+    "race": 22,
+    "job": 12,
+    "buff": 277,
+    "galaxy": 20,
+    "godreward": 141
+  }
+}

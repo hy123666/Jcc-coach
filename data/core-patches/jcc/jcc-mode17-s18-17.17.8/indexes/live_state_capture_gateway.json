@@ -1,0 +1,2448 @@
+{
+  "address": "jcc:s17:index:live_state_capture_gateway",
+  "field_count": 27,
+  "lookup_ref_root": "jcc:s17:lookup_ref:live_state_capture",
+  "match_order": [
+    "field_key",
+    "capture_alias",
+    "ocr_pattern",
+    "user_phrase_pattern",
+    "fallback_to_live_state_schema"
+  ],
+  "source_policy": "Tracker values win when fresh; user input can override; OCR is accepted with confidence except for user-confirmed-only fields; unknown values must not be hallucinated.",
+  "entries": [
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:round",
+      "field_key": "round",
+      "field_address": "jcc:s17:live_state_field:round",
+      "validation_address": "jcc:s17:live_state_validation:round",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_round",
+      "label": "current_round",
+      "value_type": "string",
+      "capture_aliases": [
+        "round",
+        "current_round",
+        "回合",
+        "当前回合",
+        "几杠几",
+        "stage-round"
+      ],
+      "ocr_patterns": [
+        "\\b\\d-\\d\\b",
+        "回合[:：]?\\s*\\d-\\d"
+      ],
+      "user_phrase_patterns": [
+        "回合:<value>",
+        "当前回合:<value>",
+        "几杠几:<value>",
+        "round:<value>",
+        "stage-round:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 3,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "string",
+          "allow_unknown": true,
+          "min_length": 1
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:round_intent",
+          "jcc:s17:index:tempo_windows",
+          "jcc:s17:index:event_triggers"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:round_intent",
+        "jcc:s17:index:tempo_windows",
+        "jcc:s17:index:event_triggers"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:hp_lethal_tolerance",
+        "jcc:s17:formula:level_timing",
+        "jcc:s17:formula:reward_choice_score"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:stage",
+      "field_key": "stage",
+      "field_address": "jcc:s17:live_state_field:stage",
+      "validation_address": "jcc:s17:live_state_validation:stage",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_stage",
+      "label": "current_stage",
+      "value_type": "number",
+      "capture_aliases": [
+        "stage",
+        "current_stage",
+        "阶段",
+        "第几阶段"
+      ],
+      "ocr_patterns": [
+        "阶段[:：]?\\s*\\d+",
+        "stage\\s*\\d+"
+      ],
+      "user_phrase_patterns": [
+        "阶段:<value>",
+        "第几阶段:<value>",
+        "stage:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 5,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "number",
+          "allow_unknown": true,
+          "min": 0
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:round_intent",
+          "jcc:s17:index:tempo_windows",
+          "jcc:s17:index:health_economy_shifts"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:round_intent",
+        "jcc:s17:index:tempo_windows",
+        "jcc:s17:index:health_economy_shifts"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:hp_lethal_tolerance",
+        "jcc:s17:formula:level_timing"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:gold",
+      "field_key": "gold",
+      "field_address": "jcc:s17:live_state_field:gold",
+      "validation_address": "jcc:s17:live_state_validation:gold",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_gold",
+      "label": "current_gold",
+      "value_type": "number",
+      "capture_aliases": [
+        "gold",
+        "current_gold",
+        "金币",
+        "钱",
+        "经济",
+        "money"
+      ],
+      "ocr_patterns": [
+        "金币[:：]?\\s*\\d+",
+        "\\b\\d+\\s*金\\b",
+        "gold\\s*\\d+"
+      ],
+      "user_phrase_patterns": [
+        "金币:<value>",
+        "钱:<value>",
+        "经济:<value>",
+        "gold:<value>",
+        "money:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 3,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "number",
+          "allow_unknown": true,
+          "min": 0
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:resource_exchange",
+          "jcc:s17:index:risk_levels"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:resource_exchange",
+        "jcc:s17:index:risk_levels"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:economy",
+        "jcc:s17:formula:interest_break",
+        "jcc:s17:formula:level_timing",
+        "jcc:s17:formula:roll_down_budget"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:hp",
+      "field_key": "hp",
+      "field_address": "jcc:s17:live_state_field:hp",
+      "validation_address": "jcc:s17:live_state_validation:hp",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_hp",
+      "label": "player_hp",
+      "value_type": "number",
+      "capture_aliases": [
+        "hp",
+        "player_hp",
+        "血量",
+        "血",
+        "生命值",
+        "HP",
+        "health"
+      ],
+      "ocr_patterns": [
+        "血量[:：]?\\s*\\d+",
+        "\\b\\d+\\s*血\\b",
+        "hp\\s*\\d+"
+      ],
+      "user_phrase_patterns": [
+        "血量:<value>",
+        "血:<value>",
+        "生命值:<value>",
+        "HP:<value>",
+        "health:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 5,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "number",
+          "allow_unknown": true,
+          "min": 0
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:health_economy_shifts",
+          "jcc:s17:index:risk_levels"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:health_economy_shifts",
+        "jcc:s17:index:risk_levels"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:hp_lethal_tolerance",
+        "jcc:s17:formula:resource_exchange"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:level",
+      "field_key": "level",
+      "field_address": "jcc:s17:live_state_field:level",
+      "validation_address": "jcc:s17:live_state_validation:level",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_level",
+      "label": "player_level",
+      "value_type": "number",
+      "capture_aliases": [
+        "level",
+        "player_level",
+        "等级",
+        "人口",
+        "几级"
+      ],
+      "ocr_patterns": [
+        "\\b\\d+\\s*级\\b",
+        "\\b\\d+\\s*人口\\b",
+        "level\\s*\\d+"
+      ],
+      "user_phrase_patterns": [
+        "等级:<value>",
+        "人口:<value>",
+        "几级:<value>",
+        "level:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 5,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "number",
+          "allow_unknown": true,
+          "min": 0
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:pool_contest"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:pool_contest"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:shop_odds",
+        "jcc:s17:formula:roll_probability",
+        "jcc:s17:formula:level_timing"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:xp",
+      "field_key": "xp",
+      "field_address": "jcc:s17:live_state_field:xp",
+      "validation_address": "jcc:s17:live_state_validation:xp",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_xp",
+      "label": "current_xp",
+      "value_type": "number",
+      "capture_aliases": [
+        "xp",
+        "current_xp",
+        "经验",
+        "经验值",
+        "差几经验"
+      ],
+      "ocr_patterns": [
+        "经验[:：]?\\s*\\d+",
+        "xp\\s*\\d+"
+      ],
+      "user_phrase_patterns": [
+        "经验:<value>",
+        "经验值:<value>",
+        "差几经验:<value>",
+        "xp:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 5,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "number",
+          "allow_unknown": true,
+          "min": 0
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:system_rule_overrides"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:system_rule_overrides"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:level_timing"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:streak",
+      "field_key": "streak",
+      "field_address": "jcc:s17:live_state_field:streak",
+      "validation_address": "jcc:s17:live_state_validation:streak",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_streak",
+      "label": "win_loss_streak",
+      "value_type": "number",
+      "capture_aliases": [
+        "streak",
+        "win_loss_streak",
+        "连胜",
+        "连败",
+        "胜负 streak"
+      ],
+      "ocr_patterns": [
+        "\\d+\\s*连胜",
+        "\\d+\\s*连败",
+        "streak\\s*-?\\d+"
+      ],
+      "user_phrase_patterns": [
+        "连胜:<value>",
+        "连败:<value>",
+        "胜负 streak:<value>",
+        "streak:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 8,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "number",
+          "allow_unknown": true,
+          "min": 0
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:tempo_windows"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:tempo_windows"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:streak_value",
+        "jcc:s17:formula:economy"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:board_units",
+      "field_key": "board_units",
+      "field_address": "jcc:s17:live_state_field:board_units",
+      "validation_address": "jcc:s17:live_state_validation:board_units",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_board_units",
+      "label": "active_board_units",
+      "value_type": "array",
+      "capture_aliases": [
+        "board_units",
+        "active_board_units",
+        "场上棋子",
+        "场面",
+        "棋盘",
+        "board",
+        "board units"
+      ],
+      "ocr_patterns": [
+        "场上[:：]",
+        "board[:：]"
+      ],
+      "user_phrase_patterns": [
+        "场上棋子:<value>",
+        "场面:<value>",
+        "棋盘:<value>",
+        "board:<value>",
+        "board units:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 3,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:trait_unit_matrix",
+          "jcc:s17:index:champion_role_profile",
+          "jcc:s17:index:champion_damage_profile"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:runtime_entity_cards",
+        "jcc:s17:index:trait_unit_matrix",
+        "jcc:s17:index:champion_role_profile",
+        "jcc:s17:index:champion_damage_profile"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:board_trait_count",
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:trait_delta"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:bench_units",
+      "field_key": "bench_units",
+      "field_address": "jcc:s17:live_state_field:bench_units",
+      "validation_address": "jcc:s17:live_state_validation:bench_units",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_bench_units",
+      "label": "bench_units",
+      "value_type": "array",
+      "capture_aliases": [
+        "bench_units",
+        "备战席",
+        "板凳",
+        "bench"
+      ],
+      "ocr_patterns": [
+        "备战席[:：]",
+        "bench[:：]"
+      ],
+      "user_phrase_patterns": [
+        "备战席:<value>",
+        "板凳:<value>",
+        "bench:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 3,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:champion_role_profile",
+          "jcc:s17:index:carry_substitution",
+          "jcc:s17:index:frontline_substitution"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:runtime_entity_cards",
+        "jcc:s17:index:champion_role_profile",
+        "jcc:s17:index:carry_substitution",
+        "jcc:s17:index:frontline_substitution"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:unit_quality_score",
+        "jcc:s17:formula:pivot_cost"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:shop_units",
+      "field_key": "shop_units",
+      "field_address": "jcc:s17:live_state_field:shop_units",
+      "validation_address": "jcc:s17:live_state_validation:shop_units",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_shop_units",
+      "label": "current_shop_units",
+      "value_type": "array",
+      "capture_aliases": [
+        "shop_units",
+        "current_shop_units",
+        "商店",
+        "商店牌",
+        "shop"
+      ],
+      "ocr_patterns": [
+        "商店[:：]",
+        "shop[:：]"
+      ],
+      "user_phrase_patterns": [
+        "商店:<value>",
+        "商店牌:<value>",
+        "shop:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 2,
+        "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "route_may_run_but_must_lower_confidence_or_ask_user",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "ask_user_or_lower_confidence_when_route_decisive"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:pool_contest",
+          "jcc:s17:index:champion_role_profile"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:runtime_entity_cards",
+        "jcc:s17:index:pool_contest",
+        "jcc:s17:index:champion_role_profile"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:shop_specific_unit_odds",
+        "jcc:s17:formula:action_feasibility"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:components",
+      "field_key": "components",
+      "field_address": "jcc:s17:live_state_field:components",
+      "validation_address": "jcc:s17:live_state_validation:components",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_components",
+      "label": "owned_components",
+      "value_type": "array",
+      "capture_aliases": [
+        "components",
+        "owned_components",
+        "散件",
+        "小件",
+        "基础装备"
+      ],
+      "ocr_patterns": [
+        "散件[:：]",
+        "小件[:：]",
+        "components[:：]"
+      ],
+      "user_phrase_patterns": [
+        "散件:<value>",
+        "小件:<value>",
+        "基础装备:<value>",
+        "components:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 4,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:component_to_item_candidates",
+          "jcc:s17:index:item_wait_cost"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:runtime_entity_cards",
+        "jcc:s17:index:component_to_item_candidates",
+        "jcc:s17:index:item_wait_cost"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:component_completion",
+        "jcc:s17:formula:item_marginal_value"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:completed_items",
+      "field_key": "completed_items",
+      "field_address": "jcc:s17:live_state_field:completed_items",
+      "validation_address": "jcc:s17:live_state_validation:completed_items",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_completed_items",
+      "label": "owned_completed_items",
+      "value_type": "array",
+      "capture_aliases": [
+        "completed_items",
+        "owned_completed_items",
+        "成装",
+        "大件",
+        "已合装备",
+        "completed items"
+      ],
+      "ocr_patterns": [
+        "成装[:：]",
+        "大件[:：]",
+        "items[:：]"
+      ],
+      "user_phrase_patterns": [
+        "成装:<value>",
+        "大件:<value>",
+        "已合装备:<value>",
+        "completed items:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 4,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:item_tags",
+          "jcc:s17:index:item_conflicts",
+          "jcc:s17:index:item_holder_fit"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:runtime_entity_cards",
+        "jcc:s17:index:item_tags",
+        "jcc:s17:index:item_conflicts",
+        "jcc:s17:index:item_holder_fit"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:item_conflict_penalty",
+        "jcc:s17:formula:item_marginal_value"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:item_holders",
+      "field_key": "item_holders",
+      "field_address": "jcc:s17:live_state_field:item_holders",
+      "validation_address": "jcc:s17:live_state_validation:item_holders",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_item_holders",
+      "label": "current_item_holders",
+      "value_type": "array",
+      "capture_aliases": [
+        "item_holders",
+        "current_item_holders",
+        "装备携带者",
+        "谁带装备",
+        "item holders"
+      ],
+      "ocr_patterns": [
+        "装备给",
+        "谁带",
+        "holders?[:：]"
+      ],
+      "user_phrase_patterns": [
+        "装备携带者:<value>",
+        "谁带装备:<value>",
+        "item holders:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 4,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:champion_item_fit",
+          "jcc:s17:index:item_holder_fit"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:runtime_entity_cards",
+        "jcc:s17:index:champion_item_fit",
+        "jcc:s17:index:item_holder_fit"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:item_marginal_value",
+        "jcc:s17:formula:stat_modifier_value"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:active_traits",
+      "field_key": "active_traits",
+      "field_address": "jcc:s17:live_state_field:active_traits",
+      "validation_address": "jcc:s17:live_state_validation:active_traits",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_active_traits",
+      "label": "current_trait_counts",
+      "value_type": "object",
+      "capture_aliases": [
+        "active_traits",
+        "current_trait_counts",
+        "羁绊",
+        "当前羁绊",
+        "active traits"
+      ],
+      "ocr_patterns": [
+        "羁绊[:：]",
+        "traits?[:：]"
+      ],
+      "user_phrase_patterns": [
+        "羁绊:<value>",
+        "当前羁绊:<value>",
+        "active traits:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 3,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "object",
+          "allow_empty": true,
+          "key_policy": "runtime_defined_patch_known_keys_preferred"
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:trait_breakpoints",
+          "jcc:s17:index:trait_unit_matrix"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:runtime_entity_cards",
+        "jcc:s17:index:trait_breakpoints",
+        "jcc:s17:index:trait_unit_matrix"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:trait_delta",
+        "jcc:s17:formula:trait_breakpoint_distance"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:augment_options",
+      "field_key": "augment_options",
+      "field_address": "jcc:s17:live_state_field:augment_options",
+      "validation_address": "jcc:s17:live_state_validation:augment_options",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_augment_options",
+      "label": "visible_augment_options",
+      "value_type": "array",
+      "capture_aliases": [
+        "augment_options",
+        "visible_augment_options",
+        "强化选项",
+        "符文选项",
+        "海克斯选项",
+        "augment options"
+      ],
+      "ocr_patterns": [
+        "强化.*选项",
+        "海克斯.*选项",
+        "augment options?[:：]"
+      ],
+      "user_phrase_patterns": [
+        "强化选项:<value>",
+        "符文选项:<value>",
+        "海克斯选项:<value>",
+        "augment options:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 1,
+        "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "route_may_run_but_must_lower_confidence_or_ask_user",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "ask_user_or_lower_confidence_when_route_decisive"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:route_entity_lookup",
+          "jcc:s17:index:augment_compatibility",
+          "jcc:s17:index:augment_effect_blocks",
+          "jcc:s17:index:reward_choice_tags"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:runtime_entity_cards",
+        "jcc:s17:index:route_entity_lookup",
+        "jcc:s17:index:augment_compatibility",
+        "jcc:s17:index:augment_effect_blocks",
+        "jcc:s17:index:reward_choice_tags"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:augment_direction_score",
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:reward_options",
+      "field_key": "reward_options",
+      "field_address": "jcc:s17:live_state_field:reward_options",
+      "validation_address": "jcc:s17:live_state_validation:reward_options",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_reward_options",
+      "label": "visible_reward_options",
+      "value_type": "array",
+      "capture_aliases": [
+        "reward_options",
+        "visible_reward_options",
+        "奖励选项",
+        "星神奖励",
+        "奇遇奖励",
+        "锻造器",
+        "reward options"
+      ],
+      "ocr_patterns": [
+        "奖励.*选项",
+        "奇遇.*奖励",
+        "reward options?[:：]"
+      ],
+      "user_phrase_patterns": [
+        "奖励选项:<value>",
+        "星神奖励:<value>",
+        "奇遇奖励:<value>",
+        "锻造器:<value>",
+        "reward options:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 1,
+        "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "route_may_run_but_must_lower_confidence_or_ask_user",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "ask_user_or_lower_confidence_when_route_decisive"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:route_entity_lookup",
+          "jcc:s17:index:reward_choice_tags",
+          "jcc:s17:index:god_reward_effect_blocks",
+          "jcc:s17:index:encounter_effect_blocks",
+          "jcc:s17:index:god_reward_paths",
+          "jcc:s17:index:encounter_shift"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:runtime_entity_cards",
+        "jcc:s17:index:route_entity_lookup",
+        "jcc:s17:index:reward_choice_tags",
+        "jcc:s17:index:god_reward_effect_blocks",
+        "jcc:s17:index:encounter_effect_blocks",
+        "jcc:s17:index:god_reward_paths",
+        "jcc:s17:index:encounter_shift"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:god_reward_path_bias",
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:effect_block_value"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:user_confirmed_scouting_notes",
+      "field_key": "user_confirmed_scouting_notes",
+      "field_address": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+      "validation_address": "jcc:s17:live_state_validation:user_confirmed_scouting_notes",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_user_confirmed_scouting_notes",
+      "label": "user_confirmed_scouting_notes",
+      "value_type": "array",
+      "capture_aliases": [
+        "user_confirmed_scouting_notes",
+        "对手",
+        "侦查",
+        "对手站位",
+        "opponents"
+      ],
+      "ocr_patterns": [],
+      "user_phrase_patterns": [
+        "对手:<value>",
+        "侦查:<value>",
+        "对手站位:<value>",
+        "opponents:<value>"
+      ],
+      "source_priority": [
+        "user_input",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 15,
+        "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "user_input": 0.8,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "route_may_run_but_must_lower_confidence_or_ask_user",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "ask_user_or_lower_confidence_when_route_decisive"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:route_entity_lookup",
+          "jcc:s17:index:targeting_threat_templates",
+          "jcc:s17:index:scouting_priority"
+        ],
+        "raw_text_policy": "Preserve explicit user text with confidence and source when normalized address/value is uncertain; never derive this field from current-view OCR."
+      },
+      "related_indexes": [
+        "jcc:s17:index:runtime_entity_cards",
+        "jcc:s17:index:route_entity_lookup",
+        "jcc:s17:index:targeting_threat_templates",
+        "jcc:s17:index:scouting_priority"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:positioning_risk",
+        "jcc:s17:formula:scouting_priority_score",
+        "jcc:s17:formula:damage_mix"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture only explicit user-confirmed notes; current-view OCR/tracker evidence must remain absent and cannot create opponent facts."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:match_variables",
+      "field_key": "match_variables",
+      "field_address": "jcc:s17:live_state_field:match_variables",
+      "validation_address": "jcc:s17:live_state_validation:match_variables",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_match_variables",
+      "label": "encounter_god_stargazer_psionic_judge_mf",
+      "value_type": "object",
+      "capture_aliases": [
+        "match_variables",
+        "encounter_god_stargazer_psionic_judge_mf",
+        "本局变量",
+        "奇遇",
+        "星神",
+        "法官",
+        "厄运小姐模式",
+        "match variables"
+      ],
+      "ocr_patterns": [
+        "法官",
+        "律法",
+        "厄运小姐",
+        "奇遇",
+        "星神",
+        "观星者",
+        "灵能武器"
+      ],
+      "user_phrase_patterns": [
+        "本局变量:<value>",
+        "奇遇:<value>",
+        "星神:<value>",
+        "法官:<value>",
+        "厄运小姐模式:<value>",
+        "match variables:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 1800,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "object",
+          "allow_empty": true,
+          "key_policy": "runtime_defined_patch_known_keys_preferred"
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:runtime_entity_cards",
+          "jcc:s17:index:route_entity_lookup",
+          "jcc:s17:index:per_match_variables",
+          "jcc:s17:index:per_match_variable_doorplates",
+          "jcc:s17:index:judge_law_pool",
+          "jcc:s17:index:rule_modifiers"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:runtime_entity_cards",
+        "jcc:s17:index:route_entity_lookup",
+        "jcc:s17:index:per_match_variables",
+        "jcc:s17:index:per_match_variable_doorplates",
+        "jcc:s17:index:judge_law_pool",
+        "jcc:s17:index:rule_modifiers"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:god_reward_path_bias",
+        "jcc:s17:formula:reward_choice_score",
+        "jcc:s17:formula:trait_delta"
+      ],
+      "variable_doorplates": [
+        {
+          "variable_key": "encounter",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:encounter",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter",
+          "activation_gate": null,
+          "option_count": 19
+        },
+        {
+          "variable_key": "current_god",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:current_god",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god",
+          "activation_gate": null,
+          "option_count": 9
+        },
+        {
+          "variable_key": "stargazer_constellation",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:stargazer_constellation",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation",
+          "activation_gate": null,
+          "option_count": 7
+        },
+        {
+          "variable_key": "psionic_weapon",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:psionic_weapon",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon",
+          "activation_gate": null,
+          "option_count": 5
+        },
+        {
+          "variable_key": "miss_fortune_mode",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+          "activation_gate": {
+            "champion_name": "厄运小姐",
+            "event": "field_or_acquire_unit"
+          },
+          "option_count": 3
+        },
+        {
+          "variable_key": "judge_law",
+          "doorplate_address": "jcc:s17:per_match_variable_doorplate:judge_law",
+          "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law",
+          "activation_gate": {
+            "trait_name": "法官",
+            "min_active_count": 2
+          },
+          "option_count": 0
+        }
+      ],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:time_left",
+      "field_key": "time_left",
+      "field_address": "jcc:s17:live_state_field:time_left",
+      "validation_address": "jcc:s17:live_state_validation:time_left",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_time_left",
+      "label": "decision_time_left_seconds",
+      "value_type": "number",
+      "capture_aliases": [
+        "time_left",
+        "decision_time_left_seconds",
+        "剩余时间",
+        "倒计时",
+        "time left"
+      ],
+      "ocr_patterns": [
+        "剩余\\d+秒",
+        "倒计时\\d+",
+        "time left\\s*\\d+"
+      ],
+      "user_phrase_patterns": [
+        "剩余时间:<value>",
+        "倒计时:<value>",
+        "time left:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 1,
+        "missing_policy": "route_may_run_but_must_lower_confidence_or_ask_user",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "route_may_run_but_must_lower_confidence_or_ask_user",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "ask_user_or_lower_confidence_when_route_decisive"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "number",
+          "allow_unknown": true,
+          "min": 0
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:operation_steps",
+          "jcc:s17:index:action_constraints"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:operation_steps",
+        "jcc:s17:index:action_constraints"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:operation_time_budget",
+        "jcc:s17:formula:action_feasibility"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:timeline_events",
+      "field_key": "timeline_events",
+      "field_address": "jcc:s17:live_state_field:timeline_events",
+      "validation_address": "jcc:s17:live_state_validation:timeline_events",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_timeline_events",
+      "label": "match_timeline_events",
+      "value_type": "array",
+      "capture_aliases": [
+        "timeline_events",
+        "match_timeline_events",
+        "时间线",
+        "事件记录",
+        "timeline"
+      ],
+      "ocr_patterns": [
+        "时间线",
+        "timeline"
+      ],
+      "user_phrase_patterns": [
+        "时间线:<value>",
+        "事件记录:<value>",
+        "timeline:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 5,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:decision_event_schema",
+          "jcc:s17:index:review_attribution",
+          "jcc:s17:index:loss_reasons"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:decision_event_schema",
+        "jcc:s17:index:review_attribution",
+        "jcc:s17:index:loss_reasons"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:review_attribution_score",
+        "jcc:s17:formula:player_habit_bias"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:decision_events",
+      "field_key": "decision_events",
+      "field_address": "jcc:s17:live_state_field:decision_events",
+      "validation_address": "jcc:s17:live_state_validation:decision_events",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_decision_events",
+      "label": "key_decision_events",
+      "value_type": "array",
+      "capture_aliases": [
+        "decision_events",
+        "key_decision_events",
+        "决策事件",
+        "历史决策",
+        "decision events"
+      ],
+      "ocr_patterns": [
+        "决策事件",
+        "decision event"
+      ],
+      "user_phrase_patterns": [
+        "决策事件:<value>",
+        "历史决策:<value>",
+        "decision events:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 5,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:decision_event_schema",
+          "jcc:s17:index:review_attribution",
+          "jcc:s17:index:player_habit_bias_schema"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:decision_event_schema",
+        "jcc:s17:index:review_attribution",
+        "jcc:s17:index:player_habit_bias_schema"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:review_attribution_score",
+        "jcc:s17:formula:player_habit_bias"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:postgame_result",
+      "field_key": "postgame_result",
+      "field_address": "jcc:s17:live_state_field:postgame_result",
+      "validation_address": "jcc:s17:live_state_validation:postgame_result",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_postgame_result",
+      "label": "postgame_result_summary",
+      "value_type": "object",
+      "capture_aliases": [
+        "postgame_result",
+        "postgame_result_summary",
+        "结算",
+        "名次",
+        "复盘结果",
+        "postgame result"
+      ],
+      "ocr_patterns": [
+        "第\\d+名",
+        "结算",
+        "placement"
+      ],
+      "user_phrase_patterns": [
+        "结算:<value>",
+        "名次:<value>",
+        "复盘结果:<value>",
+        "postgame result:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 5,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "object",
+          "allow_empty": true,
+          "key_policy": "runtime_defined_patch_known_keys_preferred"
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:review_attribution",
+          "jcc:s17:index:loss_reasons"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:review_attribution",
+        "jcc:s17:index:loss_reasons"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:review_attribution_score"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:recent_matches",
+      "field_key": "recent_matches",
+      "field_address": "jcc:s17:live_state_field:recent_matches",
+      "validation_address": "jcc:s17:live_state_validation:recent_matches",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_recent_matches",
+      "label": "recent_match_summaries",
+      "value_type": "array",
+      "capture_aliases": [
+        "recent_matches",
+        "recent_match_summaries",
+        "最近对局",
+        "历史战绩",
+        "recent matches"
+      ],
+      "ocr_patterns": [
+        "最近\\d+把",
+        "recent matches"
+      ],
+      "user_phrase_patterns": [
+        "最近对局:<value>",
+        "历史战绩:<value>",
+        "recent matches:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 5,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:player_habit_bias_schema",
+          "jcc:s17:index:review_attribution"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:player_habit_bias_schema",
+        "jcc:s17:index:review_attribution"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:player_habit_bias"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:user_feedback",
+      "field_key": "user_feedback",
+      "field_address": "jcc:s17:live_state_field:user_feedback",
+      "validation_address": "jcc:s17:live_state_validation:user_feedback",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_user_feedback",
+      "label": "user_feedback_notes",
+      "value_type": "array",
+      "capture_aliases": [
+        "user_feedback",
+        "user_feedback_notes",
+        "用户反馈",
+        "偏好",
+        "反馈",
+        "user feedback"
+      ],
+      "ocr_patterns": [
+        "我想",
+        "我偏好",
+        "feedback"
+      ],
+      "user_phrase_patterns": [
+        "用户反馈:<value>",
+        "偏好:<value>",
+        "反馈:<value>",
+        "user feedback:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 5,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "array",
+          "allow_empty": true,
+          "item_address_fields": [
+            "champion_address",
+            "item_address",
+            "augment_address",
+            "reward_address"
+          ]
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:player_habit_bias_schema"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:player_habit_bias_schema"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:player_habit_bias"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:user_speed_profile",
+      "field_key": "user_speed_profile",
+      "field_address": "jcc:s17:live_state_field:user_speed_profile",
+      "validation_address": "jcc:s17:live_state_validation:user_speed_profile",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_user_speed_profile",
+      "label": "player_operation_speed_profile",
+      "value_type": "object",
+      "capture_aliases": [
+        "user_speed_profile",
+        "player_operation_speed_profile",
+        "手速",
+        "操作速度",
+        "user speed"
+      ],
+      "ocr_patterns": [
+        "手速",
+        "来不及",
+        "操作慢"
+      ],
+      "user_phrase_patterns": [
+        "手速:<value>",
+        "操作速度:<value>",
+        "user speed:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 5,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "object",
+          "allow_empty": true,
+          "key_policy": "runtime_defined_patch_known_keys_preferred"
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:operation_steps",
+          "jcc:s17:index:action_constraints"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:operation_steps",
+        "jcc:s17:index:action_constraints"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:operation_time_budget",
+        "jcc:s17:formula:action_feasibility"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:recognized_state",
+      "field_key": "recognized_state",
+      "field_address": "jcc:s17:live_state_field:recognized_state",
+      "validation_address": "jcc:s17:live_state_validation:recognized_state",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_recognized_state",
+      "label": "tracker_recognized_state_quality",
+      "value_type": "object",
+      "capture_aliases": [
+        "recognized_state",
+        "tracker_recognized_state_quality",
+        "识别质量",
+        "OCR置信度",
+        "tracker状态",
+        "recognized state"
+      ],
+      "ocr_patterns": [
+        "OCR",
+        "识别",
+        "置信度",
+        "confidence"
+      ],
+      "user_phrase_patterns": [
+        "识别质量:<value>",
+        "OCR置信度:<value>",
+        "tracker状态:<value>",
+        "recognized state:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 5,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "object",
+          "allow_empty": true,
+          "key_policy": "runtime_defined_patch_known_keys_preferred"
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:live_state_validation",
+          "jcc:s17:index:action_constraints"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:live_state_validation",
+        "jcc:s17:index:action_constraints"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:action_feasibility"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    },
+    {
+      "address": "jcc:s17:live_state_capture_gateway_entry:action_count",
+      "field_key": "action_count",
+      "field_address": "jcc:s17:live_state_field:action_count",
+      "validation_address": "jcc:s17:live_state_validation:action_count",
+      "lookup_ref": "jcc:s17:lookup_ref:live_state_capture_action_count",
+      "label": "planned_action_count",
+      "value_type": "number",
+      "capture_aliases": [
+        "action_count",
+        "planned_action_count",
+        "操作数",
+        "要做几步",
+        "action count"
+      ],
+      "ocr_patterns": [
+        "\\d+步",
+        "操作数",
+        "actions?\\s*\\d+"
+      ],
+      "user_phrase_patterns": [
+        "操作数:<value>",
+        "要做几步:<value>",
+        "action count:<value>"
+      ],
+      "source_priority": [
+        "tracker_state",
+        "user_input",
+        "ocr_template",
+        "unknown"
+      ],
+      "freshness_contract": {
+        "stale_after_seconds": 5,
+        "missing_policy": "unknown_allowed_with_confidence_penalty",
+        "invalid_policy": "drop_field_value_keep_raw_snapshot_pointer_if_debug_retention_enabled"
+      },
+      "confidence_capture_contract": {
+        "unknown_sentinel": "unknown_allowed",
+        "no_hallucination_policy": "When source is missing, stale, invalid, or below the source confidence floor, emit unknown_allowed and preserve raw evidence instead of inventing a value.",
+        "source_confidence_floor": {
+          "tracker_state": 0.9,
+          "user_input": 0.8,
+          "ocr_template": 0.65,
+          "unknown": 0
+        },
+        "missing_or_stale_effect": "unknown_allowed_with_confidence_penalty",
+        "low_confidence_effect": "record live_state_confidence_penalties and lower confidence_after_live_state before route scoring",
+        "decision_event_fields": [
+          "runtime_state_confidence_contract_address",
+          "runtime_state_confidence_contract_lookup_ref",
+          "live_state_freshness",
+          "missing_live_state_fields",
+          "stale_live_state_fields",
+          "live_state_confidence_penalties",
+          "confidence_after_live_state"
+        ],
+        "ask_policy": "lower_confidence_without_blocking_unless_top_decision_changes"
+      },
+      "normalization_contract": {
+        "validation_constraints": {
+          "kind": "number",
+          "allow_unknown": true,
+          "min": 0
+        },
+        "address_normalization_indexes": [
+          "jcc:s17:index:entity_alias_gateway",
+          "jcc:s17:index:entity_alias_lookup",
+          "jcc:s17:index:operation_steps",
+          "jcc:s17:index:action_constraints"
+        ],
+        "raw_text_policy": "Preserve raw OCR/user text with confidence and source when normalized address/value is uncertain."
+      },
+      "related_indexes": [
+        "jcc:s17:index:operation_steps",
+        "jcc:s17:index:action_constraints"
+      ],
+      "related_formulas": [
+        "jcc:s17:formula:operation_time_budget",
+        "jcc:s17:formula:action_feasibility"
+      ],
+      "variable_doorplates": [],
+      "routing_policy": "Capture live value into this field before formula scoring; if missing or stale, use validation missing policy and record confidence penalty."
+    }
+  ]
+}

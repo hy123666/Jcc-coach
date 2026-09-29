@@ -1,0 +1,832 @@
+{
+  "schema": "jcc-game-knowledge-season-descriptor-v1",
+  "logical_id": "season.s17",
+  "scope": "season",
+  "season_id": "s17",
+  "inherits": {
+    "common_manifest": "manifest.json",
+    "standard_mechanics": [
+      "mechanic.augment_choice"
+    ]
+  },
+  "standard_mechanics_overrides": [],
+  "mechanics": [
+    {
+      "id": "season_mechanic.star_god_choice",
+      "choice_kind": "star_god",
+      "candidate_count": 2,
+      "candidate_authority": "current_match_user_report",
+      "checkpoints": [
+        "2-4",
+        "3-4",
+        "4-4"
+      ],
+      "requires_explicit_confirmation": true
+    },
+    {
+      "id": "season_mechanic.stargazing",
+      "kind": "match_variable"
+    },
+    {
+      "id": "season_mechanic.encounter",
+      "kind": "match_variable"
+    },
+    {
+      "id": "season_mechanic.psionic_weapons",
+      "kind": "equipment_extension"
+    }
+  ],
+  "manual_variable_fields": [
+    {
+      "key": "encounter",
+      "control": "single_select",
+      "option_source_key": "encounter",
+      "section": "primary"
+    },
+    {
+      "key": "god_options",
+      "control": "multi_select",
+      "option_source_key": "current_god",
+      "section": "primary",
+      "max_items": 2
+    },
+    {
+      "key": "stargazing",
+      "control": "single_select",
+      "option_source_key": "stargazer_constellation",
+      "section": "primary"
+    },
+    {
+      "key": "psionic_weapons",
+      "control": "multi_select",
+      "option_source_key": "psionic_weapon",
+      "section": "advanced",
+      "max_items": 2
+    },
+    {
+      "key": "current_god_final",
+      "control": "single_select",
+      "option_source_key": "current_god",
+      "section": "advanced"
+    }
+  ],
+  "extensions": {
+    "choice_pretriggers": {
+      "2-3": {
+        "target_checkpoint": "2-4",
+        "mechanic_id": "season_mechanic.star_god_choice"
+      },
+      "3-3": {
+        "target_checkpoint": "3-4",
+        "mechanic_id": "season_mechanic.star_god_choice"
+      },
+      "4-3": {
+        "target_checkpoint": "4-4",
+        "mechanic_id": "season_mechanic.star_god_choice"
+      }
+    },
+    "itemization_context_fields": [
+      "confirmed_star_god",
+      "psionic_weapons",
+      "stargazing",
+      "encounter"
+    ],
+    "retrieval_namespaces": [
+      "star_god",
+      "god_reward",
+      "stargazer_constellation",
+      "encounter",
+      "psionic_weapon"
+    ]
+  },
+  "season_entity_terms": [
+    "star_god",
+    "star-god",
+    "god_options",
+    "current_god",
+    "stargazing",
+    "encounter",
+    "psionic_weapon",
+    "psionic_weapons"
+  ],
+  "source_references": [
+    {
+      "role": "archived_normal_rule_source",
+      "path": "data/game-knowledge/jcc/seasons/s17/archive-sources/legacy-runtime-rules/s17/normal-rules.json",
+      "copy_policy": "hash_and_metadata_only"
+    },
+    {
+      "role": "archived_special_rule_source",
+      "path": "data/game-knowledge/jcc/seasons/s17/archive-sources/legacy-runtime-rules/s17/special-rules.json",
+      "copy_policy": "hash_and_metadata_only"
+    }
+  ],
+  "runtime_contract": {
+    "schema": "jcc-season-runtime-contract-v1",
+    "normal_rules": {
+      "schema": "jcc-season-normal-rules-v1",
+      "scope": "season_normal",
+      "season_id": "s17",
+      "patch_scope": "major_season_rules_not_patch_balance",
+      "game_mode_id": "jcc-mode17",
+      "display_name": "S17 normal rules",
+      "choice_mechanics": [
+        {
+          "mechanic_id": "augment_choice",
+          "kind": "augment",
+          "mode": "augment_choice",
+          "phase": "augment_choice",
+          "label": "augment choice",
+          "intent_terms": [
+            "海克斯",
+            "强化",
+            "海克斯强化",
+            "augment",
+            "hex"
+          ],
+          "trigger_terms": [
+            "augment_choice",
+            "augment_choice_advice"
+          ],
+          "aliases": [
+            "augment",
+            "hex",
+            "强化选择"
+          ],
+          "stages": [
+            "2-1",
+            "3-2",
+            "4-2"
+          ]
+        }
+      ],
+      "choice_pretriggers": {
+        "1-4": {
+          "target_stage_round": "2-1",
+          "kind": "augment",
+          "mode": "augment_choice",
+          "phase": "augment_choice"
+        },
+        "3-1": {
+          "target_stage_round": "3-2",
+          "kind": "augment",
+          "mode": "augment_choice",
+          "phase": "augment_choice"
+        },
+        "4-1": {
+          "target_stage_round": "4-2",
+          "kind": "augment",
+          "mode": "augment_choice",
+          "phase": "augment_choice"
+        }
+      },
+      "stage_decision_tasks": {
+        "1-4": "Opening checkpoint: use current pairs, shop, item components, HP, gold, and match variables to prepare the 2-1 augment decision. Do not over-lock a comp before the augment.",
+        "2-1": "Augment choice is happening now. Rank the three visible augment candidates against current board/items/economy/user intent and answer keep/reroll directly.",
+        "2-2": "2-1 augment is already past. If the final selected augment is unknown, ask the user what they picked instead of saying to wait for 2-1.",
+        "3-2": "Second augment choice is happening now. Re-rank candidates using the confirmed 2-1 augment, current direction, HP, economy, and board strength.",
+        "4-2": "Third augment choice is happening now. Favor immediate combat, cap, and survival/value according to HP and current comp commitment."
+      },
+      "stage_strategy_protocol": {
+        "1-2_to_1-3": {
+          "coach_goal": "Read opening drops, pairs, shop hits, and components. Give one compact opener direction when evidence changes.",
+          "must_consider": [
+            "pairs",
+            "two-star chances",
+            "item components",
+            "early board strength",
+            "match variables"
+          ],
+          "avoid": [
+            "locking a final comp",
+            "claiming the 2-1 augment is known before it appears"
+          ]
+        },
+        "1-4": {
+          "coach_goal": "Prepare the 2-1 augment decision from current board, shop, item components, HP, gold, and match variables.",
+          "must_consider": [
+            "can preserve win streak",
+            "can loss-streak/economy",
+            "component direction",
+            "frontline/backline quality",
+            "user target plan"
+          ],
+          "output_bias": "Say the likely augment preference class, not a final augment pick."
+        },
+        "2-1": {
+          "coach_goal": "Answer augment keep/reroll now.",
+          "must_consider": [
+            "three visible augment candidates",
+            "current board",
+            "bench pairs",
+            "item components",
+            "HP",
+            "gold",
+            "user intent",
+            "daily big-data priors"
+          ],
+          "required_answer": "Pick keep/reroll and explain briefly. Do not give generic transition advice instead."
+        },
+        "2-2_to_2-3": {
+          "coach_goal": "Use the selected 2-1 augment if known. If unknown and relevant, ask what was selected.",
+          "must_consider": [
+            "selected 2-1 augment",
+            "gold/interest threshold",
+            "level/xp",
+            "board strength",
+            "shop pairs"
+          ],
+          "avoid": [
+            "saying to wait for 2-1",
+            "pretending observed candidates are the selected augment"
+          ]
+        },
+        "3-2": {
+          "coach_goal": "Answer second augment keep/reroll using confirmed first augment and current direction.",
+          "must_consider": [
+            "selected 2-1 augment",
+            "visible 3-2 candidates",
+            "HP",
+            "economy",
+            "board commitment",
+            "items",
+            "own HP and lobby pace from public/economy signals"
+          ]
+        },
+        "4-2": {
+          "coach_goal": "Answer third augment keep/reroll for survival, cap, or finishing direction.",
+          "must_consider": [
+            "HP danger",
+            "completed items",
+            "current comp",
+            "user-confirmed scouting notes if available",
+            "cap potential",
+            "reroll/level timing"
+          ]
+        }
+      },
+      "host_model_invariants": [
+        "For this active S17 ruleset, normal augment choices are at 2-1, 3-2, and 4-2.",
+        "If future S18 normal timing differs, replace this season_normal file instead of changing base_game_rules."
+      ],
+      "missing_choice_followups": {
+        "2-2": {
+          "choice_stage_round": "2-1",
+          "kind": "augment"
+        },
+        "3-3": {
+          "choice_stage_round": "3-2",
+          "kind": "augment"
+        },
+        "4-3": {
+          "choice_stage_round": "4-2",
+          "kind": "augment"
+        }
+      }
+    },
+    "special_rules": {
+      "schema": "jcc-season-special-rules-v1",
+      "scope": "season_special",
+      "season_id": "s17",
+      "patch_scope": "major_season_rules_not_patch_balance",
+      "game_mode_id": "jcc-mode17",
+      "display_name": "S17 special rules",
+      "mechanics": {
+        "decision_input_catalog": {
+          "source_kind_exclusions": {
+            "augment": [
+              {
+                "source_id": "170716",
+                "name": "亚索的恩赐",
+                "classified_as": "star_god_reward_internal"
+              },
+              {
+                "source_id": "170717",
+                "name": "韦鲁斯的恩赐",
+                "classified_as": "star_god_reward_internal"
+              },
+              {
+                "source_id": "170718",
+                "name": "阿狸的恩赐",
+                "classified_as": "star_god_reward_internal"
+              },
+              {
+                "source_id": "170719",
+                "name": "凯尔的恩赐",
+                "classified_as": "star_god_reward_internal"
+              },
+              {
+                "source_id": "170720",
+                "name": "伊芙琳的恩赐",
+                "classified_as": "star_god_reward_internal"
+              },
+              {
+                "source_id": "1170718",
+                "name": "阿狸的恩赐",
+                "classified_as": "star_god_reward_internal"
+              },
+              {
+                "source_id": "1707100",
+                "name": "奥瑞利安·索尔的恩赐",
+                "classified_as": "star_god_reward_internal"
+              },
+              {
+                "source_id": "17071001",
+                "name": "拒绝",
+                "classified_as": "star_god_reward_subchoice"
+              },
+              {
+                "source_id": "17071002",
+                "name": "次要任务",
+                "classified_as": "star_god_reward_subchoice"
+              },
+              {
+                "source_id": "17071003",
+                "name": "全能任务",
+                "classified_as": "star_god_reward_subchoice"
+              }
+            ]
+          },
+          "policy": "Source technical rows classified as season-mechanic rewards or internal subchoices must not enter another player-facing choice kind."
+        },
+        "choice_mechanics": [
+          {
+            "mechanic_id": "star_god_choice",
+            "ui_mode_key": "god",
+            "kind": "god",
+            "mode": "god_sequence",
+            "phase": "god_choice",
+            "label": "star-god choice",
+            "intent_tag": "god_sequence_intent",
+            "intent_terms": [
+              "星神",
+              "观星",
+              "众星",
+              "诱惑之神",
+              "契约之神",
+              "秩序之神",
+              "造物之神",
+              "深渊之神",
+              "财富之神",
+              "爱神"
+            ],
+            "candidate_input_policy": "current_match_user_report",
+            "catalog_entity_kind": "star_god",
+            "decision_input_kind_aliases": [
+              "star_god",
+              "s17_star_god",
+              "god",
+              "god_choice"
+            ],
+            "runtime_ui_mode": {
+              "renderer": {
+                "ui_mode_key": "god",
+                "order": 30,
+                "short_label": "星神",
+                "icon_key": "gem",
+                "prompt": "这两个星神选哪个？",
+                "visible_in_match_rail": true,
+                "secondary": false,
+                "variable_panel_role": "paired_season_choice",
+                "availability": {
+                  "kind": "active_season_capability",
+                  "active_season_ids": [
+                    "s17"
+                  ],
+                  "required_option_groups": [
+                    "current_god"
+                  ],
+                  "missing_or_future_season_behavior": "hide_and_fail_closed",
+                  "s18_without_descriptor": "hidden"
+                },
+                "missing_choice_kinds": [
+                  "god"
+                ],
+                "primary_presets": []
+              },
+              "label": "星神选择",
+              "prefill": "选哪个",
+              "choice_kind": "god_sequence",
+              "visible_in_ui": true,
+              "substeps": [
+                {
+                  "id": "god_choice",
+                  "choice_kind": "god_choice_2",
+                  "confirmation_event": "god_choice_confirmed"
+                }
+              ],
+              "flow_policy": "The visible S17 Star-God UI mode exposes a structured searchable two-choice card with reward fields and a separate exact final-confirm section. Hero/item reward three-choice is not a product sensing path and must not be auto-scanned, auto-opened, or treated as a visible option set.",
+              "data_sources": [
+                "current_match_user_report",
+                "confirmed_choice_context",
+                "live_state",
+                "season_catalog"
+              ],
+              "auto_answer": false,
+              "confirmation_required": true,
+              "return_to_cruise_after": "god_choice_confirmed_or_skipped_or_expired",
+              "choice_poll_policy": {
+                "worker": "current_match_user_report_with_host_scoring",
+                "candidate_input_policy": "current_match_user_report",
+                "user_report_contract": {
+                  "report_required_before_advice": true,
+                  "report_prompt": "请在星神卡片中搜索并填写当前两个星神；已揭示的奖励一并填写，尚未揭示的随机奖励可以留空。",
+                  "refresh_report_prefix": "直接修改发生变化的星神或奖励，再重新获取建议。",
+                  "refresh_creates_new_choice_set_revision": true,
+                  "current_match_only": true,
+                  "no_ocr_or_vision_fallback": true
+                },
+                "substeps": [
+                  {
+                    "id": "god_choice",
+                    "phase": "god_choice",
+                    "stop_on_fields": [
+                      "choices.god_choice_options"
+                    ]
+                  }
+                ],
+                "storage_policy": "Structured current-match report only; do not capture or retain OCR/vision frames for this choice intake.",
+                "pollution_policy": "Write pending choice candidates only; final match variables require user confirmation."
+              },
+              "card_report_policy": {
+                "schema": "jcc-choice-card-report-v1",
+                "card_type": "god_card",
+                "candidate_label": "星神",
+                "candidate_count": 2,
+                "candidate_option_group_terms": [
+                  "god"
+                ],
+                "candidate_option_source_key": "star_god",
+                "candidate_seed_variable_field": "god_options",
+                "candidate_sync_variable_field": "god_options",
+                "candidate_sync_policy": "replace_exact_candidate_pair_on_report",
+                "reward_option_group_terms": [
+                  "reward",
+                  "god"
+                ],
+                "reward_option_source_key": "god_reward",
+                "reward_stage_filter": {
+                  "source_stage_round_field": "stage_round",
+                  "catalog_stage_num_field": "stage_num",
+                  "stage_round_to_stage_num": {
+                    "2-4": 2,
+                    "3-4": 3,
+                    "4-4": 4
+                  },
+                  "filter_policy": "same_stage_num_only"
+                },
+                "reward_search_scope": {
+                  "kind": "selected_god_with_all_scope_exceptions",
+                  "god_name_field": "god_name",
+                  "stage_num_field": "stage_num",
+                  "all_gods_same_stage_candidate_ids": [
+                    "8"
+                  ],
+                  "description": "At 2-4, 3-4, and 4-4, rewards stay within the current stage. A normal selected star-god searches only that god's rewards; the explicitly registered Thresh exception may search every star-god reward from the same stage."
+                },
+                "required_fields": [
+                  "god_name",
+                  "reward_text"
+                ],
+                "advice_optional_fields": [
+                  "reward_text"
+                ],
+                "final_selection_required_fields": [
+                  "reward_text"
+                ],
+                "source": "current_match_user_report",
+                "stage_tabs": [
+                  "2-4",
+                  "3-4",
+                  "4-4"
+                ],
+                "candidate_identity_policy": "Star-god and reward are catalog-backed searchable fields. Reward browsing is limited to the current 2-4/3-4/4-4 stage; a normal selected star-god filters to that god's same-stage rewards, while Thresh can search all gods' same-stage rewards. Custom current-match reward text remains allowed.",
+                "refresh_send_policy": "preserve_unchanged_slots_edit_changed_slots_then_submit_from_card",
+                "no_ocr_or_vision_fallback": true,
+                "final_confirm_required": true,
+                "prior_advice_required": false,
+                "dirty_candidate_policy": "Advice may be requested with an unrevealed reward left blank, including Thresh's random reward. One confirm click first saves the latest two candidates and any known reward text without a model answer, synchronizes the descriptor-owned god_options seed field, then requires the exact revealed reward only for the selected star-god. Start Match variables seed the first card; each later 2-4/3-4/4-4 card inherits the latest canonical pair until the user changes it."
+              },
+              "final_confirmation_policy": {
+                "required": true,
+                "final_state_field": "manual_match_variables.current_god_final",
+                "state_write_strategy": "replace_latest",
+                "pending_candidates_are_not_final": true,
+                "exactly_one_followup_owner": true
+              }
+            },
+            "user_report_contract": {
+              "report_required_before_advice": true,
+              "report_prompt": "请先报出当前看到的两个星神选项和关键奖励文本。",
+              "refresh_report_prefix": "直接修改发生变化的星神或奖励，再重新获取建议。",
+              "refresh_creates_new_choice_set_revision": true,
+              "current_match_only": true,
+              "no_ocr_or_vision_fallback": true
+            },
+            "candidate_paths": [
+              "match_context.reported_choice_sets_by_mode.god_sequence.candidates"
+            ],
+            "fast_hint_label": "star-god choice",
+            "task_candidate_evidence_types": [
+              "choices.god_choice_options",
+              "god.choice_options",
+              "god.reward_options"
+            ],
+            "trigger_terms": [
+              "god"
+            ],
+            "advice_task_trigger_terms": [
+              "god_sequence_advice"
+            ],
+            "requires_visual_choice_set": false,
+            "report_required_before_advice": true,
+            "host_context_choice_field": "god_choices",
+            "visible_window_required_answer": "Rank the visible star-god options and answer which one to take now. Do not treat this as an augment reroll.",
+            "host_mode_context": {
+              "purpose": "Visible S17 star-god 2-choice only.",
+              "allowed_sources": [
+                "current_match_user_report",
+                "confirmed_earlier_star_god_choices",
+                "live_state",
+                "hard_data",
+                "cruise_context"
+              ],
+              "allowed_writes": [
+                "pending_choice",
+                "manual_match_variables_after_confirmation"
+              ],
+              "must_not_write": [
+                "final_star_god_without_user_confirmation"
+              ],
+              "response_expectation": "Advise the visible 2-choice star-god panel, require user confirmation for the final choice, then return to cruise. Do not handle the removed hero/item reward 3-choice.",
+              "version_boundary": "S17 descriptor only; S18 or later seasons must declare their own choice mechanic before this mode is visible."
+            },
+            "default_user_prompt": "这轮星神/星神奖励选哪个？",
+            "missing_selection_prompt_template": "{stage_round} 星神与本轮奖励尚未确认；请在 S17 星神卡片的最终选择区确认。后续节奏判断会以卡片中的结构化结果为准。",
+            "stages": [
+              "2-4",
+              "3-4",
+              "4-4"
+            ],
+            "reward_policy": "Star-god reward text may describe the visible 2-choice consequence. Hero/item reward 3-choice sensing is not a product runtime action.",
+            "user_card_report_schema": {
+              "schema": "jcc-choice-card-report-v1",
+              "card_type": "god_card",
+              "candidate_count": 2,
+              "required_fields": [
+                "god_name",
+                "reward_text"
+              ],
+              "advice_optional_fields": [
+                "reward_text"
+              ],
+              "final_selection_required_fields": [
+                "reward_text"
+              ],
+              "source": "current_match_user_report",
+              "refresh_send_policy": "preserve_unchanged_slots_edit_changed_slots_then_submit_from_card",
+              "no_ocr_or_vision_fallback": true,
+              "final_confirm_required": true
+            },
+            "final_confirmation_policy": {
+              "required": true,
+              "final_state_field": "manual_match_variables.current_god_final",
+              "state_write_strategy": "replace_latest",
+              "pending_candidates_are_not_final": true,
+              "prior_advice_required": false,
+              "dirty_candidate_atomic_save": true,
+              "exactly_one_followup_owner": true
+            }
+          }
+        ],
+        "choice_pretriggers": {
+          "2-3": {
+            "target_stage_round": "2-4",
+            "kind": "god",
+            "mode": "god_sequence",
+            "phase": "god_choice"
+          },
+          "3-3": {
+            "target_stage_round": "3-4",
+            "kind": "god",
+            "mode": "god_sequence",
+            "phase": "god_choice"
+          },
+          "4-3": {
+            "target_stage_round": "4-4",
+            "kind": "god",
+            "mode": "god_sequence",
+            "phase": "god_choice"
+          }
+        },
+        "match_variables": [
+          "encounter",
+          "god_options",
+          "stargazing",
+          "current_god_final",
+          "psionic_weapons",
+          "target_plan"
+        ],
+        "manual_variable_fields": [
+          {
+            "key": "encounter",
+            "label": "本局奇遇",
+            "control": "single_select",
+            "option_source_key": "encounter",
+            "section": "primary",
+            "include_in_confirmation_summary": true,
+            "legacy_payload_fields": [
+              "encounter"
+            ]
+          },
+          {
+            "key": "god_options",
+            "label": "星神",
+            "control": "multi_select",
+            "option_source_key": "current_god",
+            "section": "primary",
+            "max_items": 2,
+            "item_labels": [
+              "星神 1",
+              "星神 2"
+            ],
+            "include_in_confirmation_summary": true,
+            "legacy_payload_fields": [
+              "firstGod",
+              "secondGod"
+            ]
+          },
+          {
+            "key": "stargazing",
+            "label": "观星",
+            "control": "single_select",
+            "option_source_key": "stargazer_constellation",
+            "section": "primary",
+            "include_in_confirmation_summary": true,
+            "legacy_payload_fields": [
+              "observer"
+            ]
+          },
+          {
+            "key": "psionic_weapons",
+            "label": "灵能武器",
+            "control": "multi_select",
+            "option_source_key": "psionic_weapon",
+            "section": "advanced",
+            "max_items": 2,
+            "item_labels": [
+              "灵能武器 1",
+              "灵能武器 2"
+            ],
+            "legacy_payload_fields": [
+              "psionicWeapons"
+            ],
+            "legacy_join_separator": "+"
+          },
+          {
+            "key": "current_god_final",
+            "label": "最终星神",
+            "control": "single_select",
+            "option_source_key": "current_god",
+            "section": "advanced",
+            "legacy_payload_fields": [
+              "currentGodFinal"
+            ]
+          }
+        ],
+        "stage_decision_tasks": {
+          "2-4": "Star-god two-choice is happening now. Compare the two god names and reward text against HP, economy, board direction, and match variables; do not answer as if this were an augment three-choice.",
+          "2-5": "2-4 star-god choice is already past. If the final selected god is unknown, ask the user which one they chose before advice that depends on god effects.",
+          "3-4": "Star-god two-choice is happening now. Use confirmed earlier choices, current HP/economy/board, and user intent to choose between the two god options.",
+          "3-5": "3-4 star-god choice is already past. Ask for the selected god if missing and needed.",
+          "4-4": "Star-god two-choice is happening now. Prioritize survival, cap, and current comp fit; do not give generic early-game transition advice.",
+          "4-5": "4-4 star-god choice is already past. Ask for the selected god if missing and needed."
+        },
+        "stage_strategy_protocol": {
+          "2-4": {
+            "coach_goal": "Choose between two visible star-god options, using both god name and reward text.",
+            "must_consider": [
+              "HP cost or HP gain",
+              "current economy",
+              "board strength",
+              "bench space",
+              "current item/components",
+              "match variables",
+              "user target plan"
+            ],
+            "required_answer": "Pick one god option or state the condition that flips the choice. Do not answer as augment reroll."
+          },
+          "2-5_to_3-3": {
+            "coach_goal": "Apply the selected 2-4 god effect to tempo, economy, HP tolerance, and comp direction.",
+            "must_consider": [
+              "confirmed 2-4 selected god",
+              "HP after choice",
+              "new unit/item reward",
+              "board upgrade path"
+            ],
+            "missing_selection_policy": "If selected 2-4 god is unknown and affects advice, ask which god was chosen."
+          },
+          "3-4": {
+            "coach_goal": "Choose the next star-god option with the existing direction and selected earlier gods in mind.",
+            "must_consider": [
+              "confirmed earlier god choices",
+              "HP",
+              "gold",
+              "level",
+              "board commitment",
+              "items",
+              "lobby tempo / HP pressure / user-confirmed scouting notes"
+            ]
+          },
+          "4-4": {
+            "coach_goal": "Choose the late star-god option for survival or cap.",
+            "must_consider": [
+              "lethal risk",
+              "current cap",
+              "completed items",
+              "main carry/tank",
+              "lobby tempo / HP pressure / user-confirmed scouting notes"
+            ],
+            "avoid": [
+              "generic early-game transition advice"
+            ]
+          }
+        },
+        "itemization_interactions": {
+          "scope": "s17_only",
+          "current_match_facts": [
+            "confirmed star-god names and reward text",
+            "psionic weapons",
+            "emblems and judge-law effects",
+            "stargazing and encounter variables"
+          ],
+          "before_choice_policy": "Before the 2-4, 3-4, or 4-4 star-god choice, wait for the visible reward only when it can materially change the item line and current survival pressure permits waiting. Otherwise make the best current item decision and state the opportunity cost.",
+          "after_choice_policy": "After a star-god or other S17 choice is confirmed, recompute item fit, holder priority, slam/wait posture, and target-line alignment from the new reward. Do not require a visual candidate if user confirmation supplies the reward.",
+          "version_boundary": "These interactions extend the universal itemization doctrine only while S17 is active. Future seasons must declare their own mechanic interactions and must not inherit star-god, psionic-weapon, judge-law, or stargazing vocabulary."
+        }
+      },
+      "host_mode_addons": {
+        "god_sequence": {
+          "title": "S17 Star-God Choice Sequence",
+          "instructions": [
+            "Handle the current S17 star-god choice sequence only from selected candidates, reward text, confirmed earlier choices, and active S17 rules.",
+            "Do not infer follow-up rewards or unavailable star-god choice windows unless current selected context supplies them."
+          ]
+        }
+      },
+      "host_mode_aliases": {
+        "god_choice": "god_sequence"
+      },
+      "manual_variable_coach": {
+        "option_field": "god_options",
+        "observer_field": "stargazing",
+        "reward_path_index": "indexes/god_reward_paths.json",
+        "option_name_field": "god_name",
+        "signal_prefix": "本局星神信号：",
+        "recorded_fallback_template": "{option}：已记录，等待后续奖励文字确认具体收益。",
+        "missing_options_text": "星神变量还没完整记录，后续我会优先追问关键选择。",
+        "options_strategy_suffix": "不要一阶段就锁死阵容；2-1 海克斯、前两轮嫖牌和装备会决定是顺着它们走，还是转更强的大数据线。",
+        "observer_present_template": "{observer} 这条观星/变量先作为候选倾向，我会结合海克斯、装备和牌来判断是否值得继续靠。",
+        "observer_missing_text": "观星/变量方向还没完整记录，先按对子、装备和经济打稳。"
+      },
+      "host_model_invariants": [
+        "S17 star-god, stargazing, encounter, and psionic-weapon variables are current-match facts.",
+        "Use S17 match variables when present and let newer user intent override older intent.",
+        "Never say to wait for a past S17 star-god choice stage.",
+        "If the final selected star-god is missing after a star-god stage, ask the user instead of guessing."
+      ],
+      "missing_choice_followups": {
+        "2-5": {
+          "choice_stage_round": "2-4",
+          "kind": "god"
+        },
+        "3-5": {
+          "choice_stage_round": "3-4",
+          "kind": "god"
+        },
+        "4-5": {
+          "choice_stage_round": "4-4",
+          "kind": "god"
+        }
+      },
+      "version_layering_policy": {
+        "schema": "jcc-season-version-layering-policy-v1",
+        "season_id": "s17",
+        "owns_major_season_mechanics": [
+          "star_god_choice",
+          "stargazing",
+          "encounter",
+          "psionic_weapons"
+        ],
+        "common_runtime_must_not_embed": [
+          "star_god_choice",
+          "stargazing",
+          "encounter",
+          "psionic_weapons"
+        ],
+        "future_season_without_descriptor": "hide season-only modes and fail closed for missing-choice prompts, including S18 if no equivalent descriptor exists",
+        "ordinary_minor_patch_policy": "update hard-data, rankings, and strategy tuple only unless a real rule timing or mechanic changes"
+      }
+    }
+  }
+}

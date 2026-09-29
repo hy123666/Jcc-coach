@@ -1,0 +1,27 @@
+{
+  "applied_operations": 2,
+  "baseline": {
+    "hard_data_generation_id": "9ea24a3a5606e2aa3850bb7f7e8c08bcf0c5faaa88f1188fe0e66cc7aa9c24b7",
+    "mode_id": "mode18",
+    "patch_id": "s18_3",
+    "season_id": "s18"
+  },
+  "operations": [
+    {
+      "catalog": "augments",
+      "id": "20612",
+      "index": 0,
+      "kind": "merge_fields",
+      "name": "三相庇护"
+    },
+    {
+      "catalog": "augments",
+      "id": "20733",
+      "index": 1,
+      "kind": "merge_fields",
+      "name": "水乳交融"
+    }
+  ],
+  "release_version": "18.3",
+  "schema": "jcc-core-balance-patch-audit-v1"
+}

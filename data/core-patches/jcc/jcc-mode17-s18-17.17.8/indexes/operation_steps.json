@@ -1,0 +1,120 @@
+{
+  "address": "jcc:s17:index:operation_steps",
+  "entries": [
+    {
+      "id": "three_second",
+      "address": "jcc:s17:operation_step:three_second",
+      "max_seconds": 3,
+      "fields": [
+        "buy",
+        "sell",
+        "combine",
+        "move"
+      ],
+      "response_shape": "imperative_only",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:time_left",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:shop_units",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:components"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:operation_time_budget",
+        "jcc:s17:formula:action_feasibility"
+      ],
+      "guardrails": [
+        "one primary command",
+        "no long explanation",
+        "include stop action if blocked"
+      ]
+    },
+    {
+      "id": "five_to_ten_second",
+      "address": "jcc:s17:operation_step:five_to_ten_second",
+      "max_seconds": 10,
+      "fields": [
+        "primary_decision",
+        "one_reason",
+        "fallback",
+        "stop_line"
+      ],
+      "response_shape": "decision_plus_reason",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:time_left",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:board_units"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:operation_time_budget",
+        "jcc:s17:formula:action_feasibility",
+        "jcc:s17:formula:resource_exchange"
+      ],
+      "guardrails": [
+        "rank top option",
+        "state reroll/refresh condition if relevant",
+        "avoid unavailable actions"
+      ]
+    },
+    {
+      "id": "full_planning",
+      "address": "jcc:s17:operation_step:full_planning",
+      "max_seconds": 30,
+      "fields": [
+        "ranked_options",
+        "calculation_refs",
+        "risk",
+        "fallbacks"
+      ],
+      "response_shape": "ranked_plan",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:time_left",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:level",
+        "jcc:s17:live_state_field:xp",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:action_feasibility",
+        "jcc:s17:formula:level_timing",
+        "jcc:s17:formula:roll_probability",
+        "jcc:s17:formula:item_marginal_value"
+      ],
+      "guardrails": [
+        "separate hard-data calculation from user preference",
+        "mark stale user-confirmed scouting notes"
+      ]
+    },
+    {
+      "id": "post_round",
+      "address": "jcc:s17:operation_step:post_round",
+      "max_seconds": null,
+      "fields": [
+        "record_event",
+        "update_variables",
+        "prepare_next_round",
+        "review_hint"
+      ],
+      "response_shape": "timeline_update",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:round",
+        "jcc:s17:live_state_field:hp",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:board_units",
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:review_attribution_score",
+        "jcc:s17:formula:player_habit_bias"
+      ],
+      "guardrails": [
+        "write decision event",
+        "do not pollute patch truth with habit bias"
+      ]
+    }
+  ]
+}

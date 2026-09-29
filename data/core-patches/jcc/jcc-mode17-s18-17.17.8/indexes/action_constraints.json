@@ -1,0 +1,192 @@
+{
+  "address": "jcc:s17:index:action_constraints",
+  "entries": [
+    {
+      "id": "not_enough_gold",
+      "address": "jcc:s17:action_constraint:not_enough_gold",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:gold"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:economy",
+        "jcc:s17:formula:interest_break"
+      ],
+      "predicate": "planned_gold_cost > current_gold",
+      "fallback": "downgrade action or give stop line",
+      "output_contract": [
+        "constraint_id",
+        "is_blocking",
+        "reason",
+        "fallback_action"
+      ]
+    },
+    {
+      "id": "interest_break",
+      "address": "jcc:s17:action_constraint:interest_break",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:gold"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:interest_break",
+        "jcc:s17:formula:economy"
+      ],
+      "predicate": "gold_after_action crosses 10g threshold",
+      "fallback": "warn if action costs interest without stabilizing board",
+      "output_contract": [
+        "constraint_id",
+        "is_blocking",
+        "reason",
+        "fallback_action"
+      ]
+    },
+    {
+      "id": "bench_full",
+      "address": "jcc:s17:action_constraint:bench_full",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:bench_units",
+        "jcc:s17:live_state_field:shop_units"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:action_feasibility"
+      ],
+      "predicate": "bench_slots_free <= 0",
+      "fallback": "avoid buy instructions unless paired with sell instruction",
+      "output_contract": [
+        "constraint_id",
+        "is_blocking",
+        "reason",
+        "fallback_action"
+      ]
+    },
+    {
+      "id": "item_slots_full",
+      "address": "jcc:s17:action_constraint:item_slots_full",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:completed_items",
+        "jcc:s17:live_state_field:components"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:item_conflict_penalty"
+      ],
+      "predicate": "holder_item_slots_free <= 0",
+      "fallback": "avoid impossible item holder recommendation",
+      "output_contract": [
+        "constraint_id",
+        "is_blocking",
+        "reason",
+        "fallback_action"
+      ]
+    },
+    {
+      "id": "time_limited",
+      "address": "jcc:s17:action_constraint:time_limited",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:time_left"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:operation_time_budget"
+      ],
+      "predicate": "time_left_seconds < action_budget_seconds",
+      "fallback": "return 3-second command only",
+      "output_contract": [
+        "constraint_id",
+        "is_blocking",
+        "reason",
+        "fallback_action"
+      ]
+    },
+    {
+      "id": "unidentified_match_variable",
+      "address": "jcc:s17:action_constraint:unidentified_match_variable",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:match_variables"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:encounter_rule_shift",
+        "jcc:s17:formula:god_reward_path_bias"
+      ],
+      "predicate": "required match variable unknown",
+      "fallback": "ask short fixed question or use neutral fallback",
+      "output_contract": [
+        "constraint_id",
+        "is_blocking",
+        "reason",
+        "fallback_action"
+      ]
+    },
+    {
+      "id": "component_missing",
+      "address": "jcc:s17:action_constraint:component_missing",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:components"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:component_completion"
+      ],
+      "predicate": "candidate_item missing required component",
+      "fallback": "recommend holder/wait line instead of completed item",
+      "output_contract": [
+        "constraint_id",
+        "is_blocking",
+        "reason",
+        "fallback_action"
+      ]
+    },
+    {
+      "id": "level_too_low",
+      "address": "jcc:s17:action_constraint:level_too_low",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:level",
+        "jcc:s17:live_state_field:gold",
+        "jcc:s17:live_state_field:xp"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:level_timing"
+      ],
+      "predicate": "desired_board_size > current_level and cannot level",
+      "fallback": "avoid board plan requiring unavailable slot",
+      "output_contract": [
+        "constraint_id",
+        "is_blocking",
+        "reason",
+        "fallback_action"
+      ]
+    },
+    {
+      "id": "shop_unavailable",
+      "address": "jcc:s17:action_constraint:shop_unavailable",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:match_variables"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:action_feasibility"
+      ],
+      "predicate": "rule modifier disables shop",
+      "fallback": "skip roll/buy plan",
+      "output_contract": [
+        "constraint_id",
+        "is_blocking",
+        "reason",
+        "fallback_action"
+      ]
+    },
+    {
+      "id": "user_confirmed_scouting_note_stale",
+      "address": "jcc:s17:action_constraint:user_confirmed_scouting_note_stale",
+      "required_live_state_fields": [
+        "jcc:s17:live_state_field:user_confirmed_scouting_notes"
+      ],
+      "formula_refs": [
+        "jcc:s17:formula:scouting_priority_score"
+      ],
+      "predicate": "user_confirmed_scouting_note_age_seconds > stale_after_seconds",
+      "fallback": "mark positioning advice low confidence or scout first",
+      "output_contract": [
+        "constraint_id",
+        "is_blocking",
+        "reason",
+        "fallback_action"
+      ]
+    }
+  ]
+}

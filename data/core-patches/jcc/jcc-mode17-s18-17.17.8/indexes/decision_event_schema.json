@@ -1,0 +1,151 @@
+{
+  "address": "jcc:s17:index:decision_event_schema",
+  "required_fields": [
+    "event_id",
+    "match_thread_id",
+    "round",
+    "trigger_id",
+    "route_id",
+    "live_state_refs",
+    "runtime_strategy_orchestrator_address",
+    "runtime_strategy_orchestrator_lookup_ref",
+    "runtime_strategy_orchestrator_phase_ids",
+    "runtime_strategy_orchestrator_acceptance_contract",
+    "runtime_answer_contract_address",
+    "runtime_answer_contract_lookup_ref",
+    "answer_contract_required_sections",
+    "answer_contract_citation_fields",
+    "runtime_state_confidence_contract_address",
+    "runtime_state_confidence_contract_lookup_ref",
+    "live_state_freshness",
+    "missing_live_state_fields",
+    "stale_live_state_fields",
+    "live_state_confidence_penalties",
+    "confidence_after_live_state",
+    "runtime_feedback_loop_contract_address",
+    "runtime_feedback_loop_contract_lookup_ref",
+    "feedback_loop_required_event_fields",
+    "feedback_loop_flow_step_ids",
+    "feedback_loop_acceptance_contract",
+    "runtime_decision_recipe_address",
+    "runtime_decision_recipe_lookup_ref",
+    "runtime_decision_recipe_step_ids",
+    "route_evaluator_manifest_address",
+    "route_evaluator_manifest_lookup_ref",
+    "route_evaluator_priority_addresses",
+    "resolved_match_variables",
+    "unknown_match_variables",
+    "variable_confidence_penalties",
+    "candidate_addresses",
+    "chosen_action",
+    "rejected_options",
+    "reason_formula_refs",
+    "semantic_precision_gate_address",
+    "semantic_precision_gate_lookup_ref",
+    "precision_gate_hits",
+    "precision_gate_misses",
+    "semantic_precision_gate_scores",
+    "semantic_precision_adjustments",
+    "must_deep_load_candidates",
+    "loaded_precision_lookup_refs",
+    "time_budget_seconds",
+    "confidence",
+    "result_observed_later"
+  ],
+  "orchestrator_evidence_contract": {
+    "address_field": "runtime_strategy_orchestrator_address",
+    "lookup_ref_field": "runtime_strategy_orchestrator_lookup_ref",
+    "phase_ids_field": "runtime_strategy_orchestrator_phase_ids",
+    "acceptance_contract_field": "runtime_strategy_orchestrator_acceptance_contract",
+    "required_phase_ids": [
+      "route_intent_match",
+      "capture_live_state",
+      "normalize_entities",
+      "load_route_manifest_and_first_hop",
+      "resolve_match_variables",
+      "semantic_precision_gate_filter",
+      "formula_and_combat_estimate",
+      "score_and_deep_load_finalists",
+      "compose_and_record_event"
+    ],
+    "postgame_policy": "Review rows must preserve which route-scoped strategy orchestrator and phase contract produced the advice."
+  },
+  "semantic_precision_evidence_contract": {
+    "gate_address_field": "semantic_precision_gate_address",
+    "gate_lookup_ref_field": "semantic_precision_gate_lookup_ref",
+    "hit_miss_fields": [
+      "precision_gate_hits",
+      "precision_gate_misses"
+    ],
+    "score_fields": [
+      "semantic_precision_gate_scores",
+      "semantic_precision_adjustments"
+    ],
+    "deep_load_fields": [
+      "must_deep_load_candidates",
+      "loaded_precision_lookup_refs"
+    ],
+    "postgame_policy": "Review rows must preserve whether each finalist came from gate hit, gate miss fallback, or deep precision load."
+  },
+  "state_confidence_evidence_contract": {
+    "address_field": "runtime_state_confidence_contract_address",
+    "lookup_ref_field": "runtime_state_confidence_contract_lookup_ref",
+    "freshness_field": "live_state_freshness",
+    "missing_fields_field": "missing_live_state_fields",
+    "stale_fields_field": "stale_live_state_fields",
+    "penalty_field": "live_state_confidence_penalties",
+    "confidence_field": "confidence_after_live_state",
+    "postgame_policy": "Review rows must preserve live-state confidence penalties and thresholds separately from hard-data correctness."
+  },
+  "answer_contract_evidence_contract": {
+    "address_field": "runtime_answer_contract_address",
+    "lookup_ref_field": "runtime_answer_contract_lookup_ref",
+    "required_sections_field": "answer_contract_required_sections",
+    "citation_fields_field": "answer_contract_citation_fields",
+    "required_section_ids": [
+      "decision",
+      "hard_data_evidence",
+      "live_state_context",
+      "match_variables",
+      "semantic_precision",
+      "formula_and_combat_uncertainty",
+      "fallback_and_event"
+    ],
+    "postgame_policy": "Review rows must preserve which answer contract shaped the evidence, uncertainty, and fallback wording."
+  },
+  "feedback_loop_evidence_contract": {
+    "address_field": "runtime_feedback_loop_contract_address",
+    "lookup_ref_field": "runtime_feedback_loop_contract_lookup_ref",
+    "required_fields_field": "feedback_loop_required_event_fields",
+    "flow_step_ids_field": "feedback_loop_flow_step_ids",
+    "acceptance_contract_field": "feedback_loop_acceptance_contract",
+    "required_flow_step_ids": [
+      "record_decision_event",
+      "observe_result",
+      "attribute_delta",
+      "update_player_habit_bias",
+      "queue_semantic_or_strategy_calibration"
+    ],
+    "postgame_policy": "Review rows must preserve the feedback-loop contract identity, required event fields, flow steps, and acceptance rules without mutating official hard truth."
+  },
+  "recipe_evaluator_evidence_contract": {
+    "recipe_address_field": "runtime_decision_recipe_address",
+    "recipe_lookup_ref_field": "runtime_decision_recipe_lookup_ref",
+    "recipe_step_ids_field": "runtime_decision_recipe_step_ids",
+    "evaluator_manifest_address_field": "route_evaluator_manifest_address",
+    "evaluator_manifest_lookup_ref_field": "route_evaluator_manifest_lookup_ref",
+    "priority_evaluator_addresses_field": "route_evaluator_priority_addresses",
+    "postgame_policy": "Review rows preserve route recipe steps and evaluator refs in compact form without requiring a permanent probe artifact."
+  },
+  "reusable_for": [
+    "postgame_review",
+    "player_habit_bias",
+    "mistake_pattern_detection",
+    "explain_past_advice"
+  ],
+  "verification": {
+    "address": "jcc:s17:verification:runtime_event_driven_observe",
+    "path": "tools/verify-jcc-runtime-event-driven-observe.mjs"
+  },
+  "storage_policy": "Store structured event rows and compact textual explanation; do not store raw screenshots unless explicitly retained for debugging."
+}

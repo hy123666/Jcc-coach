@@ -1,0 +1,62 @@
+{
+  "address": "jcc:s17:formula:skill_value_scaling",
+  "source": "generated_heuristic",
+  "inputs": [
+    "skill_value_blocks",
+    "star",
+    "unit_stats",
+    "ap",
+    "ad",
+    "armor",
+    "magic_resist",
+    "hp",
+    "effect_context"
+  ],
+  "outputs": [
+    "resolved_value_by_star",
+    "value_by_kind",
+    "damage_value",
+    "healing_value",
+    "shield_value",
+    "stat_value_delta",
+    "mitigation_value",
+    "count_value",
+    "duration_value",
+    "effect_value",
+    "fast_path_formula_refs",
+    "primary_formula_refs",
+    "scaling_formula_refs"
+  ],
+  "formulas": {
+    "resolved_value_by_star": "select value_blocks.by_star[star]",
+    "damage_value": "resolved damage block through damage formula when value_kind is damage",
+    "stat_value_delta": "resolved stat block through stat_modifier_value when value_kind is stat",
+    "fast_path_formula_refs": "prefer each value block scoring_use.fast_path_formula over broad formula_refs"
+  },
+  "dependencies": [
+    "jcc:s17:formula:damage",
+    "jcc:s17:formula:healing_effective_hp",
+    "jcc:s17:formula:shield_effective_hp",
+    "jcc:s17:formula:stat_modifier_value",
+    "jcc:s17:formula:star_upgrade_delta"
+  ],
+  "use_cases": [
+    "champion skill star scaling",
+    "2-star vs 1-star spell delta",
+    "skill-based item fit"
+  ],
+  "exactness": "exact_for_extracted_series_heuristic_for_label_binding",
+  "name": "skill_value_scaling",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "skill"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review",
+    "trait_or_unit_swap"
+  ],
+  "dependency_kind": "derived_formula"
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "jcc-official-hard-data-source-receipt-v1",
+  "target": {
+    "season_id": "s18",
+    "patch_id": "s18_3"
+  },
+  "upstream_identity": {
+    "mode": "18",
+    "season": "S19",
+    "version": "18.18.3",
+    "released_at": "2026-09-28"
+  },
+  "source": {
+    "index_sha256": "1cf486a2d47dcf031014c8e62a955c6e49f3cbfcadceade1f1aa09141bf9ae97",
+    "urls": {
+      "chess": "https://game.gtimg.cn/images/lol/act/jkzlk/js/18/18.18.3-S19/chess.js",
+      "race": "https://game.gtimg.cn/images/lol/act/jkzlk/js/18/18.18.3-S19/race.js",
+      "adventure": "https://game.gtimg.cn/images/lol/act/jkzlk/js/18/18.18.3-S19/adventure.js",
+      "equip": "https://game.gtimg.cn/images/lol/act/jkzlk/js/18/18.18.3-S19/equip.js",
+      "job": "https://game.gtimg.cn/images/lol/act/jkzlk/js/18/18.18.3-S19/job.js",
+      "hex": "https://game.gtimg.cn/images/lol/act/jkzlk/js/18/18.18.3-S19/hex.js"
+    },
+    "hashes": {
+      "chess": "c3ee04f9e6490af7bbd19961731cc27309a7659d7d71f906c4a74e297317c5ba",
+      "race": "564a6c9135adc310cc3fcffcdaa1fbce6036b12ed5e4fb7397e0adcd6dafde3d",
+      "adventure": "aea8a386e679123a921147a7688155d3094ccd6e0c05d152f481643146247536",
+      "equip": "4c5e5ea0e573a8dc5a085a32f79c96e76084e16b34b73a33ed479d25e4534dcd",
+      "job": "6e64488ff5fcd252c2bc31c459cf28fbae70794fb1d095adc4cf8e706ce44386",
+      "hex": "b37b3ea169b1c45aeaf4d92e28df2545b0f50d8d94e551b6b2ad3e351061c126"
+    }
+  }
+}

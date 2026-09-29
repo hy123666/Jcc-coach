@@ -1,0 +1,44 @@
+{
+  "address": "jcc:s17:formula:double_cast_effectiveness",
+  "source": "generated_heuristic",
+  "inputs": [
+    "base_cast_value",
+    "repeat_efficiency_pct",
+    "estimated_casts",
+    "damage_or_utility_type",
+    "overkill_or_shield_waste"
+  ],
+  "outputs": [
+    "extra_cast_value",
+    "effective_total_cast_value",
+    "repeat_cast_tempo_value"
+  ],
+  "formulas": {
+    "extra_cast_value": "base_cast_value * repeat_efficiency_pct * estimated_casts * (1 - waste_pct)",
+    "effective_total_cast_value": "base_cast_value * estimated_casts + extra_cast_value"
+  },
+  "dependencies": [
+    "jcc:s17:formula:cast_frequency",
+    "jcc:s17:formula:damage",
+    "jcc:s17:formula:damage_amp_stack"
+  ],
+  "use_cases": [
+    "double-cast traits",
+    "recast augments",
+    "caster item valuation when effects repeat at reduced efficiency"
+  ],
+  "exactness": "heuristic_until_skill_specific_waste_and_targeting_are_known",
+  "name": "double_cast_effectiveness",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "cast"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review",
+    "augment_choice"
+  ],
+  "dependency_kind": "derived_formula"
+}

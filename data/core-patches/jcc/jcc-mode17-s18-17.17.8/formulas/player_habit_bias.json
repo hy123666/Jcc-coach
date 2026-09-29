@@ -1,0 +1,35 @@
+{
+  "address": "jcc:s17:formula:player_habit_bias",
+  "source": "generated_heuristic",
+  "inputs": [
+    "recent_matches",
+    "decision_events",
+    "user_feedback"
+  ],
+  "outputs": [
+    "habit_biases",
+    "coaching_reminders"
+  ],
+  "formulas": {
+    "habit_strength": "decayed_frequency * severity * confidence"
+  },
+  "dependencies": [
+    "jcc:s17:index:player_habit_bias_schema",
+    "jcc:s17:formula:review_attribution_score"
+  ],
+  "use_cases": [
+    "玩家习惯分析",
+    "下次同类局面提醒"
+  ],
+  "exactness": "personal_memory_heuristic",
+  "name": "player_habit_bias",
+  "category": "review",
+  "domains": [
+    "review",
+    "profile"
+  ],
+  "route_domains": [
+    "postgame_review"
+  ],
+  "dependency_kind": "derived_formula"
+}

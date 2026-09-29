@@ -1,0 +1,3731 @@
+[
+  {
+    "address": "jcc:s17:god_reward_path:奥瑞利安_索尔_造物之神",
+    "god_name": "奥瑞利安·索尔 造物之神",
+    "rewards": [
+      {
+        "reward_address": "jcc:s17:god_reward:2_1702010_stage_2",
+        "name": "财富探险",
+        "stage_num": 2,
+        "tags": [
+          "economy",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:2_1702010_stage_2",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "threshold_reached",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "threshold",
+                "operator": "text_inferred",
+                "value": 50
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:2_1702040_stage_2",
+        "name": "羁绊探险",
+        "stage_num": 2,
+        "tags": [
+          "emblem",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:2_1702040_stage_2",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:2_1702020_stage_3",
+        "name": "星空探险",
+        "stage_num": 3,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:2_1702020_stage_3",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 10,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:2_1702040_stage_3",
+        "name": "羁绊探险",
+        "stage_num": 3,
+        "tags": [
+          "emblem",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:2_1702040_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:2_1702030_stage_4",
+        "name": "等级探险",
+        "stage_num": 4,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:2_1702030_stage_4",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 20,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "threshold_reached",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "threshold",
+                "operator": "text_inferred",
+                "value": 9
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:2_1702050_stage_4",
+        "name": "奥瑞利安·索尔的恩赐",
+        "stage_num": 4,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:2_1702060_stage_4",
+        "name": "低生命值探险",
+        "stage_num": 4,
+        "tags": [
+          "economy",
+          "health"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:2_1702060_stage_4",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 21,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:2_1702070_stage_4",
+        "name": "刷新探险",
+        "stage_num": 4,
+        "tags": [
+          "item_reward",
+          "shop_odds"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:2_1702070_stage_4",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_shop_refresh",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "shop"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      }
+    ],
+    "path_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": true,
+      "pivot": true
+    }
+  },
+  {
+    "address": "jcc:s17:god_reward_path:亚索_深渊之神",
+    "god_name": "亚索 深渊之神",
+    "rewards": [
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703010_stage_2",
+        "name": "烈阳格",
+        "stage_num": 2,
+        "tags": [
+          "health",
+          "item_reward",
+          "magic_damage",
+          "single_target",
+          "true_damage",
+          "wound"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703010_stage_2",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703020_stage_2",
+        "name": "宇宙格",
+        "stage_num": 2,
+        "tags": [
+          "health",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703020_stage_2",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703030_stage_2",
+        "name": "增速格",
+        "stage_num": 2,
+        "tags": [
+          "attack_speed",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703030_stage_2",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703040_stage_2",
+        "name": "星光格",
+        "stage_num": 2,
+        "tags": [
+          "health",
+          "item_reward",
+          "mana"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703040_stage_2",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703050_stage_2",
+        "name": "风暴格",
+        "stage_num": 2,
+        "tags": [
+          "control",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703050_stage_2",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703060_stage_2",
+        "name": "冰晶格",
+        "stage_num": 2,
+        "tags": [
+          "health",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703060_stage_2",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703010_stage_3",
+        "name": "烈阳格",
+        "stage_num": 3,
+        "tags": [
+          "health",
+          "item_reward",
+          "magic_damage",
+          "single_target",
+          "true_damage",
+          "wound"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703010_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703030_stage_3",
+        "name": "增速格",
+        "stage_num": 3,
+        "tags": [
+          "attack_speed",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703030_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703040_stage_3",
+        "name": "星光格",
+        "stage_num": 3,
+        "tags": [
+          "health",
+          "item_reward",
+          "mana"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703040_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703050_stage_3",
+        "name": "风暴格",
+        "stage_num": 3,
+        "tags": [
+          "control",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703050_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703060_stage_3",
+        "name": "冰晶格",
+        "stage_num": 3,
+        "tags": [
+          "health",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703060_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703010_stage_4",
+        "name": "烈阳格",
+        "stage_num": 4,
+        "tags": [
+          "health",
+          "item_reward",
+          "magic_damage",
+          "single_target",
+          "true_damage",
+          "wound"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703010_stage_4",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703030_stage_4",
+        "name": "增速格",
+        "stage_num": 4,
+        "tags": [
+          "attack_speed",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703030_stage_4",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703040_stage_4",
+        "name": "星光格",
+        "stage_num": 4,
+        "tags": [
+          "health",
+          "item_reward",
+          "mana"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703040_stage_4",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703050_stage_4",
+        "name": "风暴格",
+        "stage_num": 4,
+        "tags": [
+          "control",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703050_stage_4",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703060_stage_4",
+        "name": "冰晶格",
+        "stage_num": 4,
+        "tags": [
+          "health",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703060_stage_4",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:3_1703070_stage_4",
+        "name": "亚索的恩赐",
+        "stage_num": 4,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:3_1703070_stage_4",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 8,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      }
+    ],
+    "path_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    }
+  },
+  {
+    "address": "jcc:s17:god_reward_path:凯尔_秩序之神",
+    "god_name": "凯尔 秩序之神",
+    "rewards": [
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704010_stage_2",
+        "name": "随机基础装备",
+        "stage_num": 2,
+        "tags": [
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:4_1704010_stage_2",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704020_stage_2",
+        "name": "拳套",
+        "stage_num": 2,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704021_stage_2",
+        "name": "反曲之弓",
+        "stage_num": 2,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704022_stage_2",
+        "name": "女神之泪",
+        "stage_num": 2,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704040_stage_2",
+        "name": "精工细作",
+        "stage_num": 2,
+        "tags": [
+          "economy",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:4_1704040_stage_2",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 2,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          },
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:4_1704040_stage_2",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "immediate",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704050_stage_2",
+        "name": "锻造器转变",
+        "stage_num": 2,
+        "tags": [
+          "economy",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:4_1704050_stage_2",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 2,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          },
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:4_1704050_stage_2",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704010_stage_3",
+        "name": "随机基础装备",
+        "stage_num": 3,
+        "tags": [
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:4_1704010_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704023_stage_3",
+        "name": "无用大棒",
+        "stage_num": 3,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704024_stage_3",
+        "name": "锁子甲",
+        "stage_num": 3,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704025_stage_3",
+        "name": "负极斗篷",
+        "stage_num": 3,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704026_stage_3",
+        "name": "暴风大剑",
+        "stage_num": 3,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704030_stage_3",
+        "name": "神圣返还",
+        "stage_num": 3,
+        "tags": [
+          "economy",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:4_1704030_stage_3",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 2,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          },
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:4_1704030_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704010_stage_4",
+        "name": "随机基础装备",
+        "stage_num": 4,
+        "tags": [
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:4_1704010_stage_4",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704011_stage_4",
+        "name": "凯尔的恩赐",
+        "stage_num": 4,
+        "tags": [
+          "health",
+          "item_reward",
+          "magic_damage",
+          "physical_damage"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704020_stage_4",
+        "name": "拳套",
+        "stage_num": 4,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704021_stage_4",
+        "name": "反曲之弓",
+        "stage_num": 4,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704022_stage_4",
+        "name": "女神之泪",
+        "stage_num": 4,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704023_stage_4",
+        "name": "无用大棒",
+        "stage_num": 4,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704024_stage_4",
+        "name": "锁子甲",
+        "stage_num": 4,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704025_stage_4",
+        "name": "负极斗篷",
+        "stage_num": 4,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:4_1704026_stage_4",
+        "name": "暴风大剑",
+        "stage_num": 4,
+        "tags": [],
+        "rule_modifiers": []
+      }
+    ],
+    "path_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    }
+  },
+  {
+    "address": "jcc:s17:god_reward_path:阿狸_财富之神",
+    "god_name": "阿狸 财富之神",
+    "rewards": [
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705010_stage_2",
+        "name": "6金币",
+        "stage_num": 2,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705020_stage_2",
+        "name": "6经验",
+        "stage_num": 2,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705030_stage_2",
+        "name": "4次刷新",
+        "stage_num": 2,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705040_stage_2",
+        "name": "联手致富",
+        "stage_num": 2,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:5_1705040_stage_2",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 6,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705070_stage_2",
+        "name": "神圣投资",
+        "stage_num": 2,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:5_1705070_stage_2",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 4,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          },
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:5_1705070_stage_2",
+            "target": "economy.max_interest",
+            "operation": "add",
+            "value": 1,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705080_stage_2",
+        "name": "贪婪之宝箱",
+        "stage_num": 2,
+        "tags": [
+          "aoe",
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:5_1705080_stage_2",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 2,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705011_stage_3",
+        "name": "8金币",
+        "stage_num": 3,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705021_stage_3",
+        "name": "8经验",
+        "stage_num": 3,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705031_stage_3",
+        "name": "5次刷新",
+        "stage_num": 3,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705041_stage_3",
+        "name": "联手致富+",
+        "stage_num": 3,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:5_1705041_stage_3",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 8,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705060_stage_3",
+        "name": "每回合金币?",
+        "stage_num": 3,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:5_1705060_stage_3",
+            "target": "economy.recurring_gold",
+            "operation": "add_recurring",
+            "value": 1,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "round_start",
+              "cadence": "recurring",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "ongoing_rule",
+              "until": "match_end_or_rule_removed"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705071_stage_3",
+        "name": "神圣投资+",
+        "stage_num": 3,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:5_1705071_stage_3",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 6,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          },
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:5_1705071_stage_3",
+            "target": "economy.max_interest",
+            "operation": "add",
+            "value": 1,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705081_stage_3",
+        "name": "贪婪之宝箱+",
+        "stage_num": 3,
+        "tags": [
+          "aoe",
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:5_1705081_stage_3",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 3,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705090_stage_3",
+        "name": "赐福：财富",
+        "stage_num": 3,
+        "tags": [
+          "economy",
+          "magic_damage",
+          "physical_damage"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705012_stage_4",
+        "name": "10金币",
+        "stage_num": 4,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705032_stage_4",
+        "name": "7次刷新",
+        "stage_num": 4,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705042_stage_4",
+        "name": "联手致富++",
+        "stage_num": 4,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:5_1705042_stage_4",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 10,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705050_stage_4",
+        "name": "阿狸的恩赐",
+        "stage_num": 4,
+        "tags": [
+          "economy",
+          "magic_damage",
+          "physical_damage"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:5_1705050_stage_4",
+            "target": "economy.recurring_xp",
+            "operation": "add_recurring",
+            "value": 2,
+            "unit": "xp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "round_start",
+              "cadence": "recurring",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "ongoing_rule",
+              "until": "match_end_or_rule_removed"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:5_1705082_stage_4",
+        "name": "贪婪之宝箱++",
+        "stage_num": 4,
+        "tags": [
+          "aoe",
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:5_1705082_stage_4",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 4,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      }
+    ],
+    "path_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    }
+  },
+  {
+    "address": "jcc:s17:god_reward_path:韦鲁斯_爱神",
+    "god_name": "韦鲁斯 爱神",
+    "rewards": [
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706010_stage_3",
+        "name": "次级英雄复制器",
+        "stage_num": 3,
+        "tags": [
+          "duplicator",
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:6_1706010_stage_3",
+            "target": "inventory.duplicator",
+            "operation": "grant",
+            "value": null,
+            "unit": "duplicator",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706020_stage_3",
+        "name": "现有的3费弈子",
+        "stage_num": 3,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706041_stage_3",
+        "name": "恋人+",
+        "stage_num": 3,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706080_stage_3",
+        "name": "4费商店",
+        "stage_num": 3,
+        "tags": [
+          "shop_odds"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706100_stage_3",
+        "name": "短生刷新",
+        "stage_num": 3,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706110_stage_3",
+        "name": "升星缘分",
+        "stage_num": 3,
+        "tags": [
+          "shop_odds"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706120_stage_3",
+        "name": "超级临别赠礼",
+        "stage_num": 3,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706011_stage_4",
+        "name": "次级英雄复制器",
+        "stage_num": 4,
+        "tags": [
+          "duplicator",
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:6_1706011_stage_4",
+            "target": "inventory.duplicator",
+            "operation": "grant",
+            "value": null,
+            "unit": "duplicator",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706012_stage_4",
+        "name": "复制器大礼包",
+        "stage_num": 4,
+        "tags": [
+          "duplicator"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:6_1706012_stage_4",
+            "target": "inventory.duplicator",
+            "operation": "grant",
+            "value": null,
+            "unit": "duplicator",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706021_stage_4",
+        "name": "现有的4费弈子",
+        "stage_num": 4,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706042_stage_4",
+        "name": "恋人++",
+        "stage_num": 4,
+        "tags": [
+          "shop_odds"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706090_stage_4",
+        "name": "韦鲁斯的恩赐",
+        "stage_num": 4,
+        "tags": [
+          "health",
+          "shop_odds"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:6_1706090_stage_4",
+            "target": "shop.odds.cost5",
+            "operation": "add_percent_points",
+            "value": 2,
+            "unit": "percent_point",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706120_stage_4",
+        "name": "超级临别赠礼",
+        "stage_num": 4,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706020_stage_2",
+        "name": "现有的3费弈子",
+        "stage_num": 2,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706040_stage_2",
+        "name": "恋人",
+        "stage_num": 2,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706050_stage_2",
+        "name": "2个微型复制器",
+        "stage_num": 2,
+        "tags": [
+          "duplicator"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:6_1706050_stage_2",
+            "target": "inventory.duplicator",
+            "operation": "grant",
+            "value": null,
+            "unit": "duplicator",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706070_stage_2",
+        "name": "3费商店",
+        "stage_num": 2,
+        "tags": [
+          "shop_odds"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:6_1706120_stage_2",
+        "name": "超级临别赠礼",
+        "stage_num": 2,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      }
+    ],
+    "path_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": true,
+      "pivot": false
+    }
+  },
+  {
+    "address": "jcc:s17:god_reward_path:艾克_时间之神",
+    "god_name": "艾克 时间之神",
+    "rewards": [
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707000_stage_3",
+        "name": "赐福：速度",
+        "stage_num": 3,
+        "tags": [
+          "attack_speed",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:7_1707000_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707011_stage_3",
+        "name": "迅捷蟹派对",
+        "stage_num": 3,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707051_stage_3",
+        "name": "2个5费弈子",
+        "stage_num": 3,
+        "tags": [
+          "shop_odds"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707060_stage_3",
+        "name": "基础装备锻造器",
+        "stage_num": 3,
+        "tags": [
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:7_1707060_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707000_stage_4",
+        "name": "赐福：速度",
+        "stage_num": 4,
+        "tags": [
+          "attack_speed",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:7_1707000_stage_4",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707041_stage_4",
+        "name": "随机神器",
+        "stage_num": 4,
+        "tags": [
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:7_1707041_stage_4",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707061_stage_4",
+        "name": "成装锻造器",
+        "stage_num": 4,
+        "tags": [
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:7_1707061_stage_4",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707070_stage_4",
+        "name": "5费商店",
+        "stage_num": 4,
+        "tags": [
+          "aoe",
+          "economy",
+          "shop_odds"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707080_stage_4",
+        "name": "现金流",
+        "stage_num": 4,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:7_1707080_stage_4",
+            "target": "economy.recurring_gold",
+            "operation": "add_recurring",
+            "value": 2,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "round_start",
+              "cadence": "recurring",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "round_start"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "ongoing_rule",
+              "until": "match_end_or_rule_removed"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707090_stage_4",
+        "name": "艾克的恩赐",
+        "stage_num": 4,
+        "tags": [
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:7_1707090_stage_4",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707010_stage_2",
+        "name": "迅捷蟹派对",
+        "stage_num": 2,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707020_stage_2",
+        "name": "神圣干预",
+        "stage_num": 2,
+        "tags": [
+          "health"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707040_stage_2",
+        "name": "随机神器",
+        "stage_num": 2,
+        "tags": [
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:7_1707040_stage_2",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:7_1707050_stage_2",
+        "name": "4费弈子",
+        "stage_num": 2,
+        "tags": [],
+        "rule_modifiers": []
+      }
+    ],
+    "path_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": true,
+      "pivot": true
+    }
+  },
+  {
+    "address": "jcc:s17:god_reward_path:锤石_契约之神",
+    "god_name": "锤石 契约之神",
+    "rewards": [
+      {
+        "reward_address": "jcc:s17:god_reward:8_1708010_stage_2",
+        "name": "随机恩赐",
+        "stage_num": 2,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:8_1708020_stage_2",
+        "name": "神秘战利品",
+        "stage_num": 2,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:8_1708060_stage_2",
+        "name": "迷你变形重组器",
+        "stage_num": 2,
+        "tags": [
+          "aoe"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:8_1708011_stage_3",
+        "name": "随机恩赐",
+        "stage_num": 3,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:8_1708021_stage_3",
+        "name": "神秘战利品",
+        "stage_num": 3,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:8_1708012_stage_4",
+        "name": "随机恩赐",
+        "stage_num": 4,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:8_1708022_stage_4",
+        "name": "神秘战利品",
+        "stage_num": 4,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:8_1708030_stage_4",
+        "name": "掷骰子",
+        "stage_num": 4,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:8_1708040_stage_4",
+        "name": "锤石的恩赐",
+        "stage_num": 4,
+        "tags": [],
+        "rule_modifiers": []
+      }
+    ],
+    "path_bias": {
+      "immediate_power": false,
+      "economy": true,
+      "cap": false,
+      "stabilize": false,
+      "pivot": false
+    }
+  },
+  {
+    "address": "jcc:s17:god_reward_path:索拉卡_众星之神",
+    "god_name": "索拉卡 众星之神",
+    "rewards": [
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709010_stage_2",
+        "name": "12小小英雄生命值",
+        "stage_num": 2,
+        "tags": [
+          "health"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709020_stage_2",
+        "name": "在一起更好",
+        "stage_num": 2,
+        "tags": [
+          "economy",
+          "health"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:9_1709020_stage_2",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 2,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709040_stage_2",
+        "name": "巨人腰带",
+        "stage_num": 2,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709060_stage_2",
+        "name": "索拉卡的拥抱",
+        "stage_num": 2,
+        "tags": [
+          "shield"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709080_stage_2",
+        "name": "赐福：兴盛",
+        "stage_num": 2,
+        "tags": [
+          "economy",
+          "health"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709010_stage_3",
+        "name": "12小小英雄生命值",
+        "stage_num": 3,
+        "tags": [
+          "health"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709021_stage_3",
+        "name": "在一起更好+",
+        "stage_num": 3,
+        "tags": [
+          "economy",
+          "health"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:9_1709021_stage_3",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 3,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709030_stage_3",
+        "name": "赐福：体型",
+        "stage_num": 3,
+        "tags": [
+          "health",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:9_1709030_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709040_stage_3",
+        "name": "巨人腰带",
+        "stage_num": 3,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709060_stage_3",
+        "name": "索拉卡的拥抱",
+        "stage_num": 3,
+        "tags": [
+          "shield"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709070_stage_3",
+        "name": "神圣共情",
+        "stage_num": 3,
+        "tags": [
+          "health",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:9_1709070_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709081_stage_3",
+        "name": "赐福：兴盛+",
+        "stage_num": 3,
+        "tags": [
+          "economy",
+          "health"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709010_stage_4",
+        "name": "12小小英雄生命值",
+        "stage_num": 4,
+        "tags": [
+          "health"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709022_stage_4",
+        "name": "在一起更好+",
+        "stage_num": 4,
+        "tags": [
+          "economy",
+          "health"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:9_1709022_stage_4",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 4,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709030_stage_4",
+        "name": "赐福：体型",
+        "stage_num": 4,
+        "tags": [
+          "health",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:9_1709030_stage_4",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709040_stage_4",
+        "name": "巨人腰带",
+        "stage_num": 4,
+        "tags": [],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709050_stage_4",
+        "name": "索拉卡的恩赐",
+        "stage_num": 4,
+        "tags": [
+          "health"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:9_1709060_stage_4",
+        "name": "索拉卡的拥抱",
+        "stage_num": 4,
+        "tags": [
+          "shield"
+        ],
+        "rule_modifiers": []
+      }
+    ],
+    "path_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": false,
+      "stabilize": true,
+      "pivot": true
+    }
+  },
+  {
+    "address": "jcc:s17:god_reward_path:伊芙琳_诱惑之神",
+    "god_name": "伊芙琳 诱惑之神",
+    "rewards": [
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710010_stage_2",
+        "name": "2星2费",
+        "stage_num": 2,
+        "tags": [
+          "health",
+          "health_cost"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710010_stage_2",
+            "target": "player_health",
+            "operation": "cost_or_penalty",
+            "value": null,
+            "unit": "hp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "risk_or_payment"
+            },
+            "condition": [
+              {
+                "kind": "cost_or_penalty",
+                "operator": "applies",
+                "value": null
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710014_stage_2",
+        "name": "1星4费",
+        "stage_num": 2,
+        "tags": [
+          "health",
+          "health_cost"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710014_stage_2",
+            "target": "player_health",
+            "operation": "cost_or_penalty",
+            "value": null,
+            "unit": "hp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "risk_or_payment"
+            },
+            "condition": [
+              {
+                "kind": "cost_or_penalty",
+                "operator": "applies",
+                "value": null
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710040_stage_2",
+        "name": "猩红契约",
+        "stage_num": 2,
+        "tags": [
+          "economy",
+          "health",
+          "health_cost"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710040_stage_2",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 8,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          },
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710040_stage_2",
+            "target": "player_health",
+            "operation": "cost_or_penalty",
+            "value": null,
+            "unit": "hp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "risk_or_payment"
+            },
+            "condition": [
+              {
+                "kind": "cost_or_penalty",
+                "operator": "applies",
+                "value": null
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710050_stage_2",
+        "name": "碾压之势",
+        "stage_num": 2,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710080_stage_2",
+        "name": "决赛圈胜负手",
+        "stage_num": 2,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710080_stage_2",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 3,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710011_stage_3",
+        "name": "2星3费",
+        "stage_num": 3,
+        "tags": [
+          "health",
+          "health_cost"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710011_stage_3",
+            "target": "player_health",
+            "operation": "cost_or_penalty",
+            "value": null,
+            "unit": "hp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "risk_or_payment"
+            },
+            "condition": [
+              {
+                "kind": "cost_or_penalty",
+                "operator": "applies",
+                "value": null
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710012_stage_3",
+        "name": "3星1费",
+        "stage_num": 3,
+        "tags": [
+          "health",
+          "health_cost"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710012_stage_3",
+            "target": "player_health",
+            "operation": "cost_or_penalty",
+            "value": null,
+            "unit": "hp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "risk_or_payment"
+            },
+            "condition": [
+              {
+                "kind": "cost_or_penalty",
+                "operator": "applies",
+                "value": null
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710020_stage_3",
+        "name": "随机纹章",
+        "stage_num": 3,
+        "tags": [
+          "emblem",
+          "health",
+          "health_cost"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710020_stage_3",
+            "target": "player_health",
+            "operation": "cost_or_penalty",
+            "value": null,
+            "unit": "hp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "risk_or_payment"
+            },
+            "condition": [
+              {
+                "kind": "cost_or_penalty",
+                "operator": "applies",
+                "value": null
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          },
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710020_stage_3",
+            "target": "inventory.item_reward",
+            "operation": "grant_or_choice",
+            "value": null,
+            "unit": "item",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710041_stage_3",
+        "name": "猩红契约+",
+        "stage_num": 3,
+        "tags": [
+          "economy",
+          "health",
+          "health_cost"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710041_stage_3",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 10,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          },
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710041_stage_3",
+            "target": "player_health",
+            "operation": "cost_or_penalty",
+            "value": null,
+            "unit": "hp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "risk_or_payment"
+            },
+            "condition": [
+              {
+                "kind": "cost_or_penalty",
+                "operator": "applies",
+                "value": null
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710051_stage_3",
+        "name": "碾压之势+",
+        "stage_num": 3,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": []
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710060_stage_3",
+        "name": "12金币",
+        "stage_num": 3,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710060_stage_3",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 12,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710013_stage_4",
+        "name": "2星4费",
+        "stage_num": 4,
+        "tags": [
+          "health",
+          "health_cost"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710013_stage_4",
+            "target": "player_health",
+            "operation": "cost_or_penalty",
+            "value": null,
+            "unit": "hp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "risk_or_payment"
+            },
+            "condition": [
+              {
+                "kind": "cost_or_penalty",
+                "operator": "applies",
+                "value": null
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710015_stage_4",
+        "name": "2个1星5费",
+        "stage_num": 4,
+        "tags": [
+          "health",
+          "health_cost",
+          "shop_odds"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710015_stage_4",
+            "target": "player_health",
+            "operation": "cost_or_penalty",
+            "value": null,
+            "unit": "hp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "risk_or_payment"
+            },
+            "condition": [
+              {
+                "kind": "cost_or_penalty",
+                "operator": "applies",
+                "value": null
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710030_stage_4",
+        "name": "随机成装",
+        "stage_num": 4,
+        "tags": [
+          "health",
+          "health_cost",
+          "item_reward"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710030_stage_4",
+            "target": "player_health",
+            "operation": "cost_or_penalty",
+            "value": null,
+            "unit": "hp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "risk_or_payment"
+            },
+            "condition": [
+              {
+                "kind": "cost_or_penalty",
+                "operator": "applies",
+                "value": null
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710042_stage_4",
+        "name": "猩红契约++",
+        "stage_num": 4,
+        "tags": [
+          "economy",
+          "health",
+          "health_cost"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710042_stage_4",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 13,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          },
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710042_stage_4",
+            "target": "player_health",
+            "operation": "cost_or_penalty",
+            "value": null,
+            "unit": "hp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "risk_or_payment"
+            },
+            "condition": [
+              {
+                "kind": "cost_or_penalty",
+                "operator": "applies",
+                "value": null
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710061_stage_4",
+        "name": "18金币",
+        "stage_num": 4,
+        "tags": [
+          "economy"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710061_stage_4",
+            "target": "economy.gold",
+            "operation": "add",
+            "value": 18,
+            "unit": "gold",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "on_pickup_or_rule_enabled",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "planning"
+            },
+            "condition": [
+              {
+                "kind": "none",
+                "operator": "always",
+                "value": true
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      },
+      {
+        "reward_address": "jcc:s17:god_reward:10_1710070_stage_4",
+        "name": "伊芙琳的恩赐",
+        "stage_num": 4,
+        "tags": [
+          "durability",
+          "health",
+          "health_cost"
+        ],
+        "rule_modifiers": [
+          {
+            "source_kind": "god_reward",
+            "source_address": "jcc:s17:god_reward:10_1710070_stage_4",
+            "target": "player_health",
+            "operation": "cost_or_penalty",
+            "value": null,
+            "unit": "hp",
+            "confidence": "heuristic_text",
+            "timing": {
+              "trigger": "after_loss",
+              "cadence": "one_time",
+              "duration": "permanent_or_until_rule_removed",
+              "delay_rounds": null,
+              "phase": "risk_or_payment"
+            },
+            "condition": [
+              {
+                "kind": "combat_result",
+                "operator": "=",
+                "value": "loss"
+              },
+              {
+                "kind": "cost_or_penalty",
+                "operator": "applies",
+                "value": null
+              }
+            ],
+            "duration": {
+              "kind": "one_time_effect",
+              "until": "resolved"
+            }
+          }
+        ]
+      }
+    ],
+    "path_bias": {
+      "immediate_power": true,
+      "economy": true,
+      "cap": true,
+      "stabilize": true,
+      "pivot": true
+    }
+  }
+]

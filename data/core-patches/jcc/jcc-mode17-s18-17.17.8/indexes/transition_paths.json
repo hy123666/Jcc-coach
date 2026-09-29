@@ -1,0 +1,2677 @@
+[
+  {
+    "address": "jcc:s17:transition_path:幻灵战队",
+    "from_trait_address": "jcc:s17:trait:400",
+    "from_trait_name": "幻灵战队",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:406",
+        "to_trait_name": "海魔人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1463",
+            "name": "贝蕾亚",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:421",
+        "to_trait_name": "斗神",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5426",
+            "name": "菲奥娜",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:312",
+        "to_trait_name": "挑战者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2458",
+            "name": "金克丝",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:315",
+        "to_trait_name": "狂战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5426",
+            "name": "菲奥娜",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:317",
+        "to_trait_name": "游侠",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1463",
+            "name": "贝蕾亚",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:319",
+        "to_trait_name": "牧羊人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3460",
+            "name": "俄洛伊",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:320",
+        "to_trait_name": "重装战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3460",
+            "name": "俄洛伊",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:321",
+        "to_trait_name": "旅人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3462",
+            "name": "阿萝拉",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:法官",
+    "from_trait_address": "jcc:s17:trait:401",
+    "from_trait_name": "法官",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:312",
+        "to_trait_name": "挑战者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3458",
+            "name": "黛安娜",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:313",
+        "to_trait_name": "神谕",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2453",
+            "name": "佐伊",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:319",
+        "to_trait_name": "牧羊人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4380",
+            "name": "乐芙兰",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:320",
+        "to_trait_name": "重装战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1454",
+            "name": "蕾欧娜",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:木灵族",
+    "from_trait_address": "jcc:s17:trait:402",
+    "from_trait_name": "木灵族",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:310",
+        "to_trait_name": "堡垒卫士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1462",
+            "name": "波比",
+            "cost": 1
+          },
+          {
+            "champion_address": "jcc:s17:champion:4376",
+            "name": "拉莫斯",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:311",
+        "to_trait_name": "斗士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2450",
+            "name": "纳尔",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:313",
+        "to_trait_name": "神谕",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5420",
+            "name": "巴德",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:314",
+        "to_trait_name": "织命人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4372",
+            "name": "库奇",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:316",
+        "to_trait_name": "魔术师",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1461",
+            "name": "维迦",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:317",
+        "to_trait_name": "游侠",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3455",
+            "name": "菲兹",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:318",
+        "to_trait_name": "狙神",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2450",
+            "name": "纳尔",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:319",
+        "to_trait_name": "牧羊人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2460",
+            "name": "小木灵",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:321",
+        "to_trait_name": "旅人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2460",
+            "name": "小木灵",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:暗星",
+    "from_trait_address": "jcc:s17:trait:403",
+    "from_trait_name": "暗星",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:422",
+        "to_trait_name": "灭星尊",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5427",
+            "name": "烬",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:311",
+        "to_trait_name": "斗士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1459",
+            "name": "科加斯",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:313",
+        "to_trait_name": "神谕",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2457",
+            "name": "莫德凯撒",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:316",
+        "to_trait_name": "魔术师",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1457",
+            "name": "丽桑卓",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:317",
+        "to_trait_name": "游侠",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3450",
+            "name": "卡莎",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:318",
+        "to_trait_name": "狙神",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5427",
+            "name": "烬",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:319",
+        "to_trait_name": "牧羊人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1457",
+            "name": "丽桑卓",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:320",
+        "to_trait_name": "重装战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2457",
+            "name": "莫德凯撒",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:321",
+        "to_trait_name": "旅人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4373",
+            "name": "卡尔玛",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:霸天机甲",
+    "from_trait_address": "jcc:s17:trait:404",
+    "from_trait_name": "霸天机甲",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:311",
+        "to_trait_name": "斗士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3451",
+            "name": "厄加特",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:313",
+        "to_trait_name": "神谕",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4382",
+            "name": "奥瑞利安·索尔",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:315",
+        "to_trait_name": "狂战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3451",
+            "name": "厄加特",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:321",
+        "to_trait_name": "旅人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4379",
+            "name": "超级机甲",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:新星特攻队",
+    "from_trait_address": "jcc:s17:trait:405",
+    "from_trait_name": "新星特攻队",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:310",
+        "to_trait_name": "堡垒卫士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1458",
+            "name": "亚托克斯",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:311",
+        "to_trait_name": "斗士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3457",
+            "name": "茂凯",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:312",
+        "to_trait_name": "挑战者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4374",
+            "name": "千珏",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:314",
+        "to_trait_name": "织命人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1456",
+            "name": "凯特琳",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:315",
+        "to_trait_name": "狂战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2461",
+            "name": "阿卡丽",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:海魔人",
+    "from_trait_address": "jcc:s17:trait:406",
+    "from_trait_name": "海魔人",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:400",
+        "to_trait_name": "幻灵战队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1463",
+            "name": "贝蕾亚",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:311",
+        "to_trait_name": "斗士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1455",
+            "name": "雷克塞",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:312",
+        "to_trait_name": "挑战者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2454",
+            "name": "卑尔维斯",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:315",
+        "to_trait_name": "狂战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2454",
+            "name": "卑尔维斯",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:317",
+        "to_trait_name": "游侠",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1463",
+            "name": "贝蕾亚",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:灵能特工",
+    "from_trait_address": "jcc:s17:trait:407",
+    "from_trait_name": "灵能特工",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:411",
+        "to_trait_name": "最高指挥官",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5425",
+            "name": "娑娜",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:311",
+        "to_trait_name": "斗士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2455",
+            "name": "古拉加斯",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:313",
+        "to_trait_name": "神谕",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3452",
+            "name": "维克托",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:315",
+        "to_trait_name": "狂战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4370",
+            "name": "易",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:319",
+        "to_trait_name": "牧羊人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5425",
+            "name": "娑娜",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:321",
+        "to_trait_name": "旅人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2452",
+            "name": "派克",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:太空律动",
+    "from_trait_address": "jcc:s17:trait:408",
+    "from_trait_name": "太空律动",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:320",
+        "to_trait_name": "重装战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1453",
+            "name": "内瑟斯",
+            "cost": 1
+          },
+          {
+            "champion_address": "jcc:s17:champion:5421",
+            "name": "布里茨",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:419",
+        "to_trait_name": "汪星机器人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5421",
+            "name": "布里茨",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:310",
+        "to_trait_name": "堡垒卫士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3453",
+            "name": "奥恩",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:316",
+        "to_trait_name": "魔术师",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4377",
+            "name": "娜美",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:317",
+        "to_trait_name": "游侠",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2451",
+            "name": "格温",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:318",
+        "to_trait_name": "狙神",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3461",
+            "name": "莎弥拉",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:319",
+        "to_trait_name": "牧羊人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1460",
+            "name": "提莫",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:观星者",
+    "from_trait_address": "jcc:s17:trait:409",
+    "from_trait_name": "观星者",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:316",
+        "to_trait_name": "魔术师",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3468",
+            "name": "璐璐",
+            "cost": 3
+          },
+          {
+            "champion_address": "jcc:s17:champion:3469",
+            "name": "璐璐",
+            "cost": 3
+          },
+          {
+            "champion_address": "jcc:s17:champion:3470",
+            "name": "璐璐",
+            "cost": 3
+          },
+          {
+            "champion_address": "jcc:s17:champion:3471",
+            "name": "璐璐",
+            "cost": 3
+          },
+          {
+            "champion_address": "jcc:s17:champion:3472",
+            "name": "璐璐",
+            "cost": 3
+          },
+          {
+            "champion_address": "jcc:s17:champion:3473",
+            "name": "璐璐",
+            "cost": 3
+          },
+          {
+            "champion_address": "jcc:s17:champion:3474",
+            "name": "璐璐",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:417",
+        "to_trait_name": "末日使者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5422",
+            "name": "薇古丝",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:310",
+        "to_trait_name": "堡垒卫士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2462",
+            "name": "贾克斯",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:314",
+        "to_trait_name": "织命人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1450",
+            "name": "崔斯特",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:317",
+        "to_trait_name": "游侠",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1452",
+            "name": "泰隆",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:318",
+        "to_trait_name": "狙神",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4381",
+            "name": "霞",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:320",
+        "to_trait_name": "重装战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4371",
+            "name": "努努和威朗普",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:未来战士",
+    "from_trait_address": "jcc:s17:trait:410",
+    "from_trait_name": "未来战士",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:416",
+        "to_trait_name": "暮光铁壁",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5424",
+            "name": "慎",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:310",
+        "to_trait_name": "堡垒卫士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5424",
+            "name": "慎",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:311",
+        "to_trait_name": "斗士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2459",
+            "name": "潘森",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:314",
+        "to_trait_name": "织命人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2456",
+            "name": "米利欧",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:316",
+        "to_trait_name": "魔术师",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2459",
+            "name": "潘森",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:317",
+        "to_trait_name": "游侠",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4375",
+            "name": "锐雯",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:318",
+        "to_trait_name": "狙神",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1451",
+            "name": "伊泽瑞尔",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:最高指挥官",
+    "from_trait_address": "jcc:s17:trait:411",
+    "from_trait_name": "最高指挥官",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:407",
+        "to_trait_name": "灵能特工",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5425",
+            "name": "娑娜",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:319",
+        "to_trait_name": "牧羊人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5425",
+            "name": "娑娜",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:军工1号",
+    "from_trait_address": "jcc:s17:trait:412",
+    "from_trait_name": "军工1号",
+    "paths": [],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:天煞",
+    "from_trait_address": "jcc:s17:trait:413",
+    "from_trait_name": "天煞",
+    "paths": [],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:武装战姬",
+    "from_trait_address": "jcc:s17:trait:415",
+    "from_trait_name": "武装战姬",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:312",
+        "to_trait_name": "挑战者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3466",
+            "name": "厄运小姐",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:313",
+        "to_trait_name": "神谕",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3465",
+            "name": "厄运小姐",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:316",
+        "to_trait_name": "魔术师",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3467",
+            "name": "厄运小姐",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:暮光铁壁",
+    "from_trait_address": "jcc:s17:trait:416",
+    "from_trait_name": "暮光铁壁",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:410",
+        "to_trait_name": "未来战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5424",
+            "name": "慎",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:310",
+        "to_trait_name": "堡垒卫士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5424",
+            "name": "慎",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:末日使者",
+    "from_trait_address": "jcc:s17:trait:417",
+    "from_trait_name": "末日使者",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:409",
+        "to_trait_name": "观星者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5422",
+            "name": "薇古丝",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:救世主",
+    "from_trait_address": "jcc:s17:trait:418",
+    "from_trait_name": "救世主",
+    "paths": [],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:汪星机器人",
+    "from_trait_address": "jcc:s17:trait:419",
+    "from_trait_name": "汪星机器人",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:408",
+        "to_trait_name": "太空律动",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5421",
+            "name": "布里茨",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:320",
+        "to_trait_name": "重装战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5421",
+            "name": "布里茨",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:黑暗魔女",
+    "from_trait_address": "jcc:s17:trait:420",
+    "from_trait_name": "黑暗魔女",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:313",
+        "to_trait_name": "神谕",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5434",
+            "name": "莫甘娜",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:斗神",
+    "from_trait_address": "jcc:s17:trait:421",
+    "from_trait_name": "斗神",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:400",
+        "to_trait_name": "幻灵战队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5426",
+            "name": "菲奥娜",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:315",
+        "to_trait_name": "狂战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5426",
+            "name": "菲奥娜",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:灭星尊",
+    "from_trait_address": "jcc:s17:trait:422",
+    "from_trait_name": "灭星尊",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:403",
+        "to_trait_name": "暗星",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5427",
+            "name": "烬",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:318",
+        "to_trait_name": "狙神",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5427",
+            "name": "烬",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:堡垒卫士",
+    "from_trait_address": "jcc:s17:trait:310",
+    "from_trait_name": "堡垒卫士",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:402",
+        "to_trait_name": "木灵族",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1462",
+            "name": "波比",
+            "cost": 1
+          },
+          {
+            "champion_address": "jcc:s17:champion:4376",
+            "name": "拉莫斯",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:405",
+        "to_trait_name": "新星特攻队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1458",
+            "name": "亚托克斯",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:408",
+        "to_trait_name": "太空律动",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3453",
+            "name": "奥恩",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:409",
+        "to_trait_name": "观星者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2462",
+            "name": "贾克斯",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:410",
+        "to_trait_name": "未来战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5424",
+            "name": "慎",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:416",
+        "to_trait_name": "暮光铁壁",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5424",
+            "name": "慎",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:斗士",
+    "from_trait_address": "jcc:s17:trait:311",
+    "from_trait_name": "斗士",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:402",
+        "to_trait_name": "木灵族",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2450",
+            "name": "纳尔",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:403",
+        "to_trait_name": "暗星",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1459",
+            "name": "科加斯",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:404",
+        "to_trait_name": "霸天机甲",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3451",
+            "name": "厄加特",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:405",
+        "to_trait_name": "新星特攻队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3457",
+            "name": "茂凯",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:406",
+        "to_trait_name": "海魔人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1455",
+            "name": "雷克塞",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:407",
+        "to_trait_name": "灵能特工",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2455",
+            "name": "古拉加斯",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:410",
+        "to_trait_name": "未来战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2459",
+            "name": "潘森",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:315",
+        "to_trait_name": "狂战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3451",
+            "name": "厄加特",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:316",
+        "to_trait_name": "魔术师",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2459",
+            "name": "潘森",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:318",
+        "to_trait_name": "狙神",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2450",
+            "name": "纳尔",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:挑战者",
+    "from_trait_address": "jcc:s17:trait:312",
+    "from_trait_name": "挑战者",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:400",
+        "to_trait_name": "幻灵战队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2458",
+            "name": "金克丝",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:401",
+        "to_trait_name": "法官",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3458",
+            "name": "黛安娜",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:405",
+        "to_trait_name": "新星特攻队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4374",
+            "name": "千珏",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:406",
+        "to_trait_name": "海魔人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2454",
+            "name": "卑尔维斯",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:415",
+        "to_trait_name": "武装战姬",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3466",
+            "name": "厄运小姐",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:315",
+        "to_trait_name": "狂战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2454",
+            "name": "卑尔维斯",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:神谕",
+    "from_trait_address": "jcc:s17:trait:313",
+    "from_trait_name": "神谕",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:401",
+        "to_trait_name": "法官",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2453",
+            "name": "佐伊",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:402",
+        "to_trait_name": "木灵族",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5420",
+            "name": "巴德",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:403",
+        "to_trait_name": "暗星",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2457",
+            "name": "莫德凯撒",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:404",
+        "to_trait_name": "霸天机甲",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4382",
+            "name": "奥瑞利安·索尔",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:407",
+        "to_trait_name": "灵能特工",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3452",
+            "name": "维克托",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:415",
+        "to_trait_name": "武装战姬",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3465",
+            "name": "厄运小姐",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:420",
+        "to_trait_name": "黑暗魔女",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5434",
+            "name": "莫甘娜",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:320",
+        "to_trait_name": "重装战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2457",
+            "name": "莫德凯撒",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:织命人",
+    "from_trait_address": "jcc:s17:trait:314",
+    "from_trait_name": "织命人",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:402",
+        "to_trait_name": "木灵族",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4372",
+            "name": "库奇",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:405",
+        "to_trait_name": "新星特攻队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1456",
+            "name": "凯特琳",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:409",
+        "to_trait_name": "观星者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1450",
+            "name": "崔斯特",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:410",
+        "to_trait_name": "未来战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2456",
+            "name": "米利欧",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:狂战士",
+    "from_trait_address": "jcc:s17:trait:315",
+    "from_trait_name": "狂战士",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:400",
+        "to_trait_name": "幻灵战队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5426",
+            "name": "菲奥娜",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:404",
+        "to_trait_name": "霸天机甲",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3451",
+            "name": "厄加特",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:405",
+        "to_trait_name": "新星特攻队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2461",
+            "name": "阿卡丽",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:406",
+        "to_trait_name": "海魔人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2454",
+            "name": "卑尔维斯",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:407",
+        "to_trait_name": "灵能特工",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4370",
+            "name": "易",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:421",
+        "to_trait_name": "斗神",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5426",
+            "name": "菲奥娜",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:311",
+        "to_trait_name": "斗士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3451",
+            "name": "厄加特",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:312",
+        "to_trait_name": "挑战者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2454",
+            "name": "卑尔维斯",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:魔术师",
+    "from_trait_address": "jcc:s17:trait:316",
+    "from_trait_name": "魔术师",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:409",
+        "to_trait_name": "观星者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3468",
+            "name": "璐璐",
+            "cost": 3
+          },
+          {
+            "champion_address": "jcc:s17:champion:3469",
+            "name": "璐璐",
+            "cost": 3
+          },
+          {
+            "champion_address": "jcc:s17:champion:3470",
+            "name": "璐璐",
+            "cost": 3
+          },
+          {
+            "champion_address": "jcc:s17:champion:3471",
+            "name": "璐璐",
+            "cost": 3
+          },
+          {
+            "champion_address": "jcc:s17:champion:3472",
+            "name": "璐璐",
+            "cost": 3
+          },
+          {
+            "champion_address": "jcc:s17:champion:3473",
+            "name": "璐璐",
+            "cost": 3
+          },
+          {
+            "champion_address": "jcc:s17:champion:3474",
+            "name": "璐璐",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:402",
+        "to_trait_name": "木灵族",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1461",
+            "name": "维迦",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:403",
+        "to_trait_name": "暗星",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1457",
+            "name": "丽桑卓",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:408",
+        "to_trait_name": "太空律动",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4377",
+            "name": "娜美",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:410",
+        "to_trait_name": "未来战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2459",
+            "name": "潘森",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:415",
+        "to_trait_name": "武装战姬",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3467",
+            "name": "厄运小姐",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:311",
+        "to_trait_name": "斗士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2459",
+            "name": "潘森",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:319",
+        "to_trait_name": "牧羊人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1457",
+            "name": "丽桑卓",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:游侠",
+    "from_trait_address": "jcc:s17:trait:317",
+    "from_trait_name": "游侠",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:400",
+        "to_trait_name": "幻灵战队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1463",
+            "name": "贝蕾亚",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:402",
+        "to_trait_name": "木灵族",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3455",
+            "name": "菲兹",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:403",
+        "to_trait_name": "暗星",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3450",
+            "name": "卡莎",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:406",
+        "to_trait_name": "海魔人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1463",
+            "name": "贝蕾亚",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:408",
+        "to_trait_name": "太空律动",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2451",
+            "name": "格温",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:409",
+        "to_trait_name": "观星者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1452",
+            "name": "泰隆",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:410",
+        "to_trait_name": "未来战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4375",
+            "name": "锐雯",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:狙神",
+    "from_trait_address": "jcc:s17:trait:318",
+    "from_trait_name": "狙神",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:402",
+        "to_trait_name": "木灵族",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2450",
+            "name": "纳尔",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:403",
+        "to_trait_name": "暗星",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5427",
+            "name": "烬",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:408",
+        "to_trait_name": "太空律动",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3461",
+            "name": "莎弥拉",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:409",
+        "to_trait_name": "观星者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4381",
+            "name": "霞",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:410",
+        "to_trait_name": "未来战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1451",
+            "name": "伊泽瑞尔",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:422",
+        "to_trait_name": "灭星尊",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5427",
+            "name": "烬",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:311",
+        "to_trait_name": "斗士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2450",
+            "name": "纳尔",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:牧羊人",
+    "from_trait_address": "jcc:s17:trait:319",
+    "from_trait_name": "牧羊人",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:400",
+        "to_trait_name": "幻灵战队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3460",
+            "name": "俄洛伊",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:401",
+        "to_trait_name": "法官",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4380",
+            "name": "乐芙兰",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:402",
+        "to_trait_name": "木灵族",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2460",
+            "name": "小木灵",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:403",
+        "to_trait_name": "暗星",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1457",
+            "name": "丽桑卓",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:407",
+        "to_trait_name": "灵能特工",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5425",
+            "name": "娑娜",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:408",
+        "to_trait_name": "太空律动",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1460",
+            "name": "提莫",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:411",
+        "to_trait_name": "最高指挥官",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5425",
+            "name": "娑娜",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:316",
+        "to_trait_name": "魔术师",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1457",
+            "name": "丽桑卓",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:320",
+        "to_trait_name": "重装战士",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3460",
+            "name": "俄洛伊",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:321",
+        "to_trait_name": "旅人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2460",
+            "name": "小木灵",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:重装战士",
+    "from_trait_address": "jcc:s17:trait:320",
+    "from_trait_name": "重装战士",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:408",
+        "to_trait_name": "太空律动",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1453",
+            "name": "内瑟斯",
+            "cost": 1
+          },
+          {
+            "champion_address": "jcc:s17:champion:5421",
+            "name": "布里茨",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:400",
+        "to_trait_name": "幻灵战队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3460",
+            "name": "俄洛伊",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:401",
+        "to_trait_name": "法官",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:1454",
+            "name": "蕾欧娜",
+            "cost": 1
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:403",
+        "to_trait_name": "暗星",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2457",
+            "name": "莫德凯撒",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:409",
+        "to_trait_name": "观星者",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4371",
+            "name": "努努和威朗普",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:419",
+        "to_trait_name": "汪星机器人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:5421",
+            "name": "布里茨",
+            "cost": 5
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:313",
+        "to_trait_name": "神谕",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2457",
+            "name": "莫德凯撒",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:319",
+        "to_trait_name": "牧羊人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3460",
+            "name": "俄洛伊",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  },
+  {
+    "address": "jcc:s17:transition_path:旅人",
+    "from_trait_address": "jcc:s17:trait:321",
+    "from_trait_name": "旅人",
+    "paths": [
+      {
+        "to_trait_address": "jcc:s17:trait:400",
+        "to_trait_name": "幻灵战队",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:3462",
+            "name": "阿萝拉",
+            "cost": 3
+          }
+        ],
+        "pivot_ease": "midgame_possible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:402",
+        "to_trait_name": "木灵族",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2460",
+            "name": "小木灵",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:403",
+        "to_trait_name": "暗星",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4373",
+            "name": "卡尔玛",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:404",
+        "to_trait_name": "霸天机甲",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:4379",
+            "name": "超级机甲",
+            "cost": 4
+          }
+        ],
+        "pivot_ease": "late_or_committed"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:407",
+        "to_trait_name": "灵能特工",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2452",
+            "name": "派克",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      },
+      {
+        "to_trait_address": "jcc:s17:trait:319",
+        "to_trait_name": "牧羊人",
+        "shared_champions": [
+          {
+            "champion_address": "jcc:s17:champion:2460",
+            "name": "小木灵",
+            "cost": 2
+          }
+        ],
+        "pivot_ease": "early_flexible"
+      }
+    ],
+    "decision_inputs": [
+      "current_units",
+      "current_items",
+      "contested_pool",
+      "hp_pressure",
+      "round_intent"
+    ],
+    "exactness": "official_shared_units_with_heuristic_ease"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "address": "jcc:s17:formula:damage_amp_stack",
+  "source": "generated_heuristic",
+  "inputs": [
+    "base_damage",
+    "amp_sources",
+    "stacking_policy"
+  ],
+  "outputs": [
+    "amped_damage"
+  ],
+  "formulas": {
+    "additive_default": "base_damage * (1 + sum(amp_sources))"
+  },
+  "dependencies": [
+    "jcc:s17:formula:damage"
+  ],
+  "use_cases": [
+    "Giant Slayer style value",
+    "trait/item amp stacking"
+  ],
+  "exactness": "policy_needed_for_source_specific_stacking",
+  "name": "damage_amp_stack",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "damage"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review"
+  ],
+  "dependency_kind": "derived_formula"
+}

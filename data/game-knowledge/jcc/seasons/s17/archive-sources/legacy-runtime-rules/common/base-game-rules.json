@@ -1,0 +1,414 @@
+{
+  "schema": "jcc-base-game-rules-v1",
+  "scope": "base_game",
+  "selection_fact_policy": "Visible choices are candidates. A selected choice is known only after user confirmation or a future proven final-selection event.",
+  "runtime_choice_modes": {
+    "augment_choice": {
+      "ui_mode_key": "augment",
+      "kind": "augment",
+      "phase": "augment_choice",
+      "label": "augment choice",
+      "intent_tag": "augment_choice_intent",
+      "intent_terms": ["海克斯", "强化", "选哪个", "刷新", "要不要刷"],
+      "candidate_input_policy": "current_match_user_report",
+      "catalog_entity_kind": "augment",
+      "decision_input_kind_aliases": ["augment", "augment_choice"],
+      "user_report_contract": {
+        "report_required_before_advice": true,
+        "report_prompt": "\u8bf7\u5148\u62a5\u51fa\u5f53\u524d\u4e09\u4e2a\u5f3a\u5316\u9009\u9879\uff1b2-1 \u9996\u6b21\u62a5\u544a\u8bf7\u5e26\u5f53\u524d\u6563\u4ef6\u548c\u6210\u88c5\uff0c3-2/4-2 \u9ed8\u8ba4\u6cbf\u7528\u5df2\u786e\u8ba4\u88c5\u5907\uff0c\u6709\u53d8\u5316\u65f6\u53ea\u62a5\u589e\u91cf\u3002",
+        "refresh_report_prefix": "\u5237\u65b0\u540e\u662f\uff1a",
+        "refresh_creates_new_choice_set_revision": true,
+        "current_match_only": true,
+        "no_ocr_or_vision_fallback": true,
+        "explicit_ocr_draft": {
+          "enabled": true,
+          "authority": "renderer_draft_only",
+          "complete_set_required": true,
+          "current_stage_and_tier_catalog_match_required": true,
+          "writes_canonical_choice_facts": false,
+          "opens_host_answer": false,
+          "auto_sends": false
+        },
+        "first_checkpoint_equipment_policy": "report_full_current_equipment",
+        "later_checkpoint_equipment_policy": "reuse_confirmed_and_report_changes_only"
+      },
+      "candidate_paths": ["match_context.reported_choice_sets_by_mode.augment_choice.candidates"],
+      "fast_hint_label": "augment choice",
+      "trigger_terms": ["augment_choice_advice"],
+      "advice_task_trigger_terms": ["augment_choice_advice"],
+      "requires_visual_choice_set": false,
+      "report_required_before_advice": true,
+      "host_context_choice_field": "augment_choices",
+      "task_candidate_evidence_types": ["augments.choice_candidates"],
+      "ranked_recommendation_evidence_type": "augments.ranked_recommendation",
+      "visible_window_required_answer": "Rank the visible augment candidates and answer keep or reroll now. Do not give generic cruise advice.",
+      "host_mode_context": {
+        "purpose": "Current augment choice and reroll advice.",
+        "allowed_sources": ["current_match_user_report", "selected_augment_history", "live_state", "hard_data", "daily_big_data", "cruise_context"],
+        "allowed_writes": ["pending_choice", "advice_task"],
+        "must_not_write": ["selected_augments_without_user_confirmation"],
+        "response_expectation": "Return the exact three reported candidates in a unique best-to-worst candidate_ranking and provide one explicit structured keep/refresh action: keep and pick, refresh specific physical slots, refresh all, refresh if available, or no refresh available. Say what to keep as backup, why, and how to react after reroll."
+      },
+      "default_user_prompt": "选哪个？要不要刷新？",
+      "missing_selection_prompt_template": "{stage_round} 强化最终选择尚未确认；请在强化卡片的最终选择区确认。后续阵容、装备和节奏建议会以卡片中的结构化结果为准。"
+    },
+    "item_choice": {
+      "ui_mode_key": "item",
+      "kind": "item",
+      "phase": "item_choice",
+      "label": "item choice",
+      "intent_tag": "itemization_intent",
+      "intent_terms": ["装备", "散件", "合成", "神器", "光明", "奥恩", "重塑器", "重铸"],
+      "candidate_input_policy": "current_match_user_report",
+      "catalog_entity_kind": "item",
+      "decision_input_kind_aliases": ["item", "anvil", "item_anvil", "item_choice", "item_choice_panel"],
+      "user_report_contract": {
+        "report_required_before_advice": true,
+        "report_prompt": "\u8bf7\u5148\u62a5\u51fa\u5f53\u524d\u88c5\u5907\u6216\u953b\u9020\u9009\u9879\u3002",
+        "refresh_report_prefix": "\u5237\u65b0\u540e\u662f\uff1a",
+        "refresh_creates_new_choice_set_revision": true,
+        "current_match_only": true,
+        "no_ocr_or_vision_fallback": true,
+        "default_item_choice_kind": "basic_component_forge",
+        "supported_item_choice_kinds": [
+          "basic_component_forge",
+          "completed_item_forge",
+          "artifact_forge",
+          "radiant_item_choice"
+        ],
+        "expected_count_by_kind": {
+          "basic_component_forge": 4,
+          "completed_item_forge": 5,
+          "artifact_forge": 4,
+          "radiant_item_choice": 4
+        }
+      },
+      "candidate_paths": ["match_context.reported_choice_sets_by_mode.item_choice.candidates"],
+      "fast_hint_label": "item choice",
+      "trigger_terms": ["item", "equipment"],
+      "advice_task_trigger_terms": ["item_choice", "equipment_choice"],
+      "requires_visual_choice_set": false,
+      "report_required_before_advice": true,
+      "host_context_choice_field": "item_choices",
+      "task_candidate_evidence_types": ["items.choice_options"],
+      "visible_window_required_answer": "Rank the visible item candidates and answer which one to take now from current board, holders, plan, and tempo.",
+      "host_mode_context": {
+        "purpose": "Equipment, forge, reward, completed item, artifact, and special item choice.",
+        "allowed_sources": ["current_match_user_report", "own_item_bench", "trusted_equipped_items", "trusted_own_board", "economy", "target_plan", "selected_augments"],
+        "allowed_writes": ["pending_choice", "advice_task"],
+        "must_not_write": ["item_choice_as_confirmed_inventory_without_user_confirmation", "untrusted_visible_items_as_own_equipped_items"],
+        "response_expectation": "Choose based on current board, item holders, plan, and tempo."
+      },
+      "missing_selection_prompt_template": "{stage_round} 装备选择尚未确认；请在装备选择卡片中确认。后续装备分配和阵容节奏会以卡片中的结构化结果为准。"
+    }
+  },
+  "coach_decision_model": {
+    "context_priority": [
+      "current stage_round and live_state facts",
+      "confirmed user choices and latest user intent",
+      "visible choice candidates",
+      "current board, bench, shop, items, HP, gold, level, XP",
+      "current-season hard data and daily big-data priors"
+    ],
+    "fact_contract": {
+      "must_read_before_strategy": ["stage_round", "hp", "gold", "level", "xp", "board_units", "bench_units", "shop_units", "item_components", "confirmed_choices", "latest_user_intent"],
+      "choice_candidates_are_not_selections": true,
+      "missing_critical_fact_policy": "If a critical fact is missing and the advice depends on it, ask for that fact or state the uncertainty before giving a conditional action.",
+      "newer_state_wins": true,
+      "newer_user_intent_wins": true
+    },
+    "general_stage_tasks": {
+      "early_game": "Prefer strongest board, pairs, flexible item components, and economy cleanliness until choice/augment facts create a stronger direction.",
+      "choice_window": "Answer the visible choice now. Do not give generic transition advice when the user is asking which choice to pick.",
+      "post_choice_unknown": "If a choice checkpoint has passed but the final selection is unknown, answer any independently answerable current user action first. Mention the uncertainty and corresponding structured card afterward; block only a question whose requested conclusion directly requires that exact missing selection.",
+      "economy": "Use gold, interest thresholds, HP, streak, and stage before recommending buying, selling, leveling, rolling, or greeding."
+    },
+    "answer_layers": {
+      "fact_loop": "Machine-read facts update continuously and are evidence, not chat by themselves.",
+      "fast_coach": "Deterministic scoring may rank choices or flag obvious economy/bench/HP issues, but it is evidence unless explicitly enabled as emergency UI.",
+      "ai_native_coach": "The host CLI main model writes the visible natural-language answer from selected structured context."
+    }
+  },
+  "itemization_management": {
+    "schema": "jcc-itemization-management-base-v1",
+    "scope": "universal",
+    "purpose": "Reusable item decision doctrine for deciding whether to craft now, wait for a component, use a temporary holder, assign completed items, or spend a remover/reforger. Exact item names remain current-season data decisions.",
+    "decision_inputs": [
+      "stage, HP, gold, level, streak when structured, and immediate survival risk",
+      "current board strength, bench transitions, target plan, and latest user intent",
+      "owned components, completed items, item holders, removers, reforgers, anvils, artifacts, and radiant choices",
+      "confirmed choices and active-season mechanics that can change item value",
+      "current-season hard-data item fit and daily big-data lineup/item priors"
+    ],
+    "decision_sequence": [
+      "Decide survival and tempo posture first: slam_now or wait_component.",
+      "Protect the main carry and main tank requirements before spreading a second or third item set.",
+      "Check lobby-agnostic utility gaps such as wound, shred, sunder, frontline durability, and reliable damage.",
+      "Check holder quality, transfer cost, remover/reforger protection, and whether the holder will be sold soon.",
+      "Check whether a nearby active-season reward or choice can materially change the item line.",
+      "Use hard data and daily rankings as priors, then reconcile them with the current match facts."
+    ],
+    "missing_information_policy": {
+      "resolve_by_field": true,
+      "never_wait_for_higher_or_lower_source": true,
+      "ask_only_when_action_changes": true,
+      "examples": [
+        "Ask which items are on the main carry only if holder assignment changes whether to craft or transfer.",
+        "Ask which components remain only if the bench inventory changes the next craft.",
+        "Do not ask for visual confirmation when current-match user confirmation already supplies the needed fact."
+      ]
+    },
+    "proactive_coach_policy": {
+      "speak_when": [
+        "a newly available craft changes likely streak preservation or lethal risk",
+        "the target lineup becomes materially under-equipped or a core item requirement is now reachable",
+        "a confirmed choice or active-season reward materially changes the best holder or item posture",
+        "a remover/reforger/anvil creates a time-sensitive correction opportunity"
+      ],
+      "do_not_speak_on": [
+        "every component arrival",
+        "every shop refresh",
+        "visual candidate changes without confirmation",
+        "an item fact change that does not alter the recommended action"
+      ],
+      "answer_shape": "State the action, the holder or missing field if relevant, and the tempo/opportunity cost in one concise coaching answer."
+    },
+    "host_model_invariants": [
+      "Do not turn a ranking prior into an unconditional perfect-item claim.",
+      "Do not wait for a richer sensing source when the currently reliable field is enough to decide.",
+      "Do not invent a streak, holder, component, or active-season reward that is absent from selected context."
+    ]
+  },
+  "economy_management": {
+    "schema": "jcc-economy-management-base-v1",
+    "scope": "universal",
+    "purpose": "Reusable economy fundamentals for AI-native coaching. Season files may override meta bias, but these principles should be considered before buying, selling, leveling, rolling, or greeding.",
+    "core_principles": [
+      "Stage 2 economy compounds. One early interest gold can turn into several future gold because it changes the next interest threshold.",
+      "Do not treat economy in isolation. Combine gold, HP, streak, stage, board quality, item fit, confirmed choices, user intent, and big-data lineup fit.",
+      "A visible board upgrade is not automatically worth breaking an interest threshold; the upgrade must protect streak/HP or improve a key line.",
+      "If the advice depends on a missing confirmed augment, special choice, HP, gold, level, or XP fact, ask for it or give a conditional action."
+    ],
+    "opening_drop_models": {
+      "standard_11_gold_start": {
+        "description": "Common neutral opener. 1-2, 1-3, and 1-4 usually create about 6 gold of unit/orb value, plus 2 gold system income on 1-2 and 1-3 and the starting 1-cost unit, reaching about 11 total value.",
+        "interest_implication": "Because 10 gold is the first interest threshold, this opener creates the first sell/hold decision.",
+        "special_case": "A rare white orb small duplicator can raise the 6-value neutral package to about 7 value; treat as a value exception, not a different economy model."
+      },
+      "money_start": {
+        "description": "A blue equipment orb can become gold instead of an item. Money starts often mean fewer components but more immediate interest pressure.",
+        "common_shapes": [
+          "double-equipment opener: about 17 gold by 1-4 board/value state",
+          "single-equipment money opener: about 23 gold by 1-4 board/value state"
+        ],
+        "minimum_interest_policy": [
+          "17-gold shape should usually preserve at least one 10-gold interest round unless real board quality says otherwise.",
+          "23-gold shape should usually preserve at least two 10-gold interest rounds unless HP/streak/augment context justifies spending."
+        ]
+      }
+    },
+    "open_sell_policy": {
+      "meaning": "Single-open / early sell-down for economy is a high-variance tool, not a default.",
+      "consider_when": [
+        "opening units have low transition value",
+        "no clear pairs or two-star path",
+        "components do not fit the current units",
+        "the current season/meta and chosen effects can stabilize later"
+      ],
+      "risks": [
+        "another opener can break the loss streak",
+        "the board may lack a later lock-HP mechanism",
+        "bad or economy-only choice outcomes can make recovery late"
+      ],
+      "host_policy": "Only recommend open-sell when the current live_state shows weak utility cards and the season/meta allows recovery; otherwise prefer strongest-board or stable economy language."
+    },
+    "early_leveling_policy": {
+      "level_4": {
+        "default": "Level 4 is justified when board quality and item fit can realistically preserve or start a win streak.",
+        "avoid": "Level 4 without real combat strength, item fit, or external economy usually risks no-money/no-HP tempo collapse.",
+        "scouting_policy": "Opponent augment/transition quality matters, but early opponents are uncertain; primarily evaluate own quality and whether opponents picked tempo/combat augments."
+      },
+      "level_5": {
+        "default": "If the board did not prove a streak, delaying level 5 and preserving economy is often the stable line.",
+        "win_streak_followup": "If a waterline board naturally wins several rounds, leveling later can still play tempo while banking earlier interest."
+      },
+      "tempo_choice_exception": "Tempo/HP-protection/quality augments may increase the chance of leveling, but they are not an automatic level button."
+    },
+    "streak_and_neutral_policy": {
+      "streak_carries_into_neutrals": true,
+      "meaning": "A win/loss streak entering neutral rounds can pay after neutrals. Avoid getting streak broken right before neutrals when the streak reward matters.",
+      "five_win_stage_2_7_reference": "A 5-win board entering 2-7 often has around 20-30 gold; above that is rich.",
+      "five_loss_stage_2_7_reference": "A 5-loss economy opener entering 2-7 often has around 40-50 gold.",
+      "six_win_leveling_math": "If leveling to preserve a 6-win streak leaves about 30 gold/3 interest, winning can combine streak reward, 5 base income, and interest to recover toward the next threshold."
+    },
+    "interest_threshold_math": {
+      "thresholds": [10, 20, 30, 40, 50],
+      "interest_cap_gold": 50,
+      "reroll_32_gold_reference": "Reroll lines often stop around 32 because 3 interest + 5 base income + 2 saved gold reaches the next 10-gold threshold without streak.",
+      "loss_cost_reference": "Rolling/leveling down to 20 can lose about twice as much future interest as stopping around 30 when the next fight is lost.",
+      "caveat": "If the board can reliably win and preserve a streak, interest loss can be acceptable; the model must state the win-condition."
+    },
+    "level_timing_priors": {
+      "level_6_after_2_7": "Usually only contested by win-streak boards or boards protecting a valuable streak.",
+      "level_7": "30-interest level 7 is mostly for win-streakers under pressure; normal economy tends to use 40 or 50 depending HP and opponent strength.",
+      "level_8": "4-cost plans often use the 4-2 augment timing to level 8 and roll. Rich boards may 4-1 to contest cards, paying roughly an extra level click plus one interest round. 4-5 level 8 is rare and usually needs no contest plus enough HP.",
+      "reroll_level_priors": {
+        "2_cost": "3-1 level 6 and roll is a common timing.",
+        "3_cost": "3-5 or after 3-7 neutrals to level 7 is a common timing.",
+        "4_cost": "4-2 level 8 is a common timing."
+      }
+    },
+    "host_model_invariants": [
+      "Never recommend leveling, rolling, or selling only because a gold bucket changed; explain the board/HP/streak/item/choice reason.",
+      "Never call a line rich or poor without referencing current gold, stage, and intended timing.",
+      "Treat big-data line strength as a prior; it must be reconciled with live board fit, item fit, confirmed choice and active mechanic fit, and user intent."
+    ],
+    "event_policy": {
+      "schema": "jcc-economy-event-policy-v1",
+      "advice_stage_priors": [
+        "2-2",
+        "2-3",
+        "2-5",
+        "2-6",
+        "2-7",
+        "3-1",
+        "3-2",
+        "3-5",
+        "3-7",
+        "4-1",
+        "4-2",
+        "4-5",
+        "5-1"
+      ],
+      "trigger_policy": "These stages are economy review priors, not automatic speak points. Runtime must still require semantic change, HP pressure, confirmed-choice context, user intent, or a missing fact that materially changes the decision.",
+      "do_not_trigger_on": [
+        "gold bucket change alone",
+        "shop refresh alone without upgrade/bench/intent relevance",
+        "generic stage passage when no decision changes"
+      ]
+    }
+  },
+  "lineup_lifecycle_management": {
+    "schema": "jcc-lineup-lifecycle-management-base-v1",
+    "scope": "universal",
+    "purpose": "Map a target plan's cost curve and evidence into conditional roll/level/hold priors without hardcoding season-specific units, traits, or mandatory timing scripts.",
+    "season_neutral": true,
+    "decision_posture": {
+      "default_levels_are_priors": true,
+      "not_fixed_rules": true,
+      "ranking_quality_policy": {
+        "rank_scope": "Use the current-day Master+ national ranking partition for lineup strength regardless of the user's rank preference; user rank may change coaching style but not the ranking dataset.",
+        "stable_meta_evidence": ["meaningful_sample_size", "strong_top4_rate", "competitive_top1_rate", "healthy_average_rank", "current_patch_fit"],
+        "high_ceiling_conditional_evidence": ["high_top1_rate", "low_or_special_condition_sample", "weaker_top4_stability", "explicit_entry_condition"],
+        "rule": "Do not rank one lineup metric in isolation. Separate stable meta lines, conditional ceiling lines, promising low-sample lines, and insufficient evidence before current-match fit is applied."
+      },
+      "conditional_answer_policy": {
+        "shape": ["current_default_line_and_why", "up_to_two_material_if_or_exit_conditions", "immediate_action"],
+        "branch_budget": 2,
+        "rule": "Only include a branch when it can change the next action. Lifecycle timings are priors and current patch, rank-bracket tempo, board, items, choices, economy, HP, contest, and user direction may override them."
+      },
+      "combine_with": [
+        "current patch and rank-bracket big-data strength",
+        "confirmed choices and active-season variables from the compiled descriptor",
+        "current equipment and holder fit",
+        "copy progress and contested pool pressure",
+        "board readiness, HP, economy, XP, and current tempo window",
+        "target structure including required higher-cost support units",
+        "user risk preference and explicit direction"
+      ],
+      "host_policy": "A prior may be overridden only by current-match evidence. State the evidence and opportunity cost; do not present either the prior or the exception as universally correct. Rank-bracket tempo is contextual evidence, not opponent-board sensing."
+    },
+    "candidate_stage_readiness": {
+      "candidate_pool_policy": "Use one current-day Master+ lineup candidate index. Do not create independent one-cost, two-cost, three-cost, four-cost, or legendary candidate pools.",
+      "states": ["observe_only", "conditional_start", "future_target", "build_toward", "formed_core_continue", "unknown_stage"],
+      "stage_2_policy": "A low-cost line may appear as a conditional candidate when current data, choices, items, and meaningful copy or board progress agree. One temporary pair or random shop hit remains observation-only and never becomes a durable target automatically.",
+      "formed_core_policy": "Once a durable target has a formed core, continue to evaluate quality, roll timing, level value, support units, and cap additions inside that system. Do not pivot to an unrelated higher-cost lineup merely because its raw meta score is higher.",
+      "exit_evidence": ["target_core_is_not_actually_formed", "required_copies_or_timing_window_are_materially_missed", "equipment_or_choices_materially_fail_the_line", "hp_or_economy_cannot_support_the_remaining_plan", "user_selects_an_alternative_with_stronger_live_evidence"],
+      "weight_boundary": "Stage readiness constrains candidate interpretation and established-target continuity. It is not a sixth weighted fit dimension and does not silently modify the registered meta, augment, item, tempo, and board percentages.",
+      "season_neutral": true
+    },
+    "archetypes": {
+      "one_cost_reroll": {
+        "carry_cost": 1,
+        "default_roll_level": 4,
+        "secondary_roll_level": 5,
+        "signals": ["first_two_choice_fit", "multiple_core_copies", "matching_items_or_artifact", "current_meta_support"],
+        "actions": ["roll_for_primary_carry_at_level_4", "preserve_recovery_floor_around_32", "slow_roll_at_level_5_if_multiple_low_cost_targets"],
+        "abandon_when": ["insufficient_copies", "poor_item_fit", "contested_pool_without_hp_or_economy_to_compete", "current_rankings_do_not_support_the_line"],
+        "host_guardrail": "Do not call a one-cost line from one early copy or a random shop hit; the first choices, item fit, copy count, and current data must agree."
+      },
+      "two_cost_reroll": {
+        "carry_cost": 2,
+        "default_roll_level": 6,
+        "actions": ["slow_roll_above_interest_floor", "spend_more_only_when_contested_or_hp_requires_it"],
+        "abandon_when": ["core_copies_are_missing", "equipment_does_not_fit", "the_line_loses_to_a_stronger_data_backed_pivot"],
+        "host_guardrail": "Level six is the normal search anchor; do not fast-eight while the two-cost core is the explicit plan and still has real copy progress."
+      },
+      "three_cost_reroll": {
+        "carry_cost": 3,
+        "default_roll_level": 7,
+        "actions": ["find_primary_carry_two_star_before_greeding", "reassess_slow_roll_floor_from_contest_and_economy", "use_3_7_neutral_window_mainly_when_uncontested"],
+        "abandon_when": ["economy_cannot_reach_the_required_three_star_set", "multiple_contenders_remove_the_required_pool", "hp_requires_a_different_stabilization_line"],
+        "host_guardrail": "Level seven is a common search anchor, not a mandate. A mixed structure may level to eight before completing the three-star carry when a required four-cost support, trait breakpoint, contested timing, or board-space upgrade has more immediate value."
+      },
+      "four_cost_carry": {
+        "carry_cost": 4,
+        "default_roll_level": 8,
+        "contested_level_stage": "4-1",
+        "normal_level_stage": "4-2",
+        "actions": ["push_level_8_on_4_1_then_search", "push_level_8_on_4_2_then_search", "save_for_level_9_after_frontline_and_backline_quality"],
+        "abandon_when": ["hp_cannot_survive_the_leveling_window", "equipment_and_choices_do_not_fit", "current_board_has_a_materially_stronger_pivot"],
+        "host_guardrail": "Level eight is the normal search prior for a four-cost carry, but survival pressure or high-probability immediate board upgrades may justify bounded level-seven repair. Do not describe that repair as the normal way to chase a two-star four-cost carry."
+      },
+      "legendary_cap": {
+        "carry_cost": 5,
+        "default_roll_level": 9,
+        "actions": ["push_level_9_only_with_loss_buffer_and_stable_board", "stabilize_before_greeding_level_9"],
+        "abandon_when": ["less_than_two_loss_buffer", "board_quality_is_below_stabilization_floor", "economy_cannot_reach_level_9_without_lethal_risk"],
+        "host_guardrail": "Ninety-five is an economy and HP privilege, not a default endpoint. Use observed damage risk and current board quality; do not hardcode a season's exact damage numbers."
+      },
+      "emblem_conditioned": {
+        "actions": ["validate_emblem_condition_with_current_rankings_and_holder_fit", "distinguish_cap_upgrade_from_generic_trait_completion"],
+        "abandon_when": ["emblem_only_completes_a_low_value_breakpoint", "holder_fit_is_weak", "current_data_has_no_support"],
+        "host_guardrail": "An emblem is evidence for a line, not an automatic commitment; exact holder and cap value must be checked."
+      },
+      "early_high_cost_pivot": {
+        "actions": ["validate_early_high_cost_against_hp_equipment_choices_and_rankings", "use_as_holder_or_transition_when_fit_is_not_yet_proven"],
+        "host_guardrail": "One early four- or five-cost unit can change the plan, but cannot alone override equipment, choices, economy, and current board strength."
+      }
+    },
+    "economy_alignment": {
+      "interest_thresholds": [10, 20, 30, 40, 50],
+      "reroll_recovery_floor_reference": 32,
+      "manual_xp_per_purchase": 4,
+      "natural_xp_per_round": 2,
+      "xp_policy": "When the remaining XP gap is smaller than one manual purchase, waiting for natural XP is an economy prior. Buy anyway when the current level timing can secure a material board spike, preserve a valuable streak, avoid lethal damage, or win a contested shop-pool race.",
+      "reference_only": true,
+      "host_guardrail": "The current live HP, structured streak when available, board quality, item fit, contest status, rank-bracket tempo, target structure, and active choices can override these references. Explain the override instead of silently applying a fixed table."
+    },
+    "risk_model": {
+      "estimated_loss_damage_by_stage": {
+        "2": 7,
+        "3": 10,
+        "4": 13,
+        "5": 14,
+        "6": 14
+      },
+      "reference_only": true,
+      "host_guardrail": "Damage bands are bounded heuristics; prefer observed current-match loss evidence when available and never treat them as exact combat simulation."
+    },
+    "board_readiness": {
+      "required_dimensions": ["board_quality", "frontline_readiness", "damage_readiness", "core_two_star_count", "item_completion", "population_coverage", "loss_buffer_rounds", "roll_marginal_gain"],
+      "policy": "Fast own-board estimate only. It supports a decision and explains missing evidence; it never claims to know the exact win probability."
+    },
+    "postgame_feedback": {
+      "active_match_policy": "record existing structured decision and outcome events only; do not open a model task or change current-match hard truth",
+      "postgame_policy": "derive compact decision/outcome evidence in postgame_review and require user approval before durable strategy memory writes"
+    }
+  },
+  "host_model_invariants": [
+    "Never say to wait for a past choice checkpoint.",
+    "If the current stage is after a season-defined choice checkpoint and the selected choice is unknown, ask what the user selected or state it is unknown.",
+    "Active choice candidates come only from the current-match user report; reported candidates are not confirmed final selections."
+  ]
+}

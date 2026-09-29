@@ -1,0 +1,174 @@
+{
+  "address": "jcc:s17:index:comp_gaps",
+  "entries": [
+    {
+      "gap": "frontline",
+      "tags": [
+        "frontline"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    },
+    {
+      "gap": "backline_damage",
+      "tags": [
+        "backline_damage"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    },
+    {
+      "gap": "single_target_damage",
+      "tags": [
+        "single_target_damage"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    },
+    {
+      "gap": "aoe_damage",
+      "tags": [
+        "aoe_damage"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    },
+    {
+      "gap": "control",
+      "tags": [
+        "control"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    },
+    {
+      "gap": "anti_heal",
+      "tags": [
+        "anti_heal"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    },
+    {
+      "gap": "sunder",
+      "tags": [
+        "sunder"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    },
+    {
+      "gap": "shred",
+      "tags": [
+        "shred"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    },
+    {
+      "gap": "magic_resist",
+      "tags": [
+        "magic_resist"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    },
+    {
+      "gap": "armor",
+      "tags": [
+        "armor"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    },
+    {
+      "gap": "startup",
+      "tags": [
+        "startup"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    },
+    {
+      "gap": "sustain",
+      "tags": [
+        "sustain"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    },
+    {
+      "gap": "anti_backline_threat",
+      "tags": [
+        "anti_backline_threat"
+      ],
+      "fill_sources": [
+        "items",
+        "traits",
+        "augments",
+        "god_rewards",
+        "unit_quality"
+      ]
+    }
+  ]
+}

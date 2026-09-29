@@ -1,0 +1,37 @@
+{
+  "address": "jcc:s17:formula:augment_direction_score",
+  "source": "generated_heuristic",
+  "inputs": [
+    "augment_tags",
+    "board_direction",
+    "items",
+    "economy_state"
+  ],
+  "outputs": [
+    "direction_alignment",
+    "risk_adjusted_score"
+  ],
+  "formulas": {
+    "direction_alignment": "tag_overlap(board_direction, augment_tags)"
+  },
+  "dependencies": [
+    "jcc:s17:index:augment_compatibility",
+    "jcc:s17:formula:reward_choice_score"
+  ],
+  "use_cases": [
+    "海克斯选择",
+    "是否刷新"
+  ],
+  "exactness": "heuristic_tags",
+  "name": "augment_direction_score",
+  "category": "reward",
+  "domains": [
+    "reward",
+    "augment"
+  ],
+  "route_domains": [
+    "reward_choice",
+    "augment_choice"
+  ],
+  "dependency_kind": "derived_formula"
+}

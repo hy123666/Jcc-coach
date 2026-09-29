@@ -1,0 +1,1497 @@
+[
+  {
+    "address": "jcc:s17:runtime_route_bundle:augment_choice",
+    "route_id": "augment_choice",
+    "route_address": "jcc:s17:runtime_query_route:augment_choice",
+    "trigger_addresses": [
+      "jcc:s17:state_diff_trigger:augment_options_changed"
+    ],
+    "live_state_fields": [
+      "jcc:s17:live_state_field:round",
+      "jcc:s17:live_state_field:augment_options",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:components",
+      "jcc:s17:live_state_field:hp",
+      "jcc:s17:live_state_field:gold",
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "required_live_state_fields": [
+      "jcc:s17:live_state_field:round",
+      "jcc:s17:live_state_field:augment_options",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:components",
+      "jcc:s17:live_state_field:hp",
+      "jcc:s17:live_state_field:gold",
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "optional_live_state_fields": [],
+    "live_state_field_roles": [
+      {
+        "field_address": "jcc:s17:live_state_field:round",
+        "field_key": "round",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:augment_options",
+        "field_key": "augment_options",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:board_units",
+        "field_key": "board_units",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:components",
+        "field_key": "components",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:hp",
+        "field_key": "hp",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:gold",
+        "field_key": "gold",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:match_variables",
+        "field_key": "match_variables",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      }
+    ],
+    "live_state_role_policy": {
+      "required_for_first_answer_confidence": "Missing or stale values lower confidence through the route state-confidence contract before final answer.",
+      "optional_context": "Missing optional context must not block first answer; unknown optional context may cap confidence or trigger candidate next-load, but must not be hallucinated."
+    },
+    "required_validation_refs": [
+      "jcc:s17:live_state_validation:round",
+      "jcc:s17:live_state_validation:augment_options",
+      "jcc:s17:live_state_validation:board_units",
+      "jcc:s17:live_state_validation:components",
+      "jcc:s17:live_state_validation:hp",
+      "jcc:s17:live_state_validation:gold",
+      "jcc:s17:live_state_validation:match_variables"
+    ],
+    "indexes": [
+      "jcc:s17:index:runtime_loading_plan",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:tag_entity_lookup",
+      "jcc:s17:index:augment_compatibility",
+      "jcc:s17:index:augment_effect_blocks",
+      "jcc:s17:index:reward_choice_tags",
+      "jcc:s17:index:round_intent",
+      "jcc:s17:index:comp_gaps",
+      "jcc:s17:index:per_match_variable_doorplates",
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:runtime_decision_recipes",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest"
+    ],
+    "formulas": [
+      "jcc:s17:formula:augment_direction_score",
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:effect_block_value",
+      "jcc:s17:formula:action_feasibility"
+    ],
+    "context_pack_address": "jcc:s17:route_context_pack:augment_choice",
+    "variable_doorplate_addresses": [
+      "jcc:s17:per_match_variable_doorplate:judge_law",
+      "jcc:s17:per_match_variable_doorplate:encounter",
+      "jcc:s17:per_match_variable_doorplate:current_god"
+    ],
+    "variable_lookup_refs": [
+      {
+        "variable_key": "judge_law",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law"
+      },
+      {
+        "variable_key": "encounter",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter"
+      },
+      {
+        "variable_key": "current_god",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god"
+      }
+    ],
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:augment_choice",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_augment_choice",
+    "semantic_precision_full_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_augment_choice",
+    "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:augment_choice",
+    "lookup_ref_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_augment_choice",
+    "first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:augment_choice",
+    "first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_augment_choice",
+    "answer_contract_address": "jcc:s17:runtime_answer_contract:augment_choice",
+    "answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_augment_choice",
+    "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:augment_choice",
+    "state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_augment_choice",
+    "feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:augment_choice",
+    "feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_augment_choice",
+    "route_entry_lookup_refs": [
+      "jcc:s17:lookup_ref:strategy_orchestrator_augment_choice",
+      "jcc:s17:lookup_ref:low_latency_lookup_budget_augment_choice",
+      "jcc:s17:lookup_ref:first_answer_capsule_augment_choice",
+      "jcc:s17:lookup_ref:answer_contract_augment_choice",
+      "jcc:s17:lookup_ref:state_confidence_augment_choice",
+      "jcc:s17:lookup_ref:feedback_loop_augment_choice",
+      "jcc:s17:lookup_ref:route_bundle_augment_choice",
+      "jcc:s17:lookup_ref:context_pack_augment_choice",
+      "jcc:s17:lookup_ref:per_match_variable_judge_law",
+      "jcc:s17:lookup_ref:per_match_variable_encounter",
+      "jcc:s17:lookup_ref:per_match_variable_current_god"
+    ],
+    "candidate_fallback_lookup_refs": [
+      "jcc:s17:lookup_ref:fast_context_augment_choice",
+      "jcc:s17:lookup_ref:semantic_precision_gate_route_augment_choice"
+    ],
+    "deep_load_lookup_refs": [
+      "jcc:s17:lookup_ref:semantic_precision_route_augment_choice"
+    ],
+    "fast_response_contract": "5 seconds: conclusion + one action + fallback",
+    "full_response_contract": "15 seconds: conclusion + key reasons + ordered actions + fallback",
+    "output_contract": "ranked augment options with keep/reroll advice and 5-second fallback",
+    "cache_policy": {
+      "prefetch": "on_route_trigger_or_user_query",
+      "keep_priority": true,
+      "invalidate_on_trigger_addresses": [
+        "jcc:s17:state_diff_trigger:augment_options_changed"
+      ],
+      "avoid_loading_full_indexes_until_candidate_filter_runs": true,
+      "enforce_lookup_ref_budget": true
+    }
+  },
+  {
+    "address": "jcc:s17:runtime_route_bundle:item_craft",
+    "route_id": "item_craft",
+    "route_address": "jcc:s17:runtime_query_route:item_craft",
+    "trigger_addresses": [
+      "jcc:s17:state_diff_trigger:components_changed"
+    ],
+    "live_state_fields": [
+      "jcc:s17:live_state_field:components",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:item_holders",
+      "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+      "jcc:s17:live_state_field:round",
+      "jcc:s17:live_state_field:hp",
+      "jcc:s17:live_state_field:streak",
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "required_live_state_fields": [
+      "jcc:s17:live_state_field:components",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:item_holders",
+      "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+      "jcc:s17:live_state_field:round",
+      "jcc:s17:live_state_field:hp",
+      "jcc:s17:live_state_field:streak"
+    ],
+    "optional_live_state_fields": [
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "live_state_field_roles": [
+      {
+        "field_address": "jcc:s17:live_state_field:components",
+        "field_key": "components",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:board_units",
+        "field_key": "board_units",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:item_holders",
+        "field_key": "item_holders",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "field_key": "user_confirmed_scouting_notes",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:round",
+        "field_key": "round",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:hp",
+        "field_key": "hp",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:streak",
+        "field_key": "streak",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:match_variables",
+        "field_key": "match_variables",
+        "role": "optional_context",
+        "required_for_confident_answer": false
+      }
+    ],
+    "live_state_role_policy": {
+      "required_for_first_answer_confidence": "Missing or stale values lower confidence through the route state-confidence contract before final answer.",
+      "optional_context": "Missing optional context must not block first answer; unknown optional context may cap confidence or trigger candidate next-load, but must not be hallucinated."
+    },
+    "required_validation_refs": [
+      "jcc:s17:live_state_validation:components",
+      "jcc:s17:live_state_validation:board_units",
+      "jcc:s17:live_state_validation:item_holders",
+      "jcc:s17:live_state_validation:user_confirmed_scouting_notes",
+      "jcc:s17:live_state_validation:round",
+      "jcc:s17:live_state_validation:hp",
+      "jcc:s17:live_state_validation:streak",
+      "jcc:s17:live_state_validation:match_variables"
+    ],
+    "indexes": [
+      "jcc:s17:index:runtime_loading_plan",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:tag_entity_lookup",
+      "jcc:s17:index:component_to_item_candidates",
+      "jcc:s17:index:item_holder_fit",
+      "jcc:s17:index:champion_item_fit",
+      "jcc:s17:index:item_conflicts",
+      "jcc:s17:index:item_wait_cost",
+      "jcc:s17:index:per_match_variable_doorplates",
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:runtime_decision_recipes",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest"
+    ],
+    "formulas": [
+      "jcc:s17:formula:component_completion",
+      "jcc:s17:formula:item_marginal_value",
+      "jcc:s17:formula:item_conflict_penalty",
+      "jcc:s17:formula:stat_modifier_value"
+    ],
+    "context_pack_address": "jcc:s17:route_context_pack:item_craft",
+    "variable_doorplate_addresses": [
+      "jcc:s17:per_match_variable_doorplate:psionic_weapon"
+    ],
+    "variable_lookup_refs": [
+      {
+        "variable_key": "psionic_weapon",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon"
+      }
+    ],
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:item_craft",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_item_craft",
+    "semantic_precision_full_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_item_craft",
+    "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:item_craft",
+    "lookup_ref_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_item_craft",
+    "first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:item_craft",
+    "first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_item_craft",
+    "answer_contract_address": "jcc:s17:runtime_answer_contract:item_craft",
+    "answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_item_craft",
+    "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:item_craft",
+    "state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_item_craft",
+    "feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:item_craft",
+    "feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_item_craft",
+    "route_entry_lookup_refs": [
+      "jcc:s17:lookup_ref:strategy_orchestrator_item_craft",
+      "jcc:s17:lookup_ref:low_latency_lookup_budget_item_craft",
+      "jcc:s17:lookup_ref:first_answer_capsule_item_craft",
+      "jcc:s17:lookup_ref:answer_contract_item_craft",
+      "jcc:s17:lookup_ref:state_confidence_item_craft",
+      "jcc:s17:lookup_ref:feedback_loop_item_craft",
+      "jcc:s17:lookup_ref:route_bundle_item_craft",
+      "jcc:s17:lookup_ref:context_pack_item_craft",
+      "jcc:s17:lookup_ref:per_match_variable_psionic_weapon"
+    ],
+    "candidate_fallback_lookup_refs": [
+      "jcc:s17:lookup_ref:fast_context_item_craft",
+      "jcc:s17:lookup_ref:semantic_precision_gate_route_item_craft"
+    ],
+    "deep_load_lookup_refs": [
+      "jcc:s17:lookup_ref:semantic_precision_route_item_craft"
+    ],
+    "fast_response_contract": "5 seconds: conclusion + one action + fallback",
+    "full_response_contract": "15 seconds: conclusion + key reasons + ordered actions + fallback",
+    "output_contract": "ranked craft candidates with immediate tempo, future fit, and wait cost",
+    "cache_policy": {
+      "prefetch": "on_route_trigger_or_user_query",
+      "keep_priority": true,
+      "invalidate_on_trigger_addresses": [
+        "jcc:s17:state_diff_trigger:components_changed"
+      ],
+      "avoid_loading_full_indexes_until_candidate_filter_runs": true,
+      "enforce_lookup_ref_budget": true
+    }
+  },
+  {
+    "address": "jcc:s17:runtime_route_bundle:holder_assignment",
+    "route_id": "holder_assignment",
+    "route_address": "jcc:s17:runtime_query_route:holder_assignment",
+    "trigger_addresses": [
+      "jcc:s17:state_diff_trigger:completed_items_changed",
+      "jcc:s17:state_diff_trigger:time_left_low"
+    ],
+    "live_state_fields": [
+      "jcc:s17:live_state_field:completed_items",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:bench_units",
+      "jcc:s17:live_state_field:round",
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "required_live_state_fields": [
+      "jcc:s17:live_state_field:completed_items",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:bench_units",
+      "jcc:s17:live_state_field:round"
+    ],
+    "optional_live_state_fields": [
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "live_state_field_roles": [
+      {
+        "field_address": "jcc:s17:live_state_field:completed_items",
+        "field_key": "completed_items",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:board_units",
+        "field_key": "board_units",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:bench_units",
+        "field_key": "bench_units",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:round",
+        "field_key": "round",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:match_variables",
+        "field_key": "match_variables",
+        "role": "optional_context",
+        "required_for_confident_answer": false
+      }
+    ],
+    "live_state_role_policy": {
+      "required_for_first_answer_confidence": "Missing or stale values lower confidence through the route state-confidence contract before final answer.",
+      "optional_context": "Missing optional context must not block first answer; unknown optional context may cap confidence or trigger candidate next-load, but must not be hallucinated."
+    },
+    "required_validation_refs": [
+      "jcc:s17:live_state_validation:completed_items",
+      "jcc:s17:live_state_validation:board_units",
+      "jcc:s17:live_state_validation:bench_units",
+      "jcc:s17:live_state_validation:round",
+      "jcc:s17:live_state_validation:match_variables"
+    ],
+    "indexes": [
+      "jcc:s17:index:runtime_loading_plan",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:tag_entity_lookup",
+      "jcc:s17:index:item_holder_fit",
+      "jcc:s17:index:champion_item_fit",
+      "jcc:s17:index:item_holders",
+      "jcc:s17:index:champion_role_profile",
+      "jcc:s17:index:per_match_variable_doorplates",
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:runtime_decision_recipes",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest"
+    ],
+    "formulas": [
+      "jcc:s17:formula:item_marginal_value",
+      "jcc:s17:formula:stat_modifier_value",
+      "jcc:s17:formula:unit_quality_score"
+    ],
+    "context_pack_address": "jcc:s17:route_context_pack:holder_assignment",
+    "variable_doorplate_addresses": [
+      "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+      "jcc:s17:per_match_variable_doorplate:psionic_weapon"
+    ],
+    "variable_lookup_refs": [
+      {
+        "variable_key": "miss_fortune_mode",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode"
+      },
+      {
+        "variable_key": "psionic_weapon",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon"
+      }
+    ],
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:holder_assignment",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_holder_assignment",
+    "semantic_precision_full_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_holder_assignment",
+    "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:holder_assignment",
+    "lookup_ref_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_holder_assignment",
+    "first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:holder_assignment",
+    "first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_holder_assignment",
+    "answer_contract_address": "jcc:s17:runtime_answer_contract:holder_assignment",
+    "answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_holder_assignment",
+    "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:holder_assignment",
+    "state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_holder_assignment",
+    "feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:holder_assignment",
+    "feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_holder_assignment",
+    "route_entry_lookup_refs": [
+      "jcc:s17:lookup_ref:strategy_orchestrator_holder_assignment",
+      "jcc:s17:lookup_ref:low_latency_lookup_budget_holder_assignment",
+      "jcc:s17:lookup_ref:first_answer_capsule_holder_assignment",
+      "jcc:s17:lookup_ref:answer_contract_holder_assignment",
+      "jcc:s17:lookup_ref:state_confidence_holder_assignment",
+      "jcc:s17:lookup_ref:feedback_loop_holder_assignment",
+      "jcc:s17:lookup_ref:route_bundle_holder_assignment",
+      "jcc:s17:lookup_ref:context_pack_holder_assignment",
+      "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+      "jcc:s17:lookup_ref:per_match_variable_psionic_weapon"
+    ],
+    "candidate_fallback_lookup_refs": [
+      "jcc:s17:lookup_ref:fast_context_holder_assignment",
+      "jcc:s17:lookup_ref:semantic_precision_gate_route_holder_assignment"
+    ],
+    "deep_load_lookup_refs": [
+      "jcc:s17:lookup_ref:semantic_precision_route_holder_assignment"
+    ],
+    "fast_response_contract": "5 seconds: conclusion + one action + fallback",
+    "full_response_contract": "15 seconds: conclusion + key reasons + ordered actions + fallback",
+    "output_contract": "ranked holders with temporary/final holder labels",
+    "cache_policy": {
+      "prefetch": "on_route_trigger_or_user_query",
+      "keep_priority": true,
+      "invalidate_on_trigger_addresses": [
+        "jcc:s17:state_diff_trigger:completed_items_changed",
+        "jcc:s17:state_diff_trigger:time_left_low"
+      ],
+      "avoid_loading_full_indexes_until_candidate_filter_runs": true,
+      "enforce_lookup_ref_budget": true
+    }
+  },
+  {
+    "address": "jcc:s17:runtime_route_bundle:roll_or_level",
+    "route_id": "roll_or_level",
+    "route_address": "jcc:s17:runtime_query_route:roll_or_level",
+    "trigger_addresses": [
+      "jcc:s17:state_diff_trigger:shop_units_changed",
+      "jcc:s17:state_diff_trigger:bench_pair_density_changed",
+      "jcc:s17:state_diff_trigger:hp_pressure_changed",
+      "jcc:s17:state_diff_trigger:economy_threshold_crossed"
+    ],
+    "live_state_fields": [
+      "jcc:s17:live_state_field:gold",
+      "jcc:s17:live_state_field:level",
+      "jcc:s17:live_state_field:xp",
+      "jcc:s17:live_state_field:hp",
+      "jcc:s17:live_state_field:streak",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:shop_units",
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "required_live_state_fields": [
+      "jcc:s17:live_state_field:gold",
+      "jcc:s17:live_state_field:level",
+      "jcc:s17:live_state_field:xp",
+      "jcc:s17:live_state_field:hp",
+      "jcc:s17:live_state_field:streak",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:shop_units"
+    ],
+    "optional_live_state_fields": [
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "live_state_field_roles": [
+      {
+        "field_address": "jcc:s17:live_state_field:gold",
+        "field_key": "gold",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:level",
+        "field_key": "level",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:xp",
+        "field_key": "xp",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:hp",
+        "field_key": "hp",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:streak",
+        "field_key": "streak",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:board_units",
+        "field_key": "board_units",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:shop_units",
+        "field_key": "shop_units",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:match_variables",
+        "field_key": "match_variables",
+        "role": "optional_context",
+        "required_for_confident_answer": false
+      }
+    ],
+    "live_state_role_policy": {
+      "required_for_first_answer_confidence": "Missing or stale values lower confidence through the route state-confidence contract before final answer.",
+      "optional_context": "Missing optional context must not block first answer; unknown optional context may cap confidence or trigger candidate next-load, but must not be hallucinated."
+    },
+    "required_validation_refs": [
+      "jcc:s17:live_state_validation:gold",
+      "jcc:s17:live_state_validation:level",
+      "jcc:s17:live_state_validation:xp",
+      "jcc:s17:live_state_validation:hp",
+      "jcc:s17:live_state_validation:streak",
+      "jcc:s17:live_state_validation:board_units",
+      "jcc:s17:live_state_validation:shop_units",
+      "jcc:s17:live_state_validation:match_variables"
+    ],
+    "indexes": [
+      "jcc:s17:index:runtime_loading_plan",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_entity_lookup",
+      "jcc:s17:index:round_intent",
+      "jcc:s17:index:pool_contest",
+      "jcc:s17:index:health_economy_shifts",
+      "jcc:s17:index:tempo_windows",
+      "jcc:s17:index:per_match_variable_doorplates",
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:runtime_decision_recipes",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest"
+    ],
+    "formulas": [
+      "jcc:s17:formula:level_timing",
+      "jcc:s17:formula:roll_probability",
+      "jcc:s17:formula:roll_down_budget",
+      "jcc:s17:formula:hp_lethal_tolerance",
+      "jcc:s17:formula:interest_break"
+    ],
+    "context_pack_address": "jcc:s17:route_context_pack:roll_or_level",
+    "variable_doorplate_addresses": [
+      "jcc:s17:per_match_variable_doorplate:encounter",
+      "jcc:s17:per_match_variable_doorplate:current_god"
+    ],
+    "variable_lookup_refs": [
+      {
+        "variable_key": "encounter",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter"
+      },
+      {
+        "variable_key": "current_god",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god"
+      }
+    ],
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:roll_or_level",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_roll_or_level",
+    "semantic_precision_full_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_roll_or_level",
+    "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:roll_or_level",
+    "lookup_ref_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_roll_or_level",
+    "first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:roll_or_level",
+    "first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_roll_or_level",
+    "answer_contract_address": "jcc:s17:runtime_answer_contract:roll_or_level",
+    "answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_roll_or_level",
+    "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:roll_or_level",
+    "state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_roll_or_level",
+    "feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:roll_or_level",
+    "feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_roll_or_level",
+    "route_entry_lookup_refs": [
+      "jcc:s17:lookup_ref:strategy_orchestrator_roll_or_level",
+      "jcc:s17:lookup_ref:low_latency_lookup_budget_roll_or_level",
+      "jcc:s17:lookup_ref:first_answer_capsule_roll_or_level",
+      "jcc:s17:lookup_ref:answer_contract_roll_or_level",
+      "jcc:s17:lookup_ref:state_confidence_roll_or_level",
+      "jcc:s17:lookup_ref:feedback_loop_roll_or_level",
+      "jcc:s17:lookup_ref:route_bundle_roll_or_level",
+      "jcc:s17:lookup_ref:context_pack_roll_or_level",
+      "jcc:s17:lookup_ref:per_match_variable_encounter",
+      "jcc:s17:lookup_ref:per_match_variable_current_god"
+    ],
+    "candidate_fallback_lookup_refs": [
+      "jcc:s17:lookup_ref:fast_context_roll_or_level",
+      "jcc:s17:lookup_ref:semantic_precision_gate_route_roll_or_level"
+    ],
+    "deep_load_lookup_refs": [
+      "jcc:s17:lookup_ref:semantic_precision_route_roll_or_level"
+    ],
+    "fast_response_contract": "5 seconds: conclusion + one action + fallback",
+    "full_response_contract": "15 seconds: conclusion + key reasons + ordered actions + fallback",
+    "output_contract": "level/roll/economy recommendation with stop line",
+    "cache_policy": {
+      "prefetch": "on_route_trigger_or_user_query",
+      "keep_priority": true,
+      "invalidate_on_trigger_addresses": [
+        "jcc:s17:state_diff_trigger:shop_units_changed",
+        "jcc:s17:state_diff_trigger:bench_pair_density_changed",
+        "jcc:s17:state_diff_trigger:hp_pressure_changed",
+        "jcc:s17:state_diff_trigger:economy_threshold_crossed"
+      ],
+      "avoid_loading_full_indexes_until_candidate_filter_runs": true,
+      "enforce_lookup_ref_budget": true
+    }
+  },
+  {
+    "address": "jcc:s17:runtime_route_bundle:trait_or_unit_swap",
+    "route_id": "trait_or_unit_swap",
+    "route_address": "jcc:s17:runtime_query_route:trait_or_unit_swap",
+    "trigger_addresses": [
+      "jcc:s17:state_diff_trigger:board_units_changed"
+    ],
+    "live_state_fields": [
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:bench_units",
+      "jcc:s17:live_state_field:active_traits",
+      "jcc:s17:live_state_field:level",
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "required_live_state_fields": [
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:bench_units",
+      "jcc:s17:live_state_field:active_traits",
+      "jcc:s17:live_state_field:level"
+    ],
+    "optional_live_state_fields": [
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "live_state_field_roles": [
+      {
+        "field_address": "jcc:s17:live_state_field:board_units",
+        "field_key": "board_units",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:bench_units",
+        "field_key": "bench_units",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:active_traits",
+        "field_key": "active_traits",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:level",
+        "field_key": "level",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:match_variables",
+        "field_key": "match_variables",
+        "role": "optional_context",
+        "required_for_confident_answer": false
+      }
+    ],
+    "live_state_role_policy": {
+      "required_for_first_answer_confidence": "Missing or stale values lower confidence through the route state-confidence contract before final answer.",
+      "optional_context": "Missing optional context must not block first answer; unknown optional context may cap confidence or trigger candidate next-load, but must not be hallucinated."
+    },
+    "required_validation_refs": [
+      "jcc:s17:live_state_validation:board_units",
+      "jcc:s17:live_state_validation:bench_units",
+      "jcc:s17:live_state_validation:active_traits",
+      "jcc:s17:live_state_validation:level",
+      "jcc:s17:live_state_validation:match_variables"
+    ],
+    "indexes": [
+      "jcc:s17:index:runtime_loading_plan",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:tag_entity_lookup",
+      "jcc:s17:index:trait_breakpoints",
+      "jcc:s17:index:trait_unit_matrix",
+      "jcc:s17:index:comp_skeletons",
+      "jcc:s17:index:transition_paths",
+      "jcc:s17:index:per_match_variable_doorplates",
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:runtime_decision_recipes",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest"
+    ],
+    "formulas": [
+      "jcc:s17:formula:trait_delta",
+      "jcc:s17:formula:trait_breakpoint_distance",
+      "jcc:s17:formula:unit_quality_score",
+      "jcc:s17:formula:board_trait_count"
+    ],
+    "context_pack_address": "jcc:s17:route_context_pack:trait_or_unit_swap",
+    "variable_doorplate_addresses": [
+      "jcc:s17:per_match_variable_doorplate:judge_law",
+      "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+      "jcc:s17:per_match_variable_doorplate:stargazer_constellation"
+    ],
+    "variable_lookup_refs": [
+      {
+        "variable_key": "judge_law",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law"
+      },
+      {
+        "variable_key": "miss_fortune_mode",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode"
+      },
+      {
+        "variable_key": "stargazer_constellation",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation"
+      }
+    ],
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:trait_or_unit_swap",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_trait_or_unit_swap",
+    "semantic_precision_full_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_trait_or_unit_swap",
+    "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:trait_or_unit_swap",
+    "lookup_ref_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_trait_or_unit_swap",
+    "first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:trait_or_unit_swap",
+    "first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_trait_or_unit_swap",
+    "answer_contract_address": "jcc:s17:runtime_answer_contract:trait_or_unit_swap",
+    "answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_trait_or_unit_swap",
+    "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:trait_or_unit_swap",
+    "state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_trait_or_unit_swap",
+    "feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:trait_or_unit_swap",
+    "feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_trait_or_unit_swap",
+    "route_entry_lookup_refs": [
+      "jcc:s17:lookup_ref:strategy_orchestrator_trait_or_unit_swap",
+      "jcc:s17:lookup_ref:low_latency_lookup_budget_trait_or_unit_swap",
+      "jcc:s17:lookup_ref:first_answer_capsule_trait_or_unit_swap",
+      "jcc:s17:lookup_ref:answer_contract_trait_or_unit_swap",
+      "jcc:s17:lookup_ref:state_confidence_trait_or_unit_swap",
+      "jcc:s17:lookup_ref:feedback_loop_trait_or_unit_swap",
+      "jcc:s17:lookup_ref:route_bundle_trait_or_unit_swap",
+      "jcc:s17:lookup_ref:context_pack_trait_or_unit_swap",
+      "jcc:s17:lookup_ref:per_match_variable_judge_law",
+      "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+      "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation"
+    ],
+    "candidate_fallback_lookup_refs": [
+      "jcc:s17:lookup_ref:fast_context_trait_or_unit_swap",
+      "jcc:s17:lookup_ref:semantic_precision_gate_route_trait_or_unit_swap"
+    ],
+    "deep_load_lookup_refs": [
+      "jcc:s17:lookup_ref:semantic_precision_route_trait_or_unit_swap"
+    ],
+    "fast_response_contract": "5 seconds: conclusion + one action + fallback",
+    "full_response_contract": "15 seconds: conclusion + key reasons + ordered actions + fallback",
+    "output_contract": "candidate swap list with trait delta and unit quality delta",
+    "cache_policy": {
+      "prefetch": "on_route_trigger_or_user_query",
+      "keep_priority": true,
+      "invalidate_on_trigger_addresses": [
+        "jcc:s17:state_diff_trigger:board_units_changed"
+      ],
+      "avoid_loading_full_indexes_until_candidate_filter_runs": true,
+      "enforce_lookup_ref_budget": true
+    }
+  },
+  {
+    "address": "jcc:s17:runtime_route_bundle:positioning",
+    "route_id": "positioning",
+    "route_address": "jcc:s17:runtime_query_route:positioning",
+    "trigger_addresses": [
+      "jcc:s17:state_diff_trigger:user_confirmed_scouting_note_changed"
+    ],
+    "live_state_fields": [
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+      "jcc:s17:live_state_field:completed_items",
+      "jcc:s17:live_state_field:time_left",
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "required_live_state_fields": [
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+      "jcc:s17:live_state_field:completed_items",
+      "jcc:s17:live_state_field:time_left"
+    ],
+    "optional_live_state_fields": [
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "live_state_field_roles": [
+      {
+        "field_address": "jcc:s17:live_state_field:board_units",
+        "field_key": "board_units",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "field_key": "user_confirmed_scouting_notes",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:completed_items",
+        "field_key": "completed_items",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:time_left",
+        "field_key": "time_left",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:match_variables",
+        "field_key": "match_variables",
+        "role": "optional_context",
+        "required_for_confident_answer": false
+      }
+    ],
+    "live_state_role_policy": {
+      "required_for_first_answer_confidence": "Missing or stale values lower confidence through the route state-confidence contract before final answer.",
+      "optional_context": "Missing optional context must not block first answer; unknown optional context may cap confidence or trigger candidate next-load, but must not be hallucinated."
+    },
+    "required_validation_refs": [
+      "jcc:s17:live_state_validation:board_units",
+      "jcc:s17:live_state_validation:user_confirmed_scouting_notes",
+      "jcc:s17:live_state_validation:completed_items",
+      "jcc:s17:live_state_validation:time_left",
+      "jcc:s17:live_state_validation:match_variables"
+    ],
+    "indexes": [
+      "jcc:s17:index:runtime_loading_plan",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:tag_entity_lookup",
+      "jcc:s17:index:targeting_threat_templates",
+      "jcc:s17:index:positioning_templates",
+      "jcc:s17:index:scouting_priority",
+      "jcc:s17:index:per_match_variable_doorplates",
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:runtime_decision_recipes",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest"
+    ],
+    "formulas": [
+      "jcc:s17:formula:positioning_risk",
+      "jcc:s17:formula:scouting_priority_score",
+      "jcc:s17:formula:operation_time_budget"
+    ],
+    "context_pack_address": "jcc:s17:route_context_pack:positioning",
+    "variable_doorplate_addresses": [
+      "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+      "jcc:s17:per_match_variable_doorplate:stargazer_constellation"
+    ],
+    "variable_lookup_refs": [
+      {
+        "variable_key": "miss_fortune_mode",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode"
+      },
+      {
+        "variable_key": "stargazer_constellation",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation"
+      }
+    ],
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:positioning",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_positioning",
+    "semantic_precision_full_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_positioning",
+    "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:positioning",
+    "lookup_ref_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_positioning",
+    "first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:positioning",
+    "first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_positioning",
+    "answer_contract_address": "jcc:s17:runtime_answer_contract:positioning",
+    "answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_positioning",
+    "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:positioning",
+    "state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_positioning",
+    "feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:positioning",
+    "feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_positioning",
+    "route_entry_lookup_refs": [
+      "jcc:s17:lookup_ref:strategy_orchestrator_positioning",
+      "jcc:s17:lookup_ref:low_latency_lookup_budget_positioning",
+      "jcc:s17:lookup_ref:first_answer_capsule_positioning",
+      "jcc:s17:lookup_ref:answer_contract_positioning",
+      "jcc:s17:lookup_ref:state_confidence_positioning",
+      "jcc:s17:lookup_ref:feedback_loop_positioning",
+      "jcc:s17:lookup_ref:route_bundle_positioning",
+      "jcc:s17:lookup_ref:context_pack_positioning",
+      "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+      "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation"
+    ],
+    "candidate_fallback_lookup_refs": [
+      "jcc:s17:lookup_ref:fast_context_positioning",
+      "jcc:s17:lookup_ref:semantic_precision_gate_route_positioning"
+    ],
+    "deep_load_lookup_refs": [
+      "jcc:s17:lookup_ref:semantic_precision_route_positioning"
+    ],
+    "fast_response_contract": "5 seconds: conclusion + one action + fallback",
+    "full_response_contract": "15 seconds: conclusion + key reasons + ordered actions + fallback",
+    "output_contract": "self-board move instructions plus risk reason",
+    "cache_policy": {
+      "prefetch": "on_route_trigger_or_user_query",
+      "keep_priority": true,
+      "invalidate_on_trigger_addresses": [
+        "jcc:s17:state_diff_trigger:user_confirmed_scouting_note_changed"
+      ],
+      "avoid_loading_full_indexes_until_candidate_filter_runs": true,
+      "enforce_lookup_ref_budget": true
+    }
+  },
+  {
+    "address": "jcc:s17:runtime_route_bundle:reward_choice",
+    "route_id": "reward_choice",
+    "route_address": "jcc:s17:runtime_query_route:reward_choice",
+    "trigger_addresses": [
+      "jcc:s17:state_diff_trigger:reward_options_changed",
+      "jcc:s17:state_diff_trigger:match_variable_resolved"
+    ],
+    "live_state_fields": [
+      "jcc:s17:live_state_field:reward_options",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:components",
+      "jcc:s17:live_state_field:hp",
+      "jcc:s17:live_state_field:gold",
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "required_live_state_fields": [
+      "jcc:s17:live_state_field:reward_options",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:components",
+      "jcc:s17:live_state_field:hp",
+      "jcc:s17:live_state_field:gold",
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "optional_live_state_fields": [],
+    "live_state_field_roles": [
+      {
+        "field_address": "jcc:s17:live_state_field:reward_options",
+        "field_key": "reward_options",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:board_units",
+        "field_key": "board_units",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:components",
+        "field_key": "components",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:hp",
+        "field_key": "hp",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:gold",
+        "field_key": "gold",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:match_variables",
+        "field_key": "match_variables",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      }
+    ],
+    "live_state_role_policy": {
+      "required_for_first_answer_confidence": "Missing or stale values lower confidence through the route state-confidence contract before final answer.",
+      "optional_context": "Missing optional context must not block first answer; unknown optional context may cap confidence or trigger candidate next-load, but must not be hallucinated."
+    },
+    "required_validation_refs": [
+      "jcc:s17:live_state_validation:reward_options",
+      "jcc:s17:live_state_validation:board_units",
+      "jcc:s17:live_state_validation:components",
+      "jcc:s17:live_state_validation:hp",
+      "jcc:s17:live_state_validation:gold",
+      "jcc:s17:live_state_validation:match_variables"
+    ],
+    "indexes": [
+      "jcc:s17:index:runtime_loading_plan",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:tag_entity_lookup",
+      "jcc:s17:index:reward_choice_tags",
+      "jcc:s17:index:god_reward_effect_blocks",
+      "jcc:s17:index:encounter_effect_blocks",
+      "jcc:s17:index:god_reward_paths",
+      "jcc:s17:index:encounter_shift",
+      "jcc:s17:index:item_rework_tools",
+      "jcc:s17:index:per_match_variable_doorplates",
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:runtime_decision_recipes",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest"
+    ],
+    "formulas": [
+      "jcc:s17:formula:reward_choice_score",
+      "jcc:s17:formula:god_reward_path_bias",
+      "jcc:s17:formula:encounter_rule_shift",
+      "jcc:s17:formula:resource_exchange",
+      "jcc:s17:formula:effect_block_value"
+    ],
+    "context_pack_address": "jcc:s17:route_context_pack:reward_choice",
+    "variable_doorplate_addresses": [
+      "jcc:s17:per_match_variable_doorplate:judge_law",
+      "jcc:s17:per_match_variable_doorplate:miss_fortune_mode",
+      "jcc:s17:per_match_variable_doorplate:encounter",
+      "jcc:s17:per_match_variable_doorplate:current_god",
+      "jcc:s17:per_match_variable_doorplate:psionic_weapon",
+      "jcc:s17:per_match_variable_doorplate:stargazer_constellation"
+    ],
+    "variable_lookup_refs": [
+      {
+        "variable_key": "judge_law",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law"
+      },
+      {
+        "variable_key": "miss_fortune_mode",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode"
+      },
+      {
+        "variable_key": "encounter",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter"
+      },
+      {
+        "variable_key": "current_god",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god"
+      },
+      {
+        "variable_key": "psionic_weapon",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon"
+      },
+      {
+        "variable_key": "stargazer_constellation",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation"
+      }
+    ],
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:reward_choice",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_reward_choice",
+    "semantic_precision_full_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_reward_choice",
+    "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:reward_choice",
+    "lookup_ref_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_reward_choice",
+    "first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:reward_choice",
+    "first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_reward_choice",
+    "answer_contract_address": "jcc:s17:runtime_answer_contract:reward_choice",
+    "answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_reward_choice",
+    "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:reward_choice",
+    "state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_reward_choice",
+    "feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:reward_choice",
+    "feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_reward_choice",
+    "route_entry_lookup_refs": [
+      "jcc:s17:lookup_ref:strategy_orchestrator_reward_choice",
+      "jcc:s17:lookup_ref:low_latency_lookup_budget_reward_choice",
+      "jcc:s17:lookup_ref:first_answer_capsule_reward_choice",
+      "jcc:s17:lookup_ref:answer_contract_reward_choice",
+      "jcc:s17:lookup_ref:state_confidence_reward_choice",
+      "jcc:s17:lookup_ref:feedback_loop_reward_choice",
+      "jcc:s17:lookup_ref:route_bundle_reward_choice",
+      "jcc:s17:lookup_ref:context_pack_reward_choice",
+      "jcc:s17:lookup_ref:per_match_variable_judge_law",
+      "jcc:s17:lookup_ref:per_match_variable_miss_fortune_mode",
+      "jcc:s17:lookup_ref:per_match_variable_encounter",
+      "jcc:s17:lookup_ref:per_match_variable_current_god",
+      "jcc:s17:lookup_ref:per_match_variable_psionic_weapon",
+      "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation"
+    ],
+    "candidate_fallback_lookup_refs": [
+      "jcc:s17:lookup_ref:fast_context_reward_choice",
+      "jcc:s17:lookup_ref:semantic_precision_gate_route_reward_choice"
+    ],
+    "deep_load_lookup_refs": [
+      "jcc:s17:lookup_ref:semantic_precision_route_reward_choice"
+    ],
+    "fast_response_contract": "5 seconds: conclusion + one action + fallback",
+    "full_response_contract": "15 seconds: conclusion + key reasons + ordered actions + fallback",
+    "output_contract": "ranked reward options with tempo/cap/economy tags",
+    "cache_policy": {
+      "prefetch": "on_route_trigger_or_user_query",
+      "keep_priority": true,
+      "invalidate_on_trigger_addresses": [
+        "jcc:s17:state_diff_trigger:reward_options_changed",
+        "jcc:s17:state_diff_trigger:match_variable_resolved"
+      ],
+      "avoid_loading_full_indexes_until_candidate_filter_runs": true,
+      "enforce_lookup_ref_budget": true
+    }
+  },
+  {
+    "address": "jcc:s17:runtime_route_bundle:postgame_review",
+    "route_id": "postgame_review",
+    "route_address": "jcc:s17:runtime_query_route:postgame_review",
+    "trigger_addresses": [
+      "jcc:s17:state_diff_trigger:match_result_available"
+    ],
+    "live_state_fields": [
+      "jcc:s17:live_state_field:round",
+      "jcc:s17:live_state_field:hp",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:completed_items",
+      "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+      "jcc:s17:live_state_field:timeline_events",
+      "jcc:s17:live_state_field:decision_events",
+      "jcc:s17:live_state_field:postgame_result",
+      "jcc:s17:live_state_field:recent_matches",
+      "jcc:s17:live_state_field:user_feedback",
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "required_live_state_fields": [
+      "jcc:s17:live_state_field:round",
+      "jcc:s17:live_state_field:hp",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:completed_items",
+      "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+      "jcc:s17:live_state_field:timeline_events",
+      "jcc:s17:live_state_field:decision_events",
+      "jcc:s17:live_state_field:postgame_result",
+      "jcc:s17:live_state_field:recent_matches",
+      "jcc:s17:live_state_field:user_feedback"
+    ],
+    "optional_live_state_fields": [
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "live_state_field_roles": [
+      {
+        "field_address": "jcc:s17:live_state_field:round",
+        "field_key": "round",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:hp",
+        "field_key": "hp",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:board_units",
+        "field_key": "board_units",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:completed_items",
+        "field_key": "completed_items",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+        "field_key": "user_confirmed_scouting_notes",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:timeline_events",
+        "field_key": "timeline_events",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:decision_events",
+        "field_key": "decision_events",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:postgame_result",
+        "field_key": "postgame_result",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:recent_matches",
+        "field_key": "recent_matches",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:user_feedback",
+        "field_key": "user_feedback",
+        "role": "required_for_first_answer_confidence",
+        "required_for_confident_answer": true
+      },
+      {
+        "field_address": "jcc:s17:live_state_field:match_variables",
+        "field_key": "match_variables",
+        "role": "optional_context",
+        "required_for_confident_answer": false
+      }
+    ],
+    "live_state_role_policy": {
+      "required_for_first_answer_confidence": "Missing or stale values lower confidence through the route state-confidence contract before final answer.",
+      "optional_context": "Missing optional context must not block first answer; unknown optional context may cap confidence or trigger candidate next-load, but must not be hallucinated."
+    },
+    "required_validation_refs": [
+      "jcc:s17:live_state_validation:round",
+      "jcc:s17:live_state_validation:hp",
+      "jcc:s17:live_state_validation:board_units",
+      "jcc:s17:live_state_validation:completed_items",
+      "jcc:s17:live_state_validation:user_confirmed_scouting_notes",
+      "jcc:s17:live_state_validation:timeline_events",
+      "jcc:s17:live_state_validation:decision_events",
+      "jcc:s17:live_state_validation:postgame_result",
+      "jcc:s17:live_state_validation:recent_matches",
+      "jcc:s17:live_state_validation:user_feedback",
+      "jcc:s17:live_state_validation:match_variables"
+    ],
+    "indexes": [
+      "jcc:s17:index:runtime_loading_plan",
+      "jcc:s17:index:runtime_entity_cards",
+      "jcc:s17:index:route_kind_entity_lookup",
+      "jcc:s17:index:route_entity_lookup",
+      "jcc:s17:index:formula_entity_lookup",
+      "jcc:s17:index:review_attribution",
+      "jcc:s17:index:loss_reasons",
+      "jcc:s17:index:player_habit_bias_schema",
+      "jcc:s17:index:per_match_variable_doorplates",
+      "jcc:s17:index:runtime_strategy_orchestrator",
+      "jcc:s17:index:runtime_lookup_budgets",
+      "jcc:s17:index:runtime_first_answer_capsules",
+      "jcc:s17:index:runtime_answer_contracts",
+      "jcc:s17:index:runtime_state_confidence_contracts",
+      "jcc:s17:index:runtime_feedback_loop_contracts",
+      "jcc:s17:index:runtime_fast_context",
+      "jcc:s17:index:runtime_decision_recipes",
+      "jcc:s17:index:route_term_refinement_lookup",
+      "jcc:s17:index:route_strategy_playbook_lookup",
+      "jcc:s17:index:semantic_precision_calibration",
+      "jcc:s17:index:effect_term_refinement_queue",
+      "jcc:s17:index:effect_term_formula_bindings",
+      "jcc:s17:index:entity_strategy_playbooks",
+      "jcc:s17:index:manual_semantic_calibration_queue",
+      "jcc:s17:index:formula_kernel_catalog",
+      "jcc:s17:index:formula_evaluator_specs",
+      "jcc:s17:index:route_formula_kernel_plan",
+      "jcc:s17:index:route_evaluator_manifest"
+    ],
+    "formulas": [
+      "jcc:s17:formula:review_attribution_score",
+      "jcc:s17:formula:player_habit_bias"
+    ],
+    "context_pack_address": "jcc:s17:route_context_pack:postgame_review",
+    "variable_doorplate_addresses": [
+      "jcc:s17:per_match_variable_doorplate:judge_law",
+      "jcc:s17:per_match_variable_doorplate:encounter",
+      "jcc:s17:per_match_variable_doorplate:current_god",
+      "jcc:s17:per_match_variable_doorplate:psionic_weapon",
+      "jcc:s17:per_match_variable_doorplate:stargazer_constellation"
+    ],
+    "variable_lookup_refs": [
+      {
+        "variable_key": "judge_law",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_judge_law"
+      },
+      {
+        "variable_key": "encounter",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_encounter"
+      },
+      {
+        "variable_key": "current_god",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_current_god"
+      },
+      {
+        "variable_key": "psionic_weapon",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_psionic_weapon"
+      },
+      {
+        "variable_key": "stargazer_constellation",
+        "lookup_ref": "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation"
+      }
+    ],
+    "semantic_precision_gate_address": "jcc:s17:semantic_precision_gate_route:postgame_review",
+    "semantic_precision_gate_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_gate_route_postgame_review",
+    "semantic_precision_full_route_lookup_ref": "jcc:s17:lookup_ref:semantic_precision_route_postgame_review",
+    "lookup_ref_budget_address": "jcc:s17:runtime_lookup_budget:postgame_review",
+    "lookup_ref_budget_lookup_ref": "jcc:s17:lookup_ref:low_latency_lookup_budget_postgame_review",
+    "first_answer_capsule_address": "jcc:s17:runtime_first_answer_capsule:postgame_review",
+    "first_answer_capsule_lookup_ref": "jcc:s17:lookup_ref:first_answer_capsule_postgame_review",
+    "answer_contract_address": "jcc:s17:runtime_answer_contract:postgame_review",
+    "answer_contract_lookup_ref": "jcc:s17:lookup_ref:answer_contract_postgame_review",
+    "state_confidence_contract_address": "jcc:s17:runtime_state_confidence_contract:postgame_review",
+    "state_confidence_contract_lookup_ref": "jcc:s17:lookup_ref:state_confidence_postgame_review",
+    "feedback_loop_contract_address": "jcc:s17:runtime_feedback_loop_contract:postgame_review",
+    "feedback_loop_contract_lookup_ref": "jcc:s17:lookup_ref:feedback_loop_postgame_review",
+    "route_entry_lookup_refs": [
+      "jcc:s17:lookup_ref:strategy_orchestrator_postgame_review",
+      "jcc:s17:lookup_ref:low_latency_lookup_budget_postgame_review",
+      "jcc:s17:lookup_ref:first_answer_capsule_postgame_review",
+      "jcc:s17:lookup_ref:answer_contract_postgame_review",
+      "jcc:s17:lookup_ref:state_confidence_postgame_review",
+      "jcc:s17:lookup_ref:feedback_loop_postgame_review",
+      "jcc:s17:lookup_ref:route_bundle_postgame_review",
+      "jcc:s17:lookup_ref:context_pack_postgame_review",
+      "jcc:s17:lookup_ref:per_match_variable_judge_law",
+      "jcc:s17:lookup_ref:per_match_variable_encounter",
+      "jcc:s17:lookup_ref:per_match_variable_current_god",
+      "jcc:s17:lookup_ref:per_match_variable_psionic_weapon",
+      "jcc:s17:lookup_ref:per_match_variable_stargazer_constellation"
+    ],
+    "candidate_fallback_lookup_refs": [
+      "jcc:s17:lookup_ref:fast_context_postgame_review",
+      "jcc:s17:lookup_ref:semantic_precision_gate_route_postgame_review"
+    ],
+    "deep_load_lookup_refs": [
+      "jcc:s17:lookup_ref:semantic_precision_route_postgame_review"
+    ],
+    "fast_response_contract": "5 seconds: conclusion + one action + fallback",
+    "full_response_contract": "15 seconds: conclusion + key reasons + ordered actions + fallback",
+    "output_contract": "top causes, repeated habit signals, next-session reminders",
+    "cache_policy": {
+      "prefetch": "on_route_trigger_or_user_query",
+      "keep_priority": true,
+      "invalidate_on_trigger_addresses": [
+        "jcc:s17:state_diff_trigger:match_result_available"
+      ],
+      "avoid_loading_full_indexes_until_candidate_filter_runs": true,
+      "enforce_lookup_ref_budget": true
+    }
+  }
+]

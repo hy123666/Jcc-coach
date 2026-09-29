@@ -1,0 +1,43 @@
+{
+  "address": "jcc:s17:formula:resource_exchange",
+  "source": "generated_heuristic",
+  "inputs": [
+    "gold",
+    "hp",
+    "xp",
+    "rerolls",
+    "items",
+    "duplicators",
+    "round",
+    "risk_level"
+  ],
+  "outputs": [
+    "estimated_gold_equivalent",
+    "risk_adjusted_value",
+    "tempo_value"
+  ],
+  "formulas": {
+    "gold_to_xp": "4 gold = 4 XP baseline",
+    "reroll_to_gold": "1 reroll ~= 2 gold baseline",
+    "hp_value": "contextual; rises sharply when lethal risk increases"
+  },
+  "name": "resource_exchange",
+  "category": "economy",
+  "domains": [
+    "economy",
+    "reward"
+  ],
+  "route_domains": [
+    "roll_or_level",
+    "reward_choice",
+    "postgame_review",
+    "augment_choice"
+  ],
+  "dependencies": [],
+  "dependency_kind": "root_formula",
+  "use_cases": [
+    "gold equivalent comparison",
+    "reward valuation",
+    "risk adjusted resource trade"
+  ]
+}

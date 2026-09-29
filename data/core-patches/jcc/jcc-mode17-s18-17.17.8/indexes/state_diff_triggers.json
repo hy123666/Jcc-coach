@@ -1,0 +1,160 @@
+[
+  {
+    "address": "jcc:s17:state_diff_trigger:augment_options_changed",
+    "id": "augment_options_changed",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:augment_options"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:augment_choice",
+    "priority": "high",
+    "desc": "visible augment choices changed; answer within 5-10 seconds",
+    "action": "trigger_agent_response_or_high_priority_timeline_event"
+  },
+  {
+    "address": "jcc:s17:state_diff_trigger:reward_options_changed",
+    "id": "reward_options_changed",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:reward_options"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:reward_choice",
+    "priority": "high",
+    "desc": "god/encounter/armory reward choices changed",
+    "action": "trigger_agent_response_or_high_priority_timeline_event"
+  },
+  {
+    "address": "jcc:s17:state_diff_trigger:components_changed",
+    "id": "components_changed",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:components"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:item_craft",
+    "priority": "medium",
+    "desc": "owned components changed; recompute craft candidates and wait cost",
+    "action": "write_timeline_event_and_refresh_candidate_cache"
+  },
+  {
+    "address": "jcc:s17:state_diff_trigger:completed_items_changed",
+    "id": "completed_items_changed",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:completed_items",
+      "jcc:s17:live_state_field:item_holders"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:holder_assignment",
+    "priority": "medium",
+    "desc": "completed item or holder state changed",
+    "action": "write_timeline_event_and_refresh_candidate_cache"
+  },
+  {
+    "address": "jcc:s17:state_diff_trigger:shop_units_changed",
+    "id": "shop_units_changed",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:shop_units",
+      "jcc:s17:live_state_field:gold",
+      "jcc:s17:live_state_field:level"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:roll_or_level",
+    "priority": "medium",
+    "desc": "shop changed; detect key unit, pair, or roll target",
+    "action": "write_timeline_event_and_refresh_candidate_cache"
+  },
+  {
+    "address": "jcc:s17:state_diff_trigger:board_units_changed",
+    "id": "board_units_changed",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:active_traits"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:trait_or_unit_swap",
+    "priority": "medium",
+    "desc": "board changed; recompute trait delta and unit quality",
+    "action": "write_timeline_event_and_refresh_candidate_cache"
+  },
+  {
+    "address": "jcc:s17:state_diff_trigger:bench_pair_density_changed",
+    "id": "bench_pair_density_changed",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:bench_units",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:gold"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:roll_or_level",
+    "priority": "medium",
+    "desc": "pair density changed; recompute roll-down value",
+    "action": "write_timeline_event_and_refresh_candidate_cache"
+  },
+  {
+    "address": "jcc:s17:state_diff_trigger:hp_pressure_changed",
+    "id": "hp_pressure_changed",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:hp",
+      "jcc:s17:live_state_field:stage",
+      "jcc:s17:live_state_field:round"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:roll_or_level",
+    "priority": "high",
+    "desc": "HP pressure changed; recompute greed/stabilize tolerance",
+    "action": "trigger_agent_response_or_high_priority_timeline_event"
+  },
+  {
+    "address": "jcc:s17:state_diff_trigger:economy_threshold_crossed",
+    "id": "economy_threshold_crossed",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:gold",
+      "jcc:s17:live_state_field:streak"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:roll_or_level",
+    "priority": "medium",
+    "desc": "gold or streak crosses spend/interest threshold",
+    "action": "write_timeline_event_and_refresh_candidate_cache"
+  },
+  {
+    "address": "jcc:s17:state_diff_trigger:user_confirmed_scouting_note_changed",
+    "id": "user_confirmed_scouting_note_changed",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:user_confirmed_scouting_notes",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:completed_items"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:positioning",
+    "priority": "high",
+    "desc": "user-confirmed scouting note changed; recompute positioning risk",
+    "action": "trigger_agent_response_or_high_priority_timeline_event"
+  },
+  {
+    "address": "jcc:s17:state_diff_trigger:time_left_low",
+    "id": "time_left_low",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:time_left"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:holder_assignment",
+    "priority": "high",
+    "desc": "decision time is low; compress response to action-only contract",
+    "action": "trigger_agent_response_or_high_priority_timeline_event"
+  },
+  {
+    "address": "jcc:s17:state_diff_trigger:match_variable_resolved",
+    "id": "match_variable_resolved",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:match_variables"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:reward_choice",
+    "priority": "medium",
+    "desc": "encounter/god/stargazer/psionic variable was resolved",
+    "action": "write_timeline_event_and_refresh_candidate_cache"
+  },
+  {
+    "address": "jcc:s17:state_diff_trigger:match_result_available",
+    "id": "match_result_available",
+    "watched_live_state_fields": [
+      "jcc:s17:live_state_field:round",
+      "jcc:s17:live_state_field:hp",
+      "jcc:s17:live_state_field:board_units",
+      "jcc:s17:live_state_field:completed_items",
+      "jcc:s17:live_state_field:user_confirmed_scouting_notes"
+    ],
+    "route_address": "jcc:s17:runtime_query_route:postgame_review",
+    "priority": "high",
+    "desc": "match ended or match detail page is available; collect result and write review event",
+    "action": "trigger_agent_response_or_high_priority_timeline_event"
+  }
+]

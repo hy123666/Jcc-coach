@@ -1,0 +1,37 @@
+{
+  "address": "jcc:s17:formula:god_reward_path_bias",
+  "source": "generated_heuristic",
+  "inputs": [
+    "current_god",
+    "reward_history",
+    "stage",
+    "path_tags"
+  ],
+  "outputs": [
+    "path_bias",
+    "next_reward_expectation"
+  ],
+  "formulas": {
+    "path_bias": "weighted_tags(rewards_seen + possible_rewards)"
+  },
+  "dependencies": [
+    "jcc:s17:index:god_reward_paths",
+    "jcc:s17:formula:reward_choice_score"
+  ],
+  "use_cases": [
+    "星神路线",
+    "current god asks"
+  ],
+  "exactness": "heuristic_from_official_reward_text",
+  "name": "god_reward_path_bias",
+  "category": "reward",
+  "domains": [
+    "reward",
+    "god"
+  ],
+  "route_domains": [
+    "reward_choice",
+    "augment_choice"
+  ],
+  "dependency_kind": "derived_formula"
+}

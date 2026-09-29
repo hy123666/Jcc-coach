@@ -1,0 +1,37 @@
+{
+  "address": "jcc:s17:formula:action_feasibility",
+  "source": "generated_heuristic",
+  "inputs": [
+    "gold",
+    "bench_slots",
+    "item_slots",
+    "time_left",
+    "recognized_state"
+  ],
+  "outputs": [
+    "is_actionable",
+    "blocking_constraints"
+  ],
+  "formulas": {
+    "is_actionable": "no hard blocking constraint and time_left >= estimated_operation_time"
+  },
+  "dependencies": [
+    "jcc:s17:index:action_constraints",
+    "jcc:s17:index:operation_steps"
+  ],
+  "use_cases": [
+    "avoid impossible advice",
+    "3-second step output"
+  ],
+  "exactness": "exact_for_detected_constraints",
+  "name": "action_feasibility",
+  "category": "runtime",
+  "domains": [
+    "runtime",
+    "action"
+  ],
+  "route_domains": [
+    "operation_steps"
+  ],
+  "dependency_kind": "derived_formula"
+}

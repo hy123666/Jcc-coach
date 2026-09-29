@@ -1,0 +1,2730 @@
+[
+  {
+    "address": "jcc:s18:trait_breakpoints:340",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "25%【生命上限】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:340_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            25
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "25%【生命上限】",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 4,
+        "effect": "40%【生命上限】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:340_2",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            40
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "40%【生命上限】",
+          "tags": [],
+          "values": []
+        },
+        "level": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 6,
+        "effect": "65%【生命上限】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:340_3",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            65
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "65%【生命上限】",
+          "tags": [],
+          "values": []
+        },
+        "level": 3,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "斗士",
+    "tags": [],
+    "trait_address": "jcc:s18:trait:340"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:341",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "25【护甲】【魔法抗性】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:341_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            25
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "25【护甲】【魔法抗性】",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 4,
+        "effect": "60【护甲】【魔法抗性】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:341_2",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            60
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "60【护甲】【魔法抗性】",
+          "tags": [],
+          "values": []
+        },
+        "level": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 6,
+        "effect": "115【护甲】【魔法抗性】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:341_3",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            115
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "115【护甲】【魔法抗性】",
+          "tags": [],
+          "values": []
+        },
+        "level": 3,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "护卫",
+    "tags": [],
+    "trait_address": "jcc:s18:trait:341"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:342",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "18%最大生命值",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:342_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            18
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "18%最大生命值",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 4,
+        "effect": "30%最大生命值",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:342_2",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            30
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "30%最大生命值",
+          "tags": [],
+          "values": []
+        },
+        "level": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 6,
+        "effect": "40%最大生命值。在拥有护盾时获得5%伤害减免。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:342_3",
+          "effect_types": [
+            "shield"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            40,
+            5
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "40%最大生命值。在拥有护盾时获得5%伤害减免。",
+          "tags": [
+            "shield"
+          ],
+          "values": []
+        },
+        "level": 3,
+        "tags": [
+          "shield"
+        ],
+        "values": []
+      }
+    ],
+    "name": "重装战士",
+    "tags": [
+      "condition_low_health",
+      "shield",
+      "trigger_combat_start"
+    ],
+    "trait_address": "jcc:s18:trait:342"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:343",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "4%或20%【伤害减免】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:343_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            4,
+            20
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "4%或20%【伤害减免】",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 4,
+        "effect": "6%或33%【伤害减免】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:343_2",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            6,
+            33
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "6%或33%【伤害减免】",
+          "tags": [],
+          "values": []
+        },
+        "level": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 6,
+        "effect": "8%或45%【伤害减免】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:343_3",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            8,
+            45
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "8%或45%【伤害减免】",
+          "tags": [],
+          "values": []
+        },
+        "level": 3,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "主宰",
+    "tags": [],
+    "trait_address": "jcc:s18:trait:343"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:344",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "每次攻击+3%【攻击速度】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:344_1",
+          "effect_types": [
+            "attack_speed",
+            "trigger_basic_attack"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            3
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "每次攻击+3%【攻击速度】",
+          "tags": [
+            "attack_speed",
+            "trigger_basic_attack"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "attack_speed",
+          "trigger_basic_attack"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 3,
+        "effect": "每次攻击+5%【攻击速度】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:344_2",
+          "effect_types": [
+            "attack_speed",
+            "trigger_basic_attack"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            5
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "每次攻击+5%【攻击速度】",
+          "tags": [
+            "attack_speed",
+            "trigger_basic_attack"
+          ],
+          "values": []
+        },
+        "level": 2,
+        "tags": [
+          "attack_speed",
+          "trigger_basic_attack"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 4,
+        "effect": "每次攻击+8%【攻击速度】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:344_3",
+          "effect_types": [
+            "attack_speed",
+            "trigger_basic_attack"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            8
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "每次攻击+8%【攻击速度】",
+          "tags": [
+            "attack_speed",
+            "trigger_basic_attack"
+          ],
+          "values": []
+        },
+        "level": 3,
+        "tags": [
+          "attack_speed",
+          "trigger_basic_attack"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 5,
+        "effect": "每次攻击+12%【攻击速度】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:344_4",
+          "effect_types": [
+            "attack_speed",
+            "trigger_basic_attack"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            12
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "每次攻击+12%【攻击速度】",
+          "tags": [
+            "attack_speed",
+            "trigger_basic_attack"
+          ],
+          "values": []
+        },
+        "level": 4,
+        "tags": [
+          "attack_speed",
+          "trigger_basic_attack"
+        ],
+        "values": []
+      }
+    ],
+    "name": "迅捷射手",
+    "tags": [
+      "attack_speed",
+      "trigger_basic_attack"
+    ],
+    "trait_address": "jcc:s18:trait:344"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:345",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "20%【物理加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:345_1",
+          "effect_types": [
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            20
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "20%【物理加成】",
+          "tags": [
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 3,
+        "effect": "30%【物理加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:345_2",
+          "effect_types": [
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            30
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "30%【物理加成】",
+          "tags": [
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 2,
+        "tags": [
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 4,
+        "effect": "40%【物理加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:345_3",
+          "effect_types": [
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            40
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "40%【物理加成】",
+          "tags": [
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 3,
+        "tags": [
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 5,
+        "effect": "60%【物理加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:345_4",
+          "effect_types": [
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            60
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "60%【物理加成】",
+          "tags": [
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 4,
+        "tags": [
+          "physical_damage"
+        ],
+        "values": []
+      }
+    ],
+    "name": "猎人",
+    "tags": [
+      "physical_damage"
+    ],
+    "trait_address": "jcc:s18:trait:345"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:346",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "12%的额外伤害",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:346_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            12
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "12%的额外伤害",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 4,
+        "effect": "25%的额外伤害",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:346_2",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            25
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "25%的额外伤害",
+          "tags": [],
+          "values": []
+        },
+        "level": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 6,
+        "effect": "40%的额外伤害",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:346_3",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            40
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "40%的额外伤害",
+          "tags": [],
+          "values": []
+        },
+        "level": 3,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "狂战士",
+    "tags": [
+      "condition_low_health"
+    ],
+    "trait_address": "jcc:s18:trait:346"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:347",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "【裁决使】获得【技能暴击】和15%暴击几率。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:347_1",
+          "effect_types": [
+            "critical_strike"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            15
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "【裁决使】获得【技能暴击】和15%暴击几率。",
+          "tags": [
+            "critical_strike"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "critical_strike"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 3,
+        "effect": "此外，敌人会受伤，在3秒内受到30%额外真实伤害",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:347_2",
+          "effect_types": [
+            "true_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            3,
+            30
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "此外，敌人会受伤，在3秒内受到30%额外真实伤害",
+          "tags": [
+            "true_damage"
+          ],
+          "values": []
+        },
+        "level": 2,
+        "tags": [
+          "true_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": null,
+        "count": 4,
+        "effect": "额外真实伤害提高至40%",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:347_3",
+          "effect_types": [
+            "true_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            40
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "额外真实伤害提高至40%",
+          "tags": [
+            "true_damage"
+          ],
+          "values": []
+        },
+        "level": 3,
+        "tags": [
+          "true_damage"
+        ],
+        "values": []
+      }
+    ],
+    "name": "裁决使",
+    "tags": [
+      "critical_strike",
+      "true_damage"
+    ],
+    "trait_address": "jcc:s18:trait:347"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:348",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "20%【物理加成】或【法术加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:348_1",
+          "effect_types": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            20
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "20%【物理加成】或【法术加成】",
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 3,
+        "effect": "30%【物理加成】或【法术加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:348_2",
+          "effect_types": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            30
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "30%【物理加成】或【法术加成】",
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 2,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 4,
+        "effect": "50%【物理加成】或【法术加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:348_3",
+          "effect_types": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            50
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "50%【物理加成】或【法术加成】",
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 3,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      }
+    ],
+    "name": "魔战士",
+    "tags": [
+      "magic_damage",
+      "physical_damage"
+    ],
+    "trait_address": "jcc:s18:trait:348"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:349",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "10%【法术加成】，每次施法1%【法术加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:349_1",
+          "effect_types": [
+            "magic_damage",
+            "trigger_cast"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            10,
+            1
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "10%【法术加成】，每次施法1%【法术加成】",
+          "tags": [
+            "magic_damage",
+            "trigger_cast"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "magic_damage",
+          "trigger_cast"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 4,
+        "effect": "30%【法术加成】，每次施法1%【法术加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:349_2",
+          "effect_types": [
+            "magic_damage",
+            "trigger_cast"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            30,
+            1
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "30%【法术加成】，每次施法1%【法术加成】",
+          "tags": [
+            "magic_damage",
+            "trigger_cast"
+          ],
+          "values": []
+        },
+        "level": 2,
+        "tags": [
+          "magic_damage",
+          "trigger_cast"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 6,
+        "effect": "55%【法术加成】，每次施法2%【法术加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:349_3",
+          "effect_types": [
+            "magic_damage",
+            "trigger_cast"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            55,
+            2
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "55%【法术加成】，每次施法2%【法术加成】",
+          "tags": [
+            "magic_damage",
+            "trigger_cast"
+          ],
+          "values": []
+        },
+        "level": 3,
+        "tags": [
+          "magic_damage",
+          "trigger_cast"
+        ],
+        "values": []
+      }
+    ],
+    "name": "法师",
+    "tags": [
+      "magic_damage",
+      "trigger_cast"
+    ],
+    "trait_address": "jcc:s18:trait:349"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:350",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "1【法力回复】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:350_1",
+          "effect_types": [
+            "mana"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            1
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "1【法力回复】",
+          "tags": [
+            "mana"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "mana"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 3,
+        "effect": "3【法力回复】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:350_2",
+          "effect_types": [
+            "mana"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            3
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "3【法力回复】",
+          "tags": [
+            "mana"
+          ],
+          "values": []
+        },
+        "level": 2,
+        "tags": [
+          "mana"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 4,
+        "effect": "1【法力回复】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:350_3",
+          "effect_types": [
+            "mana"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            1
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "1【法力回复】",
+          "tags": [
+            "mana"
+          ],
+          "values": []
+        },
+        "level": 3,
+        "tags": [
+          "mana"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 5,
+        "effect": "4【法力回复】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:350_4",
+          "effect_types": [
+            "mana"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            4
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "4【法力回复】",
+          "tags": [
+            "mana"
+          ],
+          "values": []
+        },
+        "level": 4,
+        "tags": [
+          "mana"
+        ],
+        "values": []
+      }
+    ],
+    "name": "神谕",
+    "tags": [
+      "mana"
+    ],
+    "trait_address": "jcc:s18:trait:350"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:351",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "强化召唤物",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:351_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [],
+          "parse_status": "structured_source_text",
+          "raw": "强化召唤物",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 3,
+        "effect": "每种效果加成提升50%",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:351_2",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            50
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "每种效果加成提升50%",
+          "tags": [],
+          "values": []
+        },
+        "level": 2,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "召唤师",
+    "tags": [],
+    "trait_address": "jcc:s18:trait:351"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:450",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 3,
+        "effect": "获得一棵【石皮树】和一株【生命花】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:450_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [],
+          "parse_status": "structured_source_text",
+          "raw": "获得一棵【石皮树】和一株【生命花】",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 5,
+        "effect": "第二棵【石皮树】，并且【石皮树】获得200生命值",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:450_2",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            200
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "第二棵【石皮树】，并且【石皮树】获得200生命值",
+          "tags": [],
+          "values": []
+        },
+        "level": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 7,
+        "effect": "以及【深林守卫】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:450_3",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [],
+          "parse_status": "structured_source_text",
+          "raw": "以及【深林守卫】",
+          "tags": [],
+          "values": []
+        },
+        "level": 3,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 9,
+        "effect": "植物升至2星",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:450_4",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            2
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "植物升至2星",
+          "tags": [],
+          "values": []
+        },
+        "level": 4,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 4,
+        "count": 11,
+        "effect": "自然之力！！！植物升至3星，森林拥有了它自己的生命。  弈子每拥有1星级，植物就会获得25%最大生命值和10%法术加成",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:450_5",
+          "effect_types": [
+            "magic_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            3,
+            1,
+            25,
+            10
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "自然之力！！！植物升至3星，森林拥有了它自己的生命。  弈子每拥有1星级，植物就会获得25%最大生命值和10%法术加成",
+          "tags": [
+            "magic_damage"
+          ],
+          "values": []
+        },
+        "level": 5,
+        "tags": [
+          "magic_damage"
+        ],
+        "values": []
+      }
+    ],
+    "name": "永恒之森",
+    "tags": [
+      "magic_damage"
+    ],
+    "trait_address": "jcc:s18:trait:450"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:451",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "175【生命上限】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:451_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            175
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "175【生命上限】",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 4,
+        "effect": "350【生命上限】；属性加成提升30%。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:451_2",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            350,
+            30
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "350【生命上限】；属性加成提升30%。",
+          "tags": [],
+          "values": []
+        },
+        "level": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 6,
+        "effect": "600【生命上限】；属性加成提升60%。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:451_3",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            600,
+            60
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "600【生命上限】；属性加成提升60%。",
+          "tags": [],
+          "values": []
+        },
+        "level": 3,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "黑荆棘",
+    "tags": [
+      "trigger_combat_start"
+    ],
+    "trait_address": "jcc:s18:trait:451"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:452",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 3,
+        "effect": "12%【物理加成】【法术加成】，【自然仙灵】得到升级",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:452_1",
+          "effect_types": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            12
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "12%【物理加成】【法术加成】，【自然仙灵】得到升级",
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 5,
+        "effect": "30%【物理加成】【法术加成】，商店每次都会刷新出【自然仙灵】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:452_2",
+          "effect_types": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            30
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "30%【物理加成】【法术加成】，商店每次都会刷新出【自然仙灵】",
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 2,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 7,
+        "effect": "45%【物理加成】【法术加成】，在购买1个【自然仙灵】后，获得4金币",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:452_3",
+          "effect_types": [
+            "economy",
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            45,
+            1,
+            4
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "45%【物理加成】【法术加成】，在购买1个【自然仙灵】后，获得4金币",
+          "tags": [
+            "economy",
+            "magic_damage",
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 3,
+        "tags": [
+          "economy",
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 9,
+        "effect": "50%【物理加成】【法术加成】，每回合你可以购买2个【自然仙灵】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:452_4",
+          "effect_types": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            50,
+            2
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "50%【物理加成】【法术加成】，每回合你可以购买2个【自然仙灵】",
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 4,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 4,
+        "count": 11,
+        "effect": "100%【物理加成】【法术加成】，自然之力！！！【自然仙灵】的力量满溢而出",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:452_5",
+          "effect_types": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            100
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "100%【物理加成】【法术加成】，自然之力！！！【自然仙灵】的力量满溢而出",
+          "tags": [
+            "magic_damage",
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 5,
+        "tags": [
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      }
+    ],
+    "name": "灵魂莲华",
+    "tags": [
+      "economy",
+      "magic_damage",
+      "physical_damage"
+    ],
+    "trait_address": "jcc:s18:trait:452"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:453",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 3,
+        "effect": "每次击败+2【魔女精粹】，每次失败+22【魔女精粹】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:453_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            2,
+            22
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "每次击败+2【魔女精粹】，每次失败+22【魔女精粹】",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 4,
+        "effect": "每次击败+2【魔女精粹】，每次失败+28【魔女精粹】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:453_2",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            2,
+            28
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "每次击败+2【魔女精粹】，每次失败+28【魔女精粹】",
+          "tags": [],
+          "values": []
+        },
+        "level": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 5,
+        "effect": "每次击败+3【魔女精粹】，每次失败+35【魔女精粹】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:453_3",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            3,
+            35
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "每次击败+3【魔女精粹】，每次失败+35【魔女精粹】",
+          "tags": [],
+          "values": []
+        },
+        "level": 3,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 7,
+        "effect": "每次击败+10【魔女精粹】，每次失败+60【魔女精粹】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:453_4",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            10,
+            60
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "每次击败+10【魔女精粹】，每次失败+60【魔女精粹】",
+          "tags": [],
+          "values": []
+        },
+        "level": 4,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "魔女",
+    "tags": [],
+    "trait_address": "jcc:s18:trait:453"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:454",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 3,
+        "effect": "使用【阿尔法印记】为1个【峡谷野怪】提供它独特的霸符。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:454_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            1
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "使用【阿尔法印记】为1个【峡谷野怪】提供它独特的霸符。",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 5,
+        "effect": "每过3场对战，你的下一次商店会被【峡谷野怪】占领。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:454_2",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            3
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "每过3场对战，你的下一次商店会被【峡谷野怪】占领。",
+          "tags": [],
+          "values": []
+        },
+        "level": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 7,
+        "effect": "战斗开始时及之后每5秒，【峡谷野怪】成长并获得5%【物理加成】、5%【法术加成】、5%【攻击速度】、5【护甲】、5【魔法抗性】、50【生命上限】、1【法力回复】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:454_3",
+          "effect_types": [
+            "attack_speed",
+            "magic_damage",
+            "mana",
+            "physical_damage",
+            "trigger_combat_start"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            50,
+            1
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "战斗开始时及之后每5秒，【峡谷野怪】成长并获得5%【物理加成】、5%【法术加成】、5%【攻击速度】、5【护甲】、5【魔法抗性】、50【生命上限】、1【法力回复】",
+          "tags": [
+            "attack_speed",
+            "magic_damage",
+            "mana",
+            "physical_damage",
+            "trigger_combat_start"
+          ],
+          "values": []
+        },
+        "level": 3,
+        "tags": [
+          "attack_speed",
+          "magic_damage",
+          "mana",
+          "physical_damage",
+          "trigger_combat_start"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 10,
+        "effect": "自然之力！！！+2最大队伍规模  下个商店：0场对战",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:454_4",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            2,
+            0
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "自然之力！！！+2最大队伍规模  下个商店：0场对战",
+          "tags": [],
+          "values": []
+        },
+        "level": 4,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "峡谷野怪",
+    "tags": [
+      "attack_speed",
+      "healing",
+      "magic_damage",
+      "mana",
+      "physical_damage",
+      "trigger_combat_start"
+    ],
+    "trait_address": "jcc:s18:trait:454"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:455",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "5%【物理加成】【法术加成】和2.5%的治疗强度。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:455_1",
+          "effect_types": [
+            "healing",
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            5,
+            2.5
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "5%【物理加成】【法术加成】和2.5%的治疗强度。",
+          "tags": [
+            "healing",
+            "magic_damage",
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "healing",
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 4,
+        "effect": "8%【物理加成】【法术加成】和4%的治疗强度。吸引7个【皮克斯仙灵】后，转而开始吸引可提供金币的【黄金皮克斯仙灵】。 当前【皮克斯仙灵】：0/0 下一【皮克斯仙灵】：0/0",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:455_2",
+          "effect_types": [
+            "economy",
+            "healing",
+            "magic_damage",
+            "physical_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            8,
+            4,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "8%【物理加成】【法术加成】和4%的治疗强度。吸引7个【皮克斯仙灵】后，转而开始吸引可提供金币的【黄金皮克斯仙灵】。 当前【皮克斯仙灵】：0/0 下一【皮克斯仙灵】：0/0",
+          "tags": [
+            "economy",
+            "healing",
+            "magic_damage",
+            "physical_damage"
+          ],
+          "values": []
+        },
+        "level": 2,
+        "tags": [
+          "economy",
+          "healing",
+          "magic_damage",
+          "physical_damage"
+        ],
+        "values": []
+      }
+    ],
+    "name": "花仙子",
+    "tags": [
+      "economy",
+      "healing",
+      "magic_damage",
+      "physical_damage",
+      "shield"
+    ],
+    "trait_address": "jcc:s18:trait:455"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:456",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 3,
+        "effect": "骑手获得15%【生命上限】和15%【攻击速度】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:456_1",
+          "effect_types": [
+            "attack_speed"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            15,
+            15
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "骑手获得15%【生命上限】和15%【攻击速度】",
+          "tags": [
+            "attack_speed"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "attack_speed"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 5,
+        "effect": "40%【生命上限】、35%【攻击速度】，且【毛茸茸大朋友】的技能的50%效果会应用于你的【约德尔人】弈子。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:456_2",
+          "effect_types": [
+            "attack_speed"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            40,
+            35,
+            50
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "40%【生命上限】、35%【攻击速度】，且【毛茸茸大朋友】的技能的50%效果会应用于你的【约德尔人】弈子。",
+          "tags": [
+            "attack_speed"
+          ],
+          "values": []
+        },
+        "level": 2,
+        "tags": [
+          "attack_speed"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 7,
+        "effect": "45%【生命上限】、45%【攻击速度】，且【毛茸茸大朋友】的技能的100%效果会应用于你的【约德尔人】弈子。  【毛茸茸大朋友】的攻击和技能会根据【骑乘者】是近战或远程而改变。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:456_3",
+          "effect_types": [
+            "attack_speed"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            45,
+            45,
+            100
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "45%【生命上限】、45%【攻击速度】，且【毛茸茸大朋友】的技能的100%效果会应用于你的【约德尔人】弈子。  【毛茸茸大朋友】的攻击和技能会根据【骑乘者】是近战或远程而改变。",
+          "tags": [
+            "attack_speed"
+          ],
+          "values": []
+        },
+        "level": 3,
+        "tags": [
+          "attack_speed"
+        ],
+        "values": []
+      }
+    ],
+    "name": "约德尔人",
+    "tags": [
+      "attack_speed"
+    ],
+    "trait_address": "jcc:s18:trait:456"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:457",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "灵龟赐福：每4秒，你的队伍治疗其4%最大生命值。蛮熊赐福：【野兽之灵】的伤害会终结生命值低于12%的敌人。猛虎赐福：在6秒后，【野兽之灵】弈子们获得35%攻击速度，你的队伍获得获得15%攻击速度。凤凰赐福：【野兽之灵】每参与15次击败，获得一个散件，最多4次。选择一个【兽灵赐福】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:457_1",
+          "effect_types": [
+            "attack_speed",
+            "condition_low_health",
+            "healing"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            4,
+            4,
+            12,
+            6,
+            35,
+            15,
+            15,
+            4
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "灵龟赐福：每4秒，你的队伍治疗其4%最大生命值。蛮熊赐福：【野兽之灵】的伤害会终结生命值低于12%的敌人。猛虎赐福：在6秒后，【野兽之灵】弈子们获得35%攻击速度，你的队伍获得获得15%攻击速度。凤凰赐福：【野兽之灵】每参与15次击败，获得一个散件，最多4次。选择一个【兽灵赐福】",
+          "tags": [
+            "attack_speed",
+            "condition_low_health",
+            "healing"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "attack_speed",
+          "condition_low_health",
+          "healing"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 4,
+        "effect": "灵龟赐福：每4秒，你的队伍治疗其4%最大生命值。蛮熊赐福：【野兽之灵】的伤害会终结生命值低于12%的敌人。猛虎赐福：在6秒后，【野兽之灵】弈子们获得35%攻击速度，你的队伍获得获得15%攻击速度。凤凰赐福：【野兽之灵】每参与15次击败，获得一个散件，最多4次。选择第二个【兽灵赐福】  累计击败:0",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:457_2",
+          "effect_types": [
+            "attack_speed",
+            "condition_low_health",
+            "healing"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            4,
+            4,
+            12,
+            6,
+            35,
+            15,
+            15,
+            4,
+            0
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "灵龟赐福：每4秒，你的队伍治疗其4%最大生命值。蛮熊赐福：【野兽之灵】的伤害会终结生命值低于12%的敌人。猛虎赐福：在6秒后，【野兽之灵】弈子们获得35%攻击速度，你的队伍获得获得15%攻击速度。凤凰赐福：【野兽之灵】每参与15次击败，获得一个散件，最多4次。选择第二个【兽灵赐福】  累计击败:0",
+          "tags": [
+            "attack_speed",
+            "condition_low_health",
+            "healing"
+          ],
+          "values": []
+        },
+        "level": 2,
+        "tags": [
+          "attack_speed",
+          "condition_low_health",
+          "healing"
+        ],
+        "values": []
+      }
+    ],
+    "name": "野兽之灵",
+    "tags": [
+      "attack_speed",
+      "condition_low_health",
+      "healing"
+    ],
+    "trait_address": "jcc:s18:trait:457"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:458",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "1%灼烧效果，33%重伤效果",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:458_1",
+          "effect_types": [
+            "wound"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            1,
+            33
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "1%灼烧效果，33%重伤效果",
+          "tags": [
+            "wound"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "wound"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 3,
+        "effect": "在对战后，你的2个不包含【地狱火】弈子的商店栏位会被引燃，刷新出高一阶的弈子。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:458_2",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            2
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "在对战后，你的2个不包含【地狱火】弈子的商店栏位会被引燃，刷新出高一阶的弈子。",
+          "tags": [],
+          "values": []
+        },
+        "level": 2,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 5,
+        "effect": "引燃2个商店栏位，施加3%灼烧效果",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:458_3",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            2,
+            3
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "引燃2个商店栏位，施加3%灼烧效果",
+          "tags": [],
+          "values": []
+        },
+        "level": 3,
+        "tags": [],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 7,
+        "effect": "引燃4个商店栏位，施加4%灼烧效果  灼烧：每秒造成目标一部分最大生命值的真实伤害。 重伤：降低受到的治疗效果。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:458_4",
+          "effect_types": [
+            "healing",
+            "true_damage",
+            "wound"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            4,
+            4
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "引燃4个商店栏位，施加4%灼烧效果  灼烧：每秒造成目标一部分最大生命值的真实伤害。 重伤：降低受到的治疗效果。",
+          "tags": [
+            "healing",
+            "true_damage",
+            "wound"
+          ],
+          "values": []
+        },
+        "level": 4,
+        "tags": [
+          "healing",
+          "true_damage",
+          "wound"
+        ],
+        "values": []
+      }
+    ],
+    "name": "地狱火",
+    "tags": [
+      "healing",
+      "true_damage",
+      "wound"
+    ],
+    "trait_address": "jcc:s18:trait:458"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:459",
+    "breakpoints": [
+      {
+        "color": 3,
+        "count": 3,
+        "effect": "你的所有单位获得5%最大生命值的护盾并造成8%额外魔法伤害。每拥有1名独特的三星【星级】英雄，获得额外加成：  1【星级】：每拥有1名三星英雄，护盾和魔法伤害提升1%。 3【星级】：额外获得15%【攻击速度】和12【护甲】【魔法抗性】。 5【星级】：将40%的额外魔法伤害转化为真实伤害。 8【星级】：在战斗期间内每过4秒，1个3星弈子飞升至4星。  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:459_1",
+          "effect_types": [
+            "attack_speed",
+            "magic_damage",
+            "shield",
+            "true_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            5,
+            8,
+            1,
+            1,
+            1,
+            1,
+            3,
+            15,
+            12,
+            5,
+            40,
+            8,
+            4,
+            1,
+            3,
+            4,
+            3,
+            3
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "你的所有单位获得5%最大生命值的护盾并造成8%额外魔法伤害。每拥有1名独特的三星【星级】英雄，获得额外加成：  1【星级】：每拥有1名三星英雄，护盾和魔法伤害提升1%。 3【星级】：额外获得15%【攻击速度】和12【护甲】【魔法抗性】。 5【星级】：将40%的额外魔法伤害转化为真实伤害。 8【星级】：在战斗期间内每过4秒，1个3星弈子飞升至4星。  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。",
+          "tags": [
+            "attack_speed",
+            "magic_damage",
+            "shield",
+            "true_damage"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "attack_speed",
+          "magic_damage",
+          "shield",
+          "true_damage"
+        ],
+        "values": []
+      }
+    ],
+    "name": "日蚀骑士",
+    "tags": [
+      "attack_speed",
+      "magic_damage",
+      "shield",
+      "true_damage"
+    ],
+    "trait_address": "jcc:s18:trait:459"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:460",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 2,
+        "effect": "7%【攻击速度】，7%【法术加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:460_1",
+          "effect_types": [
+            "attack_speed",
+            "magic_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            7,
+            7
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "7%【攻击速度】，7%【法术加成】",
+          "tags": [
+            "attack_speed",
+            "magic_damage"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "attack_speed",
+          "magic_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 3,
+        "effect": "10%【攻击速度】，10%【法术加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:460_2",
+          "effect_types": [
+            "attack_speed",
+            "magic_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            10,
+            10
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "10%【攻击速度】，10%【法术加成】",
+          "tags": [
+            "attack_speed",
+            "magic_damage"
+          ],
+          "values": []
+        },
+        "level": 2,
+        "tags": [
+          "attack_speed",
+          "magic_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 2,
+        "count": 4,
+        "effect": "14%【攻击速度】，14%【法术加成】",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:460_3",
+          "effect_types": [
+            "attack_speed",
+            "magic_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            14,
+            14
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "14%【攻击速度】，14%【法术加成】",
+          "tags": [
+            "attack_speed",
+            "magic_damage"
+          ],
+          "values": []
+        },
+        "level": 3,
+        "tags": [
+          "attack_speed",
+          "magic_damage"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 5,
+        "effect": "18%【攻击速度】，18%【法术加成】  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:460_4",
+          "effect_types": [
+            "attack_speed",
+            "magic_damage"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            18,
+            18,
+            3,
+            3
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "18%【攻击速度】，18%【法术加成】  登场3个【日蚀骑士】和3个【月蚀骑士】弈子以激活【日月双蚀】。",
+          "tags": [
+            "attack_speed",
+            "magic_damage"
+          ],
+          "values": []
+        },
+        "level": 4,
+        "tags": [
+          "attack_speed",
+          "magic_damage"
+        ],
+        "values": []
+      }
+    ],
+    "name": "月蚀骑士",
+    "tags": [
+      "aoe",
+      "attack_speed",
+      "magic_damage"
+    ],
+    "trait_address": "jcc:s18:trait:460"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:461",
+    "breakpoints": [
+      {
+        "color": 3,
+        "count": 0,
+        "effect": "战斗开始10秒后，【日月双蚀】终结最低生命值的敌人，每3.5秒重复一次。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:461_1",
+          "effect_types": [
+            "trigger_combat_start"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            10,
+            3.5
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "战斗开始10秒后，【日月双蚀】终结最低生命值的敌人，每3.5秒重复一次。",
+          "tags": [
+            "trigger_combat_start"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "trigger_combat_start"
+        ],
+        "values": []
+      }
+    ],
+    "name": "日月双蚀",
+    "tags": [
+      "trigger_combat_start"
+    ],
+    "trait_address": "jcc:s18:trait:461"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:462",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 1,
+        "effect": "10法力值",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:462_1",
+          "effect_types": [
+            "mana"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            10
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "10法力值",
+          "tags": [
+            "mana"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "mana"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 2,
+        "effect": "并治疗生命值最低的友军8%最大生命值。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:462_2",
+          "effect_types": [
+            "healing"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            8
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "并治疗生命值最低的友军8%最大生命值。",
+          "tags": [
+            "healing"
+          ],
+          "values": []
+        },
+        "level": 2,
+        "tags": [
+          "healing"
+        ],
+        "values": []
+      }
+    ],
+    "name": "绝命花妖",
+    "tags": [
+      "healing",
+      "mana",
+      "trigger_kill"
+    ],
+    "trait_address": "jcc:s18:trait:462"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:463",
+    "breakpoints": [
+      {
+        "color": 3,
+        "count": 1,
+        "effect": "只对你最强的那个【宿敌】生效。 (1)仅在登场了1个【宿敌】时激活。(1)仅在登场了1个【宿敌】时激活。(1)(1)【宿敌】们收集参与击杀数，如果参与了对另一名【宿敌】的击杀，获得+3参与击杀数。【宿敌】们收集参与击杀数，如果参与了对另一名【宿敌】的击杀，获得+3参与击杀数。  参与击杀会使【卡兹克】进化，永久为他提供你从【裁决使】、【迅捷射手】、【狂战士】或【法师】中选择的一项羁绊。参与击杀会使【卡兹克】进化，永久为他提供你从【裁决使】、【迅捷射手】、【狂战士】或【法师】中选择的一项羁绊。 每参与8次击杀，【雷恩加尔】提供2/3/5金币。在参与30次击杀后，你的队伍获得5％物理加成，此后每次参与击杀再提升0.2%【物理加成】。每参与8次击杀，【雷恩加尔】提供2/3/5金币。在参与30次击杀后，你的队伍获得5％物理加成，此后每次参与击杀再提升0.2%【物理加成】。  【卡兹克】参与击杀数：0/0 已选择进化： 选择一把武器。 【卡兹克】参与击杀数：0/0 已选择进化： 选择一把武器。 【雷恩加尔】参与击杀数：0 已赚取的金币：0【雷恩加尔】参与击杀数：0 已赚取的金币：0  (2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的50%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的25%。(2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的50%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的25%。(2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的50%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的25%。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:463_1",
+          "effect_types": [
+            "economy",
+            "healing",
+            "mana",
+            "physical_damage",
+            "trigger_kill"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            8,
+            2,
+            3,
+            5,
+            30,
+            5,
+            0.2,
+            8,
+            2,
+            3,
+            5,
+            30,
+            5,
+            0.2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            50,
+            25,
+            2,
+            50,
+            25,
+            2,
+            50,
+            25
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "只对你最强的那个【宿敌】生效。 (1)仅在登场了1个【宿敌】时激活。(1)仅在登场了1个【宿敌】时激活。(1)(1)【宿敌】们收集参与击杀数，如果参与了对另一名【宿敌】的击杀，获得+3参与击杀数。【宿敌】们收集参与击杀数，如果参与了对另一名【宿敌】的击杀，获得+3参与击杀数。  参与击杀会使【卡兹克】进化，永久为他提供你从【裁决使】、【迅捷射手】、【狂战士】或【法师】中选择的一项羁绊。参与击杀会使【卡兹克】进化，永久为他提供你从【裁决使】、【迅捷射手】、【狂战士】或【法师】中选择的一项羁绊。 每参与8次击杀，【雷恩加尔】提供2/3/5金币。在参与30次击杀后，你的队伍获得5％物理加成，此后每次参与击杀再提升0.2%【物理加成】。每参与8次击杀，【雷恩加尔】提供2/3/5金币。在参与30次击杀后，你的队伍获得5％物理加成，此后每次参与击杀再提升0.2%【物理加成】。  【卡兹克】参与击杀数：0/0 已选择进化： 选择一把武器。 【卡兹克】参与击杀数：0/0 已选择进化： 选择一把武器。 【雷恩加尔】参与击杀数：0 已赚取的金币：0【雷恩加尔】参与击杀数：0 已赚取的金币：0  (2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的50%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的25%。(2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的50%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的25%。(2)【宿敌】们可以同时登场。当【卡兹克】通过技能获得法力值，【雷恩加尔】也获得该法力值的50%。当【雷恩加尔】通过技能治疗生命值，【卡兹克】也治疗该生命值的25%。",
+          "tags": [
+            "economy",
+            "healing",
+            "mana",
+            "physical_damage",
+            "trigger_kill"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "economy",
+          "healing",
+          "mana",
+          "physical_damage",
+          "trigger_kill"
+        ],
+        "values": []
+      },
+      {
+        "color": 3,
+        "count": 2,
+        "effect": null,
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:463_2",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [],
+          "parse_status": "structured_source_text",
+          "raw": null,
+          "tags": [],
+          "values": []
+        },
+        "level": 2,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "宿敌",
+    "tags": [
+      "economy",
+      "healing",
+      "mana",
+      "physical_damage",
+      "trigger_kill"
+    ],
+    "trait_address": "jcc:s18:trait:463"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:464",
+    "breakpoints": [
+      {
+        "color": 5,
+        "count": 1,
+        "effect": "每当3格内的1名敌人阵亡时，你最强大的那个【远古树精】弈子获得30永久最大生命值。  当前：0",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:464_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            3,
+            1,
+            30,
+            0
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "每当3格内的1名敌人阵亡时，你最强大的那个【远古树精】弈子获得30永久最大生命值。  当前：0",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "远古树精",
+    "tags": [],
+    "trait_address": "jcc:s18:trait:464"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:465",
+    "breakpoints": [
+      {
+        "color": 5,
+        "count": 1,
+        "effect": "选择1个【悬赏令】。你最强大的那个【德莱文】可以推进【悬赏令】进度以获得奖励。在完成1个【悬赏令】后，可以选择另一个。  选择一把武器。  【悬赏令】进度：0/0【悬赏令】完成！",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:465_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "选择1个【悬赏令】。你最强大的那个【德莱文】可以推进【悬赏令】进度以获得奖励。在完成1个【悬赏令】后，可以选择另一个。  选择一把武器。  【悬赏令】进度：0/0【悬赏令】完成！",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "赏金猎人",
+    "tags": [],
+    "trait_address": "jcc:s18:trait:465"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:466",
+    "breakpoints": [
+      {
+        "color": 5,
+        "count": 1,
+        "effect": "你最强大的那个【艾翁】在施放技能时获得1颗种子，且每场对战额外获得3颗。【艾翁】可消耗5颗种子在你的棋盘上培育1个格子，为格内的住民提供加成。  种子：0/5  选择一把武器。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:466_1",
+          "effect_types": [
+            "trigger_cast"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            1,
+            3,
+            5,
+            1,
+            0,
+            5
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "你最强大的那个【艾翁】在施放技能时获得1颗种子，且每场对战额外获得3颗。【艾翁】可消耗5颗种子在你的棋盘上培育1个格子，为格内的住民提供加成。  种子：0/5  选择一把武器。",
+          "tags": [
+            "trigger_cast"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "trigger_cast"
+        ],
+        "values": []
+      }
+    ],
+    "name": "翠神",
+    "tags": [
+      "trigger_cast"
+    ],
+    "trait_address": "jcc:s18:trait:466"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:467",
+    "breakpoints": [
+      {
+        "color": 5,
+        "count": 1,
+        "effect": "将1名友军拖至你最强大的那个【塔里克】身上即可将他们进行配对，通过【塔里克】的技能为友军提供强大的加成。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:467_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            1
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "将1名友军拖至你最强大的那个【塔里克】身上即可将他们进行配对，通过【塔里克】的技能为友军提供强大的加成。",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "宝石骑士",
+    "tags": [],
+    "trait_address": "jcc:s18:trait:467"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:468",
+    "breakpoints": [
+      {
+        "color": 5,
+        "count": 1,
+        "effect": "你最强大的那个【拉露恩】在每一次施放技能后，推进一次【月相】。当【月相】在弦月或以下时，你的队伍获得7%伤害减免。在弦月之上时，你的队伍获得7%伤害增幅。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:468_1",
+          "effect_types": [
+            "trigger_cast"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            7,
+            7
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "你最强大的那个【拉露恩】在每一次施放技能后，推进一次【月相】。当【月相】在弦月或以下时，你的队伍获得7%伤害减免。在弦月之上时，你的队伍获得7%伤害增幅。",
+          "tags": [
+            "trigger_cast"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "trigger_cast"
+        ],
+        "values": []
+      }
+    ],
+    "name": "月华神女",
+    "tags": [
+      "trigger_cast"
+    ],
+    "trait_address": "jcc:s18:trait:468"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:469",
+    "breakpoints": [
+      {
+        "color": 5,
+        "count": 1,
+        "effect": "在备战席或棋盘上拥有1个【大元素使】时，会将你商店中所有其他【大元素使】转换为和这个【大元素使】相同的特质/职业。  自然之力！！！【大元素使】为选定的特质/职业提供+2计数。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:469_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            1,
+            2
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "在备战席或棋盘上拥有1个【大元素使】时，会将你商店中所有其他【大元素使】转换为和这个【大元素使】相同的特质/职业。  自然之力！！！【大元素使】为选定的特质/职业提供+2计数。",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "大元素使",
+    "tags": [],
+    "trait_address": "jcc:s18:trait:469"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:471",
+    "breakpoints": [
+      {
+        "color": 5,
+        "count": 1,
+        "effect": "【远古巨龙】占用2个弈子栏位，并提供+2【峡谷野怪】特质/职业",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:471_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            2,
+            2
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "【远古巨龙】占用2个弈子栏位，并提供+2【峡谷野怪】特质/职业",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "顶级掠食者",
+    "tags": [],
+    "trait_address": "jcc:s18:trait:471"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:472",
+    "breakpoints": [
+      {
+        "color": 5,
+        "count": 1,
+        "effect": "每成为1名敌人的目标，【魔岩巨兽】获得10护甲和魔法抗性。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:472_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            1,
+            10
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "每成为1名敌人的目标，【魔岩巨兽】获得10护甲和魔法抗性。",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "魔岩巨兽",
+    "tags": [],
+    "trait_address": "jcc:s18:trait:472"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:473",
+    "breakpoints": [
+      {
+        "color": 1,
+        "count": 1,
+        "effect": "【帝王斑蝶】的伤害会对敌人施加持续4秒的30%魔抗击碎与护甲击碎。  魔抗击碎：降低魔抗值 护甲击碎：降低护甲值。",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:473_1",
+          "effect_types": [
+            "armor_shred",
+            "magic_resist_shred"
+          ],
+          "formula_refs": [],
+          "numeric_values": [
+            4,
+            30
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "【帝王斑蝶】的伤害会对敌人施加持续4秒的30%魔抗击碎与护甲击碎。  魔抗击碎：降低魔抗值 护甲击碎：降低护甲值。",
+          "tags": [
+            "armor_shred",
+            "magic_resist_shred"
+          ],
+          "values": []
+        },
+        "level": 1,
+        "tags": [
+          "armor_shred",
+          "magic_resist_shred"
+        ],
+        "values": []
+      }
+    ],
+    "name": "帝王斑蝶",
+    "tags": [
+      "armor_shred",
+      "magic_resist_shred"
+    ],
+    "trait_address": "jcc:s18:trait:473"
+  },
+  {
+    "address": "jcc:s18:trait_breakpoints:486",
+    "breakpoints": [
+      {
+        "color": 5,
+        "count": 1,
+        "effect": "你的队伍获得5%伤害减免，当她有6个及以上植物时，队伍改为获得10%伤害减免",
+        "effect_block": {
+          "address": "jcc:s18:trait_breakpoint_effect_block:486_1",
+          "effect_types": [],
+          "formula_refs": [],
+          "numeric_values": [
+            5,
+            6,
+            10
+          ],
+          "parse_status": "structured_source_text",
+          "raw": "你的队伍获得5%伤害减免，当她有6个及以上植物时，队伍改为获得10%伤害减免",
+          "tags": [],
+          "values": []
+        },
+        "level": 1,
+        "tags": [],
+        "values": []
+      }
+    ],
+    "name": "荆棘之兴",
+    "tags": [],
+    "trait_address": "jcc:s18:trait:486"
+  }
+]

@@ -1,0 +1,193 @@
+{
+  "schema": "jcc-minor-patch-balance-changes-v1",
+  "season_id": "s17",
+  "patch_id": "s17_8",
+  "upstream_version": "17.17.8",
+  "metadata": {
+    "version": "17.8",
+    "date": "2026-07-29",
+    "title": "星神·平衡性调整 S17.8",
+    "source": "official_jcc_17_8_hard_data_and_user_provided_patch_note",
+    "source_url": "https://game.gtimg.cn/images/lol/act/jkzlk/js/config/versiondataconfig.js"
+  },
+  "source_policy": {
+    "official_raw_values": "The immutable 17.17.8 official package is current-value authority.",
+    "patch_note": "The supplied S17.8 announcement is before/after delta authority and corrects stale descriptive text when official value fields and prose disagree.",
+    "historical_patch_transforms": "Earlier raw patch transforms must not be replayed over this official package."
+  },
+  "targets": [
+    {
+      "groups": ["champions", "chessVariants"],
+      "ids": ["1463"],
+      "changes": [
+        { "id": "base_attack_damage", "label": "基础攻击力", "before": 35, "after": 40, "unit": "attack_damage" }
+      ]
+    },
+    {
+      "groups": ["champions", "chessVariants"],
+      "ids": ["1450"],
+      "changes": [
+        { "id": "max_skill_damage_ap", "label": "最大技能伤害", "before": [410, 610, 920, 1565], "after": [450, 675, 1015, 1725], "unit": "ap_scaling" }
+      ]
+    },
+    {
+      "groups": ["champions", "chessVariants"],
+      "ids": ["2461"],
+      "changes": [
+        { "id": "nova_squad_damage_per_second_ad", "label": "新星特攻队每秒伤害", "before": [15, 22, 28], "after": [14, 18, 25], "unit": "ad_scaling" }
+      ]
+    },
+    {
+      "groups": ["champions", "chessVariants"],
+      "ids": ["2450"],
+      "changes": [
+        { "id": "brawler_trait_status", "label": "斗士羁绊确认", "before": { "id": "311", "name": "斗士" }, "after": { "id": "311", "name": "斗士" }, "unit": "trait", "confirmation": true }
+      ]
+    },
+    {
+      "groups": ["champions", "chessVariants"],
+      "ids": ["3467"],
+      "raw_replacements": [
+        { "field": "skillDesc", "before": "造成330(", "after": "造成300(" }
+      ],
+      "changes": [
+        { "id": "magician_skill_damage_ad", "label": "魔术师技能伤害", "before": [275, 415, 660], "after": [300, 450, 675], "unit": "ad_scaling" }
+      ]
+    },
+    {
+      "groups": ["champions", "chessVariants"],
+      "ids": ["3465"],
+      "raw_replacements": [
+        { "field": "skillDesc", "before": "造成100（", "after": "造成90（" }
+      ],
+      "changes": [
+        { "id": "oracle_skill_damage_ad", "label": "神谕技能伤害", "before": [80, 120, 190], "after": [90, 135, 225], "unit": "ad_scaling" }
+      ]
+    },
+    {
+      "groups": ["champions", "chessVariants"],
+      "ids": ["3461"],
+      "raw_replacements": [
+        { "field": "skillDesc", "before": "造成55(", "after": "造成45(" }
+      ],
+      "changes": [
+        { "id": "passive_damage_ad", "label": "被动伤害", "before": [55, 80, 130], "after": [45, 68, 115], "unit": "ad_scaling" },
+        { "id": "knockup_duration_seconds", "label": "击飞时长", "before": 1, "after": 0.75, "unit": "seconds" }
+      ]
+    },
+    {
+      "groups": ["champions", "chessVariants"],
+      "ids": ["3458"],
+      "changes": [
+        { "id": "mana", "label": "法力值", "before": { "initial": 0, "max": 50 }, "after": { "initial": 0, "max": 40 }, "unit": "mana" },
+        { "id": "shield_ap", "label": "护盾", "before": [275, 325, 515], "after": [230, 280, 450], "unit": "ap_scaling" }
+      ]
+    },
+    {
+      "groups": ["champions"],
+      "ids": ["5434"],
+      "changes": [
+        { "id": "oracle_trait_status", "label": "神谕羁绊确认", "before": { "id": "313", "name": "神谕" }, "after": { "id": "313", "name": "神谕" }, "unit": "trait", "confirmation": true },
+        { "id": "mana", "label": "法力值", "before": { "initial": 30, "max": 80 }, "after": { "initial": 45, "max": 95 }, "unit": "mana" },
+        { "id": "base_heal_ap", "label": "基础治疗", "before": [600, 700], "after": [550, 650], "unit": "ap_scaling" }
+      ]
+    },
+    {
+      "groups": ["chessVariants"],
+      "ids": ["5434", "5435"],
+      "changes": [
+        { "id": "oracle_trait_status", "label": "神谕羁绊确认", "before": { "id": "313", "name": "神谕" }, "after": { "id": "313", "name": "神谕" }, "unit": "trait", "confirmation": true },
+        { "id": "mana", "label": "法力值", "before": { "initial": 30, "max": 80 }, "after": { "initial": 45, "max": 95 }, "unit": "mana" },
+        { "id": "base_heal_ap", "label": "基础治疗", "before": [600, 700], "after": [550, 650], "unit": "ap_scaling" }
+      ]
+    },
+    {
+      "groups": ["champions", "chessVariants"],
+      "ids": ["4375"],
+      "changes": [
+        { "id": "small_cast_damage_ad", "label": "小型施放伤害", "before": [90, 135], "after": [100, 150], "unit": "ad_scaling" },
+        { "id": "third_cast_damage_ad", "label": "第三段施放伤害", "before": [160, 240], "after": [180, 270], "unit": "ad_scaling" }
+      ]
+    },
+    {
+      "groups": ["champions"],
+      "ids": ["5428"],
+      "changes": [
+        { "id": "clone_hp_penalty_pct", "label": "生命值惩罚", "before": [33, 40], "after": [25, 35], "unit": "percent" }
+      ]
+    },
+    {
+      "groups": ["chessVariants"],
+      "ids": ["5428", "5433", "8438"],
+      "raw_replacements": [
+        { "field": "skillBriefValue", "before": "33%/40%/45%", "after": "25%/35%/35%" },
+        { "field": "skillDesc", "before": "降低33%", "after": "降低25%" }
+      ],
+      "changes": [
+        { "id": "clone_hp_penalty_pct", "label": "生命值惩罚", "before": [33, 40], "after": [25, 35], "unit": "percent" }
+      ]
+    },
+    {
+      "groups": ["traits"],
+      "ids": ["313"],
+      "changes": [
+        { "id": "five_piece_ally_mana_regen", "label": "(5)友军法力回复", "before": 3, "after": 2, "unit": "mana_regen" }
+      ]
+    },
+    {
+      "groups": ["items"],
+      "ids": ["9336"],
+      "changes": [
+        { "id": "ap", "label": "法术加成", "before": 30, "after": 25, "unit": "ap" },
+        { "id": "mana_regen", "label": "法力回复", "before": 5, "after": 4, "unit": "mana_regen" }
+      ]
+    },
+    {
+      "groups": ["items"],
+      "ids": ["9331"],
+      "changes": [
+        { "id": "stun_duration_seconds", "label": "晕眩时长", "before": 2, "after": 1.5, "unit": "seconds" },
+        { "id": "shield_pct_max_hp", "label": "护盾值", "before": 25, "after": 20, "unit": "percent_max_hp" }
+      ]
+    },
+    {
+      "groups": ["items"],
+      "ids": ["9341"],
+      "changes": [
+        { "id": "armor_magic_resist", "label": "护甲和魔抗", "before": 30, "after": 25, "unit": "armor_magic_resist" },
+        { "id": "resist_steal", "label": "双抗窃取", "before": 4, "after": 3, "unit": "armor_magic_resist" }
+      ]
+    },
+    {
+      "groups": ["items"],
+      "ids": ["9253"],
+      "changes": [
+        { "id": "base_hp", "label": "基础生命值", "before": 550, "after": 650, "unit": "hp" },
+        { "id": "healing_received_amp_pct", "label": "提升治疗", "before": 22, "after": 30, "unit": "percent" }
+      ]
+    },
+    {
+      "groups": ["items"],
+      "ids": ["9251"],
+      "changes": [
+        { "id": "second_drone_damage_pct", "label": "第2个无人机伤害", "before": 20, "after": 30, "unit": "percent" }
+      ]
+    },
+    {
+      "groups": ["items"],
+      "ids": ["9252"],
+      "changes": [
+        { "id": "damage_amp_pct", "label": "伤害增幅", "before": 10, "after": 15, "unit": "percent" },
+        { "id": "cleave_damage_ad", "label": "顺劈伤害", "before": 75, "after": 100, "unit": "ad_scaling" }
+      ]
+    },
+    {
+      "groups": ["items"],
+      "ids": ["9256"],
+      "changes": [
+        { "id": "ad_ap", "label": "物理加成和法术加成", "before": 20, "after": 30, "unit": "ad_ap" },
+        { "id": "heal_pct_max_hp", "label": "治疗", "before": 20, "after": 30, "unit": "percent_max_hp" }
+      ]
+    }
+  ]
+}

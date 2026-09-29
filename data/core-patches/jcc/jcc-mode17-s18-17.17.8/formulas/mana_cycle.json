@@ -1,0 +1,39 @@
+{
+  "address": "jcc:s17:formula:mana_cycle",
+  "source": "generated_heuristic",
+  "inputs": [
+    "initial_mana",
+    "max_mana",
+    "mana_per_attack",
+    "mana_per_second",
+    "damage_taken_mana"
+  ],
+  "outputs": [
+    "mana_needed_after_start",
+    "estimated_time_to_first_cast"
+  ],
+  "formulas": {
+    "mana_needed_after_start": "max(0, max_mana - initial_mana)",
+    "time_to_first_cast": "mana_needed_after_start / mana_gain_rate"
+  },
+  "dependencies": [
+    "jcc:s17:formula:cast_frequency"
+  ],
+  "use_cases": [
+    "blue buff/shojin/startup item value"
+  ],
+  "exactness": "heuristic_without_full_combat_timeline",
+  "name": "mana_cycle",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "cast"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review",
+    "augment_choice"
+  ],
+  "dependency_kind": "derived_formula"
+}

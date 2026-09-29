@@ -1,0 +1,38 @@
+{
+  "address": "jcc:s17:formula:penetration_effective_resist",
+  "source": "generated_heuristic",
+  "inputs": [
+    "base_resist",
+    "shred_pct",
+    "sunder_pct",
+    "flat_pen",
+    "pct_pen"
+  ],
+  "outputs": [
+    "effective_resist"
+  ],
+  "formulas": {
+    "effective_resist": "max(0, base_resist * (1 - shred_or_sunder_pct) * (1 - pct_pen) - flat_pen)"
+  },
+  "dependencies": [
+    "jcc:s17:formula:resist_mitigation"
+  ],
+  "use_cases": [
+    "last whisper vs no armor shred",
+    "ionic spark / shred value"
+  ],
+  "exactness": "formula_exact_when_modifier_values_are_known",
+  "name": "penetration_effective_resist",
+  "category": "combat",
+  "domains": [
+    "combat",
+    "defense"
+  ],
+  "route_domains": [
+    "positioning",
+    "holder_assignment",
+    "postgame_review",
+    "item_craft"
+  ],
+  "dependency_kind": "derived_formula"
+}
